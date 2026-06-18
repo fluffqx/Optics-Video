@@ -1,0 +1,5 @@
+This section animates the complete official 31OPT formula sheet — every equation you are given in the exam, explained in context.
+
+The formula sheet is provided during the exam, so the goal is not to memorise it blindly. The goal is to understand every symbol deeply enough that you can use any formula correctly under time pressure.
+
+We'll go through the sheet section by section, the same way it appears in the exam.

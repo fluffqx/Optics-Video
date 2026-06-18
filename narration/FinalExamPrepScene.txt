@@ -1,0 +1,13 @@
+The final exam covers all eight weeks. It's three hours, and it counts for 85 percent of your grade.
+
+The grading formula is: FINAL equals 0.85 times your exam score, plus 0.15 times your midterm score, plus your SLT bonus. To pass, you need a FINAL of at least 6 AND an exam score of at least 5. Both conditions must be met.
+
+The SLT bonus can add up to a full point to your grade if you earned at least 100 SLT points across the semester.
+
+The topics that appear most often in exam questions are: Fresnel calculations, thin film interference, Young's double slit, single slit diffraction, grating equation with resolving power, Fabry-Pérot with finesse and free spectral range, Jones matrices for polarisation, and the Rayleigh criterion for resolution.
+
+For each of these, you should be able to: set up the problem from scratch, identify all the relevant variables, apply the correct formula with correct sign conventions, and compute a numerical answer.
+
+The best preparation is still the SLT problem sets. They are designed to be at exam level, and many are directly taken from past exams. If you can solve all nine SLT sets independently, you are fully prepared.
+
+You can do this. Good luck.

@@ -1,0 +1,11 @@
+The midterm covers everything from weeks 1 through 3 — electromagnetic waves, Fresnel equations, and geometric optics.
+
+It's a one-hour written exam. No AI tools, no phones — just pen, paper, ruler, calculator, and the formula sheet.
+
+The most important advice: the formula sheet gives you the equations, but it does not tell you when to use which one, or how to handle sign conventions. That's what you need to practise.
+
+Go through the SLT problems from weeks 1 to 3. They are at exactly the right level of difficulty. If you can solve those independently, you are ready for the midterm.
+
+A few specific things to watch for. First: Fresnel equations — always identify which polarisation you're dealing with before you start. Second: thin lenses and mirrors — draw the ray diagram first, always. It prevents sign errors. Third: radiation pressure — remember the factor of 2 for a reflective surface, and remember that I is in watts per square metre.
+
+Good luck.
