@@ -1,0 +1,19 @@
+There are actually two different speeds associated with a wave, and confusing them is a classic mistake.
+
+The phase velocity is the speed at which the crests of the wave move. It's simply omega divided by k. This is the speed of a single frequency component.
+
+The group velocity is the speed at which the envelope of a wave packet moves — this is the speed at which energy and information actually travel. It's defined as d omega d k — the derivative of angular frequency with respect to wave number.
+
+In vacuum, and in any non-dispersive medium, these two speeds are identical. Every frequency travels at the same speed, so the wave packet holds its shape.
+
+But in a dispersive medium like glass, different frequencies travel at different speeds — that's exactly what dispersion means. The phase velocity varies with frequency. And this causes the group velocity to differ from the phase velocity.
+
+This is why a prism separates white light into a rainbow. Red light and violet light have different phase velocities in glass, so they refract at different angles.
+
+Let's look at a concrete example. Suppose the dispersion relation is omega equals a times k squared — a hypothetical case.
+
+The phase velocity is omega over k, which equals a k. It depends on k, so this medium is dispersive.
+
+The group velocity is d omega d k, which equals 2 a k. That's twice the phase velocity.
+
+So in this medium, the envelope of a wave packet travels twice as fast as the individual crests inside it. Fascinating behaviour, and directly measurable in real dispersive media.

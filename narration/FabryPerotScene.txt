@@ -1,0 +1,17 @@
+Let's go through the Fabry-Pérot equations carefully.
+
+The round-trip phase delta equals 4 pi n d cosine theta over lambda naught, plus any reflection phase shifts. For normal incidence and mirrors that don't introduce phase shifts, this simplifies to 4 pi n d over lambda naught.
+
+The coefficient of finesse F equals 4R over one minus R squared. For R equals 0.95, F equals 4 times 0.95 over 0.05 squared equals 1520.
+
+The finesse script F — different from the coefficient F — is pi times square root of R over one minus R. For R equals 0.95, this is pi times 0.9747 over 0.05, giving 61.3.
+
+The finesse tells you the ratio of the free spectral range to the width of a transmission peak. A finesse of 61 means the peaks are 61 times narrower than the gap between them.
+
+The order number m equals 2nd over lambda — the number of half-wavelengths that fit in the cavity.
+
+The resolving power is m times script F. For our example: m equals 2 times 1 times 0.1 over 632.8 nanometres equals 3.16 times 10 to the 5. Times finesse 61.3 gives a resolving power of 1.94 times 10 to the 7. Nearly 20 million.
+
+The free spectral range in wavelength is lambda naught squared over 2nd — the range of wavelengths you can measure unambiguously before the next order overlaps.
+
+For our 10 centimetre cavity: delta lambda FSR equals 632.8 squared over 2 times 10 to the 8 nanometres, which is about 0.002 nanometres. Very small. The high resolving power comes at the cost of a tiny unambiguous range.

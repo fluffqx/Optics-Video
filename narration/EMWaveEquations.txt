@@ -1,0 +1,19 @@
+Now watch what happens when we take the curl of Faraday's law and substitute in the Ampere-Maxwell law.
+
+After the algebra — which you should work through at least once — we get a wave equation for the electric field: nabla squared E equals epsilon naught mu naught times the second time derivative of E.
+
+And identically for B: nabla squared B equals epsilon naught mu naught times the second time derivative of B.
+
+Comparing with the standard wave equation, we immediately read off the wave speed: v equals 1 over the square root of epsilon naught mu naught. Plug in the numbers, and you get exactly 2.998 times 10 to the 8 metres per second. The speed of light.
+
+This is one of the most profound results in all of physics. Maxwell showed that light is nothing other than oscillating electric and magnetic fields.
+
+In a material with relative permittivity K_E, the wave speed becomes c over the square root of K_E, so the refractive index is n equals the square root of K_E.
+
+Now, the electric and magnetic fields in an electromagnetic wave are not independent. They're perpendicular to each other, and both are perpendicular to the direction of propagation. The wave is transverse.
+
+The magnitudes are related by E equals v times B in a medium, or E equals c times B in vacuum.
+
+Let's work through an example. If the electric field is E naught in the x-hat direction, propagating in the z direction, what is B?
+
+The propagation direction is z-hat. Using the relation B equals k-vector cross E divided by omega, we get k over omega times z-hat cross x-hat, times E naught. Z-hat cross x-hat is y-hat. So B points in the y direction, with magnitude E naught over c. The three vectors — E, B, and k — form a right-handed coordinate system.

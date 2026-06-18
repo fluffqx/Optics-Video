@@ -1,0 +1,15 @@
+The circular aperture is the most important case in practice, because most lenses and telescopes are circular.
+
+The diffraction pattern of a circular aperture is the Airy disk — a bright central disk surrounded by concentric rings of decreasing intensity. The pattern is described by the Bessel function J_1.
+
+The first dark ring occurs at sigma equals 3.832, giving sine theta_1 equals 1.22 lambda over D, where D is the diameter.
+
+The full angular diameter of the Airy disk is 2.44 lambda over D.
+
+The Rayleigh criterion defines the resolution limit: two point sources are just resolved when the central maximum of one falls on the first dark ring of the other. The minimum resolvable angle is theta_min equals 1.22 lambda over D.
+
+This sets a fundamental limit on what any circular optical instrument can resolve, regardless of how perfect the optics are. To resolve finer detail, you need a larger aperture or shorter wavelength.
+
+For a telescope with D equals 15 centimetres and lambda equals 550 nanometres: theta_min equals 1.22 times 550 times 10 to the minus 9 over 0.15 equals 4.47 times 10 to the minus 6 radians, which is 0.92 arcseconds. This matches the resolution limit of a good amateur telescope under perfect seeing conditions.
+
+The human eye, with a pupil of about 3 millimetres, has a diffraction limit of about 1 arcminute — which is indeed close to the measured visual acuity.

@@ -1,0 +1,25 @@
+Snell's law tells us directions. The Fresnel equations tell us amplitudes — how much of the electric field is reflected and how much is transmitted.
+
+The key insight is that polarisation matters at an interface. We split the electric field into two independent components.
+
+S-polarisation — sometimes called TE or transverse electric — has the electric field perpendicular to the plane of incidence. If you imagine the ray diagram drawn on paper, the s-polarised field points out of the paper toward you.
+
+P-polarisation — sometimes called TM or transverse magnetic — has the electric field lying in the plane of incidence, parallel to the page.
+
+These two polarisations reflect and transmit differently, and the Fresnel equations give us the amplitude reflection coefficient r and amplitude transmission coefficient t for each.
+
+For s-polarisation: r_perp equals n_i cosine theta_i minus n_t cosine theta_t, all divided by n_i cosine theta_i plus n_t cosine theta_t.
+
+For p-polarisation: r_parallel equals n_t cosine theta_i minus n_i cosine theta_t, all divided by n_t cosine theta_i plus n_i cosine theta_t.
+
+At normal incidence — when the light hits straight on — both polarisations give the same result: r equals n_i minus n_t over n_i plus n_t. This is a very useful formula to remember.
+
+Let's work through a full example. Air to glass, n_i equals 1.0, n_t equals 1.5, theta_i equals 40 degrees.
+
+Step 1: Snell's law gives sine theta_t equals 1.0 over 1.5 times sine 40 degrees equals 0.4285, so theta_t equals 25.37 degrees.
+
+Step 2: compute the cosines. Cosine 40 is 0.766, cosine 25.37 is 0.9036.
+
+Step 3: plug into the Fresnel equations. r_perp comes out to minus 0.278. The negative sign means a phase flip on reflection. r_parallel comes out to plus 0.119 — a smaller reflection with no phase flip.
+
+The p-polarisation reflects less. This will become important when we discuss Brewster's angle.

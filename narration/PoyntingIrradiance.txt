@@ -1,0 +1,17 @@
+Light carries energy. How do we quantify the flow of that energy?
+
+The Poynting vector S equals E cross B divided by mu naught. It points in the direction of energy flow, and its magnitude gives the power per unit area — in watts per square metre.
+
+The irradiance I — what we actually measure with a detector — is the time-averaged magnitude of the Poynting vector. For a plane wave, this works out to n epsilon naught c over 2, times E naught squared.
+
+That factor of one half comes from time-averaging: the time average of cosine squared of omega t is one half. This is a very commonly needed result — remember it.
+
+Light also carries momentum. This means it exerts a radiation pressure on any surface it strikes.
+
+For a perfectly absorbing surface — a black body — the radiation pressure equals I over c.
+
+For a perfectly reflecting surface — a mirror — the beam reverses direction, so the momentum change is doubled. The pressure is 2I over c.
+
+Let's calculate. A laser with irradiance 10 to the 6 watts per square metre hits a perfect mirror. The radiation pressure is 2 times 10 to the 6 divided by 3 times 10 to the 8, giving about 6.67 millipascals. Tiny — but real, and measurable. Solar sails use exactly this effect.
+
+For our second example: E naught equals 1000 volts per metre in air. The irradiance is n epsilon naught c over 2 times E naught squared. Plugging in the numbers gives 132.8 watts per square metre. A household light bulb radiates about this much — so the electric field of visible light is actually quite large, yet completely harmless.

@@ -1,0 +1,11 @@
+The single-slit diffraction pattern has a characteristic shape — a tall central maximum flanked by progressively weaker secondary maxima, separated by dark minima.
+
+The intensity formula is I equals I naught times sine beta over beta squared, where beta equals pi b sine theta over lambda and b is the slit width.
+
+At theta equals zero, beta equals zero, and the limit of sine beta over beta is 1, so the central maximum has intensity I naught.
+
+The dark minima occur wherever sine beta equals zero — that is, wherever beta equals m pi, giving b sine theta equals m lambda. These are at angles theta where the contributions from the top and bottom of the slit cancel exactly.
+
+The angular half-width of the central maximum is given by sine theta_1 equals lambda over b. Making the slit narrower — smaller b — makes the central maximum wider. This is the fundamental wave-optics result: confining a wave makes it spread out more.
+
+For b equals 0.1 millimetres and lambda equals 500 nanometres: sine theta_1 equals 500 times 10 to the minus 9 over 10 to the minus 4 equals 5 times 10 to the minus 3. The angle is 0.286 degrees, or 5 milliradians. The central maximum is 10 milliradians wide — easy to observe on a screen a metre away.

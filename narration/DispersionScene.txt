@@ -1,0 +1,11 @@
+Dispersion is the phenomenon where the refractive index of a material depends on the frequency of light. Different colours travel at different speeds.
+
+The refractive index n equals c over v — the ratio of the speed of light in vacuum to the speed in the medium. For a non-magnetic material, n equals the square root of the relative permittivity K_E.
+
+The Lorentz oscillator model gives us a microscopic understanding of dispersion. The electrons in a material behave like oscillators with resonant frequencies omega_j. Light at frequencies close to a resonance is strongly affected — the material absorbs and re-emits the light with a phase shift that depends on frequency.
+
+The resulting dispersion relation shows n squared as a sum over all resonances, each contributing a term weighted by its oscillator strength f_j.
+
+For frequencies well below all resonances — which is the case for most optical glasses in the visible range — n increases with frequency. This is called normal dispersion. Violet light bends more than red light in a prism.
+
+The group velocity in a dispersive medium is c divided by n plus omega times dn d-omega. When dn d-omega is positive, the group velocity is less than the phase velocity. When negative — anomalous dispersion near an absorption resonance — interesting things happen, including group velocities that can exceed c, though no information travels faster than light.

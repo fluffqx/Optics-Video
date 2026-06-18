@@ -1,0 +1,21 @@
+The thin lens equation is one of the most used equations in all of optics. One over s_o plus one over s_i equals one over f.
+
+s_o is the object distance, s_i is the image distance, and f is the focal length of the lens.
+
+The lensmaker's equation tells us how f depends on the lens geometry: one over f equals n_l minus n_m over n_m, times one over R_1 minus one over R_2.
+
+Here n_l is the refractive index of the lens material, n_m is the index of the surrounding medium, and R_1 and R_2 are the radii of curvature of the two surfaces.
+
+In air, this simplifies to one over f equals n_l minus one, times one over R_1 minus one over R_2.
+
+The magnification m equals minus s_i over s_o. A negative magnification means the image is inverted. A magnitude greater than one means the image is larger than the object.
+
+The dioptric power P equals one over f in units of dioptres — inverse metres. This is what your optician prescribes for glasses. Powers of lenses in contact simply add.
+
+Let's work through a complete example. A biconvex lens with R_1 equals positive 20 centimetres, R_2 equals negative 20 centimetres, and n_l equals 1.5. Object at s_o equals 60 centimetres.
+
+First: one over f equals 0.5 times 1 over 20 minus 1 over minus 20 equals 0.5 times 10 equals 5 dioptres. So f equals 20 centimetres.
+
+Then: one over s_i equals one over 20 minus one over 60 equals 3 minus 1 over 60 equals 2 over 60. So s_i equals 30 centimetres. Real image.
+
+Magnification: minus 30 over 60 equals minus 0.5. Inverted, half the size of the object.

@@ -1,0 +1,17 @@
+Week 8 brings us to the Fabry-Pérot interferometer — the most powerful spectroscopic instrument based on interference.
+
+Unlike the two-beam Michelson, the Fabry-Pérot uses multiple reflections between two highly reflective parallel mirrors. Light bounces back and forth many times, and all the transmitted beams interfere together. This is multi-beam interference.
+
+The result is the Airy function: transmitted intensity equals I naught divided by one plus F times sine squared of delta over 2, where F is the coefficient of finesse equal to 4R over one minus R squared, and delta is the round-trip phase.
+
+When delta is a multiple of 2 pi, the sine term is zero and the transmission is maximum — equal to I naught. This is resonance. All the multiply-reflected beams are in phase and add up constructively.
+
+When delta is an odd multiple of pi, the transmission drops to its minimum. For high reflectivity, this minimum is extremely close to zero. The contrast between maximum and minimum is enormous.
+
+The sharpness of the transmission peaks is characterised by the finesse, script F, equal to pi times square root of R over one minus R. For mirror reflectivity R equals 0.99, the finesse is about 310. The peaks are 310 times narrower than the spacing between them.
+
+The free spectral range is the spacing between successive resonances: delta lambda equals lambda squared over 2nd in wavelength, or delta nu equals c over 2nd in frequency.
+
+The resolving power R equals m times finesse — where m is the resonance order. For a 10 centimetre cavity and 633 nanometre light, m is about 300,000, giving a resolving power of nearly 20 million. This is extraordinary compared to a grating.
+
+Coherence determines whether interference fringes are visible at all. The temporal coherence length equals lambda squared over delta lambda. A laser with a narrow linewidth has a long coherence length — metres or more. A thermal source has a coherence length of micrometres.

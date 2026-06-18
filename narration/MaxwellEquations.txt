@@ -1,0 +1,13 @@
+Here are Maxwell's four equations in matter.
+
+The first equation — Gauss's law for E — says that electric field lines diverge from free electric charges. Where there are positive charges, E field lines spread outward. Where there are negative charges, they converge inward.
+
+The second equation — Gauss's law for B — says the divergence of B is always zero. There are no magnetic monopoles. Every magnetic field line that starts somewhere must end somewhere else — the lines always close on themselves.
+
+The third equation is Faraday's law: the curl of E equals minus the time derivative of B. A changing magnetic field creates a curling electric field. This is the principle behind electric generators and transformers.
+
+The fourth equation is the Ampere-Maxwell law: the curl of B equals mu times the current density, plus mu epsilon times the time derivative of E. This says that both electric currents AND changing electric fields create curling magnetic fields. The second term — the displacement current — was Maxwell's crucial addition, and it's what allows electromagnetic waves to exist.
+
+In vacuum, where there are no free charges and no currents, these equations simplify dramatically. The divergence equations just say both fields have no sources. And the curl equations couple E and B together through their time derivatives.
+
+The fundamental constants epsilon naught and mu naught appear in vacuum. And their combination gives the speed of light: c equals 1 over the square root of epsilon naught times mu naught. This is not a coincidence — Maxwell derived it, and it confirmed that light is an electromagnetic wave.

@@ -1,0 +1,5 @@
+Maxwell's equations are the four fundamental laws of electromagnetism. Written down by James Clerk Maxwell in the 1860s, they unified electricity, magnetism, and light into a single coherent theory.
+
+Everything we do in optics ultimately derives from these four equations. They relate the electric field E and the magnetic field B to their sources — electric charges and currents.
+
+Before we write them down, let's fix the notation. The symbol nabla dot E means the divergence of E — it measures how much E spreads outward from a point. Nabla cross E is the curl of E — it measures how much E rotates around a point. And nabla squared E is the Laplacian — the spatial second derivative in all three directions at once.

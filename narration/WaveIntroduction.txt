@@ -1,0 +1,9 @@
+So what exactly is a wave?
+
+A wave is a disturbance that transports energy from one place to another — without transporting matter along with it. Think of ripples on a pond. The water itself doesn't travel across the pond. The disturbance does.
+
+In optics, the disturbance is the electromagnetic field — the electric and magnetic fields oscillating together as they travel through space.
+
+We start with the simplest possible case: a wave moving in just one spatial dimension. One direction. This is the foundation.
+
+The wave equation is the mathematical statement that tells us exactly how such a disturbance evolves in both space and time simultaneously. Master this equation, and you have the key to understanding everything else in this course — interference, diffraction, polarisation, all of it follows from here.

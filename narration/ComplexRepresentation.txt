@@ -1,0 +1,15 @@
+Working with sines and cosines directly becomes very cumbersome as soon as you try to add waves or compute intensities. There's a much better way — complex exponentials.
+
+The key is Euler's formula: e to the power of i theta equals cosine theta plus i times sine theta. This connects the exponential function to trigonometry in a beautiful and extremely useful way.
+
+From this, cosine theta equals the real part of e to the i theta, and sine theta is the imaginary part.
+
+So instead of writing A cosine of kx minus omega t plus phi, we write A times e to the power of i times kx minus omega t plus phi. The physical wave is always understood to be the real part of this complex expression.
+
+Why is this better? Because multiplying complex exponentials is trivial — you just add the exponents. Adding waves becomes just adding complex numbers. And computing intensities becomes taking the magnitude squared, which is always real and always positive.
+
+The intensity is proportional to the magnitude squared of psi — psi times its complex conjugate — which simply gives A squared. No oscillating terms to average over.
+
+Now we can extend this to three dimensions. A plane wave in 3D is written as A times e to the i times k-vector dot r-vector minus omega t. The k-vector points in the direction of propagation, and k-vector dot r-vector is the projection of the position onto that direction.
+
+A spherical wave spreading out from a point source has amplitude that falls off as one over r — this ensures energy is conserved as the wavefront expands over a larger and larger sphere.

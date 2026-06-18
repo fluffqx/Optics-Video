@@ -1,0 +1,7 @@
+Welcome to the complete exam preparation series for 31OPT Optics at TU Eindhoven.
+
+Week 1 covers the foundation of everything in this course — waves, the wave equation, and how we represent waves mathematically using complex numbers.
+
+By the end of this week, you will understand what a wave actually is, how to write and interpret the wave equation, and why physicists prefer complex exponentials over sines and cosines.
+
+Let's begin.

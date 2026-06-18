@@ -1,0 +1,21 @@
+The reflectivity R — the fraction of intensity that is reflected — is the square of the amplitude reflection coefficient: R equals r squared.
+
+The transmissivity T accounts for the change in beam cross-section and refractive index: T equals n_t cosine theta_t over n_i cosine theta_i, times t squared.
+
+Energy conservation demands R plus T equals one, assuming no absorption. This is a useful check.
+
+At normal incidence from air to glass with n equals 1.5: R equals 0.5 over 2.5 squared, which is 0.04, or 4 percent. So a glass surface reflects 4 percent of light. A window has two surfaces, so it reflects about 8 percent total. Anti-reflection coatings reduce this dramatically.
+
+Brewster's angle is a special angle at which the p-polarisation has zero reflectivity — R parallel equals zero. The reflected beam is then purely s-polarised. This is used to create polarising beamsplitters and is why photographers use polarising filters to reduce glare from windows.
+
+Brewster's angle satisfies: tangent theta_B equals n_t over n_i. At this angle, the reflected and transmitted rays are exactly perpendicular to each other.
+
+For air to glass: theta_B equals arctan of 1.5, which is 56.3 degrees.
+
+Total internal reflection is the other extreme. When light tries to go from a dense medium to a less dense one — glass to air — and the angle exceeds the critical angle, ALL light is reflected. The transmissivity drops to exactly zero.
+
+The critical angle satisfies sine theta_c equals n_t over n_i. For glass to air: sine theta_c equals 1 over 1.5 equals 0.667, giving theta_c equals 41.8 degrees.
+
+This is the principle behind optical fibres. Light bounces down the fibre by total internal reflection, losing essentially no energy at each bounce.
+
+Finally, Malus's law: when polarised light passes through a linear polariser, the transmitted intensity is I naught times cosine squared theta, where theta is the angle between the incoming polarisation direction and the polariser's transmission axis.

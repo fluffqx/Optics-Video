@@ -1,0 +1,15 @@
+The law of reflection is simple: the angle of incidence equals the angle of reflection. Both angles are measured from the surface normal — the line perpendicular to the surface at the point of incidence. This holds for any wavelength and any material.
+
+Snell's law governs refraction — the bending of light as it crosses the interface. n_i times sine of theta_i equals n_t times sine of theta_t.
+
+Here n_i is the refractive index of the medium the light is coming from, theta_i is the angle of incidence, n_t is the index of the medium the light is entering, and theta_t is the angle of refraction.
+
+When light goes from a low-index medium to a high-index medium — like air into glass — it bends toward the normal. The angle gets smaller. When it goes from high to low index, it bends away from the normal.
+
+Let's work through an example. Glass with n equals 1.5 to air, with theta_i equals 30 degrees.
+
+Snell's law gives 1.5 times sine 30 equals 1.0 times sine theta_t.
+
+1.5 times 0.5 equals 0.75, so sine theta_t equals 0.75.
+
+Taking the inverse sine gives theta_t equals 48.6 degrees. The light bends away from the normal as expected, since it's going from a denser medium to air.

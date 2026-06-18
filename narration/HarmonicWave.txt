@@ -1,0 +1,27 @@
+The most important special case of a travelling wave is the harmonic wave — a pure sine or cosine oscillation.
+
+Psi of x and t equals A times sine of kx minus omega t plus phi.
+
+Let's go through every symbol carefully, because these appear constantly throughout the course.
+
+A is the amplitude — the maximum value of the wave. For an electric field, it's in volts per metre. For a pressure wave, it would be in Pascals.
+
+k is the wave number, equal to 2 pi divided by the wavelength lambda. It tells you how many radians of oscillation fit into one metre of space. Its units are radians per metre.
+
+Omega is the angular frequency, equal to 2 pi times the frequency f. It tells you how many radians of oscillation happen per second.
+
+Lambda is the wavelength — the distance between two consecutive crests.
+
+f is the ordinary frequency in hertz — how many full cycles per second. Related to the period T by f equals one over T.
+
+v is the phase speed — how fast the wave crests move. It equals omega divided by k, which also equals f times lambda.
+
+And phi is the initial phase offset — it shifts the wave left or right in time.
+
+Let's do a quick example. Given lambda equals 500 nanometres and v equals 3 times 10 to the 8 metres per second — visible green light — we can find all the other quantities.
+
+k equals 2 pi divided by 500 times 10 to the minus 9, which gives us 1.257 times 10 to the 7 radians per metre.
+
+Multiplying by v gives omega equal to 3.77 times 10 to the 15 radians per second.
+
+And the period T equals 2 pi divided by omega, giving 1.67 times 10 to the minus 15 seconds — about 1.7 femtoseconds. Light oscillates extraordinarily fast.

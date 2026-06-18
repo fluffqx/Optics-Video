@@ -1,0 +1,11 @@
+Here is the one-dimensional wave equation. Take a moment to look at its structure.
+
+On the left side, we have the second derivative of psi with respect to position x. This is the curvature of the wave in space — how sharply the wave bends at each point.
+
+On the right side, we have one over v squared, times the second derivative of psi with respect to time. This is the acceleration of the wave in time — how quickly the wave is changing at each moment.
+
+The equation is saying: the spatial curvature equals the temporal acceleration, scaled by the wave speed v. Space and time are linked by a single number — the speed of the wave.
+
+Now, what are the solutions to this equation? Any function of the form f of x minus vt is a solution — this represents a wave travelling in the positive x direction at speed v. And any function of the form g of x plus vt travels in the negative x direction.
+
+Notice the key insight: the shape of the wave — whatever shape it has — travels without distortion. The wave just moves.

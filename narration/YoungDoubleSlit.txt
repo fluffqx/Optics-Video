@@ -1,0 +1,11 @@
+In Young's double-slit experiment, two narrow slits separated by a distance d are illuminated by a coherent source. Each slit acts as a secondary wave source, and the two waves overlap on a distant screen.
+
+The path difference from the two slits to a point at angle theta on the screen is d sine theta. When this path difference equals a whole number of wavelengths, we get constructive interference — a bright fringe. When it's a half-integer number of wavelengths, we get destructive interference — a dark fringe.
+
+The phase difference between the two beams is delta equals 2 pi over lambda times d sine theta.
+
+The intensity pattern is I equals 4 I naught times cosine squared of delta over 2. The maximum intensity is 4 I naught — four times the intensity from a single slit — because the amplitudes add, and squaring doubles the factor.
+
+The fringe spacing on a screen at distance L is delta y equals lambda L over d. This is the most important formula for Young's experiment. Notice: longer wavelength gives wider fringes, closer slits give wider fringes.
+
+Let's calculate. With d equals 0.1 millimetres, L equals 1.5 metres, and lambda equals 500 nanometres, the fringe spacing is 500 times 10 to the minus 9 times 1.5 over 10 to the minus 4, which equals 7.5 millimetres. Easily visible with the naked eye.

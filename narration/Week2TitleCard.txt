@@ -1,0 +1,7 @@
+Week 2 brings us to one of the most practically important topics in optics: what happens when light strikes a boundary between two different materials.
+
+Every time light passes through a lens, reflects off a mirror, or travels through a window, it's encountering an interface. The behaviour at that interface determines how optical instruments work.
+
+We need to answer two questions. First: in which directions does the reflected and transmitted light travel? That's answered by the law of reflection and Snell's law. Second: how much light is reflected and how much is transmitted? That's answered by the Fresnel equations.
+
+These are not just theoretical tools — they're used every day to design camera lenses, optical fibres, laser cavities, and anti-reflection coatings.
