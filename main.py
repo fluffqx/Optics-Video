@@ -159,7 +159,7 @@ RENDER_ORDER = [
 def print_render_commands(quality: str = "ql") -> None:
     """Print all manim render commands in order."""
     for filepath, scene in RENDER_ORDER:
-        print(f"manim -{quality} {filepath} {scene}")
+        print(f"python -m manim -{quality} {filepath} {scene}")
 
 
 def generate_filelist(media_root: str = "media/videos", quality: str = "1080p60") -> str:
