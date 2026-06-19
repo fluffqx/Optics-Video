@@ -12,7 +12,7 @@ class Week1TitleCard(Scene):
             "Waves, Wave Equation & Complex Representation",
             "Bennett Ch. 1 & 2.1–2.3"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(36.2); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(39.199999999999996); self.play(FadeOut(card))
 
 
 class WaveIntroduction(Scene):
@@ -20,7 +20,7 @@ class WaveIntroduction(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("What Is a Wave?", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(0.5)
+        self.play(Write(title)); self.wait(3.3)
 
         for page in [
             [
@@ -47,8 +47,8 @@ class WaveIntroduction(Scene):
             block.next_to(title, DOWN, buff=0.4)
             for line in block:
                 self.play(FadeIn(line, shift=UP*0.1), run_time=0.5)
-                self.wait(0.8)
-            self.wait(64.1)
+                self.wait(20.4)
+            self.wait(49.099999999999994)
             self.play(FadeOut(block))
 
 
@@ -70,21 +70,21 @@ class WaveEquation1D(Scene):
         eq[2].set_color(WAVE_COLOR)
         eq.next_to(title, DOWN, buff=0.5)
         self.play(Write(eq))
-        self.wait(7)   # narrator: "Here is the 1D wave equation. Take a moment..."
+        self.wait(7.7)   # narrator: "Here is the 1D wave equation. Take a moment..."
 
         # ── Para 2 (18s): "On the left side, we have the second derivative..."
         left_brace = Brace(eq[0], DOWN, color=E_COLOR)
         left_txt   = left_brace.get_text("Curvature\\\\in space", font_size=26)
         left_txt.set_color(E_COLOR)
         self.play(GrowFromCenter(left_brace), FadeIn(left_txt))
-        self.wait(18)  # narrator explains left side fully
+        self.wait(18.8)  # narrator explains left side fully
 
         # ── Para 3 (20.7s): "On the right side, we have one over v squared..."
         right_brace = Brace(eq[3], DOWN, color=B_COLOR)
         right_txt   = right_brace.get_text("Acceleration\\\\in time", font_size=26)
         right_txt.set_color(B_COLOR)
         self.play(GrowFromCenter(right_brace), FadeIn(right_txt))
-        self.wait(20)  # narrator explains right side fully
+        self.wait(21.5)  # narrator explains right side fully
 
         # ── Para 4 (17s): "The equation is saying: spatial curvature = temporal acceleration..."
         interp = Text(
@@ -94,7 +94,7 @@ class WaveEquation1D(Scene):
         interp.next_to(right_txt, DOWN, buff=0.4)
         safe_scale(interp, max_width=13.0)
         self.play(FadeIn(interp))
-        self.wait(17)  # narrator: "The equation is saying..."
+        self.wait(17.7)  # narrator: "The equation is saying..."
         self.play(FadeOut(VGroup(left_brace, left_txt, right_brace, right_txt, interp)))
 
         # ── Para 5 (27.6s): "Now, what are the solutions..."
@@ -116,9 +116,9 @@ class WaveEquation1D(Scene):
         sols.next_to(sol_title, DOWN, buff=0.3)
         safe_scale(sols, max_height=3.0)
         self.play(Write(sol1))
-        self.wait(10)
+        self.wait(28.7)
         self.play(Write(sol2))
-        self.wait(16)  # total ~27s narrator explains both solutions
+        self.wait(12.1)  # total ~27s narrator explains both solutions
 
         # ── Para 6 (11.7s): "Notice the key insight..."
         key = Text(
@@ -128,7 +128,7 @@ class WaveEquation1D(Scene):
         key.next_to(sols, DOWN, buff=0.35)
         safe_scale(key, max_width=13.0)
         self.play(FadeIn(key))
-        self.wait(12)  # narrator: "Notice the key insight...")
+        self.wait(2.0)  # narrator: "Notice the key insight...")
 
 
 class WaveEquationProof(Scene):
@@ -137,7 +137,7 @@ class WaveEquationProof(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Proof: f(x−vt) Satisfies the Wave Equation", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(0.5)
+        self.play(Write(title)); self.wait(12.1)
 
         intro = Text(
             "Bennett Example 1.1 — Let Ψ(x,t) = (x − vt)²  and verify it solves Eq. 1.1",
@@ -145,7 +145,7 @@ class WaveEquationProof(Scene):
         )
         intro.next_to(title, DOWN, buff=0.4)
         safe_scale(intro, max_width=13.0)
-        self.play(FadeIn(intro)); self.wait(41.6)
+        self.play(FadeIn(intro)); self.wait(34.2)
 
         solver = StepSolver(self, intro)
 
@@ -170,15 +170,15 @@ class HarmonicWave(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Harmonic Traveling Waves", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(0.4)
+        self.play(Write(title)); self.wait(11.0)
 
         intro = section_intro([
             "The most important special case of a traveling wave is the HARMONIC wave —",
             "a pure sinusoidal oscillation. Bennett defines it in Eq. 1.15:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.5)
+        for l in intro: self.play(FadeIn(l)); self.wait(8.8)
+        self.wait(7.2)
 
         # Main equation
         psi = MathTex(
@@ -186,10 +186,10 @@ class HarmonicWave(Scene):
             font_size=50, color=E_COLOR
         )
         psi.next_to(intro, DOWN, buff=0.4)
-        self.play(Write(psi)); self.wait(1.5)
+        self.play(Write(psi)); self.wait(16.0)
 
         box = gold_box(psi)
-        self.play(Create(box)); self.wait(0.5))
+        self.play(Create(box)); self.wait(18.8))
 
         # Symbol definitions — page 1
         sym_title = Text("Every Symbol Defined:", font_size=32, color=GOLD)
@@ -204,8 +204,8 @@ class HarmonicWave(Scene):
         ]
         t1 = eq_table(rows1, eq_fs=32, lbl_fs=23, buff=0.28)
         t1.next_to(sym_title, DOWN, buff=0.3)
-        for row in t1: self.play(FadeIn(row)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(VGroup(sym_title, t1)))
+        for row in t1: self.play(FadeIn(row)); self.wait(13.2)
+        self.wait(6.1); self.play(FadeOut(VGroup(sym_title, t1)))
 
         # Symbol definitions — page 2
         sym_title2 = Text("More Symbols:", font_size=32, color=GOLD)
@@ -220,8 +220,8 @@ class HarmonicWave(Scene):
         ]
         t2 = eq_table(rows2, eq_fs=32, lbl_fs=23, buff=0.28)
         t2.next_to(sym_title2, DOWN, buff=0.3)
-        for row in t2: self.play(FadeIn(row)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(VGroup(sym_title2, t2)))
+        for row in t2: self.play(FadeIn(row)); self.wait(13.8)
+        self.wait(13.2); self.play(FadeOut(VGroup(sym_title2, t2)))
 
         # Relations between quantities
         rel_title = Text("Key Relations — Memorise These:", font_size=32, color=GOLD)
@@ -237,8 +237,8 @@ class HarmonicWave(Scene):
         ]
         t3 = eq_table(rel_rows, eq_fs=34, lbl_fs=23, buff=0.25)
         t3.next_to(rel_title, DOWN, buff=0.3)
-        for row in t3: self.play(FadeIn(row)); self.wait(0.7)
-        self.wait(141.5); self.play(FadeOut(VGroup(title, psi, rel_title, t3)))
+        for row in t3: self.play(FadeIn(row)); self.wait(9.4)
+        self.wait(56.300000000000004); self.play(FadeOut(VGroup(title, psi, rel_title, t3)))
 
 
 class HarmonicWaveExample(Scene):
@@ -255,8 +255,8 @@ class HarmonicWaveExample(Scene):
             "Find:   wave number k, angular frequency ω, frequency f, period T",
         ], font_size=28)
         given.next_to(title, DOWN, buff=0.4)
-        for l in given: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(52.3)
+        for l in given: self.play(FadeIn(l)); self.wait(8.3)
+        self.wait(50.2)
 
         solver = StepSolver(self, given, start_buff=0.4)
         solver.add_step(1,
@@ -293,8 +293,8 @@ class SuperpositionPrinciple(Scene):
             "a valid solution. This can be extended to any number of waves.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(7.2)
+        self.wait(25.4); self.play(FadeOut(intro))
 
         # Mathematical statement
         proof_title = Text("Proof  (Bennett Section 1.5):", font_size=30, color=GOLD)
@@ -313,8 +313,8 @@ class SuperpositionPrinciple(Scene):
         eqs = VGroup(s1, s2).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(eqs)
         eqs.next_to(proof_title, DOWN, buff=0.4)
-        self.play(Write(s1)); self.wait(1.2)
-        self.play(Write(s2)); self.wait(1.5)
+        self.play(Write(s1)); self.wait(18.2)
+        self.play(Write(s2)); self.wait(2.0)
 
         importance = section_intro([
             "Why does this matter enormously?",
@@ -323,8 +323,8 @@ class SuperpositionPrinciple(Scene):
             "→ A complex wave (e.g. white light) = sum of many harmonic waves.",
         ], font_size=26)
         importance.next_to(eqs, DOWN, buff=0.4)
-        for l in importance: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(38.2); self.play(FadeOut(VGroup(title, proof_title, eqs, importance)))
+        for l in importance: self.play(FadeIn(l)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, proof_title, eqs, importance)))
 
 
 class PhaseGroupVelocity(Scene):
@@ -339,8 +339,8 @@ class PhaseGroupVelocity(Scene):
             "Confusing them is a classic exam mistake — understand the difference deeply.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(1.0)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(9.4)
+        self.wait(16.0); self.play(FadeOut(intro))
 
         # Phase velocity
         vp_title = Text("Phase Velocity  v_p:", font_size=34, color=WAVE_COLOR)
@@ -349,7 +349,7 @@ class PhaseGroupVelocity(Scene):
 
         vp_eq = MathTex(r"v_p = \frac{\omega}{k}", font_size=56, color=WAVE_COLOR)
         vp_eq.next_to(vp_title, DOWN, buff=0.3)
-        self.play(Write(vp_eq)); self.wait(0.8)
+        self.play(Write(vp_eq)); self.wait(24.8)
 
         vp_desc = section_intro([
             "v_p is the speed at which the PHASE of the wave propagates.",
@@ -358,8 +358,8 @@ class PhaseGroupVelocity(Scene):
             "In vacuum: v_p = c = 3×10⁸ m/s for all frequencies.",
         ], font_size=26)
         vp_desc.next_to(vp_eq, DOWN, buff=0.3)
-        for l in vp_desc: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1); self.play(FadeOut(VGroup(vp_title, vp_eq, vp_desc)))
+        for l in vp_desc: self.play(FadeIn(l)); self.wait(14.4)
+        self.wait(20.4); self.play(FadeOut(VGroup(vp_title, vp_eq, vp_desc)))
 
         # Group velocity
         vg_title = Text("Group Velocity  v_g:", font_size=34, color=WAVE_COLOR)
@@ -370,7 +370,7 @@ class PhaseGroupVelocity(Scene):
             r"v_g = \frac{d\omega}{dk} = \left(\frac{dk}{d\omega}\right)^{-1}",
             font_size=50, color=WAVE_COLOR)
         vg_eq.next_to(vg_title, DOWN, buff=0.3)
-        self.play(Write(vg_eq)); self.wait(0.8)
+        self.play(Write(vg_eq)); self.wait(15.5)
 
         vg_desc = section_intro([
             "v_g is the speed at which the ENVELOPE of a wave packet propagates.",
@@ -381,8 +381,8 @@ class PhaseGroupVelocity(Scene):
             "at different speeds, causing dispersion.",
         ], font_size=26)
         vg_desc.next_to(vg_eq, DOWN, buff=0.3)
-        for l in vg_desc: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1); self.play(FadeOut(VGroup(vg_title, vg_eq, vg_desc)))
+        for l in vg_desc: self.play(FadeIn(l)); self.wait(11.6)
+        self.wait(11.0); self.play(FadeOut(VGroup(vg_title, vg_eq, vg_desc)))
 
         # Example with concrete dispersion relation
         ex_title = Text("Example: ω = ak²  (hypothetical dispersion relation)", font_size=30, color=GOLD)
@@ -406,10 +406,10 @@ class PhaseGroupVelocity(Scene):
             "This is directly observable in water waves!",
         ], font_size=26)
         note.next_to(solver.steps[-1], DOWN, buff=0.4)
-        for l in note: self.play(FadeIn(l)); self.wait(0.8)
+        for l in note: self.play(FadeIn(l)); self.wait(9.9)
 
         solver.finalize()
-        self.wait(120.7); self.play(FadeOut(VGroup(title, ex_title, note, *solver.steps)))
+        self.wait(16.0); self.play(FadeOut(VGroup(title, ex_title, note, *solver.steps)))
 
 
 class ComplexRepresentation(Scene):
@@ -427,8 +427,8 @@ class ComplexRepresentation(Scene):
             "The key is Euler's formula — one of the most beautiful results in mathematics:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(15.5)
+        self.wait(18.8); self.play(FadeOut(intro))
 
         # Euler's formula with derivation context
         euler_title = Text("Euler's Formula  (Bennett Eq. 1.18):", font_size=30, color=GOLD)
@@ -438,8 +438,8 @@ class ComplexRepresentation(Scene):
         euler = MathTex(r"e^{i\theta} = \cos\theta + i\sin\theta",
                         font_size=58, color=GOLD)
         euler.next_to(euler_title, DOWN, buff=0.3)
-        self.play(Write(euler)); self.wait(1.5)
-        self.play(Create(gold_box(euler))); self.wait(1)
+        self.play(Write(euler)); self.wait(11.6)
+        self.play(Create(gold_box(euler))); self.wait(24.8)
 
         # Consequences
         consequences = [
@@ -449,8 +449,8 @@ class ComplexRepresentation(Scene):
         ]
         c_group = eq_table(consequences, eq_fs=34, lbl_fs=24, buff=0.28)
         c_group.next_to(euler, DOWN, buff=0.4)
-        for row in c_group: self.play(FadeIn(row)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(VGroup(euler_title, euler, c_group)))
+        for row in c_group: self.play(FadeIn(row)); self.wait(21.0)
+        self.wait(15.5); self.play(FadeOut(VGroup(euler_title, euler, c_group)))
 
         # Complex wave notation
         cwave_title = Text("The Complex Wave  (Bennett Eq. 1.6.2):", font_size=30, color=GOLD)
@@ -461,7 +461,7 @@ class ComplexRepresentation(Scene):
             r"\tilde{\Psi}(x,t) = A\,e^{i(kx - \omega t + \phi)}",
             font_size=50, color=E_COLOR)
         cwave.next_to(cwave_title, DOWN, buff=0.35)
-        self.play(Write(cwave)); self.wait(1)
+        self.play(Write(cwave)); self.wait(27.6)
 
         rule = MathTex(
             r"\text{Physical wave} = \mathrm{Re}[\tilde{\Psi}]"
@@ -469,7 +469,7 @@ class ComplexRepresentation(Scene):
             font_size=36, color=WHITE)
         rule.next_to(cwave, DOWN, buff=0.4)
         safe_scale(rule, max_width=13.0)
-        self.play(Write(rule)); self.wait(1.5)
+        self.play(Write(rule)); self.wait(18.8)
 
         why = section_intro([
             "Why is this better?",
@@ -479,8 +479,8 @@ class ComplexRepresentation(Scene):
             "→ No more cos² integrals — the algebra is vastly simpler.",
         ], font_size=25)
         why.next_to(rule, DOWN, buff=0.35)
-        for l in why: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(1.5); self.play(FadeOut(VGroup(cwave_title, cwave, rule, why)))
+        for l in why: self.play(FadeIn(l)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(VGroup(cwave_title, cwave, rule, why)))
 
         # Intensity from complex notation
         int_title = Text("Intensity from Complex Notation:", font_size=32, color=GOLD)
@@ -497,8 +497,8 @@ class ComplexRepresentation(Scene):
         ]
         int_eqs = eq_table(int_rows, eq_fs=32, lbl_fs=24, buff=0.3)
         int_eqs.next_to(int_title, DOWN, buff=0.35)
-        for row in int_eqs: self.play(FadeIn(row)); self.wait(0.9)
-        self.wait(119.2); self.play(FadeOut(VGroup(title, int_title, int_eqs)))
+        for row in int_eqs: self.play(FadeIn(row)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, int_title, int_eqs)))
 
 
 class ThreeDWaves(Scene):
@@ -513,8 +513,8 @@ class ThreeDWaves(Scene):
             "extends the 1D description to 3D using the wave vector k⃗.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(25.4)
+        self.wait(10.5); self.play(FadeOut(intro))
 
         # 3D plane wave
         pw_title = Text("3D Plane Wave  (Bennett Eq. 1.57):", font_size=30, color=GOLD)
@@ -525,7 +525,7 @@ class ThreeDWaves(Scene):
             r"\tilde{\Psi}(\vec{r},t) = A\,e^{i(\vec{k}\cdot\vec{r} - \omega t)}",
             font_size=48, color=E_COLOR)
         plane.next_to(pw_title, DOWN, buff=0.3)
-        self.play(Write(plane)); self.wait(1)
+        self.play(Write(plane)); self.wait(29.3)
 
         plane_details = eq_table([
             (r"\vec{k} = k_x\hat{x} + k_y\hat{y} + k_z\hat{z}",
@@ -538,8 +538,8 @@ class ThreeDWaves(Scene):
              "flat planes perpendicular to k⃗ — hence 'plane wave'", WHITE),
         ], eq_fs=30, lbl_fs=23, buff=0.25)
         plane_details.next_to(plane, DOWN, buff=0.35)
-        for row in plane_details: self.play(FadeIn(row)); self.wait(0.7)
-        self.wait(1.5); self.play(FadeOut(VGroup(pw_title, plane, plane_details)))
+        for row in plane_details: self.play(FadeIn(row)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(VGroup(pw_title, plane, plane_details)))
 
         # Spherical wave
         sw_title = Text("Spherical Wave  (Bennett Eq. 1.59):", font_size=30, color=GOLD)
@@ -550,7 +550,7 @@ class ThreeDWaves(Scene):
             r"\tilde{\Psi}(r,t) = \frac{A}{r}\,e^{i(kr - \omega t)}",
             font_size=52, color=B_COLOR)
         sphere.next_to(sw_title, DOWN, buff=0.3)
-        self.play(Write(sphere)); self.wait(1.2)
+        self.play(Write(sphere)); self.wait(2.0)
 
         sw_details = section_intro([
             "The amplitude falls off as 1/r — this is NOT arbitrary.",
@@ -563,8 +563,8 @@ class ThreeDWaves(Scene):
             "use plane waves to describe laser beams and starlight.",
         ], font_size=26)
         sw_details.next_to(sphere, DOWN, buff=0.35)
-        for l in sw_details: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(47.7); self.play(FadeOut(VGroup(title, sw_title, sphere, sw_details)))
+        for l in sw_details: self.play(FadeIn(l)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, sw_title, sphere, sw_details)))
 
 
 class Week1WavesSummary(Scene):
@@ -578,4 +578,4 @@ class Week1WavesSummary(Scene):
                 r"\tilde{\Psi} = A\,e^{i(kx-\omega t)},\quad |\tilde{\Psi}|^2 = A^2 \quad \text{(complex notation)}",
             ]
         )
-        self.play(FadeIn(card)); self.wait(51.1); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(55.800000000000004); self.play(FadeOut(card))

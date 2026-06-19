@@ -9,7 +9,7 @@ class MaxwellIntro(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Maxwell's Equations", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(0.5)
+        self.play(Write(title)); self.wait(16.0)
 
         intro = section_intro([
             "Maxwell's equations are the four fundamental laws of classical electromagnetism.",
@@ -24,8 +24,8 @@ class MaxwellIntro(Scene):
             "Understanding WHY each equation has its form is as important as knowing it.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(61.2); self.play(FadeOut(VGroup(title, intro)))
+        for l in intro: self.play(FadeIn(l)); self.wait(16.6)
+        self.wait(36.4); self.play(FadeOut(VGroup(title, intro)))
 
 
 class VectorCalculusNotation(Scene):
@@ -41,8 +41,8 @@ class VectorCalculusNotation(Scene):
             "instantly and understand their physical meaning.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(5.0)
+        self.wait(22.1); self.play(FadeOut(intro))
 
         ops = [
             (r"\nabla\cdot\vec{F} = \frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}",
@@ -67,9 +67,9 @@ class VectorCalculusNotation(Scene):
             safe_scale(op_eq, max_width=13.0)
             op_desc = section_intro(desc.split('\n'), font_size=26)
             op_desc.next_to(op_eq, DOWN, buff=0.4)
-            self.play(Write(op_eq)); self.wait(0.5)
-            for l in op_desc: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(48.7)
+            self.play(Write(op_eq)); self.wait(19.3)
+            for l in op_desc: self.play(FadeIn(l)); self.wait(12.7)
+            self.wait(2.0)
             self.play(FadeOut(VGroup(op_eq, op_desc)))
 
 
@@ -135,12 +135,12 @@ class MaxwellEquations(Scene):
             eq = MathTex(latex, font_size=48, color=color)
             eq.next_to(law_title, DOWN, buff=0.3)
             safe_scale(eq, max_width=11.0)
-            self.play(Write(eq)); self.wait(0.8)
+            self.play(Write(eq)); self.wait(3.9)
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(eq, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l)); self.wait(0.9)
-            self.wait(129.8)
+            for l in desc: self.play(FadeIn(l)); self.wait(20.4)
+            self.wait(123.10000000000001)
             self.play(FadeOut(VGroup(law_title, eq, desc)))
 
 
@@ -158,8 +158,8 @@ class MaxwellVacuum(Scene):
             "Setting ρ=0 and J=0 in the general equations gives:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(8.8)
+        self.wait(29.3); self.play(FadeOut(intro))
 
         vac_eqs = VGroup(
             MathTex(r"\nabla\cdot\vec{E} = 0", font_size=46, color=E_COLOR),
@@ -172,8 +172,8 @@ class MaxwellVacuum(Scene):
         safe_scale(vac_eqs, max_height=5.5)
 
         for eq in vac_eqs:
-            self.play(Write(eq), run_time=0.9); self.wait(0.6)
-        self.wait(1)
+            self.play(Write(eq), run_time=0.9); self.wait(23.2)
+        self.wait(2.0)
 
         constants = VGroup(
             MathTex(r"\varepsilon_0 = 8.854\times10^{-12} \text{ F/m}", font_size=28, color=N_COLOR),
@@ -182,7 +182,7 @@ class MaxwellVacuum(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         constants.to_edge(RIGHT, buff=0.5)
         constants.shift(DOWN * 0.5)
-        self.play(FadeIn(constants)); self.wait(51.0))
+        self.play(FadeIn(constants)); self.wait(2.0))
 
 
 class EMWaveDerivation(Scene):
@@ -199,8 +199,8 @@ class EMWaveDerivation(Scene):
             "Take the curl of BOTH sides — this is the key trick:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(77.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(11.6)
+        self.wait(75.7); self.play(FadeOut(intro))
 
         solver = StepSolver(self, title, start_buff=0.55)
 
@@ -236,7 +236,7 @@ class EMWaveProperties(Scene):
             "have remarkable properties — all provable directly from Maxwell's equations.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
+        for l in intro: self.play(FadeIn(l)); self.wait(9.4)
         self.play(FadeOut(intro))
 
         properties = [
@@ -266,12 +266,12 @@ class EMWaveProperties(Scene):
             eq = MathTex(latex, font_size=38, color=color)
             eq.next_to(prop_title, DOWN, buff=0.3)
             safe_scale(eq, max_width=13.0)
-            self.play(Write(eq)); self.wait(0.7)
+            self.play(Write(eq)); self.wait(11.6)
 
             desc_mob = section_intro(desc.split('\n'), font_size=26)
             desc_mob.next_to(eq, DOWN, buff=0.35)
-            for l in desc_mob: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(52.1); self.play(FadeOut(VGroup(prop_title, eq, desc_mob)))
+            for l in desc_mob: self.play(FadeIn(l)); self.wait(11.6)
+            self.wait(31.0); self.play(FadeOut(VGroup(prop_title, eq, desc_mob)))
 
 
 class EMWaveExample(Scene):
@@ -292,11 +292,11 @@ class EMWaveExample(Scene):
             r"\vec{E}(x,y,z,t) = E_0\,\hat{x}\,e^{i(kz-\omega t)}",
             font_size=44, color=E_COLOR)
         E_field.next_to(prob, DOWN, buff=0.3)
-        self.play(Write(E_field)); self.wait(1)
+        self.play(Write(E_field)); self.wait(12.1)
 
         find = Text("Find: the magnetic field B⃗(x,y,z,t)", font_size=30, color=WHITE)
         find.next_to(E_field, DOWN, buff=0.3)
-        self.play(FadeIn(find)); self.wait(46.8)
+        self.play(FadeIn(find)); self.wait(41.9)
 
         solver = StepSolver(self, find, start_buff=0.4)
 
@@ -338,8 +338,8 @@ class PoyntingIrradiance(Scene):
             "flowing in the direction of E⃗ × B⃗ = direction of k⃗.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(6.6)
+        self.wait(19.3); self.play(FadeOut(intro))
 
         # Poynting vector definition
         S_title = Text("The Poynting Vector  (Bennett Eq. 2.35):", font_size=30, color=GOLD)
@@ -350,7 +350,7 @@ class PoyntingIrradiance(Scene):
             r"\vec{S} = \frac{1}{\mu_0}\vec{E}\times\vec{B} \quad [\text{W/m}^2]",
             font_size=52, color=INTENSITY_COLOR)
         S_eq.next_to(S_title, DOWN, buff=0.3)
-        self.play(Write(S_eq)); self.wait(1.2)
+        self.play(Write(S_eq)); self.wait(21.0)
 
         S_desc = section_intro([
             "S⃗ points in the direction of energy flow (same as k⃗).",
@@ -358,8 +358,8 @@ class PoyntingIrradiance(Scene):
             "S⃗ oscillates in time — we need the TIME AVERAGE for practical use.",
         ], font_size=26)
         S_desc.next_to(S_eq, DOWN, buff=0.35)
-        for l in S_desc: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1); self.play(FadeOut(VGroup(S_title, S_eq, S_desc)))
+        for l in S_desc: self.play(FadeIn(l)); self.wait(16.6)
+        self.wait(8.8); self.play(FadeOut(VGroup(S_title, S_eq, S_desc)))
 
         # Irradiance
         I_title = Text("Irradiance I = Time-averaged Poynting Magnitude  (Bennett Eq. 2.38):", font_size=28, color=GOLD)
@@ -371,7 +371,7 @@ class PoyntingIrradiance(Scene):
             r"I \equiv \langle|\vec{S}|\rangle_T = \frac{n\varepsilon_0 c}{2}E_0^2",
             font_size=52, color=INTENSITY_COLOR)
         I_eq.next_to(I_title, DOWN, buff=0.35)
-        self.play(Write(I_eq)); self.wait(1)
+        self.play(Write(I_eq)); self.wait(9.4)
 
         half_note = section_intro([
             "Where does the factor of ½ come from?",
@@ -380,8 +380,8 @@ class PoyntingIrradiance(Scene):
             "This is a very frequently-needed result — commit it to memory.",
         ], font_size=26)
         half_note.next_to(I_eq, DOWN, buff=0.35)
-        for l in half_note: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(129.6); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
+        for l in half_note: self.play(FadeIn(l)); self.wait(13.8)
+        self.wait(61.3); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
 
         # Worked example
         ex_title = Text("Example: Green Laser, Power=5.0 mW, beam radius=1.0 mm", font_size=28, color=GOLD)
@@ -423,8 +423,8 @@ class RadiationPressure(Scene):
             "   (factor of 2 because momentum REVERSES — like a ball bouncing off a wall)",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(10.5)
+        self.wait(18.2); self.play(FadeOut(intro))
 
         # Equations
         P_title = Text("Radiation Pressure Formulas  (Bennett Eq. 2.43):", font_size=30, color=GOLD)
@@ -435,8 +435,8 @@ class RadiationPressure(Scene):
         prefl = labeled_eq(r"P_{\text{refl}} = \frac{2I}{c}", "perfectly reflecting surface — 2\times  because momentum reverses", INTENSITY_COLOR, 50, 26)
         peqs  = VGroup(pabs, prefl).arrange(DOWN, buff=0.5)
         peqs.next_to(P_title, DOWN, buff=0.3)
-        self.play(Write(pabs)); self.wait(1)
-        self.play(Write(prefl)); self.wait(49.9)
+        self.play(Write(pabs)); self.wait(25.4)
+        self.play(Write(prefl)); self.wait(8.8)
         self.play(FadeOut(VGroup(P_title, peqs)))
 
         # Example 1: solar sail
@@ -493,8 +493,8 @@ class DispersionScene(Scene):
             "depends on how close ω is to the resonance frequency ω_j.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(12.7)
+        self.wait(21.0); self.play(FadeOut(intro))
 
         # n = sqrt(K_E)
         n_eq = labeled_eq(
@@ -502,7 +502,7 @@ class DispersionScene(Scene):
             "refractive index = sqrt(relative permittivity)  [dimensionless]",
             N_COLOR, 46, 26)
         n_eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(n_eq)); self.wait(1.5)
+        self.play(Write(n_eq)); self.wait(27.0)
 
         # Lorentz model
         lorentz_title = Text("Lorentz Oscillator Model  (Bennett Eq. 3.113):", font_size=28, color=GOLD)
@@ -514,7 +514,7 @@ class DispersionScene(Scene):
             font_size=36, color=N_COLOR)
         lorentz.next_to(lorentz_title, DOWN, buff=0.3)
         safe_scale(lorentz, max_width=12.5)
-        self.play(Write(lorentz)); self.wait(1.2)
+        self.play(Write(lorentz)); self.wait(12.7)
 
         sym_rows = eq_table([
             (r"N", "number density of oscillators (atoms/m³)", WHITE),
@@ -523,8 +523,8 @@ class DispersionScene(Scene):
             (r"f_j", "oscillator strengths — dimensionless weights summing to total electrons", N_COLOR),
         ], eq_fs=28, lbl_fs=22, buff=0.22)
         sym_rows.next_to(lorentz, DOWN, buff=0.3)
-        for row in sym_rows: self.play(FadeIn(row)); self.wait(0.6)
-        self.wait(1.5); self.play(FadeOut(VGroup(lorentz_title, lorentz, sym_rows)))
+        for row in sym_rows: self.play(FadeIn(row)); self.wait(21.5)
+        self.wait(32.0); self.play(FadeOut(VGroup(lorentz_title, lorentz, sym_rows)))
 
         # Normal vs anomalous dispersion
         disp_title = Text("Normal vs Anomalous Dispersion:", font_size=30, color=GOLD)
@@ -540,7 +540,7 @@ class DispersionScene(Scene):
              "group velocity in dispersive medium — differs from phase velocity v_p = c/n", WAVE_COLOR),
         ], eq_fs=30, lbl_fs=22, buff=0.3)
         disp_rows.next_to(disp_title, DOWN, buff=0.3)
-        for row in disp_rows: self.play(FadeIn(row)); self.wait(0.8)
+        for row in disp_rows: self.play(FadeIn(row)); self.wait(2.0)
 
         prism_note = section_intro([
             "Prism example: violet light (λ≈400nm) bends MORE than red (λ≈700nm)",
@@ -548,5 +548,5 @@ class DispersionScene(Scene):
             "This is Newton's famous prism experiment — explained by the Lorentz model.",
         ], font_size=25)
         prism_note.next_to(disp_rows, DOWN, buff=0.3)
-        for l in prism_note: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(101.8); self.play(FadeOut(VGroup(title, n_eq, disp_title, disp_rows, prism_note)))
+        for l in prism_note: self.play(FadeIn(l)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, n_eq, disp_title, disp_rows, prism_note)))

@@ -12,7 +12,7 @@ class Week4TitleCard(Scene):
             "Matrix Optics, Superposition & Polarisation Basics",
             "Bennett Ch. 5.5, 7.1–7.3.1, 6.1–6.2"
         )
-        self.play(FadeIn(card)); self.wait(142.9); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(157.5); self.play(FadeOut(card))
 
 
 class MatrixOpticsIntro(Scene):
@@ -37,8 +37,8 @@ class MatrixOpticsIntro(Scene):
             "The LAST element on the right corresponds to the FIRST element encountered.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(53.2); self.play(FadeOut(VGroup(title, intro)))
+        for l in intro: self.play(FadeIn(l)); self.wait(21.5)
+        self.wait(38.1); self.play(FadeOut(VGroup(title, intro)))
 
 
 class MatrixEquations(Scene):
@@ -83,12 +83,12 @@ class MatrixEquations(Scene):
 
             eq = MathTex(latex, font_size=44, color=color)
             eq.next_to(m_title, DOWN, buff=0.3)
-            self.play(Write(eq)); self.wait(0.7)
+            self.play(Write(eq)); self.wait(3.9)
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(eq, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l)); self.wait(0.7)
-            self.wait(56.3); self.play(FadeOut(VGroup(m_title, eq, desc)))
+            for l in desc: self.play(FadeIn(l)); self.wait(17.7)
+            self.wait(44.2); self.play(FadeOut(VGroup(m_title, eq, desc)))
 
 
 class SystemMatrixCardinalPoints(Scene):
@@ -104,14 +104,14 @@ class SystemMatrixCardinalPoints(Scene):
             "The system matrix has the form:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.3)
+        for l in intro: self.play(FadeIn(l)); self.wait(10.5)
+        self.wait(23.2)
 
         M_sys = MathTex(
             r"M_{\text{sys}} = \begin{pmatrix}A & B \\ C & D\end{pmatrix}",
             font_size=50, color=GOLD)
         M_sys.next_to(intro, DOWN, buff=0.35)
-        self.play(Write(M_sys)); self.wait(1.2))
+        self.play(Write(M_sys)); self.wait(16.0))
 
         # Cardinal points
         cardinal_title = Text("Cardinal Points from M_sys = [A B; C D]  (Bennett Eq. 5.77-5.80):", font_size=26, color=GOLD)
@@ -128,8 +128,8 @@ class SystemMatrixCardinalPoints(Scene):
             (r"\det(M) = AD - BC = 1",             "determinant is always 1 (energy conservation)", GOLD),
         ], eq_fs=32, lbl_fs=22, buff=0.25)
         cardinals.next_to(cardinal_title, DOWN, buff=0.3)
-        for row in cardinals: self.play(FadeIn(row)); self.wait(0.6)
-        self.wait(50.7); self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
+        for row in cardinals: self.play(FadeIn(row)); self.wait(12.1)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
 
 
 class MatrixExample(Scene):
@@ -146,8 +146,8 @@ class MatrixExample(Scene):
             "Show it expands the beam by factor f₂/f₁ without focusing.",
         ], font_size=27)
         prob.next_to(title, DOWN, buff=0.4)
-        for l in prob: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(54.2)
+        for l in prob: self.play(FadeIn(l)); self.wait(13.2)
+        self.wait(47.4)
 
         solver = StepSolver(self, prob, start_buff=0.4)
         solver.add_step(1,

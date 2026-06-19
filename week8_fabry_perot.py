@@ -12,7 +12,7 @@ class Week8TitleCard(Scene):
             "Multiple-Beam Interference & Fabry-Pérot",
             "Bennett Ch. 7.10, 7.11"
         )
-        self.play(FadeIn(card)); self.wait(162.3); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(178.79999999999998); self.play(FadeOut(card))
 
 
 class MultiBeamIntro(Scene):
@@ -35,8 +35,8 @@ class MultiBeamIntro(Scene):
             "The result is the AIRY FUNCTION — one of the most important results in optics.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(100.6); self.play(FadeOut(VGroup(title, intro)))
+        for l in intro: self.play(FadeIn(l)); self.wait(18.8)
+        self.wait(93.2); self.play(FadeOut(VGroup(title, intro)))
 
 
 class AiryFunction(Scene):
@@ -50,14 +50,14 @@ class AiryFunction(Scene):
             "Summing the infinite series of transmitted beams gives the Airy function:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro[0])); self.wait(0.8); self.play(FadeOut(intro))
+        self.play(FadeIn(intro[0])); self.wait(14.4); self.play(FadeOut(intro))
 
         airy = MathTex(
             r"I_t = \frac{I_0}{1 + F\sin^2\!\left(\frac{\delta}{2}\right)}",
             font_size=64, color=INTENSITY_COLOR)
         airy.next_to(title, DOWN, buff=0.5)
-        self.play(Write(airy)); self.wait(1.5)
-        self.play(Create(gold_box(airy))); self.wait(0.5)
+        self.play(Write(airy)); self.wait(17.7)
+        self.play(Create(gold_box(airy))); self.wait(28.7)
 
         sym = eq_table([
             (r"I_0", "incident irradiance  [W/m²]", INTENSITY_COLOR),
@@ -67,8 +67,8 @@ class AiryFunction(Scene):
             (r"R", "mirror reflectivity (same for both mirrors)", N_COLOR),
         ], eq_fs=30, lbl_fs=23, buff=0.25)
         sym.next_to(airy, DOWN, buff=0.4)
-        for row in sym: self.play(FadeIn(row)); self.wait(0.7)
-        self.wait(1.5); self.play(FadeOut(sym))
+        for row in sym: self.play(FadeIn(row)); self.wait(23.2)
+        self.wait(18.2); self.play(FadeOut(sym))
 
         # Resonance condition
         res_title = Text("Resonance Condition — Peak Transmission:", font_size=28, color=GOLD)
@@ -83,8 +83,8 @@ class AiryFunction(Scene):
             "The field builds up inside the cavity to a very large amplitude.",
         ], font_size=26)
         res.next_to(res_title, DOWN, buff=0.3)
-        for l in res: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(95.9); self.play(FadeOut(VGroup(title, airy, res_title, res)))
+        for l in res: self.play(FadeIn(l)); self.wait(14.9)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, airy, res_title, res)))
 
 
 class FinesseResolving(Scene):
@@ -99,8 +99,8 @@ class FinesseResolving(Scene):
             "It is defined as the ratio of the free spectral range to the peak FWHM.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(10.5)
+        self.wait(35.9); self.play(FadeOut(intro))
 
         eqs = eq_table([
             (r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R} = \frac{\pi\sqrt{F}}{2}",
@@ -117,8 +117,8 @@ class FinesseResolving(Scene):
              "FREE SPECTRAL RANGE in frequency — cavity mode spacing", INTENSITY_COLOR),
         ], eq_fs=30, lbl_fs=22, buff=0.28)
         eqs.next_to(title, DOWN, buff=0.5)
-        for row in eqs: self.play(FadeIn(row)); self.wait(0.7)
-        self.wait(1.5); self.play(FadeOut(eqs))
+        for row in eqs: self.play(FadeIn(row)); self.wait(16.6)
+        self.wait(10.5); self.play(FadeOut(eqs))
 
         # Physical interpretations
         phys_title = Text("Physical Interpretation of Finesse:", font_size=30, color=GOLD)
@@ -133,8 +133,8 @@ class FinesseResolving(Scene):
             "The peaks are 312× narrower than the spacing between them!",
         ], font_size=26)
         phys.next_to(phys_title, DOWN, buff=0.35)
-        for l in phys: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(115.1); self.play(FadeOut(VGroup(title, phys_title, phys)))
+        for l in phys: self.play(FadeIn(l)); self.wait(21.5)
+        self.wait(40.3); self.play(FadeOut(VGroup(title, phys_title, phys)))
 
 
 class FabryPerotExample(Scene):
@@ -151,8 +151,8 @@ class FabryPerotExample(Scene):
             "Find: required mirror spacing, finesse, resolving power, and verify resolution.",
         ], font_size=27)
         prob.next_to(title, DOWN, buff=0.4)
-        for l in prob: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(100.6)
+        for l in prob: self.play(FadeIn(l)); self.wait(12.1)
+        self.wait(99.9)
 
         solver = StepSolver(self, prob, start_buff=0.4)
         solver.add_step(1,
@@ -196,8 +196,8 @@ class CoherenceLength(Scene):
             "— it is coherent with a copy of itself no matter how much you delay it.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(13.2)
+        self.wait(26.5); self.play(FadeOut(intro))
 
         coh_eqs = eq_table([
             (r"l_c = \frac{c}{\Delta\nu} = \frac{\lambda^2}{\Delta\lambda}",
@@ -208,8 +208,8 @@ class CoherenceLength(Scene):
              "cavity round trip must be less than coherence length for fringes to appear", GOLD),
         ], eq_fs=34, lbl_fs=24, buff=0.3)
         coh_eqs.next_to(title, DOWN, buff=0.5)
-        for row in coh_eqs: self.play(FadeIn(row)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(coh_eqs))
+        for row in coh_eqs: self.play(FadeIn(row)); self.wait(19.9)
+        self.wait(33.1); self.play(FadeOut(coh_eqs))
 
         # Source comparison
         sources_title = Text("Coherence Length of Different Sources:", font_size=28, color=GOLD)
@@ -233,7 +233,7 @@ class CoherenceLength(Scene):
             ).arrange(RIGHT, buff=0.3)
             safe_scale(row_mob, max_width=13.5)
             row_mob.next_to(sources_title, DOWN, buff=0.35)
-            self.play(FadeIn(row_mob)); self.wait(89.7); self.play(FadeOut(row_mob)))
+            self.play(FadeIn(row_mob)); self.wait(14.4); self.play(FadeOut(row_mob)))
 
 
 class Week8Summary(Scene):
@@ -255,5 +255,5 @@ class Week8Summary(Scene):
             (r"l_c = \lambda^2/\Delta\lambda = c/\Delta\nu", "coherence length of light source", WAVE_COLOR),
         ], eq_fs=30, lbl_fs=22, buff=0.22)
         rows.next_to(title, DOWN, buff=0.4)
-        for row in rows: self.play(FadeIn(row)); self.wait(0.5)
-        self.wait(78.0); self.play(FadeOut(VGroup(title, rows)))
+        for row in rows: self.play(FadeIn(row)); self.wait(5.0)
+        self.wait(81.7); self.play(FadeOut(VGroup(title, rows)))

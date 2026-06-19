@@ -12,7 +12,7 @@ class Week3TitleCard(Scene):
             "Geometric Optics: Lenses, Mirrors & Optical Instruments",
             "Bennett Ch. 4.3–4.5, 5.2, 5.5"
         )
-        self.play(FadeIn(card)); self.wait(89.0); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(97.69999999999999); self.play(FadeOut(card))
 
 
 class GeometricOpticsIntro(Scene):
@@ -37,8 +37,8 @@ class GeometricOpticsIntro(Scene):
             "This linearises all the equations and makes analytic solutions possible.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(50.7); self.play(FadeOut(VGroup(title, intro)))
+        for l in intro: self.play(FadeIn(l)); self.wait(22.1)
+        self.wait(34.8); self.play(FadeOut(VGroup(title, intro)))
 
 
 class SignConventions(Scene):
@@ -54,7 +54,7 @@ class SignConventions(Scene):
         )
         warning.next_to(title, DOWN, buff=0.4)
         safe_scale(warning, max_width=13.5)
-        self.play(FadeIn(warning)); self.wait(1)
+        self.play(FadeIn(warning)); self.wait(11.6)
 
         rules = [
             ("All distances", "measured from the optical element (lens/mirror/surface)."),
@@ -79,8 +79,8 @@ class SignConventions(Scene):
         safe_scale(rule_group, max_height=5.0)
 
         for row in rule_group:
-            self.play(FadeIn(row), run_time=0.4); self.wait(0.4)
-        self.wait(62.5); self.play(FadeOut(VGroup(title, warning, rule_group)))
+            self.play(FadeIn(row), run_time=0.4); self.wait(23.2)
+        self.wait(36.4); self.play(FadeOut(VGroup(title, warning, rule_group)))
 
 
 class SphericalSurface(Scene):
@@ -96,14 +96,14 @@ class SphericalSurface(Scene):
             "Apply the paraxial approximation to Snell's law at the curved surface:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(15.5)
+        self.wait(24.3); self.play(FadeOut(intro))
 
         eq = MathTex(
             r"\frac{n_m}{s_o} + \frac{n_i}{s_i} = \frac{n_i - n_m}{R}",
             font_size=56, color=N_COLOR)
         eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(eq)); self.wait(1.2)
+        self.play(Write(eq)); self.wait(17.1)
 
         sym = eq_table([
             (r"n_m", "index of the medium containing the object (incoming medium)", N_COLOR),
@@ -113,8 +113,8 @@ class SphericalSurface(Scene):
             (r"R",   "radius of curvature of the surface (signed!)", WHITE),
         ], eq_fs=30, lbl_fs=23, buff=0.24)
         sym.next_to(eq, DOWN, buff=0.4)
-        for row in sym: self.play(FadeIn(row)); self.wait(0.6)
-        self.wait(45.5); self.play(FadeOut(sym))
+        for row in sym: self.play(FadeIn(row)); self.wait(2.0)
+        self.wait(2.0); self.play(FadeOut(sym))
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), R=+10 cm, s_o=30 cm", font_size=26, color=GOLD)
@@ -149,8 +149,8 @@ class ThinLensScene(Scene):
             "object of surface 2 — and combine the results.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(14.4)
+        self.wait(10.5); self.play(FadeOut(intro))
 
         # Lensmaker's equation
         lme_title = Text("Lensmaker's Equation  (Bennett Eq. 4.15):", font_size=28, color=GOLD)
@@ -161,14 +161,14 @@ class ThinLensScene(Scene):
             r"\frac{1}{f} = \frac{n_l - n_m}{n_m}\left(\frac{1}{R_1} - \frac{1}{R_2}\right)",
             font_size=44, color=N_COLOR)
         lme.next_to(lme_title, DOWN, buff=0.3)
-        self.play(Write(lme)); self.wait(1)
+        self.play(Write(lme)); self.wait(16.0)
 
         lme_air = MathTex(
             r"\text{In air } (n_m=1):\quad \frac{1}{f} = (n_l-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)",
             font_size=38, color=N_COLOR)
         lme_air.next_to(lme, DOWN, buff=0.3)
         safe_scale(lme_air, max_width=13.0)
-        self.play(Write(lme_air)); self.wait(1.5)
+        self.play(Write(lme_air)); self.wait(17.1)
         self.play(FadeOut(VGroup(lme_title, lme, lme_air)))
 
         # Thin lens equation
@@ -178,14 +178,14 @@ class ThinLensScene(Scene):
 
         tl = MathTex(r"\frac{1}{s_o} + \frac{1}{s_i} = \frac{1}{f}", font_size=60, color=GOLD)
         tl.next_to(tl_title, DOWN, buff=0.35)
-        self.play(Write(tl)); self.wait(1)
-        self.play(Create(gold_box(tl))); self.wait(0.5)
+        self.play(Write(tl)); self.wait(11.0)
+        self.play(Create(gold_box(tl))); self.wait(16.0)
 
         mag = MathTex(r"m = -\frac{s_i}{s_o}", font_size=50, color=WHITE)
         power = MathTex(r"P = \frac{1}{f} \quad [\text{dioptres D} = \text{m}^{-1}]", font_size=40, color=INTENSITY_COLOR)
         extras = VGroup(mag, power).arrange(RIGHT, buff=1.5)
         extras.next_to(tl, DOWN, buff=0.4)
-        self.play(Write(extras)); self.wait(130.5)
+        self.play(Write(extras)); self.wait(72.4)
         self.play(FadeOut(VGroup(tl_title, tl, extras)))
 
         # Full worked example
@@ -233,19 +233,19 @@ class MirrorScene(Scene):
             "real images are in FRONT of the mirror (positive s_i for concave mirrors).",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.5); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(14.4)
+        self.wait(23.2); self.play(FadeOut(intro))
 
         mirror_eq = MathTex(
             r"\frac{1}{s_o} + \frac{1}{s_i} = \frac{2}{R} = \frac{1}{f_m}",
             font_size=58, color=GOLD)
         mirror_eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(mirror_eq)); self.wait(1.2)
-        self.play(Create(gold_box(mirror_eq))); self.wait(0.5)
+        self.play(Write(mirror_eq)); self.wait(25.9)
+        self.play(Create(gold_box(mirror_eq))); self.wait(2.0)
 
         mag_eq = MathTex(r"m = -\frac{s_i}{s_o} \quad\text{(same as for lenses)}", font_size=40, color=WHITE)
         mag_eq.next_to(mirror_eq, DOWN, buff=0.35)
-        self.play(Write(mag_eq)); self.wait(50.9); self.play(FadeOut(mag_eq))
+        self.play(Write(mag_eq)); self.wait(2.0); self.play(FadeOut(mag_eq))
 
         # Worked example
         ex_title = Text("Example: concave mirror R=+40 cm, object at s_o=30 cm", font_size=28, color=GOLD)
@@ -283,20 +283,20 @@ class LensCombinations(Scene):
             "For two thin lenses separated by distance d:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(14.9)
+        self.wait(16.0); self.play(FadeOut(intro))
 
         separated = labeled_eq(
             r"\frac{1}{f_{\text{eff}}} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2}",
             "two lenses separated by distance d — effective focal length", N_COLOR, 44, 25)
         separated.next_to(title, DOWN, buff=0.5)
-        self.play(Write(separated)); self.wait(1)
+        self.play(Write(separated)); self.wait(19.3)
 
         contact = labeled_eq(
             r"P_{\text{eff}} = P_1 + P_2 = \frac{1}{f_1} + \frac{1}{f_2} \quad (d\to 0)",
             "lenses in CONTACT: powers ADD — used in spectacle design", N_COLOR, 40, 25)
         contact.next_to(separated, DOWN, buff=0.4)
-        self.play(Write(contact)); self.wait(40.4)
+        self.play(Write(contact)); self.wait(2.0)
         self.play(FadeOut(VGroup(separated, contact)))
 
         # Example
@@ -333,8 +333,8 @@ class OpticalInstruments(Scene):
             "The key parameters are: magnification, field of view, and resolution.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.3); self.play(FadeOut(intro))
+        for l in intro: self.play(FadeIn(l)); self.wait(5.0)
+        self.wait(21.0); self.play(FadeOut(intro))
 
         instruments = [
             ("Magnifying Glass", [
@@ -364,5 +364,5 @@ class OpticalInstruments(Scene):
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(inst_title, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(62.6); self.play(FadeOut(VGroup(inst_title, desc)))
+            for l in desc: self.play(FadeIn(l)); self.wait(19.3)
+            self.wait(28.7); self.play(FadeOut(VGroup(inst_title, desc)))

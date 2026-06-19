@@ -13,7 +13,7 @@ class FormulaSheetTitleCard(Scene):
             "Complete 31OPT Formula Sheet — Animated",
             "Official equation chart, all 8 weeks"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(37.2); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(40.3); self.play(FadeOut(card))
 
 
 class FormulasWavesMaxwell(Scene):
@@ -148,7 +148,7 @@ class MidtermPrepScene(Scene):
             "Weeks 1–3: EM Waves, Fresnel & Geometric Optics",
             "Wednesday Week 4, 15:45–16:45h"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(2); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(9.4); self.play(FadeOut(card))
 
         title = Text("What the Midterm Covers", font_size=36, color=GOLD)
         title.to_edge(UP)
@@ -186,7 +186,7 @@ class MidtermPrepScene(Scene):
 
         for row in rows:
             self.play(FadeIn(row), run_time=0.3)
-        self.wait(3)
+        self.wait(11.0)
         self.play(FadeOut(VGroup(title, rows)))
 
         # Key tips
@@ -209,8 +209,8 @@ class MidtermPrepScene(Scene):
         tips.next_to(tips_title, DOWN, buff=0.35)
 
         for tip in tips:
-            self.play(FadeIn(tip), run_time=0.4); self.wait(0.3)
-        self.wait(73.6))
+            self.play(FadeIn(tip), run_time=0.4); self.wait(18.8)
+        self.wait(51.300000000000004))
 
 
 class FinalExamPrepScene(Scene):
@@ -222,7 +222,7 @@ class FinalExamPrepScene(Scene):
             "All 8 Weeks — Key Formulas & Strategies",
             "Thursday 25 June 2026, 09:00–12:00"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(2); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(10.5); self.play(FadeOut(card))
 
         title = Text("Most Commonly Examined Topics", font_size=34, color=GOLD)
         title.to_edge(UP)
@@ -251,7 +251,7 @@ class FinalExamPrepScene(Scene):
 
         for item in common_group:
             self.play(FadeIn(item), run_time=0.4)
-        self.wait(3)
+        self.wait(24.3)
         self.play(FadeOut(VGroup(title, common_group)))
 
         # Grading reminder
@@ -273,6 +273,6 @@ class FinalExamPrepScene(Scene):
         grade_group.next_to(grade_title, DOWN, buff=0.5)
 
         for item in grade_group:
-            self.play(Write(item)); self.wait(1)
+            self.play(Write(item)); self.wait(13.2)
         self.play(Create(gold_box(pass_cond)))
-        self.wait(93.8))
+        self.wait(66.2))
