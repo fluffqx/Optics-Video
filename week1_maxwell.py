@@ -47,12 +47,22 @@ class MaxwellIntro(Scene):
         ], wait=16)
 
         # Para 3 (35s): "Before we write them down, let's fix the notation..."
-        page(self, title, [
-            "Before writing them down, we must fix notation:",
-            "nabla dot E  =  divergence of E  (how much E spreads from a point)",
-            "nabla cross E  =  curl of E  (how much E rotates around a point)",
-            "nabla squared E  =  Laplacian  (3D second spatial derivative)",
-        ], wait=35)
+        intro3 = Text("Before writing them down, we must fix notation:", font_size=28, color=WHITE)
+        safe_scale(intro3, max_width=13.0)
+        rows = eq_table([
+            (r"
+abla\cdotec{E}", "divergence of E — how much E spreads from a point", E_COLOR),
+            (r"
+abla	imesec{E}", "curl of E — how much E rotates around a point", E_COLOR),
+            (r"
+abla^2ec{E}", "Laplacian — 3D second spatial derivative", WAVE_COLOR),
+        ], eq_fs=36, lbl_fs=24, buff=0.3)
+        p3_block = VGroup(intro3, rows).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
+        safe_scale(p3_block, max_width=13.0, max_height=4.0)
+        p3_block.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(p3_block))
+        self.wait(35)
+        self.play(FadeOut(p3_block))
 
         self.play(FadeOut(title))
 
@@ -163,12 +173,21 @@ class MaxwellEquations(Scene):
             self.play(FadeIn(block)); self.wait(wait); self.play(FadeOut(block))
 
         # Para 6 (20s): "In vacuum..."
-        page(self, title, [
-            "In vacuum (no charges, no currents), the equations simplify:",
-            "divergence of E = 0      divergence of B = 0",
-            "curl of E = -dB/dt       curl of B = mu_0 eps_0 dE/dt",
-            "The curl equations now couple E and B through time derivatives.",
-        ], wait=20)
+        vac_intro = Text("In vacuum, the equations simplify to:", font_size=28, color=WHITE)
+        safe_scale(vac_intro, max_width=13.0)
+        vac_eqs_simple = eq_table([
+            (r"
+abla\cdotec{E}=0,\quad
+abla\cdotec{B}=0", "no sources", WHITE),
+            (r"
+abla	imesec{E}=-rac{\partialec{B}}{\partial t}", "Faraday — vacuum form", E_COLOR),
+            (r"
+abla	imesec{B}=\mu_0arepsilon_0rac{\partialec{E}}{\partial t}", "Ampere-Maxwell — vacuum form", B_COLOR),
+        ], eq_fs=30, lbl_fs=22, buff=0.25)
+        vac_block = VGroup(vac_intro, vac_eqs_simple).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
+        safe_scale(vac_block, max_width=13.0, max_height=4.0)
+        vac_block.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(vac_block)); self.wait(20); self.play(FadeOut(vac_block))
 
         # Para 7 (26s): "The fundamental constants..."
         c_eq = MathTex(r"c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} = 2.998\times10^8\text{ m/s}", font_size=44, color=GOLD)
@@ -404,8 +423,8 @@ class DispersionScene(Scene):
         page(self, title, [
             "Normal dispersion: n increases with frequency (most glasses).",
             "Violet light bends MORE than red light in a prism.",
-            "Group velocity in dispersive medium: v_g = c / (n + omega dn/domega).",
-            "When dn/domega > 0: group velocity < phase velocity.",
+            "Normal dispersion: violet bends more than red in a prism.",
+            "Anomalous dispersion: near absorption resonances.",
         ], wait=22)
 
         self.play(FadeOut(VGroup(title, n_eq)))
