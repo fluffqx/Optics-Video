@@ -277,7 +277,8 @@ class JonesMatrices(Scene):
             font_size=36, color=N_COLOR)
         rot_formula.next_to(rot_title, DOWN, buff=0.3)
         safe_scale(rot_formula, max_width=13.0)
-        self.play(Write(rot_formula)); self.wait(25.4); self.play(FadeOut(VGroup(rot_title, rot_formula)))
+        self.play(Write(rot_formula)); self.wait(25.4)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rot_title, rot_formula)))
 
         # Full worked example
         ex_title = Text("Example: 45° input → HWP(fast H) → QWP(fast V) → find output", font_size=26, color=GOLD)

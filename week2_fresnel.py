@@ -61,7 +61,8 @@ class FermatPrinciple(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(14.9)
-        self.wait(41.4); self.play(FadeOut(intro))
+        self.wait(41.4)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(intro))
 
         # Fermat → Snell derivation outline
         deriv_title = Text("Fermat → Snell's Law  (Bennett Example 3.2.1):", font_size=30, color=GOLD)
@@ -149,7 +150,8 @@ class ReflectionRefraction(Scene):
         intuition.next_to(title, DOWN, buff=0.45)
         for l in intuition: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(intuition))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(intuition))
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), θ_i = 40°", font_size=30, color=GOLD)
@@ -279,6 +281,7 @@ class FresnelFullExample(Scene):
         for l in given: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(7.7)
         self.wait(51.3)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, given, start_buff=0.4)
         solver.add_step(1,
@@ -352,7 +355,8 @@ class ReflectivityTransmissivity(Scene):
         why.next_to(why_title, DOWN, buff=0.35)
         for l in why: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(why_title, why)))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(why_title, why)))
 
         # Worked example
         ex_title = Text("Example: air→glass n=1.5, normal incidence", font_size=30, color=GOLD)
@@ -507,7 +511,8 @@ class MalusLaw(Scene):
         why.next_to(malus, DOWN, buff=0.45)
         for l in why: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(why))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(why))
 
         # Worked examples
         ex_title = Text("Worked Examples:", font_size=30, color=GOLD)

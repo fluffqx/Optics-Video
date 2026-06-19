@@ -116,7 +116,8 @@ class SphericalSurface(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.24)
         sym.next_to(eq, DOWN, buff=0.4)
         for row in sym: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(sym))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(sym))
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), R=+10 cm, s_o=30 cm", font_size=26, color=GOLD)
@@ -189,6 +190,7 @@ class ThinLensScene(Scene):
         extras = VGroup(mag, power).arrange(RIGHT, buff=1.5)
         extras.next_to(tl, DOWN, buff=0.4)
         self.play(Write(extras)); self.wait(72.4)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
         self.play(FadeOut(VGroup(tl_title, tl, extras)))
 
         # Full worked example
@@ -249,7 +251,8 @@ class MirrorScene(Scene):
 
         mag_eq = MathTex(r"m = -\frac{s_i}{s_o} \quad\text{(same as for lenses)}", font_size=40, color=WHITE)
         mag_eq.next_to(mirror_eq, DOWN, buff=0.35)
-        self.play(Write(mag_eq)); self.wait(2.0); self.play(FadeOut(mag_eq))
+        self.play(Write(mag_eq)); self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(mag_eq))
 
         # Worked example
         ex_title = Text("Example: concave mirror R=+40 cm, object at s_o=30 cm", font_size=28, color=GOLD)
@@ -302,6 +305,7 @@ class LensCombinations(Scene):
             "lenses in CONTACT: powers ADD — used in spectacle design", N_COLOR, 40, 25)
         contact.next_to(separated, DOWN, buff=0.4)
         self.play(Write(contact)); self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
         self.play(FadeOut(VGroup(separated, contact)))
 
         # Example

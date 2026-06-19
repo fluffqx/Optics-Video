@@ -188,6 +188,7 @@ class MaxwellVacuum(Scene):
         constants.to_edge(RIGHT, buff=0.5)
         constants.shift(DOWN * 0.5)
         self.play(FadeIn(constants)); self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
 
 class EMWaveDerivation(Scene):
@@ -305,6 +306,7 @@ class EMWaveExample(Scene):
         find = Text("Find: the magnetic field B⃗(x,y,z,t)", font_size=30, color=WHITE)
         find.next_to(E_field, DOWN, buff=0.3)
         self.play(FadeIn(find)); self.wait(41.9)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, find, start_buff=0.4)
 
@@ -392,7 +394,8 @@ class PoyntingIrradiance(Scene):
         half_note.next_to(I_eq, DOWN, buff=0.35)
         for l in half_note: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(13.8)
-        self.wait(61.3); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
+        self.wait(61.3)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
 
         # Worked example
         ex_title = Text("Example: Green Laser, Power=5.0 mW, beam radius=1.0 mm", font_size=28, color=GOLD)
@@ -449,6 +452,7 @@ class RadiationPressure(Scene):
         peqs.next_to(P_title, DOWN, buff=0.3)
         self.play(Write(pabs)); self.wait(25.4)
         self.play(Write(prefl)); self.wait(8.8)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
         self.play(FadeOut(VGroup(P_title, peqs)))
 
         # Example 1: solar sail

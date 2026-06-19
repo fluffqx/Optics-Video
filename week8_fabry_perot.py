@@ -158,6 +158,7 @@ class FabryPerotExample(Scene):
         for l in prob: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(12.1)
         self.wait(99.9)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, prob, start_buff=0.4)
         solver.add_step(1,

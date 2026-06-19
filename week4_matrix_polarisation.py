@@ -152,6 +152,7 @@ class MatrixExample(Scene):
         for l in prob: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(13.2)
         self.wait(47.4)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, prob, start_buff=0.4)
         solver.add_step(1,

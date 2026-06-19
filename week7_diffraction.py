@@ -141,7 +141,8 @@ class SingleSlitDiffraction(Scene):
         ], eq_fs=28, lbl_fs=22, buff=0.25)
         dark_rows.next_to(dark_title, DOWN, buff=0.3)
         for row in dark_rows: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(dark_title, dark_rows)))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(dark_title, dark_rows)))
 
         # Full worked example
         ex_title = Text("Example: b=0.200mm, λ=632.8nm (He-Ne laser), screen at L=2.00m", font_size=26, color=GOLD)
@@ -235,7 +236,8 @@ class CircularApertureRayleigh(Scene):
         rayleigh_desc.next_to(rayleigh, DOWN, buff=0.35)
         for l in rayleigh_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
 
         # Examples
         ex_title = Text("Rayleigh Resolution Examples:", font_size=30, color=GOLD)
@@ -354,7 +356,8 @@ class DiffractionGrating(Scene):
         ], eq_fs=32, lbl_fs=22, buff=0.3)
         rp_rows.next_to(rp_title, DOWN, buff=0.3)
         for row in rp_rows: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(rp_title, rp_rows)))
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rp_title, rp_rows)))
 
         # Full worked example
         ex_title = Text("Example: grating 600 gr/mm, 5cm long, at λ=589.0nm (sodium D lines)", font_size=25, color=GOLD)

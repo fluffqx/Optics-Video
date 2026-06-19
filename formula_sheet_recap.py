@@ -211,6 +211,7 @@ class MidtermPrepScene(Scene):
         for tip in tips:
             self.play(FadeIn(tip), run_time=0.4); self.wait(18.8)
         self.wait(51.300000000000004)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
 
 class FinalExamPrepScene(Scene):
@@ -276,3 +277,4 @@ class FinalExamPrepScene(Scene):
             self.play(Write(item)); self.wait(13.2)
         self.play(Create(gold_box(pass_cond)))
         self.wait(66.2)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)

@@ -193,6 +193,7 @@ class YoungDoubleSlit(Scene):
             font_size=44, color=INTENSITY_COLOR)
         int_eq.next_to(int_title, DOWN, buff=0.3)
         self.play(Write(int_eq)); self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
         self.play(FadeOut(VGroup(int_title, int_eq)))
 
         # Full worked example
@@ -312,6 +313,7 @@ class ThinFilmInterference(Scene):
         ar_desc.next_to(ar_title, DOWN, buff=0.3)
         for l in ar_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, ar_desc, start_buff=0.35)
         solver.add_step(1,
@@ -399,7 +401,8 @@ class MichelsonScene(Scene):
         ], eq_fs=30, lbl_fs=22, buff=0.28)
         eqs.next_to(title, DOWN, buff=0.5)
         for row in eqs: self.play(FadeIn(row)); self.wait(29.8)
-        self.wait(46.9); self.play(FadeOut(eqs))
+        self.wait(46.9)
+        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(eqs))
 
         # Worked example
         ex_title = Text("Example: λ=589nm, mirror moves ΔL=0.500mm. How many fringes?", font_size=26, color=GOLD)

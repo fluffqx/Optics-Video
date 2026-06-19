@@ -128,7 +128,8 @@ class WaveEquation1D(Scene):
         key.next_to(sols, DOWN, buff=0.35)
         safe_scale(key, max_width=13.0)
         self.play(FadeIn(key))
-        self.wait(2.0)  # narrator: "Notice the key insight...")
+        self.wait(2.0)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)  # narrator: "Notice the key insight...")
 
 
 class WaveEquationProof(Scene):
@@ -146,6 +147,7 @@ class WaveEquationProof(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         safe_scale(intro, max_width=13.0)
         self.play(FadeIn(intro)); self.wait(34.2)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, intro)
 
@@ -259,6 +261,7 @@ class HarmonicWaveExample(Scene):
         for l in given: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
         self.wait(8.3)
         self.wait(50.2)
+        self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, given, start_buff=0.4)
         solver.add_step(1,
