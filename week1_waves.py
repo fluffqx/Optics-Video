@@ -18,7 +18,7 @@ class Week1TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation", "Bennett Ch. 1 & 2.1–2.3")
-        self.play(FadeIn(card)); self.wait(8); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(38); self.play(FadeOut(card))
 
 
 class WaveIntroduction(Scene):
@@ -128,7 +128,7 @@ class WaveEquationProof(Scene):
 
         pg(self, title, [
             "Let Psi(x,t) = (x - vt) squared and verify it solves the wave equation.",
-        ], wait=8)
+        ], wait=11)
 
         solver = StepSolver(self, title, start_buff=0.55)
         solver.add_step(1, r"\frac{\partial\Psi}{\partial x} = 2(x-vt)", "chain rule w.r.t. x", E_COLOR)
@@ -136,7 +136,7 @@ class WaveEquationProof(Scene):
         solver.add_step(3, r"\frac{\partial\Psi}{\partial t} = -2v(x-vt)", "chain rule w.r.t. t", B_COLOR)
         solver.add_step(4, r"\frac{\partial^2\Psi}{\partial t^2} = 2v^2", "second derivative w.r.t. t", B_COLOR)
         solver.add_step(5, r"\frac{1}{v^2}\cdot 2v^2 = 2 = \frac{\partial^2\Psi}{\partial x^2}\;\checkmark", "both sides equal 2 — wave equation satisfied!", GOLD)
-        solver.finalize(); self.wait(3)
+        solver.finalize(); self.wait(24 + 8)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
@@ -203,11 +203,11 @@ class HarmonicWave(Scene):
         ], wait=18)
 
         solver = StepSolver(self, psi, start_buff=0.45)
-        solver.add_step(1, r"k = \frac{2\pi}{500\times10^{-9}} = 1.257\times10^7\text{ rad/m}", "wave number", WAVE_COLOR)  # para12 (13s)
+        solver.add_step(1, r"k = \frac{2\pi}{500\times10^{-9}} = 1.257\times10^7\text{ rad/m}", "wave number", WAVE_COLOR)
         solver.add_step(2, r"f = \frac{v}{\lambda} = \frac{3\times10^8}{500\times10^{-9}} = 6\times10^{14}\text{ Hz}", "frequency", WAVE_COLOR)  # para13 (8s)
         solver.add_step(3, r"\omega = 2\pi f = 3.77\times10^{15}\text{ rad/s}", "angular frequency", WAVE_COLOR)
-        solver.add_step(4, r"T = \frac{1}{f} = 1.67\times10^{-15}\text{ s} = 1.67\text{ fs}", "period — light oscillates 600 trillion times/second!", GOLD)  # para14 (14s)
-        solver.finalize(); self.wait(5)
+        solver.add_step(4, r"T = \frac{1}{f} = 1.67\times10^{-15}\text{ s} = 1.67\text{ fs}", "period — light oscillates 600 trillion times/second!", GOLD)
+        solver.finalize(); self.wait(13 + 8 + 14)
         self.play(FadeOut(VGroup(title, psi, *solver.steps)))
 
 
@@ -222,14 +222,14 @@ class HarmonicWaveExample(Scene):
             "Given: lambda = 532 nm = 532 x 10^-9 m",
             "       v = c = 3.00 x 10^8 m/s",
             "Find: k, omega, f, T",
-        ], wait=15)
+        ], wait=8)
 
         solver = StepSolver(self, title, start_buff=0.55)
         solver.add_step(1, r"k = \frac{2\pi}{532\times10^{-9}} = 1.181\times10^7\text{ rad/m}", "wave number")
         solver.add_step(2, r"f = \frac{c}{\lambda} = \frac{3\times10^8}{532\times10^{-9}} = 5.64\times10^{14}\text{ Hz}", "frequency: 564 THz")
         solver.add_step(3, r"\omega = 2\pi f = 3.54\times10^{15}\text{ rad/s}", "angular frequency")
         solver.add_step(4, r"T = \frac{1}{f} = 1.77\times10^{-15}\text{ s} = 1.77\text{ fs}", "period: 1.77 femtoseconds", GOLD)
-        solver.finalize(); self.wait(5)
+        solver.finalize(); self.wait(37 + 11)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
@@ -244,20 +244,20 @@ class SuperpositionPrinciple(Scene):
             "The wave equation is LINEAR — Psi appears only to the first power.",
             "No products like Psi times dPsi/dx.",
             "For any linear equation, superposition holds:",
-        ], wait=15)
+        ], wait=7)
 
         pg(self, title, [
             "If Psi_1 and Psi_2 each satisfy the wave equation,",
             "then Psi_1 + Psi_2 is ALSO a valid solution.",
             "This extends to any number of waves.",
-        ], wait=15)
+        ], wait=24)
 
         proof = MathTex(
             r"\frac{\partial^2(\Psi_1+\Psi_2)}{\partial x^2} = \frac{\partial^2\Psi_1}{\partial x^2}+\frac{\partial^2\Psi_2}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2(\Psi_1+\Psi_2)}{\partial t^2}\;\checkmark",
             font_size=30)
         safe_scale(proof, max_width=13.0)
         proof.next_to(title, DOWN, buff=0.5)
-        self.play(Write(proof)); self.wait(15)
+        self.play(Write(proof)); self.wait(5)
         self.play(FadeOut(proof))
 
         pg(self, title, [
@@ -265,7 +265,7 @@ class SuperpositionPrinciple(Scene):
             "It is the mathematical basis for ALL interference and diffraction.",
             "Two laser beams cross — their fields simply ADD.",
             "White light = sum of many harmonic waves at different frequencies.",
-        ], wait=20)
+        ], wait=17)
 
         self.play(FadeOut(title))
 
@@ -322,7 +322,7 @@ class PhaseGroupVelocity(Scene):
         solver.add_step(1, r"v_p = \frac{\omega}{k} = ak", "phase velocity depends on k — dispersive", WAVE_COLOR)
         solver.add_step(2, r"v_g = \frac{d\omega}{dk} = 2ak", "group velocity", WAVE_COLOR)
         solver.add_step(3, r"v_g = 2v_p", "envelope travels TWICE as fast as the crests!", GOLD)
-        solver.finalize(); self.wait(15)
+        solver.finalize(); self.wait(35)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
@@ -438,4 +438,4 @@ class Week1WavesSummary(Scene):
             r"v = f\lambda = \omega/k,\quad k=2\pi/\lambda,\quad \omega=2\pi f",
             r"\tilde{\Psi} = Ae^{i(kx-\omega t)},\quad |\tilde{\Psi}|^2 = A^2",
         ])
-        self.play(FadeIn(card)); self.wait(10); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(53); self.play(FadeOut(card))

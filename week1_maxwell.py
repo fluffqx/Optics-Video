@@ -70,7 +70,7 @@ class VectorCalculusNotation(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Vector Calculus Notation", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title)); self.wait(5)
 
         # Para 1 (5s): "Before writing Maxwell's equations, we need three operators"
         page(self, title, [
@@ -181,7 +181,7 @@ class MaxwellEquations(Scene):
         vac_block = VGroup(vac_intro, vac_eqs_simple).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(vac_block, max_width=13.0, max_height=4.0)
         vac_block.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(vac_block)); self.wait(20); self.play(FadeOut(vac_block))
+        self.play(FadeIn(vac_block)); self.wait(20); self.play(FadeOut(vac_block))  # para6
 
         # Para 7 (26s): "The fundamental constants..."
         c_eq = MathTex(r"c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} = 2.998\times10^8\text{ m/s}", font_size=44, color=GOLD)
@@ -217,8 +217,13 @@ class MaxwellVacuum(Scene):
         vac_eqs.arrange(DOWN, buff=0.35)
         vac_eqs.next_to(title, DOWN, buff=0.5)
         safe_scale(vac_eqs, max_height=5.0)
-        self.play(FadeIn(vac_eqs)); self.wait(30)
-        self.play(FadeOut(VGroup(title, vac_eqs)))
+        self.play(FadeIn(vac_eqs)); self.wait(28)  # para2
+        # para3 (22s): "These four equations couple E and B..."
+        coupling = Text("The curl equations couple E and B — this enables EM waves.", font_size=28, color=WHITE)
+        safe_scale(coupling, max_width=13.0)
+        coupling.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(coupling)); self.wait(22)
+        self.play(FadeOut(VGroup(title, vac_eqs, coupling)))
 
 
 class EMWaveDerivation(Scene):
@@ -231,12 +236,12 @@ class EMWaveDerivation(Scene):
         page(self, title, [
             "Take the curl of Faraday's law and substitute Ampere-Maxwell.",
             "After applying the vector identity curl(curl F) = grad(div F) - laplacian F:",
-        ], wait=10)
+        ], wait=11)  # para1
 
         solver = StepSolver(self, title, start_buff=0.55)
         solver.add_step(1,
             r"\nabla\times(\nabla\times\vec{E}) = -\frac{\partial}{\partial t}(\nabla\times\vec{B})",
-            "take curl of Faraday's law")
+            "take curl of Faraday's law"); self.wait(26 - 1)
         solver.add_step(2,
             r"-\frac{\partial}{\partial t}(\nabla\times\vec{B}) = -\mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2}",
             "substitute Ampere-Maxwell law")
@@ -262,11 +267,11 @@ class EMWaveProperties(Scene):
             ("Transverse",
              r"\vec{E}\perp\vec{k} \quad\text{and}\quad \vec{B}\perp\vec{k}",
              "Both E and B are perpendicular to the propagation direction.",
-             E_COLOR, 15),
+             E_COLOR, 11),
             ("Mutually perpendicular",
              r"\vec{E}\perp\vec{B},\quad \vec{E}\times\vec{B}\parallel\vec{k}",
              "E, B, and k form a right-handed coordinate system.",
-             B_COLOR, 15),
+             B_COLOR, 11),
             ("Amplitude ratio",
              r"E = cB \quad\text{(in vacuum)}",
              "The magnitudes of E and B are always in ratio c.",
@@ -301,13 +306,13 @@ class EMWaveExample(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Example: Finding B from E", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title)); self.wait(12)
 
         E_field = MathTex(r"\vec{E} = E_0\hat{x}\,e^{i(kz-\omega t)}", font_size=46, color=E_COLOR)
         E_field.next_to(title, DOWN, buff=0.4)
         find = Text("Find the magnetic field B(x,y,z,t)", font_size=28, color=WHITE)
         find.next_to(E_field, DOWN, buff=0.3)
-        self.play(FadeIn(VGroup(E_field, find))); self.wait(5)
+        self.play(FadeIn(VGroup(E_field, find))); self.wait(25)
 
         solver = StepSolver(self, find, start_buff=0.4)
         solver.add_step(1, r"\hat{k} = \hat{z}", "propagation in the +z direction", ANGLE_COLOR)
@@ -316,7 +321,7 @@ class EMWaveExample(Scene):
         solver.add_step(4, r"\vec{B} = \frac{E_0}{c}\hat{y}\,e^{i(kz-\omega t)}", "B points in y-direction, magnitude E_0/c", B_COLOR)
         solver.add_step(5, r"\vec{E}\perp\vec{B}\perp\vec{k}:\quad\hat{x}\perp\hat{y}\perp\hat{z}\;\checkmark", "confirms transverse, right-handed system", GOLD)
         solver.finalize()
-        self.wait(5)
+        self.wait(15)
         self.play(FadeOut(VGroup(title, E_field, find, *solver.steps)))
 
 
@@ -332,22 +337,22 @@ class PoyntingIrradiance(Scene):
             "The Poynting vector describes the flow of electromagnetic energy.",
             "It points in the direction of energy flow (same as k).",
             "Its magnitude gives the power per unit area [W/m squared].",
-        ], wait=15)
+        ], wait=6)
 
         S_eq = MathTex(r"\vec{S} = \frac{1}{\mu_0}\vec{E}\times\vec{B} \quad[\text{W/m}^2]", font_size=50, color=INTENSITY_COLOR)
         S_eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(S_eq)); self.wait(15); self.play(FadeOut(S_eq))
+        self.play(Write(S_eq)); self.wait(18); self.play(FadeOut(S_eq))
 
         # Irradiance
         page(self, title, [
             "Irradiance I is the time-averaged magnitude of S.",
             "The factor of 1/2 comes from time-averaging cos squared omega t = 1/2.",
             "This is a very frequently needed result — remember it.",
-        ], wait=18)
+        ], wait=20)
 
         I_eq = MathTex(r"I = \frac{n\varepsilon_0 c}{2}E_0^2", font_size=56, color=INTENSITY_COLOR)
         I_eq.next_to(title, DOWN, buff=0.5)
-        self.play(Create(gold_box(I_eq.copy())), Write(I_eq)); self.wait(20)
+        self.play(Create(gold_box(I_eq.copy())), Write(I_eq)); self.wait(16)
 
         # Example
         page(self, title, [
@@ -401,24 +406,34 @@ class DispersionScene(Scene):
             "Dispersion: the refractive index n depends on frequency.",
             "Different colours travel at different speeds in a material.",
             "This is why a prism splits white light into a rainbow.",
-        ], wait=15)
+        ], wait=12)
 
         n_eq = MathTex(r"n = \frac{c}{v} = \sqrt{K_E}", font_size=52, color=N_COLOR)
         n_eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(n_eq)); self.wait(10)
+        self.play(Write(n_eq)); self.wait(20)
 
         page(self, title, [
             "The Lorentz oscillator model explains WHY dispersion occurs:",
             "Electrons behave like oscillators with resonant frequencies omega_j.",
             "Light at frequency omega drives these oscillators.",
             "The phase response depends on how close omega is to omega_j.",
-        ], wait=20)
+        ], wait=26)
 
         page(self, title, [
             "Normal dispersion: n increases with frequency (most glasses).",
             "Violet light bends MORE than red light in a prism.",
-            "Normal dispersion: violet bends more than red in a prism.",
-            "Anomalous dispersion: near absorption resonances.",
-        ], wait=22)
+        ], wait=12)
+
+        page(self, title, [
+            "Normal dispersion: d(n)/d(lambda) < 0  (violet bends more than red).",
+            "Group velocity: v_g = c / (n + omega dn/domega).",
+            "When dn/domega > 0: group velocity < phase velocity.",
+        ], wait=21)
+
+        page(self, title, [
+            "Anomalous dispersion occurs near absorption resonances.",
+            "Group velocity can exceed c near resonances — but no information",
+            "travels faster than light (signal velocity is still < c).",
+        ], wait=31)
 
         self.play(FadeOut(VGroup(title, n_eq)))
