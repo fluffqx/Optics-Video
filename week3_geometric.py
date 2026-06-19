@@ -207,7 +207,7 @@ class ThinLensScene(Scene):
             r"= \frac{3-1}{60} = \frac{2}{60}",
             "thin lens equation: solve for s_i")
         solver.add_step(3,
-            r"s_i = \frac{60}{2} = 30\text{ cm} \quad\text{(positive → real image on far side)}",
+            r"s_i = \frac{60}{2} = 30\text{ cm} \quad\text{(positive \to \text{ real image} on far side)}",
             "image forms 30 cm beyond the lens", GOLD)
         solver.add_step(4,
             r"m = -\frac{s_i}{s_o} = -\frac{30}{60} = -0.5",
@@ -263,7 +263,7 @@ class MirrorScene(Scene):
             r"= \frac{3-2}{60} = \frac{1}{60}",
             "mirror equation: solve for s_i")
         solver.add_step(3,
-            r"s_i = 60\text{ cm} \quad\text{(positive → real image in front of mirror)}",
+            r"s_i = 60\text{ cm} \quad\text{(positive \to \text{ real image} in front of mirror)}",
             "real image, 60 cm in front of the mirror", GOLD)
         solver.add_step(4,
             r"m = -\frac{s_i}{s_o} = -\frac{60}{30} = -2.0",

@@ -312,10 +312,10 @@ class ThinFilmInterference(Scene):
 
         solver = StepSolver(self, ar_desc, start_buff=0.35)
         solver.add_step(1,
-            r"\text{Surface 1 (air→MgF}_2\text{): }+\pi\text{ shift (n increases)}",
+            r"\text{Surface 1 (air\to MgF}_2\text{): }+\pi\text{ shift (n increases)}",
             "n_air=1.00 < n_MgF₂=1.38  →  π shift")
         solver.add_step(2,
-            r"\text{Surface 2 (MgF}_2\text{→glass): }+\pi\text{ shift (n increases)}",
+            r"\text{Surface 2 (MgF}_2\to\text{glass}: }+\pi\text{ shift (n increases)}",
             "n_MgF₂=1.38 < n_glass=1.52  →  π shift")
         solver.add_step(3,
             r"\Delta\varphi_{\text{refl}} = \pi+\pi = 2\pi \equiv 0 \quad\text{(net: no relative shift)}",

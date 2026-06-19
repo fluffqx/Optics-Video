@@ -442,7 +442,7 @@ class RadiationPressure(Scene):
         self.play(Write(P_title))
 
         pabs  = labeled_eq(r"P_{\text{abs}} = \frac{I}{c}", "absorbed surface  [Pa = N/m²]", INTENSITY_COLOR, 50, 26)
-        prefl = labeled_eq(r"P_{\text{refl}} = \frac{2I}{c}", "perfectly reflecting surface — 2× because momentum reverses", INTENSITY_COLOR, 50, 26)
+        prefl = labeled_eq(r"P_{\text{refl}} = \frac{2I}{c}", "perfectly reflecting surface — 2\times  because momentum reverses", INTENSITY_COLOR, 50, 26)
         peqs  = VGroup(pabs, prefl).arrange(DOWN, buff=0.5)
         peqs.next_to(P_title, DOWN, buff=0.3)
         self.play(Write(pabs)); self.wait(1)

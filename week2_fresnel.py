@@ -157,10 +157,10 @@ class ReflectionRefraction(Scene):
             r"n_i\sin\theta_i = n_t\sin\theta_t \quad\Rightarrow\quad \sin\theta_t = \frac{n_i}{n_t}\sin\theta_i",
             "rearrange Snell's law to solve for θ_t")
         solver.add_step(2,
-            r"\sin\theta_t = \frac{1.0}{1.5}\sin 40° = \frac{1.0}{1.5}\times0.6428 = 0.4285",
+            r"\sin\theta_t = \frac{1.0}{1.5}\sin 40^{\circ} = \frac{1.0}{1.5}\times0.6428 = 0.4285",
             "substitute values: n_i=1.0, n_t=1.5, sin(40°)=0.6428")
         solver.add_step(3,
-            r"\theta_t = \arcsin(0.4285) = 25.4°",
+            r"\theta_t = \arcsin(0.4285) = 25.4^{\circ}",
             "angle of refraction — light bends TOWARD the normal as expected (25.4° < 40°)", ANGLE_COLOR)
         solver.add_step(4,
             r"\text{Check: } n_i\sin\theta_i = 1.0\times0.643 = 0.643, \quad n_t\sin\theta_t = 1.5\times0.429 = 0.643\;\checkmark",
@@ -278,11 +278,11 @@ class FresnelFullExample(Scene):
 
         solver = StepSolver(self, given, start_buff=0.4)
         solver.add_step(1,
-            r"\sin\theta_t = \frac{n_i}{n_t}\sin\theta_i = \frac{1.0}{1.5}\sin40° = 0.4285"
-            r"\quad\Rightarrow\quad\theta_t = 25.37°",
+            r"\sin\theta_t = \frac{n_i}{n_t}\sin\theta_i = \frac{1.0}{1.5}\sin40^{\circ} = 0.4285"
+            r"\quad\Rightarrow\quad\theta_t = 25.37^{\circ}",
             "Step 1: Snell's law to find θ_t first", ANGLE_COLOR)
         solver.add_step(2,
-            r"\cos\theta_i = \cos40° = 0.7660, \quad \cos\theta_t = \cos25.37° = 0.9036",
+            r"\cos\theta_i = \cos40^{\circ} = 0.7660, \quad \cos\theta_t = \cos25.37^{\circ} = 0.9036",
             "Step 2: compute the cosines needed for Fresnel equations")
         solver.add_step(3,
             r"r_\perp = \frac{1.0\times0.7660 - 1.5\times0.9036}{1.0\times0.7660 + 1.5\times0.9036}"
@@ -388,7 +388,7 @@ class BrewsterTIR(Scene):
             "has ZERO reflectivity: R_∥ = 0.  The reflected beam is then purely s-polarised.",
             "",
             "Physical reason: at Brewster's angle, the reflected ray and refracted ray are",
-            "exactly PERPENDICULAR to each other: θ_i + θ_t = 90°.",
+            "exactly PERPENDICULAR to each other: θ_i + θ_t = 90^{\circ}.",
             "The oscillating dipoles in the material cannot radiate in their oscillation",
             "direction — so p-polarisation (which oscillates along the reflected ray direction)",
             "produces zero reflection.",
@@ -506,14 +506,14 @@ class MalusLaw(Scene):
 
         solver = StepSolver(self, ex_title, start_buff=0.35)
         solver.add_step(1,
-            r"I_0=400\text{ W/m}^2,\;\theta=30°:\quad I = 400\cos^2 30° = 400\times0.75 = 300\text{ W/m}^2",
-            "75% transmitted at 30° — still most of the light")
+            r"I_0=400\text{ W/m}^2,\;\theta=30^{\circ}:\quad I = 400\cos^2 30^{\circ} = 400\times0.75 = 300\text{ W/m}^2",
+            "75% transmitted at 30^{\circ} — still most of the light")
         solver.add_step(2,
-            r"I_0=400\text{ W/m}^2,\;\theta=45°:\quad I = 400\cos^2 45° = 400\times0.5 = 200\text{ W/m}^2",
-            "50% transmitted at 45° — half the intensity")
+            r"I_0=400\text{ W/m}^2,\;\theta=45^{\circ}:\quad I = 400\cos^2 45^{\circ} = 400\times0.5 = 200\text{ W/m}^2",
+            "50% transmitted at 45^{\circ} — half the intensity")
         solver.add_step(3,
-            r"I_0=400\text{ W/m}^2,\;\theta=90°:\quad I = 400\cos^2 90° = 400\times0 = 0\text{ W/m}^2",
-            "0% transmitted at 90° — CROSSED polarisers block all light", GOLD)
+            r"I_0=400\text{ W/m}^2,\;\theta=90^{\circ}:\quad I = 400\cos^2 90^{\circ} = 400\times0 = 0\text{ W/m}^2",
+            "0% transmitted at 90^{\circ} — CROSSED polarisers block all light", GOLD)
         solver.add_step(4,
             r"N\text{ polarisers each at }\Delta\theta:\quad I_N = I_0\cos^{2N}(\Delta\theta)",
             "chain of polarisers: multiply cos² factors — used to rotate polarisation gradually")

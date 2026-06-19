@@ -150,7 +150,7 @@ class SingleSlitDiffraction(Scene):
             r"\sin\theta_1 = \frac{\lambda}{b} = \frac{632.8\times10^{-9}}{0.200\times10^{-3}} = 3.164\times10^{-3}",
             "angle of first dark minimum")
         solver.add_step(2,
-            r"\theta_1 \approx 3.164\times10^{-3}\text{ rad} = 0.181° \quad\text{(small angle: sin≈tan≈θ)}",
+            r"\theta_1 \approx 3.164\times10^{-3}\text{ rad} = 0.181^{\circ} \quad\text{(small angle: paraxial)}",
             "angle in radians and degrees", ANGLE_COLOR)
         solver.add_step(3,
             r"y_1 = L\tan\theta_1 \approx L\theta_1 = 2.00\times3.164\times10^{-3} = 6.33\text{ mm}",
@@ -241,7 +241,7 @@ class CircularApertureRayleigh(Scene):
             r"\text{Human eye: }D=3\text{mm}, \lambda=550\text{nm}",
             "typical pupil diameter and middle of the visible spectrum")
         solver.add_step(2,
-            r"\theta_{\min} = \frac{1.22\times550\times10^{-9}}{3\times10^{-3}} = 2.24\times10^{-4}\text{ rad} = 0.013° = 0.77'",
+            r"\theta_{\min} = \frac{1.22\times550\times10^{-9}}{3\times10^{-3}} = 2.24\times10^{-4}\text{ rad} = 0.013^{\circ} = 0.77\text{'}",
             "minimum resolvable angle ≈ 1 arcminute — matches measured visual acuity!", GOLD)
         solver.add_step(3,
             r"\text{Hubble telescope: }D=2.4\text{m}, \lambda=550\text{nm}",
@@ -361,7 +361,7 @@ class DiffractionGrating(Scene):
             r"d = \frac{1}{600\text{ gr/mm}} = 1.667\,\mu\text{m} = 1667\text{ nm}",
             "grating period from groove density")
         solver.add_step(2,
-            r"\sin\theta_1 = \frac{m\lambda}{d} = \frac{1\times589}{1667} = 0.3533 \;\Rightarrow\;\theta_1 = 20.7°",
+            r"\sin\theta_1 = \frac{m\lambda}{d} = \frac{1\times589}{1667} = 0.3533 \;\Rightarrow\;\theta_1 = 20.7^{\circ}",
             "angle of first-order diffracted beam (normal incidence, m=1)", ANGLE_COLOR)
         solver.add_step(3,
             r"N = 600\text{ gr/mm} \times 50\text{ mm} = 30\,000 \text{ slits}",
