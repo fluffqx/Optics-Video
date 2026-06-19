@@ -12,7 +12,7 @@ class Week7TitleCard(Scene):
             "Fraunhofer Diffraction: Slits, Apertures & Gratings",
             "Bennett Ch. 8.1–8.3.8"
         )
-        self.play(FadeIn(card)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(151.8); self.play(FadeOut(card))
 
 
 class HuygensPrinciple(Scene):
@@ -62,7 +62,7 @@ class HuygensPrinciple(Scene):
         ], font_size=25)
         fc_desc.next_to(fc_eq, DOWN, buff=0.35)
         for l in fc_desc: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
+        self.wait(85.9); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
 
 
 class SingleSlitDiffraction(Scene):
@@ -137,7 +137,7 @@ class SingleSlitDiffraction(Scene):
         ], eq_fs=28, lbl_fs=22, buff=0.25)
         dark_rows.next_to(dark_title, DOWN, buff=0.3)
         for row in dark_rows: self.play(FadeIn(row)); self.wait(0.7)
-        self.wait(1.5); self.play(FadeOut(VGroup(dark_title, dark_rows)))
+        self.wait(75.1); self.play(FadeOut(VGroup(dark_title, dark_rows)))
 
         # Full worked example
         ex_title = Text("Example: b=0.200mm, λ=632.8nm (He-Ne laser), screen at L=2.00m", font_size=26, color=GOLD)
@@ -229,7 +229,7 @@ class CircularApertureRayleigh(Scene):
         ], font_size=26)
         rayleigh_desc.next_to(rayleigh, DOWN, buff=0.35)
         for l in rayleigh_desc: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
+        self.wait(89.9); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
 
         # Examples
         ex_title = Text("Rayleigh Resolution Examples:", font_size=30, color=GOLD)
@@ -348,7 +348,7 @@ class DiffractionGrating(Scene):
         ], eq_fs=32, lbl_fs=22, buff=0.3)
         rp_rows.next_to(rp_title, DOWN, buff=0.3)
         for row in rp_rows: self.play(FadeIn(row)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(VGroup(rp_title, rp_rows)))
+        self.wait(84.7); self.play(FadeOut(VGroup(rp_title, rp_rows)))
 
         # Full worked example
         ex_title = Text("Example: grating 600 gr/mm, 5cm long, at λ=589.0nm (sodium D lines)", font_size=25, color=GOLD)

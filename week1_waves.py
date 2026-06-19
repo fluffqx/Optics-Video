@@ -12,7 +12,7 @@ class Week1TitleCard(Scene):
             "Waves, Wave Equation & Complex Representation",
             "Bennett Ch. 1 & 2.1–2.3"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(36.2); self.play(FadeOut(card))
 
 
 class WaveIntroduction(Scene):
@@ -48,7 +48,7 @@ class WaveIntroduction(Scene):
             for line in block:
                 self.play(FadeIn(line, shift=UP*0.1), run_time=0.5)
                 self.wait(0.8)
-            self.wait(0.8)
+            self.wait(64.1)
             self.play(FadeOut(block))
 
         self.play(FadeOut(title))
@@ -59,9 +59,9 @@ class WaveEquation1D(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(0.4)
+        self.play(Write(title))
 
-        # The equation itself
+        # ── Para 1 (7.4s): "Here is the one-dimensional wave equation..."
         eq = MathTex(
             r"\frac{\partial^2 \Psi(x,t)}{\partial x^2}",
             r"=",
@@ -71,68 +71,66 @@ class WaveEquation1D(Scene):
         )
         eq[2].set_color(WAVE_COLOR)
         eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(eq)); self.wait(1.2)
+        self.play(Write(eq))
+        self.wait(7)   # narrator: "Here is the 1D wave equation. Take a moment..."
 
-        # Annotation of each side
+        # ── Para 2 (18s): "On the left side, we have the second derivative..."
         left_brace = Brace(eq[0], DOWN, color=E_COLOR)
         left_txt   = left_brace.get_text("Curvature\\\\in space", font_size=26)
         left_txt.set_color(E_COLOR)
+        self.play(GrowFromCenter(left_brace), FadeIn(left_txt))
+        self.wait(18)  # narrator explains left side fully
+
+        # ── Para 3 (20.7s): "On the right side, we have one over v squared..."
         right_brace = Brace(eq[3], DOWN, color=B_COLOR)
         right_txt   = right_brace.get_text("Acceleration\\\\in time", font_size=26)
         right_txt.set_color(B_COLOR)
+        self.play(GrowFromCenter(right_brace), FadeIn(right_txt))
+        self.wait(20)  # narrator explains right side fully
 
-        self.play(GrowFromCenter(left_brace), FadeIn(left_txt)); self.wait(1)
-        self.play(GrowFromCenter(right_brace), FadeIn(right_txt)); self.wait(1.5)
-
+        # ── Para 4 (17s): "The equation is saying: spatial curvature = temporal acceleration..."
         interp = Text(
-            "The spatial curvature equals the temporal acceleration, scaled by 1/v².",
-            font_size=28, color=WHITE
+            "Spatial curvature = Temporal acceleration, scaled by 1/v²",
+            font_size=30, color=GOLD
         )
-        interp.next_to(left_txt, DOWN, buff=0.5)
+        interp.next_to(right_txt, DOWN, buff=0.4)
         safe_scale(interp, max_width=13.0)
-        self.play(FadeIn(interp)); self.wait(1.5)
-
+        self.play(FadeIn(interp))
+        self.wait(17)  # narrator: "The equation is saying..."
         self.play(FadeOut(VGroup(left_brace, left_txt, right_brace, right_txt, interp)))
 
-        # Variable definition
-        v_def = labeled_eq(
-            r"v = \text{wave speed, SI unit: m/s}",
-            "v links spatial and temporal behaviour — one number characterises the entire wave",
-            WAVE_COLOR, 38, 26
-        )
-        v_def.next_to(eq, DOWN, buff=0.5)
-        self.play(FadeIn(v_def)); self.wait(1.5)
-        self.play(FadeOut(v_def))
-
-        # General solutions
+        # ── Para 5 (27.6s): "Now, what are the solutions..."
         sol_title = Text("General Solutions  (Bennett Eq. 1.2 & 1.3)", font_size=32, color=GOLD)
         sol_title.next_to(eq, DOWN, buff=0.5)
         self.play(Write(sol_title))
 
         sol1 = labeled_eq(
             r"\Psi(x,t) = f(x - vt)",
-            "Any differentiable f — wave travels in the +x direction at speed v",
+            "Any differentiable f — travels in +x direction at speed v",
             E_COLOR, 42, 26
         )
         sol2 = labeled_eq(
             r"\Psi(x,t) = g(x + vt)",
-            "Any differentiable g — wave travels in the −x direction at speed v",
+            "Any differentiable g — travels in −x direction at speed v",
             B_COLOR, 42, 26
         )
         sols = VGroup(sol1, sol2).arrange(DOWN, buff=0.4)
         sols.next_to(sol_title, DOWN, buff=0.3)
-        safe_scale(sols, max_height=3.5)
+        safe_scale(sols, max_height=3.0)
+        self.play(Write(sol1))
+        self.wait(10)
+        self.play(Write(sol2))
+        self.wait(16)  # total ~27s narrator explains both solutions
 
-        self.play(Write(sol1)); self.wait(1.2)
-        self.play(Write(sol2)); self.wait(1.2)
-
+        # ── Para 6 (11.7s): "Notice the key insight..."
         key = Text(
             "Key insight: ANY shape travels without distortion at speed v.",
-            font_size=28, color=GOLD
+            font_size=30, color=GOLD
         )
-        key.next_to(sols, DOWN, buff=0.4)
+        key.next_to(sols, DOWN, buff=0.35)
         safe_scale(key, max_width=13.0)
-        self.play(FadeIn(key)); self.wait(2)
+        self.play(FadeIn(key))
+        self.wait(12)  # narrator: "Notice the key insight..."
         self.play(FadeOut(VGroup(title, eq, sol_title, sols, key)))
 
 
@@ -150,7 +148,7 @@ class WaveEquationProof(Scene):
         )
         intro.next_to(title, DOWN, buff=0.4)
         safe_scale(intro, max_width=13.0)
-        self.play(FadeIn(intro)); self.wait(1.2)
+        self.play(FadeIn(intro)); self.wait(41.6)
 
         solver = StepSolver(self, intro)
 
@@ -245,7 +243,7 @@ class HarmonicWave(Scene):
         t3 = eq_table(rel_rows, eq_fs=34, lbl_fs=23, buff=0.25)
         t3.next_to(rel_title, DOWN, buff=0.3)
         for row in t3: self.play(FadeIn(row)); self.wait(0.7)
-        self.wait(2); self.play(FadeOut(VGroup(title, psi, rel_title, t3)))
+        self.wait(141.5); self.play(FadeOut(VGroup(title, psi, rel_title, t3)))
 
 
 class HarmonicWaveExample(Scene):
@@ -263,7 +261,7 @@ class HarmonicWaveExample(Scene):
         ], font_size=28)
         given.next_to(title, DOWN, buff=0.4)
         for l in given: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(0.5)
+        self.wait(52.3)
 
         solver = StepSolver(self, given, start_buff=0.4)
         solver.add_step(1,
@@ -332,7 +330,7 @@ class SuperpositionPrinciple(Scene):
         ], font_size=26)
         importance.next_to(eqs, DOWN, buff=0.4)
         for l in importance: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, proof_title, eqs, importance)))
+        self.wait(38.2); self.play(FadeOut(VGroup(title, proof_title, eqs, importance)))
 
 
 class PhaseGroupVelocity(Scene):
@@ -417,7 +415,7 @@ class PhaseGroupVelocity(Scene):
         for l in note: self.play(FadeIn(l)); self.wait(0.8)
 
         solver.finalize()
-        self.wait(2); self.play(FadeOut(VGroup(title, ex_title, note, *solver.steps)))
+        self.wait(120.7); self.play(FadeOut(VGroup(title, ex_title, note, *solver.steps)))
 
 
 class ComplexRepresentation(Scene):
@@ -506,7 +504,7 @@ class ComplexRepresentation(Scene):
         int_eqs = eq_table(int_rows, eq_fs=32, lbl_fs=24, buff=0.3)
         int_eqs.next_to(int_title, DOWN, buff=0.35)
         for row in int_eqs: self.play(FadeIn(row)); self.wait(0.9)
-        self.wait(2); self.play(FadeOut(VGroup(title, int_title, int_eqs)))
+        self.wait(119.2); self.play(FadeOut(VGroup(title, int_title, int_eqs)))
 
 
 class ThreeDWaves(Scene):
@@ -572,7 +570,7 @@ class ThreeDWaves(Scene):
         ], font_size=26)
         sw_details.next_to(sphere, DOWN, buff=0.35)
         for l in sw_details: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(2); self.play(FadeOut(VGroup(title, sw_title, sphere, sw_details)))
+        self.wait(47.7); self.play(FadeOut(VGroup(title, sw_title, sphere, sw_details)))
 
 
 class Week1WavesSummary(Scene):
@@ -586,4 +584,4 @@ class Week1WavesSummary(Scene):
                 r"\tilde{\Psi} = A\,e^{i(kx-\omega t)},\quad |\tilde{\Psi}|^2 = A^2 \quad \text{(complex notation)}",
             ]
         )
-        self.play(FadeIn(card)); self.wait(4); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(51.1); self.play(FadeOut(card))

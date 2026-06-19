@@ -13,7 +13,7 @@ class FormulaSheetTitleCard(Scene):
             "Complete 31OPT Formula Sheet — Animated",
             "Official equation chart, all 8 weeks"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(2); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(37.2); self.play(FadeOut(card))
 
 
 class FormulasWavesMaxwell(Scene):
@@ -210,7 +210,7 @@ class MidtermPrepScene(Scene):
 
         for tip in tips:
             self.play(FadeIn(tip), run_time=0.4); self.wait(0.3)
-        self.wait(3)
+        self.wait(73.6)
         self.play(FadeOut(VGroup(tips_title, tips)))
 
 
@@ -276,5 +276,5 @@ class FinalExamPrepScene(Scene):
         for item in grade_group:
             self.play(Write(item)); self.wait(1)
         self.play(Create(gold_box(pass_cond)))
-        self.wait(3)
+        self.wait(93.8)
         self.play(FadeOut(VGroup(grade_title, grade_group)))

@@ -12,7 +12,7 @@ class Week8TitleCard(Scene):
             "Multiple-Beam Interference & Fabry-Pérot",
             "Bennett Ch. 7.10, 7.11"
         )
-        self.play(FadeIn(card)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(162.3); self.play(FadeOut(card))
 
 
 class MultiBeamIntro(Scene):
@@ -36,7 +36,7 @@ class MultiBeamIntro(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(100.6); self.play(FadeOut(VGroup(title, intro)))
 
 
 class AiryFunction(Scene):
@@ -84,7 +84,7 @@ class AiryFunction(Scene):
         ], font_size=26)
         res.next_to(res_title, DOWN, buff=0.3)
         for l in res: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, airy, res_title, res)))
+        self.wait(95.9); self.play(FadeOut(VGroup(title, airy, res_title, res)))
 
 
 class FinesseResolving(Scene):
@@ -134,7 +134,7 @@ class FinesseResolving(Scene):
         ], font_size=26)
         phys.next_to(phys_title, DOWN, buff=0.35)
         for l in phys: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, phys_title, phys)))
+        self.wait(115.1); self.play(FadeOut(VGroup(title, phys_title, phys)))
 
 
 class FabryPerotExample(Scene):
@@ -152,7 +152,7 @@ class FabryPerotExample(Scene):
         ], font_size=27)
         prob.next_to(title, DOWN, buff=0.4)
         for l in prob: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.3)
+        self.wait(100.6)
 
         solver = StepSolver(self, prob, start_buff=0.4)
         solver.add_step(1,
@@ -234,7 +234,7 @@ class CoherenceLength(Scene):
             ).arrange(RIGHT, buff=0.3)
             safe_scale(row_mob, max_width=13.5)
             row_mob.next_to(sources_title, DOWN, buff=0.35)
-            self.play(FadeIn(row_mob)); self.wait(1.5); self.play(FadeOut(row_mob))
+            self.play(FadeIn(row_mob)); self.wait(89.7); self.play(FadeOut(row_mob))
 
         self.play(FadeOut(VGroup(title, sources_title)))
 
@@ -259,4 +259,4 @@ class Week8Summary(Scene):
         ], eq_fs=30, lbl_fs=22, buff=0.22)
         rows.next_to(title, DOWN, buff=0.4)
         for row in rows: self.play(FadeIn(row)); self.wait(0.5)
-        self.wait(3); self.play(FadeOut(VGroup(title, rows)))
+        self.wait(78.0); self.play(FadeOut(VGroup(title, rows)))

@@ -12,7 +12,7 @@ class Week2TitleCard(Scene):
             "Reflection, Refraction & Fresnel Equations",
             "Bennett Ch. 3.2–3.6, 4.1–4.2"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(61.1); self.play(FadeOut(card))
 
 
 class Week2Intro(Scene):
@@ -38,7 +38,7 @@ class Week2Intro(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(49.3); self.play(FadeOut(VGroup(title, intro)))
 
 
 class FermatPrinciple(Scene):
@@ -59,7 +59,7 @@ class FermatPrinciple(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.5); self.play(FadeOut(intro))
+        self.wait(48.9); self.play(FadeOut(intro))
 
         # Fermat → Snell derivation outline
         deriv_title = Text("Fermat → Snell's Law  (Bennett Example 3.2.1):", font_size=30, color=GOLD)
@@ -145,7 +145,7 @@ class ReflectionRefraction(Scene):
         ], font_size=26)
         intuition.next_to(title, DOWN, buff=0.45)
         for l in intuition: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(intuition))
+        self.wait(90.2); self.play(FadeOut(intuition))
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), θ_i = 40°", font_size=30, color=GOLD)
@@ -193,7 +193,7 @@ class FresnelEquationsDerivation(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(50.7); self.play(FadeOut(VGroup(title, intro)))
 
 
 class FresnelEquations(Scene):
@@ -258,7 +258,7 @@ class FresnelEquations(Scene):
         self.play(Write(r_norm)); self.wait(1)
         self.play(Write(t_norm)); self.wait(1.5)
         self.play(Create(gold_box(r_norm)))
-        self.wait(2); self.play(FadeOut(VGroup(title, norm_title, norm_eqs)))
+        self.wait(139.7); self.play(FadeOut(VGroup(title, norm_title, norm_eqs)))
 
 
 class FresnelFullExample(Scene):
@@ -274,7 +274,7 @@ class FresnelFullExample(Scene):
         ], font_size=28)
         given.next_to(title, DOWN, buff=0.4)
         for l in given: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.3)
+        self.wait(52.7)
 
         solver = StepSolver(self, given, start_buff=0.4)
         solver.add_step(1,
@@ -347,7 +347,7 @@ class ReflectivityTransmissivity(Scene):
         ], font_size=26)
         why.next_to(why_title, DOWN, buff=0.35)
         for l in why: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1); self.play(FadeOut(VGroup(why_title, why)))
+        self.wait(50.4); self.play(FadeOut(VGroup(why_title, why)))
 
         # Worked example
         ex_title = Text("Example: air→glass n=1.5, normal incidence", font_size=30, color=GOLD)
@@ -457,7 +457,7 @@ class BrewsterTIR(Scene):
         ], font_size=25)
         tir_examples.next_to(tir_eqs, DOWN, buff=0.35)
         for l in tir_examples: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
+        self.wait(55.5); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
 
 
 class MalusLaw(Scene):
@@ -497,7 +497,7 @@ class MalusLaw(Scene):
         ], font_size=26)
         why.next_to(malus, DOWN, buff=0.45)
         for l in why: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.8); self.play(FadeOut(why))
+        self.wait(39.9); self.play(FadeOut(why))
 
         # Worked examples
         ex_title = Text("Worked Examples:", font_size=30, color=GOLD)

@@ -12,7 +12,7 @@ class Week5TitleCard(Scene):
             "Polarisation Optics: Wave Plates & Jones Formalism",
             "Bennett Ch. 6"
         )
-        self.play(FadeIn(card)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(155.3); self.play(FadeOut(card))
 
 
 class PolarisationStatesScene(Scene):
@@ -81,7 +81,7 @@ class PolarisationStatesScene(Scene):
             desc = section_intro(desc_lines, font_size=25)
             desc.next_to(eq_mobs, DOWN, buff=0.3)
             for l in desc: self.play(FadeIn(l)); self.wait(0.7)
-            self.wait(1.5); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
+            self.wait(46.2); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
 
         self.play(FadeOut(title))
 
@@ -164,7 +164,7 @@ class BirefringenceWavePlates(Scene):
             eff = section_intro(effects, font_size=25)
             eff.next_to(eq2, DOWN, buff=0.3)
             for l in eff: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(1.5); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
+            self.wait(52.4); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
 
         self.play(FadeOut(title))
 
@@ -220,7 +220,7 @@ class JonesFormalism(Scene):
 
         for row in state_mobs:
             self.play(FadeIn(row), run_time=0.5); self.wait(0.3)
-        self.wait(2); self.play(FadeOut(VGroup(title, states_title, state_mobs)))
+        self.wait(43.8); self.play(FadeOut(VGroup(title, states_title, state_mobs)))
 
 
 class JonesMatrices(Scene):
@@ -276,7 +276,7 @@ class JonesMatrices(Scene):
             font_size=36, color=N_COLOR)
         rot_formula.next_to(rot_title, DOWN, buff=0.3)
         safe_scale(rot_formula, max_width=13.0)
-        self.play(Write(rot_formula)); self.wait(2); self.play(FadeOut(VGroup(rot_title, rot_formula)))
+        self.play(Write(rot_formula)); self.wait(51.6); self.play(FadeOut(VGroup(rot_title, rot_formula)))
 
         # Full worked example
         ex_title = Text("Example: 45° input → HWP(fast H) → QWP(fast V) → find output", font_size=26, color=GOLD)

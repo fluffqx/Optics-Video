@@ -12,7 +12,7 @@ class Week4TitleCard(Scene):
             "Matrix Optics, Superposition & Polarisation Basics",
             "Bennett Ch. 5.5, 7.1–7.3.1, 6.1–6.2"
         )
-        self.play(FadeIn(card)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(142.9); self.play(FadeOut(card))
 
 
 class MatrixOpticsIntro(Scene):
@@ -38,7 +38,7 @@ class MatrixOpticsIntro(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(53.2); self.play(FadeOut(VGroup(title, intro)))
 
 
 class MatrixEquations(Scene):
@@ -88,7 +88,7 @@ class MatrixEquations(Scene):
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(eq, DOWN, buff=0.35)
             for l in desc: self.play(FadeIn(l)); self.wait(0.7)
-            self.wait(1.5); self.play(FadeOut(VGroup(m_title, eq, desc)))
+            self.wait(56.3); self.play(FadeOut(VGroup(m_title, eq, desc)))
 
         self.play(FadeOut(title))
 
@@ -132,7 +132,7 @@ class SystemMatrixCardinalPoints(Scene):
         ], eq_fs=32, lbl_fs=22, buff=0.25)
         cardinals.next_to(cardinal_title, DOWN, buff=0.3)
         for row in cardinals: self.play(FadeIn(row)); self.wait(0.6)
-        self.wait(2); self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
+        self.wait(50.7); self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
 
 
 class MatrixExample(Scene):
@@ -150,7 +150,7 @@ class MatrixExample(Scene):
         ], font_size=27)
         prob.next_to(title, DOWN, buff=0.4)
         for l in prob: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(0.3)
+        self.wait(54.2)
 
         solver = StepSolver(self, prob, start_buff=0.4)
         solver.add_step(1,

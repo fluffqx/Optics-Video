@@ -12,7 +12,7 @@ class Week3TitleCard(Scene):
             "Geometric Optics: Lenses, Mirrors & Optical Instruments",
             "Bennett Ch. 4.3–4.5, 5.2, 5.5"
         )
-        self.play(FadeIn(card)); self.wait(2.5); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(89.0); self.play(FadeOut(card))
 
 
 class GeometricOpticsIntro(Scene):
@@ -38,7 +38,7 @@ class GeometricOpticsIntro(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(50.7); self.play(FadeOut(VGroup(title, intro)))
 
 
 class SignConventions(Scene):
@@ -80,7 +80,7 @@ class SignConventions(Scene):
 
         for row in rule_group:
             self.play(FadeIn(row), run_time=0.4); self.wait(0.4)
-        self.wait(2); self.play(FadeOut(VGroup(title, warning, rule_group)))
+        self.wait(62.5); self.play(FadeOut(VGroup(title, warning, rule_group)))
 
 
 class SphericalSurface(Scene):
@@ -114,7 +114,7 @@ class SphericalSurface(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.24)
         sym.next_to(eq, DOWN, buff=0.4)
         for row in sym: self.play(FadeIn(row)); self.wait(0.6)
-        self.wait(1.5); self.play(FadeOut(sym))
+        self.wait(45.5); self.play(FadeOut(sym))
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), R=+10 cm, s_o=30 cm", font_size=26, color=GOLD)
@@ -186,7 +186,7 @@ class ThinLensScene(Scene):
         power = MathTex(r"P = \frac{1}{f} \quad [\text{dioptres D} = \text{m}^{-1}]", font_size=40, color=INTENSITY_COLOR)
         extras = VGroup(mag, power).arrange(RIGHT, buff=1.5)
         extras.next_to(tl, DOWN, buff=0.4)
-        self.play(Write(extras)); self.wait(1.5)
+        self.play(Write(extras)); self.wait(130.5)
         self.play(FadeOut(VGroup(tl_title, tl, extras)))
 
         # Full worked example
@@ -247,7 +247,7 @@ class MirrorScene(Scene):
 
         mag_eq = MathTex(r"m = -\frac{s_i}{s_o} \quad\text{(same as for lenses)}", font_size=40, color=WHITE)
         mag_eq.next_to(mirror_eq, DOWN, buff=0.35)
-        self.play(Write(mag_eq)); self.wait(1); self.play(FadeOut(mag_eq))
+        self.play(Write(mag_eq)); self.wait(50.9); self.play(FadeOut(mag_eq))
 
         # Worked example
         ex_title = Text("Example: concave mirror R=+40 cm, object at s_o=30 cm", font_size=28, color=GOLD)
@@ -299,7 +299,7 @@ class LensCombinations(Scene):
             r"P_{\text{eff}} = P_1 + P_2 = \frac{1}{f_1} + \frac{1}{f_2} \quad (d\to 0)",
             "lenses in CONTACT: powers ADD — used in spectacle design", N_COLOR, 40, 25)
         contact.next_to(separated, DOWN, buff=0.4)
-        self.play(Write(contact)); self.wait(1.5)
+        self.play(Write(contact)); self.wait(40.4)
         self.play(FadeOut(VGroup(separated, contact)))
 
         # Example
@@ -369,6 +369,6 @@ class OpticalInstruments(Scene):
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(inst_title, DOWN, buff=0.35)
             for l in desc: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(2); self.play(FadeOut(VGroup(inst_title, desc)))
+            self.wait(62.6); self.play(FadeOut(VGroup(inst_title, desc)))
 
         self.play(FadeOut(title))

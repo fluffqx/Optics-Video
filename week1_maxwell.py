@@ -25,7 +25,7 @@ class MaxwellIntro(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(61.2); self.play(FadeOut(VGroup(title, intro)))
 
 
 class VectorCalculusNotation(Scene):
@@ -69,7 +69,7 @@ class VectorCalculusNotation(Scene):
             op_desc.next_to(op_eq, DOWN, buff=0.4)
             self.play(Write(op_eq)); self.wait(0.5)
             for l in op_desc: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(1.5)
+            self.wait(48.7)
             self.play(FadeOut(VGroup(op_eq, op_desc)))
 
         self.play(FadeOut(title))
@@ -142,7 +142,7 @@ class MaxwellEquations(Scene):
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(eq, DOWN, buff=0.35)
             for l in desc: self.play(FadeIn(l)); self.wait(0.9)
-            self.wait(2)
+            self.wait(129.8)
             self.play(FadeOut(VGroup(law_title, eq, desc)))
 
         self.play(FadeOut(title))
@@ -186,7 +186,7 @@ class MaxwellVacuum(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         constants.to_edge(RIGHT, buff=0.5)
         constants.shift(DOWN * 0.5)
-        self.play(FadeIn(constants)); self.wait(2)
+        self.play(FadeIn(constants)); self.wait(51.0)
         self.play(FadeOut(VGroup(title, vac_eqs, constants)))
 
 
@@ -205,7 +205,7 @@ class EMWaveDerivation(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         for l in intro: self.play(FadeIn(l)); self.wait(0.9)
-        self.wait(0.3); self.play(FadeOut(intro))
+        self.wait(77.5); self.play(FadeOut(intro))
 
         solver = StepSolver(self, title, start_buff=0.55)
 
@@ -277,7 +277,7 @@ class EMWaveProperties(Scene):
             desc_mob = section_intro(desc.split('\n'), font_size=26)
             desc_mob.next_to(eq, DOWN, buff=0.35)
             for l in desc_mob: self.play(FadeIn(l)); self.wait(0.8)
-            self.wait(1.5); self.play(FadeOut(VGroup(prop_title, eq, desc_mob)))
+            self.wait(52.1); self.play(FadeOut(VGroup(prop_title, eq, desc_mob)))
 
         self.play(FadeOut(title))
 
@@ -304,7 +304,7 @@ class EMWaveExample(Scene):
 
         find = Text("Find: the magnetic field B⃗(x,y,z,t)", font_size=30, color=WHITE)
         find.next_to(E_field, DOWN, buff=0.3)
-        self.play(FadeIn(find)); self.wait(0.8)
+        self.play(FadeIn(find)); self.wait(46.8)
 
         solver = StepSolver(self, find, start_buff=0.4)
 
@@ -390,7 +390,7 @@ class PoyntingIrradiance(Scene):
         ], font_size=26)
         half_note.next_to(I_eq, DOWN, buff=0.35)
         for l in half_note: self.play(FadeIn(l)); self.wait(0.8)
-        self.wait(1.5); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
+        self.wait(129.6); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
 
         # Worked example
         ex_title = Text("Example: Green Laser, Power=5.0 mW, beam radius=1.0 mm", font_size=28, color=GOLD)
@@ -446,7 +446,7 @@ class RadiationPressure(Scene):
         peqs  = VGroup(pabs, prefl).arrange(DOWN, buff=0.5)
         peqs.next_to(P_title, DOWN, buff=0.3)
         self.play(Write(pabs)); self.wait(1)
-        self.play(Write(prefl)); self.wait(1.5)
+        self.play(Write(prefl)); self.wait(49.9)
         self.play(FadeOut(VGroup(P_title, peqs)))
 
         # Example 1: solar sail
@@ -560,4 +560,4 @@ class DispersionScene(Scene):
         ], font_size=25)
         prism_note.next_to(disp_rows, DOWN, buff=0.3)
         for l in prism_note: self.play(FadeIn(l)); self.wait(0.7)
-        self.wait(2); self.play(FadeOut(VGroup(title, n_eq, disp_title, disp_rows, prism_note)))
+        self.wait(101.8); self.play(FadeOut(VGroup(title, n_eq, disp_title, disp_rows, prism_note)))
