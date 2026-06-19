@@ -24,7 +24,7 @@ class MaxwellIntro(Scene):
             "Understanding WHY each equation has its form is as important as knowing it.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(16.6)
         self.wait(36.4); self.play(FadeOut(VGroup(title, intro)))
 
@@ -42,7 +42,7 @@ class VectorCalculusNotation(Scene):
             "instantly and understand their physical meaning.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(5.0)
         self.wait(22.1); self.play(FadeOut(intro))
 
@@ -70,7 +70,7 @@ class VectorCalculusNotation(Scene):
             op_desc = section_intro(desc.split('\n'), font_size=26)
             op_desc.next_to(op_eq, DOWN, buff=0.4)
             self.play(Write(op_eq)); self.wait(19.3)
-            for l in op_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.play(FadeIn(op_desc))
             self.wait(12.7)
             self.wait(2.0)
             self.play(FadeOut(VGroup(op_eq, op_desc)))
@@ -142,7 +142,7 @@ class MaxwellEquations(Scene):
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(eq, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.play(FadeIn(desc))
             self.wait(20.4)
             self.wait(123.10000000000001)
             self.play(FadeOut(VGroup(law_title, eq, desc)))
@@ -162,7 +162,7 @@ class MaxwellVacuum(Scene):
             "Setting ρ=0 and J=0 in the general equations gives:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(8.8)
         self.wait(29.3); self.play(FadeOut(intro))
 
@@ -205,7 +205,7 @@ class EMWaveDerivation(Scene):
             "Take the curl of BOTH sides — this is the key trick:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(11.6)
         self.wait(75.7); self.play(FadeOut(intro))
 
@@ -243,7 +243,7 @@ class EMWaveProperties(Scene):
             "have remarkable properties — all provable directly from Maxwell's equations.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(9.4)
         self.play(FadeOut(intro))
 
@@ -278,7 +278,7 @@ class EMWaveProperties(Scene):
 
             desc_mob = section_intro(desc.split('\n'), font_size=26)
             desc_mob.next_to(eq, DOWN, buff=0.35)
-            for l in desc_mob: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.play(FadeIn(desc_mob))
             self.wait(11.6)
             self.wait(31.0); self.play(FadeOut(VGroup(prop_title, eq, desc_mob)))
 
@@ -348,7 +348,7 @@ class PoyntingIrradiance(Scene):
             "flowing in the direction of E⃗ × B⃗ = direction of k⃗.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(6.6)
         self.wait(19.3); self.play(FadeOut(intro))
 
@@ -369,7 +369,7 @@ class PoyntingIrradiance(Scene):
             "S⃗ oscillates in time — we need the TIME AVERAGE for practical use.",
         ], font_size=26)
         S_desc.next_to(S_eq, DOWN, buff=0.35)
-        for l in S_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(S_desc))
         self.wait(16.6)
         self.wait(8.8); self.play(FadeOut(VGroup(S_title, S_eq, S_desc)))
 
@@ -392,7 +392,7 @@ class PoyntingIrradiance(Scene):
             "This is a very frequently-needed result — commit it to memory.",
         ], font_size=26)
         half_note.next_to(I_eq, DOWN, buff=0.35)
-        for l in half_note: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(half_note))
         self.wait(13.8)
         self.wait(61.3)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(I_title, I_eq, half_note)))
@@ -437,7 +437,7 @@ class RadiationPressure(Scene):
             "   (factor of 2 because momentum REVERSES — like a ball bouncing off a wall)",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(10.5)
         self.wait(18.2); self.play(FadeOut(intro))
 
@@ -509,7 +509,7 @@ class DispersionScene(Scene):
             "depends on how close ω is to the resonance frequency ω_j.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(12.7)
         self.wait(21.0); self.play(FadeOut(intro))
 
@@ -565,6 +565,6 @@ class DispersionScene(Scene):
             "This is Newton's famous prism experiment — explained by the Lorentz model.",
         ], font_size=25)
         prism_note.next_to(disp_rows, DOWN, buff=0.3)
-        for l in prism_note: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(prism_note))
         self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(title, n_eq, disp_title, disp_rows, prism_note)))

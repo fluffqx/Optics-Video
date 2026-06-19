@@ -179,7 +179,7 @@ class HarmonicWave(Scene):
             "a pure sinusoidal oscillation. Bennett defines it in Eq. 1.15:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(8.8)
         self.wait(7.2)
 
@@ -258,7 +258,7 @@ class HarmonicWaveExample(Scene):
             "Find:   wave number k, angular frequency ω, frequency f, period T",
         ], font_size=28)
         given.next_to(title, DOWN, buff=0.4)
-        for l in given: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(given))
         self.wait(8.3)
         self.wait(50.2)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
@@ -298,7 +298,7 @@ class SuperpositionPrinciple(Scene):
             "a valid solution. This can be extended to any number of waves.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(7.2)
         self.wait(25.4); self.play(FadeOut(intro))
 
@@ -329,7 +329,7 @@ class SuperpositionPrinciple(Scene):
             "→ A complex wave (e.g. white light) = sum of many harmonic waves.",
         ], font_size=26)
         importance.next_to(eqs, DOWN, buff=0.4)
-        for l in importance: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(importance))
         self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(title, proof_title, eqs, importance)))
 
@@ -346,7 +346,7 @@ class PhaseGroupVelocity(Scene):
             "Confusing them is a classic exam mistake — understand the difference deeply.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(9.4)
         self.wait(16.0); self.play(FadeOut(intro))
 
@@ -366,7 +366,7 @@ class PhaseGroupVelocity(Scene):
             "In vacuum: v_p = c = 3×10⁸ m/s for all frequencies.",
         ], font_size=26)
         vp_desc.next_to(vp_eq, DOWN, buff=0.3)
-        for l in vp_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(vp_desc))
         self.wait(14.4)
         self.wait(20.4); self.play(FadeOut(VGroup(vp_title, vp_eq, vp_desc)))
 
@@ -390,7 +390,7 @@ class PhaseGroupVelocity(Scene):
             "at different speeds, causing dispersion.",
         ], font_size=26)
         vg_desc.next_to(vg_eq, DOWN, buff=0.3)
-        for l in vg_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(vg_desc))
         self.wait(11.6)
         self.wait(11.0); self.play(FadeOut(VGroup(vg_title, vg_eq, vg_desc)))
 
@@ -416,7 +416,7 @@ class PhaseGroupVelocity(Scene):
             "This is directly observable in water waves!",
         ], font_size=26)
         note.next_to(solver.steps[-1], DOWN, buff=0.4)
-        for l in note: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(note))
         self.wait(9.9)
 
         solver.finalize()
@@ -438,7 +438,7 @@ class ComplexRepresentation(Scene):
             "The key is Euler's formula — one of the most beautiful results in mathematics:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(15.5)
         self.wait(18.8); self.play(FadeOut(intro))
 
@@ -491,7 +491,7 @@ class ComplexRepresentation(Scene):
             "→ No more cos² integrals — the algebra is vastly simpler.",
         ], font_size=25)
         why.next_to(rule, DOWN, buff=0.35)
-        for l in why: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(why))
         self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(cwave_title, cwave, rule, why)))
 
@@ -526,7 +526,7 @@ class ThreeDWaves(Scene):
             "extends the 1D description to 3D using the wave vector k⃗.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(25.4)
         self.wait(10.5); self.play(FadeOut(intro))
 
@@ -577,7 +577,7 @@ class ThreeDWaves(Scene):
             "use plane waves to describe laser beams and starlight.",
         ], font_size=26)
         sw_details.next_to(sphere, DOWN, buff=0.35)
-        for l in sw_details: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(sw_details))
         self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(title, sw_title, sphere, sw_details)))
 

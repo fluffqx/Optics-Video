@@ -37,7 +37,7 @@ class MatrixOpticsIntro(Scene):
             "The LAST element on the right corresponds to the FIRST element encountered.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(21.5)
         self.wait(38.1); self.play(FadeOut(VGroup(title, intro)))
 
@@ -88,7 +88,7 @@ class MatrixEquations(Scene):
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(eq, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.play(FadeIn(desc))
             self.wait(17.7)
             self.wait(44.2); self.play(FadeOut(VGroup(m_title, eq, desc)))
 
@@ -106,7 +106,7 @@ class SystemMatrixCardinalPoints(Scene):
             "The system matrix has the form:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(intro))
         self.wait(10.5)
         self.wait(23.2)
 
@@ -149,7 +149,7 @@ class MatrixExample(Scene):
             "Show it expands the beam by factor f₂/f₁ without focusing.",
         ], font_size=27)
         prob.next_to(title, DOWN, buff=0.4)
-        for l in prob: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.play(FadeIn(prob))
         self.wait(13.2)
         self.wait(47.4)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
