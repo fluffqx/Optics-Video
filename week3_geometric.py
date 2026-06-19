@@ -37,7 +37,8 @@ class GeometricOpticsIntro(Scene):
             "This linearises all the equations and makes analytic solutions possible.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(22.1)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(22.1)
         self.wait(34.8); self.play(FadeOut(VGroup(title, intro)))
 
 
@@ -96,7 +97,8 @@ class SphericalSurface(Scene):
             "Apply the paraxial approximation to Snell's law at the curved surface:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(15.5)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(15.5)
         self.wait(24.3); self.play(FadeOut(intro))
 
         eq = MathTex(
@@ -149,7 +151,8 @@ class ThinLensScene(Scene):
             "object of surface 2 — and combine the results.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(14.4)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(14.4)
         self.wait(10.5); self.play(FadeOut(intro))
 
         # Lensmaker's equation
@@ -233,7 +236,8 @@ class MirrorScene(Scene):
             "real images are in FRONT of the mirror (positive s_i for concave mirrors).",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(14.4)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(14.4)
         self.wait(23.2); self.play(FadeOut(intro))
 
         mirror_eq = MathTex(
@@ -283,7 +287,8 @@ class LensCombinations(Scene):
             "For two thin lenses separated by distance d:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(14.9)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(14.9)
         self.wait(16.0); self.play(FadeOut(intro))
 
         separated = labeled_eq(
@@ -333,7 +338,8 @@ class OpticalInstruments(Scene):
             "The key parameters are: magnification, field of view, and resolution.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(5.0)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(5.0)
         self.wait(21.0); self.play(FadeOut(intro))
 
         instruments = [
@@ -364,5 +370,6 @@ class OpticalInstruments(Scene):
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(inst_title, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l)); self.wait(19.3)
+            for l in desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.wait(19.3)
             self.wait(28.7); self.play(FadeOut(VGroup(inst_title, desc)))

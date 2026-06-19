@@ -39,7 +39,8 @@ class InterferenceIntroScene(Scene):
             "Two slits illuminated by the same source are coherent (same source).",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(18.2)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(18.2)
         self.wait(46.9); self.play(FadeOut(VGroup(title, intro)))
 
 
@@ -55,7 +56,8 @@ class TwoBeamInterference(Scene):
             "Bennett derives the interference irradiance in Section 7.3.2 (Eq. 7.16):",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(17.7)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(17.7)
         self.wait(29.3); self.play(FadeOut(intro))
 
         general = MathTex(
@@ -138,7 +140,8 @@ class YoungDoubleSlit(Scene):
             "A screen at distance L  (L >> d) shows alternating bright and dark fringes.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(19.3)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(19.3)
         self.wait(29.3); self.play(FadeOut(intro))
 
         # Path difference
@@ -232,7 +235,8 @@ class ThinFilmInterference(Scene):
             "WHENEVER light reflects off a surface where n_reflected > n_incident.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(16.0)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(16.0)
         self.wait(24.8); self.play(FadeOut(intro))
 
         # Main formula
@@ -306,7 +310,8 @@ class ThinFilmInterference(Scene):
             "Camera lenses use AR coatings to reduce reflection losses from ~4% to ~0.1%.",
         ], font_size=26)
         ar_desc.next_to(ar_title, DOWN, buff=0.3)
-        for l in ar_desc: self.play(FadeIn(l)); self.wait(2.0)
+        for l in ar_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
 
         solver = StepSolver(self, ar_desc, start_buff=0.35)
         solver.add_step(1,
@@ -339,7 +344,8 @@ class FringeVisibility(Scene):
             "V=0 means no fringes at all — beams are incoherent.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(8.3)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(8.3)
         self.wait(15.5); self.play(FadeOut(intro))
 
         vis = MathTex(
@@ -377,7 +383,8 @@ class MichelsonScene(Scene):
             "Moving mirror M₂ by ΔL changes the OPD by 2ΔL (beam travels arm twice).",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(22.1)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(22.1)
         self.wait(9.9); self.play(FadeOut(intro))
 
         eqs = eq_table([

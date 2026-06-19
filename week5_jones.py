@@ -33,7 +33,8 @@ class PolarisationStatesScene(Scene):
             "ELLIPTICAL: the general case — tip of E⃗ traces an ellipse (unequal amplitudes or arbitrary phase).",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(16.0)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(16.0)
         self.wait(25.9); self.play(FadeOut(intro))
 
         # Detailed equations for each state
@@ -80,7 +81,8 @@ class PolarisationStatesScene(Scene):
 
             desc = section_intro(desc_lines, font_size=25)
             desc.next_to(eq_mobs, DOWN, buff=0.3)
-            for l in desc: self.play(FadeIn(l)); self.wait(2.0)
+            for l in desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.wait(2.0)
             self.wait(2.0); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
 
 
@@ -103,7 +105,8 @@ class BirefringenceWavePlates(Scene):
             "Δφ between the two polarisation components — this is a WAVE PLATE.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(11.0)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(11.0)
         self.wait(17.7); self.play(FadeOut(intro))
 
         # Phase retardation formula
@@ -161,7 +164,8 @@ class BirefringenceWavePlates(Scene):
 
             eff = section_intro(effects, font_size=25)
             eff.next_to(eq2, DOWN, buff=0.3)
-            for l in eff: self.play(FadeIn(l)); self.wait(2.0)
+            for l in eff: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+            self.wait(2.0)
             self.wait(2.0); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
 
 
@@ -181,7 +185,8 @@ class JonesFormalism(Scene):
             "Normalised Jones vectors have unit magnitude: |E̊|² = 1.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(18.8)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(18.8)
         self.wait(26.5); self.play(FadeOut(intro))
 
         gen = MathTex(
@@ -233,7 +238,8 @@ class JonesMatrices(Scene):
             "Transmitted intensity (when input is normalised): I_out = |Ẽ_out|²",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(14.9)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(14.9)
         self.wait(11.6); self.play(FadeOut(intro))
 
         matrices = [

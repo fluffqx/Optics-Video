@@ -35,7 +35,8 @@ class MultiBeamIntro(Scene):
             "The result is the AIRY FUNCTION — one of the most important results in optics.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(18.8)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(18.8)
         self.wait(93.2); self.play(FadeOut(VGroup(title, intro)))
 
 
@@ -83,7 +84,8 @@ class AiryFunction(Scene):
             "The field builds up inside the cavity to a very large amplitude.",
         ], font_size=26)
         res.next_to(res_title, DOWN, buff=0.3)
-        for l in res: self.play(FadeIn(l)); self.wait(14.9)
+        for l in res: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(14.9)
         self.wait(2.0); self.play(FadeOut(VGroup(title, airy, res_title, res)))
 
 
@@ -99,7 +101,8 @@ class FinesseResolving(Scene):
             "It is defined as the ratio of the free spectral range to the peak FWHM.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(10.5)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(10.5)
         self.wait(35.9); self.play(FadeOut(intro))
 
         eqs = eq_table([
@@ -133,7 +136,8 @@ class FinesseResolving(Scene):
             "The peaks are 312× narrower than the spacing between them!",
         ], font_size=26)
         phys.next_to(phys_title, DOWN, buff=0.35)
-        for l in phys: self.play(FadeIn(l)); self.wait(21.5)
+        for l in phys: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(21.5)
         self.wait(40.3); self.play(FadeOut(VGroup(title, phys_title, phys)))
 
 
@@ -151,7 +155,8 @@ class FabryPerotExample(Scene):
             "Find: required mirror spacing, finesse, resolving power, and verify resolution.",
         ], font_size=27)
         prob.next_to(title, DOWN, buff=0.4)
-        for l in prob: self.play(FadeIn(l)); self.wait(12.1)
+        for l in prob: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(12.1)
         self.wait(99.9)
 
         solver = StepSolver(self, prob, start_buff=0.4)
@@ -196,7 +201,8 @@ class CoherenceLength(Scene):
             "— it is coherent with a copy of itself no matter how much you delay it.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(13.2)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(13.2)
         self.wait(26.5); self.play(FadeOut(intro))
 
         coh_eqs = eq_table([

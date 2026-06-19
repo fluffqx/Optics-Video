@@ -37,7 +37,8 @@ class HuygensPrinciple(Scene):
             "the open area contribute — their interference produces the diffraction pattern.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(9.9)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(9.9)
         self.wait(24.3); self.play(FadeOut(intro))
 
         # Fraunhofer condition
@@ -61,7 +62,8 @@ class HuygensPrinciple(Scene):
             "h²/2λ = (10⁻⁴)²/(2×5×10⁻⁷) = 10⁻⁸/10⁻⁶ = 0.01m = 1cm  <<  r=1m  ✓  Fraunhofer!",
         ], font_size=25)
         fc_desc.next_to(fc_eq, DOWN, buff=0.35)
-        for l in fc_desc: self.play(FadeIn(l)); self.wait(32.0)
+        for l in fc_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(32.0)
         self.wait(18.8); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
 
 
@@ -78,7 +80,8 @@ class SingleSlitDiffraction(Scene):
             "The result (Eq. 8.16-8.17) is the famous sinc-squared function:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(20.4)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(20.4)
         self.wait(20.4); self.play(FadeOut(intro))
 
         # Main equations
@@ -119,7 +122,8 @@ class SingleSlitDiffraction(Scene):
             "spreads the wave out more — this is the wave-optics uncertainty principle.",
         ], font_size=25)
         cen_desc.next_to(cen_title, DOWN, buff=0.3)
-        for l in cen_desc: self.play(FadeIn(l)); self.wait(2.0)
+        for l in cen_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(cen_title, cen_desc)))
 
         # Dark minima
@@ -180,7 +184,8 @@ class CircularApertureRayleigh(Scene):
             "The result  (Bennett Eq. 8.26):",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(19.3)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(19.3)
         self.wait(19.9); self.play(FadeOut(intro))
 
         # Airy disk
@@ -197,7 +202,8 @@ class CircularApertureRayleigh(Scene):
             "Setting π D sinθ/λ = 3.832 gives the angle of the first dark ring:",
         ], font_size=26)
         airy_desc.next_to(airy, DOWN, buff=0.35)
-        for l in airy_desc: self.play(FadeIn(l)); self.wait(22.1)
+        for l in airy_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(22.1)
         self.wait(18.2); self.play(FadeOut(airy_desc))
 
         first_ring = MathTex(
@@ -227,7 +233,8 @@ class CircularApertureRayleigh(Scene):
             "The only ways to improve resolution: use shorter λ, or larger aperture D.",
         ], font_size=26)
         rayleigh_desc.next_to(rayleigh, DOWN, buff=0.35)
-        for l in rayleigh_desc: self.play(FadeIn(l)); self.wait(2.0)
+        for l in rayleigh_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
 
         # Examples
@@ -275,7 +282,8 @@ class DiffractionGrating(Scene):
             "  (2) The N-slit interference term  (multi-beam interference)",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(16.0)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(16.0)
         self.wait(19.9); self.play(FadeOut(intro))
 
         # N-slit intensity formula

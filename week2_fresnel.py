@@ -37,7 +37,8 @@ class Week2Intro(Scene):
             "Together they completely describe electromagnetic wave behaviour at interfaces.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(8.8)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(8.8)
         self.wait(46.3); self.play(FadeOut(VGroup(title, intro)))
 
 
@@ -58,7 +59,8 @@ class FermatPrinciple(Scene):
             "the minimum-time path bends at the interface — this IS Snell's law.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(14.9)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(14.9)
         self.wait(41.4); self.play(FadeOut(intro))
 
         # Fermat → Snell derivation outline
@@ -93,7 +95,8 @@ class ReflectionRefraction(Scene):
             "The incident, reflected, and refracted rays all lie in one plane: the PLANE OF INCIDENCE.",
         ])
         setup.next_to(title, DOWN, buff=0.4)
-        for l in setup: self.play(FadeIn(l)); self.wait(23.7)
+        for l in setup: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(23.7)
         self.wait(13.8); self.play(FadeOut(setup))
 
         # Law of reflection
@@ -111,7 +114,8 @@ class ReflectionRefraction(Scene):
             "This holds for both specular (smooth surface) and can be derived from Maxwell.",
         ], font_size=26)
         refl_desc.next_to(refl, DOWN, buff=0.35)
-        for l in refl_desc: self.play(FadeIn(l)); self.wait(22.1)
+        for l in refl_desc: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(22.1)
         self.wait(9.4); self.play(FadeOut(VGroup(refl_title, refl, refl_desc)))
 
         # Snell's Law
@@ -143,7 +147,8 @@ class ReflectionRefraction(Scene):
             "if the front wheels hit the gravel first, the car turns toward the gravel.",
         ], font_size=26)
         intuition.next_to(title, DOWN, buff=0.45)
-        for l in intuition: self.play(FadeIn(l)); self.wait(2.0)
+        for l in intuition: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(intuition))
 
         # Worked example
@@ -190,7 +195,8 @@ class FresnelEquationsDerivation(Scene):
             "so they reflect and transmit with different amplitude ratios.",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(6.6)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(6.6)
         self.wait(50.2); self.play(FadeOut(VGroup(title, intro)))
 
 
@@ -270,7 +276,8 @@ class FresnelFullExample(Scene):
             "Find:   r_⊥, t_⊥, r_∥, t_∥  for both polarisations",
         ], font_size=28)
         given.next_to(title, DOWN, buff=0.4)
-        for l in given: self.play(FadeIn(l)); self.wait(7.7)
+        for l in given: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(7.7)
         self.wait(51.3)
 
         solver = StepSolver(self, given, start_buff=0.4)
@@ -312,7 +319,8 @@ class ReflectivityTransmissivity(Scene):
             "Reflectivity R and Transmissivity T  (Bennett Section 3.6).",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(12.7)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(12.7)
         self.wait(20.4); self.play(FadeOut(intro))
 
         eqs = eq_table([
@@ -342,7 +350,8 @@ class ReflectivityTransmissivity(Scene):
             "Check: R + T = 1 — if your answer doesn't satisfy this, you made an error.",
         ], font_size=26)
         why.next_to(why_title, DOWN, buff=0.35)
-        for l in why: self.play(FadeIn(l)); self.wait(2.0)
+        for l in why: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(why_title, why)))
 
         # Worked example
@@ -389,7 +398,8 @@ class BrewsterTIR(Scene):
             "produces zero reflection.",
         ], font_size=25)
         brew_intro.next_to(brew_title, DOWN, buff=0.3)
-        for l in brew_intro: self.play(FadeIn(l)); self.wait(11.6)
+        for l in brew_intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(11.6)
         self.wait(12.7); self.play(FadeOut(VGroup(brew_title, brew_intro)))
 
         brew_eq_title = Text("Brewster's Angle Formula  (Bennett Eq. 3.31):", font_size=30, color=GOLD)
@@ -409,7 +419,8 @@ class BrewsterTIR(Scene):
             "from horizontal surfaces which reflects near Brewster's angle).",
         ], font_size=26)
         brew_ex.next_to(brew, DOWN, buff=0.35)
-        for l in brew_ex: self.play(FadeIn(l)); self.wait(33.7)
+        for l in brew_ex: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(33.7)
         self.play(Create(gold_box(brew)))
         self.wait(2.0); self.play(FadeOut(VGroup(brew_eq_title, brew, brew_ex)))
 
@@ -425,7 +436,8 @@ class BrewsterTIR(Scene):
             "This is not an approximation — it follows exactly from Maxwell's equations.",
         ], font_size=26)
         tir_intro.next_to(tir_title, DOWN, buff=0.3)
-        for l in tir_intro: self.play(FadeIn(l)); self.wait(2.0)
+        for l in tir_intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(tir_intro))
 
         tir_eq_title = Text("Critical Angle Formula  (Bennett Eq. 3.35):", font_size=28, color=GOLD)
@@ -451,7 +463,8 @@ class BrewsterTIR(Scene):
             "(diamond has n=2.42, θ_c=24.4° — almost everything gets TIR'd back out).",
         ], font_size=25)
         tir_examples.next_to(tir_eqs, DOWN, buff=0.35)
-        for l in tir_examples: self.play(FadeIn(l)); self.wait(2.0)
+        for l in tir_examples: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
 
 
@@ -468,7 +481,8 @@ class MalusLaw(Scene):
             "If the incident polarisation makes angle θ with the transmission axis:",
         ])
         intro.next_to(title, DOWN, buff=0.4)
-        for l in intro: self.play(FadeIn(l)); self.wait(7.2)
+        for l in intro: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(7.2)
         self.wait(13.8); self.play(FadeOut(intro))
 
         malus = MathTex(r"I = I_0\cos^2\theta", font_size=64, color=INTENSITY_COLOR)
@@ -491,7 +505,8 @@ class MalusLaw(Scene):
             "Since intensity ∝ E² ∝ |E|² = (E₀cosθ)² = E₀²cos²θ = I₀cos²θ.",
         ], font_size=26)
         why.next_to(malus, DOWN, buff=0.45)
-        for l in why: self.play(FadeIn(l)); self.wait(2.0)
+        for l in why: self.play(FadeIn(l, shift=UP*0.1), run_time=0.4)
+        self.wait(2.0)
         self.wait(2.0); self.play(FadeOut(why))
 
         # Worked examples
