@@ -66,20 +66,60 @@ def make_title_card(week_str: str, topic_str: str, ref_str: str) -> VGroup:
 
 # ── Section intro ─────────────────────────────────────────────────────────────
 def section_intro(lines: list, font_size: int = 28) -> VGroup:
-    """Creates a text block that fits safely below a title on screen."""
-    # Auto-reduce font for long blocks
-    n = len([l for l in lines if l.strip()])
-    if n > 6:
-        font_size = min(font_size, 24)
-    if n > 9:
-        font_size = min(font_size, 20)
-    texts = [Text(line, font_size=font_size, color=WHITE) if line.strip()
-             else Text(" ", font_size=max(12, font_size//3)) for line in lines]
+    """
+    Creates a single-page text block from a list of strings.
+    MAXIMUM 4 non-empty lines. For more content use make_pages().
+    Empty strings create small vertical gaps.
+    """
+    texts = []
+    for line in lines:
+        if line.strip():
+            t = Text(line, font_size=font_size, color=WHITE)
+            safe_scale(t, max_width=13.0)
+            texts.append(t)
+        else:
+            texts.append(Text(" ", font_size=10))
     g = VGroup(*texts)
-    g.arrange(DOWN, aligned_edge=LEFT, buff=0.18)
-    # Hard limit: must fit in body area below title
-    safe_scale(g, max_width=12.5, max_height=4.2)
+    g.arrange(DOWN, aligned_edge=LEFT, buff=0.25)
+    safe_scale(g, max_width=13.0, max_height=4.0)
     return g
+
+
+def make_pages(scene, title_mob: Mobject, lines: list,
+               font_size: int = 28, wait: float = 8.0,
+               lines_per_page: int = 4):
+    """
+    Show a long list of text lines as multiple pages below title_mob.
+    Each page fades in, waits, then fades out before the next.
+    Empty strings in lines act as page breaks when encountered.
+    """
+    # Split lines into pages
+    pages = []
+    current = []
+    for line in lines:
+        if line == '':
+            if current:
+                pages.append(current)
+                current = []
+        else:
+            current.append(line)
+            if len(current) >= lines_per_page:
+                pages.append(current)
+                current = []
+    if current:
+        pages.append(current)
+
+    for page_lines in pages:
+        texts = [Text(l, font_size=font_size, color=WHITE) for l in page_lines]
+        for t in texts:
+            safe_scale(t, max_width=13.0)
+        block = VGroup(*texts)
+        block.arrange(DOWN, aligned_edge=LEFT, buff=0.28)
+        safe_scale(block, max_width=13.0, max_height=4.0)
+        block.next_to(title_mob, DOWN, buff=0.5)
+        scene.play(FadeIn(block))
+        scene.wait(wait)
+        scene.play(FadeOut(block))
 
 
 def show_pages(scene, title_mob, pages: list, font_size: int = 28):

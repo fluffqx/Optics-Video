@@ -9,26 +9,40 @@ class MaxwellIntro(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Maxwell's Equations", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(16.0)
+        self.play(Write(title))
+        self.wait(2)
 
-        intro = section_intro([
-            "Maxwell's equations are the four fundamental laws of classical electromagnetism.",
-            "Written down by James Clerk Maxwell in the 1860s, they unified electricity,",
-            "magnetism, and optics into a single coherent theoretical framework.",
-            "",
-            "From these four equations alone, Maxwell predicted electromagnetic waves",
-            "and computed their speed — getting exactly c = 2.998 × 10⁸ m/s.",
-            "This immediately identified light as an electromagnetic wave.",
-            "",
-            "Bennett (Chapter 2) builds up these equations from physical principles.",
-            "Understanding WHY each equation has its form is as important as knowing it.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(16.6)
-        self.wait(36.4); self.play(FadeOut(VGroup(title, intro)))
+        # Page 1 - 3 lines max, positioned absolutely
+        t1 = Text("Maxwell's equations are the four fundamental laws of classical electromagnetism.", font_size=28, color=WHITE)
+        t2 = Text("Written down by James Clerk Maxwell in the 1860s, they unified electricity,", font_size=28, color=WHITE)
+        t3 = Text("magnetism, and optics into a single coherent theoretical framework.", font_size=28, color=WHITE)
+        safe_scale(t1, max_width=13.0); safe_scale(t2, max_width=13.0); safe_scale(t3, max_width=13.0)
+        p1 = VGroup(t1, t2, t3).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
+        p1.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(p1))
+        self.wait(16)
+        self.play(FadeOut(p1))
 
+        # Page 2 - 3 lines max
+        t4 = Text("From these four equations alone, Maxwell predicted electromagnetic waves", font_size=28, color=WHITE)
+        t5 = Text("and computed their speed, getting exactly c = 2.998 x 10^8 m/s.", font_size=28, color=WHITE)
+        t6 = Text("This immediately identified light as an electromagnetic wave.", font_size=28, color=WHITE)
+        safe_scale(t4, max_width=13.0); safe_scale(t5, max_width=13.0); safe_scale(t6, max_width=13.0)
+        p2 = VGroup(t4, t5, t6).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
+        p2.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(p2))
+        self.wait(16)
+        self.play(FadeOut(p2))
 
+        # Page 3 - 2 lines
+        t7 = Text("Bennett (Chapter 2) builds up these equations from physical principles.", font_size=28, color=WHITE)
+        t8 = Text("Understanding WHY each equation has its form is as important as knowing it.", font_size=28, color=WHITE)
+        safe_scale(t7, max_width=13.0); safe_scale(t8, max_width=13.0)
+        p3 = VGroup(t7, t8).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
+        p3.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(p3))
+        self.wait(16)
+        self.play(FadeOut(VGroup(title, p3)))
 class VectorCalculusNotation(Scene):
     """Brief explanation of ∇· and ∇× before Maxwell equations"""
     def construct(self):
@@ -426,7 +440,7 @@ class RadiationPressure(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Light carries MOMENTUM as well as energy. This leads to radiation pressure.",
             "Bennett Section 2.3.2 derives this from electromagnetic energy density.",
             "The momentum density of an EM wave: g = S/c²  [kg/(m²·s)]",
@@ -435,7 +449,7 @@ class RadiationPressure(Scene):
             "For an ABSORBING surface (all light absorbed): radiation pressure = I/c",
             "For a REFLECTING surface (all light reflected): pressure = 2I/c",
             "   (factor of 2 because momentum REVERSES — like a ball bouncing off a wall)",
-        ])
+        ], font_size=28, wait=14.3, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(10.5)
@@ -498,7 +512,7 @@ class DispersionScene(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Dispersion: the refractive index n depends on the frequency of light.",
             "Different colours travel at different speeds in a material.",
             "This is why a prism splits white light into a rainbow.",
@@ -507,7 +521,7 @@ class DispersionScene(Scene):
             "Electrons in atoms behave like harmonic oscillators with natural frequencies ω_j.",
             "When light at frequency ω drives these oscillators, the phase response",
             "depends on how close ω is to the resonance frequency ω_j.",
-        ])
+        ], font_size=28, wait=16.9, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(12.7)

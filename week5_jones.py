@@ -22,7 +22,7 @@ class PolarisationStatesScene(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "For a plane wave propagating in the z-direction, E⃗ lies in the x-y plane.",
             "The DIRECTION in which E⃗ oscillates defines the polarisation state.",
             "Human eyes cannot distinguish polarisation — we need special detectors.",
@@ -31,7 +31,7 @@ class PolarisationStatesScene(Scene):
             "LINEAR: E⃗ oscillates along a fixed direction in the x-y plane.",
             "CIRCULAR: the tip of E⃗ traces a circle as the wave passes (equal amplitudes, 90° phase shift).",
             "ELLIPTICAL: the general case — tip of E⃗ traces an ellipse (unequal amplitudes or arbitrary phase).",
-        ])
+        ], font_size=28, wait=20.9, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(16.0)
@@ -93,7 +93,7 @@ class BirefringenceWavePlates(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Birefringent crystals (quartz, calcite, LiNbO₃) have TWO different",
             "refractive indices for two perpendicular polarisation directions.",
             "",
@@ -103,7 +103,7 @@ class BirefringenceWavePlates(Scene):
             "",
             "A slab of birefringent material of thickness d introduces a phase difference",
             "Δφ between the two polarisation components — this is a WAVE PLATE.",
-        ])
+        ], font_size=28, wait=14.3, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(11.0)
@@ -176,14 +176,14 @@ class JonesFormalism(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "The Jones vector is a compact 2-component complex vector that fully",
             "specifies the polarisation state of a monochromatic plane wave.",
             "It encodes BOTH the amplitude AND phase of E_x and E_y.",
             "",
             "Convention: the e^{i(kz−ωt)} propagation factor is IMPLICIT — not written.",
             "Normalised Jones vectors have unit magnitude: |E̊|² = 1.",
-        ])
+        ], font_size=28, wait=22.6, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(18.8)
@@ -230,13 +230,13 @@ class JonesMatrices(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Each optical element is represented by a 2×2 Jones matrix J.",
             "Output vector = J × Input vector:  Ẽ_out = J · Ẽ_in",
             "For a sequence of N elements, multiply RIGHT-TO-LEFT:",
             "Ẽ_out = J_N · ... · J_2 · J_1 · Ẽ_in",
             "Transmitted intensity (when input is normalised): I_out = |Ẽ_out|²",
-        ])
+        ], font_size=28, wait=13.2, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(14.9)

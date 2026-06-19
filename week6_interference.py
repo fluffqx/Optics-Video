@@ -22,7 +22,7 @@ class InterferenceIntroScene(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Interference is the key phenomenon that proves light is a WAVE.",
             "It occurs when two or more coherent waves overlap in the same region of space.",
             "",
@@ -37,7 +37,7 @@ class InterferenceIntroScene(Scene):
             "they must have a stable, well-defined phase relationship.",
             "Two separate light bulbs are incoherent (random phase fluctuations every ~10⁻⁸ s).",
             "Two slits illuminated by the same source are coherent (same source).",
-        ])
+        ], font_size=28, wait=21.7, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(18.2)
@@ -224,7 +224,7 @@ class ThinFilmInterference(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "A thin transparent film (soap bubble, oil on water, AR coating)",
             "reflects light at BOTH surfaces. The two reflected beams interfere.",
             "",
@@ -234,7 +234,7 @@ class ThinFilmInterference(Scene):
             "",
             "CRITICAL RULE: +π phase shift (equivalent to +λ/2 extra path) occurs",
             "WHENEVER light reflects off a surface where n_reflected > n_incident.",
-        ])
+        ], font_size=28, wait=20.4, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(16.0)
@@ -374,7 +374,7 @@ class MichelsonScene(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "The Michelson interferometer (1881) is one of the most important",
             "instruments in the history of physics — it famously FAILED to detect",
             "the luminiferous aether, directly leading to special relativity.",
@@ -383,7 +383,7 @@ class MichelsonScene(Scene):
             "Each arm reflects off a mirror and returns to the beamsplitter.",
             "The two beams recombine and interfere on a screen or detector.",
             "Moving mirror M₂ by ΔL changes the OPD by 2ΔL (beam travels arm twice).",
-        ])
+        ], font_size=28, wait=16.0, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(22.1)

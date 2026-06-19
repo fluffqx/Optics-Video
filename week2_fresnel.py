@@ -22,7 +22,7 @@ class Week2Intro(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Reflection and refraction occur whenever light enters a new medium",
             "where the refractive index n changes value  (Bennett Section 3.2).",
             "",
@@ -35,7 +35,7 @@ class Week2Intro(Scene):
             "Snell's law was discovered experimentally in the 1600s.",
             "The Fresnel equations were derived from Maxwell in the 1800s.",
             "Together they completely describe electromagnetic wave behaviour at interfaces.",
-        ])
+        ], font_size=28, wait=18.4, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(8.8)
@@ -49,20 +49,15 @@ class FermatPrinciple(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Before Maxwell, Fermat (1657) derived both the law of reflection AND Snell's",
             "law from a single elegant variational principle  (Bennett Section 3.2.1):",
             "",
-            "\"Light travels between two points along the path that takes the LEAST TIME.\"",
+            "",
             "",
             "Since time = distance / speed, and speed = c/n varies between media,",
             "the minimum-time path bends at the interface — this IS Snell's law.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(14.9)
-        self.wait(41.4)
-        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(intro))
+        ], font_size=28, wait=28.1, lines_per_page=4)
 
         # Fermat → Snell derivation outline
         deriv_title = Text("Fermat → Snell's Law  (Bennett Example 3.2.1):", font_size=30, color=GOLD)
@@ -139,19 +134,14 @@ class ReflectionRefraction(Scene):
         self.wait(14.9); self.play(FadeOut(VGroup(snell_title, snell, snell_sym)))
 
         # Physical intuition
-        intuition = section_intro([
+        make_pages(self, title, [
             "Physical intuition: when n_t > n_i (going INTO denser medium),",
             "the light SLOWS DOWN and bends TOWARD the normal (θ_t < θ_i).",
             "When n_t < n_i (going INTO less dense medium),",
             "the light SPEEDS UP and bends AWAY from the normal (θ_t > θ_i).",
             "This is directly analogous to how a car slows down on gravel —",
             "if the front wheels hit the gravel first, the car turns toward the gravel.",
-        ], font_size=26)
-        intuition.next_to(title, DOWN, buff=0.45)
-        self.play(FadeIn(intuition))
-        self.wait(2.0)
-        self.wait(2.0)
-        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(intuition))
+        ], font_size=28, wait=2.0, lines_per_page=4)
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), θ_i = 40°", font_size=30, color=GOLD)
@@ -181,7 +171,7 @@ class FresnelEquationsDerivation(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Bennett Section 3.3 derives the Fresnel equations from Maxwell's equations",
             "using boundary conditions at the interface.",
             "",
@@ -195,7 +185,7 @@ class FresnelEquationsDerivation(Scene):
             "",
             "These two components experience DIFFERENT boundary conditions,",
             "so they reflect and transmit with different amplitude ratios.",
-        ])
+        ], font_size=28, wait=18.9, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(6.6)
@@ -345,18 +335,13 @@ class ReflectivityTransmissivity(Scene):
         why_title.next_to(title, DOWN, buff=0.5)
         self.play(Write(why_title))
 
-        why = section_intro([
+        make_pages(self, title, [
             "The transmitted beam travels in a different medium (different n) at a different",
             "angle — so the beam cross-section changes at the interface.",
             "The factor n_t cos(θ_t) / n_i cos(θ_i) corrects for this geometric effect.",
             "When this factor > 1: more energy per unit area is transmitted than you'd expect.",
             "Check: R + T = 1 — if your answer doesn't satisfy this, you made an error.",
-        ], font_size=26)
-        why.next_to(why_title, DOWN, buff=0.35)
-        self.play(FadeIn(why))
-        self.wait(2.0)
-        self.wait(2.0)
-        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(why_title, why)))
+        ], font_size=28, wait=2.0, lines_per_page=4)
 
         # Worked example
         ex_title = Text("Example: air→glass n=1.5, normal incidence", font_size=30, color=GOLD)
@@ -391,7 +376,7 @@ class BrewsterTIR(Scene):
         brew_title.next_to(title, DOWN, buff=0.5)
         self.play(Write(brew_title))
 
-        brew_intro = section_intro([
+        make_pages(self, title, [
             "At one specific angle of incidence — Brewster's angle θ_B — the p-polarisation",
             "has ZERO reflectivity: R_∥ = 0.  The reflected beam is then purely s-polarised.",
             "",
@@ -400,7 +385,7 @@ class BrewsterTIR(Scene):
             "The oscillating dipoles in the material cannot radiate in their oscillation",
             "direction — so p-polarisation (which oscillates along the reflected ray direction)",
             "produces zero reflection.",
-        ], font_size=25)
+        ], font_size=28, wait=12.1, lines_per_page=4)
         brew_intro.next_to(brew_title, DOWN, buff=0.3)
         self.play(FadeIn(brew_intro))
         self.wait(11.6)
@@ -414,14 +399,14 @@ class BrewsterTIR(Scene):
         brew.next_to(brew_eq_title, DOWN, buff=0.3)
         self.play(Write(brew)); self.wait(20.4)
 
-        brew_ex = section_intro([
+        make_pages(self, title, [
             "Example: air (n=1.0) → glass (n=1.5):",
             "θ_B = arctan(1.5/1.0) = arctan(1.5) = 56.3°",
             "",
             "Applications: polarising beamsplitters, laser Brewster windows,",
             "anti-glare sunglasses (polarised lenses block the s-polarised glare",
             "from horizontal surfaces which reflects near Brewster's angle).",
-        ], font_size=26)
+        ], font_size=28, wait=17.9, lines_per_page=4)
         brew_ex.next_to(brew, DOWN, buff=0.35)
         self.play(FadeIn(brew_ex))
         self.wait(33.7)

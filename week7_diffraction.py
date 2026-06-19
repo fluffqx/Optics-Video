@@ -22,22 +22,23 @@ class HuygensPrinciple(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "Bennett opens Chapter 8 with a beautiful insight:",
-            "\"In a sense, diffraction is interference done correctly.\"",
+            "In a sense, diffraction is interference done correctly.",
             "",
-            "In Young's experiment, TWO discrete slits interfered.",
+            "In Youngs experiment, TWO discrete slits interfered.",
             "Diffraction generalises this: an ENTIRE APERTURE acts as infinitely many",
-            "point sources, each emitting secondary wavelets — Huygens' Principle:",
+            "point sources, each emitting secondary wavelets.",
             "",
-            "\"Each point on a wavefront acts as a source of secondary spherical wavelets.",
-            " The new wavefront is the envelope of all these secondary wavelets.\"",
+            "Each point on a wavefront acts as a source of secondary spherical wavelets.",
+            "The new wavefront is the envelope of all these secondary wavelets.",
             "",
             "For an obstructed wavefront (aperture or slit), only the wavelets from",
             "the open area contribute — their interference produces the diffraction pattern.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
+        ], font_size=28, wait=12, lines_per_page=4)
+        # (make_pages handles FadeIn/FadeOut internally)
+        if False:  # placeholder so subsequent code still works
+            intro = None
         self.wait(9.9)
         self.wait(24.3); self.play(FadeOut(intro))
 

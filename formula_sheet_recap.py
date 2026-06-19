@@ -194,7 +194,7 @@ class MidtermPrepScene(Scene):
         tips_title.to_edge(UP)
         self.play(Write(tips_title))
 
-        tips = section_intro([
+        make_pages(self, title, [
             "1.  Formula sheet is provided — focus on KNOWING HOW TO USE it, not memorisation.",
             "2.  Always draw a ray diagram first for geometric optics problems.",
             "3.  Sign conventions: get them wrong once, lose the whole question.",
@@ -205,7 +205,7 @@ class MidtermPrepScene(Scene):
             "8.  For thin film: count reflection phase shifts at EACH surface separately.",
             "9.  Matrix optics: multiply RIGHT-TO-LEFT (first element on the right).",
             "10. Check: R + T = 1 as a sanity check on Fresnel results.",
-        ], font_size=26)
+        ], font_size=28, wait=17.1, lines_per_page=4)
         tips.next_to(tips_title, DOWN, buff=0.35)
 
         for tip in tips:

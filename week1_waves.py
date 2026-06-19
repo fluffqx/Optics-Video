@@ -459,13 +459,13 @@ class ComplexRepresentation(Scene):
         safe_scale(rule, max_width=13.0)
         self.play(Write(rule)); self.wait(18.8)
 
-        why = section_intro([
+        make_pages(self, title, [
             "Why is this better?",
             "→ Multiplying complex exponentials: e^(ia) · e^(ib) = e^(i(a+b))  — trivial!",
             "→ Adding two waves: just add the complex numbers directly.",
             "→ Computing intensity: |Ψ̃|² = Ψ̃·Ψ̃* = A²  — always real, always positive.",
             "→ No more cos² integrals — the algebra is vastly simpler.",
-        ], font_size=25)
+        ], font_size=28, wait=2.0, lines_per_page=4)
         why.next_to(rule, DOWN, buff=0.35)
         self.play(FadeIn(why))
         self.wait(2.0)

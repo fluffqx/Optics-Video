@@ -22,7 +22,7 @@ class MultiBeamIntro(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "In Young's experiment and the Michelson interferometer, exactly TWO beams",
             "interfere. The Fabry-Pérot uses an INFINITE SERIES of beams.",
             "",
@@ -33,7 +33,7 @@ class MultiBeamIntro(Scene):
             "",
             "Bennett Section 7.10 sums this infinite geometric series (Eq. 7.85).",
             "The result is the AIRY FUNCTION — one of the most important results in optics.",
-        ])
+        ], font_size=28, wait=56.0, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(18.8)
@@ -76,13 +76,13 @@ class AiryFunction(Scene):
         res_title.next_to(airy, DOWN, buff=0.4)
         self.play(Write(res_title))
 
-        res = section_intro([
+        make_pages(self, title, [
             "When δ/2 = Nπ (i.e. δ = 2Nπ): sin²(δ/2) = 0  →  I_t = I₀",
             "100% transmission even with highly reflective mirrors!",
             "This happens when the round-trip phase is a multiple of 2π.",
             "Physical picture: all the multiply-reflected beams add up constructively.",
             "The field builds up inside the cavity to a very large amplitude.",
-        ], font_size=26)
+        ], font_size=28, wait=8.4, lines_per_page=4)
         res.next_to(res_title, DOWN, buff=0.3)
         self.play(FadeIn(res))
         self.wait(14.9)
@@ -128,13 +128,13 @@ class FinesseResolving(Scene):
         phys_title.next_to(title, DOWN, buff=0.5)
         self.play(Write(phys_title))
 
-        phys = section_intro([
+        make_pages(self, title, [
             "Script-F is the number of times a photon bounces back and forth before leaking out.",
             "High finesse → very sharp transmission peaks → high spectral resolution.",
             "High finesse also means: large field buildup inside the cavity — important for lasers.",
             "For R=99%: F = 4×0.99/(0.01)² = 39600, finesse = π√39600/2 ≈ 312.",
             "The peaks are 312× narrower than the spacing between them!",
-        ], font_size=26)
+        ], font_size=28, wait=30.9, lines_per_page=4)
         phys.next_to(phys_title, DOWN, buff=0.35)
         self.play(FadeIn(phys))
         self.wait(21.5)
@@ -192,7 +192,7 @@ class CoherenceLength(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
+        make_pages(self, title, [
             "A Fabry-Pérot interferometer only works if the light source has sufficient",
             "TEMPORAL COHERENCE — the coherence length must exceed the cavity round trip.",
             "",
@@ -200,7 +200,7 @@ class CoherenceLength(Scene):
             "A narrow spectral linewidth Δν corresponds to a long coherence length l_c.",
             "Intuitively: a perfectly monochromatic wave (Δν=0) has infinite coherence length",
             "— it is coherent with a copy of itself no matter how much you delay it.",
-        ])
+        ], font_size=28, wait=19.9, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(13.2)
