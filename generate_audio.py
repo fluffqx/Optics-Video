@@ -203,7 +203,10 @@ def merge_all():
             continue
 
         if not aud.exists():
-            # No audio — just copy the video as-is
+            if out.exists():
+                print(f"  SKIP  {scene:<38} — already copied (no audio)")
+                skipped += 1
+                continue
             subprocess.run(
                 ["ffmpeg", "-y", "-i", str(vid), "-c", "copy", str(out)],
                 capture_output=True)
@@ -211,6 +214,10 @@ def merge_all():
             skipped += 1
             continue
 
+        if out.exists():
+            print(f"  SKIP  {scene:<38} — already merged")
+            merged += 1
+            continue
         print(f"  MERGE {scene:<38} ...", end="", flush=True)
         result = subprocess.run([
             "ffmpeg", "-y",
