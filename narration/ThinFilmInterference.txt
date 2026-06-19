@@ -1,0 +1,9 @@
+Thin film interference explains some of the most beautiful optical phenomena — the rainbow colours of soap bubbles, oil slicks on water, and the reflective coatings on camera lenses.
+
+The key is that a thin transparent film reflects light at both its top and bottom surfaces. These two reflected beams travel different path lengths and may have different reflection phase shifts. Their interference determines whether the film looks bright or dark at each wavelength.
+
+The total phase difference has two contributions. First, the path difference from the extra round trip inside the film, which gives a phase of four pi n-film times thickness times cosine theta-t, all divided by the vacuum wavelength. Second, any reflection phase shifts — remember that each reflection where light goes from lower to higher refractive index picks up a pi phase shift.
+
+Counting the reflection phase shifts carefully is the most common source of errors. Work through each surface systematically: does n increase or decrease? If it increases, add pi. If it decreases, add nothing.
+
+Anti-reflection coatings use this deliberately — a quarter-wavelength layer of the right index cancels the reflection completely at the design wavelength.

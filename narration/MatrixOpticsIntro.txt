@@ -1,0 +1,5 @@
+Matrix optics represents any optical system as a single 2 by 2 matrix. A ray is described by its height y above the optical axis and its angle theta with respect to the axis, written as a column vector.
+
+Each optical element maps the input ray vector to the output ray vector via matrix multiplication. For a sequence of N elements, we multiply the matrices from right to left — the first element the ray encounters goes on the rightmost position.
+
+This method is exact within the paraxial approximation and trivially handles arbitrarily complex systems. Computer-aided optical design tools use this formalism to trace millions of rays simultaneously.

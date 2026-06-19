@@ -1,0 +1,9 @@
+The Michelson interferometer is one of the most important instruments in the history of physics. Albert Michelson built the first version in 1881, specifically to detect the luminiferous aether — the hypothetical medium through which light was thought to travel.
+
+The experiment failed to detect the aether, and this null result was a crucial step toward special relativity.
+
+The setup is simple: a beamsplitter divides the input beam into two arms. Each arm reflects off a mirror and returns. The two beams recombine and interfere. Moving one mirror by a distance delta-L changes the optical path difference by two times delta-L — factor of two because the beam travels the arm twice.
+
+Each time the mirror moves by half a wavelength, the fringes go through one complete cycle. So counting fringes gives an extraordinarily precise measurement of mirror displacement.
+
+The resolving power equals two L over lambda, where L is the total mirror travel. For a laser with a long coherence length, L can be metres, giving resolving powers in the millions. This is why Michelson interferometers are used to detect gravitational waves — the LIGO detectors are essentially Michelson interferometers with arm lengths of four kilometres.

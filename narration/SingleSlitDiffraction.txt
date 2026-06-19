@@ -1,0 +1,9 @@
+The single-slit diffraction pattern is the starting point for understanding all diffraction phenomena. Bennett derives it carefully in Section 8.3.1 using the Fraunhofer diffraction integral — integrating the Huygens contributions from every point across the slit width.
+
+The result is the sinc-squared function: intensity equals I-naught times sine beta over beta, squared. The parameter beta equals pi b sine theta over lambda, where b is the slit width and theta is the diffraction angle.
+
+The central maximum is at theta equals zero, where sine beta over beta approaches one by L'Hopital's rule. It is the tallest and widest feature in the pattern.
+
+Dark minima occur wherever beta equals m pi — that is, wherever b sine theta equals m lambda for integer m not equal to zero. This has a beautiful physical interpretation: at these angles, the contributions from the top and bottom halves of the slit cancel exactly.
+
+The key physical insight is the narrower the slit, the wider the diffraction pattern. This is the uncertainty principle in action — confining the wave in space forces it to spread out in angle.

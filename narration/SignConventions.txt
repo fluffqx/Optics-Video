@@ -1,0 +1,9 @@
+Sign conventions in geometric optics are where most mistakes happen. Get them wrong and you get the wrong answer every time.
+
+The rules: all distances are measured from the optical element — the lens, mirror, or surface. Object distance s_o is positive for a real object on the incoming side. Image distance s_i is positive for a real image on the outgoing side.
+
+For mirrors: concave has R greater than zero, convex has R less than zero. For lenses: converging has f greater than zero, diverging has f less than zero.
+
+Magnification m equals minus s_i over s_o. Negative m means inverted image. Magnitude greater than 1 means the image is larger than the object.
+
+Draw the ray diagram first — it tells you the signs before you calculate.

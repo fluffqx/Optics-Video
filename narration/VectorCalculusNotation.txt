@@ -1,0 +1,7 @@
+Before writing Maxwell's equations, we need three differential operators.
+
+The divergence of a vector field F — written nabla dot F — measures how much the field spreads outward from a point. Positive divergence means field lines radiate outward like a source. Zero divergence means no sources or sinks.
+
+The curl of F — nabla cross F — measures how much the field rotates around a point. Imagine placing a small paddle wheel in the field — if it spins, the curl is nonzero.
+
+The Laplacian — nabla squared — is the three-dimensional second derivative. It appears in the wave equation for electromagnetic fields in three dimensions.

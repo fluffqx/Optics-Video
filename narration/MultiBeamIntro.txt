@@ -1,0 +1,9 @@
+In the Michelson interferometer and Young's double slit, exactly two beams interfere. The Fabry-Pérot takes this much further by using an infinite series of beams — all the multiply-reflected beams between two parallel mirrors.
+
+The setup is two flat, partially-reflecting parallel mirrors separated by distance d. Light enters through the first mirror and bounces back and forth. At each bounce, a fraction T of the power transmits out. So there's a first transmitted beam, then a second weaker one after two reflections, then a third after four reflections, and so on forever.
+
+Bennett sums this infinite geometric series in Section 7.10. The key mathematical identity is that the sum of x to the n equals 1 over 1 minus x, for x less than 1.
+
+The result depends critically on the phase relationship between successive beams. If all beams are in phase — constructive interference — the transmitted field is enormously amplified. If they are out of phase, they cancel.
+
+This is fundamentally different from two-beam interference. With two beams, you get a smooth cosine pattern. With infinitely many beams, you get very sharp transmission spikes at resonance and nearly zero transmission everywhere else. The more reflective the mirrors, the sharper the spikes.

@@ -1,0 +1,5 @@
+The superposition principle is the mathematical foundation of all interference and diffraction phenomena.
+
+Because the wave equation is linear, any sum of solutions is also a solution. If wave 1 and wave 2 each satisfy the wave equation independently, then wave 1 plus wave 2 is automatically also a valid wave. The proof simply adds the two equations together.
+
+This means two laser beams can cross in space and their electric fields simply add — they don't interact, scatter, or change each other. This is what makes optical computing and holography possible.

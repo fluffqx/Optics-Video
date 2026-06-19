@@ -1,0 +1,7 @@
+The beam expander is a classic matrix optics example. Two lenses with focal lengths f_1 and f_2, separated by d equals f_1 plus f_2.
+
+We multiply three matrices: the second lens, the free-space propagation, and the first lens — in that order from left to right.
+
+The resulting system matrix has zeros in the off-diagonal positions of the C element, confirming it is afocal. The beam magnification is the ratio f_2 over f_1. A parallel input beam emerges as a parallel output beam, expanded by this factor.
+
+This is used in laser beam expanders, Galilean telescopes, and spatial light modulators where a collimated beam of a specific diameter is required.

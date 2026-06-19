@@ -1,0 +1,5 @@
+Let's work through a complete numerical example using a green laser pointer at 532 nanometres.
+
+The wave number k equals 2 pi divided by the wavelength, giving 1.18 times 10 to the 7 radians per metre. The frequency f equals c divided by lambda, giving 5.64 times 10 to the 14 hertz — 564 terahertz. The angular frequency omega is 2 pi times f, giving 3.54 times 10 to the 15 radians per second. And the period T is just 1 over f, giving 1.77 femtoseconds.
+
+These numbers give you a feel for how incredibly fast optical oscillations are — nearly a quadrillion cycles per second.

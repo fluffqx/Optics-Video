@@ -1,0 +1,9 @@
+There are four elementary ray transfer matrices.
+
+The translation matrix for free propagation over distance d has ones on the diagonal and d in the upper right. The height increases by d times theta while the angle is unchanged.
+
+The thin lens matrix has minus one over f in the lower left. The lens changes the angle but not the height of a ray passing through it.
+
+The refraction matrix at a spherical surface accounts for the angle change from Snell's law and the ratio of refractive indices.
+
+The mirror matrix looks identical to the thin lens matrix with minus two over R in the lower left — equivalent to a thin lens with focal length R over 2.

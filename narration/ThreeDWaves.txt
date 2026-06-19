@@ -1,0 +1,5 @@
+Extending from one dimension to three dimensions, a plane wave is written as A times e to the power of i times k-vector dot r-vector minus omega t. The wave vector k-vector points in the direction of propagation, and its magnitude is the wave number k.
+
+The wavefronts — surfaces of constant phase — are flat planes perpendicular to k-vector. Hence the name plane wave.
+
+A spherical wave from a point source has the form A over r times e to the i kr minus omega t. The amplitude falls off as 1 over r, which is required by energy conservation: as the wavefront expands over a larger sphere, the intensity must decrease as 1 over r squared.

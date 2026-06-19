@@ -1,0 +1,5 @@
+Geometric optics applies when the wavelength of light is much smaller than the optical elements it encounters. In this limit, we can ignore diffraction entirely and treat light as rays — straight lines that carry energy in a specific direction.
+
+The paraxial approximation further simplifies things: for rays that stay close to and nearly parallel to the optical axis, sine theta is approximately equal to theta in radians. This linearises all the equations, making analytic solutions possible.
+
+Geometric optics describes lenses, mirrors, telescopes, microscopes, cameras, the human eye, and optical fibres — an enormous range of practical applications built on remarkably simple equations.

@@ -1,0 +1,7 @@
+Fringe visibility — also called fringe contrast — quantifies how sharp the interference fringes are.
+
+The visibility V is defined as I_max minus I_min, divided by I_max plus I_min. Perfect fringes give V equals 1. No fringes at all give V equals 0.
+
+For two beams of equal intensity from a perfectly coherent source, V equals 1. If the intensities are unequal, V is less than 1 even with perfect coherence — the dark fringes are not completely dark.
+
+Visibility can also degrade due to spatial or temporal incoherence. Measuring visibility as a function of path difference is how we characterise the coherence length of a source.

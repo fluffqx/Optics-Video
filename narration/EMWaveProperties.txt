@@ -1,0 +1,11 @@
+The plane wave solutions to Maxwell's equations have five remarkable properties, all provable directly from the equations.
+
+First, they are transverse: both E and B are perpendicular to the propagation direction k-vector. This follows from the zero-divergence conditions.
+
+Second, E and B are perpendicular to each other. The cross product E cross B points in the direction of k.
+
+Third, their magnitudes are related by E equals c times B in vacuum.
+
+Fourth, E and B oscillate in phase — they reach their maxima and minima simultaneously.
+
+Fifth, in a material with refractive index n, the wave speed becomes c over n, and E equals v times B where v is the local wave speed.

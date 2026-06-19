@@ -1,0 +1,5 @@
+In vacuum with no charges and no currents, Maxwell's equations simplify to their most elegant form.
+
+The divergence of E equals zero — no sources. The divergence of B equals zero — no magnetic monopoles. The curl of E equals minus the time derivative of B — Faraday's law. And the curl of B equals epsilon naught mu naught times the time derivative of E — the Ampere-Maxwell law.
+
+These four equations couple E and B together through their time derivatives. A changing E creates a curling B, and a changing B creates a curling E. This mutual regeneration is precisely what allows electromagnetic waves to propagate through empty space indefinitely.

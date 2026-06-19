@@ -1,0 +1,7 @@
+Two-beam interference is the foundation of all interferometry. When two coherent beams overlap, the total intensity is not simply the sum of the individual intensities — there is an extra interference term.
+
+The general formula is I equals I-one plus I-two plus two times the square root of I-one times I-two, times cosine delta. That extra cosine delta term is the new physics of wave optics. It can add up to four times I-naught when delta is zero, or cancel completely when delta is pi.
+
+The phase difference delta comes from two sources: the optical path difference — how much farther one beam travels — and any phase shifts that occur upon reflection. A reflection at a surface where the refractive index increases gives a pi phase shift, equivalent to half a wavelength of extra path.
+
+When both beams have equal intensity I-naught, the pattern simplifies to four I-naught cosine squared of delta over two. The maximum is four times the single-beam intensity — this is where the energy redistribution comes from. Dark fringes have zero intensity, compensated by the brighter maxima.

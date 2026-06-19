@@ -1,0 +1,13 @@
+Three quantities characterise the performance of a Fabry-Pérot interferometer: the finesse, the resolving power, and the free spectral range.
+
+The finesse — written as a script F — is the ratio of the free spectral range to the full width at half maximum of a transmission peak. It equals pi times square root of R, divided by one minus R. For R equals 99 percent, the finesse is about 312. This means the transmission peaks are 312 times narrower than the spacing between them.
+
+Physically, the finesse equals the average number of times a photon bounces back and forth before leaking out through a mirror. Higher reflectivity means more bounces, narrower peaks, higher finesse.
+
+The order number N equals 2nd divided by lambda — the number of half-wavelengths that fit in the cavity.
+
+The resolving power equals N times the finesse. This can be enormous — a cavity of 10 centimetres at 633 nanometres has N equal to about 316,000. Multiplied by a finesse of 312, the resolving power exceeds 98 million.
+
+The free spectral range in wavelength is lambda squared over 2nd. It tells you the range of wavelengths you can measure unambiguously — adjacent resonance orders must not overlap your spectrum.
+
+Note carefully: the coefficient of finesse F and the finesse script-F are different quantities. The coefficient is 4R over one minus R squared. The finesse is pi root R over one minus R. Don't confuse them — it's a standard notation trap.

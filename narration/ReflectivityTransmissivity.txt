@@ -1,0 +1,7 @@
+The Fresnel coefficients r and t give amplitude ratios. To find the fraction of energy, we need the reflectivity R and transmissivity T.
+
+Reflectivity is simply the square of the amplitude reflection coefficient: R equals r squared. At normal incidence from air to glass with n equals 1.5, R equals 4 percent. This is why glass surfaces look slightly shiny.
+
+Transmissivity T is not simply t squared — we also need to account for the change in beam cross-section and refractive index: T equals n_t cos theta_t over n_i cos theta_i, times t squared.
+
+Energy conservation demands R plus T equals one. This is a useful sanity check: if your answer doesn't satisfy it, you made an error.

@@ -1,0 +1,5 @@
+When two lenses are used in sequence, the image formed by the first lens becomes the object for the second lens. Apply the thin lens equation sequentially.
+
+For two thin lenses separated by distance d, the effective focal length satisfies: one over f_eff equals one over f_1 plus one over f_2 minus d over f_1 f_2.
+
+When the lenses are in contact — d approaches zero — this simplifies to: the powers add. P_eff equals P_1 plus P_2. This is why opticians measure lens power in dioptres and simply add them.

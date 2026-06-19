@@ -1,0 +1,5 @@
+Spherical mirrors obey the mirror equation: one over s_o plus one over s_i equals two over R, which also equals one over the focal length f_m.
+
+The focal length of a mirror is half the radius of curvature: f_m equals R over 2. For a concave mirror with R positive, the focal length is positive and parallel rays converge to a real focus in front of the mirror.
+
+The magnification is minus s_i over s_o — same formula as for lenses. A concave mirror with an object beyond the focal point gives an inverted, real image. An object inside the focal point gives an upright, virtual, magnified image — exactly as in a shaving mirror.

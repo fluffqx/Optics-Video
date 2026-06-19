@@ -1,0 +1,9 @@
+Let's go through a complete Fresnel calculation for air to glass at 40 degrees.
+
+Step 1: use Snell's law to find the refraction angle. Sin of theta_t equals 1.0 over 1.5 times sin 40, giving theta_t equals 25.37 degrees.
+
+Step 2: compute the cosines. Cosine 40 is 0.766, cosine 25.37 is 0.9036.
+
+Step 3: plug into the Fresnel equations for r_perp and r_parallel. We get minus 0.278 for s-polarisation and plus 0.119 for p-polarisation. The negative sign on r_perp means a phase flip upon reflection.
+
+The p-polarisation reflects significantly less than s at this angle — this difference grows with angle and reaches zero at Brewster's angle.

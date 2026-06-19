@@ -1,0 +1,21 @@
+Let's collect all the Fabry-Pérot formulas in one place.
+
+The Airy function: I-t equals I-naught divided by one plus F sine squared of delta over 2. This is the transmitted intensity as a function of round-trip phase.
+
+The coefficient of finesse F equals 4R over one minus R squared.
+
+The finesse script-F equals pi root R over one minus R.
+
+The round-trip phase delta equals 4 pi n d cosine theta over lambda-naught.
+
+The order number N equals 2nd over lambda-naught.
+
+The resolving power equals N times the finesse.
+
+The free spectral range in wavelength equals lambda-naught squared over 2nd.
+
+The free spectral range in frequency equals c over 2nd — this is the cavity mode spacing.
+
+And the coherence length of the light source must exceed 2nd for fringes to be visible.
+
+These formulas describe the most powerful spectroscopic instrument based on interference. Study them carefully — the Fabry-Pérot almost always appears on the final exam.

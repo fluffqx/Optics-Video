@@ -1,0 +1,5 @@
+Polarisation describes the direction in which the electric field oscillates as a wave propagates. For a wave travelling in the z-direction, E can point anywhere in the x-y plane.
+
+Linear polarisation means E always oscillates along a fixed direction. Circular polarisation means the tip of E traces a circle — this requires equal amplitudes in x and y, with a 90-degree phase difference between them. The general case is elliptical polarisation, where E traces an ellipse.
+
+Our eyes cannot detect polarisation directly. But polarising filters, wave plates, and birefringent materials interact strongly with it, making polarisation one of the most practically exploited properties of light.

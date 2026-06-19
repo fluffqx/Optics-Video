@@ -1,0 +1,5 @@
+A single curved interface between two media refracts light according to the spherical surface equation: n_m over s_o plus n_i over s_i equals n_i minus n_m over R.
+
+This is derived by applying Snell's law in the paraxial approximation to a ray hitting a spherical surface. It is the building block from which the thin lens equations are derived by applying this formula twice — once for each surface of the lens.
+
+The radius R is positive if the centre of curvature is to the right of the surface, and negative if it is to the left. Getting this sign right is essential.

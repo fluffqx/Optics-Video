@@ -1,0 +1,5 @@
+Week 2 focuses on what happens when light crosses a boundary between two different optical media.
+
+Every time light passes through a lens, bounces off a mirror, or travels through a window, it encounters an interface. The physics at that interface determines everything — how much light is reflected, how much is transmitted, and in which direction.
+
+We need to answer two questions. First, which direction? That is answered by the law of reflection and Snell's law. Second, how much? That is answered by the Fresnel equations — one of the most important sets of equations in all of optics.

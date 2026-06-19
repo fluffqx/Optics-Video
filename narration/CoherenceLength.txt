@@ -1,0 +1,9 @@
+The Fabry-Pérot interferometer only works if the light source has sufficient temporal coherence — the ability to interfere with a delayed copy of itself.
+
+Coherence length is related to spectral purity. A perfectly monochromatic wave — which doesn't exist in reality — would have infinite coherence length. Real sources have a spread of frequencies delta-nu, and their coherence length is approximately c divided by delta-nu, or equivalently lambda squared divided by delta-lambda.
+
+For the Fabry-Pérot to show fringes, the cavity round trip must be shorter than the coherence length. Otherwise, the beams from different round trips are no longer coherent with each other, and the interference averages out.
+
+The coherence length varies enormously between different light sources. White light from a thermal source has a coherence length of about 1 micrometre — too short for almost any interferometer. A sodium lamp filtered to one line has about half a millimetre. A stabilised helium-neon laser has hundreds of metres. Ultra-stable research lasers can have coherence lengths exceeding 300 kilometres.
+
+This is why gravitational wave detectors like LIGO use ultra-stable lasers — the 4-kilometre arms require the laser to be coherent over an 8-kilometre round trip.

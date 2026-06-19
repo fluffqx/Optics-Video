@@ -1,0 +1,7 @@
+Birefringent crystals have two different refractive indices for two perpendicular polarisation directions — the slow axis and the fast axis.
+
+A slab of birefringent material of thickness d introduces a phase difference delta phi between the two polarisation components, given by 2 pi over lambda naught times n_e minus n_o times d.
+
+A quarter-wave plate introduces a phase difference of pi over 2. Linear polarisation at 45 degrees to the fast axis is converted into circular polarisation. Going back through a second quarter-wave plate converts it back. This is used in optical isolators and CD players.
+
+A half-wave plate introduces a phase difference of pi. It rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis. Used in continuously variable power control of laser beams.

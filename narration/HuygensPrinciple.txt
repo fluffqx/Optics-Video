@@ -1,0 +1,9 @@
+Bennett opens Chapter 8 on diffraction with a profound statement: in a sense, diffraction is interference done correctly.
+
+In Young's double-slit experiment, we had two discrete point sources interfering. Huygens' principle generalises this: every point on a wavefront acts as a source of secondary spherical wavelets. The diffraction pattern is the interference sum of all these secondary sources across the entire aperture.
+
+When a wavefront encounters an aperture, only the wavelets from the open area contribute. Their superposition — with different path lengths to each observation point — produces the diffraction pattern.
+
+The Fraunhofer approximation applies when both the source and the observation point are effectively at infinity — meaning the illumination and diffracted waves are both plane waves. In practice, this is achieved with lenses. The Fraunhofer condition requires the distance r to satisfy r much greater than h squared over two lambda, where h is the aperture size.
+
+For a slit of width 0.1 millimetres illuminated at 500 nanometres and observed at 1 metre, the minimum Fraunhofer distance is only 1 centimetre — so 1 metre is well into the Fraunhofer regime.

@@ -1,0 +1,7 @@
+Here is how Maxwell derived the wave equation for light — arguably the most important derivation in the history of physics.
+
+Take the curl of Faraday's law. The left side becomes curl of curl of E, which by a vector identity equals the gradient of the divergence of E minus the Laplacian of E. Since the divergence of E is zero in vacuum, this simplifies to minus the Laplacian of E.
+
+The right side becomes minus the time derivative of the curl of B, which by Ampere's law equals minus mu naught epsilon naught times the second time derivative of E.
+
+Setting these equal gives the wave equation for E, with wave speed c equals 1 over the square root of mu naught epsilon naught. Plugging in the measured values of these constants gives exactly 3 times 10 to the 8 metres per second — the speed of light. Maxwell had proved that light is an electromagnetic wave.

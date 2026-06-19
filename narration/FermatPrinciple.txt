@@ -1,0 +1,7 @@
+Fermat's principle states that light travels between two points along the path that takes the least time. This was proposed in 1657, well before Maxwell's equations existed.
+
+For reflection, minimising the travel time with respect to the reflection point automatically gives the law of reflection — angle in equals angle out.
+
+For refraction, the same minimisation with two different wave speeds in the two media gives Snell's law — n_i sin theta_i equals n_t sin theta_t.
+
+This is a beautiful example of a variational principle — nature finding the optimal path. It also appears in quantum mechanics as Feynman's path integral formulation.

@@ -1,0 +1,5 @@
+Let's prove that the function psi equals x minus vt, all squared, actually satisfies the wave equation. This is Bennett Example 1.1.
+
+We take the second partial derivative with respect to x, and get 2. Then we take the second partial derivative with respect to t, and get 2v squared. Dividing by v squared gives exactly 2 — matching the left side perfectly. The wave equation is satisfied.
+
+This confirms that any function of the form x minus vt is a valid travelling wave.

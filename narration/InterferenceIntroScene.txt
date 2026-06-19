@@ -1,0 +1,5 @@
+Interference is what happens when two or more coherent waves overlap. Their electric fields add by superposition, and the resulting intensity can be larger or smaller than the sum of the individual intensities.
+
+When two waves are in phase — their crests align — the amplitude doubles and the intensity quadruples. This is constructive interference. When they are exactly out of phase — crests align with troughs — they cancel completely. This is destructive interference.
+
+The key requirement is coherence: the two waves must have a stable, well-defined phase relationship. A single laser split into two beams is coherent. Two separate lamps are not — their phases fluctuate randomly on timescales of nanoseconds, washing out any interference pattern.

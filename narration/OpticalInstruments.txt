@@ -1,0 +1,7 @@
+All optical instruments are combinations of lenses and mirrors.
+
+A magnifying glass places an object just inside its focal length, producing a virtual, upright, magnified image. The angular magnification is 25 centimetres divided by f, where 25 cm is the standard near-point distance of the human eye.
+
+A compound microscope uses an objective with very short focal length to form a magnified real image, then an eyepiece to magnify that image further. The total magnification is the product of the two magnifications.
+
+A telescope works in reverse: the objective forms a real image of a distant object at its focal plane, and the eyepiece magnifies it. The angular magnification is minus f_objective over f_eyepiece. The minus sign means the image is inverted — hence telescopes for astronomy often don't bother with an erecting prism.

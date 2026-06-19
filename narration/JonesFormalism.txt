@@ -1,0 +1,5 @@
+The Jones vector is a 2-component complex column vector that completely describes the polarisation state of a monochromatic wave. The two components give the x and y electric field amplitudes including their relative phase.
+
+Horizontal linear polarisation is represented by the vector 1, 0. Vertical is 0, 1. Plus 45 degrees is 1 over root 2 times 1, 1. Right circular polarisation is 1 over root 2 times 1, minus i. Left circular is 1 over root 2 times 1, plus i.
+
+The intensity is the magnitude squared of the Jones vector — which is always real and positive.

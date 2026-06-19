@@ -1,0 +1,11 @@
+Most optical systems — telescopes, microscopes, cameras, the human eye — have circular apertures. The diffraction pattern of a circular aperture is the Airy disk, named after George Biddell Airy who calculated it in 1835.
+
+The pattern is described by the first-order Bessel function J-one, and the first dark ring occurs where the argument equals 3.832. This gives sine theta-one equals 1.22 lambda over D, where D is the aperture diameter.
+
+The factor 1.22 — compared to 1.00 for a slit — comes entirely from the circular geometry and the Bessel function mathematics.
+
+The Rayleigh criterion defines the resolution limit: two point sources are just resolved when the central maximum of one falls exactly on the first dark ring of the other. The minimum resolvable angle is theta-min equals 1.22 lambda over D.
+
+This is a fundamental limit of wave optics — not an engineering limitation. To resolve finer details, you must either use a shorter wavelength or a larger aperture. There is no other way.
+
+For the human eye with a 3 millimetre pupil, this gives about 1 arcminute — which matches our measured visual acuity remarkably well. For the Hubble telescope with a 2.4 metre mirror, the limit is about 0.06 arcseconds — 800 times sharper than the eye.

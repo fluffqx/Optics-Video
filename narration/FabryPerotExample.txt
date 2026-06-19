@@ -1,0 +1,13 @@
+Let's work through Bennett's Example 7.11 — measuring the splitting between the hydrogen and deuterium H-alpha spectral lines using a Fabry-Pérot interferometer.
+
+Hydrogen H-alpha is at 656.28 nanometres. Deuterium H-alpha is at 656.10 nanometres. The splitting is 0.18 nanometres. We want to resolve this with mirrors of 90 percent reflectivity.
+
+First, the coefficient of finesse: F equals 4 times 0.90 divided by 0.10 squared, giving 360. The finesse is pi times square root of 360 divided by 2, giving 29.8.
+
+We choose a free spectral range of 0.5 nanometres to comfortably bracket the 0.18 nanometre splitting. This requires a mirror spacing of d equals lambda squared over 2 times delta-lambda-FSR, which gives 0.431 millimetres. Tight!
+
+The order number at this spacing is N equals 1313. The resolving power is N times finesse equals 1313 times 29.8, giving about 39,000.
+
+The minimum resolvable wavelength difference is lambda over resolving power, which is 656.2 divided by 39,000, giving 0.017 nanometres. This is more than ten times smaller than the actual splitting of 0.18 nanometres — the lines are clearly resolved.
+
+For comparison, the best diffraction grating we looked at had a resolving power of 30,000. The Fabry-Pérot beats it in a much more compact device.

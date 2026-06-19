@@ -1,0 +1,11 @@
+The Airy function is the central result of Fabry-Pérot theory. Bennett derives it in Section 7.10 by summing the infinite geometric series of multiply-reflected transmitted beams.
+
+The result is: transmitted intensity equals I-naught divided by one plus F times sine squared of delta over two, where F is the coefficient of finesse and delta is the round-trip phase.
+
+When delta is a multiple of 2 pi — the resonance condition — the sine term is zero and the transmission is I-naught, meaning 100 percent. This is the remarkable property of the Fabry-Pérot: even with highly reflective mirrors that individually transmit only a few percent, the transmission at resonance is complete.
+
+The physical explanation is that at resonance, all the multiply-reflected beams are in phase and add constructively. The field builds up inside the cavity to a very large amplitude, and the increased build-up exactly compensates for the low transmission of each mirror.
+
+Between resonances, the sine term is large, and the transmission drops to nearly zero for high-finesse cavities. The pattern looks like a series of very sharp transmission spikes separated by broad dark regions.
+
+The coefficient of finesse F equals 4R over one minus R squared. For a mirror reflectivity of 99 percent, F equals 39,600 — giving extremely sharp peaks.
