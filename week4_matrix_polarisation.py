@@ -22,28 +22,11 @@ class MatrixOpticsIntro(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
-            "Any sequence of optical elements can be represented by a SINGLE 2×2 matrix.",
-            "This is the ray transfer matrix method — immensely powerful for optical design.",
-            "",
-            "A ray near the optical axis is described by two numbers:",
-            "  y = height from the optical axis  [m]",
-            "  θ = angle the ray makes with the axis  [rad] (paraxial: θ small)",
-            "",
-            "We write this as a column vector:  [y, θ]ᵀ",
-            "",
-            "Each optical element maps [y_in, θ_in] to [y_out, θ_out]  via a 2×2 matrix.",
-            "For a sequence of N elements: M_sys = M_N · ... · M_2 · M_1  (right-to-left!)",
-            "The LAST element on the right corresponds to the FIRST element encountered.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(21.5)
-        self.wait(38.1); self.play(FadeOut(VGroup(title, intro)))
-
-
-class MatrixEquations(Scene):
-    def construct(self):
+        show_pages(self, title, [
+            (["Any sequence of optical elements can be represented by a SINGLE 2×2 matrix.", "This is the ray transfer matrix method — immensely powerful for optical design."], 19.9),
+            (["A ray near the optical axis is described by two numbers:", "  y = height from the optical axis  [m]", "  θ = angle the ray makes with the axis  [rad] (paraxial: θ small)"], 19.9),
+            (["We write this as a column vector:  [y, θ]ᵀ", "Each optical element maps [y_in, θ_in] to [y_out, θ_out]  via a 2×2 matrix.", "For a sequence of N elements: M_sys = M_N · ... · M_2 · M_1  (right-to-left!)", "The LAST element on the right corresponds to the FIRST element encountered."], 19.9),
+        ], font_size=28)
         self.camera.background_color = BG_COLOR
         title = Text("The Elementary Ray Transfer Matrices", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)

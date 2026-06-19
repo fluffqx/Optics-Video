@@ -289,22 +289,10 @@ class SuperpositionPrinciple(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
-            "The wave equation is LINEAR — it contains Ψ and its derivatives only to",
-            "the first power, with no products like Ψ·(∂Ψ/∂x).",
-            "",
-            "For any linear equation, the principle of superposition holds:",
-            "If Ψ₁ and Ψ₂ individually satisfy the wave equation, then Ψ₁ + Ψ₂ is also",
-            "a valid solution. This can be extended to any number of waves.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(7.2)
-        self.wait(25.4); self.play(FadeOut(intro))
-
-        # Mathematical statement
-        proof_title = Text("Proof  (Bennett Section 1.5):", font_size=30, color=GOLD)
-        proof_title.next_to(title, DOWN, buff=0.5)
+        show_pages(self, title, [
+            (["The wave equation is LINEAR — it contains Ψ and its derivatives only to", "the first power, with no products like Ψ·(∂Ψ/∂x)."], 16.3),
+            (["For any linear equation, the principle of superposition holds:", "If Ψ₁ and Ψ₂ individually satisfy the wave equation, then Ψ₁ + Ψ₂ is also", "a valid solution. This can be extended to any number of waves."], 16.3),
+        ], font_size=28)
         self.play(Write(proof_title))
 
         s1 = MathTex(
@@ -381,22 +369,10 @@ class PhaseGroupVelocity(Scene):
         vg_eq.next_to(vg_title, DOWN, buff=0.3)
         self.play(Write(vg_eq)); self.wait(15.5)
 
-        vg_desc = section_intro([
-            "v_g is the speed at which the ENVELOPE of a wave packet propagates.",
-            "This is the speed at which ENERGY and INFORMATION travel.",
-            "For a wave packet: it is the group of many slightly different frequencies.",
-            "In a non-dispersive medium: v_g = v_p (all frequencies travel equally fast).",
-            "In a dispersive medium (glass, water): v_g ≠ v_p — different colours travel",
-            "at different speeds, causing dispersion.",
-        ], font_size=26)
-        vg_desc.next_to(vg_eq, DOWN, buff=0.3)
-        self.play(FadeIn(vg_desc))
-        self.wait(11.6)
-        self.wait(11.0); self.play(FadeOut(VGroup(vg_title, vg_eq, vg_desc)))
-
-        # Example with concrete dispersion relation
-        ex_title = Text("Example: ω = ak²  (hypothetical dispersion relation)", font_size=30, color=GOLD)
-        ex_title.next_to(title, DOWN, buff=0.5)
+        show_pages(self, title, [
+            (["v_g is the speed at which the ENVELOPE of a wave packet propagates.", "This is the speed at which ENERGY and INFORMATION travel.", "For a wave packet: it is the group of many slightly different frequencies.", "In a non-dispersive medium: v_g = v_p (all frequencies travel equally fast)."], 11.3),
+            (["In a dispersive medium (glass, water): v_g ≠ v_p — different colours travel", "at different speeds, causing dispersion."], 11.3),
+        ], font_size=28)
         self.play(Write(ex_title))
 
         solver = StepSolver(self, ex_title, start_buff=0.4)
@@ -566,24 +542,10 @@ class ThreeDWaves(Scene):
         sphere.next_to(sw_title, DOWN, buff=0.3)
         self.play(Write(sphere)); self.wait(2.0)
 
-        sw_details = section_intro([
-            "The amplitude falls off as 1/r — this is NOT arbitrary.",
-            "It is required by energy conservation: as the wavefront expands",
-            "over a sphere of area 4πr², the intensity I ∝ A² ∝ 1/r².",
-            "This is the inverse-square law — familiar from photometry.",
-            "",
-            "Far from a point source, the 1/r curvature of the wavefront becomes",
-            "negligible — it looks like a plane wave locally. This is why we",
-            "use plane waves to describe laser beams and starlight.",
-        ], font_size=26)
-        sw_details.next_to(sphere, DOWN, buff=0.35)
-        self.play(FadeIn(sw_details))
-        self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, sw_title, sphere, sw_details)))
-
-
-class Week1WavesSummary(Scene):
-    def construct(self):
+        show_pages(self, title, [
+            (["The amplitude falls off as 1/r — this is NOT arbitrary.", "It is required by energy conservation: as the wavefront expands", "over a sphere of area 4πr², the intensity I ∝ A² ∝ 1/r².", "This is the inverse-square law — familiar from photometry."], 2.0),
+            (["Far from a point source, the 1/r curvature of the wavefront becomes", "negligible — it looks like a plane wave locally. This is why we", "use plane waves to describe laser beams and starlight."], 2.0),
+        ], font_size=28)
         self.camera.background_color = BG_COLOR
         card = equation_summary_card(
             "Week 1 — Waves: Key Equations",

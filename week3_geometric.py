@@ -22,28 +22,11 @@ class GeometricOpticsIntro(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
-            "When the wavelength of light λ is much smaller than the aperture or",
-            "obstacle it encounters, diffraction effects are negligible.",
-            "In this limit, light travels in straight RAYS — like tiny arrows.",
-            "",
-            "This is the realm of geometric optics (also called ray optics).",
-            "It describes lenses, mirrors, telescopes, microscopes, the human eye,",
-            "cameras, and optical fibres — with elegant, simple equations.",
-            "",
-            "The key simplification is the PARAXIAL APPROXIMATION  (Bennett Section 4.3.1):",
-            "For small angles (rays close to and nearly parallel to the optical axis):",
-            "sin(θ) ≈ tan(θ) ≈ θ  [θ in radians]",
-            "This linearises all the equations and makes analytic solutions possible.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(22.1)
-        self.wait(34.8); self.play(FadeOut(VGroup(title, intro)))
-
-
-class SignConventions(Scene):
-    def construct(self):
+        show_pages(self, title, [
+            (["When the wavelength of light λ is much smaller than the aperture or", "obstacle it encounters, diffraction effects are negligible.", "In this limit, light travels in straight RAYS — like tiny arrows."], 19.0),
+            (["This is the realm of geometric optics (also called ray optics).", "It describes lenses, mirrors, telescopes, microscopes, the human eye,", "cameras, and optical fibres — with elegant, simple equations."], 19.0),
+            (["The key simplification is the PARAXIAL APPROXIMATION  (Bennett Section 4.3.1):", "For small angles (rays close to and nearly parallel to the optical axis):", "sin(θ) ≈ tan(θ) ≈ θ  [θ in radians]", "This linearises all the equations and makes analytic solutions possible."], 19.0),
+        ], font_size=28)
         self.camera.background_color = BG_COLOR
         title = Text("Sign Conventions  (Bennett Section 4.3.4) — CRITICAL", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -229,22 +212,10 @@ class MirrorScene(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        intro = section_intro([
-            "Spherical mirrors obey the same paraxial equation structure as lenses.",
-            "The focal length of a mirror: f_m = R/2  (centre of curvature is at 2f).",
-            "Concave mirrors (R > 0) converge rays → behave like converging lenses.",
-            "Convex mirrors  (R < 0) diverge  rays → behave like diverging lenses.",
-            "Sign convention for mirrors: distances measured from the mirror surface;",
-            "real images are in FRONT of the mirror (positive s_i for concave mirrors).",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(14.4)
-        self.wait(23.2); self.play(FadeOut(intro))
-
-        mirror_eq = MathTex(
-            r"\frac{1}{s_o} + \frac{1}{s_i} = \frac{2}{R} = \frac{1}{f_m}",
-            font_size=58, color=GOLD)
+        show_pages(self, title, [
+            (["Spherical mirrors obey the same paraxial equation structure as lenses.", "The focal length of a mirror: f_m = R/2  (centre of curvature is at 2f).", "Concave mirrors (R > 0) converge rays → behave like converging lenses.", "Convex mirrors  (R < 0) diverge  rays → behave like diverging lenses."], 18.8),
+            (["Sign convention for mirrors: distances measured from the mirror surface;", "real images are in FRONT of the mirror (positive s_i for concave mirrors)."], 18.8),
+        ], font_size=28)
         mirror_eq.next_to(title, DOWN, buff=0.5)
         self.play(Write(mirror_eq)); self.wait(25.9)
         self.play(Create(gold_box(mirror_eq))); self.wait(2.0)

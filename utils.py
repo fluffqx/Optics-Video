@@ -66,11 +66,34 @@ def make_title_card(week_str: str, topic_str: str, ref_str: str) -> VGroup:
 
 # ── Section intro ─────────────────────────────────────────────────────────────
 def section_intro(lines: list, font_size: int = 28) -> VGroup:
-    texts = [Text(line, font_size=font_size, color=WHITE) if line.strip() else Text(" ", font_size=font_size) for line in lines]
+    """Creates a text block that fits safely below a title on screen."""
+    # Auto-reduce font for long blocks
+    n = len([l for l in lines if l.strip()])
+    if n > 6:
+        font_size = min(font_size, 24)
+    if n > 9:
+        font_size = min(font_size, 20)
+    texts = [Text(line, font_size=font_size, color=WHITE) if line.strip()
+             else Text(" ", font_size=max(12, font_size//3)) for line in lines]
     g = VGroup(*texts)
-    g.arrange(DOWN, aligned_edge=LEFT, buff=0.22)
-    safe_scale(g, max_width=12.5, max_height=5.5)
+    g.arrange(DOWN, aligned_edge=LEFT, buff=0.18)
+    # Hard limit: must fit in body area below title
+    safe_scale(g, max_width=12.5, max_height=4.2)
     return g
+
+
+def show_pages(scene, title_mob, pages: list, font_size: int = 28):
+    """
+    Show multiple text pages one at a time below the title.
+    Each page is a list of strings. wait_time is per page.
+    pages = [ ([lines...], wait_seconds), ... ]
+    """
+    for lines, wait_time in pages:
+        block = section_intro(lines, font_size=font_size)
+        block.next_to(title_mob, DOWN, buff=0.45)
+        scene.play(FadeIn(block))
+        scene.wait(wait_time)
+        scene.play(FadeOut(block))
 
 
 def show_lines(scene, block: VGroup, wait: float = 0.8, run_time: float = 0.5):
