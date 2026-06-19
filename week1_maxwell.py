@@ -72,8 +72,6 @@ class VectorCalculusNotation(Scene):
             self.wait(48.7)
             self.play(FadeOut(VGroup(op_eq, op_desc)))
 
-        self.play(FadeOut(title))
-
 
 class MaxwellEquations(Scene):
     def construct(self):
@@ -145,8 +143,6 @@ class MaxwellEquations(Scene):
             self.wait(129.8)
             self.play(FadeOut(VGroup(law_title, eq, desc)))
 
-        self.play(FadeOut(title))
-
 
 class MaxwellVacuum(Scene):
     """Maxwell equations in vacuum — the form used for EM waves"""
@@ -186,8 +182,7 @@ class MaxwellVacuum(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         constants.to_edge(RIGHT, buff=0.5)
         constants.shift(DOWN * 0.5)
-        self.play(FadeIn(constants)); self.wait(51.0)
-        self.play(FadeOut(VGroup(title, vac_eqs, constants)))
+        self.play(FadeIn(constants)); self.wait(51.0))
 
 
 class EMWaveDerivation(Scene):
@@ -226,8 +221,7 @@ class EMWaveDerivation(Scene):
             r"\nabla^2\vec{E} = \mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2} \quad\Rightarrow\quad c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}",
             "EM wave equation! Compare with general form: c = 1/√(μ₀ε₀)", GOLD)
 
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, *solver.steps)))
+        solver.finalize())
 
 
 class EMWaveProperties(Scene):
@@ -279,8 +273,6 @@ class EMWaveProperties(Scene):
             for l in desc_mob: self.play(FadeIn(l)); self.wait(0.8)
             self.wait(52.1); self.play(FadeOut(VGroup(prop_title, eq, desc_mob)))
 
-        self.play(FadeOut(title))
-
 
 class EMWaveExample(Scene):
     """Full example: find B from given E — Bennett Example 2.3"""
@@ -328,8 +320,7 @@ class EMWaveExample(Scene):
             r"\vec{E}\perp\vec{B}\perp\vec{k}: \quad \hat{x}\perp\hat{y}\perp\hat{z}\quad\checkmark",
             "confirms the mutually perpendicular property of EM waves", GOLD)
 
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, prob, E_field, find, *solver.steps)))
+        solver.finalize())
 
 
 class PoyntingIrradiance(Scene):
@@ -411,8 +402,7 @@ class PoyntingIrradiance(Scene):
         solver.add_step(4,
             r"B_0 = \frac{E_0}{c} = \frac{1094}{3\times10^8} = 3.65\times10^{-6} \text{ T} = 3.65\;\mu\text{T}",
             "peak magnetic field amplitude", B_COLOR)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class RadiationPressure(Scene):
@@ -482,8 +472,7 @@ class RadiationPressure(Scene):
         solver2.add_step(3,
             r"t = \frac{v}{a} = \frac{10}{3.33\times10^{-10}} \approx 3\times10^{10}\text{ s} \approx 950\text{ years}",
             "to reach 10 m/s — radiation pressure is real but extremely small", GOLD)
-        solver2.finalize()
-        self.play(FadeOut(VGroup(title, ex2_title, *solver2.steps)))
+        solver2.finalize())
 
 
 class DispersionScene(Scene):

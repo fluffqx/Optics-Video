@@ -210,8 +210,7 @@ class MidtermPrepScene(Scene):
 
         for tip in tips:
             self.play(FadeIn(tip), run_time=0.4); self.wait(0.3)
-        self.wait(73.6)
-        self.play(FadeOut(VGroup(tips_title, tips)))
+        self.wait(73.6))
 
 
 class FinalExamPrepScene(Scene):
@@ -276,5 +275,4 @@ class FinalExamPrepScene(Scene):
         for item in grade_group:
             self.play(Write(item)); self.wait(1)
         self.play(Create(gold_box(pass_cond)))
-        self.wait(93.8)
-        self.play(FadeOut(VGroup(grade_title, grade_group)))
+        self.wait(93.8))

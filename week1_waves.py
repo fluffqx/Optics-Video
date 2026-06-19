@@ -51,8 +51,6 @@ class WaveIntroduction(Scene):
             self.wait(64.1)
             self.play(FadeOut(block))
 
-        self.play(FadeOut(title))
-
 
 class WaveEquation1D(Scene):
     def construct(self):
@@ -130,8 +128,7 @@ class WaveEquation1D(Scene):
         key.next_to(sols, DOWN, buff=0.35)
         safe_scale(key, max_width=13.0)
         self.play(FadeIn(key))
-        self.wait(12)  # narrator: "Notice the key insight..."
-        self.play(FadeOut(VGroup(title, eq, sol_title, sols, key)))
+        self.wait(12)  # narrator: "Notice the key insight...")
 
 
 class WaveEquationProof(Scene):
@@ -165,8 +162,7 @@ class WaveEquationProof(Scene):
             r"\frac{1}{v^2}\frac{\partial^2\Psi}{\partial t^2} = \frac{1}{v^2}\cdot 2v^2 = 2",
             "both sides equal 2 — wave equation is satisfied ✓", GOLD)
 
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, intro, *solver.steps)))
+        solver.finalize())
 
 
 class HarmonicWave(Scene):
@@ -193,8 +189,7 @@ class HarmonicWave(Scene):
         self.play(Write(psi)); self.wait(1.5)
 
         box = gold_box(psi)
-        self.play(Create(box)); self.wait(0.5)
-        self.play(FadeOut(VGroup(intro, box)))
+        self.play(Create(box)); self.wait(0.5))
 
         # Symbol definitions — page 1
         sym_title = Text("Every Symbol Defined:", font_size=32, color=GOLD)
@@ -279,8 +274,7 @@ class HarmonicWaveExample(Scene):
         solver.add_step(5,
             r"\Psi(x,t) = A\sin\!\left(1.181\times10^7 x - 3.54\times10^{15}\,t\right)",
             "complete wavefunction for this green laser", E_COLOR)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, given, *solver.steps)))
+        solver.finalize())
 
 
 class SuperpositionPrinciple(Scene):

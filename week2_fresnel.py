@@ -76,8 +76,7 @@ class FermatPrinciple(Scene):
         solver.add_step(3,
             r"\frac{\sin\theta_i}{v_i} = \frac{\sin\theta_t}{v_t} \quad\Rightarrow\quad n_i\sin\theta_i = n_t\sin\theta_t",
             "using v = c/n: Snell's law emerges from Fermat's principle! ✓", GOLD)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, deriv_title, *solver.steps)))
+        solver.finalize())
 
 
 class ReflectionRefraction(Scene):
@@ -165,8 +164,7 @@ class ReflectionRefraction(Scene):
         solver.add_step(4,
             r"\text{Check: } n_i\sin\theta_i = 1.0\times0.643 = 0.643, \quad n_t\sin\theta_t = 1.5\times0.429 = 0.643\;\checkmark",
             "always verify with a back-substitution", GOLD)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class FresnelEquationsDerivation(Scene):
@@ -238,8 +236,7 @@ class FresnelEquations(Scene):
         p_eqs.next_to(p_header, DOWN, buff=0.3)
         safe_scale(p_eqs, max_height=3.0)
         self.play(Write(r_p)); self.wait(1.2)
-        self.play(Write(t_p)); self.wait(1.5)
-        self.play(FadeOut(VGroup(p_header, p_eqs)))
+        self.play(Write(t_p)); self.wait(1.5))
 
         # Normal incidence — simplification
         norm_title = Text("Special Case: Normal Incidence  (θ_i = θ_t = 0°):", font_size=30, color=GOLD)
@@ -299,8 +296,7 @@ class FresnelFullExample(Scene):
             r"t_\parallel = \frac{2\times1.0\times0.7660}{1.5\times0.7660+1.0\times0.9036}"
             r"= \frac{1.532}{2.053} = 0.746",
             "t_∥ = +0.746: transmission amplitude for p-polarisation", B_COLOR)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, given, *solver.steps)))
+        solver.finalize())
 
 
 class ReflectivityTransmissivity(Scene):
@@ -367,8 +363,7 @@ class ReflectivityTransmissivity(Scene):
         solver.add_step(4,
             r"\text{A window (2 surfaces): }T_{\text{total}} = 0.96^2 = 0.922 = 92.2\%",
             "two glass-air interfaces means about 8% total reflection loss", GOLD)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class BrewsterTIR(Scene):
@@ -517,5 +512,4 @@ class MalusLaw(Scene):
         solver.add_step(4,
             r"N\text{ polarisers each at }\Delta\theta:\quad I_N = I_0\cos^{2N}(\Delta\theta)",
             "chain of polarisers: multiply cos² factors — used to rotate polarisation gradually")
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, malus, ex_title, *solver.steps)))
+        solver.finalize())

@@ -83,8 +83,6 @@ class PolarisationStatesScene(Scene):
             for l in desc: self.play(FadeIn(l)); self.wait(0.7)
             self.wait(46.2); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
 
-        self.play(FadeOut(title))
-
 
 class BirefringenceWavePlates(Scene):
     def construct(self):
@@ -166,8 +164,6 @@ class BirefringenceWavePlates(Scene):
             for l in eff: self.play(FadeIn(l)); self.wait(0.8)
             self.wait(52.4); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
 
-        self.play(FadeOut(title))
-
 
 class JonesFormalism(Scene):
     def construct(self):
@@ -193,7 +189,6 @@ class JonesFormalism(Scene):
             font_size=48, color=E_COLOR)
         gen.next_to(title, DOWN, buff=0.5)
         self.play(Write(gen)); self.wait(1.2)
-        self.play(FadeOut(gen))
 
         # Table of all standard Jones vectors
         states_title = Text("Standard Normalised Jones Vectors  (Bennett Table 6.1):", font_size=28, color=GOLD)
@@ -297,5 +292,4 @@ class JonesMatrices(Scene):
         solver.add_step(4,
             r"\left|\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}\right|^2 = \frac{1}{2}(|1|^2+|-i|^2) = \frac{1}{2}(1+1) = 1",
             "intensity check: |Ẽ_out|² = 1 ✓ — normalised, no loss through wave plates", GOLD)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, ex_title, *solver.steps)))
+        solver.finalize())

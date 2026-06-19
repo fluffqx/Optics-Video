@@ -90,8 +90,6 @@ class MatrixEquations(Scene):
             for l in desc: self.play(FadeIn(l)); self.wait(0.7)
             self.wait(56.3); self.play(FadeOut(VGroup(m_title, eq, desc)))
 
-        self.play(FadeOut(title))
-
 
 class SystemMatrixCardinalPoints(Scene):
     def construct(self):
@@ -113,8 +111,7 @@ class SystemMatrixCardinalPoints(Scene):
             r"M_{\text{sys}} = \begin{pmatrix}A & B \\ C & D\end{pmatrix}",
             font_size=50, color=GOLD)
         M_sys.next_to(intro, DOWN, buff=0.35)
-        self.play(Write(M_sys)); self.wait(1.2)
-        self.play(FadeOut(VGroup(intro, M_sys)))
+        self.play(Write(M_sys)); self.wait(1.2))
 
         # Cardinal points
         cardinal_title = Text("Cardinal Points from M_sys = [A B; C D]  (Bennett Eq. 5.77-5.80):", font_size=26, color=GOLD)
@@ -173,5 +170,4 @@ class MatrixExample(Scene):
         solver.add_step(5,
             r"\text{Beam magnification} = A = -f_2/f_1 \quad\text{(ratio of beam diameters)}",
             "A element tells us the transverse magnification of the beam", GOLD)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, prob, *solver.steps)))
+        solver.finalize())

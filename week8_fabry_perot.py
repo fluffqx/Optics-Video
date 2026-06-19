@@ -176,8 +176,7 @@ class FabryPerotExample(Scene):
         solver.add_step(7,
             r"\text{Compare to grating: RP}=Nm=30000\times1=30000 \quad (\text{same grating as before})",
             "Fabry-Pérot gives higher RP than the 5cm grating — in a much more compact package!")
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, prob, *solver.steps)))
+        solver.finalize())
 
 
 class CoherenceLength(Scene):
@@ -234,9 +233,7 @@ class CoherenceLength(Scene):
             ).arrange(RIGHT, buff=0.3)
             safe_scale(row_mob, max_width=13.5)
             row_mob.next_to(sources_title, DOWN, buff=0.35)
-            self.play(FadeIn(row_mob)); self.wait(89.7); self.play(FadeOut(row_mob))
-
-        self.play(FadeOut(VGroup(title, sources_title)))
+            self.play(FadeIn(row_mob)); self.wait(89.7); self.play(FadeOut(row_mob)))
 
 
 class Week8Summary(Scene):

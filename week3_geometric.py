@@ -132,8 +132,7 @@ class SphericalSurface(Scene):
         solver.add_step(3,
             r"s_i = \frac{1.5}{0.0167} = 90\text{ cm} \quad\text{(real image, positive)}",
             "image forms 90 cm to the RIGHT of the surface, in the glass", GOLD)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, eq, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class ThinLensScene(Scene):
@@ -215,8 +214,7 @@ class ThinLensScene(Scene):
         solver.add_step(5,
             r"P = \frac{1}{f} = \frac{1}{0.20\text{ m}} = +5.0\text{ D} \quad\text{(converging lens)}",
             "dioptric power in dioptres (m⁻¹)", INTENSITY_COLOR)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class MirrorScene(Scene):
@@ -268,8 +266,7 @@ class MirrorScene(Scene):
         solver.add_step(4,
             r"m = -\frac{s_i}{s_o} = -\frac{60}{30} = -2.0",
             "magnification = −2: image is inverted and TWICE the size of object", WHITE)
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, mirror_eq, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class LensCombinations(Scene):
@@ -321,8 +318,7 @@ class LensCombinations(Scene):
             r"\text{For contact }(d=0): \frac{1}{f_{\text{eff}}} = \frac{1}{30}+\frac{1}{20} = \frac{5}{60}"
             r"\;\Rightarrow\; f_{\text{eff}} = 12.0\text{ cm}",
             "comparison: contact combination is stronger (shorter f)")
-        solver.finalize()
-        self.play(FadeOut(VGroup(title, ex_title, *solver.steps)))
+        solver.finalize())
 
 
 class OpticalInstruments(Scene):
@@ -370,5 +366,3 @@ class OpticalInstruments(Scene):
             desc.next_to(inst_title, DOWN, buff=0.35)
             for l in desc: self.play(FadeIn(l)); self.wait(0.8)
             self.wait(62.6); self.play(FadeOut(VGroup(inst_title, desc)))
-
-        self.play(FadeOut(title))
