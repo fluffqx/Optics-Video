@@ -368,7 +368,7 @@ class OpticalInstruments(Scene):
 
             desc = section_intro(desc_lines, font_size=26)
             desc.next_to(inst_title, DOWN, buff=0.35)
-            for l in desc: self.play(FadeIn(l, color=color)); self.wait(0.8)
+            for l in desc: self.play(FadeIn(l)); self.wait(0.8)
             self.wait(2); self.play(FadeOut(VGroup(inst_title, desc)))
 
         self.play(FadeOut(title))
