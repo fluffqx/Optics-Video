@@ -49,14 +49,11 @@ class MaxwellIntro(Scene):
         # Para 3 (35s): "Before we write them down, let's fix the notation..."
         intro3 = Text("Before writing them down, we must fix notation:", font_size=28, color=WHITE)
         safe_scale(intro3, max_width=13.0)
-        rows = eq_table([
-            (r"
-abla\cdotec{E}", "divergence of E — how much E spreads from a point", E_COLOR),
-            (r"
-abla	imesec{E}", "curl of E — how much E rotates around a point", E_COLOR),
-            (r"
-abla^2ec{E}", "Laplacian — 3D second spatial derivative", WAVE_COLOR),
-        ], eq_fs=36, lbl_fs=24, buff=0.3)
+        rows = VGroup(
+            MathTex(r"\nabla\cdot\vec{E}", font_size=36, color=E_COLOR),
+            MathTex(r"\nabla\times\vec{E}", font_size=36, color=E_COLOR),
+            MathTex(r"\nabla^2\vec{E}", font_size=36, color=WAVE_COLOR),
+        ).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
         p3_block = VGroup(intro3, rows).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(p3_block, max_width=13.0, max_height=4.0)
         p3_block.next_to(title, DOWN, buff=0.5)
@@ -175,15 +172,12 @@ class MaxwellEquations(Scene):
         # Para 6 (20s): "In vacuum..."
         vac_intro = Text("In vacuum, the equations simplify to:", font_size=28, color=WHITE)
         safe_scale(vac_intro, max_width=13.0)
-        vac_eqs_simple = eq_table([
-            (r"
-abla\cdotec{E}=0,\quad
-abla\cdotec{B}=0", "no sources", WHITE),
-            (r"
-abla	imesec{E}=-rac{\partialec{B}}{\partial t}", "Faraday — vacuum form", E_COLOR),
-            (r"
-abla	imesec{B}=\mu_0arepsilon_0rac{\partialec{E}}{\partial t}", "Ampere-Maxwell — vacuum form", B_COLOR),
-        ], eq_fs=30, lbl_fs=22, buff=0.25)
+        vac_eqs_simple = VGroup(
+            MathTex(r"\nabla\cdot\vec{E}=0", font_size=32, color=E_COLOR),
+            MathTex(r"\nabla\cdot\vec{B}=0", font_size=32, color=B_COLOR),
+            MathTex(r"\nabla\times\vec{E}=-\partial\vec{B}/\partial t", font_size=32, color=E_COLOR),
+            MathTex(r"\nabla\times\vec{B}=\mu_0\varepsilon_0\partial\vec{E}/\partial t", font_size=32, color=B_COLOR),
+        ).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
         vac_block = VGroup(vac_intro, vac_eqs_simple).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(vac_block, max_width=13.0, max_height=4.0)
         vac_block.next_to(title, DOWN, buff=0.5)
