@@ -103,13 +103,13 @@ class FinesseResolving(Scene):
         self.wait(0.3); self.play(FadeOut(intro))
 
         eqs = eq_table([
-            (r"\mathscr{F} = \frac{\pi\sqrt{R}}{1-R} = \frac{\pi\sqrt{F}}{2}",
+            (r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R} = \frac{\pi\sqrt{F}}{2}",
              "FINESSE: ratio of FSR to FWHM of transmission peak  (Bennett Eq. 7.91)", GOLD),
-            (r"F = \frac{4R}{(1-R)^2} = \frac{4\mathscr{F}^2}{\pi^2}",
+            (r"F = \frac{4R}{(1-R)^2} = \frac{4\mathcal{F}^2}{\pi^2}",
              "coefficient of finesse F vs. finesse script-F (different quantities!)", N_COLOR),
             (r"N = \frac{2nd\cos\theta}{\lambda/2} = \frac{2nd}{\lambda_0}\cos\theta",
              "order number N = number of half-wavelengths in the cavity", WHITE),
-            (r"\text{RP} = \frac{\lambda}{\Delta\lambda} = N\mathscr{F}",
+            (r"\text{RP} = \frac{\lambda}{\Delta\lambda} = N\mathcal{F}",
              "RESOLVING POWER: product of order number and finesse  (Bennett Eq. 7.93)", GOLD),
             (r"\Delta\lambda_{\text{FSR}} = \frac{\lambda^2}{2nd} = \frac{\lambda_0}{N}",
              "FREE SPECTRAL RANGE in wavelength  (Bennett Eq. 7.94)", INTENSITY_COLOR),
@@ -159,7 +159,7 @@ class FabryPerotExample(Scene):
             r"F = \frac{4R}{(1-R)^2} = \frac{4\times0.90}{(0.10)^2} = \frac{3.6}{0.01} = 360",
             "coefficient of finesse for R=90%")
         solver.add_step(2,
-            r"\mathscr{F} = \frac{\pi\sqrt{F}}{2} = \frac{\pi\sqrt{360}}{2} = \frac{\pi\times18.97}{2} = 29.8",
+            r"\mathcal{F} = \frac{\pi\sqrt{F}}{2} = \frac{\pi\sqrt{360}}{2} = \frac{\pi\times18.97}{2} = 29.8",
             "finesse: transmission peaks are 29.8× narrower than the FSR", GOLD)
         solver.add_step(3,
             r"\Delta\lambda_{\text{FSR}} = 0.5\text{ nm} \quad\Rightarrow\quad d = \frac{\lambda^2}{2\Delta\lambda_{\text{FSR}}} = \frac{(656.2)^2}{2\times0.5\times10^6}\text{ nm} = 0.431\text{ mm}",
@@ -168,7 +168,7 @@ class FabryPerotExample(Scene):
             r"N = \frac{2nd}{\lambda} = \frac{2\times1\times0.431\times10^6}{656.2} = 1313",
             "order number (n=1 for air, d=0.431mm)")
         solver.add_step(5,
-            r"\text{RP} = N\mathscr{F} = 1313\times29.8 = 39100",
+            r"\text{RP} = N\mathcal{F} = 1313\times29.8 = 39100",
             "resolving power of this configuration", GOLD)
         solver.add_step(6,
             r"\Delta\lambda_{\min} = \frac{\lambda}{\text{RP}} = \frac{656.2}{39100} = 0.0168\text{ nm}",
@@ -249,10 +249,10 @@ class Week8Summary(Scene):
         rows = eq_table([
             (r"I_t = \frac{I_0}{1+F\sin^2(\delta/2)}", "Airy function (Fabry-Pérot transmission)", INTENSITY_COLOR),
             (r"F = \frac{4R}{(1-R)^2}", "coefficient of finesse", N_COLOR),
-            (r"\mathscr{F} = \frac{\pi\sqrt{R}}{1-R}", "finesse", GOLD),
+            (r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R}", "finesse", GOLD),
             (r"\delta = \frac{4\pi nd}{\lambda_0}\cos\theta", "round-trip phase (at oblique angle θ)", WAVE_COLOR),
             (r"N = \frac{2nd}{\lambda_0}", "order number (at normal incidence)", WHITE),
-            (r"\text{RP} = N\mathscr{F}", "resolving power", GOLD),
+            (r"\text{RP} = N\mathcal{F}", "resolving power", GOLD),
             (r"\Delta\lambda_{\text{FSR}} = \lambda_0/N", "free spectral range (wavelength)", INTENSITY_COLOR),
             (r"\Delta\nu_{\text{FSR}} = c/(2nd)", "free spectral range (frequency)", INTENSITY_COLOR),
             (r"l_c = \lambda^2/\Delta\lambda = c/\Delta\nu", "coherence length of light source", WAVE_COLOR),
