@@ -66,11 +66,18 @@ def make_title_card(week_str: str, topic_str: str, ref_str: str) -> VGroup:
 
 # ── Section intro ─────────────────────────────────────────────────────────────
 def section_intro(lines: list, font_size: int = 28) -> VGroup:
-    texts = [Text(line, font_size=font_size, color=WHITE) for line in lines]
+    texts = [Text(line, font_size=font_size, color=WHITE) if line.strip() else Text(" ", font_size=font_size) for line in lines]
     g = VGroup(*texts)
     g.arrange(DOWN, aligned_edge=LEFT, buff=0.22)
     safe_scale(g, max_width=12.5, max_height=5.5)
     return g
+
+
+def show_lines(scene, block: VGroup, wait: float = 0.8, run_time: float = 0.5):
+    """Animate a placed section_intro block line by line — always place block first."""
+    for line in block:
+        scene.play(FadeIn(line, shift=UP * 0.08), run_time=run_time)
+        scene.wait(wait)
 
 
 # ── Equation with label ───────────────────────────────────────────────────────

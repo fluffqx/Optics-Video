@@ -22,42 +22,36 @@ class WaveIntroduction(Scene):
         title.to_edge(UP, buff=0.4)
         self.play(Write(title)); self.wait(0.5)
 
-        # Bennett Ch.1 intro — mechanical vs EM waves
-        p1 = section_intro([
-            "A wave is a disturbance that transports ENERGY without transporting MATTER.",
-            "When a guitar string is plucked, the mechanical energy propagates along the",
-            "string as a traveling wave — the string itself does not travel.",
-        ])
-        p1.next_to(title, DOWN, buff=0.4)
-        for line in p1: self.play(FadeIn(line)); self.wait(1.0)
-        self.wait(0.5)
-        self.play(FadeOut(p1))
+        for page in [
+            [
+                "A wave is a disturbance that transports ENERGY without transporting MATTER.",
+                "When a guitar string is plucked, the mechanical energy propagates along the",
+                "string as a traveling wave — the string itself does not travel.",
+            ],
+            [
+                "Mechanical waves like sound require an elastic medium for propagation.",
+                "Acoustic waves are LONGITUDINAL — molecules oscillate along the direction",
+                "of travel, creating alternating regions of high and low pressure.",
+                "Waves on a string are TRANSVERSE — displacement is perpendicular to travel.",
+            ],
+            [
+                "Electromagnetic waves (light, radio, X-rays) do NOT require any medium.",
+                "They propagate as disturbances in the electromagnetic field itself,",
+                "even in a perfect vacuum — there is no 'aether'.",
+                "In this course, the wavefunction describes the electric field amplitude.",
+                "The wave equation governs how this field evolves in space and time.",
+                "Understanding it is the foundation of EVERYTHING in optics.",
+            ],
+        ]:
+            block = section_intro(page, font_size=26)
+            block.next_to(title, DOWN, buff=0.4)
+            for line in block:
+                self.play(FadeIn(line, shift=UP*0.1), run_time=0.5)
+                self.wait(0.8)
+            self.wait(0.8)
+            self.play(FadeOut(block))
 
-        p2 = section_intro([
-            "Mechanical waves (strings, sound) require an elastic medium for propagation.",
-            "Acoustic waves are LONGITUDINAL — the gas molecules oscillate back-and-forth",
-            "along the direction of energy travel, creating alternating regions of high",
-            "and low pressure.",
-            "Waves on a string are TRANSVERSE — the displacement is perpendicular to the",
-            "direction of travel.",
-        ], font_size=26)
-        p2.next_to(title, DOWN, buff=0.4)
-        for line in p2: self.play(FadeIn(line)); self.wait(0.9)
-        self.wait(0.5)
-        self.play(FadeOut(p2))
-
-        p3 = section_intro([
-            "Electromagnetic waves (light, radio, X-rays) are different from mechanical",
-            "waves: they do NOT require any medium. They propagate as disturbances in the",
-            "electromagnetic field itself — even in a perfect vacuum.",
-            "",
-            "In this course, the wavefunction Ψ(x,t) represents the electric field amplitude.",
-            "The wave equation is the fundamental differential equation that Ψ(x,t) satisfies.",
-            "Understanding it is the foundation of EVERYTHING in optics.",
-        ], font_size=26)
-        p3.next_to(title, DOWN, buff=0.4)
-        for line in p3: self.play(FadeIn(line)); self.wait(0.9)
-        self.wait(2); self.play(FadeOut(VGroup(title, p3)))
+        self.play(FadeOut(title))
 
 
 class WaveEquation1D(Scene):
