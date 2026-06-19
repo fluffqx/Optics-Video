@@ -162,7 +162,7 @@ class WaveEquationProof(Scene):
             r"\frac{1}{v^2}\frac{\partial^2\Psi}{\partial t^2} = \frac{1}{v^2}\cdot 2v^2 = 2",
             "both sides equal 2 — wave equation is satisfied ✓", GOLD)
 
-        solver.finalize())
+        solver.finalize()
 
 
 class HarmonicWave(Scene):
@@ -189,7 +189,7 @@ class HarmonicWave(Scene):
         self.play(Write(psi)); self.wait(16.0)
 
         box = gold_box(psi)
-        self.play(Create(box)); self.wait(18.8))
+        self.play(Create(box)); self.wait(18.8)
 
         # Symbol definitions — page 1
         sym_title = Text("Every Symbol Defined:", font_size=32, color=GOLD)
@@ -274,7 +274,7 @@ class HarmonicWaveExample(Scene):
         solver.add_step(5,
             r"\Psi(x,t) = A\sin\!\left(1.181\times10^7 x - 3.54\times10^{15}\,t\right)",
             "complete wavefunction for this green laser", E_COLOR)
-        solver.finalize())
+        solver.finalize()
 
 
 class SuperpositionPrinciple(Scene):

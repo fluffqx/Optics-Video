@@ -98,7 +98,7 @@ class TwoBeamInterference(Scene):
             font_size=28, color=B_COLOR)
         refl_note.next_to(opd_def, DOWN, buff=0.3)
         safe_scale(refl_note, max_width=13.0)
-        self.play(Write(refl_note)); self.wait(2.0))
+        self.play(Write(refl_note)); self.wait(2.0)
 
         # Equal intensities
         eq_int_title = Text("Special Case: Equal Intensities  I₁ = I₂ = I₀:", font_size=28, color=GOLD)
@@ -210,7 +210,7 @@ class YoungDoubleSlit(Scene):
         solver.add_step(4,
             r"\delta_{\text{at }y=5\text{mm}} = \frac{2\pi\times5\times10^{-3}\times10^{-4}}{589\times10^{-9}\times1.50} = 3.56\text{ rad}",
             "phase difference at y=5mm — not a maximum or minimum")
-        solver.finalize())
+        solver.finalize()
 
 
 class ThinFilmInterference(Scene):
@@ -322,7 +322,7 @@ class ThinFilmInterference(Scene):
             r"\text{For destructive reflection: } 2n_{\text{coat}}t = \frac{\lambda_0}{2}"
             r"\;\Rightarrow\; t = \frac{\lambda_0}{4n_{\text{coat}}} = \frac{550}{4\times1.38} = 99.6\text{ nm}",
             "minimum thickness for AR at λ=550nm: about 100 nm — thinner than a virus!", GOLD)
-        solver.finalize())
+        solver.finalize()
 
 
 class FringeVisibility(Scene):
@@ -410,4 +410,4 @@ class MichelsonScene(Scene):
         solver.add_step(3,
             r"\text{If we count to 1 fringe: }\Delta L = \frac{\lambda}{2} = 294.5\text{ nm}",
             "resolution of ~295 nm per fringe — nanometre-scale position measurement!")
-        solver.finalize())
+        solver.finalize()

@@ -292,4 +292,4 @@ class JonesMatrices(Scene):
         solver.add_step(4,
             r"\left|\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}\right|^2 = \frac{1}{2}(|1|^2+|-i|^2) = \frac{1}{2}(1+1) = 1",
             "intensity check: |Ẽ_out|² = 1 ✓ — normalised, no loss through wave plates", GOLD)
-        solver.finalize())
+        solver.finalize()

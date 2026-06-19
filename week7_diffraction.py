@@ -161,7 +161,7 @@ class SingleSlitDiffraction(Scene):
         solver.add_step(5,
             r"\text{Fraunhofer check: } r = 2.00\text{m} \gg \frac{b^2}{2\lambda} = \frac{(2\times10^{-4})^2}{2\times6.33\times10^{-7}} = 0.032\text{ m}\quad\checkmark",
             "verify Fraunhofer condition is satisfied", GOLD)
-        solver.finalize())
+        solver.finalize()
 
 
 class CircularApertureRayleigh(Scene):
@@ -254,7 +254,7 @@ class CircularApertureRayleigh(Scene):
         solver.add_step(6,
             r"d_{\min} \approx \frac{0.61\lambda}{n\sin\alpha} \approx \frac{0.61\times400}{1.5\times0.95}\approx 171\text{ nm}",
             "Abbe criterion — just below 200nm for the best microscopes", GOLD)
-        solver.finalize())
+        solver.finalize()
 
 
 class DiffractionGrating(Scene):
@@ -373,4 +373,4 @@ class DiffractionGrating(Scene):
         solver.add_step(6,
             r"\Delta\lambda_{\text{FSR}} = \frac{\lambda}{m} = \frac{589.0}{1} = 589\text{ nm}",
             "FSR in first order — very wide, no ambiguity problem in m=1", INTENSITY_COLOR)
-        solver.finalize())
+        solver.finalize()

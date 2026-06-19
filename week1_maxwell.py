@@ -182,7 +182,7 @@ class MaxwellVacuum(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         constants.to_edge(RIGHT, buff=0.5)
         constants.shift(DOWN * 0.5)
-        self.play(FadeIn(constants)); self.wait(2.0))
+        self.play(FadeIn(constants)); self.wait(2.0)
 
 
 class EMWaveDerivation(Scene):
@@ -221,7 +221,7 @@ class EMWaveDerivation(Scene):
             r"\nabla^2\vec{E} = \mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2} \quad\Rightarrow\quad c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}",
             "EM wave equation! Compare with general form: c = 1/√(μ₀ε₀)", GOLD)
 
-        solver.finalize())
+        solver.finalize()
 
 
 class EMWaveProperties(Scene):
@@ -320,7 +320,7 @@ class EMWaveExample(Scene):
             r"\vec{E}\perp\vec{B}\perp\vec{k}: \quad \hat{x}\perp\hat{y}\perp\hat{z}\quad\checkmark",
             "confirms the mutually perpendicular property of EM waves", GOLD)
 
-        solver.finalize())
+        solver.finalize()
 
 
 class PoyntingIrradiance(Scene):
@@ -402,7 +402,7 @@ class PoyntingIrradiance(Scene):
         solver.add_step(4,
             r"B_0 = \frac{E_0}{c} = \frac{1094}{3\times10^8} = 3.65\times10^{-6} \text{ T} = 3.65\;\mu\text{T}",
             "peak magnetic field amplitude", B_COLOR)
-        solver.finalize())
+        solver.finalize()
 
 
 class RadiationPressure(Scene):
@@ -472,7 +472,7 @@ class RadiationPressure(Scene):
         solver2.add_step(3,
             r"t = \frac{v}{a} = \frac{10}{3.33\times10^{-10}} \approx 3\times10^{10}\text{ s} \approx 950\text{ years}",
             "to reach 10 m/s — radiation pressure is real but extremely small", GOLD)
-        solver2.finalize())
+        solver2.finalize()
 
 
 class DispersionScene(Scene):
