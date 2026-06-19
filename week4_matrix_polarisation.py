@@ -1,186 +1,177 @@
-# week4_matrix_polarisation.py
-# 31OPT Optics — Week 4: Matrix Optics & Polarisation Basics
+# week4_matrix_polarisation.py  —  Week 4: Matrix Optics  (v2)
+# Source: Bennett Ch. 5.5, 7.1-7.3.1, 6.1-6.2
 from manim import *
 from utils import *
 
 
 class Week4TitleCard(Scene):
     def construct(self):
-        self.camera.background_color = "#0f0f0f"
+        self.camera.background_color = BG_COLOR
         card = make_title_card(
             "WEEK 4",
             "Matrix Optics, Superposition & Polarisation Basics",
-            "Bennett Ch. 5.5, 7.1-7.3.1, 6.1-6.2"
+            "Bennett Ch. 5.5, 7.1–7.3.1, 6.1–6.2"
         )
-        self.play(FadeIn(card)); self.wait(2); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(2.5); self.play(FadeOut(card))
 
 
 class MatrixOpticsIntro(Scene):
     def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        title = Text("Matrix Methods in Paraxial Optics", font_size=38, color=GOLD)
-        title.to_edge(UP)
+        self.camera.background_color = BG_COLOR
+        title = Text("Why Matrix Methods?  (Bennett Section 5.5)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
         self.play(Write(title))
+
         intro = section_intro([
-            "Any paraxial optical system can be described by a 2x2 ray transfer matrix.",
-            "A ray is described by its height y and angle theta from the optical axis.",
-            "Three elementary matrices: translation, refraction, reflection.",
-            "Multiply them in order (right to left) to get the system matrix.",
-            "From the system matrix elements A,B,C,D we extract all cardinal points."
+            "Any sequence of optical elements can be represented by a SINGLE 2×2 matrix.",
+            "This is the ray transfer matrix method — immensely powerful for optical design.",
+            "",
+            "A ray near the optical axis is described by two numbers:",
+            "  y = height from the optical axis  [m]",
+            "  θ = angle the ray makes with the axis  [rad] (paraxial: θ small)",
+            "",
+            "We write this as a column vector:  [y, θ]ᵀ",
+            "",
+            "Each optical element maps [y_in, θ_in] to [y_out, θ_out]  via a 2×2 matrix.",
+            "For a sequence of N elements: M_sys = M_N · ... · M_2 · M_1  (right-to-left!)",
+            "The LAST element on the right corresponds to the FIRST element encountered.",
         ])
-        intro.next_to(title, DOWN, buff=0.3)
-        for line in intro:
-            self.play(FadeIn(line)); self.wait(1.0)
-        self.wait(1); self.play(FadeOut(VGroup(title, intro)))
+        intro.next_to(title, DOWN, buff=0.4)
+        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
+        self.wait(2); self.play(FadeOut(VGroup(title, intro)))
 
 
 class MatrixEquations(Scene):
     def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        title = Text("Ray Transfer Matrices", font_size=40, color=GOLD)
-        title.to_edge(UP)
+        self.camera.background_color = BG_COLOR
+        title = Text("The Elementary Ray Transfer Matrices", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        # Ray vector
-        ray_vec = MathTex(
-            r"\text{Ray vector: } \begin{pmatrix} y \\ \theta \end{pmatrix}",
-            font_size=38, color=WHITE
-        )
-        ray_vec_label = Text(
-            "y = height from optical axis,   theta = angle from axis (paraxial: small angle)",
-            font_size=26, color=WHITE
-        )
-        ray_group = VGroup(ray_vec, ray_vec_label).arrange(DOWN, buff=0.2)
-        self.play(Write(ray_group)); self.wait(1.2); self.play(FadeOut(ray_group))
+        matrices = [
+            ("1. Free Propagation (Translation) — distance d  (Bennett Eq. 5.59):",
+             r"M_T = \begin{pmatrix}1 & d \\ 0 & 1\end{pmatrix}",
+             ["A ray travels distance d in free space.",
+              "Height increases: y_out = y_in + d·θ_in",
+              "Angle unchanged: θ_out = θ_in  (no bending in free space)"],
+             E_COLOR),
+            ("2. Thin Lens — focal length f  (Bennett Eq. 5.64):",
+             r"M_L = \begin{pmatrix}1 & 0 \\ -1/f & 1\end{pmatrix}",
+             ["A thin lens changes the ray angle without changing its height.",
+              "Height unchanged: y_out = y_in  (thin lens → zero thickness)",
+              "Angle changes: θ_out = θ_in − y_in/f  (focusing/defocusing)"],
+             N_COLOR),
+            ("3. Refraction at Spherical Surface — n₁→n₂, radius R  (Bennett Eq. 5.62):",
+             r"M_R = \begin{pmatrix}1 & 0 \\ -\frac{n_2-n_1}{n_2 R} & \frac{n_1}{n_2}\end{pmatrix}",
+             ["Height unchanged at the surface.",
+              "Angle changes according to paraxial Snell's law.",
+              "This matrix is derived directly from Snell's law in the paraxial limit."],
+             N_COLOR),
+            ("4. Reflection at Spherical Mirror — radius R  (Bennett Eq. 5.66):",
+             r"M_M = \begin{pmatrix}1 & 0 \\ -2/R & 1\end{pmatrix}",
+             ["Same form as the thin lens matrix.",
+              "Equivalent to a thin lens with f_m = R/2 (as expected from mirror equation).",
+              "Valid for paraxial rays near the mirror axis."],
+             B_COLOR),
+        ]
 
-        # Translation
-        t_title = Text("1. Translation (free propagation, distance d):", font_size=30, color=GOLD)
-        t_title.next_to(title, DOWN, buff=0.4)
-        M_T = MathTex(
-            r"M_T = \begin{pmatrix} 1 & d \\ 0 & 1 \end{pmatrix}",
-            font_size=44, color=E_COLOR
-        )
-        M_T_meaning = Text(
-            "Ray travels distance d: height increases by d*theta, angle unchanged.",
-            font_size=26, color=WHITE
-        )
-        t_group = VGroup(t_title, M_T, M_T_meaning).arrange(DOWN, buff=0.25)
-        self.play(Write(t_group)); self.wait(1.5); self.play(FadeOut(t_group))
+        for m_name, latex, desc_lines, color in matrices:
+            m_title = Text(m_name, font_size=24, color=GOLD)
+            m_title.next_to(title, DOWN, buff=0.5)
+            safe_scale(m_title, max_width=13.5)
+            self.play(Write(m_title))
 
-        # Refraction
-        r_title = Text("2. Refraction at spherical surface (n1 to n2, radius R):",
-                       font_size=30, color=GOLD)
-        r_title.next_to(title, DOWN, buff=0.4)
-        M_R = MathTex(
-            r"M_R = \begin{pmatrix} 1 & 0 \\"
-            r" -\dfrac{n_2 - n_1}{n_2 R} & \dfrac{n_1}{n_2} \end{pmatrix}",
-            font_size=42, color=N_COLOR
-        )
-        r_group = VGroup(r_title, M_R).arrange(DOWN, buff=0.3)
-        self.play(Write(r_group)); self.wait(1.5); self.play(FadeOut(r_group))
+            eq = MathTex(latex, font_size=44, color=color)
+            eq.next_to(m_title, DOWN, buff=0.3)
+            self.play(Write(eq)); self.wait(0.7)
 
-        # Thin lens
-        l_title = Text("3. Thin lens (focal length f):", font_size=30, color=GOLD)
-        l_title.next_to(title, DOWN, buff=0.4)
-        M_L = MathTex(
-            r"M_{\text{lens}} = \begin{pmatrix} 1 & 0 \\ -1/f & 1 \end{pmatrix}",
-            font_size=44, color=N_COLOR
-        )
-        l_note = Text("Derived from two refraction matrices with d→0 in between.",
-                      font_size=26, color=WHITE)
-        l_group = VGroup(l_title, M_L, l_note).arrange(DOWN, buff=0.25)
-        self.play(Write(l_group)); self.wait(1.5); self.play(FadeOut(l_group))
+            desc = section_intro(desc_lines, font_size=26)
+            desc.next_to(eq, DOWN, buff=0.35)
+            for l in desc: self.play(FadeIn(l)); self.wait(0.7)
+            self.wait(1.5); self.play(FadeOut(VGroup(m_title, eq, desc)))
 
-        # Mirror
-        m_title = Text("4. Reflection at spherical mirror (radius R):", font_size=30, color=GOLD)
-        m_title.next_to(title, DOWN, buff=0.4)
-        M_M = MathTex(
-            r"M_{\text{mirror}} = \begin{pmatrix} 1 & 0 \\ -2/R & 1 \end{pmatrix}",
-            font_size=44, color=B_COLOR
-        )
-        m_group = VGroup(m_title, M_M).arrange(DOWN, buff=0.3)
-        self.play(Write(m_group)); self.wait(1.5); self.play(FadeOut(m_group))
+        self.play(FadeOut(title))
 
-        # System matrix
-        sys_title = Text("System (Ray Transfer) Matrix:", font_size=32, color=GOLD)
-        sys_title.next_to(title, DOWN, buff=0.4)
-        self.play(Write(sys_title))
+
+class SystemMatrixCardinalPoints(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        title = Text("System Matrix & Cardinal Points  (Bennett Section 5.5.5)", font_size=32, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.play(Write(title))
+
+        intro = section_intro([
+            "Multiply all element matrices (right-to-left) to get the SYSTEM matrix:",
+            "M_sys = M_N · ... · M_2 · M_1",
+            "The system matrix has the form:",
+        ])
+        intro.next_to(title, DOWN, buff=0.4)
+        for l in intro: self.play(FadeIn(l)); self.wait(0.8)
+        self.wait(0.3)
 
         M_sys = MathTex(
-            r"M_{\text{sys}} = M_N \cdots M_2 \cdot M_1 \quad \text{(right-to-left order)}",
-            font_size=36, color=GOLD
-        )
-        transform = MathTex(
-            r"\begin{pmatrix} y_2 \\ \theta_2 \end{pmatrix}"
-            r"= M_{\text{sys}} \begin{pmatrix} y_1 \\ \theta_1 \end{pmatrix}",
-            font_size=42
-        )
-        M_elements = MathTex(
-            r"M_{\text{sys}} = \begin{pmatrix} A & B \\ C & D \end{pmatrix}",
-            font_size=40
-        )
-        sys_group = VGroup(M_sys, transform, M_elements).arrange(DOWN, buff=0.4)
-        sys_group.next_to(sys_title, DOWN, buff=0.3)
-        for item in sys_group:
-            self.play(Write(item)); self.wait(0.8)
+            r"M_{\text{sys}} = \begin{pmatrix}A & B \\ C & D\end{pmatrix}",
+            font_size=50, color=GOLD)
+        M_sys.next_to(intro, DOWN, buff=0.35)
+        self.play(Write(M_sys)); self.wait(1.2)
+        self.play(FadeOut(VGroup(intro, M_sys)))
 
         # Cardinal points
-        self.play(FadeOut(VGroup(sys_title, sys_group)))
-        cardinal_title = Text("Cardinal Points from System Matrix M = [A B; C D]:",
-                              font_size=28, color=GOLD)
-        cardinal_title.next_to(title, DOWN, buff=0.4)
+        cardinal_title = Text("Cardinal Points from M_sys = [A B; C D]  (Bennett Eq. 5.77-5.80):", font_size=26, color=GOLD)
+        cardinal_title.next_to(title, DOWN, buff=0.5)
+        safe_scale(cardinal_title, max_width=13.5)
         self.play(Write(cardinal_title))
 
-        cardinals = VGroup(
-            MathTex(r"f_{\text{eff}} = -\frac{1}{C} \quad \text{(effective focal length)}",
-                    font_size=34, color=N_COLOR),
-            MathTex(r"f_{\text{front}} = -\frac{A}{C} \quad \text{(front focal point)}",
-                    font_size=34),
-            MathTex(r"f_{\text{back}} = \frac{1-A}{C} \quad \text{(back focal point)}",
-                    font_size=34),
-            MathTex(r"h_f = \frac{1-A}{C} \quad \text{(front principal plane)}",
-                    font_size=34),
-            MathTex(r"h_b = \frac{D-1}{C} \quad \text{(back principal plane)}",
-                    font_size=34),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.28)
+        cardinals = eq_table([
+            (r"f_{\text{eff}} = -\frac{1}{C}",   "effective focal length of the entire system", N_COLOR),
+            (r"f_{\text{front}} = -\frac{A}{C}",  "front focal distance (from first element to front focus)", WHITE),
+            (r"f_{\text{back}} = \frac{D-1}{C}",  "back focal distance (from last element to rear focus)", WHITE),
+            (r"h_f = \frac{1-A}{C}",               "position of front principal plane", WHITE),
+            (r"h_b = \frac{D-1}{C}",               "position of rear principal plane", WHITE),
+            (r"\det(M) = AD - BC = 1",             "determinant is always 1 (energy conservation)", GOLD),
+        ], eq_fs=32, lbl_fs=22, buff=0.25)
         cardinals.next_to(cardinal_title, DOWN, buff=0.3)
-        for c in cardinals:
-            self.play(FadeIn(c)); self.wait(0.6)
+        for row in cardinals: self.play(FadeIn(row)); self.wait(0.6)
+        self.wait(2); self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
 
-        # Worked example: two lenses
-        self.play(FadeOut(VGroup(cardinal_title, cardinals)))
-        ex_title = Text(
-            "Example: lens f1=20cm then free space d=10cm then lens f2=15cm. Find M_sys.",
-            font_size=22, color=GOLD
-        )
-        ex_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(ex_title))
 
-        s1 = MathTex(
-            r"M_{\text{sys}} = M_{L2} \cdot M_T \cdot M_{L1}",
-            font_size=34)
-        s2 = MathTex(
-            r"= \begin{pmatrix}1&0\\-1/15&1\end{pmatrix}"
-            r"\begin{pmatrix}1&10\\0&1\end{pmatrix}"
-            r"\begin{pmatrix}1&0\\-1/20&1\end{pmatrix}",
-            font_size=30)
-        s3 = MathTex(
-            r"\text{First: }M_T\cdot M_{L1}"
-            r"=\begin{pmatrix}1&10\\0&1\end{pmatrix}\begin{pmatrix}1&0\\-1/20&1\end{pmatrix}"
-            r"=\begin{pmatrix}1-10/20 & 10\\ -1/20 & 1\end{pmatrix}"
-            r"=\begin{pmatrix}0.5 & 10\\ -0.05 & 1\end{pmatrix}",
-            font_size=26)
-        s4 = MathTex(
-            r"M_{\text{sys}}=\begin{pmatrix}1&0\\-1/15&1\end{pmatrix}"
-            r"\begin{pmatrix}0.5&10\\-0.05&1\end{pmatrix}"
-            r"=\begin{pmatrix}0.5&10\\-0.0833&-0.333\end{pmatrix}",
-            font_size=26)
-        s5 = MathTex(
-            r"f_{\text{eff}} = -\frac{1}{C} = -\frac{1}{-0.0833} = 12\text{ cm}",
-            font_size=30, color=GOLD)
-        steps = VGroup(s1, s2, s3, s4, s5).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
-        steps.next_to(ex_title, DOWN, buff=0.3)
-        for s in steps:
-            self.play(Write(s), run_time=1.0); self.wait(0.6)
-        self.play(Create(gold_box(s5)))
-        self.wait(2); self.play(FadeOut(VGroup(title, ex_title, steps)))
+class MatrixExample(Scene):
+    """Full example: beam expander — Bennett Example"""
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        title = Text("Matrix Example: Beam Expander", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.play(Write(title))
+
+        prob = section_intro([
+            "A beam expander uses two lenses f₁ and f₂ separated by d = f₁+f₂.",
+            "Find the system matrix M_sys = M_L2 · M_T · M_L1.",
+            "Show it expands the beam by factor f₂/f₁ without focusing.",
+        ], font_size=27)
+        prob.next_to(title, DOWN, buff=0.4)
+        for l in prob: self.play(FadeIn(l)); self.wait(0.8)
+        self.wait(0.3)
+
+        solver = StepSolver(self, prob, start_buff=0.4)
+        solver.add_step(1,
+            r"M_{L1} = \begin{pmatrix}1&0\\-1/f_1&1\end{pmatrix},\;"
+            r"M_T = \begin{pmatrix}1&f_1+f_2\\0&1\end{pmatrix},\;"
+            r"M_{L2} = \begin{pmatrix}1&0\\-1/f_2&1\end{pmatrix}",
+            "write down the three element matrices")
+        solver.add_step(2,
+            r"M_T M_{L1} = \begin{pmatrix}1&f_1+f_2\\0&1\end{pmatrix}"
+            r"\begin{pmatrix}1&0\\-1/f_1&1\end{pmatrix}"
+            r"= \begin{pmatrix}1-\frac{f_1+f_2}{f_1}&f_1+f_2\\-1/f_1&1\end{pmatrix}"
+            r"= \begin{pmatrix}-f_2/f_1&f_1+f_2\\-1/f_1&1\end{pmatrix}",
+            "multiply T × L1 first (standard matrix multiplication)")
+        solver.add_step(3,
+            r"M_{\text{sys}} = M_{L2}(M_T M_{L1}) = \begin{pmatrix}-f_2/f_1&f_1+f_2\\0&-f_1/f_2\end{pmatrix}",
+            "multiply L2 × (result): C=0 means no net focusing — parallel in, parallel out!", GOLD)
+        solver.add_step(4,
+            r"f_{\text{eff}} = -1/C \to \infty \quad\text{(afocal system)}",
+            "C=0 → infinite effective focal length → beam expander works perfectly")
+        solver.add_step(5,
+            r"\text{Beam magnification} = A = -f_2/f_1 \quad\text{(ratio of beam diameters)}",
+            "A element tells us the transverse magnification of the beam", GOLD)
+        solver.finalize()
+        self.play(FadeOut(VGroup(title, prob, *solver.steps)))

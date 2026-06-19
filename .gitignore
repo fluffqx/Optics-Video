@@ -1,0 +1,17 @@
+# Manim render output — large files, don't commit
+media/
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated audio — regenerate with: python generate_audio.py
+narration/audio/
+
+# Output videos (produced locally)
+output_narrated/
+optics_full_video.mp4
+filelist.txt
+render_log.txt
+
+# VS Code
+.vscode/

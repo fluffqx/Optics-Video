@@ -1,225 +1,262 @@
 """
-generate_audio.py — Auto-generate narration MP3s for all Manim scenes
-======================================================================
+generate_audio.py — Auto-generate narration MP3s and merge with video
+=====================================================================
 
 Requirements:
-    pip install edge-tts asyncio
+    pip install edge-tts
 
 Usage:
-    python generate_audio.py              # generate all missing audio files
+    python generate_audio.py              # generate all missing MP3s
     python generate_audio.py --all        # regenerate everything (overwrite)
-    python generate_audio.py --list       # list all scenes and their status
-    python generate_audio.py --scene WaveEquation1D  # generate one scene only
-
-Output:
-    narration/audio/<SceneName>.mp3
+    python generate_audio.py --list       # check status of all scenes
+    python generate_audio.py --scene WaveEquation1D   # one scene only
+    python generate_audio.py --merge      # merge all video+audio into output_narrated/
+    python generate_audio.py --concat     # concatenate all narrated videos into one
 
 Voice options (change VOICE below):
-    en-GB-RyanNeural      — British male (default, clear and authoritative)
+    en-GB-RyanNeural      — British male (default)
     en-US-GuyNeural       — American male
     en-GB-SoniaNeural     — British female
-    en-US-AriaNeural      — American female
     en-AU-WilliamNeural   — Australian male
-
-After generating audio, sync with video using ffmpeg:
-    ffmpeg -i media/videos/<file>/1080p60/<Scene>.mp4 -i narration/audio/<Scene>.mp3
-           -c:v copy -c:a aac -shortest output/<Scene>_narrated.mp4
+    en-US-AriaNeural      — American female
 """
 
-import asyncio
-import os
-import sys
-import argparse
+import asyncio, os, sys, argparse, subprocess
 from pathlib import Path
 
-# ── Configuration ─────────────────────────────────────────────────────────────
-VOICE = "en-GB-RyanNeural"          # change this to switch voice
-RATE  = "+0%"                        # speech rate: -20% slower, +20% faster
-PITCH = "+0Hz"                       # pitch adjustment
+# ── Configuration ────────────────────────────────────────────────────────────
+VOICE       = "en-GB-RyanNeural"
+RATE        = "+0%"
+PITCH       = "+0Hz"
+QUALITY     = "1080p60"    # match your manim render quality
 
-NARRATION_DIR = Path("narration")
-AUDIO_DIR     = Path("narration/audio")
+NARRATION_DIR  = Path("narration")
+AUDIO_DIR      = Path("narration/audio")
 AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR     = Path("output_narrated")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# ── Complete scene → narration file mapping ───────────────────────────────────
+# ── Scene → narration file mapping ───────────────────────────────────────────
+# Any scene not listed here gets no narration (instrumental/visual only)
 SCENES = {
     # Week 1 — Waves
-    "Week1TitleCard":           "Week1TitleCard.txt",
-    "WaveIntroduction":         "WaveIntroduction.txt",
-    "WaveEquation1D":           "WaveEquation1D.txt",
-    "HarmonicWave":             "HarmonicWave.txt",
-    "PhaseGroupVelocity":       "PhaseGroupVelocity.txt",
-    "ComplexRepresentation":    "ComplexRepresentation.txt",
-
+    "Week1TitleCard":         "Week1TitleCard.txt",
+    "WaveIntroduction":       "WaveIntroduction.txt",
+    "WaveEquation1D":         "WaveEquation1D.txt",
+    "HarmonicWave":           "HarmonicWave.txt",
+    "PhaseGroupVelocity":     "PhaseGroupVelocity.txt",
+    "ComplexRepresentation":  "ComplexRepresentation.txt",
     # Week 1 — Maxwell
-    "MaxwellIntro":             "MaxwellIntro.txt",
-    "MaxwellEquations":         "MaxwellEquations.txt",
-    "EMWaveEquations":          "EMWaveEquations.txt",
-    "PoyntingIrradiance":       "PoyntingIrradiance.txt",
-    "DispersionScene":          "DispersionScene.txt",
-
-    # Week 2 — Fresnel
-    "Week2TitleCard":           "Week2TitleCard.txt",
-    "ReflectionRefraction":     "ReflectionRefraction.txt",
-    "FresnelEquations":         "FresnelEquations.txt",
-    "ReflectivityBrewsterTIR":  "ReflectivityBrewsterTIR.txt",
-
-    # Week 3 — Geometric
-    "Week3TitleCard":           "Week3TitleCard.txt",
-    "ThinLensScene":            "ThinLensScene.txt",
-
-    # Week 4 — Matrix
-    "Week4TitleCard":           "Week4TitleCard.txt",
-
-    # Week 5 — Jones
-    "Week5TitleCard":           "Week5TitleCard.txt",
-
-    # Week 6 — Interference
-    "Week6TitleCard":           "Week6TitleCard.txt",
-    "YoungDoubleSlit":          "YoungDoubleSlit.txt",
-
-    # Week 7 — Diffraction
-    "Week7TitleCard":           "Week7TitleCard.txt",
-    "SingleSlitScene":          "SingleSlitScene.txt",
+    "MaxwellIntro":           "MaxwellIntro.txt",
+    "MaxwellEquations":       "MaxwellEquations.txt",
+    "EMWaveEquations":        "EMWaveEquations.txt",
+    "PoyntingIrradiance":     "PoyntingIrradiance.txt",
+    "DispersionScene":        "DispersionScene.txt",
+    # Week 2
+    "Week2TitleCard":         "Week2TitleCard.txt",
+    "ReflectionRefraction":   "ReflectionRefraction.txt",
+    "FresnelEquations":       "FresnelEquations.txt",
+    "ReflectivityBrewsterTIR":"ReflectivityBrewsterTIR.txt",
+    # Week 3
+    "Week3TitleCard":         "Week3TitleCard.txt",
+    "ThinLensScene":          "ThinLensScene.txt",
+    # Week 4
+    "Week4TitleCard":         "Week4TitleCard.txt",
+    # Week 5
+    "Week5TitleCard":         "Week5TitleCard.txt",
+    # Week 6
+    "Week6TitleCard":         "Week6TitleCard.txt",
+    "YoungDoubleSlit":        "YoungDoubleSlit.txt",
+    # Week 7
+    "Week7TitleCard":         "Week7TitleCard.txt",
+    "SingleSlitScene":        "SingleSlitScene.txt",
     "CircularApertureResolution": "CircularApertureResolution.txt",
-
-    # Week 8 — Fabry-Perot
-    "Week8TitleCard":           "Week8TitleCard.txt",
-    "FabryPerotScene":          "FabryPerotScene.txt",
+    # Week 8
+    "Week8TitleCard":         "Week8TitleCard.txt",
+    "FabryPerotScene":        "FabryPerotScene.txt",
+    # Exam prep
+    "FormulaSheetTitleCard":  "FormulaSheetTitleCard.txt",
+    "MidtermPrepScene":       "MidtermPrepScene.txt",
+    "FinalExamPrepScene":     "FinalExamPrepScene.txt",
 }
 
+# ── Video path helper ─────────────────────────────────────────────────────────
+def video_path(py_file: str, scene: str, quality: str = QUALITY) -> Path:
+    stem = Path(py_file).stem
+    return Path(f"media/videos/{stem}/{quality}/{scene}.mp4")
 
-# ── Core generation function ──────────────────────────────────────────────────
-async def generate_one(scene_name: str, txt_file: str, overwrite: bool = False):
-    """Generate MP3 for a single scene."""
+
+# ── Audio generation ──────────────────────────────────────────────────────────
+async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bool:
     try:
         import edge_tts
     except ImportError:
-        print("ERROR: edge-tts not installed. Run: pip install edge-tts")
+        print("ERROR: run  pip install edge-tts  first")
         sys.exit(1)
 
     txt_path   = NARRATION_DIR / txt_file
-    audio_path = AUDIO_DIR / f"{scene_name}.mp3"
+    audio_path = AUDIO_DIR / f"{scene}.mp3"
 
     if not txt_path.exists():
-        print(f"  SKIP  {scene_name:<40} — no narration file found ({txt_file})")
+        print(f"  SKIP   {scene:<38} — no .txt narration file")
         return False
-
     if audio_path.exists() and not overwrite:
-        print(f"  EXISTS {scene_name:<40} — {audio_path}")
+        print(f"  EXISTS {scene:<38} — {audio_path}")
         return True
 
     text = txt_path.read_text(encoding="utf-8").strip()
     if not text:
-        print(f"  SKIP  {scene_name:<40} — narration file is empty")
+        print(f"  SKIP   {scene:<38} — empty txt file")
         return False
 
-    print(f"  GEN   {scene_name:<40} ...", end="", flush=True)
+    print(f"  GEN    {scene:<38} ...", end="", flush=True)
     try:
         communicate = edge_tts.Communicate(text, VOICE, rate=RATE, pitch=PITCH)
         await communicate.save(str(audio_path))
-        size_kb = audio_path.stat().st_size // 1024
-        print(f" done ({size_kb} KB)")
+        kb = audio_path.stat().st_size // 1024
+        print(f" done ({kb} KB)")
         return True
     except Exception as e:
         print(f" FAILED: {e}")
         return False
 
 
-async def generate_all(overwrite: bool = False, only: str = None):
-    """Generate audio for all scenes (or just one if only= is set)."""
-    scenes = SCENES
-    if only:
-        if only not in SCENES:
-            print(f"ERROR: scene '{only}' not found. Available scenes:")
-            for s in SCENES:
-                print(f"  {s}")
-            sys.exit(1)
-        scenes = {only: SCENES[only]}
+async def generate_all(overwrite=False, only=None):
+    scenes = SCENES if not only else {only: SCENES[only]} if only in SCENES else {}
+    if only and not scenes:
+        print(f"Scene '{only}' not in narration map."); sys.exit(1)
 
-    print(f"\n31OPT Optics — Narration Audio Generator")
-    print(f"Voice: {VOICE}  |  Rate: {RATE}  |  Output: {AUDIO_DIR}\n")
+    print(f"\n31OPT Narration Generator | Voice: {VOICE}\n")
+    ok = skip = fail = 0
+    for scene, txt in scenes.items():
+        r = await generate_one(scene, txt, overwrite)
+        if r:    ok   += 1
+        elif r is False: skip += 1
+        else:    fail  += 1
+    print(f"\nDone: {ok} generated, {skip} skipped, {fail} failed")
+    print(f"Files in: {AUDIO_DIR.resolve()}")
 
-    ok = fail = skip = 0
-    for scene_name, txt_file in scenes.items():
-        result = await generate_one(scene_name, txt_file, overwrite)
-        if result is True:
-            ok += 1
-        elif result is False:
-            txt_path = NARRATION_DIR / txt_file
-            if not txt_path.exists():
-                skip += 1
+
+# ── Video + Audio merge ───────────────────────────────────────────────────────
+def merge_all():
+    """Merge each rendered scene video with its narration audio."""
+    # Import render order from main.py
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("main_mod", "main.py")
+    m    = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    render_order = m.RENDER_ORDER
+
+    print(f"\n31OPT — Merging video + audio into {OUTPUT_DIR}/\n")
+    merged = failed = skipped = 0
+
+    for py_file, scene in render_order:
+        vid = video_path(py_file, scene, QUALITY)
+        aud = AUDIO_DIR / f"{scene}.mp3"
+        out = OUTPUT_DIR / f"{scene}.mp4"
+
+        if not vid.exists():
+            print(f"  SKIP  {scene:<38} — video not rendered yet")
+            skipped += 1
+            continue
+
+        if not aud.exists():
+            # No audio — just copy the video as-is
+            subprocess.run(
+                ["ffmpeg", "-y", "-i", str(vid), "-c", "copy", str(out)],
+                capture_output=True)
+            print(f"  COPY  {scene:<38} — no audio, copied video only")
+            skipped += 1
+            continue
+
+        print(f"  MERGE {scene:<38} ...", end="", flush=True)
+        result = subprocess.run([
+            "ffmpeg", "-y",
+            "-i",  str(vid),
+            "-i",  str(aud),
+            "-c:v", "copy",
+            "-c:a", "aac",
+            "-b:a", "192k",
+            "-shortest",         # stop when the shorter stream ends
+            "-movflags", "+faststart",  # web-optimised
+            str(out)
+        ], capture_output=True, text=True)
+
+        if result.returncode == 0:
+            mb = out.stat().st_size // (1024*1024)
+            print(f" done ({mb} MB)")
+            merged += 1
+        else:
+            print(f" FAILED")
+            print(result.stderr[-200:])
+            failed += 1
+
+    print(f"\nMerge complete: {merged} merged, {skipped} skipped, {failed} failed")
+    print(f"Output folder: {OUTPUT_DIR.resolve()}")
+
+
+def concat_final():
+    """Concatenate all output_narrated/*.mp4 into one final video."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("main_mod", "main.py")
+    m    = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    render_order = m.RENDER_ORDER
+
+    filelist = Path("filelist_narrated.txt")
+    with filelist.open("w") as f:
+        for _, scene in render_order:
+            p = OUTPUT_DIR / f"{scene}.mp4"
+            if p.exists():
+                f.write(f"file '{p.resolve()}'\n")
             else:
-                fail += 1
+                print(f"  WARNING: {p} not found — skipping from concat")
 
-    print(f"\nDone: {ok} generated, {skip} skipped (no txt), {fail} failed")
-    print(f"Audio files saved to: {AUDIO_DIR.resolve()}")
+    out = Path("optics_full_video_narrated.mp4")
+    print(f"\nConcatenating into {out} ...")
+    result = subprocess.run([
+        "ffmpeg", "-y", "-f", "concat", "-safe", "0",
+        "-i", str(filelist), "-c", "copy", str(out)
+    ], capture_output=True, text=True)
+
+    if result.returncode == 0:
+        mb = out.stat().st_size // (1024*1024)
+        print(f"Done! Final video: {out.resolve()} ({mb} MB)")
+    else:
+        print("FAILED:")
+        print(result.stderr)
 
 
 def list_scenes():
-    """Print status of all scenes."""
-    print(f"\n{'Scene':<42} {'Narration':<12} {'Audio':<12}")
-    print("-" * 70)
-    for scene, txt in SCENES.items():
-        txt_path   = NARRATION_DIR / txt
-        audio_path = AUDIO_DIR / f"{scene}.mp3"
-        txt_status   = "YES" if txt_path.exists()   else "MISSING"
-        audio_status = "YES" if audio_path.exists() else "not yet"
-        print(f"{scene:<42} {txt_status:<12} {audio_status:<12}")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("main_mod", "main.py")
+    m    = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
 
-
-# ── ffmpeg sync helper ────────────────────────────────────────────────────────
-def print_sync_commands(quality: str = "1080p60"):
-    """Print ffmpeg commands to merge video + audio for every scene."""
-    print("\n# ffmpeg commands to merge narration audio into rendered videos:")
-    print("# Run these after both manim rendering AND audio generation are done.\n")
-
-    output_dir = Path("output_narrated")
-    output_dir.mkdir(exist_ok=True)
-
-    for scene, txt_file in SCENES.items():
-        # find which python file contains this scene
-        py_file = None
-        for f in Path(".").glob("*.py"):
-            if f.name in ("main.py", "utils.py", "generate_audio.py"):
-                continue
-            try:
-                content = f.read_text(encoding="utf-8")
-                if f"class {scene}(" in content:
-                    py_file = f.stem
-                    break
-            except Exception:
-                pass
-
-        if not py_file:
-            continue
-
-        video = f"media/videos/{py_file}/{quality}/{scene}.mp4"
-        audio = f"narration/audio/{scene}.mp3"
-        out   = f"output_narrated/{scene}.mp4"
-
-        print(f"ffmpeg -i \"{video}\" -i \"{audio}\" "
-              f"-c:v copy -c:a aac -shortest \"{out}\"")
+    print(f"\n{'Scene':<38} {'Narr.txt':<10} {'Audio':<10} {'Video'}")
+    print("-"*80)
+    for py_file, scene in m.RENDER_ORDER:
+        has_txt   = "YES" if scene in SCENES and (NARRATION_DIR / SCENES[scene]).exists() else "no"
+        has_audio = "YES" if (AUDIO_DIR / f"{scene}.mp3").exists() else "no"
+        has_video = "YES" if video_path(py_file, scene).exists() else "no"
+        print(f"{scene:<38} {has_txt:<10} {has_audio:<10} {has_video}")
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Generate narration audio for 31OPT Optics Manim scenes"
-    )
-    parser.add_argument("--all",    action="store_true",
-                        help="Regenerate all audio, overwriting existing files")
-    parser.add_argument("--list",   action="store_true",
-                        help="List all scenes and their narration/audio status")
-    parser.add_argument("--sync",   action="store_true",
-                        help="Print ffmpeg commands to merge video + audio")
-    parser.add_argument("--scene",  type=str, default=None,
-                        help="Generate audio for one specific scene only")
-    args = parser.parse_args()
+    p = argparse.ArgumentParser(description="31OPT narration generator and video merger")
+    p.add_argument("--all",    action="store_true", help="Regenerate all audio files")
+    p.add_argument("--list",   action="store_true", help="Show status of all scenes")
+    p.add_argument("--scene",  type=str,            help="Generate audio for one scene")
+    p.add_argument("--merge",  action="store_true", help="Merge video+audio for all scenes")
+    p.add_argument("--concat", action="store_true", help="Concatenate all narrated videos")
+    args = p.parse_args()
 
     if args.list:
         list_scenes()
-    elif args.sync:
-        print_sync_commands()
+    elif args.merge:
+        merge_all()
+    elif args.concat:
+        concat_final()
     else:
         asyncio.run(generate_all(overwrite=args.all, only=args.scene))

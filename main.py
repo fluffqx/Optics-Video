@@ -1,189 +1,188 @@
 """
-main.py — 31OPT Optics Manim Video Series
-==========================================
-Render order for the complete optics exam prep video.
-Run individual scenes with:
-    manim -pql <file>.py <SceneClass>
-
-Render all scenes at high quality:
-    manim -qh <file>.py
-
-Concatenate with ffmpeg after rendering all scenes:
-    ffmpeg -f concat -safe 0 -i filelist.txt -c copy optics_full_video.mp4
-
-All rendered .mp4 files are output to:
-    media/videos/<file>/1080p60/<SceneClass>.mp4
-
-Generate filelist.txt by listing all output paths in the order below.
+main.py  —  31OPT Optics Manim Video Series
+============================================
+Usage:
+    python main.py --list       # print all render commands (python -m manim -qh ...)
+    python main.py --filelist   # print ffmpeg concat file list
+    python main.py --scenes     # print all scene names grouped by file
 """
+import argparse
+from pathlib import Path
 
+# ── Complete scene list in playback order ─────────────────────────────────────
+# Format: (python_file, SceneClass)
 RENDER_ORDER = [
-    # ── WEEK 1: WAVES ─────────────────────────────────────────────────────────
-    ("week1_waves.py",            "Week1TitleCard"),
-    ("week1_waves.py",            "WaveIntroduction"),
-    ("week1_waves.py",            "WaveEquation1D"),
-    ("week1_waves.py",            "HarmonicWave"),
-    ("week1_waves.py",            "PhaseGroupVelocity"),
-    ("week1_waves.py",            "ComplexRepresentation"),
-    ("week1_waves.py",            "Week1WavesSummary"),
+    # ── WEEK 1: Waves ────────────────────────────────────────────────────────
+    ("week1_waves.py",             "Week1TitleCard"),
+    ("week1_waves.py",             "WaveIntroduction"),
+    ("week1_waves.py",             "WaveEquation1D"),
+    ("week1_waves.py",             "WaveEquationProof"),
+    ("week1_waves.py",             "HarmonicWave"),
+    ("week1_waves.py",             "HarmonicWaveExample"),
+    ("week1_waves.py",             "SuperpositionPrinciple"),
+    ("week1_waves.py",             "PhaseGroupVelocity"),
+    ("week1_waves.py",             "ComplexRepresentation"),
+    ("week1_waves.py",             "ThreeDWaves"),
+    ("week1_waves.py",             "Week1WavesSummary"),
 
-    # ── WEEK 1: MAXWELL ───────────────────────────────────────────────────────
-    ("week1_maxwell.py",          "MaxwellIntro"),
-    ("week1_maxwell.py",          "MaxwellEquations"),
-    ("week1_maxwell.py",          "EMWaveEquations"),
-    ("week1_maxwell.py",          "PoyntingIrradiance"),
-    ("week1_maxwell.py",          "DispersionScene"),
+    # ── WEEK 1: Maxwell ──────────────────────────────────────────────────────
+    ("week1_maxwell.py",           "MaxwellIntro"),
+    ("week1_maxwell.py",           "VectorCalculusNotation"),
+    ("week1_maxwell.py",           "MaxwellEquations"),
+    ("week1_maxwell.py",           "MaxwellVacuum"),
+    ("week1_maxwell.py",           "EMWaveDerivation"),
+    ("week1_maxwell.py",           "EMWaveProperties"),
+    ("week1_maxwell.py",           "EMWaveExample"),
+    ("week1_maxwell.py",           "PoyntingIrradiance"),
+    ("week1_maxwell.py",           "RadiationPressure"),
+    ("week1_maxwell.py",           "DispersionScene"),
 
-    # ── WEEK 1: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week1.py",        "SC_Week1_Problem1"),
-    ("exercises_week1.py",        "SC_Week1_Problem2"),
-    ("exercises_week1.py",        "SC_Week1_Problem3"),
-    ("exercises_week1.py",        "SC_Week1_Problem4"),
-    ("exercises_week1.py",        "SC_Week1_Problem5"),
+    # ── WEEK 2: Fresnel ──────────────────────────────────────────────────────
+    ("week2_fresnel.py",           "Week2TitleCard"),
+    ("week2_fresnel.py",           "Week2Intro"),
+    ("week2_fresnel.py",           "FermatPrinciple"),
+    ("week2_fresnel.py",           "ReflectionRefraction"),
+    ("week2_fresnel.py",           "FresnelEquationsDerivation"),
+    ("week2_fresnel.py",           "FresnelEquations"),
+    ("week2_fresnel.py",           "FresnelFullExample"),
+    ("week2_fresnel.py",           "ReflectivityTransmissivity"),
+    ("week2_fresnel.py",           "BrewsterTIR"),
+    ("week2_fresnel.py",           "MalusLaw"),
 
-    # ── WEEK 1: SLT ───────────────────────────────────────────────────────────
-    ("slt_week1.py",              "SLT_Week1_Problem1"),
-    ("slt_week1.py",              "SLT_Week1_Problem2"),
+    # ── WEEK 3: Geometric Optics ─────────────────────────────────────────────
+    ("week3_geometric.py",         "Week3TitleCard"),
+    ("week3_geometric.py",         "GeometricOpticsIntro"),
+    ("week3_geometric.py",         "SignConventions"),
+    ("week3_geometric.py",         "SphericalSurface"),
+    ("week3_geometric.py",         "ThinLensScene"),
+    ("week3_geometric.py",         "MirrorScene"),
+    ("week3_geometric.py",         "LensCombinations"),
+    ("week3_geometric.py",         "OpticalInstruments"),
 
-    # ── WEEK 2: FRESNEL ───────────────────────────────────────────────────────
-    ("week2_fresnel.py",          "Week2TitleCard"),
-    ("week2_fresnel.py",          "Week2Intro"),
-    ("week2_fresnel.py",          "ReflectionRefraction"),
-    ("week2_fresnel.py",          "FresnelEquations"),
-    ("week2_fresnel.py",          "ReflectivityBrewsterTIR"),
-
-    # ── WEEK 2: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week2.py",        "SC_Week2_Problem1"),
-    ("exercises_week2.py",        "SC_Week2_Problem2"),
-    ("exercises_week2.py",        "SC_Week2_Problem6"),
-    ("exercises_week2.py",        "SC_Week2_Problem7"),
-
-    # ── WEEK 2: SLT ───────────────────────────────────────────────────────────
-    ("slt_week2.py",              "SLT_Week2_Problem1"),
-    ("slt_week2.py",              "SLT_Week2_Problem2"),
-
-    # ── WEEK 3: GEOMETRIC OPTICS ──────────────────────────────────────────────
-    ("week3_geometric.py",        "Week3TitleCard"),
-    ("week3_geometric.py",        "GeometricOpticsIntro"),
-    ("week3_geometric.py",        "SignConventions"),
-    ("week3_geometric.py",        "SphericalSurface"),
-    ("week3_geometric.py",        "ThinLensScene"),
-    ("week3_geometric.py",        "MirrorScene"),
-    ("week3_geometric.py",        "LensCombinations"),
-
-    # ── WEEK 3: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week3.py",        "SC_Week3_Problem1"),
-    ("exercises_week3.py",        "SC_Week3_Problem3"),
-
-    # ── WEEK 3: SLT ───────────────────────────────────────────────────────────
-    ("slt_week3.py",              "SLT_Week3_Problem1"),
-
-    # ── WEEK 4: MATRIX OPTICS ─────────────────────────────────────────────────
+    # ── WEEK 4: Matrix Optics ────────────────────────────────────────────────
     ("week4_matrix_polarisation.py", "Week4TitleCard"),
     ("week4_matrix_polarisation.py", "MatrixOpticsIntro"),
     ("week4_matrix_polarisation.py", "MatrixEquations"),
+    ("week4_matrix_polarisation.py", "SystemMatrixCardinalPoints"),
+    ("week4_matrix_polarisation.py", "MatrixExample"),
 
-    # ── WEEK 4: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week4.py",        "SC_Week4_Problem1"),
-    ("exercises_week4.py",        "SC_Week4_Problem3"),
+    # ── WEEK 5: Jones / Polarisation ─────────────────────────────────────────
+    ("week5_jones.py",             "Week5TitleCard"),
+    ("week5_jones.py",             "PolarisationStatesScene"),
+    ("week5_jones.py",             "BirefringenceWavePlates"),
+    ("week5_jones.py",             "JonesFormalism"),
+    ("week5_jones.py",             "JonesMatrices"),
 
-    # ── WEEK 5: JONES & POLARISATION ──────────────────────────────────────────
-    ("week5_jones.py",            "Week5TitleCard"),
-    ("week5_jones.py",            "PolarisationStatesScene"),
-    ("week5_jones.py",            "BirefringenceWavePlates"),
-    ("week5_jones.py",            "JonesFormalism"),
-    ("week5_jones.py",            "JonesMatrices"),
+    # ── WEEK 6: Interference ────────────────────────────────────────────────
+    ("week6_interference.py",      "Week6TitleCard"),
+    ("week6_interference.py",      "InterferenceIntroScene"),
+    ("week6_interference.py",      "TwoBeamInterference"),
+    ("week6_interference.py",      "YoungDoubleSlit"),
+    ("week6_interference.py",      "ThinFilmInterference"),
+    ("week6_interference.py",      "FringeVisibility"),
+    ("week6_interference.py",      "MichelsonScene"),
 
-    # ── WEEK 5: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week5.py",        "SC_Week5_Problem3"),
-    ("exercises_week5.py",        "SC_Week5_Problem7"),
-    ("exercises_week5.py",        "SC_Week5_Problem4"),
+    # ── WEEK 7: Diffraction ──────────────────────────────────────────────────
+    ("week7_diffraction.py",       "Week7TitleCard"),
+    ("week7_diffraction.py",       "HuygensPrinciple"),
+    ("week7_diffraction.py",       "SingleSlitDiffraction"),
+    ("week7_diffraction.py",       "CircularApertureRayleigh"),
+    ("week7_diffraction.py",       "DiffractionGrating"),
 
-    # ── WEEK 5: SLT ───────────────────────────────────────────────────────────
-    ("slt_week5.py",              "SLT_Week5_Problem1"),
+    # ── WEEK 8: Fabry-Pérot ──────────────────────────────────────────────────
+    ("week8_fabry_perot.py",       "Week8TitleCard"),
+    ("week8_fabry_perot.py",       "MultiBeamIntro"),
+    ("week8_fabry_perot.py",       "AiryFunction"),
+    ("week8_fabry_perot.py",       "FinesseResolving"),
+    ("week8_fabry_perot.py",       "FabryPerotExample"),
+    ("week8_fabry_perot.py",       "CoherenceLength"),
+    ("week8_fabry_perot.py",       "Week8Summary"),
 
-    # ── WEEKS 5-6: INTERFERENCE ───────────────────────────────────────────────
-    ("week6_interference.py",     "Week6TitleCard"),
-    ("week6_interference.py",     "InterferenceIntroScene"),
-    ("week6_interference.py",     "TwoBeamInterference"),
-    ("week6_interference.py",     "YoungDoubleSlit"),
-    ("week6_interference.py",     "ThinFilmInterference"),
-    ("week6_interference.py",     "MichelsonScene"),
+    # ── FORMULA SHEET & EXAM PREP ────────────────────────────────────────────
+    ("formula_sheet_recap.py",     "FormulaSheetTitleCard"),
+    ("formula_sheet_recap.py",     "FormulasWavesMaxwell"),
+    ("formula_sheet_recap.py",     "FormulasOptics"),
+    ("formula_sheet_recap.py",     "FormulasInterferenceDiffraction"),
+    ("formula_sheet_recap.py",     "MidtermPrepScene"),
+    ("formula_sheet_recap.py",     "FinalExamPrepScene"),
 
-    # ── WEEK 6: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week6.py",        "SC_Week6_Problem1"),
-    ("exercises_week6.py",        "SC_Week6_Problem3"),
-    ("exercises_week6.py",        "SC_Week6_Problem4"),
+    # ── EXERCISES ────────────────────────────────────────────────────────────
+    ("exercises_week1.py",         "ExWeek1TitleCard"),
+    ("exercises_week1.py",         "ExWeek1Problem1"),
+    ("exercises_week1.py",         "ExWeek1Problem2"),
+    ("exercises_week1.py",         "ExWeek1Problem3"),
+    ("exercises_week2.py",         "ExWeek2TitleCard"),
+    ("exercises_week2.py",         "ExWeek2Problem1"),
+    ("exercises_week2.py",         "ExWeek2Problem2"),
+    ("exercises_week3.py",         "ExWeek3TitleCard"),
+    ("exercises_week3.py",         "ExWeek3Problem1"),
+    ("exercises_week3.py",         "ExWeek3Problem2"),
+    ("exercises_week6.py",         "ExWeek6TitleCard"),
+    ("exercises_week6.py",         "ExWeek6Problem1"),
+    ("exercises_week7.py",         "ExWeek7TitleCard"),
+    ("exercises_week7.py",         "ExWeek7Problem1"),
+    ("exercises_week8.py",         "ExWeek8TitleCard"),
+    ("exercises_week8.py",         "ExWeek8Problem1"),
 
-    # ── WEEK 6: SLT ───────────────────────────────────────────────────────────
-    ("slt_week6.py",              "SLT_Week6_Problem1"),
-    ("slt_week6.py",              "SLT_Week6_Problem2"),
-    ("slt_week6.py",              "SLT_Week6_Problem3"),
-
-    # ── WEEK 7: DIFFRACTION ───────────────────────────────────────────────────
-    ("week7_diffraction.py",      "Week7TitleCard"),
-    ("week7_diffraction.py",      "DiffractionIntroScene"),
-    ("week7_diffraction.py",      "SingleSlitScene"),
-    ("week7_diffraction.py",      "RectangularApertureScene"),
-    ("week7_diffraction.py",      "CircularApertureResolution"),
-    ("week7_diffraction.py",      "DiffractionGratingScene"),
-
-    # ── WEEK 7: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week7.py",        "SC_Week7_Problem1"),
-    ("exercises_week7.py",        "SC_Week7_Problem5"),
-    ("exercises_week7.py",        "SC_Week7_Problem10"),
-
-    # ── WEEK 7: SLT ───────────────────────────────────────────────────────────
-    ("slt_week7.py",              "SLT_Week7_Problem1"),
-    ("slt_week7.py",              "SLT_Week7_Problem2"),
-
-    # ── WEEK 8: FABRY-PEROT ───────────────────────────────────────────────────
-    ("week8_fabry_perot.py",      "Week8TitleCard"),
-    ("week8_fabry_perot.py",      "FabryPerotScene"),
-    ("week8_fabry_perot.py",      "CoherenceScene"),
-
-    # ── WEEK 8: EXERCISES ─────────────────────────────────────────────────────
-    ("exercises_week8.py",        "SC_Week8_Problem9"),
-    ("exercises_week8.py",        "SC_Week8_Problem10"),
-    ("exercises_week8.py",        "SC_Week8_Problem3"),
-
-    # ── WEEK 8-9: SLT ─────────────────────────────────────────────────────────
-    ("slt_week8.py",              "SLT_Week8_Problem1"),
-    ("slt_week8.py",              "SLT_Week8_Problem2"),
-    ("slt_week9.py",              "SLT_Week9_Problem1"),
-    ("slt_week9.py",              "SLT_Week9_Problem2"),
-    ("slt_week9.py",              "SLT_Week9_Problem4"),
+    # ── SLTs ─────────────────────────────────────────────────────────────────
+    ("slt_week1.py",               "SLTWeek1"),
+    ("slt_week2.py",               "SLTWeek2"),
+    ("slt_week3.py",               "SLTWeek3"),
+    ("slt_week5.py",               "SLTWeek5"),
+    ("slt_week6.py",               "SLTWeek6"),
+    ("slt_week7.py",               "SLTWeek7"),
+    ("slt_week8.py",               "SLTWeek8"),
+    ("slt_week9.py",               "SLTWeek9"),
 ]
 
+QUALITY_FLAG = "qh"   # qh = 1080p60 | ql = 480p15 (low for testing) | qm = 720p
 
-def print_render_commands(quality: str = "ql") -> None:
+
+def print_render_commands(quality: str = QUALITY_FLAG) -> None:
     """Print all manim render commands in order."""
+    print(f"# 31OPT Optics — {len(RENDER_ORDER)} scenes to render")
+    print(f"# Quality: -{quality}   Change QUALITY_FLAG in main.py to 'ql' for fast preview")
+    print()
     for filepath, scene in RENDER_ORDER:
-        print(f"python -m manim -{quality} {filepath} {scene}")
+        if Path(filepath).exists():
+            print(f"python -m manim -{quality} {filepath} {scene}")
+        else:
+            print(f"# MISSING FILE: {filepath}  (scene: {scene})")
 
 
-def generate_filelist(media_root: str = "media/videos", quality: str = "1080p60") -> str:
-    """Generate ffmpeg filelist.txt content."""
-    lines = []
+def print_filelist(quality: str = QUALITY_FLAG) -> None:
+    """Print ffmpeg concat filelist for all rendered scenes."""
+    res = "1080p60" if quality == "qh" else ("480p15" if quality == "ql" else "720p30")
     for filepath, scene in RENDER_ORDER:
-        stem = filepath.replace(".py", "")
-        path = f"{media_root}/{stem}/{quality}/{scene}.mp4"
-        lines.append(f"file '{path}'")
-    return "\n".join(lines)
+        stem = Path(filepath).stem
+        mp4  = Path(f"media/videos/{stem}/{res}/{scene}.mp4")
+        if mp4.exists():
+            print(f"file '{mp4}'")
+        else:
+            print(f"# NOT YET RENDERED: {mp4}")
+
+
+def print_scenes() -> None:
+    """Print all scene names grouped by file."""
+    current_file = None
+    for filepath, scene in RENDER_ORDER:
+        if filepath != current_file:
+            current_file = filepath
+            print(f"\n── {filepath} ──")
+        print(f"    {scene}")
 
 
 if __name__ == "__main__":
-    import sys
-    if "--list" in sys.argv:
-        print_render_commands("qh")
-    elif "--filelist" in sys.argv:
-        print(generate_filelist())
+    parser = argparse.ArgumentParser(description="31OPT Optics Manim render helper")
+    parser.add_argument("--list",      action="store_true", help="Print all render commands")
+    parser.add_argument("--filelist",  action="store_true", help="Print ffmpeg concat filelist")
+    parser.add_argument("--scenes",    action="store_true", help="List all scene names")
+    parser.add_argument("--quality",   default=QUALITY_FLAG, help="Manim quality flag (qh/qm/ql)")
+    args = parser.parse_args()
+
+    if args.filelist:
+        print_filelist(args.quality)
+    elif args.scenes:
+        print_scenes()
     else:
-        print("Usage:")
-        print("  python main.py --list       # print all render commands (high quality)")
-        print("  python main.py --filelist   # print ffmpeg filelist.txt content")
-        print()
-        print(f"Total scenes: {len(RENDER_ORDER)}")
-        print()
-        print("Quick render (low quality preview):")
-        print_render_commands("ql")
+        print_render_commands(args.quality)
