@@ -216,11 +216,14 @@ def merge_all():
             "ffmpeg", "-y",
             "-i",  str(vid),
             "-i",  str(aud),
-            "-c:v", "copy",
-            "-c:a", "aac",
-            "-b:a", "192k",
-            "-shortest",         # stop when the shorter stream ends
-            "-movflags", "+faststart",  # web-optimised
+            # Freeze last video frame until audio finishes
+            "-filter_complex", "[0:v]tpad=stop_mode=clone:stop_duration=120[v]",
+            "-map", "[v]",
+            "-map", "1:a",
+            "-c:v", "libx264", "-preset", "fast", "-crf", "18",
+            "-c:a", "aac", "-b:a", "192k",
+            "-shortest",
+            "-movflags", "+faststart",
             str(out)
         ], capture_output=True, text=True)
 

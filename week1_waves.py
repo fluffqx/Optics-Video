@@ -31,6 +31,7 @@ class WaveIntroduction(Scene):
         p1.next_to(title, DOWN, buff=0.4)
         for line in p1: self.play(FadeIn(line)); self.wait(1.0)
         self.wait(0.5)
+        self.play(FadeOut(p1))
 
         p2 = section_intro([
             "Mechanical waves (strings, sound) require an elastic medium for propagation.",
@@ -40,9 +41,10 @@ class WaveIntroduction(Scene):
             "Waves on a string are TRANSVERSE — the displacement is perpendicular to the",
             "direction of travel.",
         ], font_size=26)
-        p2.next_to(p1, DOWN, buff=0.35)
+        p2.next_to(title, DOWN, buff=0.4)
         for line in p2: self.play(FadeIn(line)); self.wait(0.9)
-        self.wait(0.5); self.play(FadeOut(VGroup(p1, p2)))
+        self.wait(0.5)
+        self.play(FadeOut(p2))
 
         p3 = section_intro([
             "Electromagnetic waves (light, radio, X-rays) are different from mechanical",
