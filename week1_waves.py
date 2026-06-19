@@ -26,7 +26,7 @@ class WaveIntroduction(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("What Is a Wave?", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # para1 (3s): "So what exactly is a wave?"
         pg(self, title, ["So what exactly is a wave?"], wait=3)
@@ -69,7 +69,7 @@ class WaveEquation1D(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # Show the equation — para1 (7s): "Here is the 1D wave equation..."
         eq = MathTex(
@@ -124,7 +124,7 @@ class WaveEquationProof(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Proof: f(x-vt) Satisfies the Wave Equation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(2)
+        self.play(Write(title))
 
         pg(self, title, [
             "Let Psi(x,t) = (x - vt) squared and verify it solves the wave equation.",
@@ -145,7 +145,7 @@ class HarmonicWave(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Harmonic Traveling Waves", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # para1 (11s): "The most important special case..."
         pg(self, title, [
@@ -216,7 +216,7 @@ class HarmonicWaveExample(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Example: Green Laser (lambda = 532 nm)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(2)
+        self.play(Write(title))
 
         pg(self, title, [
             "Given: lambda = 532 nm = 532 x 10^-9 m",
@@ -238,7 +238,7 @@ class SuperpositionPrinciple(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("The Principle of Superposition", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         pg(self, title, [
             "The wave equation is LINEAR — Psi appears only to the first power.",
@@ -275,7 +275,7 @@ class PhaseGroupVelocity(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Phase Velocity & Group Velocity", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # para1 (9s): "There are two different speeds..."
         pg(self, title, [
@@ -331,7 +331,7 @@ class ComplexRepresentation(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Complex Representation of Waves", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # para1 (15s): "Working with sines and cosines is cumbersome..."
         pg(self, title, [
@@ -397,7 +397,7 @@ class ThreeDWaves(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("3D Plane Waves & Spherical Waves", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # para1 (24s): "In 3D, a plane wave is..."
         plane = MathTex(r"\tilde{\Psi}(\vec{r},t) = Ae^{i(\vec{k}\cdot\vec{r}-\omega t)}", font_size=50, color=E_COLOR)

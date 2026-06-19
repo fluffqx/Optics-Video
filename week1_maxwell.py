@@ -30,7 +30,7 @@ class MaxwellIntro(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Maxwell's Equations", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # Para 1 (15s): "Maxwell's equations are the four fundamental laws..."
         page(self, title, [
@@ -65,52 +65,63 @@ class MaxwellIntro(Scene):
 
 
 class VectorCalculusNotation(Scene):
-    """4 narration paragraphs — 4 pages"""
+    """4 narration paragraphs — perfectly synced"""
     def construct(self):
         self.camera.background_color = BG_COLOR
         title = Text("Vector Calculus Notation", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(5)
+        self.play(Write(title))
+        # NO wait here — narrator starts immediately
 
         # Para 1 (5s): "Before writing Maxwell's equations, we need three operators"
-        page(self, title, [
-            "Before writing Maxwell's equations, we need three differential operators.",
-        ], wait=5)
+        intro = Text("Before writing Maxwell's equations, we need three differential operators.", font_size=26, color=WHITE)
+        safe_scale(intro, max_width=13.0)
+        intro.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(intro))
+        self.wait(5)
+        self.play(FadeOut(intro))
 
-        # Para 2 (21s): "The divergence..."
-        div_eq = MathTex(
+        def operator_block(eq_latex, name, desc1, desc2, eq_color, eq_fs=38):
+            """Create equation + name label + two description lines as one block."""
+            eq   = MathTex(eq_latex, font_size=eq_fs, color=eq_color)
+            safe_scale(eq, max_width=13.0)
+            lbl  = Text(name, font_size=30, color=eq_color, weight=BOLD)
+            d1   = Text(desc1, font_size=26, color=WHITE)
+            d2   = Text(desc2, font_size=26, color=COMMENT_COLOR)
+            safe_scale(d1, max_width=13.0)
+            safe_scale(d2, max_width=13.0)
+            block = VGroup(eq, lbl, d1, d2).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
+            safe_scale(block, max_width=13.0, max_height=4.2)
+            block.next_to(title, DOWN, buff=0.45)
+            return block
+
+        # Para 2 (21s): "The divergence of a vector field F..."
+        p2 = operator_block(
             r"\nabla\cdot\vec{F} = \frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}",
-            font_size=40, color=E_COLOR)
-        div_desc = Text("DIVERGENCE — measures how much F spreads outward from a point.", font_size=26, color=WHITE)
-        div_extra = Text("Positive divergence = source.  Negative = sink.  Zero = no sources.", font_size=26, color=WHITE)
-        safe_scale(div_eq, max_width=13.0)
-        safe_scale(div_desc, max_width=13.0)
-        safe_scale(div_extra, max_width=13.0)
-        p2 = VGroup(div_eq, div_desc, div_extra).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        p2.next_to(title, DOWN, buff=0.5)
+            "DIVERGENCE",
+            "Measures how much F spreads outward from a point.",
+            "Positive = source (field lines radiate out).  Zero = no sources.",
+            E_COLOR, eq_fs=34)
         self.play(FadeIn(p2)); self.wait(21); self.play(FadeOut(p2))
 
-        # Para 3 (18s): "The curl..."
-        curl_eq = MathTex(
+        # Para 3 (18s): "The curl of F..."
+        p3 = operator_block(
             r"\nabla\times\vec{F} = \left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}\right)\hat{x}+\cdots",
-            font_size=36, color=B_COLOR)
-        curl_desc = Text("CURL — measures how much F rotates around a point.", font_size=26, color=WHITE)
-        curl_extra = Text("Think: a paddle wheel in the field spins if curl is nonzero.", font_size=26, color=WHITE)
-        safe_scale(curl_eq, max_width=13.0)
-        p3 = VGroup(curl_eq, curl_desc, curl_extra).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        p3.next_to(title, DOWN, buff=0.5)
+            "CURL",
+            "Measures how much F rotates around a point.",
+            "A paddle wheel in the field spins if curl is nonzero.",
+            B_COLOR, eq_fs=32)
         self.play(FadeIn(p3)); self.wait(18); self.play(FadeOut(p3))
 
         # Para 4 (12s): "The Laplacian..."
-        lap_eq = MathTex(
+        p4 = operator_block(
             r"\nabla^2 F = \frac{\partial^2 F}{\partial x^2}+\frac{\partial^2 F}{\partial y^2}+\frac{\partial^2 F}{\partial z^2}",
-            font_size=40, color=WAVE_COLOR)
-        lap_desc = Text("LAPLACIAN — the 3D generalisation of the second derivative.", font_size=26, color=WHITE)
-        lap_extra = Text("Appears in the EM wave equation in 3 dimensions.", font_size=26, color=WHITE)
-        safe_scale(lap_eq, max_width=13.0)
-        p4 = VGroup(lap_eq, lap_desc, lap_extra).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        p4.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(p4)); self.wait(12); self.play(FadeOut(VGroup(title, p4)))
+            "LAPLACIAN",
+            "The 3D generalisation of the second derivative.",
+            "Appears in the EM wave equation in 3 dimensions.",
+            WAVE_COLOR, eq_fs=34)
+        self.play(FadeIn(p4)); self.wait(12)
+        self.play(FadeOut(VGroup(title, p4)))
 
 
 class MaxwellEquations(Scene):
@@ -119,7 +130,7 @@ class MaxwellEquations(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Maxwell's Equations in Matter", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         # Para 1 (4s): "Here are Maxwell's four equations in matter."
         page(self, title, ["Here are Maxwell's four equations in matter."], wait=4)
@@ -201,7 +212,7 @@ class MaxwellVacuum(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Maxwell's Equations in Vacuum", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         page(self, title, [
             "In empty space with no charges and no currents:",
@@ -231,7 +242,7 @@ class EMWaveDerivation(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         page(self, title, [
             "Take the curl of Faraday's law and substitute Ampere-Maxwell.",
@@ -370,7 +381,7 @@ class RadiationPressure(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Radiation Pressure", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         page(self, title, [
             "Light carries momentum — it exerts a pressure on surfaces it strikes.",
@@ -400,7 +411,7 @@ class DispersionScene(Scene):
         self.camera.background_color = BG_COLOR
         title = Text("Dispersion & Index of Refraction", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title)); self.wait(1)
+        self.play(Write(title))
 
         page(self, title, [
             "Dispersion: the refractive index n depends on frequency.",
