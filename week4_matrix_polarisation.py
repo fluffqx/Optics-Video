@@ -24,7 +24,7 @@ class Week4TitleCard(Scene):
             "Bennett Ch. 5.5, 7.1–7.3.1, 6.1–6.2  |  Lecture 4.1"
         )
         self.play(FadeIn(card))
-        self.wait(30)
+        self.wait(133.1)
         self.play(FadeOut(card))
 
 
@@ -39,21 +39,21 @@ class MatrixOpticsIntro(Scene):
             "Any sequence of optical elements can be represented by a SINGLE 2x2 matrix.",
             "This is the ray transfer matrix method — immensely powerful for optical design.",
             "Computers use exactly this method to design camera lenses with 20+ elements.",
-        ], wait=18)
+        ], wait=18.3)
 
         pg(self, title, [
             "A ray near the optical axis is described by two numbers:",
             "  y = height from the optical axis  [m]",
             "  theta = angle the ray makes with the axis  [rad]",
             "Written as a column vector: [y, theta]^T",
-        ], wait=16)
+        ], wait=19.7)
 
         pg(self, title, [
             "Each optical element maps [y_in, theta_in] to [y_out, theta_out] via a 2x2 matrix.",
             "For a sequence of N elements: M_sys = M_N x ... x M_2 x M_1  (right-to-left!)",
             "The FIRST element encountered goes on the RIGHT of the product.",
             "This is the standard convention — multiplying LEFT-TO-RIGHT gives wrong result.",
-        ], wait=20)
+        ], wait=12.5)
 
         self.play(FadeOut(title))
 
@@ -101,7 +101,7 @@ class MatrixEquations(Scene):
             safe_scale(desc, max_width=13.0)
             block = VGroup(m_title, eq, desc)
             self.play(FadeIn(block, run_time=0.4))
-            self.wait(18)
+            self.wait(55.2)
             self.play(FadeOut(block, run_time=0.4))
 
         self.play(FadeOut(title))
@@ -117,13 +117,13 @@ class SystemMatrixCardinalPoints(Scene):
         pg(self, title, [
             "Multiply all element matrices right-to-left to get the SYSTEM matrix.",
             "The system matrix has the general form [A B; C D].",
-        ], wait=12)
+        ], wait=8.7)
 
         M_sys = MathTex(r"M_{\text{sys}} = \begin{pmatrix}A & B \\ C & D\end{pmatrix}",
                         font_size=52, color=GOLD)
         M_sys.next_to(title, DOWN, buff=0.5)
         self.play(Write(M_sys))
-        self.wait(8)
+        self.wait(19.8)
         self.play(FadeOut(M_sys))
 
         cardinal_title = Text("Cardinal Points from [A B; C D]:", font_size=28, color=GOLD)
@@ -139,7 +139,7 @@ class SystemMatrixCardinalPoints(Scene):
         cardinals.next_to(cardinal_title, DOWN, buff=0.3)
         safe_scale(cardinals, max_height=3.5)
         self.play(FadeIn(cardinals))
-        self.wait(25)
+        self.wait(23.7)
         self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
 
 
@@ -154,7 +154,7 @@ class MatrixExample(Scene):
             "A beam expander uses two lenses f1 and f2 separated by d = f1+f2.",
             "Goal: expand beam diameter by ratio f2/f1 with no net focusing (afocal).",
             "Find: system matrix M = M_L2 x M_T x M_L1",
-        ], wait=18)
+        ], wait=11.1)
 
         solver = StepSolver(self, title, start_buff=0.55)
         solver.add_step(1,
@@ -172,7 +172,7 @@ class MatrixExample(Scene):
             r"f_{\text{eff}}=-1/C\to\infty,\quad\text{beam magnification}=|A|=f_2/f_1",
             "infinite focal length = afocal. Beam expands by factor f2/f1.", GOLD)
         solver.finalize()
-        self.wait(5)
+        self.wait(40.1)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 

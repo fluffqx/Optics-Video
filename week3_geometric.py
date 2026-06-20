@@ -24,7 +24,7 @@ class Week3TitleCard(Scene):
             "Bennett Ch. 4.3–4.5, 5.2, 5.5"
         )
         self.play(FadeIn(card))
-        self.wait(30)
+        self.wait(83.5)
         self.play(FadeOut(card))
 
 
@@ -39,20 +39,20 @@ class GeometricOpticsIntro(Scene):
             "When the wavelength of light is MUCH smaller than the aperture,",
             "diffraction effects are negligible and light travels in straight RAYS.",
             "This is the regime of geometric optics.",
-        ], wait=15)
+        ], wait=18.8)
 
         pg(self, title, [
             "Geometric optics describes: lenses, mirrors, telescopes,",
             "microscopes, the human eye, cameras, and optical fibres.",
             "It breaks down when apertures are comparable to the wavelength.",
-        ], wait=15)
+        ], wait=17.3)
 
         pg(self, title, [
             "Key simplification: the PARAXIAL APPROXIMATION (Bennett 4.3.1).",
             "For small angles (rays close to and nearly parallel to the optical axis):",
             "sin(theta) ≈ tan(theta) ≈ theta  [theta in radians]",
             "This linearises all equations and makes analytic solutions possible.",
-        ], wait=18)
+        ], wait=12.1)
 
         self.play(FadeOut(title))
 
@@ -70,7 +70,7 @@ class SignConventions(Scene):
         safe_scale(warning, max_width=13.0)
         warning.next_to(title, DOWN, buff=0.35)
         self.play(FadeIn(warning))
-        self.wait(5)
+        self.wait(13.5)
 
         rules = [
             ("Distances",       "measured FROM the optical element (lens/mirror/surface)"),
@@ -95,7 +95,7 @@ class SignConventions(Scene):
         rule_group.next_to(warning, DOWN, buff=0.3)
         safe_scale(rule_group, max_height=4.5)
         self.play(FadeIn(rule_group))
-        self.wait(45)
+        self.wait(84.3)
         self.play(FadeOut(VGroup(title, warning, rule_group)))
 
 
@@ -109,13 +109,13 @@ class SphericalSurface(Scene):
         pg(self, title, [
             "Before thin lenses, Bennett treats a SINGLE curved interface.",
             "Apply the paraxial approximation to Snell's law at the curved surface.",
-        ], wait=10)
+        ], wait=13.0)
 
         eq = MathTex(r"\frac{n_m}{s_o} + \frac{n_i}{s_i} = \frac{n_i - n_m}{R}",
                      font_size=56, color=N_COLOR)
         eq.next_to(title, DOWN, buff=0.5)
         self.play(Write(eq))
-        self.wait(5)
+        self.wait(20.7)
 
         sym = eq_table([
             (r"n_m", "index of incident medium (object side)", N_COLOR),
@@ -126,14 +126,14 @@ class SphericalSurface(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(sym))
-        self.wait(20)
+        self.wait(14.5)
         self.play(FadeOut(sym))
 
         pg(self, title, [
             "Example: air (n=1.0) to glass (n=1.5), R=+10 cm, object at 30 cm.",
             "1.0/30 + 1.5/s_i = (1.5-1.0)/10 = 0.05",
             "1.5/s_i = 0.05 - 0.033 = 0.017  =>  s_i = 90 cm  (real image in glass)",
-        ], wait=20)
+        ], wait=2.0)
 
         self.play(FadeOut(VGroup(title, eq)))
 
@@ -148,7 +148,7 @@ class ThinLensScene(Scene):
         pg(self, title, [
             "A thin lens has two spherical surfaces so close we treat them as one.",
             "Apply the spherical surface equation TWICE to derive the thin lens equation.",
-        ], wait=12)
+        ], wait=12.1)
 
         lme = MathTex(r"\frac{1}{f} = (n_l-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)",
                       font_size=44, color=N_COLOR)
@@ -156,14 +156,14 @@ class ThinLensScene(Scene):
         lme_block = VGroup(lme, lme_lbl).arrange(DOWN, buff=0.2)
         lme_block.next_to(title, DOWN, buff=0.5)
         self.play(Write(lme_block))
-        self.wait(15)
+        self.wait(8.7)
         self.play(FadeOut(lme_block))
 
         tl = MathTex(r"\frac{1}{s_o} + \frac{1}{s_i} = \frac{1}{f}", font_size=62, color=GOLD)
         tl.next_to(title, DOWN, buff=0.5)
         self.play(Write(tl))
         self.play(Create(gold_box(tl)))
-        self.wait(5)
+        self.wait(13.5)
 
         extras = VGroup(
             labeled_eq(r"m = -\frac{s_i}{s_o}", "lateral magnification", WHITE, 44, 24),
@@ -171,7 +171,7 @@ class ThinLensScene(Scene):
         ).arrange(RIGHT, buff=1.5)
         extras.next_to(tl, DOWN, buff=0.4)
         self.play(FadeIn(extras))
-        self.wait(15)
+        self.wait(14.5)
         self.play(FadeOut(extras))
 
         pg(self, title, [
@@ -179,7 +179,7 @@ class ThinLensScene(Scene):
             "Step 1: 1/f = (0.5)(1/20 - 1/-20) = 0.5 x 2/20 = 1/20  =>  f = 20 cm",
             "Step 2: 1/s_i = 1/20 - 1/60 = 2/60  =>  s_i = 30 cm  (real image)",
             "Step 3: m = -30/60 = -0.5  (inverted, half size)",
-        ], wait=25)
+        ], wait=83.6)
 
         self.play(FadeOut(VGroup(title, tl)))
 
@@ -196,21 +196,21 @@ class MirrorScene(Scene):
             "Focal length of a mirror: f_m = R/2  (centre of curvature is at 2f).",
             "Concave mirrors (R>0) converge rays — like converging lenses.",
             "Convex mirrors (R<0) diverge rays — like diverging lenses.",
-        ], wait=18)
+        ], wait=12.1)
 
         mirror_eq = MathTex(r"\frac{1}{s_o}+\frac{1}{s_i}=\frac{2}{R}=\frac{1}{f_m}",
                             font_size=58, color=GOLD)
         mirror_eq.next_to(title, DOWN, buff=0.5)
         self.play(Write(mirror_eq))
         self.play(Create(gold_box(mirror_eq)))
-        self.wait(10)
+        self.wait(19.8)
 
         pg(self, title, [
             "Example: concave mirror R=+40cm, object at s_o=30cm.",
             "f_m = 40/2 = 20 cm",
             "1/s_i = 1/20 - 1/30 = 1/60  =>  s_i = 60 cm  (real, in front)",
             "m = -60/30 = -2  (inverted, twice the size)",
-        ], wait=20)
+        ], wait=22.2)
 
         self.play(FadeOut(VGroup(title, mirror_eq)))
 
@@ -225,7 +225,7 @@ class LensCombinations(Scene):
         pg(self, title, [
             "Two lenses in sequence: image of lens 1 is the object of lens 2.",
             "Apply the thin lens equation sequentially.",
-        ], wait=12)
+        ], wait=12.6)
 
         eqs = VGroup(
             labeled_eq(
@@ -237,7 +237,7 @@ class LensCombinations(Scene):
         ).arrange(DOWN, buff=0.5)
         eqs.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(eqs))
-        self.wait(20)
+        self.wait(13.5)
         self.play(FadeOut(eqs))
 
         pg(self, title, [
@@ -245,7 +245,7 @@ class LensCombinations(Scene):
             "1/f_eff = 1/30 + 1/20 - 10/(30x20) = 0.033+0.05-0.017 = 0.067",
             "f_eff = 15 cm",
             "Contact case (d=0): 1/f = 1/30+1/20 = 5/60  =>  f=12 cm",
-        ], wait=20)
+        ], wait=16.4)
 
         self.play(FadeOut(title))
 

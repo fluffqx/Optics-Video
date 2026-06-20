@@ -12,7 +12,7 @@ class Week6TitleCard(Scene):
             "Interference: Two-Beam, Young's, Thin Films & Michelson",
             "Bennett Ch. 7.1–7.3.5, 7.8"
         )
-        self.play(FadeIn(card)); self.wait(180.4); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(153.7); self.play(FadeOut(card))
 
 
 class InterferenceIntroScene(Scene):
@@ -37,11 +37,11 @@ class InterferenceIntroScene(Scene):
             "they must have a stable, well-defined phase relationship.",
             "Two separate light bulbs are incoherent (random phase fluctuations every ~10⁻⁸ s).",
             "Two slits illuminated by the same source are coherent (same source).",
-        ], font_size=28, wait=21.7, lines_per_page=4)
+        ], font_size=28, wait=15.4, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(18.2)
-        self.wait(46.9); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(19.7)
+        self.wait(20.2); self.play(FadeOut(VGroup(title, intro)))
 
 
 class TwoBeamInterference(Scene):
@@ -57,15 +57,15 @@ class TwoBeamInterference(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(17.7)
-        self.wait(29.3); self.play(FadeOut(intro))
+        self.wait(15.0)
+        self.wait(25.1); self.play(FadeOut(intro))
 
         general = MathTex(
             r"I = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\delta",
             font_size=56, color=INTENSITY_COLOR)
         general.next_to(title, DOWN, buff=0.5)
-        self.play(Write(general)); self.wait(28.2)
-        self.play(Create(gold_box(general))); self.wait(25.4)
+        self.play(Write(general)); self.wait(24.1)
+        self.play(Create(gold_box(general))); self.wait(21.7)
 
         sym = eq_table([
             (r"I_1, I_2", "irradiances of the individual beams  [W/m²]", INTENSITY_COLOR),
@@ -141,8 +141,8 @@ class YoungDoubleSlit(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(19.3)
-        self.wait(29.3); self.play(FadeOut(intro))
+        self.wait(16.4)
+        self.wait(25.0); self.play(FadeOut(intro))
 
         # Path difference
         path_title = Text("Path Difference and Phase Difference:", font_size=28, color=GOLD)
@@ -154,13 +154,13 @@ class YoungDoubleSlit(Scene):
             font_size=36, color=WAVE_COLOR)
         path.next_to(path_title, DOWN, buff=0.3)
         safe_scale(path, max_width=13.0)
-        self.play(Write(path)); self.wait(9.9)
+        self.play(Write(path)); self.wait(8.2)
 
         phase = MathTex(
             r"\delta = \frac{2\pi}{\lambda}d\sin\theta = \frac{2\pi dy}{\lambda L}",
             font_size=44, color=WAVE_COLOR)
         phase.next_to(path, DOWN, buff=0.3)
-        self.play(Write(phase)); self.wait(23.2)
+        self.play(Write(phase)); self.wait(19.8)
 
         # Fringe conditions
         bright = MathTex(
@@ -179,9 +179,9 @@ class YoungDoubleSlit(Scene):
         fringes = VGroup(bright, dark, fringe_pos, fringe_spacing).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
         fringes.next_to(phase, DOWN, buff=0.3)
         safe_scale(fringes, max_height=3.5)
-        for f in fringes: self.play(Write(f), run_time=0.9); self.wait(20.4)
+        for f in fringes: self.play(Write(f), run_time=0.9); self.wait(17.4)
         self.play(Create(gold_box(fringe_spacing)))
-        self.wait(24.8); self.play(FadeOut(VGroup(path_title, path, phase, fringes)))
+        self.wait(21.2); self.play(FadeOut(VGroup(path_title, path, phase, fringes)))
 
         # Intensity pattern
         int_title = Text("Intensity Pattern  (Bennett Eq. 7.18):", font_size=28, color=GOLD)
@@ -234,11 +234,11 @@ class ThinFilmInterference(Scene):
             "",
             "CRITICAL RULE: +π phase shift (equivalent to +λ/2 extra path) occurs",
             "WHENEVER light reflects off a surface where n_reflected > n_incident.",
-        ], font_size=28, wait=20.4, lines_per_page=4)
+        ], font_size=28, wait=13.5, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(16.0)
-        self.wait(24.8); self.play(FadeOut(intro))
+        self.wait(21.2)
+        self.wait(29.8); self.play(FadeOut(intro))
 
         # Main formula
         phi_title = Text("Total Phase Difference  (Bennett Eq. 7.26):", font_size=28, color=GOLD)
@@ -250,7 +250,7 @@ class ThinFilmInterference(Scene):
             font_size=36, color=WAVE_COLOR)
         phi_eq.next_to(phi_title, DOWN, buff=0.3)
         safe_scale(phi_eq, max_width=13.0)
-        self.play(Write(phi_eq)); self.wait(34.8)
+        self.play(Write(phi_eq)); self.wait(15.4)
         self.play(FadeOut(VGroup(phi_title, phi_eq)))
 
         # Case analysis
@@ -284,8 +284,8 @@ class ThinFilmInterference(Scene):
                 r_group.add(VGroup(l, v).arrange(RIGHT, buff=0.3))
             r_group.arrange(DOWN, aligned_edge=LEFT, buff=0.18)
             r_group.next_to(c_title, DOWN, buff=0.3)
-            for row in r_group: self.play(FadeIn(row)); self.wait(18.2)
-            self.wait(11.6)
+            for row in r_group: self.play(FadeIn(row)); self.wait(9.7)
+            self.wait(2.0)
 
             f_group = VGroup()
             for fs in formula_strs:
@@ -347,15 +347,15 @@ class FringeVisibility(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(8.3)
-        self.wait(15.5); self.play(FadeOut(intro))
+        self.wait(6.8)
+        self.wait(13.1); self.play(FadeOut(intro))
 
         vis = MathTex(
             r"V = \frac{I_{\max} - I_{\min}}{I_{\max} + I_{\min}} = \frac{2\sqrt{I_1 I_2}}{I_1+I_2}",
             font_size=48, color=INTENSITY_COLOR)
         vis.next_to(title, DOWN, buff=0.5)
-        self.play(Write(vis)); self.wait(19.9)
-        self.play(Create(gold_box(vis))); self.wait(15.5)
+        self.play(Write(vis)); self.wait(16.9)
+        self.play(Create(gold_box(vis))); self.wait(13.1)
 
         vis_rows = eq_table([
             (r"V = 1", "PERFECT visibility — I₁=I₂ and fully coherent (only possible for lasers)", GOLD),
@@ -383,11 +383,11 @@ class MichelsonScene(Scene):
             "Each arm reflects off a mirror and returns to the beamsplitter.",
             "The two beams recombine and interfere on a screen or detector.",
             "Moving mirror M₂ by ΔL changes the OPD by 2ΔL (beam travels arm twice).",
-        ], font_size=28, wait=16.0, lines_per_page=4)
+        ], font_size=28, wait=18.8, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(22.1)
-        self.wait(9.9); self.play(FadeOut(intro))
+        self.wait(8.2)
+        self.wait(25.5); self.play(FadeOut(intro))
 
         eqs = eq_table([
             (r"\text{OPD} = 2\Delta L", "factor of 2: beam travels mirror arm twice (out and back)", WAVE_COLOR),
@@ -400,8 +400,8 @@ class MichelsonScene(Scene):
              "resolving power: L = total mirror path length — can measure tiny λ differences", INTENSITY_COLOR),
         ], eq_fs=30, lbl_fs=22, buff=0.28)
         eqs.next_to(title, DOWN, buff=0.5)
-        for row in eqs: self.play(FadeIn(row)); self.wait(29.8)
-        self.wait(46.9)
+        for row in eqs: self.play(FadeIn(row)); self.wait(12.6)
+        self.wait(27.5)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(eqs))
 
         # Worked example

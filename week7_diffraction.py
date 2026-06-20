@@ -12,7 +12,7 @@ class Week7TitleCard(Scene):
             "Fraunhofer Diffraction: Slits, Apertures & Gratings",
             "Bennett Ch. 8.1–8.3.8"
         )
-        self.play(FadeIn(card)); self.wait(167.3); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(142.1); self.play(FadeOut(card))
 
 
 class HuygensPrinciple(Scene):
@@ -35,12 +35,12 @@ class HuygensPrinciple(Scene):
             "",
             "For an obstructed wavefront (aperture or slit), only the wavelets from",
             "the open area contribute — their interference produces the diffraction pattern.",
-        ], font_size=28, wait=12, lines_per_page=4)
+        ], font_size=28, wait=8.2, lines_per_page=4)
         # (make_pages handles FadeIn/FadeOut internally)
         if False:  # placeholder so subsequent code still works
             intro = None
-        self.wait(9.9)
-        self.wait(24.3); self.play(FadeOut(intro))
+        self.wait(20.7)
+        self.wait(14.0); self.play(FadeOut(intro))
 
         # Fraunhofer condition
         fc_title = Text("Fraunhofer (Far-Field) Condition  (Bennett Eq. 8.8):", font_size=28, color=GOLD)
@@ -52,7 +52,7 @@ class HuygensPrinciple(Scene):
             font_size=38, color=WAVE_COLOR)
         fc_eq.next_to(fc_title, DOWN, buff=0.3)
         safe_scale(fc_eq, max_width=13.0)
-        self.play(Write(fc_eq)); self.wait(16.6)
+        self.play(Write(fc_eq)); self.wait(27.4)
 
         fc_desc = section_intro([
             "h = aperture size,  r = distance to screen,  r' = distance from source to aperture",
@@ -64,8 +64,8 @@ class HuygensPrinciple(Scene):
         ], font_size=25)
         fc_desc.next_to(fc_eq, DOWN, buff=0.35)
         self.play(FadeIn(fc_desc))
-        self.wait(32.0)
-        self.wait(18.8); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
+        self.wait(15.9)
+        self.wait(2.0); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
 
 
 class SingleSlitDiffraction(Scene):
@@ -82,22 +82,22 @@ class SingleSlitDiffraction(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(20.4)
-        self.wait(20.4); self.play(FadeOut(intro))
+        self.wait(17.4)
+        self.wait(17.4); self.play(FadeOut(intro))
 
         # Main equations
         I_eq = MathTex(
             r"I(\theta) = I_0\left(\frac{\sin\beta}{\beta}\right)^2",
             font_size=56, color=INTENSITY_COLOR)
         I_eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(I_eq)); self.wait(15.5)
+        self.play(Write(I_eq)); self.wait(13.0)
 
         beta_def = MathTex(
             r"\beta \equiv \frac{1}{2}kb\sin\theta = \frac{\pi b\sin\theta}{\lambda}",
             font_size=46, color=WAVE_COLOR)
         beta_def.next_to(I_eq, DOWN, buff=0.35)
-        self.play(Write(beta_def)); self.wait(25.9)
-        self.play(Create(gold_box(I_eq))); self.wait(18.8)
+        self.play(Write(beta_def)); self.wait(22.1)
+        self.play(Create(gold_box(I_eq))); self.wait(15.9)
 
         sym = eq_table([
             (r"b", "slit width  [m]", WHITE),
@@ -187,8 +187,8 @@ class CircularApertureRayleigh(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(19.3)
-        self.wait(19.9); self.play(FadeOut(intro))
+        self.wait(16.4)
+        self.wait(16.9); self.play(FadeOut(intro))
 
         # Airy disk
         airy = MathTex(
@@ -196,7 +196,7 @@ class CircularApertureRayleigh(Scene):
             font_size=38, color=INTENSITY_COLOR)
         airy.next_to(title, DOWN, buff=0.5)
         safe_scale(airy, max_width=13.0)
-        self.play(Write(airy)); self.wait(12.1)
+        self.play(Write(airy)); self.wait(10.2)
 
         airy_desc = section_intro([
             "J₁ is the first-order Bessel function of the first kind.",
@@ -205,14 +205,14 @@ class CircularApertureRayleigh(Scene):
         ], font_size=26)
         airy_desc.next_to(airy, DOWN, buff=0.35)
         self.play(FadeIn(airy_desc))
-        self.wait(22.1)
-        self.wait(18.2); self.play(FadeOut(airy_desc))
+        self.wait(18.8)
+        self.wait(15.4); self.play(FadeOut(airy_desc))
 
         first_ring = MathTex(
             r"\sin\theta_1 = \frac{1.22\lambda}{D} \quad\Rightarrow\quad \Delta\theta_{\text{Airy}} = 2.44\frac{\lambda}{D}",
             font_size=44, color=GOLD)
         first_ring.next_to(airy, DOWN, buff=0.4)
-        self.play(Write(first_ring)); self.wait(24.8)
+        self.play(Write(first_ring)); self.wait(21.2)
         self.play(Create(gold_box(first_ring))); self.wait(2.0)
         self.play(FadeOut(VGroup(airy, first_ring)))
 
@@ -286,8 +286,8 @@ class DiffractionGrating(Scene):
         ])
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(16.0)
-        self.wait(19.9); self.play(FadeOut(intro))
+        self.wait(13.5)
+        self.wait(16.9); self.play(FadeOut(intro))
 
         # N-slit intensity formula
         Nslit_title = Text("N-Slit Intensity  (Bennett Eq. 8.39):", font_size=28, color=GOLD)
@@ -299,13 +299,13 @@ class DiffractionGrating(Scene):
             font_size=40, color=INTENSITY_COLOR)
         Nslit.next_to(Nslit_title, DOWN, buff=0.3)
         safe_scale(Nslit, max_width=13.0)
-        self.play(Write(Nslit)); self.wait(34.2)
+        self.play(Write(Nslit)); self.wait(29.3)
 
         gamma_def = MathTex(
             r"\gamma \equiv \frac{1}{2}kd\sin\theta = \frac{\pi d\sin\theta}{\lambda}",
             font_size=42, color=WAVE_COLOR)
         gamma_def.next_to(Nslit, DOWN, buff=0.3)
-        self.play(Write(gamma_def)); self.wait(9.4)
+        self.play(Write(gamma_def)); self.wait(7.8)
 
         sym_rows = eq_table([
             (r"\beta = \frac{\pi b\sin\theta}{\lambda}", "single-slit parameter (b = slit width)", WAVE_COLOR),
@@ -313,8 +313,8 @@ class DiffractionGrating(Scene):
             (r"N", "total number of slits", WHITE),
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym_rows.next_to(gamma_def, DOWN, buff=0.3)
-        for row in sym_rows: self.play(FadeIn(row)); self.wait(20.4)
-        self.wait(14.9); self.play(FadeOut(VGroup(Nslit_title, Nslit, gamma_def, sym_rows)))
+        for row in sym_rows: self.play(FadeIn(row)); self.wait(17.4)
+        self.wait(12.6); self.play(FadeOut(VGroup(Nslit_title, Nslit, gamma_def, sym_rows)))
 
         # Grating equation
         grating_title = Text("The Grating Equation  (Bennett Eq. 8.43):", font_size=30, color=GOLD)

@@ -12,7 +12,7 @@ class Week5TitleCard(Scene):
             "Polarisation Optics: Wave Plates & Jones Formalism",
             "Bennett Ch. 6"
         )
-        self.play(FadeIn(card)); self.wait(171.2); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(145.2); self.play(FadeOut(card))
 
 
 class PolarisationStatesScene(Scene):
@@ -31,11 +31,11 @@ class PolarisationStatesScene(Scene):
             "LINEAR: E⃗ oscillates along a fixed direction in the x-y plane.",
             "CIRCULAR: the tip of E⃗ traces a circle as the wave passes (equal amplitudes, 90° phase shift).",
             "ELLIPTICAL: the general case — tip of E⃗ traces an ellipse (unequal amplitudes or arbitrary phase).",
-        ], font_size=28, wait=20.9, lines_per_page=4)
+        ], font_size=28, wait=13.5, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(16.0)
-        self.wait(25.9); self.play(FadeOut(intro))
+        self.wait(22.2)
+        self.wait(13.5); self.play(FadeOut(intro))
 
         # Detailed equations for each state
         states = [
@@ -77,7 +77,7 @@ class PolarisationStatesScene(Scene):
                 eq_mobs.add(em)
             eq_mobs.arrange(DOWN, buff=0.28, aligned_edge=LEFT)
             eq_mobs.next_to(s_title, DOWN, buff=0.3)
-            self.play(Write(eq_mobs)); self.wait(16.0)
+            self.play(Write(eq_mobs)); self.wait(2.0)
 
             desc = section_intro(desc_lines, font_size=25)
             desc.next_to(eq_mobs, DOWN, buff=0.3)
@@ -103,11 +103,11 @@ class BirefringenceWavePlates(Scene):
             "",
             "A slab of birefringent material of thickness d introduces a phase difference",
             "Δφ between the two polarisation components — this is a WAVE PLATE.",
-        ], font_size=28, wait=14.3, lines_per_page=4)
+        ], font_size=28, wait=9.2, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(11.0)
-        self.wait(17.7); self.play(FadeOut(intro))
+        self.wait(15.0)
+        self.wait(20.7); self.play(FadeOut(intro))
 
         # Phase retardation formula
         phase_title = Text("Phase Retardation  (Bennett Eq. 6.11):", font_size=28, color=GOLD)
@@ -118,8 +118,8 @@ class BirefringenceWavePlates(Scene):
             r"\Delta\varphi = \frac{2\pi}{\lambda_0}(n_e - n_o)d",
             font_size=52, color=WAVE_COLOR)
         delta_phi.next_to(phase_title, DOWN, buff=0.3)
-        self.play(Write(delta_phi)); self.wait(24.3)
-        self.play(Create(gold_box(delta_phi))); self.wait(20.4)
+        self.play(Write(delta_phi)); self.wait(17.3)
+        self.play(Create(gold_box(delta_phi))); self.wait(2.0)
 
         sym = eq_table([
             (r"n_e", "extraordinary (slow) refractive index", N_COLOR),
@@ -183,17 +183,17 @@ class JonesFormalism(Scene):
             "",
             "Convention: the e^{i(kz−ωt)} propagation factor is IMPLICIT — not written.",
             "Normalised Jones vectors have unit magnitude: |E̊|² = 1.",
-        ], font_size=28, wait=22.6, lines_per_page=4)
+        ], font_size=28, wait=15.9, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(18.8)
-        self.wait(26.5); self.play(FadeOut(intro))
+        self.wait(22.6)
+        self.wait(7.8); self.play(FadeOut(intro))
 
         gen = MathTex(
             r"\tilde{E} = \begin{pmatrix}E_{0x}e^{i\varphi_x}\\E_{0y}e^{i\varphi_y}\end{pmatrix}",
             font_size=48, color=E_COLOR)
         gen.next_to(title, DOWN, buff=0.5)
-        self.play(Write(gen)); self.wait(9.4)
+        self.play(Write(gen)); self.wait(2.0)
 
         # Table of all standard Jones vectors
         states_title = Text("Standard Normalised Jones Vectors  (Bennett Table 6.1):", font_size=28, color=GOLD)
@@ -236,11 +236,11 @@ class JonesMatrices(Scene):
             "For a sequence of N elements, multiply RIGHT-TO-LEFT:",
             "Ẽ_out = J_N · ... · J_2 · J_1 · Ẽ_in",
             "Transmitted intensity (when input is normalised): I_out = |Ẽ_out|²",
-        ], font_size=28, wait=13.2, lines_per_page=4)
+        ], font_size=28, wait=12.6, lines_per_page=4)
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
-        self.wait(14.9)
-        self.wait(11.6); self.play(FadeOut(intro))
+        self.wait(9.7)
+        self.wait(10.6); self.play(FadeOut(intro))
 
         matrices = [
             (r"J_{\text{pol},H} = \begin{pmatrix}1&0\\0&0\end{pmatrix}",
@@ -265,7 +265,7 @@ class JonesMatrices(Scene):
             block = VGroup(mat, lbl).arrange(DOWN, buff=0.15, aligned_edge=LEFT)
             safe_scale(block, max_width=13.0)
             block.next_to(title, DOWN, buff=0.45)
-            self.play(FadeIn(block)); self.wait(12.7); self.play(FadeOut(block))
+            self.play(FadeIn(block)); self.wait(8.2); self.play(FadeOut(block))
 
         # Rotated element formula
         rot_title = Text("Rotating an Element  (Bennett Eq. 6.25):", font_size=28, color=GOLD)
@@ -277,7 +277,7 @@ class JonesMatrices(Scene):
             font_size=36, color=N_COLOR)
         rot_formula.next_to(rot_title, DOWN, buff=0.3)
         safe_scale(rot_formula, max_width=13.0)
-        self.play(Write(rot_formula)); self.wait(25.4)
+        self.play(Write(rot_formula)); self.wait(13.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rot_title, rot_formula)))
 
         # Full worked example
