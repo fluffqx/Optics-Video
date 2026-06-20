@@ -12,7 +12,7 @@ class Week5TitleCard(Scene):
             "Polarisation Optics: Wave Plates & Jones Formalism",
             "Bennett Ch. 6"
         )
-        self.play(FadeIn(card)); self.wait(145.2); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(145.4); self.play(FadeOut(card))
 
 
 class PolarisationStatesScene(Scene):
@@ -35,7 +35,7 @@ class PolarisationStatesScene(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(22.2)
-        self.wait(13.5); self.play(FadeOut(intro))
+        self.wait(13.7); self.play(FadeOut(intro))
 
         # Detailed equations for each state
         states = [
@@ -77,13 +77,13 @@ class PolarisationStatesScene(Scene):
                 eq_mobs.add(em)
             eq_mobs.arrange(DOWN, buff=0.28, aligned_edge=LEFT)
             eq_mobs.next_to(s_title, DOWN, buff=0.3)
-            self.play(Write(eq_mobs)); self.wait(2.0)
+            self.play(Write(eq_mobs)); self.wait(1.0)
 
             desc = section_intro(desc_lines, font_size=25)
             desc.next_to(eq_mobs, DOWN, buff=0.3)
             self.play(FadeIn(desc))
-            self.wait(2.0)
-            self.wait(2.0); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
+            self.wait(1.0)
+            self.wait(1.0); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
 
 
 class BirefringenceWavePlates(Scene):
@@ -118,8 +118,8 @@ class BirefringenceWavePlates(Scene):
             r"\Delta\varphi = \frac{2\pi}{\lambda_0}(n_e - n_o)d",
             font_size=52, color=WAVE_COLOR)
         delta_phi.next_to(phase_title, DOWN, buff=0.3)
-        self.play(Write(delta_phi)); self.wait(17.3)
-        self.play(Create(gold_box(delta_phi))); self.wait(2.0)
+        self.play(Write(delta_phi)); self.wait(17.5)
+        self.play(Create(gold_box(delta_phi))); self.wait(1.0)
 
         sym = eq_table([
             (r"n_e", "extraordinary (slow) refractive index", N_COLOR),
@@ -128,8 +128,8 @@ class BirefringenceWavePlates(Scene):
             (r"\lambda_0", "vacuum wavelength of light [m]", WAVE_COLOR),
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym.next_to(delta_phi, DOWN, buff=0.35)
-        for row in sym: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(phase_title, delta_phi, sym)))
+        for row in sym: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(phase_title, delta_phi, sym)))
 
         # QWP and HWP
         for plate_name, delta, thickness_eq, effects, color in [
@@ -155,18 +155,18 @@ class BirefringenceWavePlates(Scene):
             eq1 = MathTex(delta, font_size=38, color=color)
             eq1.next_to(p_title, DOWN, buff=0.3)
             safe_scale(eq1, max_width=13.0)
-            self.play(Write(eq1)); self.wait(2.0)
+            self.play(Write(eq1)); self.wait(1.0)
 
             eq2 = MathTex(thickness_eq, font_size=32, color=N_COLOR)
             eq2.next_to(eq1, DOWN, buff=0.3)
             safe_scale(eq2, max_width=13.0)
-            self.play(Write(eq2)); self.wait(2.0)
+            self.play(Write(eq2)); self.wait(1.0)
 
             eff = section_intro(effects, font_size=25)
             eff.next_to(eq2, DOWN, buff=0.3)
             self.play(FadeIn(eff))
-            self.wait(2.0)
-            self.wait(2.0); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
+            self.wait(1.0)
+            self.wait(1.0); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
 
 
 class JonesFormalism(Scene):
@@ -187,13 +187,13 @@ class JonesFormalism(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(22.6)
-        self.wait(7.8); self.play(FadeOut(intro))
+        self.wait(8.0); self.play(FadeOut(intro))
 
         gen = MathTex(
             r"\tilde{E} = \begin{pmatrix}E_{0x}e^{i\varphi_x}\\E_{0y}e^{i\varphi_y}\end{pmatrix}",
             font_size=48, color=E_COLOR)
         gen.next_to(title, DOWN, buff=0.5)
-        self.play(Write(gen)); self.wait(2.0)
+        self.play(Write(gen)); self.wait(1.0)
 
         # Table of all standard Jones vectors
         states_title = Text("Standard Normalised Jones Vectors  (Bennett Table 6.1):", font_size=28, color=GOLD)
@@ -219,8 +219,8 @@ class JonesFormalism(Scene):
         safe_scale(state_mobs, max_height=5.0)
 
         for row in state_mobs:
-            self.play(FadeIn(row), run_time=0.5); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, states_title, state_mobs)))
+            self.play(FadeIn(row), run_time=0.5); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(title, states_title, state_mobs)))
 
 
 class JonesMatrices(Scene):
@@ -277,7 +277,7 @@ class JonesMatrices(Scene):
             font_size=36, color=N_COLOR)
         rot_formula.next_to(rot_title, DOWN, buff=0.3)
         safe_scale(rot_formula, max_width=13.0)
-        self.play(Write(rot_formula)); self.wait(13.0)
+        self.play(Write(rot_formula)); self.wait(13.2)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rot_title, rot_formula)))
 
         # Full worked example

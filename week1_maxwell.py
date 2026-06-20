@@ -256,7 +256,7 @@ class EMWaveDerivation(Scene):
         result.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(result, run_time=0.4))
         self.play(Create(gold_box(result)))
-        self.wait(26.9)
+        self.wait(74.4)
         self.play(FadeOut(VGroup(title, result)))
 
 

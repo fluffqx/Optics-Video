@@ -26,7 +26,7 @@ class Week1TitleCard(Scene):
         card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation",
                                "Bennett Ch. 1 & 2.1-2.3")
         self.play(FadeIn(card))
-        self.wait(32.5)
+        self.wait(32.7)
         self.play(FadeOut(card))
 
 
@@ -79,7 +79,7 @@ class WaveEquation1D(Scene):
                      font_size=56)
         eq.next_to(title, DOWN, buff=0.5)
         self.play(Write(eq, run_time=1.0))
-        self.wait(5.3)
+        self.wait(6.3)
 
         # p2 15.9s — left side
         lb = Brace(eq[0:2], DOWN, color=E_COLOR)
@@ -111,16 +111,16 @@ class WaveEquation1D(Scene):
         sols.next_to(eq, DOWN, buff=0.5)
         safe_scale(sols, max_height=3.5)
         self.play(FadeIn(sol_title), Write(sol1))
-        self.wait(12)
+        self.wait(24.5)
         self.play(Write(sol2))
-        self.wait(12.5)
+        self.wait(10.4)
 
         # p6 10.2s — key insight
         key = Text("Any shape travels without distortion at speed v.", font_size=30, color=GOLD)
         safe_scale(key, max_width=13.0)
         key.next_to(sols, DOWN, buff=0.3)
         self.play(FadeIn(key))
-        self.wait(10.2)
+        self.wait(1.0)
         self.play(FadeOut(VGroup(title, eq, sols, key)))
 
 
@@ -145,7 +145,7 @@ class WaveEquationProof(Scene):
         solver.add_step(3, r"\frac{1}{v^2}\cdot2v^2=2=\partial^2\Psi/\partial x^2\;\checkmark",
                        "both sides equal 2 — wave equation satisfied!", GOLD)
         solver.finalize()
-        self.wait(21.7)
+        self.wait(39.4)
 
         # p3 7.3s
         b3 = tb(["Any function of the form f(x-vt) satisfies the wave equation.",
@@ -250,7 +250,7 @@ class HarmonicWaveExample(Scene):
         solver.add_step(3, r"\omega=2\pi f=3.54\times10^{15}\text{ rad/s}", "angular frequency", WAVE_COLOR)
         solver.add_step(4, r"T=1/f=1.77\text{ fs}", "period: 1.77 femtoseconds", GOLD)
         solver.finalize()
-        self.wait(33.7)
+        self.wait(49.9)
 
         # p3 9.2s
         self.play(FadeOut(VGroup(*solver.steps)))

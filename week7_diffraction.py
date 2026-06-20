@@ -12,7 +12,7 @@ class Week7TitleCard(Scene):
             "Fraunhofer Diffraction: Slits, Apertures & Gratings",
             "Bennett Ch. 8.1–8.3.8"
         )
-        self.play(FadeIn(card)); self.wait(142.1); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(142.3); self.play(FadeOut(card))
 
 
 class HuygensPrinciple(Scene):
@@ -64,8 +64,8 @@ class HuygensPrinciple(Scene):
         ], font_size=25)
         fc_desc.next_to(fc_eq, DOWN, buff=0.35)
         self.play(FadeIn(fc_desc))
-        self.wait(15.9)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
+        self.wait(16.1)
+        self.wait(1.0); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
 
 
 class SingleSlitDiffraction(Scene):
@@ -97,7 +97,7 @@ class SingleSlitDiffraction(Scene):
             font_size=46, color=WAVE_COLOR)
         beta_def.next_to(I_eq, DOWN, buff=0.35)
         self.play(Write(beta_def)); self.wait(22.1)
-        self.play(Create(gold_box(I_eq))); self.wait(15.9)
+        self.play(Create(gold_box(I_eq))); self.wait(16.1)
 
         sym = eq_table([
             (r"b", "slit width  [m]", WHITE),
@@ -106,8 +106,8 @@ class SingleSlitDiffraction(Scene):
             (r"I_0 = I(\beta=0) = I(\theta=0)", "maximum intensity at the centre  [W/m²]", INTENSITY_COLOR),
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym.next_to(beta_def, DOWN, buff=0.35)
-        for row in sym: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(sym, beta_def)))
+        for row in sym: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(sym, beta_def)))
 
         # Central maximum
         cen_title = Text("Central Maximum  (β → 0):", font_size=28, color=GOLD)
@@ -124,8 +124,8 @@ class SingleSlitDiffraction(Scene):
         ], font_size=25)
         cen_desc.next_to(cen_title, DOWN, buff=0.3)
         self.play(FadeIn(cen_desc))
-        self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(cen_title, cen_desc)))
+        self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(cen_title, cen_desc)))
 
         # Dark minima
         dark_title = Text("Dark Minima and Secondary Maxima:", font_size=28, color=GOLD)
@@ -141,8 +141,8 @@ class SingleSlitDiffraction(Scene):
              "first and second secondary maxima have only 4.5% and 1.6% of central intensity", INTENSITY_COLOR),
         ], eq_fs=28, lbl_fs=22, buff=0.25)
         dark_rows.next_to(dark_title, DOWN, buff=0.3)
-        for row in dark_rows: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0)
+        for row in dark_rows: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(dark_title, dark_rows)))
 
         # Full worked example
@@ -212,8 +212,8 @@ class CircularApertureRayleigh(Scene):
             r"\sin\theta_1 = \frac{1.22\lambda}{D} \quad\Rightarrow\quad \Delta\theta_{\text{Airy}} = 2.44\frac{\lambda}{D}",
             font_size=44, color=GOLD)
         first_ring.next_to(airy, DOWN, buff=0.4)
-        self.play(Write(first_ring)); self.wait(21.2)
-        self.play(Create(gold_box(first_ring))); self.wait(2.0)
+        self.play(Write(first_ring)); self.wait(21.4)
+        self.play(Create(gold_box(first_ring))); self.wait(1.0)
         self.play(FadeOut(VGroup(airy, first_ring)))
 
         # Rayleigh criterion
@@ -225,8 +225,8 @@ class CircularApertureRayleigh(Scene):
             r"\theta_{\min} = 1.22\frac{\lambda}{D}",
             font_size=58, color=GOLD)
         rayleigh.next_to(rayleigh_title, DOWN, buff=0.3)
-        self.play(Write(rayleigh)); self.wait(2.0)
-        self.play(Create(gold_box(rayleigh))); self.wait(2.0)
+        self.play(Write(rayleigh)); self.wait(1.0)
+        self.play(Create(gold_box(rayleigh))); self.wait(1.0)
 
         rayleigh_desc = section_intro([
             "Two point sources are just resolved when the central maximum of one",
@@ -236,8 +236,8 @@ class CircularApertureRayleigh(Scene):
         ], font_size=26)
         rayleigh_desc.next_to(rayleigh, DOWN, buff=0.35)
         self.play(FadeIn(rayleigh_desc))
-        self.wait(2.0)
-        self.wait(2.0)
+        self.wait(1.0)
+        self.wait(1.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
 
         # Examples
@@ -314,7 +314,7 @@ class DiffractionGrating(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym_rows.next_to(gamma_def, DOWN, buff=0.3)
         for row in sym_rows: self.play(FadeIn(row)); self.wait(17.4)
-        self.wait(12.6); self.play(FadeOut(VGroup(Nslit_title, Nslit, gamma_def, sym_rows)))
+        self.wait(12.8); self.play(FadeOut(VGroup(Nslit_title, Nslit, gamma_def, sym_rows)))
 
         # Grating equation
         grating_title = Text("The Grating Equation  (Bennett Eq. 8.43):", font_size=30, color=GOLD)
@@ -326,8 +326,8 @@ class DiffractionGrating(Scene):
             font_size=42, color=GOLD)
         grating.next_to(grating_title, DOWN, buff=0.3)
         safe_scale(grating, max_width=13.0)
-        self.play(Write(grating)); self.wait(2.0)
-        self.play(Create(gold_box(grating))); self.wait(2.0)
+        self.play(Write(grating)); self.wait(1.0)
+        self.play(Create(gold_box(grating))); self.wait(1.0)
 
         grating_sym = eq_table([
             (r"d", "grating period (distance between adjacent slits)  [m]", WHITE),
@@ -338,8 +338,8 @@ class DiffractionGrating(Scene):
              "the common simplified form for θ_i=0", N_COLOR),
         ], eq_fs=28, lbl_fs=22, buff=0.22)
         grating_sym.next_to(grating, DOWN, buff=0.35)
-        for row in grating_sym: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(grating_title, grating, grating_sym)))
+        for row in grating_sym: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(grating_title, grating, grating_sym)))
 
         # Resolving power and FSR
         rp_title = Text("Resolving Power & Free Spectral Range  (Bennett Eqs. 8.47-8.48):", font_size=26, color=GOLD)
@@ -356,8 +356,8 @@ class DiffractionGrating(Scene):
              "product of FSR and resolving power = constant for fixed N", WHITE),
         ], eq_fs=32, lbl_fs=22, buff=0.3)
         rp_rows.next_to(rp_title, DOWN, buff=0.3)
-        for row in rp_rows: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0)
+        for row in rp_rows: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rp_title, rp_rows)))
 
         # Full worked example

@@ -12,7 +12,7 @@ class Week8TitleCard(Scene):
             "Multiple-Beam Interference & Fabry-Pérot",
             "Bennett Ch. 7.10, 7.11"
         )
-        self.play(FadeIn(card)); self.wait(151.9); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(152.1); self.play(FadeOut(card))
 
 
 class MultiBeamIntro(Scene):
@@ -37,7 +37,7 @@ class MultiBeamIntro(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(27.4)
-        self.wait(52.0); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(52.2); self.play(FadeOut(VGroup(title, intro)))
 
 
 class AiryFunction(Scene):
@@ -82,11 +82,11 @@ class AiryFunction(Scene):
             "This happens when the round-trip phase is a multiple of 2π.",
             "Physical picture: all the multiply-reflected beams add up constructively.",
             "The field builds up inside the cavity to a very large amplitude.",
-        ], font_size=28, wait=12.6, lines_per_page=4)
+        ], font_size=28, wait=12.8, lines_per_page=4)
         res.next_to(res_title, DOWN, buff=0.3)
         self.play(FadeIn(res))
-        self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, airy, res_title, res)))
+        self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(title, airy, res_title, res)))
 
 
 class FinesseResolving(Scene):
@@ -138,7 +138,7 @@ class FinesseResolving(Scene):
         phys.next_to(phys_title, DOWN, buff=0.35)
         self.play(FadeIn(phys))
         self.wait(14.5)
-        self.wait(19.8); self.play(FadeOut(VGroup(title, phys_title, phys)))
+        self.wait(20.0); self.play(FadeOut(VGroup(title, phys_title, phys)))
 
 
 class FabryPerotExample(Scene):
@@ -157,7 +157,7 @@ class FabryPerotExample(Scene):
         prob.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(prob))
         self.wait(10.2)
-        self.wait(84.4)
+        self.wait(84.6)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, prob, start_buff=0.4)
@@ -216,7 +216,7 @@ class CoherenceLength(Scene):
         ], eq_fs=34, lbl_fs=24, buff=0.3)
         coh_eqs.next_to(title, DOWN, buff=0.5)
         for row in coh_eqs: self.play(FadeIn(row)); self.wait(28.4)
-        self.wait(12.1); self.play(FadeOut(coh_eqs))
+        self.wait(12.3); self.play(FadeOut(coh_eqs))
 
         # Source comparison
         sources_title = Text("Coherence Length of Different Sources:", font_size=28, color=GOLD)
@@ -240,7 +240,7 @@ class CoherenceLength(Scene):
             ).arrange(RIGHT, buff=0.3)
             safe_scale(row_mob, max_width=13.5)
             row_mob.next_to(sources_title, DOWN, buff=0.35)
-            self.play(FadeIn(row_mob)); self.wait(2.0); self.play(FadeOut(row_mob))
+            self.play(FadeIn(row_mob)); self.wait(1.0); self.play(FadeOut(row_mob))
 
 
 class Week8Summary(Scene):
@@ -263,4 +263,4 @@ class Week8Summary(Scene):
         ], eq_fs=30, lbl_fs=22, buff=0.22)
         rows.next_to(title, DOWN, buff=0.4)
         for row in rows: self.play(FadeIn(row)); self.wait(3.9)
-        self.wait(67.0); self.play(FadeOut(VGroup(title, rows)))
+        self.wait(67.2); self.play(FadeOut(VGroup(title, rows)))

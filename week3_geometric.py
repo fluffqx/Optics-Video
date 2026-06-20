@@ -24,7 +24,7 @@ class Week3TitleCard(Scene):
             "Bennett Ch. 4.3–4.5, 5.2, 5.5"
         )
         self.play(FadeIn(card))
-        self.wait(83.5)
+        self.wait(83.7)
         self.play(FadeOut(card))
 
 
@@ -52,7 +52,7 @@ class GeometricOpticsIntro(Scene):
             "For small angles (rays close to and nearly parallel to the optical axis):",
             "sin(theta) ≈ tan(theta) ≈ theta  [theta in radians]",
             "This linearises all equations and makes analytic solutions possible.",
-        ], wait=12.1)
+        ], wait=12.3)
 
         self.play(FadeOut(title))
 
@@ -95,7 +95,7 @@ class SignConventions(Scene):
         rule_group.next_to(warning, DOWN, buff=0.3)
         safe_scale(rule_group, max_height=4.5)
         self.play(FadeIn(rule_group))
-        self.wait(84.3)
+        self.wait(84.5)
         self.play(FadeOut(VGroup(title, warning, rule_group)))
 
 
@@ -126,14 +126,14 @@ class SphericalSurface(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(sym))
-        self.wait(14.5)
+        self.wait(14.7)
         self.play(FadeOut(sym))
 
         pg(self, title, [
             "Example: air (n=1.0) to glass (n=1.5), R=+10 cm, object at 30 cm.",
             "1.0/30 + 1.5/s_i = (1.5-1.0)/10 = 0.05",
             "1.5/s_i = 0.05 - 0.033 = 0.017  =>  s_i = 90 cm  (real image in glass)",
-        ], wait=2.0)
+        ], wait=1.0)
 
         self.play(FadeOut(VGroup(title, eq)))
 
@@ -179,7 +179,7 @@ class ThinLensScene(Scene):
             "Step 1: 1/f = (0.5)(1/20 - 1/-20) = 0.5 x 2/20 = 1/20  =>  f = 20 cm",
             "Step 2: 1/s_i = 1/20 - 1/60 = 2/60  =>  s_i = 30 cm  (real image)",
             "Step 3: m = -30/60 = -0.5  (inverted, half size)",
-        ], wait=83.6)
+        ], wait=83.8)
 
         self.play(FadeOut(VGroup(title, tl)))
 
@@ -210,7 +210,7 @@ class MirrorScene(Scene):
             "f_m = 40/2 = 20 cm",
             "1/s_i = 1/20 - 1/30 = 1/60  =>  s_i = 60 cm  (real, in front)",
             "m = -60/30 = -2  (inverted, twice the size)",
-        ], wait=22.2)
+        ], wait=22.4)
 
         self.play(FadeOut(VGroup(title, mirror_eq)))
 
@@ -245,7 +245,7 @@ class LensCombinations(Scene):
             "1/f_eff = 1/30 + 1/20 - 10/(30x20) = 0.033+0.05-0.017 = 0.067",
             "f_eff = 15 cm",
             "Contact case (d=0): 1/f = 1/30+1/20 = 5/60  =>  f=12 cm",
-        ], wait=16.4)
+        ], wait=16.6)
 
         self.play(FadeOut(title))
 

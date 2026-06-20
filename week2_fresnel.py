@@ -12,7 +12,7 @@ class Week2TitleCard(Scene):
             "Reflection, Refraction & Fresnel Equations",
             "Bennett Ch. 3.2–3.6, 4.1–4.2"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(56.5); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(56.7); self.play(FadeOut(card))
 
 
 class Week2Intro(Scene):
@@ -39,7 +39,7 @@ class Week2Intro(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(19.3)
-        self.wait(20.2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(20.4); self.play(FadeOut(VGroup(title, intro)))
 
 
 class FermatPrinciple(Scene):
@@ -57,7 +57,7 @@ class FermatPrinciple(Scene):
             "",
             "Since time = distance / speed, and speed = c/n varies between media,",
             "the minimum-time path bends at the interface — this IS Snell's law.",
-        ], font_size=28, wait=47.4, lines_per_page=4)
+        ], font_size=28, wait=47.6, lines_per_page=4)
 
         # Fermat → Snell derivation outline
         deriv_title = Text("Fermat → Snell's Law  (Bennett Example 3.2.1):", font_size=30, color=GOLD)
@@ -131,7 +131,7 @@ class ReflectionRefraction(Scene):
         ], eq_fs=30, lbl_fs=24, buff=0.25)
         snell_sym.next_to(snell, DOWN, buff=0.35)
         for row in snell_sym: self.play(FadeIn(row)); self.wait(4.4)
-        self.wait(12.6); self.play(FadeOut(VGroup(snell_title, snell, snell_sym)))
+        self.wait(12.8); self.play(FadeOut(VGroup(snell_title, snell, snell_sym)))
 
         # Physical intuition
         make_pages(self, title, [
@@ -141,7 +141,7 @@ class ReflectionRefraction(Scene):
             "the light SPEEDS UP and bends AWAY from the normal (θ_t > θ_i).",
             "This is directly analogous to how a car slows down on gravel —",
             "if the front wheels hit the gravel first, the car turns toward the gravel.",
-        ], font_size=28, wait=2.0, lines_per_page=4)
+        ], font_size=28, wait=1.0, lines_per_page=4)
 
         # Worked example
         ex_title = Text("Example: air (n=1.0) → glass (n=1.5), θ_i = 40°", font_size=30, color=GOLD)
@@ -189,7 +189,7 @@ class FresnelEquationsDerivation(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(19.7)
-        self.wait(23.1); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(23.3); self.play(FadeOut(VGroup(title, intro)))
 
 
 class FresnelEquations(Scene):
@@ -253,7 +253,7 @@ class FresnelEquations(Scene):
         self.play(Write(r_norm)); self.wait(11.6)
         self.play(Write(t_norm)); self.wait(9.7)
         self.play(Create(gold_box(r_norm)))
-        self.wait(73.0); self.play(FadeOut(VGroup(title, norm_title, norm_eqs)))
+        self.wait(73.2); self.play(FadeOut(VGroup(title, norm_title, norm_eqs)))
 
 
 class FresnelFullExample(Scene):
@@ -270,7 +270,7 @@ class FresnelFullExample(Scene):
         given.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(given))
         self.wait(6.3)
-        self.wait(43.1)
+        self.wait(43.3)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, given, start_buff=0.4)
@@ -328,7 +328,7 @@ class ReflectivityTransmissivity(Scene):
         ], eq_fs=32, lbl_fs=23, buff=0.32)
         eqs.next_to(title, DOWN, buff=0.5)
         for row in eqs: self.play(FadeIn(row)); self.wait(15.9)
-        self.wait(11.1); self.play(FadeOut(eqs))
+        self.wait(11.3); self.play(FadeOut(eqs))
 
         # Why T ≠ |t|²
         why_title = Text("Why T ≠ |t|²?  (Bennett Section 3.6 — important!)", font_size=30, color=GOLD)
@@ -341,7 +341,7 @@ class ReflectivityTransmissivity(Scene):
             "The factor n_t cos(θ_t) / n_i cos(θ_i) corrects for this geometric effect.",
             "When this factor > 1: more energy per unit area is transmitted than you'd expect.",
             "Check: R + T = 1 — if your answer doesn't satisfy this, you made an error.",
-        ], font_size=28, wait=2.0, lines_per_page=4)
+        ], font_size=28, wait=1.0, lines_per_page=4)
 
         # Worked example
         ex_title = Text("Example: air→glass n=1.5, normal incidence", font_size=30, color=GOLD)
@@ -397,7 +397,7 @@ class BrewsterTIR(Scene):
 
         brew = MathTex(r"\tan\theta_B = \frac{n_t}{n_i}", font_size=60, color=ANGLE_COLOR)
         brew.next_to(brew_eq_title, DOWN, buff=0.3)
-        self.play(Write(brew)); self.wait(28.9)
+        self.play(Write(brew)); self.wait(29.1)
 
         make_pages(self, title, [
             "Example: air (n=1.0) → glass (n=1.5):",
@@ -406,12 +406,12 @@ class BrewsterTIR(Scene):
             "Applications: polarising beamsplitters, laser Brewster windows,",
             "anti-glare sunglasses (polarised lenses block the s-polarised glare",
             "from horizontal surfaces which reflects near Brewster's angle).",
-        ], font_size=28, wait=2.0, lines_per_page=4)
+        ], font_size=28, wait=1.0, lines_per_page=4)
         brew_ex.next_to(brew, DOWN, buff=0.35)
         self.play(FadeIn(brew_ex))
-        self.wait(2.0)
+        self.wait(1.0)
         self.play(Create(gold_box(brew)))
-        self.wait(2.0); self.play(FadeOut(VGroup(brew_eq_title, brew, brew_ex)))
+        self.wait(1.0); self.play(FadeOut(VGroup(brew_eq_title, brew, brew_ex)))
 
         # TIR
         tir_title = Text("Total Internal Reflection (TIR)  (Bennett Section 3.5.3):", font_size=28, color=GOLD)
@@ -426,8 +426,8 @@ class BrewsterTIR(Scene):
         ], font_size=26)
         tir_intro.next_to(tir_title, DOWN, buff=0.3)
         self.play(FadeIn(tir_intro))
-        self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(tir_intro))
+        self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(tir_intro))
 
         tir_eq_title = Text("Critical Angle Formula  (Bennett Eq. 3.35):", font_size=28, color=GOLD)
         tir_eq_title.next_to(tir_title, DOWN, buff=0.4)
@@ -442,7 +442,7 @@ class BrewsterTIR(Scene):
         tir_eqs = VGroup(tir_eq, tir_cond).arrange(DOWN, buff=0.4)
         tir_eqs.next_to(tir_eq_title, DOWN, buff=0.3)
         safe_scale(tir_eqs, max_height=2.5)
-        self.play(Write(tir_eqs)); self.wait(2.0)
+        self.play(Write(tir_eqs)); self.wait(1.0)
 
         tir_examples = section_intro([
             "glass (n=1.5) → air (n=1.0):  sin(θ_c) = 1.0/1.5 = 0.667  →  θ_c = 41.8°",
@@ -453,8 +453,8 @@ class BrewsterTIR(Scene):
         ], font_size=25)
         tir_examples.next_to(tir_eqs, DOWN, buff=0.35)
         self.play(FadeIn(tir_examples))
-        self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
+        self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
 
 
 class MalusLaw(Scene):
@@ -477,7 +477,7 @@ class MalusLaw(Scene):
         malus = MathTex(r"I = I_0\cos^2\theta", font_size=64, color=INTENSITY_COLOR)
         malus.next_to(title, DOWN, buff=0.5)
         self.play(Write(malus)); self.wait(14.0)
-        self.play(Create(gold_box(malus))); self.wait(15.0)
+        self.play(Create(gold_box(malus))); self.wait(15.2)
 
         sym = eq_table([
             (r"I_0", "incident intensity [W/m²]", INTENSITY_COLOR),
@@ -485,8 +485,8 @@ class MalusLaw(Scene):
             (r"I", "transmitted intensity [W/m²]", INTENSITY_COLOR),
         ], eq_fs=32, lbl_fs=24, buff=0.25)
         sym.next_to(malus, DOWN, buff=0.45)
-        for row in sym: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(sym))
+        for row in sym: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(sym))
 
         # Derivation idea
         why = section_intro([
@@ -495,8 +495,8 @@ class MalusLaw(Scene):
         ], font_size=26)
         why.next_to(malus, DOWN, buff=0.45)
         self.play(FadeIn(why))
-        self.wait(2.0)
-        self.wait(2.0)
+        self.wait(1.0)
+        self.wait(1.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(why))
 
         # Worked examples

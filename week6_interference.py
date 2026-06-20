@@ -12,7 +12,7 @@ class Week6TitleCard(Scene):
             "Interference: Two-Beam, Young's, Thin Films & Michelson",
             "Bennett Ch. 7.1–7.3.5, 7.8"
         )
-        self.play(FadeIn(card)); self.wait(153.7); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(153.9); self.play(FadeOut(card))
 
 
 class InterferenceIntroScene(Scene):
@@ -41,7 +41,7 @@ class InterferenceIntroScene(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(19.7)
-        self.wait(20.2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(20.4); self.play(FadeOut(VGroup(title, intro)))
 
 
 class TwoBeamInterference(Scene):
@@ -65,7 +65,7 @@ class TwoBeamInterference(Scene):
             font_size=56, color=INTENSITY_COLOR)
         general.next_to(title, DOWN, buff=0.5)
         self.play(Write(general)); self.wait(24.1)
-        self.play(Create(gold_box(general))); self.wait(21.7)
+        self.play(Create(gold_box(general))); self.wait(21.9)
 
         sym = eq_table([
             (r"I_1, I_2", "irradiances of the individual beams  [W/m²]", INTENSITY_COLOR),
@@ -73,8 +73,8 @@ class TwoBeamInterference(Scene):
             (r"2\sqrt{I_1 I_2}\cos\delta", "interference term — the KEY new physics", GOLD),
         ], eq_fs=30, lbl_fs=24, buff=0.25)
         sym.next_to(general, DOWN, buff=0.4)
-        for row in sym: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(sym))
+        for row in sym: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(sym))
 
         # Phase difference definition
         phase_title = Text("Phase Difference δ  (Bennett Eq. 7.17):", font_size=28, color=GOLD)
@@ -86,21 +86,21 @@ class TwoBeamInterference(Scene):
             font_size=42, color=WAVE_COLOR)
         delta_def.next_to(phase_title, DOWN, buff=0.3)
         safe_scale(delta_def, max_width=13.0)
-        self.play(Write(delta_def)); self.wait(2.0)
+        self.play(Write(delta_def)); self.wait(1.0)
 
         opd_def = MathTex(
             r"\text{OPD} = n_2 d_2 - n_1 d_1 \quad\text{(optical path = refractive index × geometric path)}",
             font_size=30, color=WHITE)
         opd_def.next_to(delta_def, DOWN, buff=0.3)
         safe_scale(opd_def, max_width=13.0)
-        self.play(Write(opd_def)); self.wait(2.0)
+        self.play(Write(opd_def)); self.wait(1.0)
 
         refl_note = MathTex(
             r"\Delta\varphi_{\text{refl}} = \pi \text{ for each reflection where } n_{\text{reflected}} > n_{\text{incident}}",
             font_size=28, color=B_COLOR)
         refl_note.next_to(opd_def, DOWN, buff=0.3)
         safe_scale(refl_note, max_width=13.0)
-        self.play(Write(refl_note)); self.wait(2.0)
+        self.play(Write(refl_note)); self.wait(1.0)
 
         # Equal intensities
         eq_int_title = Text("Special Case: Equal Intensities  I₁ = I₂ = I₀:", font_size=28, color=GOLD)
@@ -111,7 +111,7 @@ class TwoBeamInterference(Scene):
             r"I = 4I_0\cos^2\!\left(\frac{\delta}{2}\right)",
             font_size=56, color=INTENSITY_COLOR)
         equal_I.next_to(eq_int_title, DOWN, buff=0.3)
-        self.play(Write(equal_I)); self.wait(2.0)
+        self.play(Write(equal_I)); self.wait(1.0)
 
         cond_rows = eq_table([
             (r"\delta = 2m\pi \;\Rightarrow\; I = 4I_0",
@@ -122,8 +122,8 @@ class TwoBeamInterference(Scene):
              "averaged over space: energy is conserved — just redistributed", GOLD),
         ], eq_fs=28, lbl_fs=22, buff=0.25)
         cond_rows.next_to(equal_I, DOWN, buff=0.35)
-        for row in cond_rows: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, general, eq_int_title, equal_I, cond_rows)))
+        for row in cond_rows: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(title, general, eq_int_title, equal_I, cond_rows)))
 
 
 class YoungDoubleSlit(Scene):
@@ -181,7 +181,7 @@ class YoungDoubleSlit(Scene):
         safe_scale(fringes, max_height=3.5)
         for f in fringes: self.play(Write(f), run_time=0.9); self.wait(17.4)
         self.play(Create(gold_box(fringe_spacing)))
-        self.wait(21.2); self.play(FadeOut(VGroup(path_title, path, phase, fringes)))
+        self.wait(21.4); self.play(FadeOut(VGroup(path_title, path, phase, fringes)))
 
         # Intensity pattern
         int_title = Text("Intensity Pattern  (Bennett Eq. 7.18):", font_size=28, color=GOLD)
@@ -192,7 +192,7 @@ class YoungDoubleSlit(Scene):
             r"I(\theta) = 4I_0\cos^2\!\left(\frac{\pi d\sin\theta}{\lambda}\right)",
             font_size=44, color=INTENSITY_COLOR)
         int_eq.next_to(int_title, DOWN, buff=0.3)
-        self.play(Write(int_eq)); self.wait(2.0)
+        self.play(Write(int_eq)); self.wait(1.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
         self.play(FadeOut(VGroup(int_title, int_eq)))
 
@@ -284,8 +284,8 @@ class ThinFilmInterference(Scene):
                 r_group.add(VGroup(l, v).arrange(RIGHT, buff=0.3))
             r_group.arrange(DOWN, aligned_edge=LEFT, buff=0.18)
             r_group.next_to(c_title, DOWN, buff=0.3)
-            for row in r_group: self.play(FadeIn(row)); self.wait(9.7)
-            self.wait(2.0)
+            for row in r_group: self.play(FadeIn(row)); self.wait(9.9)
+            self.wait(1.0)
 
             f_group = VGroup()
             for fs in formula_strs:
@@ -293,12 +293,12 @@ class ThinFilmInterference(Scene):
             f_group.arrange(DOWN, buff=0.25, aligned_edge=LEFT)
             f_group.next_to(r_group, DOWN, buff=0.3)
             safe_scale(f_group, max_width=13.0)
-            self.play(Write(f_group)); self.wait(2.0)
+            self.play(Write(f_group)); self.wait(1.0)
 
             note = Text(note_str, font_size=24, color=GOLD)
             note.next_to(f_group, DOWN, buff=0.25)
             safe_scale(note, max_width=13.5)
-            self.play(FadeIn(note)); self.wait(2.0)
+            self.play(FadeIn(note)); self.wait(1.0)
             self.play(FadeOut(VGroup(c_title, r_group, f_group, note)))
 
         # AR coating example
@@ -312,7 +312,7 @@ class ThinFilmInterference(Scene):
         ], font_size=26)
         ar_desc.next_to(ar_title, DOWN, buff=0.3)
         self.play(FadeIn(ar_desc))
-        self.wait(2.0)
+        self.wait(1.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, ar_desc, start_buff=0.35)
@@ -355,7 +355,7 @@ class FringeVisibility(Scene):
             font_size=48, color=INTENSITY_COLOR)
         vis.next_to(title, DOWN, buff=0.5)
         self.play(Write(vis)); self.wait(16.9)
-        self.play(Create(gold_box(vis))); self.wait(13.1)
+        self.play(Create(gold_box(vis))); self.wait(13.3)
 
         vis_rows = eq_table([
             (r"V = 1", "PERFECT visibility — I₁=I₂ and fully coherent (only possible for lasers)", GOLD),
@@ -363,8 +363,8 @@ class FringeVisibility(Scene):
             (r"V = 0", "no fringes — either completely incoherent or one beam is blocked", B_COLOR),
         ], eq_fs=30, lbl_fs=23, buff=0.28)
         vis_rows.next_to(vis, DOWN, buff=0.4)
-        for row in vis_rows: self.play(FadeIn(row)); self.wait(2.0)
-        self.wait(2.0); self.play(FadeOut(VGroup(title, vis, vis_rows)))
+        for row in vis_rows: self.play(FadeIn(row)); self.wait(1.0)
+        self.wait(1.0); self.play(FadeOut(VGroup(title, vis, vis_rows)))
 
 
 class MichelsonScene(Scene):
@@ -401,7 +401,7 @@ class MichelsonScene(Scene):
         ], eq_fs=30, lbl_fs=22, buff=0.28)
         eqs.next_to(title, DOWN, buff=0.5)
         for row in eqs: self.play(FadeIn(row)); self.wait(12.6)
-        self.wait(27.5)
+        self.wait(27.7)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(eqs))
 
         # Worked example

@@ -24,7 +24,7 @@ class Week4TitleCard(Scene):
             "Bennett Ch. 5.5, 7.1–7.3.1, 6.1–6.2  |  Lecture 4.1"
         )
         self.play(FadeIn(card))
-        self.wait(133.1)
+        self.wait(133.3)
         self.play(FadeOut(card))
 
 
@@ -53,7 +53,7 @@ class MatrixOpticsIntro(Scene):
             "For a sequence of N elements: M_sys = M_N x ... x M_2 x M_1  (right-to-left!)",
             "The FIRST element encountered goes on the RIGHT of the product.",
             "This is the standard convention — multiplying LEFT-TO-RIGHT gives wrong result.",
-        ], wait=12.5)
+        ], wait=12.8)
 
         self.play(FadeOut(title))
 
@@ -101,7 +101,7 @@ class MatrixEquations(Scene):
             safe_scale(desc, max_width=13.0)
             block = VGroup(m_title, eq, desc)
             self.play(FadeIn(block, run_time=0.4))
-            self.wait(55.2)
+            self.wait(55.4)
             self.play(FadeOut(block, run_time=0.4))
 
         self.play(FadeOut(title))
@@ -139,7 +139,7 @@ class SystemMatrixCardinalPoints(Scene):
         cardinals.next_to(cardinal_title, DOWN, buff=0.3)
         safe_scale(cardinals, max_height=3.5)
         self.play(FadeIn(cardinals))
-        self.wait(23.7)
+        self.wait(23.9)
         self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
 
 
@@ -172,7 +172,7 @@ class MatrixExample(Scene):
             r"f_{\text{eff}}=-1/C\to\infty,\quad\text{beam magnification}=|A|=f_2/f_1",
             "infinite focal length = afocal. Beam expands by factor f2/f1.", GOLD)
         solver.finalize()
-        self.wait(40.1)
+        self.wait(40.3)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
