@@ -7,17 +7,19 @@ from utils import *
 class Week8TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week8TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEK 8",
             "Multiple-Beam Interference & Fabry-Pérot",
             "Bennett Ch. 7.10, 7.11"
         )
-        self.play(FadeIn(card)); self.wait(152.1); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(155.5); self.play(FadeOut(card))
 
 
 class MultiBeamIntro(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MultiBeamIntro.mp3", time_offset=0)
         title = Text("From Two Beams to Multiple Beams  (Bennett Section 7.10)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -37,12 +39,13 @@ class MultiBeamIntro(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(27.4)
-        self.wait(52.2); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(97.4); self.play(FadeOut(VGroup(title, intro)))
 
 
 class AiryFunction(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/AiryFunction.mp3", time_offset=0)
         title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -86,12 +89,13 @@ class AiryFunction(Scene):
         res.next_to(res_title, DOWN, buff=0.3)
         self.play(FadeIn(res))
         self.wait(1.0)
-        self.wait(1.0); self.play(FadeOut(VGroup(title, airy, res_title, res)))
+        self.wait(101.8); self.play(FadeOut(VGroup(title, airy, res_title, res)))
 
 
 class FinesseResolving(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FinesseResolving.mp3", time_offset=0)
         title = Text("Finesse, Resolving Power & Free Spectral Range", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -138,13 +142,14 @@ class FinesseResolving(Scene):
         phys.next_to(phys_title, DOWN, buff=0.35)
         self.play(FadeIn(phys))
         self.wait(14.5)
-        self.wait(20.0); self.play(FadeOut(VGroup(title, phys_title, phys)))
+        self.wait(117.6); self.play(FadeOut(VGroup(title, phys_title, phys)))
 
 
 class FabryPerotExample(Scene):
     """Full Fabry-Perot example — Bennett Example 7.11"""
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FabryPerotExample.mp3", time_offset=0)
         title = Text("Example: Resolving H and D Hα Lines  (Bennett Ex. 7.11)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -157,7 +162,7 @@ class FabryPerotExample(Scene):
         prob.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(prob))
         self.wait(10.2)
-        self.wait(84.6)
+        self.wait(97.4)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, prob, start_buff=0.4)
@@ -188,6 +193,7 @@ class FabryPerotExample(Scene):
 class CoherenceLength(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/CoherenceLength.mp3", time_offset=0)
         title = Text("Coherence & the Fabry-Pérot  (Bennett Section 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -240,12 +246,13 @@ class CoherenceLength(Scene):
             ).arrange(RIGHT, buff=0.3)
             safe_scale(row_mob, max_width=13.5)
             row_mob.next_to(sources_title, DOWN, buff=0.35)
-            self.play(FadeIn(row_mob)); self.wait(1.0); self.play(FadeOut(row_mob))
+            self.play(FadeIn(row_mob)); self.wait(93.1); self.play(FadeOut(row_mob))
 
 
 class Week8Summary(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week8Summary.mp3", time_offset=0)
         title = Text("Week 8 — Complete Formula Summary", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -263,4 +270,4 @@ class Week8Summary(Scene):
         ], eq_fs=30, lbl_fs=22, buff=0.22)
         rows.next_to(title, DOWN, buff=0.4)
         for row in rows: self.play(FadeIn(row)); self.wait(3.9)
-        self.wait(67.2); self.play(FadeOut(VGroup(title, rows)))
+        self.wait(75.4); self.play(FadeOut(VGroup(title, rows)))

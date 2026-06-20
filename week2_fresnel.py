@@ -7,17 +7,19 @@ from utils import *
 class Week2TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week2TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEK 2",
             "Reflection, Refraction & Fresnel Equations",
             "Bennett Ch. 3.2–3.6, 4.1–4.2"
         )
-        self.play(FadeIn(card, shift=UP)); self.wait(56.7); self.play(FadeOut(card))
+        self.play(FadeIn(card, shift=UP)); self.wait(58.1); self.play(FadeOut(card))
 
 
 class Week2Intro(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week2Intro.mp3", time_offset=0)
         title = Text("What Happens When Light Hits an Interface?", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -39,12 +41,13 @@ class Week2Intro(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(19.3)
-        self.wait(20.4); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(48.0); self.play(FadeOut(VGroup(title, intro)))
 
 
 class FermatPrinciple(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FermatPrinciple.mp3", time_offset=0)
         title = Text("Fermat's Principle of Least Time", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -80,6 +83,7 @@ class FermatPrinciple(Scene):
 class ReflectionRefraction(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/ReflectionRefraction.mp3", time_offset=0)
         title = Text("Law of Reflection & Snell's Law", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -131,7 +135,7 @@ class ReflectionRefraction(Scene):
         ], eq_fs=30, lbl_fs=24, buff=0.25)
         snell_sym.next_to(snell, DOWN, buff=0.35)
         for row in snell_sym: self.play(FadeIn(row)); self.wait(4.4)
-        self.wait(12.8); self.play(FadeOut(VGroup(snell_title, snell, snell_sym)))
+        self.wait(101.8); self.play(FadeOut(VGroup(snell_title, snell, snell_sym)))
 
         # Physical intuition
         make_pages(self, title, [
@@ -167,6 +171,7 @@ class ReflectionRefraction(Scene):
 class FresnelEquationsDerivation(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FresnelEquationsDerivation.mp3", time_offset=0)
         title = Text("Where the Fresnel Equations Come From", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -189,12 +194,13 @@ class FresnelEquationsDerivation(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(19.7)
-        self.wait(23.3); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(49.4); self.play(FadeOut(VGroup(title, intro)))
 
 
 class FresnelEquations(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FresnelEquations.mp3", time_offset=0)
         title = Text("The Fresnel Equations", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -253,12 +259,13 @@ class FresnelEquations(Scene):
         self.play(Write(r_norm)); self.wait(11.6)
         self.play(Write(t_norm)); self.wait(9.7)
         self.play(Create(gold_box(r_norm)))
-        self.wait(73.2); self.play(FadeOut(VGroup(title, norm_title, norm_eqs)))
+        self.wait(148.3); self.play(FadeOut(VGroup(title, norm_title, norm_eqs)))
 
 
 class FresnelFullExample(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FresnelFullExample.mp3", time_offset=0)
         title = Text("Fresnel Full Example: air→glass, θ_i=40°", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -270,7 +277,7 @@ class FresnelFullExample(Scene):
         given.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(given))
         self.wait(6.3)
-        self.wait(43.3)
+        self.wait(51.4)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, given, start_buff=0.4)
@@ -302,6 +309,7 @@ class FresnelFullExample(Scene):
 class ReflectivityTransmissivity(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/ReflectivityTransmissivity.mp3", time_offset=0)
         title = Text("Reflectivity and Transmissivity", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -328,7 +336,7 @@ class ReflectivityTransmissivity(Scene):
         ], eq_fs=32, lbl_fs=23, buff=0.32)
         eqs.next_to(title, DOWN, buff=0.5)
         for row in eqs: self.play(FadeIn(row)); self.wait(15.9)
-        self.wait(11.3); self.play(FadeOut(eqs))
+        self.wait(56.6); self.play(FadeOut(eqs))
 
         # Why T ≠ |t|²
         why_title = Text("Why T ≠ |t|²?  (Bennett Section 3.6 — important!)", font_size=30, color=GOLD)
@@ -367,6 +375,7 @@ class ReflectivityTransmissivity(Scene):
 class BrewsterTIR(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/BrewsterTIR.mp3", time_offset=0)
         title = Text("Brewster's Angle & Total Internal Reflection", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -454,12 +463,13 @@ class BrewsterTIR(Scene):
         tir_examples.next_to(tir_eqs, DOWN, buff=0.35)
         self.play(FadeIn(tir_examples))
         self.wait(1.0)
-        self.wait(1.0); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
+        self.wait(68.2); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
 
 
 class MalusLaw(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MalusLaw.mp3", time_offset=0)
         title = Text("Malus's Law", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -496,7 +506,7 @@ class MalusLaw(Scene):
         why.next_to(malus, DOWN, buff=0.45)
         self.play(FadeIn(why))
         self.wait(1.0)
-        self.wait(1.0)
+        self.wait(48.0)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(why))
 
         # Worked examples

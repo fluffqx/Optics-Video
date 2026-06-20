@@ -22,11 +22,12 @@ class Week1TitleCard(Scene):
     # p1=5.8s p2=11.1s p3=15.0s p4=0.6s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week1TitleCard.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/Week1TitleCard.mp3", time_offset=0)
         card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation",
                                "Bennett Ch. 1 & 2.1-2.3")
         self.play(FadeIn(card))
-        self.wait(32.7)
+        self.wait(34.1)
         self.play(FadeOut(card))
 
 
@@ -34,6 +35,7 @@ class WaveIntroduction(Scene):
     # p1=2.5s p2=17.4s p3=9.7s p4=9.7s p5=22.2s  total=63.4s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/WaveIntroduction.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/WaveIntroduction.mp3", time_offset=0)
         title = Text("What Is a Wave?", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -69,6 +71,7 @@ class WaveEquation1D(Scene):
     # p1=6.3s p2=15.9s p3=18.3s p4=15.0s p5=24.5s p6=10.2s  total=92.6s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/WaveEquation1D.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/WaveEquation1D.mp3", time_offset=0)
         title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -120,7 +123,7 @@ class WaveEquation1D(Scene):
         safe_scale(key, max_width=13.0)
         key.next_to(sols, DOWN, buff=0.3)
         self.play(FadeIn(key))
-        self.wait(1.0)
+        self.wait(92.6)
         self.play(FadeOut(VGroup(title, eq, sols, key)))
 
 
@@ -128,6 +131,7 @@ class WaveEquationProof(Scene):
     # p1=10.2s p2=21.7s p3=7.3s  total=40.3s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/WaveEquationProof.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/WaveEquationProof.mp3", time_offset=0)
         title = Text("Proof: f(x-vt) Satisfies the Wave Equation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -145,7 +149,7 @@ class WaveEquationProof(Scene):
         solver.add_step(3, r"\frac{1}{v^2}\cdot2v^2=2=\partial^2\Psi/\partial x^2\;\checkmark",
                        "both sides equal 2 — wave equation satisfied!", GOLD)
         solver.finalize()
-        self.wait(39.4)
+        self.wait(40.3)
 
         # p3 7.3s
         b3 = tb(["Any function of the form f(x-vt) satisfies the wave equation.",
@@ -161,6 +165,7 @@ class HarmonicWave(Scene):
     # waits: [9.2, 7.3, 5.8, 13.5, 15.9, 11.1, 4.9, 11.6, 11.1, 7.8, 15.9, 11.6, 7.3, 12.6]
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/HarmonicWave.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/HarmonicWave.mp3", time_offset=0)
         title = Text("Harmonic Traveling Waves", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -234,6 +239,7 @@ class HarmonicWaveExample(Scene):
     # p1=6.8s p2=33.7s p3=9.2s  total=50.9s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/HarmonicWaveExample.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/HarmonicWaveExample.mp3", time_offset=0)
         title = Text("Example: Green Laser (lambda = 532 nm)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -250,7 +256,7 @@ class HarmonicWaveExample(Scene):
         solver.add_step(3, r"\omega=2\pi f=3.54\times10^{15}\text{ rad/s}", "angular frequency", WAVE_COLOR)
         solver.add_step(4, r"T=1/f=1.77\text{ fs}", "period: 1.77 femtoseconds", GOLD)
         solver.finalize()
-        self.wait(49.9)
+        self.wait(50.9)
 
         # p3 9.2s
         self.play(FadeOut(VGroup(*solver.steps)))
@@ -263,6 +269,7 @@ class SuperpositionPrinciple(Scene):
     # p1=5.8s p2=21.7s p3=15.5s  total=44.2s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/SuperpositionPrinciple.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/SuperpositionPrinciple.mp3", time_offset=0)
         title = Text("The Principle of Superposition", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -296,6 +303,7 @@ class PhaseGroupVelocity(Scene):
     # 10 paras: [7.8,13.5,21.2,12.1,17.4,13.0,9.7,9.2,8.2,13.5]  total=129.6s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/PhaseGroupVelocity.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/PhaseGroupVelocity.mp3", time_offset=0)
         title = Text("Phase Velocity & Group Velocity", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -361,6 +369,7 @@ class ComplexRepresentation(Scene):
     # 8 paras: [13.0,15.9,9.7,21.2,17.8,13.0,23.6,15.9]  total=133.4s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/ComplexRepresentation.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/ComplexRepresentation.mp3", time_offset=0)
         title = Text("Complex Representation of Waves", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -433,6 +442,7 @@ class ThreeDWaves(Scene):
     # p1=21.7s p2=8.7s p3=25.0s  total=56.6s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/ThreeDWaves.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/ThreeDWaves.mp3", time_offset=0)
         title = Text("3D Plane Waves & Spherical Waves", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
@@ -476,6 +486,7 @@ class Week1WavesSummary(Scene):
     # p1=3.9s p2=12.1s p3=14.5s p4=16.4s  total=48.5s
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week1WavesSummary.mp3", time_offset=0)
         self.add_sound(f"{AUDIO}/Week1WavesSummary.mp3", time_offset=0)
         title = Text("Week 1 Summary — Key Equations", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)

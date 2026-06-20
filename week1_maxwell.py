@@ -274,6 +274,7 @@ class MaxwellEquations_p7(Scene):
 class MaxwellVacuum(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MaxwellVacuum.mp3", time_offset=0)
         self.add_sound(f"{FULL}/MaxwellVacuum.mp3", time_offset=0)
         title = Text("Maxwell's Equations in Vacuum", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -284,12 +285,13 @@ class MaxwellVacuum(Scene):
             MathTex(r"\nabla\times\vec{B}=\mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}", font_size=44, color=B_COLOR),
         ).arrange(DOWN, buff=0.35)
         eqs.next_to(title, DOWN, buff=0.5); safe_scale(eqs, max_height=5.0)
-        self.play(FadeIn(eqs, run_time=0.1)); self.wait(1)
+        self.play(FadeIn(eqs, run_time=0.1)); self.wait(53.3)
 
 
 class EMWaveDerivation(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/EMWaveDerivation.mp3", time_offset=0)
         self.add_sound(f"{FULL}/EMWaveDerivation.mp3", time_offset=0)
         title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -303,12 +305,13 @@ class EMWaveDerivation(Scene):
         solver.add_step(3,
             r"\nabla^2\vec{E}=\mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2}\quad\Rightarrow\quad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}",
             "use div E = 0 in vacuum. EM wave equation!", GOLD)
-        solver.finalize(); self.wait(1)
+        solver.finalize(); self.wait(75.8)
 
 
 class EMWaveProperties(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/EMWaveProperties.mp3", time_offset=0)
         self.add_sound(f"{FULL}/EMWaveProperties.mp3", time_offset=0)
         title = Text("Properties of EM Waves", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -321,12 +324,13 @@ class EMWaveProperties(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
         safe_scale(props, max_width=13.0, max_height=4.5)
         props.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(props, run_time=0.1)); self.wait(1)
+        self.play(FadeIn(props, run_time=0.1)); self.wait(55.2)
 
 
 class EMWaveExample(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/EMWaveExample.mp3", time_offset=0)
         self.add_sound(f"{FULL}/EMWaveExample.mp3", time_offset=0)
         title = Text("Example: Finding B from E", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -337,12 +341,13 @@ class EMWaveExample(Scene):
         solver.add_step(1, r"\hat{k}=\hat{z}", "propagation in +z", ANGLE_COLOR)
         solver.add_step(2, r"\vec{B}=\frac{\vec{k}\times\vec{E}}{\omega}", "Faraday for plane waves", B_COLOR)
         solver.add_step(3, r"\hat{z}\times\hat{x}=\hat{y}\;\Rightarrow\;\vec{B}=\frac{E_0}{c}\hat{y}\,e^{i(kz-\omega t)}", "B in y-direction, magnitude E0/c", B_COLOR)
-        solver.finalize(); self.wait(1)
+        solver.finalize(); self.wait(47.0)
 
 
 class PoyntingIrradiance(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/PoyntingIrradiance.mp3", time_offset=0)
         self.add_sound(f"{FULL}/PoyntingIrradiance.mp3", time_offset=0)
         title = Text("Poynting Vector & Irradiance", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -355,12 +360,13 @@ class PoyntingIrradiance(Scene):
         block.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(block, run_time=0.1))
         self.play(Create(gold_box(I_eq)))
-        self.wait(1)
+        self.wait(136.3)
 
 
 class RadiationPressure(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/RadiationPressure.mp3", time_offset=0)
         self.add_sound(f"{FULL}/RadiationPressure.mp3", time_offset=0)
         title = Text("Radiation Pressure", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -369,12 +375,13 @@ class RadiationPressure(Scene):
             labeled_eq(r"P_{\text{refl}}=2I/c", "reflecting surface — momentum reverses", INTENSITY_COLOR, 48, 26),
         ).arrange(DOWN, buff=0.5)
         eqs.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(eqs, run_time=0.1)); self.wait(1)
+        self.play(FadeIn(eqs, run_time=0.1)); self.wait(54.7)
 
 
 class DispersionScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/DispersionScene.mp3", time_offset=0)
         self.add_sound(f"{FULL}/DispersionScene.mp3", time_offset=0)
         title = Text("Dispersion & Index of Refraction", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4); self.add(title)
@@ -390,4 +397,4 @@ class DispersionScene(Scene):
         block = VGroup(n_eq, vg_eq, desc).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(block, max_width=13.0, max_height=4.5)
         block.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(block, run_time=0.1)); self.wait(1)
+        self.play(FadeIn(block, run_time=0.1)); self.wait(110.4)

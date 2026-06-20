@@ -18,19 +18,21 @@ def pg(scene, title, lines, wait, fs=27):
 class Week4TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week4TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEK 4",
             "Matrix Optics, Wave Superposition & Polarisation",
             "Bennett Ch. 5.5, 7.1–7.3.1, 6.1–6.2  |  Lecture 4.1"
         )
         self.play(FadeIn(card))
-        self.wait(133.3)
+        self.wait(136.8)
         self.play(FadeOut(card))
 
 
 class MatrixOpticsIntro(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MatrixOpticsIntro.mp3", time_offset=0)
         title = Text("Why Matrix Methods? (Bennett Section 5.5)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -61,6 +63,7 @@ class MatrixOpticsIntro(Scene):
 class MatrixEquations(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MatrixEquations.mp3", time_offset=0)
         title = Text("The Elementary Ray Transfer Matrices", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -101,7 +104,7 @@ class MatrixEquations(Scene):
             safe_scale(desc, max_width=13.0)
             block = VGroup(m_title, eq, desc)
             self.play(FadeIn(block, run_time=0.4))
-            self.wait(55.4)
+            self.wait(57.1)
             self.play(FadeOut(block, run_time=0.4))
 
         self.play(FadeOut(title))
@@ -110,6 +113,7 @@ class MatrixEquations(Scene):
 class SystemMatrixCardinalPoints(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/SystemMatrixCardinalPoints.mp3", time_offset=0)
         title = Text("System Matrix & Cardinal Points  (Bennett 5.5.5)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -139,13 +143,14 @@ class SystemMatrixCardinalPoints(Scene):
         cardinals.next_to(cardinal_title, DOWN, buff=0.3)
         safe_scale(cardinals, max_height=3.5)
         self.play(FadeIn(cardinals))
-        self.wait(23.9)
+        self.wait(53.8)
         self.play(FadeOut(VGroup(title, cardinal_title, cardinals)))
 
 
 class MatrixExample(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MatrixExample.mp3", time_offset=0)
         title = Text("Matrix Example: Beam Expander", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -172,7 +177,7 @@ class MatrixExample(Scene):
             r"f_{\text{eff}}=-1/C\to\infty,\quad\text{beam magnification}=|A|=f_2/f_1",
             "infinite focal length = afocal. Beam expands by factor f2/f1.", GOLD)
         solver.finalize()
-        self.wait(40.3)
+        self.wait(52.8)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
@@ -181,6 +186,7 @@ class MatrixExample(Scene):
 class StandingWaves(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/StandingWaves.mp3", time_offset=0)
         title = Text("Standing Waves (Bennett Section 7.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -209,13 +215,14 @@ class StandingWaves(Scene):
             r"\text{ANTINODES (max amplitude): } kx = (m+\tfrac{1}{2})\pi",
             "positions where amplitude oscillates with maximum magnitude", E_COLOR)
         solver.finalize()
-        self.wait(5)
+        self.wait(80.0)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
 class Beating(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Beating.mp3", time_offset=0)
         title = Text("Beating (Bennett Section 7.2)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -244,7 +251,7 @@ class Beating(Scene):
             r"\text{Example: } f_1=440\text{ Hz},\; f_2=443\text{ Hz} \;\Rightarrow\; f_{\text{beat}}=3\text{ Hz}",
             "3 beats per second — easily heard by ear")
         solver.finalize()
-        self.wait(5)
+        self.wait(70.0)
         self.play(FadeOut(VGroup(title, *solver.steps)))
 
 
@@ -253,6 +260,7 @@ class Beating(Scene):
 class PolarizationBasics(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/PolarizationBasics.mp3", time_offset=0)
         title = Text("Polarization of Light (Bennett Section 6.1-6.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))

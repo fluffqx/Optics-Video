@@ -7,17 +7,19 @@ from utils import *
 class Week6TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week6TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEKS 5–6",
             "Interference: Two-Beam, Young's, Thin Films & Michelson",
             "Bennett Ch. 7.1–7.3.5, 7.8"
         )
-        self.play(FadeIn(card)); self.wait(153.9); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(157.0); self.play(FadeOut(card))
 
 
 class InterferenceIntroScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/InterferenceIntroScene.mp3", time_offset=0)
         title = Text("Introduction to Interference  (Bennett Section 7.1)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -41,12 +43,13 @@ class InterferenceIntroScene(Scene):
         intro.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(intro))
         self.wait(19.7)
-        self.wait(20.4); self.play(FadeOut(VGroup(title, intro)))
+        self.wait(56.6); self.play(FadeOut(VGroup(title, intro)))
 
 
 class TwoBeamInterference(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/TwoBeamInterference.mp3", time_offset=0)
         title = Text("Two-Beam Interference Formula  (Bennett Section 7.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -123,12 +126,13 @@ class TwoBeamInterference(Scene):
         ], eq_fs=28, lbl_fs=22, buff=0.25)
         cond_rows.next_to(equal_I, DOWN, buff=0.35)
         for row in cond_rows: self.play(FadeIn(row)); self.wait(1.0)
-        self.wait(1.0); self.play(FadeOut(VGroup(title, general, eq_int_title, equal_I, cond_rows)))
+        self.wait(87.4); self.play(FadeOut(VGroup(title, general, eq_int_title, equal_I, cond_rows)))
 
 
 class YoungDoubleSlit(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/YoungDoubleSlit.mp3", time_offset=0)
         title = Text("Young's Double-Slit Experiment  (Bennett Section 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -192,7 +196,7 @@ class YoungDoubleSlit(Scene):
             r"I(\theta) = 4I_0\cos^2\!\left(\frac{\pi d\sin\theta}{\lambda}\right)",
             font_size=44, color=INTENSITY_COLOR)
         int_eq.next_to(int_title, DOWN, buff=0.3)
-        self.play(Write(int_eq)); self.wait(1.0)
+        self.play(Write(int_eq)); self.wait(110.4)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
         self.play(FadeOut(VGroup(int_title, int_eq)))
 
@@ -220,6 +224,7 @@ class YoungDoubleSlit(Scene):
 class ThinFilmInterference(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/ThinFilmInterference.mp3", time_offset=0)
         title = Text("Thin Film Interference  (Bennett Section 7.3.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -312,7 +317,7 @@ class ThinFilmInterference(Scene):
         ], font_size=26)
         ar_desc.next_to(ar_title, DOWN, buff=0.3)
         self.play(FadeIn(ar_desc))
-        self.wait(1.0)
+        self.wait(91.7)
         self.play(FadeOut(*self.mobjects), run_time=0.5)
 
         solver = StepSolver(self, ar_desc, start_buff=0.35)
@@ -335,6 +340,7 @@ class ThinFilmInterference(Scene):
 class FringeVisibility(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/FringeVisibility.mp3", time_offset=0)
         title = Text("Fringe Visibility  (Bennett Section 7.3.4)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -364,12 +370,13 @@ class FringeVisibility(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.28)
         vis_rows.next_to(vis, DOWN, buff=0.4)
         for row in vis_rows: self.play(FadeIn(row)); self.wait(1.0)
-        self.wait(1.0); self.play(FadeOut(VGroup(title, vis, vis_rows)))
+        self.wait(51.4); self.play(FadeOut(VGroup(title, vis, vis_rows)))
 
 
 class MichelsonScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MichelsonScene.mp3", time_offset=0)
         title = Text("Michelson Interferometer  (Bennett Section 7.8)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -401,7 +408,7 @@ class MichelsonScene(Scene):
         ], eq_fs=30, lbl_fs=22, buff=0.28)
         eqs.next_to(title, DOWN, buff=0.5)
         for row in eqs: self.play(FadeIn(row)); self.wait(12.6)
-        self.wait(27.7)
+        self.wait(94.6)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(eqs))
 
         # Worked example

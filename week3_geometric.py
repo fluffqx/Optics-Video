@@ -18,19 +18,21 @@ def pg(scene, title, lines, wait, fs=27, color=WHITE):
 class Week3TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week3TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEK 3",
             "Geometric Optics: Lenses, Mirrors & Instruments",
             "Bennett Ch. 4.3–4.5, 5.2, 5.5"
         )
         self.play(FadeIn(card))
-        self.wait(83.7)
+        self.wait(85.0)
         self.play(FadeOut(card))
 
 
 class GeometricOpticsIntro(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/GeometricOpticsIntro.mp3", time_offset=0)
         title = Text("What is Geometric (Ray) Optics?", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -60,6 +62,7 @@ class GeometricOpticsIntro(Scene):
 class SignConventions(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/SignConventions.mp3", time_offset=0)
         title = Text("Sign Conventions — CRITICAL (Bennett 4.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -95,13 +98,14 @@ class SignConventions(Scene):
         rule_group.next_to(warning, DOWN, buff=0.3)
         safe_scale(rule_group, max_height=4.5)
         self.play(FadeIn(rule_group))
-        self.wait(84.5)
+        self.wait(100.8)
         self.play(FadeOut(VGroup(title, warning, rule_group)))
 
 
 class SphericalSurface(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/SphericalSurface.mp3", time_offset=0)
         title = Text("Refraction at a Spherical Surface (Bennett Eq. 4.10)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -126,7 +130,7 @@ class SphericalSurface(Scene):
         ], eq_fs=30, lbl_fs=23, buff=0.22)
         sym.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(sym))
-        self.wait(14.7)
+        self.wait(49.4)
         self.play(FadeOut(sym))
 
         pg(self, title, [
@@ -141,6 +145,7 @@ class SphericalSurface(Scene):
 class ThinLensScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/ThinLensScene.mp3", time_offset=0)
         title = Text("Thin Lenses (Bennett Section 4.3.3)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -171,7 +176,7 @@ class ThinLensScene(Scene):
         ).arrange(RIGHT, buff=1.5)
         extras.next_to(tl, DOWN, buff=0.4)
         self.play(FadeIn(extras))
-        self.wait(14.5)
+        self.wait(136.8)
         self.play(FadeOut(extras))
 
         pg(self, title, [
@@ -187,6 +192,7 @@ class ThinLensScene(Scene):
 class MirrorScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MirrorScene.mp3", time_offset=0)
         title = Text("Spherical Mirrors (Bennett Section 4.3.2)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -203,7 +209,7 @@ class MirrorScene(Scene):
         mirror_eq.next_to(title, DOWN, buff=0.5)
         self.play(Write(mirror_eq))
         self.play(Create(gold_box(mirror_eq)))
-        self.wait(19.8)
+        self.wait(55.2)
 
         pg(self, title, [
             "Example: concave mirror R=+40cm, object at s_o=30cm.",
@@ -218,6 +224,7 @@ class MirrorScene(Scene):
 class LensCombinations(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/LensCombinations.mp3", time_offset=0)
         title = Text("Lens Combinations (Bennett Section 4.4)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -237,7 +244,7 @@ class LensCombinations(Scene):
         ).arrange(DOWN, buff=0.5)
         eqs.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(eqs))
-        self.wait(13.5)
+        self.wait(43.7)
         self.play(FadeOut(eqs))
 
         pg(self, title, [
@@ -253,6 +260,7 @@ class LensCombinations(Scene):
 class OpticalInstruments(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/OpticalInstruments.mp3", time_offset=0)
         title = Text("Optical Instruments (Bennett Section 4.5)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))

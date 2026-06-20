@@ -7,17 +7,19 @@ from utils import *
 class Week7TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week7TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEKS 6–7",
             "Fraunhofer Diffraction: Slits, Apertures & Gratings",
             "Bennett Ch. 8.1–8.3.8"
         )
-        self.play(FadeIn(card)); self.wait(142.3); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(145.4); self.play(FadeOut(card))
 
 
 class HuygensPrinciple(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/HuygensPrinciple.mp3", time_offset=0)
         title = Text("Huygens' Principle & Diffraction  (Bennett Section 8.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -65,12 +67,13 @@ class HuygensPrinciple(Scene):
         fc_desc.next_to(fc_eq, DOWN, buff=0.35)
         self.play(FadeIn(fc_desc))
         self.wait(16.1)
-        self.wait(1.0); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
+        self.wait(88.3); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
 
 
 class SingleSlitDiffraction(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/SingleSlitDiffraction.mp3", time_offset=0)
         title = Text("Single-Slit Fraunhofer Diffraction  (Bennett Section 8.3.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -142,7 +145,7 @@ class SingleSlitDiffraction(Scene):
         ], eq_fs=28, lbl_fs=22, buff=0.25)
         dark_rows.next_to(dark_title, DOWN, buff=0.3)
         for row in dark_rows: self.play(FadeIn(row)); self.wait(1.0)
-        self.wait(1.0)
+        self.wait(87.8)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(dark_title, dark_rows)))
 
         # Full worked example
@@ -173,6 +176,7 @@ class SingleSlitDiffraction(Scene):
 class CircularApertureRayleigh(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/CircularApertureRayleigh.mp3", time_offset=0)
         title = Text("Circular Aperture & Rayleigh Criterion  (Bennett Section 8.3.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -237,7 +241,7 @@ class CircularApertureRayleigh(Scene):
         rayleigh_desc.next_to(rayleigh, DOWN, buff=0.35)
         self.play(FadeIn(rayleigh_desc))
         self.wait(1.0)
-        self.wait(1.0)
+        self.wait(101.3)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rayleigh_title, rayleigh, rayleigh_desc)))
 
         # Examples
@@ -270,6 +274,7 @@ class CircularApertureRayleigh(Scene):
 class DiffractionGrating(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/DiffractionGrating.mp3", time_offset=0)
         title = Text("Diffraction Grating  (Bennett Sections 8.3.5–8.3.7)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -357,7 +362,7 @@ class DiffractionGrating(Scene):
         ], eq_fs=32, lbl_fs=22, buff=0.3)
         rp_rows.next_to(rp_title, DOWN, buff=0.3)
         for row in rp_rows: self.play(FadeIn(row)); self.wait(1.0)
-        self.wait(1.0)
+        self.wait(99.8)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rp_title, rp_rows)))
 
         # Full worked example

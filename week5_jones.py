@@ -7,17 +7,19 @@ from utils import *
 class Week5TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/Week5TitleCard.mp3", time_offset=0)
         card = make_title_card(
             "WEEK 5",
             "Polarisation Optics: Wave Plates & Jones Formalism",
             "Bennett Ch. 6"
         )
-        self.play(FadeIn(card)); self.wait(145.4); self.play(FadeOut(card))
+        self.play(FadeIn(card)); self.wait(148.8); self.play(FadeOut(card))
 
 
 class PolarisationStatesScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/PolarisationStatesScene.mp3", time_offset=0)
         title = Text("States of Polarisation  (Bennett Section 6.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -83,12 +85,13 @@ class PolarisationStatesScene(Scene):
             desc.next_to(eq_mobs, DOWN, buff=0.3)
             self.play(FadeIn(desc))
             self.wait(1.0)
-            self.wait(1.0); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
+            self.wait(50.4); self.play(FadeOut(VGroup(s_title, eq_mobs, desc)))
 
 
 class BirefringenceWavePlates(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/BirefringenceWavePlates.mp3", time_offset=0)
         title = Text("Birefringence & Wave Plates  (Bennett Section 6.3-6.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -166,12 +169,13 @@ class BirefringenceWavePlates(Scene):
             eff.next_to(eq2, DOWN, buff=0.3)
             self.play(FadeIn(eff))
             self.wait(1.0)
-            self.wait(1.0); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
+            self.wait(63.8); self.play(FadeOut(VGroup(p_title, eq1, eq2, eff)))
 
 
 class JonesFormalism(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/JonesFormalism.mp3", time_offset=0)
         title = Text("Jones Vectors  (Bennett Section 6.5)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -220,12 +224,13 @@ class JonesFormalism(Scene):
 
         for row in state_mobs:
             self.play(FadeIn(row), run_time=0.5); self.wait(1.0)
-        self.wait(1.0); self.play(FadeOut(VGroup(title, states_title, state_mobs)))
+        self.wait(47.5); self.play(FadeOut(VGroup(title, states_title, state_mobs)))
 
 
 class JonesMatrices(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/JonesMatrices.mp3", time_offset=0)
         title = Text("Jones Matrices  (Bennett Section 6.5.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
@@ -277,7 +282,7 @@ class JonesMatrices(Scene):
             font_size=36, color=N_COLOR)
         rot_formula.next_to(rot_title, DOWN, buff=0.3)
         safe_scale(rot_formula, max_width=13.0)
-        self.play(Write(rot_formula)); self.wait(13.2)
+        self.play(Write(rot_formula)); self.wait(56.2)
         self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(VGroup(rot_title, rot_formula)))
 
         # Full worked example
