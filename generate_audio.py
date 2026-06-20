@@ -1,45 +1,46 @@
 """
-generate_audio.py — Auto-generate narration MP3s and merge with video
-=====================================================================
-
-Requirements:
-    pip install edge-tts
+generate_audio.py — Generate narration MP3s + exact word-boundary timing JSON files
+====================================================================================
 
 Usage:
-    python generate_audio.py              # generate all missing MP3s
-    python generate_audio.py --all        # regenerate everything (overwrite)
-    python generate_audio.py --list       # check status of all scenes
-    python generate_audio.py --scene WaveEquation1D   # one scene only
-    python generate_audio.py --merge      # merge all video+audio into output_narrated/
-    python generate_audio.py --concat     # concatenate all narrated videos into one
+    python generate_audio.py              # generate all missing MP3s + timing JSONs
+    python generate_audio.py --all        # regenerate everything
+    python generate_audio.py --list       # show status of all scenes
+    python generate_audio.py --scene NAME # one scene only
+    python generate_audio.py --merge      # merge video + audio
+    python generate_audio.py --concat     # concatenate final video
 
-Voice options (change VOICE below):
-    en-GB-RyanNeural      — British male (default)
-    en-US-GuyNeural       — American male
-    en-GB-SoniaNeural     — British female
-    en-AU-WilliamNeural   — Australian male
-    en-US-AriaNeural      — American female
+Timing JSONs are saved to narration/timing/<SceneName>.json
+Each JSON contains:
+  {
+    "total_duration": 51.3,
+    "paragraphs": [
+      {"index": 0, "start": 0.0, "end": 4.2, "duration": 4.2, "text": "Before writing..."},
+      {"index": 1, "start": 4.2, "end": 23.1, "duration": 18.9, "text": "The divergence..."},
+      ...
+    ]
+  }
+
+Use sync_timing.py to apply these timings to self.wait() calls in scene files.
 """
 
-import asyncio, os, sys, argparse, subprocess
+import asyncio, os, sys, argparse, subprocess, json
 from pathlib import Path
 
-# ── Configuration ────────────────────────────────────────────────────────────
 VOICE       = "en-GB-RyanNeural"
 RATE        = "+0%"
 PITCH       = "+0Hz"
-QUALITY     = "1080p60"    # match your manim render quality
+QUALITY     = "1080p60"
 
-NARRATION_DIR  = Path("narration")
-AUDIO_DIR      = Path("narration/audio")
+NARRATION_DIR = Path("narration")
+AUDIO_DIR     = Path("narration/audio")
+TIMING_DIR    = Path("narration/timing")
+OUTPUT_DIR    = Path("output_narrated")
 AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-OUTPUT_DIR     = Path("output_narrated")
+TIMING_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# ── Scene → narration file mapping ───────────────────────────────────────────
-# Any scene not listed here gets no narration (instrumental/visual only)
 SCENES = {
-    # Week 1 — Waves
     "Week1TitleCard":              "Week1TitleCard.txt",
     "WaveIntroduction":            "WaveIntroduction.txt",
     "WaveEquation1D":              "WaveEquation1D.txt",
@@ -51,7 +52,6 @@ SCENES = {
     "ComplexRepresentation":       "ComplexRepresentation.txt",
     "ThreeDWaves":                 "ThreeDWaves.txt",
     "Week1WavesSummary":           "Week1WavesSummary.txt",
-    # Week 1 — Maxwell
     "MaxwellIntro":                "MaxwellIntro.txt",
     "VectorCalculusNotation":      "VectorCalculusNotation.txt",
     "MaxwellEquations":            "MaxwellEquations.txt",
@@ -62,7 +62,6 @@ SCENES = {
     "PoyntingIrradiance":          "PoyntingIrradiance.txt",
     "RadiationPressure":           "RadiationPressure.txt",
     "DispersionScene":             "DispersionScene.txt",
-    # Week 2
     "Week2TitleCard":              "Week2TitleCard.txt",
     "Week2Intro":                  "Week2Intro.txt",
     "FermatPrinciple":             "FermatPrinciple.txt",
@@ -73,7 +72,6 @@ SCENES = {
     "ReflectivityTransmissivity":  "ReflectivityTransmissivity.txt",
     "BrewsterTIR":                 "BrewsterTIR.txt",
     "MalusLaw":                    "MalusLaw.txt",
-    # Week 3
     "Week3TitleCard":              "Week3TitleCard.txt",
     "GeometricOpticsIntro":        "GeometricOpticsIntro.txt",
     "SignConventions":             "SignConventions.txt",
@@ -82,19 +80,16 @@ SCENES = {
     "MirrorScene":                 "MirrorScene.txt",
     "LensCombinations":            "LensCombinations.txt",
     "OpticalInstruments":          "OpticalInstruments.txt",
-    # Week 4
     "Week4TitleCard":              "Week4TitleCard.txt",
     "MatrixOpticsIntro":           "MatrixOpticsIntro.txt",
     "MatrixEquations":             "MatrixEquations.txt",
     "SystemMatrixCardinalPoints":  "SystemMatrixCardinalPoints.txt",
     "MatrixExample":               "MatrixExample.txt",
-    # Week 5
     "Week5TitleCard":              "Week5TitleCard.txt",
     "PolarisationStatesScene":     "PolarisationStatesScene.txt",
     "BirefringenceWavePlates":     "BirefringenceWavePlates.txt",
     "JonesFormalism":              "JonesFormalism.txt",
     "JonesMatrices":               "JonesMatrices.txt",
-    # Week 6
     "Week6TitleCard":              "Week6TitleCard.txt",
     "InterferenceIntroScene":      "InterferenceIntroScene.txt",
     "TwoBeamInterference":         "TwoBeamInterference.txt",
@@ -102,13 +97,11 @@ SCENES = {
     "ThinFilmInterference":        "ThinFilmInterference.txt",
     "FringeVisibility":            "FringeVisibility.txt",
     "MichelsonScene":              "MichelsonScene.txt",
-    # Week 7
     "Week7TitleCard":              "Week7TitleCard.txt",
     "HuygensPrinciple":            "HuygensPrinciple.txt",
     "SingleSlitDiffraction":       "SingleSlitDiffraction.txt",
     "CircularApertureRayleigh":    "CircularApertureRayleigh.txt",
     "DiffractionGrating":          "DiffractionGrating.txt",
-    # Week 8
     "Week8TitleCard":              "Week8TitleCard.txt",
     "MultiBeamIntro":              "MultiBeamIntro.txt",
     "AiryFunction":                "AiryFunction.txt",
@@ -116,19 +109,19 @@ SCENES = {
     "FabryPerotExample":           "FabryPerotExample.txt",
     "CoherenceLength":             "CoherenceLength.txt",
     "Week8Summary":                "Week8Summary.txt",
-    # Exam prep
     "FormulaSheetTitleCard":       "FormulaSheetTitleCard.txt",
     "MidtermPrepScene":            "MidtermPrepScene.txt",
     "FinalExamPrepScene":          "FinalExamPrepScene.txt",
 }
 
-# ── Video path helper ─────────────────────────────────────────────────────────
+
 def video_path(py_file: str, scene: str, quality: str = QUALITY) -> Path:
     stem = Path(py_file).stem
     return Path(f"media/videos/{stem}/{quality}/{scene}.mp4")
 
 
-# ── Audio generation ──────────────────────────────────────────────────────────
+# ── Core: generate MP3 + timing JSON using word boundary events ──────────────
+
 async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bool:
     try:
         import edge_tts
@@ -136,53 +129,128 @@ async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bo
         print("ERROR: run  pip install edge-tts  first")
         sys.exit(1)
 
-    txt_path   = NARRATION_DIR / txt_file
-    audio_path = AUDIO_DIR / f"{scene}.mp3"
+    txt_path    = NARRATION_DIR / txt_file
+    audio_path  = AUDIO_DIR / f"{scene}.mp3"
+    timing_path = TIMING_DIR / f"{scene}.json"
 
     if not txt_path.exists():
-        print(f"  SKIP   {scene:<38} — no .txt narration file")
-        return False
-    if audio_path.exists() and not overwrite:
-        print(f"  EXISTS {scene:<38} — {audio_path}")
-        return True
-
-    text = txt_path.read_text(encoding="utf-8").strip()
-    if not text:
-        print(f"  SKIP   {scene:<38} — empty txt file")
+        print(f"  SKIP   {scene:<40} — no .txt file")
         return False
 
-    print(f"  GEN    {scene:<38} ...", end="", flush=True)
-    try:
-        communicate = edge_tts.Communicate(text, VOICE, rate=RATE, pitch=PITCH)
-        await communicate.save(str(audio_path))
-        kb = audio_path.stat().st_size // 1024
-        print(f" done ({kb} KB)")
+    if audio_path.exists() and timing_path.exists() and not overwrite:
+        print(f"  EXISTS {scene:<40}")
         return True
-    except Exception as e:
-        print(f" FAILED: {e}")
+
+    full_text = txt_path.read_text(encoding="utf-8").strip()
+    if not full_text:
         return False
+
+    # Split into paragraphs
+    paragraphs = [p.strip() for p in full_text.split("\n\n") if p.strip()]
+
+    print(f"  GEN    {scene:<40} ({len(paragraphs)} paras)...", end="", flush=True)
+
+    # Generate audio with word boundary events
+    communicate = edge_tts.Communicate(full_text, VOICE, rate=RATE, pitch=PITCH)
+
+    audio_chunks = []
+    word_events  = []   # {"word": str, "start": float, "end": float}
+
+    async for chunk in communicate.stream():
+        if chunk["type"] == "audio":
+            audio_chunks.append(chunk["data"])
+        elif chunk["type"] == "WordBoundary":
+            start = chunk["offset"] / 10_000_000      # 100-nanosecond units → seconds
+            dur   = chunk["duration"] / 10_000_000
+            word_events.append({
+                "word":  chunk["text"],
+                "start": round(start, 4),
+                "end":   round(start + dur, 4),
+            })
+
+    # Write MP3
+    audio_path.write_bytes(b"".join(audio_chunks))
+
+    # Match paragraphs to word events to get paragraph timestamps
+    # Strategy: find the first word of each paragraph in the word event list
+    para_timings = []
+    word_idx = 0
+    total_duration = word_events[-1]["end"] if word_events else 0
+
+    for p_idx, para in enumerate(paragraphs):
+        para_words = para.split()
+        if not para_words:
+            continue
+
+        first_word = para_words[0].strip(".,!?;:\"'()").lower()
+
+        # Search for first word of this paragraph in word events
+        found_at = None
+        for wi in range(word_idx, len(word_events)):
+            ev_word = word_events[wi]["word"].strip(".,!?;:\"'()").lower()
+            if ev_word == first_word:
+                found_at = wi
+                break
+
+        if found_at is not None:
+            para_start = word_events[found_at]["start"]
+            word_idx = found_at
+        else:
+            # Fallback: estimate from word count proportion
+            words_before = sum(len(p.split()) for p in paragraphs[:p_idx])
+            total_words  = sum(len(p.split()) for p in paragraphs)
+            para_start   = (words_before / total_words) * total_duration
+
+        # Find end: last word of this paragraph
+        last_word = para_words[-1].strip(".,!?;:\"'()").lower()
+        para_end  = para_start
+        for wi in range(word_idx, min(word_idx + len(para_words) + 10, len(word_events))):
+            ev_word = word_events[wi]["word"].strip(".,!?;:\"'()").lower()
+            if ev_word == last_word:
+                para_end  = word_events[wi]["end"]
+                word_idx  = wi + 1
+                break
+
+        para_timings.append({
+            "index":    p_idx,
+            "start":    round(para_start, 3),
+            "end":      round(para_end, 3),
+            "duration": round(para_end - para_start, 3),
+            "text":     para[:80],
+        })
+
+    # Save timing JSON
+    timing_data = {
+        "scene":          scene,
+        "total_duration": round(total_duration, 3),
+        "paragraphs":     para_timings,
+    }
+    timing_path.write_text(json.dumps(timing_data, indent=2), encoding="utf-8")
+
+    kb = audio_path.stat().st_size // 1024
+    print(f" done ({kb}KB, {total_duration:.1f}s)")
+    return True
 
 
 async def generate_all(overwrite=False, only=None):
     scenes = SCENES if not only else {only: SCENES[only]} if only in SCENES else {}
     if only and not scenes:
-        print(f"Scene '{only}' not in narration map."); sys.exit(1)
-
+        print(f"Scene '{only}' not found.")
+        sys.exit(1)
     print(f"\n31OPT Narration Generator | Voice: {VOICE}\n")
     ok = skip = fail = 0
     for scene, txt in scenes.items():
         r = await generate_one(scene, txt, overwrite)
         if r:    ok   += 1
-        elif r is False: skip += 1
-        else:    fail  += 1
+        elif r is None: fail += 1
+        else:    skip += 1
     print(f"\nDone: {ok} generated, {skip} skipped, {fail} failed")
-    print(f"Files in: {AUDIO_DIR.resolve()}")
+    print(f"Timing JSONs saved to: {TIMING_DIR.resolve()}")
 
 
-# ── Video + Audio merge ───────────────────────────────────────────────────────
+# ── Merge video + audio ───────────────────────────────────────────────────────
+
 def merge_all():
-    """Merge each rendered scene video with its narration audio."""
-    # Import render order from main.py
     import importlib.util
     spec = importlib.util.spec_from_file_location("main_mod", "main.py")
     m    = importlib.util.module_from_spec(spec)
@@ -198,71 +266,58 @@ def merge_all():
         out = OUTPUT_DIR / f"{scene}.mp4"
 
         if not vid.exists():
-            print(f"  SKIP  {scene:<38} — video not rendered yet")
-            skipped += 1
-            continue
-
-        if not aud.exists():
-            if out.exists():
-                print(f"  SKIP  {scene:<38} — already copied (no audio)")
-                skipped += 1
-                continue
-            subprocess.run(
-                ["ffmpeg", "-y", "-i", str(vid), "-c", "copy", str(out)],
-                capture_output=True)
-            print(f"  COPY  {scene:<38} — no audio, copied video only")
+            print(f"  SKIP  {scene:<40} — video not rendered")
             skipped += 1
             continue
 
         if out.exists():
-            print(f"  SKIP  {scene:<38} — already merged")
+            print(f"  SKIP  {scene:<40} — already merged")
             merged += 1
             continue
-        print(f"  MERGE {scene:<38} ...", end="", flush=True)
+
+        if not aud.exists():
+            subprocess.run(["ffmpeg", "-y", "-i", str(vid), "-c", "copy", str(out)],
+                           capture_output=True)
+            print(f"  COPY  {scene:<40} — no audio")
+            skipped += 1
+            continue
+
+        print(f"  MERGE {scene:<40} ...", end="", flush=True)
         result = subprocess.run([
             "ffmpeg", "-y",
             "-i",  str(vid),
             "-i",  str(aud),
-            # Freeze last video frame until audio finishes
             "-filter_complex", "[0:v]tpad=stop_mode=clone:stop_duration=120[v]",
-            "-map", "[v]",
-            "-map", "1:a",
+            "-map", "[v]", "-map", "1:a",
             "-c:v", "libx264", "-preset", "fast", "-crf", "18",
             "-c:a", "aac", "-b:a", "192k",
-            "-shortest",
-            "-movflags", "+faststart",
+            "-shortest", "-movflags", "+faststart",
             str(out)
         ], capture_output=True, text=True)
 
         if result.returncode == 0:
             mb = out.stat().st_size // (1024*1024)
-            print(f" done ({mb} MB)")
+            print(f" done ({mb}MB)")
             merged += 1
         else:
             print(f" FAILED")
-            print(result.stderr[-200:])
             failed += 1
 
-    print(f"\nMerge complete: {merged} merged, {skipped} skipped, {failed} failed")
-    print(f"Output folder: {OUTPUT_DIR.resolve()}")
+    print(f"\nMerge: {merged} done, {skipped} skipped, {failed} failed")
 
 
 def concat_final():
-    """Concatenate all output_narrated/*.mp4 into one final video."""
     import importlib.util
     spec = importlib.util.spec_from_file_location("main_mod", "main.py")
     m    = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
-    render_order = m.RENDER_ORDER
 
     filelist = Path("filelist_narrated.txt")
     with filelist.open("w") as f:
-        for _, scene in render_order:
+        for _, scene in m.RENDER_ORDER:
             p = OUTPUT_DIR / f"{scene}.mp4"
             if p.exists():
                 f.write(f"file '{p.resolve()}'\n")
-            else:
-                print(f"  WARNING: {p} not found — skipping from concat")
 
     out = Path("optics_full_video_narrated.mp4")
     print(f"\nConcatenating into {out} ...")
@@ -273,10 +328,9 @@ def concat_final():
 
     if result.returncode == 0:
         mb = out.stat().st_size // (1024*1024)
-        print(f"Done! Final video: {out.resolve()} ({mb} MB)")
+        print(f"Done! {out} ({mb}MB)")
     else:
-        print("FAILED:")
-        print(result.stderr)
+        print("FAILED:", result.stderr[-300:])
 
 
 def list_scenes():
@@ -285,23 +339,23 @@ def list_scenes():
     m    = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
 
-    print(f"\n{'Scene':<38} {'Narr.txt':<10} {'Audio':<10} {'Video'}")
-    print("-"*80)
+    print(f"\n{'Scene':<40} {'Txt':<6} {'MP3':<6} {'JSON':<6} {'Video'}")
+    print("-" * 72)
     for py_file, scene in m.RENDER_ORDER:
-        has_txt   = "YES" if scene in SCENES and (NARRATION_DIR / SCENES[scene]).exists() else "no"
-        has_audio = "YES" if (AUDIO_DIR / f"{scene}.mp3").exists() else "no"
-        has_video = "YES" if video_path(py_file, scene).exists() else "no"
-        print(f"{scene:<38} {has_txt:<10} {has_audio:<10} {has_video}")
+        has_txt    = "YES" if scene in SCENES and (NARRATION_DIR / SCENES[scene]).exists()   else "no"
+        has_audio  = "YES" if (AUDIO_DIR  / f"{scene}.mp3").exists()  else "no"
+        has_timing = "YES" if (TIMING_DIR / f"{scene}.json").exists() else "no"
+        has_video  = "YES" if video_path(py_file, scene).exists()     else "no"
+        print(f"{scene:<40} {has_txt:<6} {has_audio:<6} {has_timing:<6} {has_video}")
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    p = argparse.ArgumentParser(description="31OPT narration generator and video merger")
-    p.add_argument("--all",    action="store_true", help="Regenerate all audio files")
-    p.add_argument("--list",   action="store_true", help="Show status of all scenes")
-    p.add_argument("--scene",  type=str,            help="Generate audio for one scene")
-    p.add_argument("--merge",  action="store_true", help="Merge video+audio for all scenes")
-    p.add_argument("--concat", action="store_true", help="Concatenate all narrated videos")
+    p = argparse.ArgumentParser()
+    p.add_argument("--all",    action="store_true")
+    p.add_argument("--list",   action="store_true")
+    p.add_argument("--scene",  type=str)
+    p.add_argument("--merge",  action="store_true")
+    p.add_argument("--concat", action="store_true")
     args = p.parse_args()
 
     if args.list:
