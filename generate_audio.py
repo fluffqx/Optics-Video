@@ -171,45 +171,23 @@ async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bo
     # Write MP3
     audio_path.write_bytes(b"".join(audio_chunks))
 
-    # Match paragraphs to word events to get paragraph timestamps
-    # Strategy: find the first word of each paragraph in the word event list
+    # Calculate paragraph timestamps using word events
+    # Strategy: assign words to paragraphs proportionally, then use
+    # the actual word event timestamps for precise start/end times
+    total_duration = word_events[-1]["end"] if word_events else 0
+    total_words    = sum(len(p.split()) for p in paragraphs)
+
     para_timings = []
     word_idx = 0
-    total_duration = word_events[-1]["end"] if word_events else 0
 
     for p_idx, para in enumerate(paragraphs):
-        para_words = para.split()
-        if not para_words:
-            continue
-
-        first_word = para_words[0].strip(".,!?;:\"'()").lower()
-
-        # Search for first word of this paragraph in word events
-        found_at = None
-        for wi in range(word_idx, len(word_events)):
-            ev_word = word_events[wi]["word"].strip(".,!?;:\"'()").lower()
-            if ev_word == first_word:
-                found_at = wi
-                break
-
-        if found_at is not None:
-            para_start = word_events[found_at]["start"]
-            word_idx = found_at
-        else:
-            # Fallback: estimate from word count proportion
-            words_before = sum(len(p.split()) for p in paragraphs[:p_idx])
-            total_words  = sum(len(p.split()) for p in paragraphs)
-            para_start   = (words_before / total_words) * total_duration
-
-        # Find end: last word of this paragraph
-        last_word = para_words[-1].strip(".,!?;:\"'()").lower()
-        para_end  = para_start
-        for wi in range(word_idx, min(word_idx + len(para_words) + 10, len(word_events))):
-            ev_word = word_events[wi]["word"].strip(".,!?;:\"'()").lower()
-            if ev_word == last_word:
-                para_end  = word_events[wi]["end"]
-                word_idx  = wi + 1
-                break
+        para_word_count = len(para.split())
+        # start = timestamp of first word assigned to this paragraph
+        para_start = word_events[word_idx]["start"] if word_idx < len(word_events) else total_duration
+        # advance word_idx by the number of words in this paragraph
+        end_idx = min(word_idx + para_word_count - 1, len(word_events) - 1)
+        para_end = word_events[end_idx]["end"] if end_idx < len(word_events) else total_duration
+        word_idx = min(word_idx + para_word_count, len(word_events))
 
         para_timings.append({
             "index":    p_idx,
