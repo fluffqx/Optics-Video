@@ -1,0 +1,1 @@
+First, they are transverse: both E and B are perpendicular to the propagation direction k-vector. This follows from the zero-divergence conditions.

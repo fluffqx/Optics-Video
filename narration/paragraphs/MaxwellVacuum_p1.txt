@@ -1,0 +1,1 @@
+In vacuum with no charges and no currents, Maxwell's equations simplify to their most elegant form.

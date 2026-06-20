@@ -1,0 +1,1 @@
+So instead of writing A cosine of kx minus omega t plus phi, we write A times e to the power of i times kx minus omega t plus phi. The physical wave is always understood to be the real part of this complex expression.

@@ -1,0 +1,1 @@
+There are four fundamental matrices. The translation matrix for free propagation over distance d has ones on the diagonal and d in the top right — the height increases by d times theta, while the angle is unchanged.

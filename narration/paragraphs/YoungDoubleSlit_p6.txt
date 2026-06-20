@@ -1,0 +1,1 @@
+Let's calculate. With d equals 0.1 millimetres, L equals 1.5 metres, and lambda equals 500 nanometres, the fringe spacing is 500 times 10 to the minus 9 times 1.5 over 10 to the minus 4, which equals 7.5 millimetres. Easily visible with the naked eye.

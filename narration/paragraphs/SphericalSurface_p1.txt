@@ -1,0 +1,1 @@
+A single curved interface between two media refracts light according to the spherical surface equation: n_m over s_o plus n_i over s_i equals n_i minus n_m over R.

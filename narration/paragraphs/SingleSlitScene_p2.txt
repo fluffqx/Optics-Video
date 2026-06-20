@@ -1,0 +1,1 @@
+The intensity formula is I equals I naught times sine beta over beta squared, where beta equals pi b sine theta over lambda and b is the slit width.

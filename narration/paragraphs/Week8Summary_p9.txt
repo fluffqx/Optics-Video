@@ -1,0 +1,1 @@
+The free spectral range in frequency equals c over 2nd — this is the cavity mode spacing.

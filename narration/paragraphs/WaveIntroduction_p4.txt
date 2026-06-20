@@ -1,0 +1,1 @@
+We start with the simplest possible case: a wave moving in just one spatial dimension. One direction. This is the foundation.

@@ -1,0 +1,1 @@
+The paraxial approximation further simplifies things: for rays that stay close to and nearly parallel to the optical axis, sine theta is approximately equal to theta in radians. This linearises all the equations, making analytic solutions possible.

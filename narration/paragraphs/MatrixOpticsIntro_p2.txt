@@ -1,0 +1,1 @@
+Each optical element maps the input ray vector to the output ray vector via matrix multiplication. For a sequence of N elements, we multiply the matrices from right to left — the first element the ray encounters goes on the rightmost position.

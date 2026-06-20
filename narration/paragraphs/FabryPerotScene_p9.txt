@@ -1,0 +1,1 @@
+For our 10 centimetre cavity: delta lambda FSR equals 632.8 squared over 2 times 10 to the 8 nanometres, which is about 0.002 nanometres. Very small. The high resolving power comes at the cost of a tiny unambiguous range.

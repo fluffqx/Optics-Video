@@ -1,0 +1,1 @@
+Anti-reflection coatings use this deliberately — a quarter-wavelength layer of the right index cancels the reflection completely at the design wavelength.

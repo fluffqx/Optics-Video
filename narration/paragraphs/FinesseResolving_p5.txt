@@ -1,0 +1,1 @@
+The resolving power equals N times the finesse. This can be enormous — a cavity of 10 centimetres at 633 nanometres has N equal to about 316,000. Multiplied by a finesse of 312, the resolving power exceeds 98 million.

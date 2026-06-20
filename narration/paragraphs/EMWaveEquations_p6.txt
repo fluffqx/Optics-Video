@@ -1,0 +1,1 @@
+In a material with relative permittivity K_E, the wave speed becomes c over the square root of K_E, so the refractive index is n equals the square root of K_E.

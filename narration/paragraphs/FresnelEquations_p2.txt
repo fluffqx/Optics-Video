@@ -1,0 +1,1 @@
+The key insight is that polarisation matters at an interface. We split the electric field into two independent components.

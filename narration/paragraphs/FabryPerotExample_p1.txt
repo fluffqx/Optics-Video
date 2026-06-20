@@ -1,0 +1,1 @@
+Let's work through Bennett's Example 7.11 — measuring the splitting between the hydrogen and deuterium H-alpha spectral lines using a Fabry-Pérot interferometer.

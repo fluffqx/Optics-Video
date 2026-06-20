@@ -1,0 +1,1 @@
+The finesse — written as a script F — is the ratio of the free spectral range to the full width at half maximum of a transmission peak. It equals pi times square root of R, divided by one minus R. For R equals 99 percent, the finesse is about 312. This means the transmission peaks are 312 times narrower than the spacing between them.

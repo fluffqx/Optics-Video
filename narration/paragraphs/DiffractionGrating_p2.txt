@@ -1,0 +1,1 @@
+The N-slit intensity pattern is a product of two terms: the single-slit diffraction envelope, which shapes the overall intensity, and the N-slit interference term, which creates sharp principal maxima wherever d sine theta equals m lambda.

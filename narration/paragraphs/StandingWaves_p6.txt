@@ -1,0 +1,1 @@
+Standing waves are fundamental to understanding lasers, optical cavities, and musical instruments. In a laser cavity, only wavelengths that fit exactly into the cavity length can form standing waves — these are the laser modes.

@@ -1,0 +1,1 @@
+For comparison, the best diffraction grating we looked at had a resolving power of 30,000. The Fabry-Pérot beats it in a much more compact device.

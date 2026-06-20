@@ -1,0 +1,1 @@
+The radius of curvature R is positive if the centre of curvature is to the right of the surface — which means a convex surface for light coming from the left. It is negative for a concave surface.

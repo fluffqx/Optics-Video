@@ -1,0 +1,1 @@
+The resulting system matrix has zeros in the off-diagonal positions of the C element, confirming it is afocal. The beam magnification is the ratio f_2 over f_1. A parallel input beam emerges as a parallel output beam, expanded by this factor.

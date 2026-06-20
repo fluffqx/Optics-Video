@@ -1,0 +1,1 @@
+Here n_l is the refractive index of the lens material, n_m is the index of the surrounding medium, and R_1 and R_2 are the radii of curvature of the two surfaces.

@@ -1,0 +1,1 @@
+A quarter-wave plate with fast axis horizontal introduces a minus i phase to the y-component: the matrix is 1 zero zero minus i.

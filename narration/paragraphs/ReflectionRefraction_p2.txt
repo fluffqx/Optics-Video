@@ -1,0 +1,1 @@
+Snell's law governs refraction — the bending of light as it crosses the interface. n_i times sine of theta_i equals n_t times sine of theta_t.

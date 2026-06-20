@@ -1,0 +1,1 @@
+Our eyes cannot detect polarisation directly. But polarising filters, wave plates, and birefringent materials interact strongly with it, making polarisation one of the most practically exploited properties of light.

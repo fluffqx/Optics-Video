@@ -1,0 +1,1 @@
+Multiplying by v gives omega equal to 3.77 times 10 to the 15 radians per second.

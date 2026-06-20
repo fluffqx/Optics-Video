@@ -1,0 +1,1 @@
+For refraction, the same minimisation with two different wave speeds in the two media gives Snell's law — n_i sin theta_i equals n_t sin theta_t.

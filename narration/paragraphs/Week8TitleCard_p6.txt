@@ -1,0 +1,1 @@
+The sharpness of the transmission peaks is characterised by the finesse, script F, equal to pi times square root of R over one minus R. For mirror reflectivity R equals 0.99, the finesse is about 310. The peaks are 310 times narrower than the spacing between them.

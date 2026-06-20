@@ -1,0 +1,1 @@
+The transmitted intensity is I naught times cosine squared theta, where theta is the angle between the incoming polarisation direction and the polariser's transmission axis.

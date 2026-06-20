@@ -1,0 +1,1 @@
+Polarisation describes the direction in which the electric field oscillates as a wave propagates. For a wave travelling in the z-direction, E can point anywhere in the x-y plane.

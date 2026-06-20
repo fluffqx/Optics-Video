@@ -1,0 +1,1 @@
+When two lenses are used in sequence, the image formed by the first lens becomes the object for the second lens. Apply the thin lens equation sequentially.

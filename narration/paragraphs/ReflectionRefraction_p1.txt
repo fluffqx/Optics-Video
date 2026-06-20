@@ -1,0 +1,1 @@
+The law of reflection is simple: the angle of incidence equals the angle of reflection. Both angles are measured from the surface normal — the line perpendicular to the surface at the point of incidence. This holds for any wavelength and any material.

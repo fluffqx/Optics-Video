@@ -1,0 +1,1 @@
+Spherical mirrors obey the mirror equation: one over s_o plus one over s_i equals two over R, which also equals one over the focal length f_m.

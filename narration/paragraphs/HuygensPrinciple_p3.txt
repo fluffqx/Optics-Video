@@ -1,0 +1,1 @@
+When a wavefront encounters an aperture, only the wavelets from the open area contribute. Their superposition — with different path lengths to each observation point — produces the diffraction pattern.

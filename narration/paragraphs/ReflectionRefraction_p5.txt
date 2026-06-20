@@ -1,0 +1,1 @@
+Let's work through an example. Glass with n equals 1.5 to air, with theta_i equals 30 degrees.

@@ -1,0 +1,1 @@
+Two-beam interference is the foundation of all interferometry. When two coherent beams overlap, the total intensity is not simply the sum of the individual intensities — there is an extra interference term.

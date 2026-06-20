@@ -1,0 +1,1 @@
+Circular polarization occurs when the x and y components have equal amplitudes but a ninety-degree phase difference. As the wave propagates, the tip of the E-vector traces a circle. Right circular polarization rotates clockwise when viewed face-on from the direction the wave is approaching. Left circular is the opposite.

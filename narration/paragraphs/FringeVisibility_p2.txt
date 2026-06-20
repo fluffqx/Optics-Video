@@ -1,0 +1,1 @@
+The visibility V is defined as I_max minus I_min, divided by I_max plus I_min. Perfect fringes give V equals 1. No fringes at all give V equals 0.

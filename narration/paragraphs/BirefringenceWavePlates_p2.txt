@@ -1,0 +1,1 @@
+A slab of birefringent material of thickness d introduces a phase difference delta phi between the two polarisation components, given by 2 pi over lambda naught times n_e minus n_o times d.

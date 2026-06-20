@@ -1,0 +1,1 @@
+The Poynting vector S equals E cross B divided by mu naught. It points in the direction of energy flow, and its magnitude gives the power per unit area — in watts per square metre.

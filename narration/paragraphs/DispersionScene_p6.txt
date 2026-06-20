@@ -1,0 +1,1 @@
+The group velocity in a dispersive medium is c divided by n plus omega times dn d-omega. When dn d-omega is positive, the group velocity is less than the phase velocity. When negative — anomalous dispersion near an absorption resonance — interesting things happen, including group velocities that can exceed c, though no information travels faster than light.

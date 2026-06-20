@@ -1,0 +1,1 @@
+The pattern is described by the first-order Bessel function J-one, and the first dark ring occurs where the argument equals 3.832. This gives sine theta-one equals 1.22 lambda over D, where D is the aperture diameter.

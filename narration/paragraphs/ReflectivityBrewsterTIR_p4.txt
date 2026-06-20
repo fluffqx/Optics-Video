@@ -1,0 +1,1 @@
+At normal incidence from air to glass with n equals 1.5: R equals 0.5 over 2.5 squared, which is 0.04, or 4 percent. So a glass surface reflects 4 percent of light. A window has two surfaces, so it reflects about 8 percent total. Anti-reflection coatings reduce this dramatically.

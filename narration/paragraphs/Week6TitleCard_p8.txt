@@ -1,0 +1,1 @@
+The Michelson interferometer splits a beam in two, sends each part down a separate arm, reflects them, and recombines them. Moving one mirror by half a wavelength shifts the OPD by one full wavelength, producing one complete fringe cycle. This instrument can measure distances to nanometre precision.

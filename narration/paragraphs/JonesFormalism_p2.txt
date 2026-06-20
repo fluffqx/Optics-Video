@@ -1,0 +1,1 @@
+Horizontal linear polarisation is represented by the vector 1, 0. Vertical is 0, 1. Plus 45 degrees is 1 over root 2 times 1, 1. Right circular polarisation is 1 over root 2 times 1, minus i. Left circular is 1 over root 2 times 1, plus i.

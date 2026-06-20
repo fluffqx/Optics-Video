@@ -1,0 +1,1 @@
+The phase difference between the two beams is delta equals 2 pi over lambda times d sine theta.

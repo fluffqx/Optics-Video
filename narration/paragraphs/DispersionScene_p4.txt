@@ -1,0 +1,1 @@
+The resulting dispersion relation shows n squared as a sum over all resonances, each contributing a term weighted by its oscillator strength f_j.

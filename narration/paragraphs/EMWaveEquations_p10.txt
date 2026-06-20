@@ -1,0 +1,1 @@
+The propagation direction is z-hat. Using the relation B equals k-vector cross E divided by omega, we get k over omega times z-hat cross x-hat, times E naught. Z-hat cross x-hat is y-hat. So B points in the y direction, with magnitude E naught over c. The three vectors — E, B, and k — form a right-handed coordinate system.

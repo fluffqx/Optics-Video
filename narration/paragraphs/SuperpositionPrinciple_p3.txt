@@ -1,0 +1,1 @@
+This means two laser beams can cross in space and their electric fields simply add — they don't interact, scatter, or change each other. This is what makes optical computing and holography possible.

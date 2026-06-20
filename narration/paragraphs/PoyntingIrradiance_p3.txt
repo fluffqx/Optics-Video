@@ -1,0 +1,1 @@
+The irradiance I — what we actually measure with a detector — is the time-averaged magnitude of the Poynting vector. For a plane wave, this works out to n epsilon naught c over 2, times E naught squared.

@@ -1,0 +1,1 @@
+Antinodes are positions of maximum oscillation — the waves always add constructively there. They sit exactly halfway between adjacent nodes.

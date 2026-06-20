@@ -1,0 +1,1 @@
+And identically for B: nabla squared B equals epsilon naught mu naught times the second time derivative of B.

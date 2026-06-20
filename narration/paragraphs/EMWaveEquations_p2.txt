@@ -1,0 +1,1 @@
+After the algebra — which you should work through at least once — we get a wave equation for the electric field: nabla squared E equals epsilon naught mu naught times the second time derivative of E.

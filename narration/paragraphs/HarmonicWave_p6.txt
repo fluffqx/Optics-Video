@@ -1,0 +1,1 @@
+Omega is the angular frequency, equal to 2 pi times the frequency f. It tells you how many radians of oscillation happen per second.

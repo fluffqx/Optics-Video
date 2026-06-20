@@ -1,0 +1,1 @@
+A horizontal polariser passes only the x-component: it has 1 zero zero zero. A vertical polariser has zero zero zero one.

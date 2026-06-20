@@ -1,0 +1,1 @@
+Energy conservation demands R plus T equals one, assuming no absorption. This is a useful check.

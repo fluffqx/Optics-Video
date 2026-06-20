@@ -1,0 +1,1 @@
+The fast oscillation has the average frequency — this is what you actually see or hear. The slow modulation of the amplitude has the beat frequency, which equals the absolute difference between the two frequencies.

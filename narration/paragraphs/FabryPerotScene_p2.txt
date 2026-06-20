@@ -1,0 +1,1 @@
+The round-trip phase delta equals 4 pi n d cosine theta over lambda naught, plus any reflection phase shifts. For normal incidence and mirrors that don't introduce phase shifts, this simplifies to 4 pi n d over lambda naught.

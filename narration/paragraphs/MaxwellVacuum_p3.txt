@@ -1,0 +1,1 @@
+These four equations couple E and B together through their time derivatives. A changing E creates a curling B, and a changing B creates a curling E. This mutual regeneration is precisely what allows electromagnetic waves to propagate through empty space indefinitely.

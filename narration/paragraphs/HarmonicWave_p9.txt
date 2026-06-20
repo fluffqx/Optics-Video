@@ -1,0 +1,1 @@
+v is the phase speed — how fast the wave crests move. It equals omega divided by k, which also equals f times lambda.

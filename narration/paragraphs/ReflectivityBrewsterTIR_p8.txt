@@ -1,0 +1,1 @@
+Total internal reflection is the other extreme. When light tries to go from a dense medium to a less dense one — glass to air — and the angle exceeds the critical angle, ALL light is reflected. The transmissivity drops to exactly zero.

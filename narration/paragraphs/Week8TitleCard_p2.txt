@@ -1,0 +1,1 @@
+Unlike the two-beam Michelson, the Fabry-Pérot uses multiple reflections between two highly reflective parallel mirrors. Light bounces back and forth many times, and all the transmitted beams interfere together. This is multi-beam interference.

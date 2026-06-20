@@ -1,0 +1,1 @@
+To trace polarisation through a sequence of elements, multiply the Jones matrices from right to left, then apply the result to the input Jones vector. The output intensity is the magnitude squared of the output vector.

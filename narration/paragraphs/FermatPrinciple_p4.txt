@@ -1,0 +1,1 @@
+This is a beautiful example of a variational principle — nature finding the optimal path. It also appears in quantum mechanics as Feynman's path integral formulation.

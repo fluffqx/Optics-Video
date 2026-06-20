@@ -1,0 +1,1 @@
+The resolving power equals N times m — the number of slits times the diffraction order. This is why large gratings used in high orders can resolve wavelengths differing by less than a hundredth of a nanometre.

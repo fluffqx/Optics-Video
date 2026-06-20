@@ -1,0 +1,1 @@
+Let's look at a concrete example. Suppose the dispersion relation is omega equals a times k squared — a hypothetical case.

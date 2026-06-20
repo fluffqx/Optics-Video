@@ -1,0 +1,1 @@
+Why is this better? Because multiplying complex exponentials is trivial — you just add the exponents. Adding waves becomes just adding complex numbers. And computing intensities becomes taking the magnitude squared, which is always real and always positive.

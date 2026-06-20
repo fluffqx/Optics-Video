@@ -1,0 +1,1 @@
+The key is that a thin transparent film reflects light at both its top and bottom surfaces. These two reflected beams travel different path lengths and may have different reflection phase shifts. Their interference determines whether the film looks bright or dark at each wavelength.

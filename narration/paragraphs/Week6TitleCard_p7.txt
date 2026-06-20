@@ -1,0 +1,1 @@
+Thin film interference explains the colours of soap bubbles and oil slicks. The film has two surfaces, and the two reflected beams interfere. The total phase difference depends on the film thickness, the refractive index, and whether reflection phase shifts are present.

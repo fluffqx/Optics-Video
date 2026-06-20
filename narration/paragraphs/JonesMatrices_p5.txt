@@ -1,0 +1,1 @@
+For a sequence of elements, multiply the Jones matrices from right to left — first element on the right — then apply the result to the input vector.

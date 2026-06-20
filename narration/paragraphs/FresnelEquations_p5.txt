@@ -1,0 +1,1 @@
+These two polarisations reflect and transmit differently, and the Fresnel equations give us the amplitude reflection coefficient r and amplitude transmission coefficient t for each.

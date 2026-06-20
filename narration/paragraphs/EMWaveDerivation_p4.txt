@@ -1,0 +1,1 @@
+Setting these equal gives the wave equation for E, with wave speed c equals 1 over the square root of mu naught epsilon naught. Plugging in the measured values of these constants gives exactly 3 times 10 to the 8 metres per second — the speed of light. Maxwell had proved that light is an electromagnetic wave.

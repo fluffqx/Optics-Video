@@ -1,0 +1,1 @@
+For reflection, minimising the travel time with respect to the reflection point automatically gives the law of reflection — angle in equals angle out.

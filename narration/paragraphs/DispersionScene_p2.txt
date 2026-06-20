@@ -1,0 +1,1 @@
+The refractive index n equals c over v — the ratio of the speed of light in vacuum to the speed in the medium. For a non-magnetic material, n equals the square root of the relative permittivity K_E.

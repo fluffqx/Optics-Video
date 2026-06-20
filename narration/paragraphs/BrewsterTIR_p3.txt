@@ -1,0 +1,1 @@
+At Brewster's angle, the reflected and refracted rays are exactly perpendicular to each other. This is the physical reason for zero p-reflectivity: the oscillating dipoles in the medium cannot radiate in the direction of the reflected beam.

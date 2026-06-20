@@ -1,0 +1,1 @@
+The topics that appear most often in exam questions are: Fresnel calculations, thin film interference, Young's double slit, single slit diffraction, grating equation with resolving power, Fabry-Pérot with finesse and free spectral range, Jones matrices for polarisation, and the Rayleigh criterion for resolution.

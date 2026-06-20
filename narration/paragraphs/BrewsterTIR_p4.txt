@@ -1,0 +1,1 @@
+Total internal reflection occurs when light tries to go from a denser medium to a less dense one, and the angle exceeds the critical angle. Above theta_c, ALL light is reflected — R equals exactly 1. The critical angle satisfies sine theta_c equals n_t over n_i. For glass to air, this is 41.8 degrees. Optical fibres rely entirely on this effect.

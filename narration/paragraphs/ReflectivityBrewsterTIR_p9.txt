@@ -1,0 +1,1 @@
+The critical angle satisfies sine theta_c equals n_t over n_i. For glass to air: sine theta_c equals 1 over 1.5 equals 0.667, giving theta_c equals 41.8 degrees.

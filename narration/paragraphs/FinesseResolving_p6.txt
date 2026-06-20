@@ -1,0 +1,1 @@
+The free spectral range in wavelength is lambda squared over 2nd. It tells you the range of wavelengths you can measure unambiguously — adjacent resonance orders must not overlap your spectrum.

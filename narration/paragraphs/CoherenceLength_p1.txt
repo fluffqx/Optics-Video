@@ -1,0 +1,1 @@
+The Fabry-Pérot interferometer only works if the light source has sufficient temporal coherence — the ability to interfere with a delayed copy of itself.

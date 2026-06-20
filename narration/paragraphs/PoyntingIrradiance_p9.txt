@@ -1,0 +1,1 @@
+For our second example: E naught equals 1000 volts per metre in air. The irradiance is n epsilon naught c over 2 times E naught squared. Plugging in the numbers gives 132.8 watts per square metre. A household light bulb radiates about this much — so the electric field of visible light is actually quite large, yet completely harmless.

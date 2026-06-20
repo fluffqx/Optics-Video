@@ -1,0 +1,1 @@
+In vacuum, where there are no free charges and no currents, these equations simplify dramatically. The divergence equations just say both fields have no sources. And the curl equations couple E and B together through their time derivatives.

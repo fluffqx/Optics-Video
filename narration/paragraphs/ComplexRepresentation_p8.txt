@@ -1,0 +1,1 @@
+A spherical wave spreading out from a point source has amplitude that falls off as one over r — this ensures energy is conserved as the wavefront expands over a larger and larger sphere.

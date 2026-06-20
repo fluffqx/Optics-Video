@@ -1,0 +1,1 @@
+For a telescope with D equals 15 centimetres and lambda equals 550 nanometres: theta_min equals 1.22 times 550 times 10 to the minus 9 over 0.15 equals 4.47 times 10 to the minus 6 radians, which is 0.92 arcseconds. This matches the resolution limit of a good amateur telescope under perfect seeing conditions.

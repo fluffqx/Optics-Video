@@ -1,0 +1,1 @@
+Taking the inverse sine gives theta_t equals 48.6 degrees. The light bends away from the normal as expected, since it's going from a denser medium to air.

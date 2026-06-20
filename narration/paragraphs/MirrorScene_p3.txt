@@ -1,0 +1,1 @@
+The magnification is minus s_i over s_o — same formula as for lenses. A concave mirror with an object beyond the focal point gives an inverted, real image. An object inside the focal point gives an upright, virtual, magnified image — exactly as in a shaving mirror.

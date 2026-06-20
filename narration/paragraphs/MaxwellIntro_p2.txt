@@ -1,0 +1,1 @@
+Everything we do in optics ultimately derives from these four equations. They relate the electric field E and the magnetic field B to their sources — electric charges and currents.

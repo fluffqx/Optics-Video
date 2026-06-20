@@ -1,0 +1,1 @@
+The thin lens equation is one of the most used equations in all of optics. One over s_o plus one over s_i equals one over f.

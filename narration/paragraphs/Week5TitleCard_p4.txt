@@ -1,0 +1,1 @@
+Birefringent crystals have two different refractive indices for two perpendicular polarisation directions — the ordinary and extraordinary axes. Light polarised along the slow axis travels more slowly than light along the fast axis. This accumulates a phase difference between the two components.

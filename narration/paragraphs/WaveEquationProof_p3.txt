@@ -1,0 +1,1 @@
+This confirms that any function of the form x minus vt is a valid travelling wave.

@@ -1,0 +1,1 @@
+Now, what are the solutions to this equation? Any function of the form f of x minus vt is a solution — this represents a wave travelling in the positive x direction at speed v. And any function of the form g of x plus vt travels in the negative x direction.

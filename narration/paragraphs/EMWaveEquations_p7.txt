@@ -1,0 +1,1 @@
+Now, the electric and magnetic fields in an electromagnetic wave are not independent. They're perpendicular to each other, and both are perpendicular to the direction of propagation. The wave is transverse.

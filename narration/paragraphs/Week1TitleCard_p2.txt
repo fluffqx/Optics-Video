@@ -1,0 +1,1 @@
+Week 1 covers the foundation of everything in this course — waves, the wave equation, and how we represent waves mathematically using complex numbers.

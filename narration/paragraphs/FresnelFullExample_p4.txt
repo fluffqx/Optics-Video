@@ -1,0 +1,1 @@
+Step 3: plug into the Fresnel equations for r_perp and r_parallel. We get minus 0.278 for s-polarisation and plus 0.119 for p-polarisation. The negative sign on r_perp means a phase flip upon reflection.

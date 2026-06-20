@@ -1,0 +1,1 @@
+Counting the reflection phase shifts carefully is the most common source of errors. Work through each surface systematically: does n increase or decrease? If it increases, add pi. If it decreases, add nothing.

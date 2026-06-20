@@ -1,0 +1,1 @@
+For b equals 0.1 millimetres and lambda equals 500 nanometres: sine theta_1 equals 500 times 10 to the minus 9 over 10 to the minus 4 equals 5 times 10 to the minus 3. The angle is 0.286 degrees, or 5 milliradians. The central maximum is 10 milliradians wide — easy to observe on a screen a metre away.

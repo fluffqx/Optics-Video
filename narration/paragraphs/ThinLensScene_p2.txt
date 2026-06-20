@@ -1,0 +1,1 @@
+s_o is the object distance, s_i is the image distance, and f is the focal length of the lens.

@@ -1,0 +1,1 @@
+The finesse tells you the ratio of the free spectral range to the width of a transmission peak. A finesse of 61 means the peaks are 61 times narrower than the gap between them.

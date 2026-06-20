@@ -1,0 +1,1 @@
+The phase difference comes from two sources: the optical path difference — how much farther one beam has to travel — and any phase shifts that occur upon reflection.

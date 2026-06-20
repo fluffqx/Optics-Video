@@ -1,0 +1,1 @@
+Interference is what happens when two or more coherent waves overlap. Their electric fields add by superposition, and the resulting intensity can be larger or smaller than the sum of the individual intensities.

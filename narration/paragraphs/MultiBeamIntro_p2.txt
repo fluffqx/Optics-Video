@@ -1,0 +1,1 @@
+The setup is two flat, partially-reflecting parallel mirrors separated by distance d. Light enters through the first mirror and bounces back and forth. At each bounce, a fraction T of the power transmits out. So there's a first transmitted beam, then a second weaker one after two reflections, then a third after four reflections, and so on forever.

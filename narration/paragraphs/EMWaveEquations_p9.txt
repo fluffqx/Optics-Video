@@ -1,0 +1,1 @@
+Let's work through an example. If the electric field is E naught in the x-hat direction, propagating in the z direction, what is B?

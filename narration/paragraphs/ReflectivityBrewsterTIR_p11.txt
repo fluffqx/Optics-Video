@@ -1,0 +1,1 @@
+Finally, Malus's law: when polarised light passes through a linear polariser, the transmitted intensity is I naught times cosine squared theta, where theta is the angle between the incoming polarisation direction and the polariser's transmission axis.

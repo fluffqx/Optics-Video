@@ -1,0 +1,1 @@
+A telescope works in reverse: the objective forms a real image of a distant object at its focal plane, and the eyepiece magnifies it. The angular magnification is minus f_objective over f_eyepiece. The minus sign means the image is inverted — hence telescopes for astronomy often don't bother with an erecting prism.

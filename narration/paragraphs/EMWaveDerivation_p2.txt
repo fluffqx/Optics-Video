@@ -1,0 +1,1 @@
+Take the curl of Faraday's law. The left side becomes curl of curl of E, which by a vector identity equals the gradient of the divergence of E minus the Laplacian of E. Since the divergence of E is zero in vacuum, this simplifies to minus the Laplacian of E.

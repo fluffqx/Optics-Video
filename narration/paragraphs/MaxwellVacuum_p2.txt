@@ -1,0 +1,1 @@
+The divergence of E equals zero — no sources. The divergence of B equals zero — no magnetic monopoles. The curl of E equals minus the time derivative of B — Faraday's law. And the curl of B equals epsilon naught mu naught times the time derivative of E — the Ampere-Maxwell law.

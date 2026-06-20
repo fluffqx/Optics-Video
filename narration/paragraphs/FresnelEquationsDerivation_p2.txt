@@ -1,0 +1,1 @@
+The key conditions are: the tangential component of E must be continuous across the boundary, and the tangential component of B must also be continuous. These follow directly from Faraday's law and Ampere's law applied to a thin rectangle straddling the interface.

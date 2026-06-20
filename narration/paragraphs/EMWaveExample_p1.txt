@@ -1,0 +1,1 @@
+Given an electric field E pointing in the x-direction and propagating in the z-direction, we need to find the magnetic field B.

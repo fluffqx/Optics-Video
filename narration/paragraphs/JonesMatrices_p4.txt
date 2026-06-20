@@ -1,0 +1,1 @@
+A half-wave plate with fast axis horizontal flips the sign of the y-component: 1 zero zero minus 1.

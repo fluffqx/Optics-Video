@@ -1,0 +1,1 @@
+We split the incident electric field into two independent polarisation components — s-polarisation with E perpendicular to the plane of incidence, and p-polarisation with E parallel to the plane of incidence. Applying the boundary conditions to each gives four Fresnel equations — two reflection coefficients and two transmission coefficients.

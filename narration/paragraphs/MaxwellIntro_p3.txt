@@ -1,0 +1,1 @@
+Before we write them down, let's fix the notation. The symbol nabla dot E means the divergence of E — it measures how much E spreads outward from a point. Nabla cross E is the curl of E — it measures how much E rotates around a point. And nabla squared E is the Laplacian — the spatial second derivative in all three directions at once.

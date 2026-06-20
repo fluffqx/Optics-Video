@@ -1,0 +1,1 @@
+Now watch what happens when we take the curl of Faraday's law and substitute in the Ampere-Maxwell law.

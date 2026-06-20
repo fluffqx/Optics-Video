@@ -1,0 +1,1 @@
+Fermat's principle states that light travels between two points along the path that takes the least time. This was proposed in 1657, well before Maxwell's equations existed.

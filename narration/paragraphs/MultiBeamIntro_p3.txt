@@ -1,0 +1,1 @@
+Bennett sums this infinite geometric series in Section 7.10. The key mathematical identity is that the sum of x to the n equals 1 over 1 minus x, for x less than 1.

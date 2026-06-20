@@ -1,0 +1,1 @@
+This is the principle behind optical fibres. Light bounces down the fibre by total internal reflection, losing essentially no energy at each bounce.

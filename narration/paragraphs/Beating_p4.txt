@@ -1,0 +1,1 @@
+If f-one equals 440 hertz and f-two equals 443 hertz, the beat frequency is 3 hertz — you hear three amplitude pulses per second. Musicians use this to tune instruments — they adjust until the beats disappear, meaning the frequencies are equal.

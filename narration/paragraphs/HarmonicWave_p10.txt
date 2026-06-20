@@ -1,0 +1,1 @@
+And phi is the initial phase offset — it shifts the wave left or right in time.

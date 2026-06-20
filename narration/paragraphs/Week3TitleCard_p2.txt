@@ -1,0 +1,1 @@
+This approximation works beautifully for lenses, mirrors, telescopes, and microscopes. It breaks down when apertures become comparable to the wavelength — which is when diffraction becomes important, and we'll return to that in week 7.

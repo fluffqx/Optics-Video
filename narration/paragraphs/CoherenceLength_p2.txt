@@ -1,0 +1,1 @@
+Coherence length is related to spectral purity. A perfectly monochromatic wave — which doesn't exist in reality — would have infinite coherence length. Real sources have a spread of frequencies delta-nu, and their coherence length is approximately c divided by delta-nu, or equivalently lambda squared divided by delta-lambda.

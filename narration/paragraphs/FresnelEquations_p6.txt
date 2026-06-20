@@ -1,0 +1,1 @@
+For s-polarisation: r_perp equals n_i cosine theta_i minus n_t cosine theta_t, all divided by n_i cosine theta_i plus n_t cosine theta_t.

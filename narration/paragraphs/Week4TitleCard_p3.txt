@@ -1,0 +1,1 @@
+This is why computers are so good at optical design. Matrix multiplication is fast and exact, and the same formalism works for any sequence of elements.

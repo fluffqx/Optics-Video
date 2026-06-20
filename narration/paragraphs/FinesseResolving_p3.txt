@@ -1,0 +1,1 @@
+Physically, the finesse equals the average number of times a photon bounces back and forth before leaking out through a mirror. Higher reflectivity means more bounces, narrower peaks, higher finesse.

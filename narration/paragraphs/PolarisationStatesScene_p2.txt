@@ -1,0 +1,1 @@
+Linear polarisation means E always oscillates along a fixed direction. Circular polarisation means the tip of E traces a circle — this requires equal amplitudes in x and y, with a 90-degree phase difference between them. The general case is elliptical polarisation, where E traces an ellipse.

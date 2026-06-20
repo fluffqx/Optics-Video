@@ -1,0 +1,1 @@
+Elliptical polarization is the general case. When the amplitudes are unequal, or the phase difference is not zero, ninety, or one hundred eighty degrees, the E-vector traces an ellipse. Linear and circular are both special cases of elliptical polarization.

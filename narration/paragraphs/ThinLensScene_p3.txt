@@ -1,0 +1,1 @@
+The lensmaker's equation tells us how f depends on the lens geometry: one over f equals n_l minus n_m over n_m, times one over R_1 minus one over R_2.

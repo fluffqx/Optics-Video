@@ -1,0 +1,1 @@
+For each of these, you should be able to: set up the problem from scratch, identify all the relevant variables, apply the correct formula with correct sign conventions, and compute a numerical answer.

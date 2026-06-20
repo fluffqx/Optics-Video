@@ -1,0 +1,1 @@
+Here is the one-dimensional wave equation. Take a moment to look at its structure.

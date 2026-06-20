@@ -1,0 +1,1 @@
+For frequencies well below all resonances — which is the case for most optical glasses in the visible range — n increases with frequency. This is called normal dispersion. Violet light bends more than red light in a prism.

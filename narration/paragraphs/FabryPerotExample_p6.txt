@@ -1,0 +1,1 @@
+The minimum resolvable wavelength difference is lambda over resolving power, which is 656.2 divided by 39,000, giving 0.017 nanometres. This is more than ten times smaller than the actual splitting of 0.18 nanometres — the lines are clearly resolved.

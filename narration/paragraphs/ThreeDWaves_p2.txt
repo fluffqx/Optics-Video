@@ -1,0 +1,1 @@
+The wavefronts — surfaces of constant phase — are flat planes perpendicular to k-vector. Hence the name plane wave.

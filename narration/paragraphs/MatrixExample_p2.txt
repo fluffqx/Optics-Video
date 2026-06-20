@@ -1,0 +1,1 @@
+We multiply three matrices: the second lens, the free-space propagation, and the first lens — in that order from left to right.

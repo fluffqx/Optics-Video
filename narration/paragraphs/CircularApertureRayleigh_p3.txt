@@ -1,0 +1,1 @@
+The factor 1.22 — compared to 1.00 for a slit — comes entirely from the circular geometry and the Bessel function mathematics.

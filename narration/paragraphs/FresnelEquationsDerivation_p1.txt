@@ -1,0 +1,1 @@
+The Fresnel equations come from applying Maxwell's boundary conditions at the interface.

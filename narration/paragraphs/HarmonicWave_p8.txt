@@ -1,0 +1,1 @@
+f is the ordinary frequency in hertz — how many full cycles per second. Related to the period T by f equals one over T.

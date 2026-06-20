@@ -1,0 +1,1 @@
+Step 1: use Snell's law to find the refraction angle. Sin of theta_t equals 1.0 over 1.5 times sin 40, giving theta_t equals 25.37 degrees.

@@ -1,0 +1,1 @@
+Brewster's angle is a special angle at which the p-polarisation has zero reflectivity — R parallel equals zero. The reflected beam is then purely s-polarised. This is used to create polarising beamsplitters and is why photographers use polarising filters to reduce glare from windows.

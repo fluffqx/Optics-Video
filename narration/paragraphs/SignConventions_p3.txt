@@ -1,0 +1,1 @@
+The image distance s_i is positive when the image forms on the far side of the lens — on the side where light is going to. This is a real image that can be projected onto a screen.

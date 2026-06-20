@@ -1,0 +1,1 @@
+The mathematical derivation uses the sum-to-product trigonometric identity. Adding A sine of kx minus omega t, plus A sine of kx plus omega t, gives two A sine of kx times cosine of omega t.

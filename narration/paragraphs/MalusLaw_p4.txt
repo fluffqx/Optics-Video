@@ -1,0 +1,1 @@
+At theta equals zero, full transmission. At 45 degrees, half the intensity. At 90 degrees — crossed polarisers — zero transmission. This is why two crossed polarising filters block all light completely.

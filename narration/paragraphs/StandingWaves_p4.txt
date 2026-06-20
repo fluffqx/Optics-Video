@@ -1,0 +1,1 @@
+Nodes are positions where the amplitude is permanently zero — the waves always cancel there. They occur wherever kx equals m pi, which means at positions x equals m times lambda over two. The spacing between nodes is exactly half a wavelength.

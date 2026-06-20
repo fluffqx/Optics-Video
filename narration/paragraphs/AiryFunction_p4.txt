@@ -1,0 +1,1 @@
+The physical explanation is that at resonance, all the multiply-reflected beams are in phase and add constructively. The field builds up inside the cavity to a very large amplitude, and the increased build-up exactly compensates for the low transmission of each mirror.

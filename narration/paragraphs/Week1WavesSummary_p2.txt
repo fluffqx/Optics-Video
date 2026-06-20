@@ -1,0 +1,1 @@
+First: the wave equation itself — the second spatial derivative equals one over v squared times the second time derivative. This governs all classical wave phenomena.

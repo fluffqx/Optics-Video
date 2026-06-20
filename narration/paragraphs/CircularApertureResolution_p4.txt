@@ -1,0 +1,1 @@
+The full angular diameter of the Airy disk is 2.44 lambda over D.

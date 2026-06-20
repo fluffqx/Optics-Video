@@ -1,0 +1,1 @@
+Between resonances, the sine term is large, and the transmission drops to nearly zero for high-finesse cavities. The pattern looks like a series of very sharp transmission spikes separated by broad dark regions.

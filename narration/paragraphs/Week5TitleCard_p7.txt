@@ -1,0 +1,1 @@
+A half-wave plate introduces pi — half a cycle — and rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis.

@@ -1,0 +1,1 @@
+The Laplacian — nabla squared — is the three-dimensional second derivative. It appears in the wave equation for electromagnetic fields in three dimensions.

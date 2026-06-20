@@ -1,0 +1,1 @@
+A few specific things to watch for. First: Fresnel equations — always identify which polarisation you're dealing with before you start. Second: thin lenses and mirrors — draw the ray diagram first, always. It prevents sign errors. Third: radiation pressure — remember the factor of 2 for a reflective surface, and remember that I is in watts per square metre.

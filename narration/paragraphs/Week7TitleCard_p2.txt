@@ -1,0 +1,1 @@
+Huygens' principle gives us the physical picture: every point on a wavefront acts as a new point source of secondary wavelets. The diffraction pattern is the interference pattern of all these secondary sources.

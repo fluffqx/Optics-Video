@@ -1,0 +1,1 @@
+The central maximum is at theta equals zero and has twice the angular width of the secondary maxima. The dark fringes occur wherever b sine theta equals m lambda, for integer m.

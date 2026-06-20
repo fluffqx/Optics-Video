@@ -1,0 +1,1 @@
+The angular half-width of the central maximum is given by sine theta_1 equals lambda over b. Making the slit narrower — smaller b — makes the central maximum wider. This is the fundamental wave-optics result: confining a wave makes it spread out more.

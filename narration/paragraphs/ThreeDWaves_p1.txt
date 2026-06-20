@@ -1,0 +1,1 @@
+Extending from one dimension to three dimensions, a plane wave is written as A times e to the power of i times k-vector dot r-vector minus omega t. The wave vector k-vector points in the direction of propagation, and its magnitude is the wave number k.

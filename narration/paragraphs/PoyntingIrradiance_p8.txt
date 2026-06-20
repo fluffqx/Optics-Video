@@ -1,0 +1,1 @@
+Let's calculate. A laser with irradiance 10 to the 6 watts per square metre hits a perfect mirror. The radiation pressure is 2 times 10 to the 6 divided by 3 times 10 to the 8, giving about 6.67 millipascals. Tiny — but real, and measurable. Solar sails use exactly this effect.

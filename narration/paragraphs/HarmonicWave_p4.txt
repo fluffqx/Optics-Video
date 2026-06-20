@@ -1,0 +1,1 @@
+A is the amplitude — the maximum value of the wave. For an electric field, it's in volts per metre. For a pressure wave, it would be in Pascals.

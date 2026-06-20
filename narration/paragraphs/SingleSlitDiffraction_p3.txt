@@ -1,0 +1,1 @@
+The central maximum is at theta equals zero, where sine beta over beta approaches one by L'Hopital's rule. It is the tallest and widest feature in the pattern.

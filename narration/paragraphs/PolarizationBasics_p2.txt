@@ -1,0 +1,1 @@
+Linear polarization means the electric field always oscillates along a fixed straight line in the x-y plane. Horizontal, vertical, and diagonal are all forms of linear polarization. A polarizing filter transmits only one direction and blocks the perpendicular direction.

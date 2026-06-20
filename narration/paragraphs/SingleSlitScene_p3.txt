@@ -1,0 +1,1 @@
+At theta equals zero, beta equals zero, and the limit of sine beta over beta is 1, so the central maximum has intensity I naught.

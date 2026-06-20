@@ -1,0 +1,1 @@
+The translation matrix for free propagation over distance d has ones on the diagonal and d in the upper right. The height increases by d times theta while the angle is unchanged.

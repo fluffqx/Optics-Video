@@ -1,0 +1,1 @@
+The propagation direction is z-hat. Using the relation k-vector cross E equals omega times B, we take k in the z-direction cross E in the x-direction. Z-hat cross x-hat equals y-hat by the right-hand rule. So B points in the y-direction with magnitude E naught over c.

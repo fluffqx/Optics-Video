@@ -1,0 +1,1 @@
+Comparing with the standard wave equation, we immediately read off the wave speed: v equals 1 over the square root of epsilon naught mu naught. Plug in the numbers, and you get exactly 2.998 times 10 to the 8 metres per second. The speed of light.

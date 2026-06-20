@@ -1,0 +1,1 @@
+Solar radiation pressure is tiny — about 9 micropascals at Earth's orbit — but in space with no friction, even tiny forces accumulate. Solar sails exploit this effect for propulsion. The Japanese IKAROS spacecraft was the first to demonstrate interplanetary travel by solar sail in 2010.

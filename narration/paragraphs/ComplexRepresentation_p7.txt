@@ -1,0 +1,1 @@
+Now we can extend this to three dimensions. A plane wave in 3D is written as A times e to the i times k-vector dot r-vector minus omega t. The k-vector points in the direction of propagation, and k-vector dot r-vector is the projection of the position onto that direction.

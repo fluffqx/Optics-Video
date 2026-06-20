@@ -1,0 +1,1 @@
+The Fraunhofer approximation applies when both the source and the observation point are effectively at infinity — meaning the illumination and diffracted waves are both plane waves. In practice, this is achieved with lenses. The Fraunhofer condition requires the distance r to satisfy r much greater than h squared over two lambda, where h is the aperture size.

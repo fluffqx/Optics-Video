@@ -1,0 +1,1 @@
+Mathematically, we add A cosine of omega-one times t plus A cosine of omega-two times t. Using the sum-to-product identity, this equals two A times cosine of the half-difference in frequencies times t, multiplied by cosine of the average frequency times t.

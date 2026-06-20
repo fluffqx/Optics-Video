@@ -1,0 +1,1 @@
+Multiply all element matrices from right to left to get the system matrix with elements A, B, C, D.

@@ -1,0 +1,1 @@
+The key is Euler's formula: e to the power of i theta equals cosine theta plus i times sine theta. This connects the exponential function to trigonometry in a beautiful and extremely useful way.

@@ -1,0 +1,1 @@
+The divergence of a vector field F — written nabla dot F — measures how much the field spreads outward from a point. Positive divergence means field lines radiate outward like a source. Zero divergence means no sources or sinks.

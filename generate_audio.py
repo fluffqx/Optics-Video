@@ -168,8 +168,22 @@ async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bo
                 "end":   round(start + dur, 4),
             })
 
-    # Write MP3
+    # Write full-scene MP3
     audio_path.write_bytes(b"".join(audio_chunks))
+
+    # Also write per-paragraph MP3s using the same voice settings
+    para_audio_dir = Path("narration/audio/paragraphs")
+    para_audio_dir.mkdir(parents=True, exist_ok=True)
+    for p_idx, para in enumerate(paragraphs):
+        p_audio_path = para_audio_dir / f"{scene}_p{p_idx+1}.mp3"
+        if not p_audio_path.exists() or overwrite:
+            p_comm = edge_tts.Communicate(para, VOICE, rate=RATE, pitch=PITCH)
+            p_chunks = []
+            async for chunk in p_comm.stream():
+                if chunk["type"] == "audio":
+                    p_chunks.append(chunk["data"])
+            if p_chunks:
+                p_audio_path.write_bytes(b"".join(p_chunks))
 
     # Get total audio duration from the MP3 file
     try:

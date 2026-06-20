@@ -1,0 +1,1 @@
+The Jones vector is a 2-component complex column vector that completely describes the polarisation state of a monochromatic wave. The two components give the x and y electric field amplitudes including their relative phase.

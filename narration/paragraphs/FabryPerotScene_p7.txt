@@ -1,0 +1,1 @@
+The resolving power is m times script F. For our example: m equals 2 times 1 times 0.1 over 632.8 nanometres equals 3.16 times 10 to the 5. Times finesse 61.3 gives a resolving power of 1.94 times 10 to the 7. Nearly 20 million.

@@ -1,0 +1,1 @@
+First, the coefficient of finesse: F equals 4 times 0.90 divided by 0.10 squared, giving 360. The finesse is pi times square root of 360 divided by 2, giving 29.8.

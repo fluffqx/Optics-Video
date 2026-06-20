@@ -1,0 +1,1 @@
+The phase difference delta comes from two sources: the optical path difference — how much farther one beam travels — and any phase shifts that occur upon reflection. A reflection at a surface where the refractive index increases gives a pi phase shift, equivalent to half a wavelength of extra path.

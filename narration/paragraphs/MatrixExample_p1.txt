@@ -1,0 +1,1 @@
+The beam expander is a classic matrix optics example. Two lenses with focal lengths f_1 and f_2, separated by d equals f_1 plus f_2.

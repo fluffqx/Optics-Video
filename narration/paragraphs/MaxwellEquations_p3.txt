@@ -1,0 +1,1 @@
+The second equation — Gauss's law for B — says the divergence of B is always zero. There are no magnetic monopoles. Every magnetic field line that starts somewhere must end somewhere else — the lines always close on themselves.

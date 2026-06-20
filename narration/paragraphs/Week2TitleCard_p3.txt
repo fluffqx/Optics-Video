@@ -1,0 +1,1 @@
+We need to answer two questions. First: in which directions does the reflected and transmitted light travel? That's answered by the law of reflection and Snell's law. Second: how much light is reflected and how much is transmitted? That's answered by the Fresnel equations.

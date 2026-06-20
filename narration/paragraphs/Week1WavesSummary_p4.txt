@@ -1,0 +1,1 @@
+Third: the complex representation — psi tilde equals A e to the i times kx minus omega t. The physical wave is the real part. The intensity is the magnitude squared, which equals A squared.

@@ -1,0 +1,1 @@
+When delta is a multiple of 2 pi — the resonance condition — the sine term is zero and the transmission is I-naught, meaning 100 percent. This is the remarkable property of the Fabry-Pérot: even with highly reflective mirrors that individually transmit only a few percent, the transmission at resonance is complete.

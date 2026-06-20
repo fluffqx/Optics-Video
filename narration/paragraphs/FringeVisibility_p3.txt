@@ -1,0 +1,1 @@
+For two beams of equal intensity from a perfectly coherent source, V equals 1. If the intensities are unequal, V is less than 1 even with perfect coherence — the dark fringes are not completely dark.

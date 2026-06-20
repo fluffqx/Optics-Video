@@ -1,0 +1,1 @@
+Polarization is one of the most important properties of light, and one that our eyes cannot detect directly. For a plane wave travelling in the z-direction, the electric field lies in the x-y plane. The direction in which E oscillates defines the polarization state.

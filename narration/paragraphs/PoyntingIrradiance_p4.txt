@@ -1,0 +1,1 @@
+That factor of one half comes from time-averaging: the time average of cosine squared of omega t is one half. This is a very commonly needed result — remember it.

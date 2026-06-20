@@ -1,0 +1,1 @@
+A compound microscope uses an objective with very short focal length to form a magnified real image, then an eyepiece to magnify that image further. The total magnification is the product of the two magnifications.

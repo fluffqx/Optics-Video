@@ -1,0 +1,1 @@
+If C equals zero, the effective focal length is infinite — the system is afocal. Parallel rays enter and parallel rays leave, just magnified. This is a beam expander.

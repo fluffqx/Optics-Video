@@ -1,0 +1,1 @@
+Each time the mirror moves by half a wavelength, the fringes go through one complete cycle. So counting fringes gives an extraordinarily precise measurement of mirror displacement.

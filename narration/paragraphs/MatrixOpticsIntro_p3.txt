@@ -1,0 +1,1 @@
+This method is exact within the paraxial approximation and trivially handles arbitrarily complex systems. Computer-aided optical design tools use this formalism to trace millions of rays simultaneously.

@@ -1,0 +1,1 @@
+The free spectral range is lambda-minimum divided by m. It tells you the wavelength range you can measure unambiguously in order m before the next order overlaps.

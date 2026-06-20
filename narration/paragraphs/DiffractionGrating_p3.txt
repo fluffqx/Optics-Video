@@ -1,0 +1,1 @@
+The grating equation is the central formula: d times the quantity sine theta-m minus sine theta-i equals m lambda. Here d is the grating period, theta-i is the angle of the incoming beam, theta-m is the angle of the m-th order diffracted beam, and m is the diffraction order — zero, plus or minus one, plus or minus two, and so on.

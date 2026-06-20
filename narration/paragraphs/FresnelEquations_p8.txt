@@ -1,0 +1,1 @@
+At normal incidence — when the light hits straight on — both polarisations give the same result: r equals n_i minus n_t over n_i plus n_t. This is a very useful formula to remember.

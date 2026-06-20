@@ -1,0 +1,1 @@
+For mirrors, the sign convention flips: a concave mirror has R positive, a convex mirror has R negative.

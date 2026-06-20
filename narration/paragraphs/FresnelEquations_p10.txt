@@ -1,0 +1,1 @@
+Step 1: Snell's law gives sine theta_t equals 1.0 over 1.5 times sine 40 degrees equals 0.4285, so theta_t equals 25.37 degrees.

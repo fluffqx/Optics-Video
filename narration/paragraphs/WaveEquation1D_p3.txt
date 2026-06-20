@@ -1,0 +1,1 @@
+On the right side, we have one over v squared, times the second derivative of psi with respect to time. This is the acceleration of the wave in time — how quickly the wave is changing at each moment.

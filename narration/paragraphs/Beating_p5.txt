@@ -1,0 +1,1 @@
+In optics, beating between two laser frequencies produces an interference signal at the difference frequency. This is the basis of heterodyne detection, used in interferometry and optical communications.

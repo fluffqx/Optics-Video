@@ -1,0 +1,1 @@
+This sets a fundamental limit on what any circular optical instrument can resolve, regardless of how perfect the optics are. To resolve finer detail, you need a larger aperture or shorter wavelength.

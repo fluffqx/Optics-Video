@@ -1,0 +1,1 @@
+The spatial part, sine of kx, determines where the amplitude is large or small. The temporal part, cosine of omega t, makes the whole pattern oscillate in time.

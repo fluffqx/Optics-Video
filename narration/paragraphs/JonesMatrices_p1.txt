@@ -1,0 +1,1 @@
+Each optical element is represented by a 2 by 2 Jones matrix. To find the output polarisation state, multiply the Jones matrix by the input Jones vector.

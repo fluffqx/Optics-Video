@@ -1,0 +1,1 @@
+Step 2: compute the cosines. Cosine 40 is 0.766, cosine 25.37 is 0.9036.

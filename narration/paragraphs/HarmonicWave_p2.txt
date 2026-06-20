@@ -1,0 +1,1 @@
+Psi of x and t equals A times sine of kx minus omega t plus phi.

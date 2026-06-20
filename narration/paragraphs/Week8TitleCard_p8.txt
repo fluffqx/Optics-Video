@@ -1,0 +1,1 @@
+The resolving power R equals m times finesse — where m is the resonance order. For a 10 centimetre cavity and 633 nanometre light, m is about 300,000, giving a resolving power of nearly 20 million. This is extraordinary compared to a grating.

@@ -1,0 +1,1 @@
+The p-polarisation reflects significantly less than s at this angle — this difference grows with angle and reaches zero at Brewster's angle.

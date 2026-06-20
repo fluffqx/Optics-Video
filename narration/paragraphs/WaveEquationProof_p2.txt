@@ -1,0 +1,1 @@
+We take the second partial derivative with respect to x, and get 2. Then we take the second partial derivative with respect to t, and get 2v squared. Dividing by v squared gives exactly 2 — matching the left side perfectly. The wave equation is satisfied.

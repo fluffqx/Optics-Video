@@ -1,0 +1,1 @@
+For a perfectly absorbing surface, the pressure equals I over c, where I is the irradiance. For a perfectly reflecting mirror, the momentum reverses direction, so the pressure doubles to 2I over c.

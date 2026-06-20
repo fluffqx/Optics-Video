@@ -1,0 +1,1 @@
+Brewster's angle satisfies: tangent theta_B equals n_t over n_i. At this angle, the reflected and transmitted rays are exactly perpendicular to each other.

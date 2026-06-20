@@ -1,0 +1,1 @@
+Reflectivity is simply the square of the amplitude reflection coefficient: R equals r squared. At normal incidence from air to glass with n equals 1.5, R equals 4 percent. This is why glass surfaces look slightly shiny.

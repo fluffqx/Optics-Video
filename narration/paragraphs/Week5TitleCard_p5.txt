@@ -1,0 +1,1 @@
+A wave plate exploits this: it introduces a controlled phase difference delta phi equal to 2 pi over lambda naught times n_e minus n_o times d, where d is the plate thickness.

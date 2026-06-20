@@ -1,0 +1,1 @@
+Every time light passes through a lens, reflects off a mirror, or travels through a window, it's encountering an interface. The behaviour at that interface determines how optical instruments work.

@@ -1,0 +1,1 @@
+Sign conventions are the most common source of errors in geometric optics problems. Getting a sign wrong means getting the wrong answer for the entire problem. Study these carefully.

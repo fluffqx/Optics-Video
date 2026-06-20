@@ -1,0 +1,1 @@
+The circular aperture is the most important case in practice, because most lenses and telescopes are circular.

@@ -1,0 +1,1 @@
+The intensity is the magnitude squared of the Jones vector — which is always real and positive.

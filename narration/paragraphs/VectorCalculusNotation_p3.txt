@@ -1,0 +1,1 @@
+The curl of F — nabla cross F — measures how much the field rotates around a point. Imagine placing a small paddle wheel in the field — if it spins, the curl is nonzero.

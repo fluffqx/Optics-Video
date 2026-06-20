@@ -1,0 +1,1 @@
+Snell's law gives 1.5 times sine 30 equals 1.0 times sine theta_t.

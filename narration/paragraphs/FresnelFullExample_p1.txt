@@ -1,0 +1,1 @@
+Let's go through a complete Fresnel calculation for air to glass at 40 degrees.

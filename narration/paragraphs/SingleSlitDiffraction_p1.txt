@@ -1,0 +1,1 @@
+The single-slit diffraction pattern is the starting point for understanding all diffraction phenomena. Bennett derives it carefully in Section 8.3.1 using the Fraunhofer diffraction integral — integrating the Huygens contributions from every point across the slit width.

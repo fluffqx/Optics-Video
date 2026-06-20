@@ -1,0 +1,1 @@
+The idea is elegant. We represent a ray by a two-component column vector: its height y above the optical axis, and its angle theta with respect to the axis. Then every optical element — lens, mirror, free space — is represented by a two-by-two matrix. To trace a ray through the whole system, we simply multiply the matrices together.

@@ -1,0 +1,1 @@
+For the Fabry-Pérot to show fringes, the cavity round trip must be shorter than the coherence length. Otherwise, the beams from different round trips are no longer coherent with each other, and the interference averages out.

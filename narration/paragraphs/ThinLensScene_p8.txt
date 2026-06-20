@@ -1,0 +1,1 @@
+Let's work through a complete example. A biconvex lens with R_1 equals positive 20 centimetres, R_2 equals negative 20 centimetres, and n_l equals 1.5. Object at s_o equals 60 centimetres.

@@ -1,0 +1,1 @@
+Week 3 takes us into geometric optics — the regime where the wavelength of light is much smaller than the optical elements we're dealing with. In this limit, we can treat light as rays travelling in straight lines, and ignore diffraction entirely.

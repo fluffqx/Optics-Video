@@ -1,0 +1,1 @@
+Fifth, in a material with refractive index n, the wave speed becomes c over n, and E equals v times B where v is the local wave speed.

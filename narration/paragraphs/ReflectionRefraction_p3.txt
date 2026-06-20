@@ -1,0 +1,1 @@
+Here n_i is the refractive index of the medium the light is coming from, theta_i is the angle of incidence, n_t is the index of the medium the light is entering, and theta_t is the angle of refraction.

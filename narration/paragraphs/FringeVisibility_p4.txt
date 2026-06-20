@@ -1,0 +1,1 @@
+Visibility can also degrade due to spatial or temporal incoherence. Measuring visibility as a function of path difference is how we characterise the coherence length of a source.

@@ -1,0 +1,1 @@
+In the far field — the Fraunhofer regime — the intensity pattern of a single slit of width b is the famous sinc-squared function: I equals I naught times sine beta over beta squared, where beta equals pi b sine theta over lambda.

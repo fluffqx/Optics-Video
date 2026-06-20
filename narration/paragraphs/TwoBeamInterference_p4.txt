@@ -1,0 +1,1 @@
+When both beams have equal intensity I-naught, the pattern simplifies to four I-naught cosine squared of delta over two. The maximum is four times the single-beam intensity — this is where the energy redistribution comes from. Dark fringes have zero intensity, compensated by the brighter maxima.

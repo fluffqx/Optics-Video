@@ -1,0 +1,1 @@
+When delta is an odd multiple of pi, the transmission drops to its minimum. For high reflectivity, this minimum is extremely close to zero. The contrast between maximum and minimum is enormous.

@@ -1,0 +1,1 @@
+The right side becomes minus the time derivative of the curl of B, which by Ampere's law equals minus mu naught epsilon naught times the second time derivative of E.

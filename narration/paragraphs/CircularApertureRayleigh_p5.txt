@@ -1,0 +1,1 @@
+This is a fundamental limit of wave optics — not an engineering limitation. To resolve finer details, you must either use a shorter wavelength or a larger aperture. There is no other way.

@@ -1,0 +1,1 @@
+In the Michelson interferometer and Young's double slit, exactly two beams interfere. The Fabry-Pérot takes this much further by using an infinite series of beams — all the multiply-reflected beams between two parallel mirrors.

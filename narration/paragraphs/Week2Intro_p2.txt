@@ -1,0 +1,1 @@
+Every time light passes through a lens, bounces off a mirror, or travels through a window, it encounters an interface. The physics at that interface determines everything — how much light is reflected, how much is transmitted, and in which direction.

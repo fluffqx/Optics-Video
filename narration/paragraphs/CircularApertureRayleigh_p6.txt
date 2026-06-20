@@ -1,0 +1,1 @@
+For the human eye with a 3 millimetre pupil, this gives about 1 arcminute — which matches our measured visual acuity remarkably well. For the Hubble telescope with a 2.4 metre mirror, the limit is about 0.06 arcseconds — 800 times sharper than the eye.

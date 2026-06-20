@@ -1,0 +1,1 @@
+The fourth equation is the Ampere-Maxwell law: the curl of B equals mu times the current density, plus mu epsilon times the time derivative of E. This says that both electric currents AND changing electric fields create curling magnetic fields. The second term — the displacement current — was Maxwell's crucial addition, and it's what allows electromagnetic waves to exist.

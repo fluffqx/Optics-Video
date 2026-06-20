@@ -1,0 +1,1 @@
+A quarter-wave plate introduces a phase difference of pi over 2. Linear polarisation at 45 degrees to the fast axis is converted into circular polarisation. Going back through a second quarter-wave plate converts it back. This is used in optical isolators and CD players.
