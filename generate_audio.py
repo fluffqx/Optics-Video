@@ -171,32 +171,47 @@ async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bo
     # Write MP3
     audio_path.write_bytes(b"".join(audio_chunks))
 
-    # Calculate paragraph timestamps using word events
-    # Strategy: assign words to paragraphs proportionally, then use
-    # the actual word event timestamps for precise start/end times
-    total_duration = word_events[-1]["end"] if word_events else 0
-    total_words    = sum(len(p.split()) for p in paragraphs)
+    # Get total audio duration from the MP3 file
+    try:
+        from mutagen.mp3 import MP3
+        total_duration = MP3(str(audio_path)).info.length
+    except Exception:
+        # Fallback: estimate from word count at 125 wpm
+        total_words_all = sum(len(p.split()) for p in paragraphs)
+        total_duration  = (total_words_all / 125) * 60
 
-    para_timings = []
-    word_idx = 0
-
-    for p_idx, para in enumerate(paragraphs):
-        para_word_count = len(para.split())
-        # start = timestamp of first word assigned to this paragraph
-        para_start = word_events[word_idx]["start"] if word_idx < len(word_events) else total_duration
-        # advance word_idx by the number of words in this paragraph
-        end_idx = min(word_idx + para_word_count - 1, len(word_events) - 1)
-        end_idx = min(end_idx, len(word_events) - 1)
-        para_end = word_events[end_idx]["end"] if word_events else total_duration
-        word_idx = min(word_idx + para_word_count, len(word_events))
-
-        para_timings.append({
-            "index":    p_idx,
-            "start":    round(para_start, 3),
-            "end":      round(para_end, 3),
-            "duration": round(para_end - para_start, 3),
-            "text":     para[:80],
-        })
+    # Use word boundary events if available, else proportional division
+    if word_events and word_events[-1]["end"] > 0:
+        # Use actual word timestamps
+        total_words = sum(len(p.split()) for p in paragraphs)
+        para_timings = []
+        word_idx = 0
+        for p_idx, para in enumerate(paragraphs):
+            n = len(para.split())
+            start_i = min(word_idx, len(word_events)-1)
+            end_i   = min(word_idx + n - 1, len(word_events)-1)
+            para_start = word_events[start_i]["start"]
+            para_end   = word_events[end_i]["end"]
+            word_idx   = min(word_idx + n, len(word_events))
+            para_timings.append({
+                "index": p_idx, "start": round(para_start,3),
+                "end": round(para_end,3), "duration": round(para_end-para_start,3),
+                "text": para[:80],
+            })
+    else:
+        # Proportional division: split total duration by word count
+        total_words = sum(len(p.split()) for p in paragraphs)
+        para_timings = []
+        elapsed = 0.0
+        for p_idx, para in enumerate(paragraphs):
+            n   = len(para.split())
+            dur = (n / total_words) * total_duration if total_words > 0 else 0
+            para_timings.append({
+                "index": p_idx, "start": round(elapsed,3),
+                "end": round(elapsed+dur,3), "duration": round(dur,3),
+                "text": para[:80],
+            })
+            elapsed += dur
 
     # Save timing JSON
     timing_data = {
