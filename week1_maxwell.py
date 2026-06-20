@@ -6,7 +6,7 @@ from utils import *
 AUDIO = "narration/audio"
 
 
-def show(scene, mob, wait, fade_time=0.4):
+def show(scene, mob, wait, fade_time=0.1):
     """Show mob, wait exactly 'wait' seconds, fade out. Zero overlap guaranteed."""
     scene.play(FadeIn(mob, run_time=fade_time))
     scene.wait(wait)

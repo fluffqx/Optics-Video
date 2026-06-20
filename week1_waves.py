@@ -5,10 +5,10 @@ from utils import *
 AUDIO = "narration/audio"
 
 
-def show(scene, mob, wait, ft=0.4):
-    scene.play(FadeIn(mob, run_time=ft))
+def show(scene, mob, wait, ft=0.1):
+    scene.play(FadeIn(mob, run_time=0.1))
     scene.wait(wait)
-    scene.play(FadeOut(mob, run_time=ft))
+    scene.play(FadeOut(mob, run_time=0.2))
 
 
 def tb(lines, fs=27):
