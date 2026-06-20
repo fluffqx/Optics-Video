@@ -1,0 +1,9 @@
+Beating occurs when two waves of slightly different frequencies overlap. The result is a wave whose amplitude varies slowly in time — producing a periodic rise and fall in intensity.
+
+Mathematically, we add A cosine of omega-one times t plus A cosine of omega-two times t. Using the sum-to-product identity, this equals two A times cosine of the half-difference in frequencies times t, multiplied by cosine of the average frequency times t.
+
+The fast oscillation has the average frequency — this is what you actually see or hear. The slow modulation of the amplitude has the beat frequency, which equals the absolute difference between the two frequencies.
+
+If f-one equals 440 hertz and f-two equals 443 hertz, the beat frequency is 3 hertz — you hear three amplitude pulses per second. Musicians use this to tune instruments — they adjust until the beats disappear, meaning the frequencies are equal.
+
+In optics, beating between two laser frequencies produces an interference signal at the difference frequency. This is the basis of heterodyne detection, used in interferometry and optical communications.

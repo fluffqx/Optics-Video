@@ -1,0 +1,9 @@
+Polarization is one of the most important properties of light, and one that our eyes cannot detect directly. For a plane wave travelling in the z-direction, the electric field lies in the x-y plane. The direction in which E oscillates defines the polarization state.
+
+Linear polarization means the electric field always oscillates along a fixed straight line in the x-y plane. Horizontal, vertical, and diagonal are all forms of linear polarization. A polarizing filter transmits only one direction and blocks the perpendicular direction.
+
+Circular polarization occurs when the x and y components have equal amplitudes but a ninety-degree phase difference. As the wave propagates, the tip of the E-vector traces a circle. Right circular polarization rotates clockwise when viewed face-on from the direction the wave is approaching. Left circular is the opposite.
+
+Elliptical polarization is the general case. When the amplitudes are unequal, or the phase difference is not zero, ninety, or one hundred eighty degrees, the E-vector traces an ellipse. Linear and circular are both special cases of elliptical polarization.
+
+Natural light — from the sun, a light bulb, a flame — is unpolarized. It consists of a rapid random mixture of all polarization directions with no preferred orientation. When natural light reflects at Brewster's angle or passes through a polarizer, it becomes polarized.

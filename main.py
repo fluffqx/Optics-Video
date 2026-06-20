@@ -65,6 +65,9 @@ RENDER_ORDER = [
     ("week4_matrix_polarisation.py", "MatrixEquations"),
     ("week4_matrix_polarisation.py", "SystemMatrixCardinalPoints"),
     ("week4_matrix_polarisation.py", "MatrixExample"),
+    ("week4_matrix_polarisation.py", "StandingWaves"),
+    ("week4_matrix_polarisation.py", "Beating"),
+    ("week4_matrix_polarisation.py", "PolarizationBasics"),
 
     # ── WEEK 5: Jones / Polarisation ─────────────────────────────────────────
     ("week5_jones.py",             "Week5TitleCard"),

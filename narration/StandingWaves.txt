@@ -1,0 +1,11 @@
+When two identical waves travel in opposite directions through the same medium, they create a remarkable pattern called a standing wave. Unlike a travelling wave, the pattern does not move — it oscillates in place.
+
+The mathematical derivation uses the sum-to-product trigonometric identity. Adding A sine of kx minus omega t, plus A sine of kx plus omega t, gives two A sine of kx times cosine of omega t.
+
+The spatial part, sine of kx, determines where the amplitude is large or small. The temporal part, cosine of omega t, makes the whole pattern oscillate in time.
+
+Nodes are positions where the amplitude is permanently zero — the waves always cancel there. They occur wherever kx equals m pi, which means at positions x equals m times lambda over two. The spacing between nodes is exactly half a wavelength.
+
+Antinodes are positions of maximum oscillation — the waves always add constructively there. They sit exactly halfway between adjacent nodes.
+
+Standing waves are fundamental to understanding lasers, optical cavities, and musical instruments. In a laser cavity, only wavelengths that fit exactly into the cavity length can form standing waves — these are the laser modes.
