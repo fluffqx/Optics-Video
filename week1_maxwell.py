@@ -38,16 +38,16 @@ class MaxwellIntro(Scene):
         b.next_to(title, DOWN, buff=0.45)
         show(self, b, 13.5)
 
-        # p2 14.0s
+        # p2 18.0s (was 14.0 + 4s gap observed in render)
         b2 = txt_block([
             "Everything we do in optics ultimately derives from these four equations.",
             "They relate the electric field E and the magnetic field B",
             "to their sources — electric charges and currents.",
         ])
         b2.next_to(title, DOWN, buff=0.45)
-        show(self, b2, 14.0)
+        show(self, b2, 18.0)
 
-        # p3 31.3s — notation preview
+        # p3 27.3s (31.3 - 4s transferred to p2) — notation preview
         t3 = Text("Before writing them down, we must fix notation:", font_size=27, color=WHITE)
         safe_scale(t3, max_width=13.0)
         r1 = MathTex(r"\nabla\cdot\vec{E}", font_size=38, color=E_COLOR)
@@ -63,7 +63,7 @@ class MaxwellIntro(Scene):
         p3 = VGroup(t3, eq_row).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(p3, max_width=13.0, max_height=4.2)
         p3.next_to(title, DOWN, buff=0.45)
-        show(self, p3, 31.3)
+        show(self, p3, 27.3)
         self.play(FadeOut(title))
 
 
