@@ -20,8 +20,8 @@ MATCHING STRATEGY
 -----------------
 Each narration paragraph maps to one animation beat (one self.wait call).
 The script matches them in order:
-  para 0 → 1st self.wait()
-  para 1 → 2nd self.wait()
+  para 0 -> 1st self.wait()
+  para 1 -> 2nd self.wait()
   etc.
 
 The wait value is set to:
@@ -123,8 +123,8 @@ def patch_scene(filepath: Path, scene: str, check_only: bool = False) -> str:
         print(f"  {status:<8} {scene:<42} narr={total_narr:.1f}s anim={total_anim:.1f}s  ({n_paras}p/{n_waits}w)")
         if status != "OK":
             for i, para in enumerate(timing["paragraphs"]):
-                w = new_waits[i] if i < len(new_waits) else "—"
-                print(f"           p{i+1} [{para['start']:.1f}s→{para['end']:.1f}s, dur={para['duration']:.1f}s] wait={w}  {para['text'][:50]}")
+                w = new_waits[i] if i < len(new_waits) else "-"
+                print(f"           p{i+1} [{para['start']:.1f}s->{para['end']:.1f}s, dur={para['duration']:.1f}s] wait={w}  {para['text'][:50].encode('ascii',errors='replace').decode('ascii')}")
         return "ok" if status == "OK" else "mismatch"
 
     # Patch: replace in reverse order to preserve positions
@@ -145,7 +145,7 @@ def patch_scene(filepath: Path, scene: str, check_only: bool = False) -> str:
 
     text = text[:m.start(1)] + new_body + text[m.end(1):]
     filepath.write_text(text, encoding="utf-8")
-    print(f"  PATCHED  {scene:<42} narr={total_narr:.1f}s → anim={total_anim:.1f}s  ({n_paras}p/{n_waits}w)")
+    print(f"  PATCHED  {scene:<42} narr={total_narr:.1f}s -> anim={total_anim:.1f}s  ({n_paras}p/{n_waits}w)")
     return "patched"
 
 
@@ -161,8 +161,9 @@ def main():
             data = json.loads(f.read_text())
             print(f"\n{data['scene']} (total={data['total_duration']:.1f}s):")
             for para in data["paragraphs"]:
-                print(f"  p{para['index']+1}: {para['start']:.2f}s -> {para['end']:.2f}s "
-                      f"(dur={para['duration']:.2f}s)  {para['text'][:60]}")
+                safe_text = para['text'][:60].encode('ascii',errors='replace').decode('ascii').encode('ascii', errors='replace').decode('ascii')
+            print(f"  p{para['index']+1}: {para['start']:.2f}s -> {para['end']:.2f}s "
+                      f"(dur={para['duration']:.2f}s)  {safe_text}")
         return
 
     mode = "CHECK" if args.check else "PATCH"
