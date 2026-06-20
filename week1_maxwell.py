@@ -32,7 +32,7 @@ class MaxwellIntro_p1(Scene):
         ])
         b.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(20)  # tpad extends to match audio
+        self.wait(1)
 
 
 class MaxwellIntro_p2(Scene):
@@ -50,7 +50,7 @@ class MaxwellIntro_p2(Scene):
         ])
         b.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(20)
+        self.wait(1)
 
 
 class MaxwellIntro_p3(Scene):
@@ -77,7 +77,7 @@ class MaxwellIntro_p3(Scene):
         safe_scale(p3, max_width=13.0, max_height=4.2)
         p3.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(p3, run_time=0.1))
-        self.wait(40)
+        self.wait(1)
 
 
 # ─── VectorCalculusNotation — 4 paragraphs ────────────────────────────────────
@@ -92,7 +92,7 @@ class VectorCalculusNotation_p1(Scene):
         b = txt_block(["Before writing Maxwell's equations, we need three differential operators."])
         b.next_to(title, DOWN, buff=0.4)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(10)
+        self.wait(1)
 
 
 class VectorCalculusNotation_p2(Scene):
@@ -111,7 +111,7 @@ class VectorCalculusNotation_p2(Scene):
         safe_scale(blk, max_width=13.0, max_height=4.2)
         blk.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(blk, run_time=0.1))
-        self.wait(25)
+        self.wait(1)
 
 
 class VectorCalculusNotation_p3(Scene):
@@ -130,7 +130,7 @@ class VectorCalculusNotation_p3(Scene):
         safe_scale(blk, max_width=13.0, max_height=4.2)
         blk.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(blk, run_time=0.1))
-        self.wait(25)
+        self.wait(1)
 
 
 class VectorCalculusNotation_p4(Scene):
@@ -149,7 +149,7 @@ class VectorCalculusNotation_p4(Scene):
         safe_scale(blk, max_width=13.0, max_height=4.2)
         blk.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(blk, run_time=0.1))
-        self.wait(20)
+        self.wait(1)
 
 
 # ─── MaxwellEquations — 7 paragraphs ─────────────────────────────────────────
@@ -181,7 +181,7 @@ class MaxwellEquations_p1(Scene):
         title = maxwell_title(); self.add(title)
         b = txt_block(["Here are Maxwell's four equations in matter."])
         b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1)); self.wait(10)
+        self.play(FadeIn(b, run_time=0.1)); self.wait(1)
 
 
 class MaxwellEquations_p2(Scene):
@@ -194,7 +194,7 @@ class MaxwellEquations_p2(Scene):
             "GAUSS'S LAW FOR E  (Bennett Eq. 2.5)",
             ["Electric field lines diverge from positive free charges.",
              "Where there are no charges, divergence of E equals zero."], E_COLOR)
-        self.play(FadeIn(blk, run_time=0.1)); self.wait(25)
+        self.play(FadeIn(blk, run_time=0.1)); self.wait(1)
 
 
 class MaxwellEquations_p3(Scene):
@@ -207,7 +207,7 @@ class MaxwellEquations_p3(Scene):
             "GAUSS'S LAW FOR B  (Bennett Eq. 2.6)",
             ["The divergence of B is always zero — no magnetic monopoles.",
              "All magnetic field lines form closed loops."], B_COLOR)
-        self.play(FadeIn(blk, run_time=0.1)); self.wait(25)
+        self.play(FadeIn(blk, run_time=0.1)); self.wait(1)
 
 
 class MaxwellEquations_p4(Scene):
@@ -220,7 +220,7 @@ class MaxwellEquations_p4(Scene):
             "FARADAY'S LAW  (Bennett Eq. 2.21)",
             ["A time-changing magnetic field induces a curling electric field.",
              "The minus sign (Lenz's law): induced E opposes the change in B."], E_COLOR)
-        self.play(FadeIn(blk, run_time=0.1)); self.wait(25)
+        self.play(FadeIn(blk, run_time=0.1)); self.wait(1)
 
 
 class MaxwellEquations_p5(Scene):
@@ -233,7 +233,7 @@ class MaxwellEquations_p5(Scene):
             "AMPERE-MAXWELL LAW  (Bennett Eq. 2.22)",
             ["Both electric currents AND changing E fields create curling B.",
              "Maxwell's displacement current term enables electromagnetic waves."], B_COLOR)
-        self.play(FadeIn(blk, run_time=0.1)); self.wait(35)
+        self.play(FadeIn(blk, run_time=0.1)); self.wait(1)
 
 
 class MaxwellEquations_p6(Scene):
@@ -249,7 +249,7 @@ class MaxwellEquations_p6(Scene):
         ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
         safe_scale(vac, max_width=13.0, max_height=4.0)
         vac.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(vac, run_time=0.1)); self.wait(25)
+        self.play(FadeIn(vac, run_time=0.1)); self.wait(1)
 
 
 class MaxwellEquations_p7(Scene):
@@ -266,7 +266,7 @@ class MaxwellEquations_p7(Scene):
         c_block.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(c_block, run_time=0.1))
         self.play(Create(gold_box(c_eq)))
-        self.wait(30)
+        self.wait(1)
 
 
 # ─── Remaining maxwell scenes (keep as single-scene for now) ─────────────────
@@ -284,7 +284,7 @@ class MaxwellVacuum(Scene):
             MathTex(r"\nabla\times\vec{B}=\mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}", font_size=44, color=B_COLOR),
         ).arrange(DOWN, buff=0.35)
         eqs.next_to(title, DOWN, buff=0.5); safe_scale(eqs, max_height=5.0)
-        self.play(FadeIn(eqs, run_time=0.1)); self.wait(60)
+        self.play(FadeIn(eqs, run_time=0.1)); self.wait(1)
 
 
 class EMWaveDerivation(Scene):
@@ -303,7 +303,7 @@ class EMWaveDerivation(Scene):
         solver.add_step(3,
             r"\nabla^2\vec{E}=\mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2}\quad\Rightarrow\quad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}",
             "use div E = 0 in vacuum. EM wave equation!", GOLD)
-        solver.finalize(); self.wait(80)
+        solver.finalize(); self.wait(1)
 
 
 class EMWaveProperties(Scene):
@@ -321,7 +321,7 @@ class EMWaveProperties(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
         safe_scale(props, max_width=13.0, max_height=4.5)
         props.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(props, run_time=0.1)); self.wait(60)
+        self.play(FadeIn(props, run_time=0.1)); self.wait(1)
 
 
 class EMWaveExample(Scene):
@@ -337,7 +337,7 @@ class EMWaveExample(Scene):
         solver.add_step(1, r"\hat{k}=\hat{z}", "propagation in +z", ANGLE_COLOR)
         solver.add_step(2, r"\vec{B}=\frac{\vec{k}\times\vec{E}}{\omega}", "Faraday for plane waves", B_COLOR)
         solver.add_step(3, r"\hat{z}\times\hat{x}=\hat{y}\;\Rightarrow\;\vec{B}=\frac{E_0}{c}\hat{y}\,e^{i(kz-\omega t)}", "B in y-direction, magnitude E0/c", B_COLOR)
-        solver.finalize(); self.wait(50)
+        solver.finalize(); self.wait(1)
 
 
 class PoyntingIrradiance(Scene):
@@ -355,7 +355,7 @@ class PoyntingIrradiance(Scene):
         block.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(block, run_time=0.1))
         self.play(Create(gold_box(I_eq)))
-        self.wait(140)
+        self.wait(1)
 
 
 class RadiationPressure(Scene):
@@ -369,7 +369,7 @@ class RadiationPressure(Scene):
             labeled_eq(r"P_{\text{refl}}=2I/c", "reflecting surface — momentum reverses", INTENSITY_COLOR, 48, 26),
         ).arrange(DOWN, buff=0.5)
         eqs.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(eqs, run_time=0.1)); self.wait(60)
+        self.play(FadeIn(eqs, run_time=0.1)); self.wait(1)
 
 
 class DispersionScene(Scene):
@@ -390,4 +390,4 @@ class DispersionScene(Scene):
         block = VGroup(n_eq, vg_eq, desc).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
         safe_scale(block, max_width=13.0, max_height=4.5)
         block.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(block, run_time=0.1)); self.wait(115)
+        self.play(FadeIn(block, run_time=0.1)); self.wait(1)

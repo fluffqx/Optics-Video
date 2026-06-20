@@ -283,6 +283,9 @@ def merge_all():
             merged += 1
             continue
 
+        # Also check paragraphs subfolder
+        if not aud.exists():
+            aud = AUDIO_DIR / "paragraphs" / f"{scene}.mp3"
         if not aud.exists():
             subprocess.run(["ffmpeg", "-y", "-i", str(vid), "-c", "copy", str(out)],
                            capture_output=True)
@@ -351,7 +354,7 @@ def list_scenes():
     print("-" * 72)
     for py_file, scene in m.RENDER_ORDER:
         has_txt    = "YES" if scene in SCENES and (NARRATION_DIR / SCENES[scene]).exists()   else "no"
-        has_audio  = "YES" if (AUDIO_DIR  / f"{scene}.mp3").exists()  else "no"
+        has_audio  = "YES" if (AUDIO_DIR  / f"{scene}.mp3").exists() or                               (AUDIO_DIR / "paragraphs" / f"{scene}.mp3").exists() else "no"
         has_timing = "YES" if (TIMING_DIR / f"{scene}.json").exists() else "no"
         has_video  = "YES" if video_path(py_file, scene).exists()     else "no"
         print(f"{scene:<40} {has_txt:<6} {has_audio:<6} {has_timing:<6} {has_video}")
