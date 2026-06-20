@@ -186,7 +186,8 @@ async def generate_one(scene: str, txt_file: str, overwrite: bool = False) -> bo
         para_start = word_events[word_idx]["start"] if word_idx < len(word_events) else total_duration
         # advance word_idx by the number of words in this paragraph
         end_idx = min(word_idx + para_word_count - 1, len(word_events) - 1)
-        para_end = word_events[end_idx]["end"] if end_idx < len(word_events) else total_duration
+        end_idx = min(end_idx, len(word_events) - 1)
+        para_end = word_events[end_idx]["end"] if word_events else total_duration
         word_idx = min(word_idx + para_word_count, len(word_events))
 
         para_timings.append({
