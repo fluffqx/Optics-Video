@@ -25,104 +25,111 @@ def page(scene, title, lines, wait, fs=28):
 
 
 class MaxwellIntro(Scene):
-    """3 narration paragraphs — 3 pages"""
     def construct(self):
         self.camera.background_color = BG_COLOR
         title = Text("Maxwell's Equations", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
 
-        # Para 1 (15s): "Maxwell's equations are the four fundamental laws..."
-        page(self, title, [
-            "Maxwell's equations are the four fundamental laws of electromagnetism.",
-            "Written down by James Clerk Maxwell in the 1860s, they unified",
-            "electricity, magnetism, and light into a single coherent theory.",
-        ], wait=15)
+        # p1: 14s — "Maxwell's equations are the four fundamental laws..."
+        t1a = Text("Maxwell's equations are the four fundamental laws of electromagnetism.", font_size=27, color=WHITE)
+        t1b = Text("Written down by James Clerk Maxwell in the 1860s, they unified", font_size=27, color=WHITE)
+        t1c = Text("electricity, magnetism, and light into a single coherent theory.", font_size=27, color=WHITE)
+        for t in [t1a, t1b, t1c]: safe_scale(t, max_width=13.0)
+        p1 = VGroup(t1a, t1b, t1c).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
+        p1.next_to(title, DOWN, buff=0.45)
+        self.play(FadeIn(p1, run_time=0.5))
+        self.wait(13)
+        self.play(FadeOut(p1, run_time=0.5))
 
-        # Para 2 (16s): "Everything we do in optics ultimately derives..."
-        page(self, title, [
-            "Everything we do in optics ultimately derives from these four equations.",
-            "They relate the electric field E and the magnetic field B",
-            "to their sources — electric charges and currents.",
-        ], wait=16)
+        # p2: 14s — "Everything we do in optics..."
+        t2a = Text("Everything we do in optics ultimately derives from these four equations.", font_size=27, color=WHITE)
+        t2b = Text("They relate the electric field E and the magnetic field B", font_size=27, color=WHITE)
+        t2c = Text("to their sources — electric charges and currents.", font_size=27, color=WHITE)
+        for t in [t2a, t2b, t2c]: safe_scale(t, max_width=13.0)
+        p2 = VGroup(t2a, t2b, t2c).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
+        p2.next_to(title, DOWN, buff=0.45)
+        self.play(FadeIn(p2, run_time=0.5))
+        self.wait(13)
+        self.play(FadeOut(p2, run_time=0.5))
 
-        # Para 3 (35s): "Before we write them down, let's fix the notation..."
-        intro3 = Text("Before writing them down, we must fix notation:", font_size=28, color=WHITE)
-        safe_scale(intro3, max_width=13.0)
-        rows = VGroup(
-            MathTex(r"\nabla\cdot\vec{E}", font_size=36, color=E_COLOR),
-            MathTex(r"\nabla\times\vec{E}", font_size=36, color=E_COLOR),
-            MathTex(r"\nabla^2\vec{E}", font_size=36, color=WAVE_COLOR),
-        ).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
-        p3_block = VGroup(intro3, rows).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-        safe_scale(p3_block, max_width=13.0, max_height=4.0)
-        p3_block.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(p3_block))
-        self.wait(35)
-        self.play(FadeOut(p3_block))
-
-        self.play(FadeOut(title))
+        # p3: 32s — "Before we write them down, let's fix the notation..."
+        t3 = Text("Before writing them down, we must fix notation:", font_size=27, color=WHITE)
+        safe_scale(t3, max_width=13.0)
+        r1 = MathTex(r"\nabla\cdot\vec{E}", font_size=36, color=E_COLOR)
+        r2 = MathTex(r"\nabla\times\vec{E}", font_size=36, color=E_COLOR)
+        r3 = MathTex(r"\nabla^2\vec{E}", font_size=36, color=WAVE_COLOR)
+        l1 = Text("= divergence of E  (how much E spreads from a point)", font_size=24, color=WHITE)
+        l2 = Text("= curl of E  (how much E rotates around a point)", font_size=24, color=WHITE)
+        l3 = Text("= Laplacian  (3D second spatial derivative)", font_size=24, color=WHITE)
+        for m in [r1,r2,r3,l1,l2,l3]: safe_scale(m, max_width=6.0)
+        rows = VGroup(r1, r2, r3).arrange(DOWN, aligned_edge=LEFT, buff=0.32)
+        lbls = VGroup(l1, l2, l3).arrange(DOWN, aligned_edge=LEFT, buff=0.35)
+        eq_row = VGroup(rows, lbls).arrange(RIGHT, buff=0.5, aligned_edge=UP)
+        p3 = VGroup(t3, eq_row).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
+        safe_scale(p3, max_width=13.0, max_height=4.2)
+        p3.next_to(title, DOWN, buff=0.45)
+        self.play(FadeIn(p3, run_time=0.5))
+        self.wait(31)
+        self.play(FadeOut(VGroup(title, p3), run_time=0.5))
 
 
 class VectorCalculusNotation(Scene):
-    """4 narration paragraphs — perfectly synced"""
     def construct(self):
         self.camera.background_color = BG_COLOR
         title = Text("Vector Calculus Notation", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.play(Write(title))
-        # NO wait here — narrator starts immediately
 
-        # Para 1 (5s): "Before writing Maxwell's equations, we need three operators"
-        intro = Text("Before writing Maxwell's equations, we need three differential operators.", font_size=26, color=WHITE)
+        # p1: 4s — "Before writing Maxwell's equations..."
+        intro = Text(
+            "Before writing Maxwell's equations, we need three differential operators.",
+            font_size=27, color=WHITE)
         safe_scale(intro, max_width=13.0)
         intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(5)
-        self.play(FadeOut(intro))
+        self.play(FadeIn(intro, run_time=0.5))
+        self.wait(3)
+        self.play(FadeOut(intro, run_time=0.5))
 
-        def operator_block(eq_latex, name, desc1, desc2, eq_color, eq_fs=38):
-            """Create equation + name label + two description lines as one block."""
-            eq   = MathTex(eq_latex, font_size=eq_fs, color=eq_color)
-            safe_scale(eq, max_width=13.0)
-            lbl  = Text(name, font_size=30, color=eq_color, weight=BOLD)
-            d1   = Text(desc1, font_size=26, color=WHITE)
-            d2   = Text(desc2, font_size=26, color=COMMENT_COLOR)
+        def op_block(sym_latex, name, d1_str, d2_str, color):
+            sym  = MathTex(sym_latex, font_size=52, color=color)
+            name_mob = Text(name, font_size=30, color=color, weight=BOLD)
+            d1   = Text(d1_str, font_size=26, color=WHITE)
+            d2   = Text(d2_str, font_size=26, color=COMMENT_COLOR)
+            safe_scale(sym, max_width=13.0)
             safe_scale(d1, max_width=13.0)
             safe_scale(d2, max_width=13.0)
-            block = VGroup(eq, lbl, d1, d2).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
-            safe_scale(block, max_width=13.0, max_height=4.2)
-            block.next_to(title, DOWN, buff=0.45)
-            return block
+            blk = VGroup(sym, name_mob, d1, d2).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
+            safe_scale(blk, max_width=13.0, max_height=4.2)
+            blk.next_to(title, DOWN, buff=0.45)
+            return blk
 
-        # Para 2 (21s): "The divergence of a vector field F..."
-        p2 = operator_block(
-            r"\nabla\cdot\vec{F} = \frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}",
-            "DIVERGENCE",
-            "Measures how much F spreads outward from a point.",
-            "Positive = source (field lines radiate out).  Zero = no sources.",
-            E_COLOR, eq_fs=34)
-        self.play(FadeIn(p2)); self.wait(21); self.play(FadeOut(p2))
+        # p2: 19s — "The divergence of a vector field F..."
+        p2 = op_block(r"\nabla\cdot\vec{F}", "DIVERGENCE",
+                      "Measures how much the field spreads outward from a point.",
+                      "Positive = field lines radiate out (source).  Zero = no sources.",
+                      E_COLOR)
+        self.play(FadeIn(p2, run_time=0.5))
+        self.wait(18)
+        self.play(FadeOut(p2, run_time=0.5))
 
-        # Para 3 (18s): "The curl of F..."
-        p3 = operator_block(
-            r"\nabla\times\vec{F} = \left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}\right)\hat{x}+\cdots",
-            "CURL",
-            "Measures how much F rotates around a point.",
-            "A paddle wheel in the field spins if curl is nonzero.",
-            B_COLOR, eq_fs=32)
-        self.play(FadeIn(p3)); self.wait(18); self.play(FadeOut(p3))
+        # p3: 17s — "The curl of F..."
+        p3 = op_block(r"\nabla\times\vec{F}", "CURL",
+                      "Measures how much the field rotates around a point.",
+                      "A paddle wheel in the field spins if curl is nonzero.",
+                      B_COLOR)
+        self.play(FadeIn(p3, run_time=0.5))
+        self.wait(16)
+        self.play(FadeOut(p3, run_time=0.5))
 
-        # Para 4 (12s): "The Laplacian..."
-        p4 = operator_block(
-            r"\nabla^2 F = \frac{\partial^2 F}{\partial x^2}+\frac{\partial^2 F}{\partial y^2}+\frac{\partial^2 F}{\partial z^2}",
-            "LAPLACIAN",
-            "The 3D generalisation of the second derivative.",
-            "Appears in the EM wave equation in 3 dimensions.",
-            WAVE_COLOR, eq_fs=34)
-        self.play(FadeIn(p4)); self.wait(12)
-        self.play(FadeOut(VGroup(title, p4)))
-
+        # p4: 11s — "The Laplacian..."
+        p4 = op_block(r"\nabla^2 F", "LAPLACIAN",
+                      "The 3D generalisation of the second derivative.",
+                      "Appears in the EM wave equation in three dimensions.",
+                      WAVE_COLOR)
+        self.play(FadeIn(p4, run_time=0.5))
+        self.wait(10)
+        self.play(FadeOut(VGroup(title, p4), run_time=0.5))
 
 class MaxwellEquations(Scene):
     """7 narration paragraphs — show each law when narrator describes it"""
