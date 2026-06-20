@@ -161,7 +161,7 @@ def main():
             data = json.loads(f.read_text())
             print(f"\n{data['scene']} (total={data['total_duration']:.1f}s):")
             for para in data["paragraphs"]:
-                print(f"  p{para['index']+1}: {para['start']:.2f}s → {para['end']:.2f}s "
+                print(f"  p{para['index']+1}: {para['start']:.2f}s -> {para['end']:.2f}s "
                       f"(dur={para['duration']:.2f}s)  {para['text'][:60]}")
         return
 
