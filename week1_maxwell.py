@@ -24,10 +24,10 @@ class MaxwellIntro(Scene):
     # Narration: p1=13.5s p2=14.0s p3=31.3s  total=60s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/MaxwellIntro.mp3")
+        self.add_sound(f"{AUDIO}/MaxwellIntro.mp3", time_offset=0)
         title = Text("Maxwell's Equations", font_size=44, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         # p1 13.5s
         b = txt_block([
@@ -71,10 +71,10 @@ class VectorCalculusNotation(Scene):
     # p1=3.9s p2=18.8s p3=16.4s p4=10.6s  total=51.4s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/VectorCalculusNotation.mp3")
+        self.add_sound(f"{AUDIO}/VectorCalculusNotation.mp3", time_offset=0)
         title = Text("Vector Calculus Notation", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         # p1 3.9s
         intro = Text("Before writing Maxwell's equations, we need three differential operators.",
@@ -116,10 +116,10 @@ class MaxwellEquations(Scene):
     # p1=3.0s p2=17.4s p3=18.8s p4=16.4s p5=28.4s p6=17.8s p7=23.6s  total=128.2s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/MaxwellEquations.mp3")
+        self.add_sound(f"{AUDIO}/MaxwellEquations.mp3", time_offset=0)
         title = Text("Maxwell's Equations in Matter", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         # p1 3.0s
         b = txt_block(["Here are Maxwell's four equations in matter."])
@@ -185,10 +185,10 @@ class MaxwellVacuum(Scene):
     # p1=7.3s p2=25.0s p3=19.8s  total=53.3s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/MaxwellVacuum.mp3")
+        self.add_sound(f"{AUDIO}/MaxwellVacuum.mp3", time_offset=0)
         title = Text("Maxwell's Equations in Vacuum", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         # p1 7.3s
         b = txt_block(["In empty space with no charges and no currents, the equations simplify."])
@@ -221,10 +221,10 @@ class EMWaveDerivation(Scene):
     # p1=9.7s p2=23.6s p3=14.0s p4=26.9s  total=75.8s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/EMWaveDerivation.mp3")
+        self.add_sound(f"{AUDIO}/EMWaveDerivation.mp3", time_offset=0)
         title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         # p1 9.7s
         b = txt_block([
@@ -264,10 +264,10 @@ class EMWaveProperties(Scene):
     # p1=7.8s p2=9.7s p3=9.7s p4=5.8s p5=6.8s p6=13.0s  total=55.2s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/EMWaveProperties.mp3")
+        self.add_sound(f"{AUDIO}/EMWaveProperties.mp3", time_offset=0)
         title = Text("Properties of EM Waves", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         waits = [7.8, 9.7, 9.7, 5.8, 6.8, 13.0]
         props = [
@@ -307,10 +307,10 @@ class EMWaveExample(Scene):
     # p1=10.2s p2=22.1s p3=13.5s  total=47.0s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/EMWaveExample.mp3")
+        self.add_sound(f"{AUDIO}/EMWaveExample.mp3", time_offset=0)
         title = Text("Example: Finding B from E", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         # p1 10.2s
         E_field = MathTex(r"\vec{E}=E_0\hat{x}\,e^{i(kz-\omega t)}", font_size=46, color=E_COLOR)
@@ -341,10 +341,10 @@ class PoyntingIrradiance(Scene):
     # p1=5.4s p2=16.4s p3=17.8s p4=14.0s p5=7.3s p6=7.8s p7=11.6s p8=24.6s p9=27.9s  total=136.3s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/PoyntingIrradiance.mp3")
+        self.add_sound(f"{AUDIO}/PoyntingIrradiance.mp3", time_offset=0)
         title = Text("Poynting Vector & Irradiance", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         waits = [5.4, 16.4, 17.8, 14.0, 7.3, 7.8, 11.6, 24.6, 27.9]
 
@@ -421,10 +421,10 @@ class RadiationPressure(Scene):
     # p1=8.7s p2=15.4s p3=21.7s p4=7.3s  total=54.7s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/RadiationPressure.mp3")
+        self.add_sound(f"{AUDIO}/RadiationPressure.mp3", time_offset=0)
         title = Text("Radiation Pressure", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         waits = [8.7, 15.4, 21.7, 7.3]
 
@@ -464,10 +464,10 @@ class DispersionScene(Scene):
     # p1=10.6s p2=17.8s p3=23.1s p4=10.6s p5=18.3s p6=27.4s  total=110.4s
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound(f"{AUDIO}/DispersionScene.mp3")
+        self.add_sound(f"{AUDIO}/DispersionScene.mp3", time_offset=0)
         title = Text("Dispersion & Index of Refraction", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title, run_time=0.8))
+        self.add(title)
 
         waits = [10.6, 17.8, 23.1, 10.6, 18.3, 27.4]
 
