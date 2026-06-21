@@ -85,22 +85,22 @@ class WaveEquation1D(Scene):
 
         # p2 15.9s — left side
         lb = Brace(eq[0:2], DOWN, color=E_COLOR)
-        lt = lb.get_text("Curvature\\\\ in space", font_size=26)
+        lt = lb.get_tex(r"\text{Curvature in space}")
         lt.set_color(E_COLOR)
         self.play(GrowFromCenter(lb), FadeIn(lt))
         self.wait(15.9)
 
         # p3 18.3s — right side
         rb = Brace(eq[2:], DOWN, color=B_COLOR)
-        rt = rb.get_text("Acceleration\\\\ in time", font_size=26)
+        rt = rb.get_tex(r"\text{Acceleration in time}")
         rt.set_color(B_COLOR)
         self.play(GrowFromCenter(rb), FadeIn(rt))
         self.wait(18.3)
 
         # p4 15.0s — interpretation
-        interp = Text("Spatial curvature = Temporal acceleration / v squared", font_size=30, color=GOLD)
+        interp = Text("Spatial curvature = Temporal acceleration / v squared", font_size=28, color=GOLD)
         safe_scale(interp, max_width=13.0)
-        interp.next_to(rt, DOWN, buff=0.4)
+        interp.next_to(rb, DOWN, buff=0.5)
         self.play(FadeIn(interp))
         self.wait(15.0)
         self.play(FadeOut(VGroup(lb, lt, rb, rt, interp)))

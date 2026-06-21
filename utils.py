@@ -23,6 +23,17 @@ BG_COLOR = "#0f0f0f"
 
 
 # ── Safe layout helpers ───────────────────────────────────────────────────────
+# ── Text block helper — used across all scene files ───────────────────────────
+def txt_block(lines, fs=27):
+    """Create a VGroup of Text lines, left-aligned, safe-scaled."""
+    texts = [Text(l, font_size=fs, color=WHITE) for l in lines if str(l).strip()]
+    if not texts:
+        return VGroup()
+    b = VGroup(*texts).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
+    safe_scale(b, max_width=13.0, max_height=4.5)
+    return b
+
+
 def safe_scale(mob: Mobject, max_width: float = 13.0, max_height: float = 5.8) -> Mobject:
     """Scale a mobject down if it exceeds safe screen dimensions."""
     w = mob.width

@@ -186,7 +186,8 @@ class MatrixExample(Scene):
 class StandingWaves(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/StandingWaves.mp3", time_offset=0)
+        # add_sound: run generate_audio.py --all first to create StandingWaves.mp3
+        # self.add_sound("narration/audio/StandingWaves.mp3", time_offset=0)
         title = Text("Standing Waves  (Bennett Section 7.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
@@ -208,7 +209,8 @@ class StandingWaves(Scene):
 class Beating(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/Beating.mp3", time_offset=0)
+        # add_sound: run generate_audio.py --all first to create Beating.mp3
+        # self.add_sound("narration/audio/Beating.mp3", time_offset=0)
         title = Text("Beating  (Bennett Section 7.2)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
@@ -235,7 +237,8 @@ class Beating(Scene):
 class PolarizationBasics(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/PolarizationBasics.mp3", time_offset=0)
+        # add_sound: run generate_audio.py --all first to create PolarizationBasics.mp3
+        # self.add_sound("narration/audio/PolarizationBasics.mp3", time_offset=0)
         title = Text("Polarization of Light  (Bennett Section 6.1-6.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)

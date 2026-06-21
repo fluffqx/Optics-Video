@@ -29,11 +29,11 @@ class SC_Week4_Problem1(Scene):
         self.play(Write(sol_title))
 
         s1_lbl = step_label(1)
-        s1 = MathTex(
-            r"M_{L1} = \begin{pmatrix}1&0\\-1/f_1&1\end{pmatrix},\quad"
-            r"M_D = \begin{pmatrix}1&f_1+f_2\\0&1\end{pmatrix},\quad"
-            r"M_{L2} = \begin{pmatrix}1&0\\-1/f_2&1\end{pmatrix}",
-            font_size=26)
+        s1a = MathTex(r"M_{L1}=\begin{pmatrix}1&0\\-1/f_1&1\end{pmatrix}", font_size=24)
+        s1b = MathTex(r"M_D=\begin{pmatrix}1&f_1{+}f_2\\0&1\end{pmatrix}", font_size=24)
+        s1c = MathTex(r"M_{L2}=\begin{pmatrix}1&0\\-1/f_2&1\end{pmatrix}", font_size=24)
+        s1 = VGroup(s1a, s1b, s1c).arrange(RIGHT, buff=0.3)
+        safe_scale(s1, max_width=12.5)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
         self.play(Write(s1_grp)); self.wait(1)

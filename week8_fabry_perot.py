@@ -52,8 +52,7 @@ class AiryFunction(Scene):
         title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        airy = MathTex(r"I_t = \frac{I_0}{1 + F\sin^2(\delta/2)}\qquad"
-                       r"F = \frac{4R}{(1-R)^2}",
+        airy = MathTex(r"I_t = \frac{I_0}{1 + F\sin^2(\delta/2)}\qquad F = \frac{4R}{(1-R)^2}",
                        font_size=46, color=INTENSITY_COLOR)
         safe_scale(airy)
         airy.next_to(title, DOWN, buff=0.4)
