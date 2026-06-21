@@ -1,1 +1,1 @@
-Third, their magnitudes are related by E equals c times B in vacuum.
+Third, the magnitudes of E and B are related by E equals c times B in vacuum. This follows from the same Faraday relation: the magnitude of k-vector cross E equals k times E equals omega times B, so B equals k E over omega equals E over v-phase equals E over c.

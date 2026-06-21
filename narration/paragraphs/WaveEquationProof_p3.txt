@@ -1,1 +1,1 @@
-This confirms that any function of the form x minus vt is a valid travelling wave.
+Now the right side. The first time derivative of psi is minus 2v times open bracket x minus vt close bracket, because the chain rule brings down a factor of minus v. Differentiating again with respect to t gives 2v-squared. Multiplying by one over v-squared gives 2. Both sides equal 2, so the wave equation is satisfied.

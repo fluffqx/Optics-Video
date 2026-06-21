@@ -1,1 +1,1 @@
-This approximation works beautifully for lenses, mirrors, telescopes, and microscopes. It breaks down when apertures become comparable to the wavelength — which is when diffraction becomes important, and we'll return to that in week 7.
+This approximation is remarkably powerful. It describes lenses, mirrors, microscopes, telescopes, cameras, and the human eye with great accuracy. The thin lens equation and the mirror equation are the workhorses of optical engineering.

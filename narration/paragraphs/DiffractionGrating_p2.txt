@@ -1,1 +1,1 @@
-The N-slit intensity pattern is a product of two terms: the single-slit diffraction envelope, which shapes the overall intensity, and the N-slit interference term, which creates sharp principal maxima wherever d sine theta equals m lambda.
+The grating equation is d times sine theta-m equals m lambda, for normal incidence, where m is the order number. This is the condition for constructive interference from all N slits simultaneously. Light of wavelength lambda is diffracted into a series of sharp maxima at angles theta-m, one for each integer m.

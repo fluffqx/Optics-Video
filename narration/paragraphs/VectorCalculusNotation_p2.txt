@@ -1,1 +1,1 @@
-The divergence of a vector field F — written nabla dot F — measures how much the field spreads outward from a point. Positive divergence means field lines radiate outward like a source. Zero divergence means no sources or sinks.
+The curl of a vector field F, written as del cross F, measures how much the field rotates around a point. Think of placing a small paddle wheel in the fluid field. If the wheel rotates, the curl is nonzero in the direction of the rotation axis. Zero curl means the field is irrotational — no net rotation around any point.

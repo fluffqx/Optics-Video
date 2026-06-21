@@ -1,1 +1,1 @@
-Fringe visibility — also called fringe contrast — quantifies how sharp the interference fringes are.
+Fringe visibility, also called fringe contrast, quantifies how sharp and clear the interference fringes are. It is defined as V equals I-max minus I-min, divided by I-max plus I-min.

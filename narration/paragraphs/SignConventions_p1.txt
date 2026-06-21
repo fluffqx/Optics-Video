@@ -1,1 +1,1 @@
-Sign conventions are the most common source of errors in geometric optics problems. Getting a sign wrong means getting the wrong answer for the entire problem. Study these carefully.
+Sign conventions are the most important technical details in geometric optics. Getting a sign wrong gives a completely wrong answer — the magnitude might be right but the physical interpretation is opposite. These conventions are not arbitrary: they follow a consistent logic that makes the equations work out correctly for all configurations.

@@ -1,1 +1,1 @@
-The Michelson interferometer is one of the most important instruments in the history of physics. Albert Michelson built the first version in 1881, specifically to detect the luminiferous aether — the hypothetical medium through which light was thought to travel.
+The Michelson interferometer is one of the most important instruments in the history of physics. Albert Michelson built it in 1881, and the null result of the Michelson-Morley experiment — which showed no aether drag — was a crucial step toward special relativity.

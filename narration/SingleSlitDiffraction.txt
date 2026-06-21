@@ -1,9 +1,13 @@
-The single-slit diffraction pattern is the starting point for understanding all diffraction phenomena. Bennett derives it carefully in Section 8.3.1 using the Fraunhofer diffraction integral — integrating the Huygens contributions from every point across the slit width.
+For a single slit of width b, the Fraunhofer diffraction integral gives the famous sinc-squared pattern. Define beta equals pi b sine theta over lambda. The intensity is I equals I-naught times sine-squared beta over beta-squared.
 
-The result is the sinc-squared function: intensity equals I-naught times sine beta over beta, squared. The parameter beta equals pi b sine theta over lambda, where b is the slit width and theta is the diffraction angle.
+The function sine beta over beta is the sinc function — it equals one at beta equals zero, decreasing oscillatorily toward zero as beta increases. Squaring it gives I-naught at the centre and decreasing secondary maxima.
 
-The central maximum is at theta equals zero, where sine beta over beta approaches one by L'Hopital's rule. It is the tallest and widest feature in the pattern.
+The central maximum is the dominant feature: it spans from the first zero on the left to the first zero on the right. The zeros of the sinc-squared function occur where sine beta equals zero with beta nonzero, meaning beta equals m pi for non-zero integer m. This gives the condition for dark minima: b sine theta equals m lambda, for m equals plus or minus one, plus or minus two, and so on.
 
-Dark minima occur wherever beta equals m pi — that is, wherever b sine theta equals m lambda for integer m not equal to zero. This has a beautiful physical interpretation: at these angles, the contributions from the top and bottom halves of the slit cancel exactly.
+The central maximum has double the angular width of each secondary maximum. The first secondary maximum has an intensity of about 4.7 percent of the central maximum. The second has about 1.7 percent. The energy is concentrated in the central maximum.
 
-The key physical insight is the narrower the slit, the wider the diffraction pattern. This is the uncertainty principle in action — confining the wave in space forces it to spread out in angle.
+Physical intuition: the slit can be divided into pairs of segments, one from each half of the slit. At the first dark minimum, each pair contributes a path difference of exactly lambda, so they cancel. The central bright maximum occurs because all contributions have nearly the same path length and add constructively.
+
+A key result: the half-angular width of the central maximum is theta-half equals arcsin of lambda over b, approximately lambda over b in radians for small angles. A narrower slit gives a wider diffraction pattern. Wider slit gives narrower pattern. This inverse relationship — width in aperture space times width in angle space is approximately lambda — is the optical uncertainty principle.
+
+For our complete example: b equals 0.200 millimetres, lambda equals 632.8 nanometres, screen at L equals 2.00 metres. First dark minimum: sine theta-one equals lambda over b equals 3.164 times ten to the minus 3. Position on screen: y-one equals L theta-one approximately L sine theta-one equals 6.33 millimetres. The central maximum extends from minus 6.33 millimetres to plus 6.33 millimetres, total width 12.7 millimetres.

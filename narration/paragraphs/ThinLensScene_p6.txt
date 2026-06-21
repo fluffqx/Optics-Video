@@ -1,1 +1,1 @@
-The magnification m equals minus s_i over s_o. A negative magnification means the image is inverted. A magnitude greater than one means the image is larger than the object.
+Now a complete worked example. Biconvex lens: R-one equals plus 20 centimetres, R-two equals minus 20 centimetres, n-l equals 1.50, in air. Object at s-o equals 60 centimetres. Find s-i and m.

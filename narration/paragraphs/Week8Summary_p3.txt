@@ -1,1 +1,1 @@
-The coefficient of finesse F equals 4R over one minus R squared.
+The finesse script-F equals pi root R over one minus R. This equals the FSR divided by the FWHM of each transmission peak, and approximately equals the average number of round trips before leakage.

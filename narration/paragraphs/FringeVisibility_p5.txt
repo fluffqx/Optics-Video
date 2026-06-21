@@ -1,0 +1,1 @@
+Measuring visibility as a function of path length difference gives the coherence length of the source. This is how astronomers measure the diameter of distant stars using stellar interferometry — the fringe visibility as a function of telescope separation tells you the angular size of the source.

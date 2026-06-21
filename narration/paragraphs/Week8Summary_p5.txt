@@ -1,1 +1,1 @@
-The round-trip phase delta equals 4 pi n d cosine theta over lambda-naught.
+The resolving power equals N times script-F. This is the ratio lambda over delta-lambda-min.

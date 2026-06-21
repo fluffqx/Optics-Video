@@ -1,5 +1,7 @@
-Polarisation describes the direction in which the electric field oscillates as a wave propagates. For a wave travelling in the z-direction, E can point anywhere in the x-y plane.
+The Jones vector for a plane wave propagating in the z-direction is a two-component vector containing the x and y complex amplitudes of the electric field. The common factor e to the i kz minus omega t is always implicit.
 
-Linear polarisation means E always oscillates along a fixed direction. Circular polarisation means the tip of E traces a circle — this requires equal amplitudes in x and y, with a 90-degree phase difference between them. The general case is elliptical polarisation, where E traces an ellipse.
+Horizontal linear polarisation has field only in the x-direction: Jones vector one, zero. Vertical has zero, one. Linear polarisation at angle alpha from horizontal has components cosine alpha and sine alpha. The normalisation convention sets the total intensity to one: the magnitude squared of the Jones vector equals one.
 
-Our eyes cannot detect polarisation directly. But polarising filters, wave plates, and birefringent materials interact strongly with it, making polarisation one of the most practically exploited properties of light.
+Circular polarisation requires equal amplitudes in x and y with a phase difference of pi over two. Right circular polarisation is one over root two times one, minus i — the y component lags the x component by pi over two. Left circular polarisation is one over root two times one, plus i.
+
+The intensity of a polarisation state is the dot product of the Jones vector with its complex conjugate — the modulus squared of each component, summed. This always gives a real, non-negative result.

@@ -1,11 +1,13 @@
-A diffraction grating takes the principle of interference to its logical extreme — instead of two slits, it uses thousands. The result is an instrument of extraordinary spectral resolution.
+A diffraction grating takes the principle of interference to its logical extreme. Instead of two slits, it has N slits with spacing d, where N can be thousands or tens of thousands per millimetre.
 
-The N-slit intensity pattern is a product of two terms: the single-slit diffraction envelope, which shapes the overall intensity, and the N-slit interference term, which creates sharp principal maxima wherever d sine theta equals m lambda.
+The grating equation is d times sine theta-m equals m lambda, for normal incidence, where m is the order number. This is the condition for constructive interference from all N slits simultaneously. Light of wavelength lambda is diffracted into a series of sharp maxima at angles theta-m, one for each integer m.
 
-The grating equation is the central formula: d times the quantity sine theta-m minus sine theta-i equals m lambda. Here d is the grating period, theta-i is the angle of the incoming beam, theta-m is the angle of the m-th order diffracted beam, and m is the diffraction order — zero, plus or minus one, plus or minus two, and so on.
+The sharpness of these maxima is what makes gratings so powerful for spectroscopy. With N slits, each maximum has an angular width proportional to one over N. The more slits, the sharper the peaks. And sharper peaks mean closer wavelengths can be resolved.
 
-At normal incidence theta-i equals zero, and the equation simplifies to d sine theta-m equals m lambda.
+The resolving power is R equals lambda over delta-lambda equals N times m. N is the total number of illuminated slits; m is the diffraction order. For a grating with 600 grooves per millimetre, length 5 centimetres: N equals 600 times 50 equals 30,000 slits. In first order, R equals 30,000. This can resolve wavelengths separated by 589 over 30,000 equals 0.020 nanometres.
 
-The resolving power equals N times m — the number of slits times the diffraction order. This is why large gratings used in high orders can resolve wavelengths differing by less than a hundredth of a nanometre.
+The sodium D lines are the classic test: lambda-one equals 589.0 nanometres and lambda-two equals 589.6 nanometres, separation 0.6 nanometres. Required resolving power equals 589 over 0.6 equals 982. Our 30,000-groove grating easily resolves them in first order.
 
-The free spectral range is lambda-minimum divided by m. It tells you the wavelength range you can measure unambiguously in order m before the next order overlaps.
+The free spectral range tells you the unambiguous wavelength range in each order. In order m, wavelength lambda and wavelength lambda plus delta-lambda-FSR produce maxima at the same angle if d sine theta equals m lambda equals m plus one times lambda plus delta-lambda-FSR. Solving: delta-lambda-FSR equals lambda-min over m. For first order with lambda equals 589 nanometres: FSR equals 589 nanometres. This means the first-order maximum of 589 nanometres coincides with the second-order maximum of 294.5 nanometres — wavelengths separated by the FSR are ambiguous.
+
+For the general grating equation including oblique incidence: d times sine theta-m minus sine theta-i equals m lambda. Here theta-i is the angle of incidence and theta-m is the diffraction angle, both measured from the grating normal.

@@ -1,9 +1,13 @@
-Each optical element is represented by a 2 by 2 Jones matrix. To find the output polarisation state, multiply the Jones matrix by the input Jones vector.
+Each optical element is represented by a two-by-two Jones matrix J. The output polarisation state is J times the input Jones vector. For a sequence of N elements, the output is J-N times J N-minus-1 times dot dot dot times J-1 times the input, with the first element encountered on the right.
 
-A horizontal polariser passes only the x-component: it has 1 zero zero zero. A vertical polariser has zero zero zero one.
+A horizontal linear polariser passes only the x-component: its Jones matrix has 1, 0, 0, 0. A vertical polariser has 0, 0, 0, 1.
 
-A quarter-wave plate with fast axis horizontal introduces a minus i phase to the y-component: the matrix is 1 zero zero minus i.
+A quarter-wave plate with fast axis horizontal introduces minus i to the y-component: its Jones matrix has 1, 0 in the top row and 0, minus i in the bottom. The x-component acquires no additional phase; the y-component acquires a phase of minus pi over two.
 
-A half-wave plate with fast axis horizontal flips the sign of the y-component: 1 zero zero minus 1.
+A half-wave plate with fast axis horizontal flips the sign of the y-component: 1, 0 top row and 0, minus 1 bottom row. This corresponds to a phase shift of minus pi on the y-component.
 
-For a sequence of elements, multiply the Jones matrices from right to left — first element on the right — then apply the result to the input vector.
+To find the output for a specific input and sequence of elements: write down the Jones matrices, multiply from right to left (first element on right), then multiply by the input Jones vector. The result is the output Jones vector, from which you can read off the polarisation state and intensity.
+
+Example: horizontal linear polariser, then quarter-wave plate with fast axis at 45 degrees. Input: vertically polarised light, Jones vector 0, 1. After horizontal polariser: Jones vector 0, 0 — all blocked. No light reaches the quarter-wave plate. This confirms that a polariser crossed with the input polarisation blocks all light, regardless of what follows.
+
+Different example: plus 45-degree linear input through a quarter-wave plate with horizontal fast axis. Input: 1, 1 over root 2. QWP matrix times input: 1, 0, 0, minus i times 1, 1 over root 2 equals 1, minus i over root 2. This is right circular polarisation. The quarter-wave plate has converted 45-degree linear to right circular, exactly as expected.

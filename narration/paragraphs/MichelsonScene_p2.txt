@@ -1,1 +1,1 @@
-The experiment failed to detect the aether, and this null result was a crucial step toward special relativity.
+The setup: a beam splitter divides the input beam into two arms. Each arm has a mirror at the end. The reflected beams recombine at the beam splitter and interfere. The path length difference between the two arms determines the phase difference and hence the intensity at the detector.

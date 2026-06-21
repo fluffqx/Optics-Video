@@ -1,1 +1,1 @@
-All distances are measured from the optical element — the lens, mirror, or refracting surface. The object distance s_o is positive when the object is on the side where light is coming from. This is called a real object and is the normal case.
+All distances are measured from the optical element — the lens, mirror, or refracting surface. Positive distances are in the direction of light propagation; negative distances are against it.

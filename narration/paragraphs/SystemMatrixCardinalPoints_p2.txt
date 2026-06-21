@@ -1,1 +1,1 @@
-The effective focal length is minus one over C. The front and back focal distances can be read off from A, C, and D. The determinant of the system matrix is always exactly 1 — this is a consequence of energy conservation.
+The effective focal length is minus one over C. If C equals zero, the system is afocal — parallel rays in give parallel rays out, which is the definition of a telescope or beam expander.

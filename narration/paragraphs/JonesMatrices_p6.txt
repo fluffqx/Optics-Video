@@ -1,0 +1,1 @@
+Example: horizontal linear polariser, then quarter-wave plate with fast axis at 45 degrees. Input: vertically polarised light, Jones vector 0, 1. After horizontal polariser: Jones vector 0, 0 — all blocked. No light reaches the quarter-wave plate. This confirms that a polariser crossed with the input polarisation blocks all light, regardless of what follows.

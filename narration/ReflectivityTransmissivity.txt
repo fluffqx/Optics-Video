@@ -1,7 +1,9 @@
-The Fresnel coefficients r and t give amplitude ratios. To find the fraction of energy, we need the reflectivity R and transmissivity T.
+The Fresnel amplitude coefficients r and t give the ratio of electric field amplitudes. To find the fraction of energy that is reflected and transmitted, we need the energy coefficients.
 
-Reflectivity is simply the square of the amplitude reflection coefficient: R equals r squared. At normal incidence from air to glass with n equals 1.5, R equals 4 percent. This is why glass surfaces look slightly shiny.
+The reflectivity R is simply the square of the amplitude reflection coefficient: R equals r squared. This follows because irradiance is proportional to the square of the electric field amplitude, and the beam geometry is unchanged on reflection.
 
-Transmissivity T is not simply t squared — we also need to account for the change in beam cross-section and refractive index: T equals n_t cos theta_t over n_i cos theta_i, times t squared.
+The transmissivity T is not simply t squared. When a beam refracts at an interface, its cross-section changes and the wave speed changes, and we must account for both. The correct expression is T equals n-t cosine theta-t over n-i cosine theta-i, times t squared. The factor n-t cosine theta-t over n-i cosine theta-i corrects for the change in beam cross-section and propagation speed.
 
-Energy conservation demands R plus T equals one. This is a useful sanity check: if your answer doesn't satisfy it, you made an error.
+Energy conservation requires R plus T equals one. This is an excellent sanity check for any Fresnel calculation — if your R and T do not add to one, you have made an error somewhere. Verify this for normal incidence with n-i equals one and n-t equals 1.5: r equals minus one-fifth, so R equals one twenty-fifth equals 0.04. t equals four-fifths, so T equals 1.5 times 1 times sixteen twenty-fifths equals 24 over 25 equals 0.96. Sum equals 1.00. Correct.
+
+For a multilayer optical system like a camera lens with six or eight glass-air interfaces, the reflectivity at each surface compounds: if each surface reflects four percent, then after ten surfaces the transmitted fraction is 0.96 to the power ten, which is approximately 0.665 — only 66.5 percent transmitted. This is why high-quality camera lenses use anti-reflection coatings on every surface: without them, the image would be dim and full of ghost reflections.

@@ -1,1 +1,1 @@
-We choose a free spectral range of 0.5 nanometres to comfortably bracket the 0.18 nanometre splitting. This requires a mirror spacing of d equals lambda squared over 2 times delta-lambda-FSR, which gives 0.431 millimetres. Tight!
+Step two: choose free spectral range. The FSR must comfortably exceed the line separation of 0.18 nanometres. Choose FSR equals 0.50 nanometres, which is nearly three times the separation.

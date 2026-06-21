@@ -1,7 +1,7 @@
-Fermat's principle states that light travels between two points along the path that takes the least time. This was proposed in 1657, well before Maxwell's equations existed.
+Before deriving the Fresnel equations, let's understand Snell's law at a deeper level through Fermat's principle. Fermat's principle states that light travels between two points along the path that requires the least time — or more precisely, along the path where the travel time is stationary, meaning the first derivative of travel time with respect to the path is zero.
 
-For reflection, minimising the travel time with respect to the reflection point automatically gives the law of reflection — angle in equals angle out.
+For reflection from a flat surface, Fermat's principle immediately gives the law of reflection: the angle of incidence equals the angle of reflection. Any other path from source to surface to detector would take longer. The proof is a simple calculus problem: minimise the total path length subject to the constraint that the reflection point lies on the surface.
 
-For refraction, the same minimisation with two different wave speeds in the two media gives Snell's law — n_i sin theta_i equals n_t sin theta_t.
+For refraction, the same principle applies but now the light travels at different speeds in the two media. The optimal path — the one that minimises travel time — bends at the interface. The bending angle is determined by the ratio of the speeds in the two media, which equals the ratio of the refractive indices. Working through the calculus gives Snell's law: n-i times sine theta-i equals n-t times sine theta-t.
 
-This is a beautiful example of a variational principle — nature finding the optimal path. It also appears in quantum mechanics as Feynman's path integral formulation.
+Fermat's principle is more than a clever trick for deriving Snell's law. It is a profound variational principle that reveals a deep connection between optics and mechanics. Hamilton showed that classical mechanics can be formulated in an analogous way — particles follow paths that minimise the action. And in quantum mechanics, Feynman's path integral shows that particles actually explore all possible paths simultaneously; the classical path is simply the one where all the paths interfere constructively.

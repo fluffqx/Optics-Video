@@ -1,7 +1,15 @@
-Brewster's angle is the special angle at which p-polarised light has exactly zero reflectivity. The reflected beam is then purely s-polarised.
+Brewster's angle is the angle of incidence at which the p-polarised component has zero reflectivity — it is completely transmitted. At this special angle, the reflected beam consists entirely of s-polarised light.
 
-The formula is simple: tangent of theta_B equals n_t over n_i. For air to glass with n equals 1.5, theta_B is 56.3 degrees.
+The formula is simple: tangent theta-B equals n-t over n-i. For air to glass with n-t equals 1.5: theta-B equals arctan of 1.5, which gives 56.31 degrees.
 
-At Brewster's angle, the reflected and refracted rays are exactly perpendicular to each other. This is the physical reason for zero p-reflectivity: the oscillating dipoles in the medium cannot radiate in the direction of the reflected beam.
+The physical explanation is elegant. At Brewster's angle, the reflected ray and the refracted ray are exactly perpendicular to each other: theta-B plus theta-t equals 90 degrees. The p-polarised electric field oscillates in the plane of incidence, which means it oscillates in the direction of the would-be reflected ray. But electromagnetic radiation cannot be emitted along the direction of oscillation of the source dipoles — dipoles do not radiate along their axis. So no p-polarised light can be reflected when the refracted ray is perpendicular to the reflected ray.
 
-Total internal reflection occurs when light tries to go from a denser medium to a less dense one, and the angle exceeds the critical angle. Above theta_c, ALL light is reflected — R equals exactly 1. The critical angle satisfies sine theta_c equals n_t over n_i. For glass to air, this is 41.8 degrees. Optical fibres rely entirely on this effect.
+Applications: laser Brewster windows. Lasers with Brewster windows have their gain medium bounded by glass plates tilted at Brewster's angle. P-polarised light passes through without any reflection loss, so the laser naturally selects p-polarisation and lases with essentially zero cavity loss at the windows. Anti-glare sunglasses are polarised to block s-polarised light — the component that reflects strongly from horizontal surfaces like water and wet roads at typical viewing angles near Brewster's angle.
+
+Total internal reflection occurs when light tries to propagate from a denser medium into a rarer one, at an angle of incidence exceeding the critical angle theta-c. The critical angle is given by sine theta-c equals n-t over n-i, where n-i is greater than n-t.
+
+At exactly the critical angle, the refracted beam travels parallel to the interface. Beyond the critical angle, Snell's law gives a sine of theta-t greater than one, for which there is no real solution. The refracted beam does not exist — all the energy is reflected. The reflectivity jumps to exactly R equals one for both polarisations.
+
+For glass with n equals 1.5 to air: sine theta-c equals 1 over 1.5, so theta-c equals 41.81 degrees. For diamond with n equals 2.42: theta-c equals 24.41 degrees — even steeper, which is why diamond sparkles so brilliantly. Light entering the diamond undergoes total internal reflection many times before finally finding a face at which it can exit.
+
+Optical fibres use total internal reflection to guide light. The core has index n-core and the cladding has index n-clad, where n-core is greater than n-clad. Light propagating at a sufficiently shallow angle to the fibre axis hits the core-cladding boundary beyond the critical angle and is totally reflected, bouncing back and forth along the fibre. The numerical aperture NA equals the square root of n-core squared minus n-clad squared, and it specifies the maximum acceptance angle of the fibre.

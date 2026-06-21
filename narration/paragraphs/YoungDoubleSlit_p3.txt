@@ -1,1 +1,1 @@
-The phase difference between the two beams is delta equals 2 pi over lambda times d sine theta.
+Constructive interference — bright fringes — occurs when the path difference is an integer number of wavelengths: d sine theta equals m lambda, for m equals zero, plus or minus one, plus or minus two, and so on. The central maximum at m equals zero is at theta equals zero, directly ahead of the midpoint between the slits.

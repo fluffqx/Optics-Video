@@ -1,17 +1,5 @@
-Week 5 is all about polarisation — one of the most important properties of light, and one that's easy to miss because our eyes can't detect it directly.
+Week 5 develops the Jones vector formalism — the systematic mathematical framework for describing and manipulating polarisation states.
 
-Polarisation describes the direction in which the electric field oscillates as the wave propagates. For a plane wave travelling in the z direction, the electric field can point anywhere in the x-y plane.
+The key insight is that any polarisation state of a plane wave can be represented as a two-component complex column vector — the Jones vector. Any optical element that transforms the polarisation can be represented as a two-by-two complex matrix — the Jones matrix. To trace polarisation through a sequence of elements, you simply multiply the matrices.
 
-If the field always points in the same direction, we have linear polarisation. If the tip of the electric field vector traces a circle as time progresses, we have circular polarisation. The general case is elliptical polarisation.
-
-Birefringent crystals have two different refractive indices for two perpendicular polarisation directions — the ordinary and extraordinary axes. Light polarised along the slow axis travels more slowly than light along the fast axis. This accumulates a phase difference between the two components.
-
-A wave plate exploits this: it introduces a controlled phase difference delta phi equal to 2 pi over lambda naught times n_e minus n_o times d, where d is the plate thickness.
-
-A quarter-wave plate introduces a phase difference of pi over 2 — a quarter of a full cycle. This converts linearly polarised light at 45 degrees into circularly polarised light, and vice versa.
-
-A half-wave plate introduces pi — half a cycle — and rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis.
-
-The Jones formalism handles all of this mathematically. A Jones vector is a two-component complex column vector giving the x and y components of the electric field amplitude. A Jones matrix is a two-by-two complex matrix representing an optical element.
-
-To trace polarisation through a sequence of elements, multiply the Jones matrices from right to left, then apply the result to the input Jones vector. The output intensity is the magnitude squared of the output vector.
+This formalism is exact within the paraxial approximation for fully coherent light. It handles linear polarisers, wave plates, rotators, beam splitters, and any combination of these.

@@ -1,7 +1,5 @@
-Week 3 takes us into geometric optics — the regime where the wavelength of light is much smaller than the optical elements we're dealing with. In this limit, we can treat light as rays travelling in straight lines, and ignore diffraction entirely.
+Week 3 is geometric optics — the regime where the wavelength of light is so small compared to the optical elements that we can treat light as rays travelling in straight lines.
 
-This approximation works beautifully for lenses, mirrors, telescopes, and microscopes. It breaks down when apertures become comparable to the wavelength — which is when diffraction becomes important, and we'll return to that in week 7.
+This approximation is remarkably powerful. It describes lenses, mirrors, microscopes, telescopes, cameras, and the human eye with great accuracy. The thin lens equation and the mirror equation are the workhorses of optical engineering.
 
-The key mathematical tool is the paraxial approximation: for small angles, sine theta is approximately equal to tangent theta, which is approximately equal to theta in radians. This linearises all the equations and makes them analytically tractable.
-
-Sign conventions are absolutely critical in geometric optics. Getting a sign wrong means getting the wrong answer. Always measure distances from the optical element. Object distance is positive for real objects on the incoming side. Image distance is positive for real images on the outgoing side. Radius of curvature is positive if the centre of curvature is to the right of the surface.
+The most important lesson of this week is sign conventions. They seem tedious, but getting a sign wrong in a geometric optics problem means getting the completely wrong answer. We will establish them carefully and check them on every example.

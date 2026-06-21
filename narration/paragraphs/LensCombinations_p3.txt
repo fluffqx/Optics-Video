@@ -1,1 +1,1 @@
-When the lenses are in contact — d approaches zero — this simplifies to: the powers add. P_eff equals P_1 plus P_2. This is why opticians measure lens power in dioptres and simply add them.
+The effective focal length of the two-lens system satisfies: one over f-effective equals one over f-one plus one over f-two minus d over f-one f-two. In the contact limit where d goes to zero, this simplifies to one over f-effective equals one over f-one plus one over f-two, or equivalently P-effective equals P-one plus P-two.

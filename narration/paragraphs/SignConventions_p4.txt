@@ -1,1 +1,1 @@
-The radius of curvature R is positive if the centre of curvature is to the right of the surface — which means a convex surface for light coming from the left. It is negative for a concave surface.
+The image distance s-i is positive for a real image, formed on the far side of the element where light actually converges. It is negative for a virtual image, formed on the same side as the incoming light. You cannot project a virtual image onto a screen — it exists only as diverging rays that appear to come from that location.

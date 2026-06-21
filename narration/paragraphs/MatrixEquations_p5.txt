@@ -1,1 +1,1 @@
-The mirror matrix looks identical to the thin lens matrix with minus two over R in the lower left — equivalent to a thin lens with focal length R over 2.
+To find the system matrix, multiply the individual element matrices from right to left — the first element encountered by the light goes on the right. The order matters because matrix multiplication is not commutative.

@@ -1,1 +1,1 @@
-k is the wave number, equal to 2 pi divided by the wavelength lambda. It tells you how many radians of oscillation fit into one metre of space. Its units are radians per metre.
+k is the wave number, in units of radians per metre. It measures the spatial frequency — how many complete oscillation cycles fit into one metre. The relationship between k and the wavelength lambda is k equals 2 pi divided by lambda. Large k means short wavelength, meaning the wave oscillates rapidly in space.

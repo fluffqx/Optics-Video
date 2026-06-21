@@ -1,1 +1,1 @@
-This is derived by applying Snell's law in the paraxial approximation to a ray hitting a spherical surface. It is the building block from which the thin lens equations are derived by applying this formula twice — once for each surface of the lens.
+This equation is derived by applying Snell's law in the paraxial approximation to a ray hitting the surface at a small angle. The paraxial approximation replaces sine theta with theta and cosine theta with one, which linearises everything.

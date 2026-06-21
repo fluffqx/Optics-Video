@@ -1,0 +1,1 @@
+Let's work through an anti-reflection coating. A glass substrate with n equals 1.52 is coated with magnesium fluoride MgF-two with n equals 1.38. Surrounding medium is air with n equals 1.00.

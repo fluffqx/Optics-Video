@@ -1,1 +1,1 @@
-Polarization is one of the most important properties of light, and one that our eyes cannot detect directly. For a plane wave travelling in the z-direction, the electric field lies in the x-y plane. The direction in which E oscillates defines the polarization state.
+Polarisation describes the direction in which the electric field oscillates as a wave propagates. For a plane wave travelling in the z-direction, the electric field lies in the xy-plane. The polarisation state specifies exactly how the field vector moves in this plane as time progresses.

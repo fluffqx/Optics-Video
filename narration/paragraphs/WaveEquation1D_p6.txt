@@ -1,1 +1,1 @@
-Notice the key insight: the shape of the wave — whatever shape it has — travels without distortion. The wave just moves.
+The general solution to the wave equation is any function of the form f of x minus vt, or g of x plus vt. The first represents a profile moving in the positive x direction at speed v. The second moves in the negative x direction. Any combination of these is also a solution.

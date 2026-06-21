@@ -1,17 +1,19 @@
-Light carries energy. How do we quantify the flow of that energy?
+Light carries energy. To quantify the flow of that energy through space, we use the Poynting vector, named after John Henry Poynting who introduced it in 1884.
 
-The Poynting vector S equals E cross B divided by mu naught. It points in the direction of energy flow, and its magnitude gives the power per unit area — in watts per square metre.
+The Poynting vector S equals one over mu-naught times E cross B. It is a vector quantity with units of watts per square metre. Its direction gives the direction of energy flow — always the same as the propagation direction for a plane wave. Its magnitude gives the instantaneous power per unit area flowing through a surface perpendicular to S.
 
-The irradiance I — what we actually measure with a detector — is the time-averaged magnitude of the Poynting vector. For a plane wave, this works out to n epsilon naught c over 2, times E naught squared.
+The irradiance, or intensity, that we actually measure with a detector is the time-averaged magnitude of S. Because E and B oscillate sinusoidally, their product oscillates at twice the frequency. The time average of cosine squared omega t over one period is one half. This gives the irradiance: I equals one half times n epsilon-naught c times E-naught squared.
 
-That factor of one half comes from time-averaging: the time average of cosine squared of omega t is one half. This is a very commonly needed result — remember it.
+The factor of one half is fundamental and appears in all intensity calculations. The irradiance is proportional to the square of the amplitude — not the amplitude itself. Doubling the field amplitude quadruples the irradiance. This nonlinear relationship between field and intensity is why lasers can be both very bright and very damaging, even when the fields they produce are much smaller than fields we encounter in everyday electromagnetic devices.
 
-Light also carries momentum. This means it exerts a radiation pressure on any surface it strikes.
+For a numerical example: a 5 milliwatt green laser pointer focused to a spot of radius 1 millimetre. The beam area is pi times one millimetre squared, approximately 3.14 times ten to the minus 6 square metres. The irradiance is 5 times ten to the minus 3 watts divided by 3.14 times ten to the minus 6 square metres, giving approximately 1590 watts per square metre. From the irradiance formula, E-naught equals the square root of 2I divided by n epsilon-naught c, which gives approximately 1090 volts per metre. The corresponding peak magnetic field is B-naught equals E-naught over c, approximately 3.6 microtesla.
 
-For a perfectly absorbing surface — a black body — the radiation pressure equals I over c.
+For comparison, the Earth's magnetic field is about 50 microtesla. A laser pointer creates a magnetic field about fourteen times weaker than Earth's field — but oscillating 564 trillion times per second.
 
-For a perfectly reflecting surface — a mirror — the beam reverses direction, so the momentum change is doubled. The pressure is 2I over c.
+Light also carries momentum. The momentum density of an electromagnetic wave is S divided by c-squared. When light is absorbed by a surface, it transfers this momentum and exerts a force. The radiation pressure on a perfectly absorbing surface is I over c. For a perfectly reflecting mirror, the beam reverses direction, so the momentum change is twice as large, giving a pressure of 2I over c.
 
-Let's calculate. A laser with irradiance 10 to the 6 watts per square metre hits a perfect mirror. The radiation pressure is 2 times 10 to the 6 divided by 3 times 10 to the 8, giving about 6.67 millipascals. Tiny — but real, and measurable. Solar sails use exactly this effect.
+At Earth's orbit, the solar irradiance is 1361 watts per square metre. The radiation pressure on a perfect mirror is 2 times 1361 divided by 3 times ten to the 8, which is about 9 micronewtons per square metre, or 9 micropascals. This is tiny — atmospheric pressure is 100 kiloPascals, ten billion times larger — but it is enough to accelerate a spacecraft over years or decades. Solar sails exploit this pressure for propulsion in the solar system.
 
-For our second example: E naught equals 1000 volts per metre in air. The irradiance is n epsilon naught c over 2 times E naught squared. Plugging in the numbers gives 132.8 watts per square metre. A household light bulb radiates about this much — so the electric field of visible light is actually quite large, yet completely harmless.
+Radiation pressure also plays a practical role in precision optics. The mirrors in LIGO — the gravitational wave detector — experience radiation pressure from the 100-kilowatt laser beams circulating inside the cavity. This pressure must be carefully managed to maintain the extraordinary stability required to detect spacetime distortions of one ten-thousandth the diameter of a proton.
+
+For a second numerical example: an electric field amplitude of 1000 volts per metre in air. The irradiance is I equals one half times epsilon-naught times c times E-naught squared equals one half times 8.85 times ten to the minus 12 times 3 times ten to the 8 times 10 to the 6, which gives 1327 watts per square metre. The radiation pressure on a mirror is 2I over c equals 2 times 1327 over 3 times ten to the 8, which equals 8.85 micropascals. Tiny in everyday terms, but measurable in precision experiments.

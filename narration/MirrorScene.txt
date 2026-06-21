@@ -1,5 +1,7 @@
-Spherical mirrors obey the mirror equation: one over s_o plus one over s_i equals two over R, which also equals one over the focal length f_m.
+Spherical mirrors obey the mirror equation: one over s-o plus one over s-i equals two over R equals one over f-m, where f-m equals R over two is the focal length of the mirror.
 
-The focal length of a mirror is half the radius of curvature: f_m equals R over 2. For a concave mirror with R positive, the focal length is positive and parallel rays converge to a real focus in front of the mirror.
+This is identical in form to the thin lens equation. The sign convention for mirrors: positive distances are on the same side as the incoming light. A concave mirror curves toward the light and has R positive, giving a positive focal length — it is converging. A convex mirror curves away from the light and has R negative, giving a negative focal length — it is diverging.
 
-The magnification is minus s_i over s_o — same formula as for lenses. A concave mirror with an object beyond the focal point gives an inverted, real image. An object inside the focal point gives an upright, virtual, magnified image — exactly as in a shaving mirror.
+For a concave mirror with f-m equals 20 centimetres and object at s-o equals 60 centimetres: one over s-i equals one over 20 minus one over 60 equals 2 over 60, so s-i equals 30 centimetres. Real image in front of the mirror. Magnification m equals minus 30 over 60 equals minus one-half. Inverted, half-size.
+
+Concave mirrors are used in reflecting telescopes — the primary mirror focuses starlight to form a real image. They are also used in car headlights in reverse: a light source at the focal point produces a parallel reflected beam. Convex mirrors are used as rear-view mirrors and security mirrors because they give a wide field of view at the cost of a virtual, diminished image.

@@ -1,1 +1,1 @@
-Fermat's principle states that light travels between two points along the path that takes the least time. This was proposed in 1657, well before Maxwell's equations existed.
+Before deriving the Fresnel equations, let's understand Snell's law at a deeper level through Fermat's principle. Fermat's principle states that light travels between two points along the path that requires the least time — or more precisely, along the path where the travel time is stationary, meaning the first derivative of travel time with respect to the path is zero.

@@ -1,1 +1,1 @@
-Hydrogen H-alpha is at 656.28 nanometres. Deuterium H-alpha is at 656.10 nanometres. The splitting is 0.18 nanometres. We want to resolve this with mirrors of 90 percent reflectivity.
+The H-alpha line of hydrogen is at 656.28 nanometres. The H-alpha line of deuterium is at 656.10 nanometres. The wavelength difference is 0.18 nanometres. We want to design a Fabry-Pérot with mirror reflectivity R equals 0.90 that can resolve these two lines.

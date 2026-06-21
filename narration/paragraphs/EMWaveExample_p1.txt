@@ -1,1 +1,1 @@
-Given an electric field E pointing in the x-direction and propagating in the z-direction, we need to find the magnetic field B.
+Let's work through a complete example. Given an electric field E pointing in the x-direction with amplitude E-naught, propagating in the z-direction: E-vector equals E-naught times x-hat times e to the i times kz minus omega t.

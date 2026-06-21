@@ -1,0 +1,1 @@
+For comparison: the best diffraction grating we discussed, with 30,000 slits in first order, has RP equals 30,000. Our compact 0.43-millimetre Fabry-Pérot with RP equals 39,100 outperforms it, and could do much better with higher-reflectivity mirrors.

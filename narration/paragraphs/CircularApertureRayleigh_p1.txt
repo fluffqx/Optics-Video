@@ -1,1 +1,1 @@
-Most optical systems — telescopes, microscopes, cameras, the human eye — have circular apertures. The diffraction pattern of a circular aperture is the Airy disk, named after George Biddell Airy who calculated it in 1835.
+Most optical systems — the human eye, camera lenses, telescope objectives, microscope objectives — have circular apertures, not rectangular slits. The Fraunhofer diffraction pattern of a circular aperture of diameter D is the Airy disk: a bright central disk surrounded by concentric bright rings.

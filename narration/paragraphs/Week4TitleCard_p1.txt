@@ -1,1 +1,1 @@
-Week 4 introduces a powerful systematic method for tracing rays through any optical system — matrix optics, also called the ray transfer matrix method.
+Week 4 combines three distinct topics: matrix optics for systematic ray tracing, superposition phenomena including standing waves and beating, and the basics of polarisation.

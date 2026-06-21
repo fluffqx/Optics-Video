@@ -1,1 +1,1 @@
-The fringe spacing on a screen at distance L is delta y equals lambda L over d. This is the most important formula for Young's experiment. Notice: longer wavelength gives wider fringes, closer slits give wider fringes.
+The fringe spacing on a screen at distance L is delta-y equals lambda L over d. This is the most useful formula for Young's experiment and you must know it. Larger slit separation gives finer fringes. Longer wavelength gives coarser fringes. Larger screen distance gives coarser fringes.

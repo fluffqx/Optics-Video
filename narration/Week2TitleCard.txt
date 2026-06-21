@@ -1,7 +1,7 @@
-Week 2 brings us to one of the most practically important topics in optics: what happens when light strikes a boundary between two different materials.
+Week 2 brings us to one of the most practically important topics in optics: what happens when light hits a surface between two different media. Every optical instrument depends on this.
 
-Every time light passes through a lens, reflects off a mirror, or travels through a window, it's encountering an interface. The behaviour at that interface determines how optical instruments work.
+The key results of Week 2 are Snell's law and the Fresnel equations. Snell's law tells you the directions of the reflected and refracted beams. The Fresnel equations tell you the amplitudes — how much light is reflected and how much is transmitted, and how this depends on the angle and the polarisation.
 
-We need to answer two questions. First: in which directions does the reflected and transmitted light travel? That's answered by the law of reflection and Snell's law. Second: how much light is reflected and how much is transmitted? That's answered by the Fresnel equations.
+These equations govern the design of every lens, every mirror coating, every optical fibre, every anti-reflection coating on a camera lens. They are derived directly from Maxwell's boundary conditions and are exact within classical electromagnetism.
 
-These are not just theoretical tools — they're used every day to design camera lenses, optical fibres, laser cavities, and anti-reflection coatings.
+By the end of this week you will be able to compute reflectivity and transmissivity for any angle and polarisation, find Brewster's angle, determine the critical angle for total internal reflection, and apply Malus's law to polarised light through a polariser.

@@ -1,1 +1,1 @@
-Brewster's angle is the special angle at which p-polarised light has exactly zero reflectivity. The reflected beam is then purely s-polarised.
+Brewster's angle is the angle of incidence at which the p-polarised component has zero reflectivity — it is completely transmitted. At this special angle, the reflected beam consists entirely of s-polarised light.

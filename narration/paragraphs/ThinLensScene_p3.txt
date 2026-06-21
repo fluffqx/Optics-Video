@@ -1,1 +1,1 @@
-The lensmaker's equation tells us how f depends on the lens geometry: one over f equals n_l minus n_m over n_m, times one over R_1 minus one over R_2.
+In air with n-m equals one, the lensmaker's equation simplifies to one over f equals n-l minus one, times one over R-one minus one over R-two. For a biconvex lens with R-one equals R equals positive R and R-two equals negative R: one over R-one minus one over R-two equals one over R plus one over R equals two over R. So f equals R divided by two times n-l minus one.

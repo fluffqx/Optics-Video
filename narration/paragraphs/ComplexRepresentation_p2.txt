@@ -1,1 +1,1 @@
-The key is Euler's formula: e to the power of i theta equals cosine theta plus i times sine theta. This connects the exponential function to trigonometry in a beautiful and extremely useful way.
+The foundation is Euler's formula: e to the power i theta equals cosine theta plus i times sine theta. This identity connects the exponential function to the trigonometric functions through the imaginary unit i. It can be proved from the Taylor series: expand e to the ix, group the real and imaginary parts, and recognise the series for cosine and sine respectively.

@@ -1,1 +1,1 @@
-For frequencies well below all resonances — which is the case for most optical glasses in the visible range — n increases with frequency. This is called normal dispersion. Violet light bends more than red light in a prism.
+The group velocity in a dispersive medium is c divided by n plus omega times dn d omega. The quantity n plus omega dn d omega is sometimes called the group index. For normal dispersion, dn d omega is positive, so the group index is larger than n, and the group velocity is smaller than the phase velocity. Pulses travel more slowly than their carrier crests.

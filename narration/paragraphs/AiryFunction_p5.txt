@@ -1,1 +1,1 @@
-Between resonances, the sine term is large, and the transmission drops to nearly zero for high-finesse cavities. The pattern looks like a series of very sharp transmission spikes separated by broad dark regions.
+As R increases toward one, F increases as one over one minus R squared, and the peaks become progressively sharper. For R equals 0.99: F equals 4 times 0.99 over 0.0001 equals 39,600, and script-F equals pi times 0.995 over 0.01 equals 312. The peaks are extremely sharp.

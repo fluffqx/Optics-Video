@@ -1,15 +1,13 @@
-The law of reflection is simple: the angle of incidence equals the angle of reflection. Both angles are measured from the surface normal — the line perpendicular to the surface at the point of incidence. This holds for any wavelength and any material.
+The law of reflection is simple: the angle of incidence equals the angle of reflection. Both angles are measured from the surface normal — the line perpendicular to the surface at the point of contact. The incident ray, the reflected ray, and the surface normal all lie in the same plane, called the plane of incidence.
 
-Snell's law governs refraction — the bending of light as it crosses the interface. n_i times sine of theta_i equals n_t times sine of theta_t.
+Snell's law governs refraction — the bending of a transmitted beam at an interface. If n-i is the refractive index of the incident medium and n-t is the index of the transmitted medium, with theta-i and theta-t the angles from the normal, then n-i times sine theta-i equals n-t times sine theta-t.
 
-Here n_i is the refractive index of the medium the light is coming from, theta_i is the angle of incidence, n_t is the index of the medium the light is entering, and theta_t is the angle of refraction.
+When light goes from a lower-index medium to a higher-index medium — like from air into glass — theta-t is smaller than theta-i. The refracted beam bends toward the normal. When light goes from higher to lower index, the refracted beam bends away from the normal and theta-t is larger than theta-i.
 
-When light goes from a low-index medium to a high-index medium — like air into glass — it bends toward the normal. The angle gets smaller. When it goes from high to low index, it bends away from the normal.
+One important conceptual point: the frequency of light does not change when it crosses an interface. The wavelength changes — it equals lambda-vacuum divided by n in the medium — but the frequency is fixed by the source. This is required by the boundary conditions: the electromagnetic fields on both sides of the interface must oscillate at the same rate.
 
-Let's work through an example. Glass with n equals 1.5 to air, with theta_i equals 30 degrees.
+Let's work through a complete example. Light in glass with n-i equals 1.5, hitting a glass-to-air interface, with theta-i equals 30 degrees. Snell's law gives 1.5 times sine 30 equals 1.0 times sine theta-t. One point five times zero point five equals 0.75. So sine theta-t equals 0.75, and theta-t equals 48.59 degrees. The beam bends away from the normal, as expected when going from denser to rarer medium.
 
-Snell's law gives 1.5 times sine 30 equals 1.0 times sine theta_t.
+Now increase the incident angle to 40 degrees: 1.5 times sine 40 equals 1.5 times 0.6428 equals 0.9642. So sine theta-t equals 0.9642, and theta-t equals 74.6 degrees. The refracted beam is nearly grazing the surface.
 
-1.5 times 0.5 equals 0.75, so sine theta_t equals 0.75.
-
-Taking the inverse sine gives theta_t equals 48.6 degrees. The light bends away from the normal as expected, since it's going from a denser medium to air.
+And at 41.8 degrees: 1.5 times sine 41.8 equals 1.5 times 0.6667 equals 1.000. But sine theta-t cannot exceed one. There is no real solution — total internal reflection occurs. The critical angle for glass to air is arcsin of 1 over 1.5, which is 41.8 degrees.

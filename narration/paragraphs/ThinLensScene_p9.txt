@@ -1,1 +1,1 @@
-First: one over f equals 0.5 times 1 over 20 minus 1 over minus 20 equals 0.5 times 10 equals 5 dioptres. So f equals 20 centimetres.
+Step three: magnification. m equals minus s-i over s-o equals minus 30 over 60 equals minus 0.5. Inverted (negative sign) and half the size (absolute value one-half). This is the geometry of a simple projector or camera.

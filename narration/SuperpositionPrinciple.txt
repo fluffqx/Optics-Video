@@ -1,5 +1,11 @@
-The superposition principle is the mathematical foundation of all interference and diffraction phenomena.
+The superposition principle is the mathematical foundation of all interference and diffraction phenomena. It follows directly from the linearity of the wave equation.
 
-Because the wave equation is linear, any sum of solutions is also a solution. If wave 1 and wave 2 each satisfy the wave equation independently, then wave 1 plus wave 2 is automatically also a valid wave. The proof simply adds the two equations together.
+A linear equation is one where the unknown function and all its derivatives appear only to the first power — no squares, no products, no functions like sine of psi. The wave equation is linear because psi appears at most to the first power everywhere. There is no psi squared term, no psi times its derivative.
 
-This means two laser beams can cross in space and their electric fields simply add — they don't interact, scatter, or change each other. This is what makes optical computing and holography possible.
+Because of this linearity, if psi-one satisfies the wave equation and psi-two also satisfies it, then any linear combination a times psi-one plus b times psi-two — where a and b are arbitrary constants — also satisfies the wave equation. The proof is one line: substitute the linear combination into the wave equation, and the linearity lets you split it into two separate wave equations that are each satisfied by construction.
+
+This means two laser beams can cross in space and pass through each other completely unaffected. At every point where they overlap, the total electric field is simply the vector sum of the two individual fields. Neither beam is absorbed, scattered, or modified by the other. They interact only through their fields — and the field interaction is simply addition.
+
+The consequences are profound. When two waves with slightly different frequencies overlap, they produce beats. When two waves from slits in a screen overlap, they produce the interference fringes of Young's experiment. When a wavefront passes through an aperture and the secondary wavelets interfere, they produce the diffraction pattern. Every single one of these phenomena is a direct consequence of superposition.
+
+Superposition breaks down in nonlinear media — crystals used for frequency doubling in green laser pointers, for example, or the interior of a laser medium at high intensities. Nonlinear optics is a rich research field precisely because the physics is much richer when superposition fails. But for everything in this course, we are firmly in the linear regime.

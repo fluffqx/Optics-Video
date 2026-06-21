@@ -1,11 +1,13 @@
-In Young's double-slit experiment, two narrow slits separated by a distance d are illuminated by a coherent source. Each slit acts as a secondary wave source, and the two waves overlap on a distant screen.
+Young's double-slit experiment, performed in 1801, provided the first conclusive demonstration that light is a wave. Two narrow slits separated by distance d are illuminated by a coherent source. The two slits act as two coherent point sources and their fields interfere on a distant screen.
 
-The path difference from the two slits to a point at angle theta on the screen is d sine theta. When this path difference equals a whole number of wavelengths, we get constructive interference — a bright fringe. When it's a half-integer number of wavelengths, we get destructive interference — a dark fringe.
+The key is the path difference. A point on the screen at angle theta from the axis receives waves that have travelled slightly different distances from the two slits. The path difference is delta equals d sine theta, approximately equal to dy over L for small angles, where y is the height on the screen and L is the distance to the screen.
 
-The phase difference between the two beams is delta equals 2 pi over lambda times d sine theta.
+Constructive interference — bright fringes — occurs when the path difference is an integer number of wavelengths: d sine theta equals m lambda, for m equals zero, plus or minus one, plus or minus two, and so on. The central maximum at m equals zero is at theta equals zero, directly ahead of the midpoint between the slits.
 
-The intensity pattern is I equals 4 I naught times cosine squared of delta over 2. The maximum intensity is 4 I naught — four times the intensity from a single slit — because the amplitudes add, and squaring doubles the factor.
+Destructive interference — dark fringes — occurs when the path difference is a half-integer number of wavelengths: d sine theta equals m plus one-half times lambda.
 
-The fringe spacing on a screen at distance L is delta y equals lambda L over d. This is the most important formula for Young's experiment. Notice: longer wavelength gives wider fringes, closer slits give wider fringes.
+The fringe spacing on a screen at distance L is delta-y equals lambda L over d. This is the most useful formula for Young's experiment and you must know it. Larger slit separation gives finer fringes. Longer wavelength gives coarser fringes. Larger screen distance gives coarser fringes.
 
-Let's calculate. With d equals 0.1 millimetres, L equals 1.5 metres, and lambda equals 500 nanometres, the fringe spacing is 500 times 10 to the minus 9 times 1.5 over 10 to the minus 4, which equals 7.5 millimetres. Easily visible with the naked eye.
+Complete numerical example: d equals 0.1 millimetres, L equals 1.5 metres, lambda equals 589 nanometres sodium yellow light. Fringe spacing equals 589 times ten to the minus 9 times 1.5 over 0.1 times ten to the minus 3 equals 8.84 millimetres. The fringes are about a centimetre apart — easily visible to the naked eye. The fifth bright fringe above centre is at y-five equals 5 times 8.84 equals 44.2 millimetres from the centre.
+
+The intensity pattern is I equals 4 I-naught cosine squared of pi d y over lambda L. This is a cosine-squared pattern with the fringes spacing lambda L over d. The envelope of the pattern is modulated by the single-slit diffraction function — we will return to this in Week 7.

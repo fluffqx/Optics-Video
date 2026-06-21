@@ -1,1 +1,1 @@
-In Young's double-slit experiment, two narrow slits separated by a distance d are illuminated by a coherent source. Each slit acts as a secondary wave source, and the two waves overlap on a distant screen.
+Young's double-slit experiment, performed in 1801, provided the first conclusive demonstration that light is a wave. Two narrow slits separated by distance d are illuminated by a coherent source. The two slits act as two coherent point sources and their fields interfere on a distant screen.

@@ -1,4 +1,4 @@
-# week7_diffraction.py — Week 7 (paragraph-per-scene)
+# week7_diffraction.py — paragraph-per-scene
 from manim import *
 from utils import *
 
@@ -6,16 +6,17 @@ class Week7TitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p1.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
+        card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Diffraction is what happens when a wave encounters an obstacle",
-            "or aperture whose size is comparable to the wavelength.",
-            "Instead of casting a sharp shadow, the wave bends around the",
-            "edges and spreads into the geometric shadow region.",
+            "Week 7 is diffraction — the bending of light around",
+            "obstacles and through apertures. When an aperture becomes",
+            "comparable in size to the wavelength, geometric optics fails",
+            "and we must use wave optics.",
         ])
-        b.next_to(title, DOWN, buff=0.5)
+        b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -23,16 +24,18 @@ class Week7TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p2.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
+        card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Huygens' principle gives us the physical picture: every point",
-            "on a wavefront acts as a new point source of secondary",
-            "wavelets. The diffraction pattern is the interference pattern",
-            "of all these secondary sources.",
+            "Bennett opens Chapter 8 with a profound statement: in a",
+            "sense, diffraction is interference done correctly. In",
+            "Young's experiment, we had two discrete point sources. In",
+            "diffraction, we have a continuous aperture, and every point",
+            "on the wavefront within it acts as a Huygens secondary",
         ])
-        b.next_to(title, DOWN, buff=0.5)
+        b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -40,101 +43,17 @@ class Week7TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p3.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
+        card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "In the far field — the Fraunhofer regime — the intensity",
-            "pattern of a single slit of width b is the famous sinc-squared",
-            "function: I equals I naught times sine beta over beta squared,",
-            "where beta equals pi b sine theta over lambda.",
+            "The key results of this week: the sinc-squared single-slit",
+            "pattern and where its zeros occur, the Airy disk for a",
+            "circular aperture and the Rayleigh resolution criterion, and",
+            "the diffraction grating equation with its resolving power.",
         ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week7TitleCard_p4(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week7TitleCard_p4.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "The central maximum is at theta equals zero and has twice the",
-            "angular width of the secondary maxima. The dark fringes occur",
-            "wherever b sine theta equals m lambda, for integer m.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week7TitleCard_p5(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week7TitleCard_p5.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "For a circular aperture of diameter D, the pattern is the Airy",
-            "disk. The first dark ring occurs at sine theta equals 1.22",
-            "lambda over D. This sets the fundamental resolution limit of",
-            "any optical instrument with a circular aperture.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week7TitleCard_p6(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week7TitleCard_p6.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "The Rayleigh criterion states that two point sources are just",
-            "resolved when the central maximum of one falls on the first",
-            "dark ring of the other. The minimum resolvable angle is 1.22",
-            "lambda over D.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week7TitleCard_p7(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week7TitleCard_p7.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "A diffraction grating has N slits with spacing d. The N-slit",
-            "interference pattern has extremely sharp principal maxima",
-            "wherever d sine theta equals m lambda — the grating equation.",
-            "At oblique incidence, this becomes d times sine theta_m minus",
-            "sine theta_i equals m lambda.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week7TitleCard_p8(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week7TitleCard_p8.mp3", time_offset=0)
-        title = Text("Fraunhofer Diffraction", font_size=40, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "The resolving power of a grating is R equals N times m — the",
-            "number of slits times the diffraction order. The free spectral",
-            "range is lambda over m. Higher order, higher resolution, but",
-            "smaller unambiguous wavelength range.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
+        b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -142,13 +61,15 @@ class HuygensPrinciple_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p1.mp3", time_offset=0)
-        title = Text("Huygens' Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Bennett opens Chapter 8 on diffraction with a profound",
-            "statement: in a sense, diffraction is interference done",
-            "correctly.",
+            "Huygens proposed in 1678 that every point on a wavefront",
+            "acts as the source of a secondary spherical wavelet. The new",
+            "wavefront at a later time is the envelope of all these",
+            "secondary wavelets. This principle correctly predicts",
+            "reflection, refraction, and diffraction, though it was not",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -158,15 +79,15 @@ class HuygensPrinciple_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p2.mp3", time_offset=0)
-        title = Text("Huygens' Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "In Young's double-slit experiment, we had two discrete point",
-            "sources interfering. Huygens' principle generalises this:",
-            "every point on a wavefront acts as a source of secondary",
-            "spherical wavelets. The diffraction pattern is the",
-            "interference sum of all these secondary sources across the",
+            "In Young's double-slit experiment, we had two discrete",
+            "Huygens sources — the two slits. The interference pattern",
+            "was the superposition of two spherical waves. In single-slit",
+            "diffraction, we have an infinite number of Huygens sources",
+            "distributed continuously across the slit aperture. The",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -176,14 +97,15 @@ class HuygensPrinciple_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p3.mp3", time_offset=0)
-        title = Text("Huygens' Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "When a wavefront encounters an aperture, only the wavelets",
-            "from the open area contribute. Their superposition — with",
-            "different path lengths to each observation point — produces",
-            "the diffraction pattern.",
+            "The Fraunhofer approximation — also called the far-field",
+            "approximation — applies when the screen is far enough from",
+            "the aperture that the wavefronts arriving at the screen can",
+            "be treated as plane waves. The condition is L much greater",
+            "than a squared over lambda, where a is the aperture size and",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -193,32 +115,15 @@ class HuygensPrinciple_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p4.mp3", time_offset=0)
-        title = Text("Huygens' Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The Fraunhofer approximation applies when both the source and",
-            "the observation point are effectively at infinity — meaning",
-            "the illumination and diffracted waves are both plane waves. In",
-            "practice, this is achieved with lenses. The Fraunhofer",
-            "condition requires the distance r to satisfy r much greater",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class HuygensPrinciple_p5(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p5.mp3", time_offset=0)
-        title = Text("Huygens' Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "For a slit of width 0.1 millimetres illuminated at 500",
-            "nanometres and observed at 1 metre, the minimum Fraunhofer",
-            "distance is only 1 centimetre — so 1 metre is well into the",
-            "Fraunhofer regime.",
+            "In the Fraunhofer regime, the diffraction integral",
+            "simplifies to a Fourier transform. The electric field",
+            "pattern at angle theta is proportional to the Fourier",
+            "transform of the aperture function, evaluated at spatial",
+            "frequency u equals sine theta over lambda. This Fourier",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -228,15 +133,14 @@ class SingleSlitDiffraction_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p1.mp3", time_offset=0)
-        title = Text("Single-Slit Diffraction  (Bennett Section 8.3.1)", font_size=34, color=GOLD)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The single-slit diffraction pattern is the starting point for",
-            "understanding all diffraction phenomena. Bennett derives it",
-            "carefully in Section 8.3.1 using the Fraunhofer diffraction",
-            "integral — integrating the Huygens contributions from every",
-            "point across the slit width.",
+            "For a single slit of width b, the Fraunhofer diffraction",
+            "integral gives the famous sinc-squared pattern. Define beta",
+            "equals pi b sine theta over lambda. The intensity is I",
+            "equals I-naught times sine-squared beta over beta-squared.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -246,14 +150,14 @@ class SingleSlitDiffraction_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p2.mp3", time_offset=0)
-        title = Text("Single-Slit Diffraction  (Bennett Section 8.3.1)", font_size=34, color=GOLD)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The result is the sinc-squared function: intensity equals",
-            "I-naught times sine beta over beta, squared. The parameter",
-            "beta equals pi b sine theta over lambda, where b is the slit",
-            "width and theta is the diffraction angle.",
+            "The function sine beta over beta is the sinc function — it",
+            "equals one at beta equals zero, decreasing oscillatorily",
+            "toward zero as beta increases. Squaring it gives I-naught at",
+            "the centre and decreasing secondary maxima.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -263,13 +167,15 @@ class SingleSlitDiffraction_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p3.mp3", time_offset=0)
-        title = Text("Single-Slit Diffraction  (Bennett Section 8.3.1)", font_size=34, color=GOLD)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The central maximum is at theta equals zero, where sine beta",
-            "over beta approaches one by L'Hopital's rule. It is the",
-            "tallest and widest feature in the pattern.",
+            "The central maximum is the dominant feature: it spans from",
+            "the first zero on the left to the first zero on the right.",
+            "The zeros of the sinc-squared function occur where sine beta",
+            "equals zero with beta nonzero, meaning beta equals m pi for",
+            "non-zero integer m. This gives the condition for dark",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -279,15 +185,15 @@ class SingleSlitDiffraction_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p4.mp3", time_offset=0)
-        title = Text("Single-Slit Diffraction  (Bennett Section 8.3.1)", font_size=34, color=GOLD)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Dark minima occur wherever beta equals m pi — that is,",
-            "wherever b sine theta equals m lambda for integer m not equal",
-            "to zero. This has a beautiful physical interpretation: at",
-            "these angles, the contributions from the top and bottom halves",
-            "of the slit cancel exactly.",
+            "The central maximum has double the angular width of each",
+            "secondary maximum. The first secondary maximum has an",
+            "intensity of about 4.7 percent of the central maximum. The",
+            "second has about 1.7 percent. The energy is concentrated in",
+            "the central maximum.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -297,14 +203,51 @@ class SingleSlitDiffraction_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p5.mp3", time_offset=0)
-        title = Text("Single-Slit Diffraction  (Bennett Section 8.3.1)", font_size=34, color=GOLD)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The key physical insight is the narrower the slit, the wider",
-            "the diffraction pattern. This is the uncertainty principle in",
-            "action — confining the wave in space forces it to spread out",
-            "in angle.",
+            "Physical intuition: the slit can be divided into pairs of",
+            "segments, one from each half of the slit. At the first dark",
+            "minimum, each pair contributes a path difference of exactly",
+            "lambda, so they cancel. The central bright maximum occurs",
+            "because all contributions have nearly the same path length",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class SingleSlitDiffraction_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p6.mp3", time_offset=0)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "A key result: the half-angular width of the central maximum",
+            "is theta-half equals arcsin of lambda over b, approximately",
+            "lambda over b in radians for small angles. A narrower slit",
+            "gives a wider diffraction pattern. Wider slit gives narrower",
+            "pattern. This inverse relationship — width in aperture space",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class SingleSlitDiffraction_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SingleSlitDiffraction_p7.mp3", time_offset=0)
+        title = Text("Single-Slit Diffraction  (Bennett 8.3.1)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For our complete example: b equals 0.200 millimetres, lambda",
+            "equals 632.8 nanometres, screen at L equals 2.00 metres.",
+            "First dark minimum: sine theta-one equals lambda over b",
+            "equals 3.164 times ten to the minus 3. Position on screen:",
+            "y-one equals L theta-one approximately L sine theta-one",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -318,10 +261,11 @@ class CircularApertureRayleigh_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Most optical systems — telescopes, microscopes, cameras, the",
-            "human eye — have circular apertures. The diffraction pattern",
-            "of a circular aperture is the Airy disk, named after George",
-            "Biddell Airy who calculated it in 1835.",
+            "Most optical systems — the human eye, camera lenses,",
+            "telescope objectives, microscope objectives — have circular",
+            "apertures, not rectangular slits. The Fraunhofer diffraction",
+            "pattern of a circular aperture of diameter D is the Airy",
+            "disk: a bright central disk surrounded by concentric bright",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -335,10 +279,11 @@ class CircularApertureRayleigh_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The pattern is described by the first-order Bessel function",
-            "J-one, and the first dark ring occurs where the argument",
-            "equals 3.832. This gives sine theta-one equals 1.22 lambda",
-            "over D, where D is the aperture diameter.",
+            "The mathematics replaces the one-dimensional sinc function",
+            "with a Bessel function. The radial intensity distribution is",
+            "I equals I-naught times 2 J-one of x over x, squared, where",
+            "x equals pi D r over lambda z, with r the distance from the",
+            "axis on the screen and z the distance to the screen.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -352,9 +297,11 @@ class CircularApertureRayleigh_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The factor 1.22 — compared to 1.00 for a slit — comes entirely",
-            "from the circular geometry and the Bessel function",
-            "mathematics.",
+            "J-one is the first-order Bessel function of the first kind.",
+            "Its first zero occurs at x equals 3.832, not at x equals pi",
+            "as for the sinc function. This gives the radius of the first",
+            "dark ring: sin theta-one equals 1.22 lambda over D. The",
+            "factor 1.22 is not approximate — it comes from the exact",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -368,10 +315,11 @@ class CircularApertureRayleigh_p4(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The Rayleigh criterion defines the resolution limit: two point",
-            "sources are just resolved when the central maximum of one",
-            "falls exactly on the first dark ring of the other. The minimum",
-            "resolvable angle is theta-min equals 1.22 lambda over D.",
+            "The Rayleigh criterion defines the resolution limit of a",
+            "diffraction-limited optical system: two point sources are",
+            "just resolved when the central maximum of one coincides with",
+            "the first dark ring of the other. The minimum resolvable",
+            "angular separation is theta-min equals 1.22 lambda over D.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -385,10 +333,11 @@ class CircularApertureRayleigh_p5(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "This is a fundamental limit of wave optics — not an",
-            "engineering limitation. To resolve finer details, you must",
-            "either use a shorter wavelength or a larger aperture. There is",
-            "no other way.",
+            "Human eye: D approximately 3 millimetres at normal viewing,",
+            "lambda approximately 550 nanometres. Theta-min equals 1.22",
+            "times 550 times ten to the minus 9 over 3 times ten to the",
+            "minus 3 equals 2.24 times ten to the minus 4 radians equals",
+            "about 46 arcseconds, approximately one arcminute. This",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -402,11 +351,29 @@ class CircularApertureRayleigh_p6(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "For the human eye with a 3 millimetre pupil, this gives about",
-            "1 arcminute — which matches our measured visual acuity",
-            "remarkably well. For the Hubble telescope with a 2.4 metre",
-            "mirror, the limit is about 0.06 arcseconds — 800 times sharper",
-            "than the eye.",
+            "Hubble Space Telescope: D equals 2.4 metres. Theta-min",
+            "equals 1.22 times 550 times ten to the minus 9 over 2.4",
+            "equals 2.8 times ten to the minus 7 radians equals 0.058",
+            "arcseconds. Hubble is about 800 times sharper than the",
+            "unaided eye, and its resolution is limited by diffraction —",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class CircularApertureRayleigh_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p7.mp3", time_offset=0)
+        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "To improve resolution: either decrease lambda or increase D.",
+            "X-ray telescopes like Chandra use shorter wavelengths. Radio",
+            "telescopes compensate their longer wavelengths with huge",
+            "dishes — the Very Large Array has baselines of 36",
+            "kilometres. VLBI — very long baseline interferometry — uses",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -416,14 +383,14 @@ class DiffractionGrating_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DiffractionGrating_p1.mp3", time_offset=0)
-        title = Text("Diffraction Grating  (Bennett Sections 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
             "A diffraction grating takes the principle of interference to",
-            "its logical extreme — instead of two slits, it uses thousands.",
-            "The result is an instrument of extraordinary spectral",
-            "resolution.",
+            "its logical extreme. Instead of two slits, it has N slits",
+            "with spacing d, where N can be thousands or tens of",
+            "thousands per millimetre.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -433,14 +400,15 @@ class DiffractionGrating_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DiffractionGrating_p2.mp3", time_offset=0)
-        title = Text("Diffraction Grating  (Bennett Sections 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The N-slit intensity pattern is a product of two terms: the",
-            "single-slit diffraction envelope, which shapes the overall",
-            "intensity, and the N-slit interference term, which creates",
-            "sharp principal maxima wherever d sine theta equals m lambda.",
+            "The grating equation is d times sine theta-m equals m",
+            "lambda, for normal incidence, where m is the order number.",
+            "This is the condition for constructive interference from all",
+            "N slits simultaneously. Light of wavelength lambda is",
+            "diffracted into a series of sharp maxima at angles theta-m,",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -450,15 +418,15 @@ class DiffractionGrating_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DiffractionGrating_p3.mp3", time_offset=0)
-        title = Text("Diffraction Grating  (Bennett Sections 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The grating equation is the central formula: d times the",
-            "quantity sine theta-m minus sine theta-i equals m lambda. Here",
-            "d is the grating period, theta-i is the angle of the incoming",
-            "beam, theta-m is the angle of the m-th order diffracted beam,",
-            "and m is the diffraction order — zero, plus or minus one, plus",
+            "The sharpness of these maxima is what makes gratings so",
+            "powerful for spectroscopy. With N slits, each maximum has an",
+            "angular width proportional to one over N. The more slits,",
+            "the sharper the peaks. And sharper peaks mean closer",
+            "wavelengths can be resolved.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -468,12 +436,15 @@ class DiffractionGrating_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DiffractionGrating_p4.mp3", time_offset=0)
-        title = Text("Diffraction Grating  (Bennett Sections 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "At normal incidence theta-i equals zero, and the equation",
-            "simplifies to d sine theta-m equals m lambda.",
+            "The resolving power is R equals lambda over delta-lambda",
+            "equals N times m. N is the total number of illuminated",
+            "slits; m is the diffraction order. For a grating with 600",
+            "grooves per millimetre, length 5 centimetres: N equals 600",
+            "times 50 equals 30,000 slits. In first order, R equals",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -483,14 +454,15 @@ class DiffractionGrating_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DiffractionGrating_p5.mp3", time_offset=0)
-        title = Text("Diffraction Grating  (Bennett Sections 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The resolving power equals N times m — the number of slits",
-            "times the diffraction order. This is why large gratings used",
-            "in high orders can resolve wavelengths differing by less than",
-            "a hundredth of a nanometre.",
+            "The sodium D lines are the classic test: lambda-one equals",
+            "589.0 nanometres and lambda-two equals 589.6 nanometres,",
+            "separation 0.6 nanometres. Required resolving power equals",
+            "589 over 0.6 equals 982. Our 30,000-groove grating easily",
+            "resolves them in first order.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -500,13 +472,33 @@ class DiffractionGrating_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DiffractionGrating_p6.mp3", time_offset=0)
-        title = Text("Diffraction Grating  (Bennett Sections 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The free spectral range is lambda-minimum divided by m. It",
-            "tells you the wavelength range you can measure unambiguously",
-            "in order m before the next order overlaps.",
+            "The free spectral range tells you the unambiguous wavelength",
+            "range in each order. In order m, wavelength lambda and",
+            "wavelength lambda plus delta-lambda-FSR produce maxima at",
+            "the same angle if d sine theta equals m lambda equals m plus",
+            "one times lambda plus delta-lambda-FSR. Solving:",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DiffractionGrating_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DiffractionGrating_p7.mp3", time_offset=0)
+        title = Text("Diffraction Grating  (Bennett 8.3.7-8.3.8)", font_size=32, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For the general grating equation including oblique",
+            "incidence: d times sine theta-m minus sine theta-i equals m",
+            "lambda. Here theta-i is the angle of incidence and theta-m",
+            "is the diffraction angle, both measured from the grating",
+            "normal.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))

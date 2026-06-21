@@ -1,5 +1,7 @@
-Let's prove that the function psi equals x minus vt, all squared, actually satisfies the wave equation. This is Bennett Example 1.1.
+Let's verify with a concrete example that f of x minus vt satisfies the wave equation. We choose the simplest non-trivial case: psi equals the quantity x minus vt, all squared.
 
-We take the second partial derivative with respect to x, and get 2. Then we take the second partial derivative with respect to t, and get 2v squared. Dividing by v squared gives exactly 2 — matching the left side perfectly. The wave equation is satisfied.
+We compute the left side first. The first spatial derivative is 2 times open bracket x minus vt close bracket. Differentiating again with respect to x gives 2. So the left side of the wave equation is simply 2.
 
-This confirms that any function of the form x minus vt is a valid travelling wave.
+Now the right side. The first time derivative of psi is minus 2v times open bracket x minus vt close bracket, because the chain rule brings down a factor of minus v. Differentiating again with respect to t gives 2v-squared. Multiplying by one over v-squared gives 2. Both sides equal 2, so the wave equation is satisfied.
+
+This confirms that any function of the form f of x minus vt is a valid travelling wave solution. The specific example we chose, x minus vt squared, is a parabolic profile that moves rigidly to the right at speed v without changing shape. The same argument works for any twice-differentiable function of x minus vt — Gaussian pulses, cosines, exponentials, all of them.

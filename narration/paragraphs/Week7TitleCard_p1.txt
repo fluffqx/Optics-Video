@@ -1,1 +1,1 @@
-Diffraction is what happens when a wave encounters an obstacle or aperture whose size is comparable to the wavelength. Instead of casting a sharp shadow, the wave bends around the edges and spreads into the geometric shadow region.
+Week 7 is diffraction — the bending of light around obstacles and through apertures. When an aperture becomes comparable in size to the wavelength, geometric optics fails and we must use wave optics.

@@ -1,1 +1,1 @@
-Snell's law tells us directions. The Fresnel equations tell us amplitudes — how much of the electric field is reflected and how much is transmitted.
+Snell's law tells us directions. The Fresnel equations tell us amplitudes — how much of the incident electric field is reflected and how much is transmitted at an interface.

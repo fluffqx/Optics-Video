@@ -1,1 +1,1 @@
-All optical instruments are combinations of lenses and mirrors.
+All optical instruments reduce to combinations of lenses and mirrors. Understanding the operating principle of each one clarifies the optical design choices.

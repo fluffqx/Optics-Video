@@ -1,1 +1,1 @@
-The key physical insight is the narrower the slit, the wider the diffraction pattern. This is the uncertainty principle in action — confining the wave in space forces it to spread out in angle.
+Physical intuition: the slit can be divided into pairs of segments, one from each half of the slit. At the first dark minimum, each pair contributes a path difference of exactly lambda, so they cancel. The central bright maximum occurs because all contributions have nearly the same path length and add constructively.

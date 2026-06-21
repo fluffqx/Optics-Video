@@ -1,1 +1,1 @@
-A half-wave plate introduces a phase difference of pi. It rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis. Used in continuously variable power control of laser beams.
+A half-wave plate has delta phi equals pi. It rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis. A half-wave plate with fast axis at 22.5 degrees rotates any linear polarisation by 45 degrees. A half-wave plate at 45 degrees converts horizontal to vertical polarisation and vice versa.

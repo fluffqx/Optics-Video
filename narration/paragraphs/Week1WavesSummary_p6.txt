@@ -1,0 +1,1 @@
+Phase velocity v-p equals omega over k gives the speed of crests. Group velocity v-g equals d omega d k gives the speed of energy and information. In a non-dispersive medium they are equal. In a dispersive medium like glass they differ, giving rise to pulse spreading and the separation of colours in a prism.

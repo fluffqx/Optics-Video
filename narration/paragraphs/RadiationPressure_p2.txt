@@ -1,1 +1,1 @@
-For a perfectly absorbing surface, the pressure equals I over c, where I is the irradiance. For a perfectly reflecting mirror, the momentum reverses direction, so the pressure doubles to 2I over c.
+The momentum density of an electromagnetic wave is the Poynting vector divided by c-squared, or equivalently the irradiance divided by c-cubed. When this momentum is absorbed by a surface, Newton's second law gives a force, and force per unit area is pressure.

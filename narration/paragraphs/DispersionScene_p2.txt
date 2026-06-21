@@ -1,1 +1,1 @@
-The refractive index n equals c over v — the ratio of the speed of light in vacuum to the speed in the medium. For a non-magnetic material, n equals the square root of the relative permittivity K_E.
+The refractive index n is defined as c over v, the ratio of the speed of light in vacuum to the phase velocity in the medium. In a non-dispersive medium, n is a constant and all frequencies travel at the same speed. In a dispersive medium, n depends on frequency and different colours travel at different speeds.

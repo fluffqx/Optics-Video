@@ -1,1 +1,1 @@
-The wave number k equals 2 pi divided by the wavelength, giving 1.18 times 10 to the 7 radians per metre. The frequency f equals c divided by lambda, giving 5.64 times 10 to the 14 hertz — 564 terahertz. The angular frequency omega is 2 pi times f, giving 3.54 times 10 to the 15 radians per second. And the period T is just 1 over f, giving 1.77 femtoseconds.
+Given: lambda equals 632.8 nanometres, propagating in air where v equals c equals 2.998 times ten to the eighth metres per second.

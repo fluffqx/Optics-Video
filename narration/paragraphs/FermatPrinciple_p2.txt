@@ -1,1 +1,1 @@
-For reflection, minimising the travel time with respect to the reflection point automatically gives the law of reflection — angle in equals angle out.
+For reflection from a flat surface, Fermat's principle immediately gives the law of reflection: the angle of incidence equals the angle of reflection. Any other path from source to surface to detector would take longer. The proof is a simple calculus problem: minimise the total path length subject to the constraint that the reflection point lies on the surface.

@@ -1,1 +1,1 @@
-The order number N equals 2nd divided by lambda — the number of half-wavelengths that fit in the cavity.
+The resolving power RP equals lambda over delta-lambda-min equals N times script-F. For a cavity with N equals 1000 and script-F equals 30: RP equals 30,000. For N equals 10,000 and script-F equals 100: RP equals 1,000,000. Fabry-Pérot interferometers can achieve resolving powers of tens of millions, far beyond any diffraction grating.

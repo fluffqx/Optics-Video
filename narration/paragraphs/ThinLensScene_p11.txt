@@ -1,1 +1,1 @@
-Magnification: minus 30 over 60 equals minus 0.5. Inverted, half the size of the object.
+Now put the object at s-o equals 10 centimetres, inside the focal length: one over s-i equals one over 20 minus one over 10 equals 1 over 20 minus 2 over 20 equals minus 1 over 20. s-i equals minus 20 centimetres. Virtual image on the same side as the object. m equals minus minus 20 over 10 equals plus 2. Upright and magnified. This is the magnifying glass — hold it close to the object and the virtual image appears larger and closer than the object.

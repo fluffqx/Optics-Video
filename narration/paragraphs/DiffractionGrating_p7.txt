@@ -1,0 +1,1 @@
+For the general grating equation including oblique incidence: d times sine theta-m minus sine theta-i equals m lambda. Here theta-i is the angle of incidence and theta-m is the diffraction angle, both measured from the grating normal.

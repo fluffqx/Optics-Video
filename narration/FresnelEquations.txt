@@ -1,25 +1,19 @@
-Snell's law tells us directions. The Fresnel equations tell us amplitudes — how much of the electric field is reflected and how much is transmitted.
+Snell's law tells us directions. The Fresnel equations tell us amplitudes — how much of the incident electric field is reflected and how much is transmitted at an interface.
 
-The key insight is that polarisation matters at an interface. We split the electric field into two independent components.
+The key insight is that polarisation matters at an interface. We split the incident electric field into two independent components. S-polarisation, also called TE or transverse electric, has the electric field perpendicular to the plane of incidence. P-polarisation, also called TM or transverse magnetic, has the electric field parallel to the plane of incidence. These two components reflect and transmit completely independently.
 
-S-polarisation — sometimes called TE or transverse electric — has the electric field perpendicular to the plane of incidence. If you imagine the ray diagram drawn on paper, the s-polarised field points out of the paper toward you.
+For s-polarisation, the reflection amplitude coefficient is r-perp equals n-i cosine theta-i minus n-t cosine theta-t, all divided by n-i cosine theta-i plus n-t cosine theta-t. The transmission amplitude coefficient is t-perp equals 2 n-i cosine theta-i, divided by n-i cosine theta-i plus n-t cosine theta-t.
 
-P-polarisation — sometimes called TM or transverse magnetic — has the electric field lying in the plane of incidence, parallel to the page.
+For p-polarisation, the reflection amplitude coefficient is r-parallel equals n-t cosine theta-i minus n-i cosine theta-t, divided by n-t cosine theta-i plus n-i cosine theta-t. The transmission amplitude coefficient is t-parallel equals 2 n-i cosine theta-i, divided by n-t cosine theta-i plus n-i cosine theta-t.
 
-These two polarisations reflect and transmit differently, and the Fresnel equations give us the amplitude reflection coefficient r and amplitude transmission coefficient t for each.
+At normal incidence, theta-i and theta-t are both zero, and both polarisations give the same result: r equals n-i minus n-t, divided by n-i plus n-t. This is the most important special case and you must know it immediately. For air to glass with n-t equals 1.5: r equals 1 minus 1.5 divided by 1 plus 1.5 equals minus 0.2. The negative sign means a phase shift of pi on reflection, which we will discuss more when we cover thin film interference.
 
-For s-polarisation: r_perp equals n_i cosine theta_i minus n_t cosine theta_t, all divided by n_i cosine theta_i plus n_t cosine theta_t.
+The energy reflectivity R is the square of the amplitude coefficient: R equals r squared. For our air-to-glass example at normal incidence: R equals 0.04, meaning four percent of the incident energy is reflected. The energy transmissivity T satisfies R plus T equals one, so T equals 0.96 — ninety-six percent transmitted. But notice that T is not t squared — T equals n-t cosine theta-t over n-i cosine theta-i times t squared. The extra factor accounts for the change in beam cross-section at the interface.
 
-For p-polarisation: r_parallel equals n_t cosine theta_i minus n_i cosine theta_t, all divided by n_t cosine theta_i plus n_i cosine theta_t.
+Let's work through the full calculation for air to glass with n-i equals 1.0, n-t equals 1.5, at theta-i equals 40 degrees. Snell's law first: sine theta-t equals 1.0 over 1.5 times sine 40 equals 0.4285, so theta-t equals 25.37 degrees. Now the cosines: cosine 40 equals 0.766, cosine 25.37 equals 0.9036.
 
-At normal incidence — when the light hits straight on — both polarisations give the same result: r equals n_i minus n_t over n_i plus n_t. This is a very useful formula to remember.
+S-polarisation: r-perp equals 0.766 minus 1.5 times 0.9036 over 0.766 plus 1.5 times 0.9036 equals 0.766 minus 1.355 over 0.766 plus 1.355 equals minus 0.589 over 2.121 equals minus 0.278. R-perp equals 0.277 squared equals 0.0771, about 7.7 percent reflected.
 
-Let's work through a full example. Air to glass, n_i equals 1.0, n_t equals 1.5, theta_i equals 40 degrees.
+P-polarisation: r-parallel equals 1.5 times 0.766 minus 1.0 times 0.9036 over 1.5 times 0.766 plus 1.0 times 0.9036 equals 1.149 minus 0.904 over 1.149 plus 0.904 equals 0.245 over 2.053 equals plus 0.119. R-parallel equals 0.119 squared equals 0.0142, about 1.4 percent reflected.
 
-Step 1: Snell's law gives sine theta_t equals 1.0 over 1.5 times sine 40 degrees equals 0.4285, so theta_t equals 25.37 degrees.
-
-Step 2: compute the cosines. Cosine 40 is 0.766, cosine 25.37 is 0.9036.
-
-Step 3: plug into the Fresnel equations. r_perp comes out to minus 0.278. The negative sign means a phase flip on reflection. r_parallel comes out to plus 0.119 — a smaller reflection with no phase flip.
-
-The p-polarisation reflects less. This will become important when we discuss Brewster's angle.
+The p-polarisation reflects significantly less than s-polarisation at this angle. This difference increases until Brewster's angle, where r-parallel equals zero exactly — we will derive this next.

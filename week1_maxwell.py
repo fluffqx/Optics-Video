@@ -972,3 +972,93 @@ class DispersionScene_p6(Scene):
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
+
+class EMWaveDerivation_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveDerivation_p5.mp3", time_offset=0)
+        title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Substituting the values: mu-naught equals 4 pi times ten to",
+            "the minus 7 henries per metre, and epsilon-naught equals",
+            "8.854 times ten to the minus 12 farads per metre. Their",
+            "product is 1.113 times ten to the minus 17 seconds squared",
+            "per metre squared. Taking the reciprocal and the square root",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveExample_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveExample_p4.mp3", time_offset=0)
+        title = Text("Example: Finding B from E", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Now compute the Poynting vector: S equals one over mu-naught",
+            "times E cross B. The cross product x-hat cross y-hat equals",
+            "z-hat, confirming that energy flows in the z-direction — the",
+            "propagation direction. The magnitude of S is E-naught",
+            "squared divided by mu-naught c, which equals epsilon-naught",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p10(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p10.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For a second numerical example: an electric field amplitude",
+            "of 1000 volts per metre in air. The irradiance is I equals",
+            "one half times epsilon-naught times c times E-naught squared",
+            "equals one half times 8.85 times ten to the minus 12 times 3",
+            "times ten to the 8 times 10 to the 6, which gives 1327 watts",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p5.mp3", time_offset=0)
+        title = Text("Radiation Pressure", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "On Earth, optical tweezers use focused laser beams to trap",
+            "and manipulate microscopic particles — even living cells —",
+            "using radiation pressure. The particle is pulled toward the",
+            "focus by the intensity gradient. Nobel Prize 2018 was",
+            "awarded partly for the development of optical tweezers by",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p7.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The dispersion of optical fibres limits their data-carrying",
+            "capacity. A short pulse containing many frequencies broadens",
+            "as it propagates because different frequency components",
+            "travel at slightly different group velocities. Over a fibre",
+            "link of thousands of kilometres, this broadening can be",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)

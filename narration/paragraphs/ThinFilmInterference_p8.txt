@@ -1,0 +1,1 @@
+Beam 2 passes through MgF-two and reflects at the MgF-two-glass interface. n increases from 1.38 to 1.52, so beam 2 acquires a pi phase shift.

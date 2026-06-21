@@ -1,1 +1,1 @@
-Let's collect all the Fabry-Pérot formulas in one place.
+Let's collect all the Fabry-Pérot formulas in one place for quick reference.

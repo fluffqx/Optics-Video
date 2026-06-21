@@ -1,0 +1,1 @@
+The total magnification of a two-lens system is the product of the individual magnifications: m-total equals m-one times m-two. This multiplicative property is what makes compound microscopes so powerful — two lenses each providing large magnification multiply their effects.

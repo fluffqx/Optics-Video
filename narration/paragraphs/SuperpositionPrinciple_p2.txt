@@ -1,1 +1,1 @@
-Because the wave equation is linear, any sum of solutions is also a solution. If wave 1 and wave 2 each satisfy the wave equation independently, then wave 1 plus wave 2 is automatically also a valid wave. The proof simply adds the two equations together.
+A linear equation is one where the unknown function and all its derivatives appear only to the first power — no squares, no products, no functions like sine of psi. The wave equation is linear because psi appears at most to the first power everywhere. There is no psi squared term, no psi times its derivative.

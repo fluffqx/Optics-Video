@@ -1,1 +1,1 @@
-Let's work through an example. Glass with n equals 1.5 to air, with theta_i equals 30 degrees.
+Let's work through a complete example. Light in glass with n-i equals 1.5, hitting a glass-to-air interface, with theta-i equals 30 degrees. Snell's law gives 1.5 times sine 30 equals 1.0 times sine theta-t. One point five times zero point five equals 0.75. So sine theta-t equals 0.75, and theta-t equals 48.59 degrees. The beam bends away from the normal, as expected when going from denser to rarer medium.

@@ -1,1 +1,1 @@
-A quarter-wave plate with fast axis horizontal introduces a minus i phase to the y-component: the matrix is 1 zero zero minus i.
+A quarter-wave plate with fast axis horizontal introduces minus i to the y-component: its Jones matrix has 1, 0 in the top row and 0, minus i in the bottom. The x-component acquires no additional phase; the y-component acquires a phase of minus pi over two.

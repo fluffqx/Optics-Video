@@ -1,11 +1,11 @@
-When two identical waves travel in opposite directions through the same medium, they create a remarkable pattern called a standing wave. Unlike a travelling wave, the pattern does not move — it oscillates in place.
+When two identical waves travel in opposite directions through the same medium, they superpose to create a standing wave — a pattern that oscillates in place without propagating.
 
-The mathematical derivation uses the sum-to-product trigonometric identity. Adding A sine of kx minus omega t, plus A sine of kx plus omega t, gives two A sine of kx times cosine of omega t.
+Using the trigonometric identity for the sum of cosines: A sine of kx minus omega t plus A sine of kx plus omega t equals 2A sine kx times cosine omega t. The spatial and temporal parts have separated completely. The amplitude 2A sine kx is purely spatial, and the cosine omega t factor is purely temporal.
 
-The spatial part, sine of kx, determines where the amplitude is large or small. The temporal part, cosine of omega t, makes the whole pattern oscillate in time.
+This means the wave pattern does not move. At a node — a position where sine kx equals zero — the amplitude is permanently zero, regardless of time. At an antinode — where sine kx equals plus or minus one — the amplitude oscillates between plus 2A and minus 2A.
 
-Nodes are positions where the amplitude is permanently zero — the waves always cancel there. They occur wherever kx equals m pi, which means at positions x equals m times lambda over two. The spacing between nodes is exactly half a wavelength.
+Nodes occur at kx equals m pi, meaning x equals m lambda over two. The spacing between adjacent nodes is lambda over two. Antinodes occur halfway between nodes.
 
-Antinodes are positions of maximum oscillation — the waves always add constructively there. They sit exactly halfway between adjacent nodes.
+Standing waves are fundamental to lasers. The optical cavity formed by two mirrors supports standing waves only at frequencies where an integer number of half-wavelengths fit between the mirrors. This quantisation of allowed frequencies gives each laser its discrete set of longitudinal modes. If the mirrors are separated by length L, the allowed wavelengths are lambda-m equals 2L over m for integer m.
 
-Standing waves are fundamental to understanding lasers, optical cavities, and musical instruments. In a laser cavity, only wavelengths that fit exactly into the cavity length can form standing waves — these are the laser modes.
+Standing waves also explain why we can hear notes from a guitar string. The string can only vibrate in modes where nodes exist at both fixed ends. The allowed wavelengths are 2L, L, 2L over 3, and so on — these give the fundamental frequency and its harmonics.

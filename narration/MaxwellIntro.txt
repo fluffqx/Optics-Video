@@ -1,5 +1,5 @@
-Maxwell's equations are the four fundamental laws of electromagnetism. Written down by James Clerk Maxwell in the 1860s, they unified electricity, magnetism, and light into a single coherent theory.
+Maxwell's equations are the four fundamental laws of classical electromagnetism. James Clerk Maxwell formulated them in the 1860s, unifying electricity, magnetism, and optics into a single coherent theory. Before Maxwell, these seemed like three separate branches of physics. After Maxwell, they were revealed as three aspects of a single underlying reality: the electromagnetic field.
 
-Everything we do in optics ultimately derives from these four equations. They relate the electric field E and the magnetic field B to their sources — electric charges and currents.
+Everything we study in this optics course ultimately derives from Maxwell's equations. The propagation of light, the reflection and refraction at surfaces, the interference of coherent beams, the diffraction through apertures, the operation of the Fabry-Pérot interferometer — all of it follows from these four equations. Understanding Maxwell's equations at a deep level is not optional background knowledge. It is the foundation.
 
-Before we write them down, let's fix the notation. The symbol nabla dot E means the divergence of E — it measures how much E spreads outward from a point. Nabla cross E is the curl of E — it measures how much E rotates around a point. And nabla squared E is the Laplacian — the spatial second derivative in all three directions at once.
+Before writing them down, we need to fix the vector calculus notation. Three differential operators appear repeatedly: the divergence, the curl, and the Laplacian. Let's understand each one physically before seeing the equations.

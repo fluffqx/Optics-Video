@@ -1,1 +1,1 @@
-If the field always points in the same direction, we have linear polarisation. If the tip of the electric field vector traces a circle as time progresses, we have circular polarisation. The general case is elliptical polarisation.
+This formalism is exact within the paraxial approximation for fully coherent light. It handles linear polarisers, wave plates, rotators, beam splitters, and any combination of these.

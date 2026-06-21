@@ -1,11 +1,11 @@
-The plane wave solutions to Maxwell's equations have five remarkable properties, all provable directly from the equations.
+The plane wave solutions to Maxwell's equations in vacuum — fields of the form E equals E-naught times e to the i k-vector dot r minus omega t — have several remarkable and non-obvious properties that follow from the equations themselves.
 
-First, they are transverse: both E and B are perpendicular to the propagation direction k-vector. This follows from the zero-divergence conditions.
+First, electromagnetic waves are transverse. The electric and magnetic fields are both perpendicular to the direction of propagation. This is not an assumption — it follows from div E equals zero and div B equals zero applied to a plane wave. If E had a component along the propagation direction, the divergence would be nonzero, violating Gauss's law. So E must be purely transverse.
 
-Second, E and B are perpendicular to each other. The cross product E cross B points in the direction of k.
+Second, E and B are perpendicular to each other. From Faraday's law for a plane wave, k-vector cross E-vector equals omega times B-vector. Since the cross product is perpendicular to E, B must be perpendicular to E. Furthermore, B is in the direction of k-hat cross E-hat, so the three vectors E, B, and k form a right-handed coordinate system.
 
-Third, their magnitudes are related by E equals c times B in vacuum.
+Third, the magnitudes of E and B are related by E equals c times B in vacuum. This follows from the same Faraday relation: the magnitude of k-vector cross E equals k times E equals omega times B, so B equals k E over omega equals E over v-phase equals E over c.
 
-Fourth, E and B oscillate in phase — they reach their maxima and minima simultaneously.
+Fourth, E and B oscillate in phase — they reach their maxima and minima simultaneously. This is a consequence of the real relationship B equals k-hat cross E divided by c: the phase of B is the same as the phase of E.
 
-Fifth, in a material with refractive index n, the wave speed becomes c over n, and E equals v times B where v is the local wave speed.
+Fifth, in a material medium with refractive index n, the wave speed becomes c over n, and the wavelength in the medium is lambda over n. The frequency remains unchanged — only the wavelength and speed change when light enters a medium. This is because the boundary conditions require the frequency to be continuous across any interface.

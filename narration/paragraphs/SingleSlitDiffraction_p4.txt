@@ -1,1 +1,1 @@
-Dark minima occur wherever beta equals m pi — that is, wherever b sine theta equals m lambda for integer m not equal to zero. This has a beautiful physical interpretation: at these angles, the contributions from the top and bottom halves of the slit cancel exactly.
+The central maximum has double the angular width of each secondary maximum. The first secondary maximum has an intensity of about 4.7 percent of the central maximum. The second has about 1.7 percent. The energy is concentrated in the central maximum.

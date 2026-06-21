@@ -1,1 +1,1 @@
-Physically, the finesse equals the average number of times a photon bounces back and forth before leaking out through a mirror. Higher reflectivity means more bounces, narrower peaks, higher finesse.
+The order number N equals 2nd cosine theta over lambda at normal incidence equals 2nd over lambda. It is the number of optical wavelengths in one round trip. Resonance occurs at wavelengths satisfying 2nd equals N lambda, where N is a large integer. Successive resonances correspond to N, N-one, N-two, and so on.

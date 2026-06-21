@@ -1,11 +1,9 @@
-The Airy function is the central result of Fabry-Pérot theory. Bennett derives it in Section 7.10 by summing the infinite geometric series of multiply-reflected transmitted beams.
+The Airy function is the central result of Fabry-Pérot theory. Transmitted intensity equals I-naught divided by one plus F times sine-squared of delta over two, where F is the coefficient of finesse, F equals 4R over one minus R squared.
 
-The result is: transmitted intensity equals I-naught divided by one plus F times sine squared of delta over two, where F is the coefficient of finesse and delta is the round-trip phase.
+At resonance — when delta equals 2N pi for integer N — the sine term is zero and I-t equals I-naught. Complete transmission, regardless of R. Even if each mirror has 99 percent reflectivity, the cavity transmits 100 percent at resonance. The physical explanation: at resonance, all the multiply-reflected beams are in phase and interfere constructively in the transmission direction. The circulating field builds up inside the cavity to a large value, driving enough transmission through the mirrors to account for all the input power.
 
-When delta is a multiple of 2 pi — the resonance condition — the sine term is zero and the transmission is I-naught, meaning 100 percent. This is the remarkable property of the Fabry-Pérot: even with highly reflective mirrors that individually transmit only a few percent, the transmission at resonance is complete.
+Off resonance — when delta is between resonances — the sine term is of order one, and I-t drops to I-naught divided by one plus F. For R equals 0.9, F equals 360, so the off-resonance transmission is I-naught over 361, less than 0.3 percent. The cavity is essentially opaque off resonance.
 
-The physical explanation is that at resonance, all the multiply-reflected beams are in phase and add constructively. The field builds up inside the cavity to a very large amplitude, and the increased build-up exactly compensates for the low transmission of each mirror.
+The coefficient of finesse F equals 4R divided by one minus R squared should not be confused with the finesse script-F. F appears in the Airy formula. Script-F equals pi root R over one minus R is the ratio of the free spectral range to the full-width-at-half-maximum of each transmission peak. For R equals 0.9: F equals 360, and script-F equals pi times 0.9487 over 0.1 equals 29.8. The peaks are very sharp relative to their spacing.
 
-Between resonances, the sine term is large, and the transmission drops to nearly zero for high-finesse cavities. The pattern looks like a series of very sharp transmission spikes separated by broad dark regions.
-
-The coefficient of finesse F equals 4R over one minus R squared. For a mirror reflectivity of 99 percent, F equals 39,600 — giving extremely sharp peaks.
+As R increases toward one, F increases as one over one minus R squared, and the peaks become progressively sharper. For R equals 0.99: F equals 4 times 0.99 over 0.0001 equals 39,600, and script-F equals pi times 0.995 over 0.01 equals 312. The peaks are extremely sharp.

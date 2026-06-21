@@ -1,1 +1,1 @@
-Birefringent crystals have two different refractive indices for two perpendicular polarisation directions — the slow axis and the fast axis.
+Birefringent crystals have two different refractive indices for two orthogonal linear polarisations — the ordinary index n-o and the extraordinary index n-e. A wave with polarisation along the fast axis travels faster than one along the slow axis.

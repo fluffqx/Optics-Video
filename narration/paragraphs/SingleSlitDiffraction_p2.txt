@@ -1,1 +1,1 @@
-The result is the sinc-squared function: intensity equals I-naught times sine beta over beta, squared. The parameter beta equals pi b sine theta over lambda, where b is the slit width and theta is the diffraction angle.
+The function sine beta over beta is the sinc function — it equals one at beta equals zero, decreasing oscillatorily toward zero as beta increases. Squaring it gives I-naught at the centre and decreasing secondary maxima.

@@ -1,1 +1,1 @@
-Light carries momentum, and when it hits a surface, it transfers that momentum as a force — radiation pressure.
+Radiation pressure is a direct consequence of the fact that light carries momentum. This was predicted by Maxwell in 1865 and first measured experimentally by Lebedev in 1900. It is a subtle but real effect.

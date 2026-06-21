@@ -1,1 +1,1 @@
-Here are Maxwell's four equations in matter.
+Here are Maxwell's four equations in matter. I will present each one with its physical interpretation — not just the mathematical statement, but what it is actually telling us about the electromagnetic field.

@@ -1,1 +1,1 @@
-There are four fundamental matrices. The translation matrix for free propagation over distance d has ones on the diagonal and d in the top right — the height increases by d times theta, while the angle is unchanged.
+Polarisation describes the direction in which the electric field oscillates. Week 4 introduces the basic states: linear, circular, and elliptical polarisation. Week 5 will develop the Jones vector formalism for calculating polarisation transformations quantitatively.

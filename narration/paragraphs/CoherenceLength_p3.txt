@@ -1,1 +1,1 @@
-For the Fabry-Pérot to show fringes, the cavity round trip must be shorter than the coherence length. Otherwise, the beams from different round trips are no longer coherent with each other, and the interference averages out.
+The coherence time is tau-c equals l-c over c equals one over delta-nu — the lifetime of the coherent wave train. Sources with narrow linewidth have long coherence time and long coherence length.

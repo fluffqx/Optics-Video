@@ -1,1 +1,1 @@
-Horizontal linear polarisation is represented by the vector 1, 0. Vertical is 0, 1. Plus 45 degrees is 1 over root 2 times 1, 1. Right circular polarisation is 1 over root 2 times 1, minus i. Left circular is 1 over root 2 times 1, plus i.
+Horizontal linear polarisation is represented by the Jones vector 1, 0 — field entirely in x, zero in y. Vertical is 0, 1. Linear at plus 45 degrees is 1, 1 divided by root 2 — equal components in phase. Linear at minus 45 degrees is 1, minus 1 over root 2.

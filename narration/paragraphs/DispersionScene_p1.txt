@@ -1,1 +1,1 @@
-Dispersion is the phenomenon where the refractive index of a material depends on the frequency of light. Different colours travel at different speeds.
+Dispersion is the dependence of the refractive index on frequency. It is responsible for the rainbow spectrum from a glass prism, the colour fringing in cheap lenses, and the pulse broadening that limits data rates in optical fibres.

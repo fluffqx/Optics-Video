@@ -1,1 +1,1 @@
-A horizontal polariser passes only the x-component: it has 1 zero zero zero. A vertical polariser has zero zero zero one.
+A horizontal linear polariser passes only the x-component: its Jones matrix has 1, 0, 0, 0. A vertical polariser has 0, 0, 0, 1.

@@ -1,1 +1,1 @@
-The irradiance I — what we actually measure with a detector — is the time-averaged magnitude of the Poynting vector. For a plane wave, this works out to n epsilon naught c over 2, times E naught squared.
+The irradiance, or intensity, that we actually measure with a detector is the time-averaged magnitude of S. Because E and B oscillate sinusoidally, their product oscillates at twice the frequency. The time average of cosine squared omega t over one period is one half. This gives the irradiance: I equals one half times n epsilon-naught c times E-naught squared.

@@ -1,1 +1,1 @@
-The resolving power equals N times the finesse.
+The coherence length of the source must exceed 2nd for fringes to be visible.

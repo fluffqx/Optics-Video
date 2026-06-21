@@ -1,1 +1,1 @@
-A magnifying glass places an object just inside its focal length, producing a virtual, upright, magnified image. The angular magnification is 25 centimetres divided by f, where 25 cm is the standard near-point distance of the human eye.
+A magnifying glass uses a single converging lens to create a virtual, upright, magnified image of an object placed just inside the focal length. The angular magnification is 25 centimetres divided by f, where 25 centimetres is the conventional near-point distance. A 5-centimetre focal length magnifying glass gives 5-times magnification.

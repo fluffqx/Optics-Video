@@ -1,5 +1,7 @@
-Given an electric field E pointing in the x-direction and propagating in the z-direction, we need to find the magnetic field B.
+Let's work through a complete example. Given an electric field E pointing in the x-direction with amplitude E-naught, propagating in the z-direction: E-vector equals E-naught times x-hat times e to the i times kz minus omega t.
 
-The propagation direction is z-hat. Using the relation k-vector cross E equals omega times B, we take k in the z-direction cross E in the x-direction. Z-hat cross x-hat equals y-hat by the right-hand rule. So B points in the y-direction with magnitude E naught over c.
+First, find the magnetic field. From Faraday's law for a plane wave, B-vector equals k-hat cross E-vector, divided by the phase velocity v. The propagation direction is z-hat. The cross product z-hat cross x-hat equals y-hat, using the right-hand rule. So B-vector equals E-naught over c, times y-hat, times e to the i times kz minus omega t.
 
-The three vectors — E in x, B in y, and k in z — form a right-handed coordinate system. This is a general property of plane electromagnetic waves.
+Verify all properties. E is in the x-direction, B is in the y-direction, and k is in the z-direction. These three are mutually perpendicular and form a right-handed system: x-hat cross y-hat equals z-hat. The magnitude ratio is E over B equals c, as required. And E and B have the same phase factor e to the i kz minus omega t, confirming they oscillate in phase.
+
+Now compute the Poynting vector: S equals one over mu-naught times E cross B. The cross product x-hat cross y-hat equals z-hat, confirming that energy flows in the z-direction — the propagation direction. The magnitude of S is E-naught squared divided by mu-naught c, which equals epsilon-naught c E-naught squared. Time-averaging over one cycle replaces E-naught squared with one half E-naught squared, giving the irradiance I equals one half epsilon-naught c E-naught squared.

@@ -1,15 +1,5 @@
-Diffraction is what happens when a wave encounters an obstacle or aperture whose size is comparable to the wavelength. Instead of casting a sharp shadow, the wave bends around the edges and spreads into the geometric shadow region.
+Week 7 is diffraction — the bending of light around obstacles and through apertures. When an aperture becomes comparable in size to the wavelength, geometric optics fails and we must use wave optics.
 
-Huygens' principle gives us the physical picture: every point on a wavefront acts as a new point source of secondary wavelets. The diffraction pattern is the interference pattern of all these secondary sources.
+Bennett opens Chapter 8 with a profound statement: in a sense, diffraction is interference done correctly. In Young's experiment, we had two discrete point sources. In diffraction, we have a continuous aperture, and every point on the wavefront within it acts as a Huygens secondary source. The diffraction pattern is the result of all these secondary sources interfering with each other.
 
-In the far field — the Fraunhofer regime — the intensity pattern of a single slit of width b is the famous sinc-squared function: I equals I naught times sine beta over beta squared, where beta equals pi b sine theta over lambda.
-
-The central maximum is at theta equals zero and has twice the angular width of the secondary maxima. The dark fringes occur wherever b sine theta equals m lambda, for integer m.
-
-For a circular aperture of diameter D, the pattern is the Airy disk. The first dark ring occurs at sine theta equals 1.22 lambda over D. This sets the fundamental resolution limit of any optical instrument with a circular aperture.
-
-The Rayleigh criterion states that two point sources are just resolved when the central maximum of one falls on the first dark ring of the other. The minimum resolvable angle is 1.22 lambda over D.
-
-A diffraction grating has N slits with spacing d. The N-slit interference pattern has extremely sharp principal maxima wherever d sine theta equals m lambda — the grating equation. At oblique incidence, this becomes d times sine theta_m minus sine theta_i equals m lambda.
-
-The resolving power of a grating is R equals N times m — the number of slits times the diffraction order. The free spectral range is lambda over m. Higher order, higher resolution, but smaller unambiguous wavelength range.
+The key results of this week: the sinc-squared single-slit pattern and where its zeros occur, the Airy disk for a circular aperture and the Rayleigh resolution criterion, and the diffraction grating equation with its resolving power.

@@ -1,4 +1,4 @@
-# week3_geometric.py — Week 3: Geometric Optics (paragraph-per-scene)
+# week3_geometric.py — paragraph-per-scene
 from manim import *
 from utils import *
 
@@ -6,12 +6,15 @@ class Week3TitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p1.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.3))
-        b = txt_block([            "Week 3 takes us into geometric optics — the regime where the",
-            "wavelength of light is much smaller than the optical elements",
-            "we're dealing with. In this limit, we can treat light as rays",
-            "travelling in straight lines, and ignore diffraction entirely.",])
+        card = make_title_card("WEEK 3", "Geometric Optics", "Bennett Ch. 4")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "Week 3 is geometric optics — the regime where the wavelength",
+            "of light is so small compared to the optical elements that",
+            "we can treat light as rays travelling in straight lines.",
+        ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
@@ -20,13 +23,17 @@ class Week3TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p2.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.3))
-        b = txt_block([            "This approximation works beautifully for lenses, mirrors,",
-            "telescopes, and microscopes. It breaks down when apertures",
-            "become comparable to the wavelength — which is when",
-            "diffraction becomes important, and we'll return to that in",
-            "week 7.",])
+        card = make_title_card("WEEK 3", "Geometric Optics", "Bennett Ch. 4")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "This approximation is remarkably powerful. It describes",
+            "lenses, mirrors, microscopes, telescopes, cameras, and the",
+            "human eye with great accuracy. The thin lens equation and",
+            "the mirror equation are the workhorses of optical",
+            "engineering.",
+        ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
@@ -35,28 +42,17 @@ class Week3TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p3.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.3))
-        b = txt_block([            "The key mathematical tool is the paraxial approximation: for",
-            "small angles, sine theta is approximately equal to tangent",
-            "theta, which is approximately equal to theta in radians. This",
-            "linearises all the equations and makes them analytically",
-            "tractable.",])
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week3TitleCard_p4(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week3TitleCard_p4.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.3))
-        b = txt_block([            "Sign conventions are absolutely critical in geometric optics.",
-            "Getting a sign wrong means getting the wrong answer. Always",
-            "measure distances from the optical element. Object distance is",
-            "positive for real objects on the incoming side. Image distance",
-            "is positive for real images on the outgoing side. Radius of",])
+        card = make_title_card("WEEK 3", "Geometric Optics", "Bennett Ch. 4")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "The most important lesson of this week is sign conventions.",
+            "They seem tedious, but getting a sign wrong in a geometric",
+            "optics problem means getting the completely wrong answer. We",
+            "will establish them carefully and check them on every",
+            "example.",
+        ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
@@ -65,15 +61,15 @@ class GeometricOpticsIntro_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p1.mp3", time_offset=0)
-        title = Text("Geometric Optics and Paraxial Approximation", font_size=34, color=GOLD)
+        title = Text("Geometric Optics and the Paraxial Approximation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Geometric optics applies when the wavelength of light is much",
-            "smaller than the optical elements it encounters. In this",
-            "limit, we can ignore diffraction entirely and treat light as",
-            "rays — straight lines that carry energy in a specific",
-            "direction.",
+            "Geometric optics applies when the wavelength of light is",
+            "much smaller than all the apertures, lenses, and optical",
+            "elements in the system. Under this condition, diffraction",
+            "effects are negligible and we can treat light as travelling",
+            "in straight lines called rays. The ray is perpendicular to",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -83,15 +79,15 @@ class GeometricOpticsIntro_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p2.mp3", time_offset=0)
-        title = Text("Geometric Optics and Paraxial Approximation", font_size=34, color=GOLD)
+        title = Text("Geometric Optics and the Paraxial Approximation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The paraxial approximation further simplifies things: for rays",
-            "that stay close to and nearly parallel to the optical axis,",
-            "sine theta is approximately equal to theta in radians. This",
-            "linearises all the equations, making analytic solutions",
-            "possible.",
+            "The paraxial approximation further simplifies the analysis.",
+            "We consider only rays that travel at small angles to the",
+            "optical axis — the main axis of the optical system. For",
+            "small angles theta in radians, sine theta approximately",
+            "equals theta and cosine theta approximately equals one. This",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -101,14 +97,15 @@ class GeometricOpticsIntro_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p3.mp3", time_offset=0)
-        title = Text("Geometric Optics and Paraxial Approximation", font_size=34, color=GOLD)
+        title = Text("Geometric Optics and the Paraxial Approximation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Geometric optics describes lenses, mirrors, telescopes,",
-            "microscopes, cameras, the human eye, and optical fibres — an",
-            "enormous range of practical applications built on remarkably",
-            "simple equations.",
+            "The domain of geometric optics covers most of everyday",
+            "optics: eyeglasses, camera lenses, binoculars, telescopes,",
+            "microscopes, projectors. It breaks down when apertures",
+            "become comparable to the wavelength — which brings us to",
+            "diffraction in Week 7 — and when coherence effects matter —",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -122,10 +119,11 @@ class SignConventions_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Sign conventions are the most common source of errors in",
-            "geometric optics problems. Getting a sign wrong means getting",
-            "the wrong answer for the entire problem. Study these",
-            "carefully.",
+            "Sign conventions are the most important technical details in",
+            "geometric optics. Getting a sign wrong gives a completely",
+            "wrong answer — the magnitude might be right but the physical",
+            "interpretation is opposite. These conventions are not",
+            "arbitrary: they follow a consistent logic that makes the",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -140,10 +138,9 @@ class SignConventions_p2(Scene):
         self.add(title)
         b = txt_block([
             "All distances are measured from the optical element — the",
-            "lens, mirror, or refracting surface. The object distance s_o",
-            "is positive when the object is on the side where light is",
-            "coming from. This is called a real object and is the normal",
-            "case.",
+            "lens, mirror, or refracting surface. Positive distances are",
+            "in the direction of light propagation; negative distances",
+            "are against it.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -157,9 +154,11 @@ class SignConventions_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The image distance s_i is positive when the image forms on the",
-            "far side of the lens — on the side where light is going to.",
-            "This is a real image that can be projected onto a screen.",
+            "The object distance s-o is positive for a real object,",
+            "located on the incoming side of the element. It is negative",
+            "for a virtual object, which occurs when a converging beam is",
+            "intercepted before reaching its focus. Real objects always",
+            "have positive s-o in the standard single-element geometry.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -173,10 +172,11 @@ class SignConventions_p4(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The radius of curvature R is positive if the centre of",
-            "curvature is to the right of the surface — which means a",
-            "convex surface for light coming from the left. It is negative",
-            "for a concave surface.",
+            "The image distance s-i is positive for a real image, formed",
+            "on the far side of the element where light actually",
+            "converges. It is negative for a virtual image, formed on the",
+            "same side as the incoming light. You cannot project a",
+            "virtual image onto a screen — it exists only as diverging",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -190,8 +190,11 @@ class SignConventions_p5(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "For mirrors, the sign convention flips: a concave mirror has R",
-            "positive, a convex mirror has R negative.",
+            "The radius of curvature R is positive if the centre of",
+            "curvature is to the right of the surface — in the direction",
+            "of light propagation. A convex lens surface curving toward",
+            "the light source has R positive on the first surface and R",
+            "negative on the second surface. For a biconvex lens: R-one",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -205,9 +208,11 @@ class SignConventions_p6(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The magnification m equals minus s_i over s_o. A negative",
-            "magnification means the image is inverted. A magnitude greater",
-            "than one means the image is larger than the object.",
+            "For mirrors, the sign convention reverses: positive is now",
+            "toward the incoming light, because after reflection light",
+            "travels back the way it came. A concave mirror — which",
+            "converges light — has a positive focal length. A convex",
+            "mirror — which diverges light — has negative focal length.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -221,8 +226,29 @@ class SignConventions_p7(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Always draw a diagram first. Label the signs explicitly. Then",
-            "substitute into the equation.",
+            "The magnification m equals minus s-i over s-o. A negative",
+            "magnification means the image is inverted relative to the",
+            "object. A magnification with absolute value greater than one",
+            "means the image is larger than the object. A real image",
+            "always has negative magnification if the object is real —",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class SignConventions_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SignConventions_p8.mp3", time_offset=0)
+        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Always draw a ray diagram first. Use three principal rays:",
+            "one parallel to the axis (passes through far focal point",
+            "after refraction), one through the near focal point (emerges",
+            "parallel to axis after refraction), and one through the",
+            "optical centre (passes straight through). Where these three",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -237,8 +263,10 @@ class SphericalSurface_p1(Scene):
         self.add(title)
         b = txt_block([
             "A single curved interface between two media refracts light",
-            "according to the spherical surface equation: n_m over s_o plus",
-            "n_i over s_i equals n_i minus n_m over R.",
+            "according to the spherical surface equation: n-i over s-o",
+            "plus n-t over s-i equals n-t minus n-i, all divided by R.",
+            "Here R is the radius of curvature of the surface, positive",
+            "if the centre is on the transmitted side.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -252,11 +280,11 @@ class SphericalSurface_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "This is derived by applying Snell's law in the paraxial",
-            "approximation to a ray hitting a spherical surface. It is the",
-            "building block from which the thin lens equations are derived",
-            "by applying this formula twice — once for each surface of the",
-            "lens.",
+            "This equation is derived by applying Snell's law in the",
+            "paraxial approximation to a ray hitting the surface at a",
+            "small angle. The paraxial approximation replaces sine theta",
+            "with theta and cosine theta with one, which linearises",
+            "everything.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -270,9 +298,11 @@ class SphericalSurface_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The radius R is positive if the centre of curvature is to the",
-            "right of the surface, and negative if it is to the left.",
-            "Getting this sign right is essential.",
+            "For a flat surface with R going to infinity, the equation",
+            "reduces to n-i over s-o plus n-t over s-i equals zero, or",
+            "s-i equals minus n-t over n-i times s-o. The image of an",
+            "object in water viewed from air appears at a different depth",
+            "from the actual object — this is why a pool appears",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -286,9 +316,10 @@ class ThinLensScene_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The thin lens equation is one of the most used equations in",
-            "all of optics. One over s_o plus one over s_i equals one over",
-            "f.",
+            "The thin lens equation is the central formula of geometric",
+            "optics: one over s-o plus one over s-i equals one over f.",
+            "Here s-o is the object distance, s-i is the image distance,",
+            "and f is the focal length of the lens.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -302,8 +333,11 @@ class ThinLensScene_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "s_o is the object distance, s_i is the image distance, and f",
-            "is the focal length of the lens.",
+            "The focal length f is determined by the lens geometry and",
+            "material through the lensmaker's equation: one over f equals",
+            "the quantity n-l minus n-m, times the quantity one over",
+            "R-one minus one over R-two. Here n-l is the refractive index",
+            "of the lens glass, n-m is the index of the surrounding",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -316,18 +350,15 @@ class ThinLensScene_p3(Scene):
         title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"\frac{1}{s_o}+\frac{1}{s_i}=\frac{1}{f}", "thin lens equation", GOLD, 44, 26),
-            labeled_eq(r"m=-s_i/s_o", "magnification (negative = inverted)", WHITE, 44, 26),
-            labeled_eq(r"P=1/f\;[\text{D}]", "power in dioptres", WAVE_COLOR, 44, 26),
-        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=4.5)
-        eqs.next_to(title, DOWN, buff=0.45)
-        b = txt_block([            "The lensmaker's equation tells us how f depends on the lens",
-            "geometry: one over f equals n_l minus n_m over n_m, times one",
-            "over R_1 minus one over R_2.",])
-        b.next_to(eqs, DOWN, buff=0.3)
-        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        b = txt_block([
+            "In air with n-m equals one, the lensmaker's equation",
+            "simplifies to one over f equals n-l minus one, times one",
+            "over R-one minus one over R-two. For a biconvex lens with",
+            "R-one equals R equals positive R and R-two equals negative",
+            "R: one over R-one minus one over R-two equals one over R",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class ThinLensScene_p4(Scene):
@@ -337,14 +368,15 @@ class ThinLensScene_p4(Scene):
         title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eq = MathTex(r"\frac{1}{f}=(n_l-n_m)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)", font_size=44, color=E_COLOR)
-        safe_scale(eq, max_width=13.0)
-        eq.next_to(title, DOWN, buff=0.45)
-        b = txt_block([            "Here n_l is the refractive index of the lens material, n_m is",
-            "the index of the surrounding medium, and R_1 and R_2 are the",
-            "radii of curvature of the two surfaces.",])
-        b.next_to(eq, DOWN, buff=0.35)
-        self.play(FadeIn(VGroup(eq, b), run_time=0.1))
+        b = txt_block([
+            "The dioptric power P equals one over f in dioptres.",
+            "Ophthalmologists prescribe glasses in dioptres. A person",
+            "needing one over 0.5 equals plus 2 dioptres to read means",
+            "they need a converging lens of focal length 50 centimetres.",
+            "Distance glasses for myopia have negative power — diverging",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class ThinLensScene_p5(Scene):
@@ -355,8 +387,9 @@ class ThinLensScene_p5(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "In air, this simplifies to one over f equals n_l minus one,",
-            "times one over R_1 minus one over R_2.",
+            "For lenses in contact, powers add: P-total equals P-one plus",
+            "P-two. This is why you can combine eyeglass prescriptions",
+            "additively.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -370,9 +403,10 @@ class ThinLensScene_p6(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The magnification m equals minus s_i over s_o. A negative",
-            "magnification means the image is inverted. A magnitude greater",
-            "than one means the image is larger than the object.",
+            "Now a complete worked example. Biconvex lens: R-one equals",
+            "plus 20 centimetres, R-two equals minus 20 centimetres, n-l",
+            "equals 1.50, in air. Object at s-o equals 60 centimetres.",
+            "Find s-i and m.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -386,9 +420,10 @@ class ThinLensScene_p7(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The dioptric power P equals one over f in units of dioptres —",
-            "inverse metres. This is what your optician prescribes for",
-            "glasses. Powers of lenses in contact simply add.",
+            "Step one: lensmaker's equation. One over f equals 1.50 minus",
+            "1.00 times one over 0.20 minus one over minus 0.20, equals",
+            "0.50 times 5 plus 5 equals 0.50 times 10 equals 5. So f",
+            "equals 0.20 metres equals 20 centimetres.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -402,10 +437,11 @@ class ThinLensScene_p8(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Let's work through a complete example. A biconvex lens with",
-            "R_1 equals positive 20 centimetres, R_2 equals negative 20",
-            "centimetres, and n_l equals 1.5. Object at s_o equals 60",
-            "centimetres.",
+            "Step two: thin lens equation. One over s-i equals one over f",
+            "minus one over s-o equals one over 20 minus one over 60",
+            "equals 3 over 60 minus 1 over 60 equals 2 over 60. So s-i",
+            "equals 30 centimetres. Positive — real image on the far side",
+            "of the lens.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -419,9 +455,10 @@ class ThinLensScene_p9(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "First: one over f equals 0.5 times 1 over 20 minus 1 over",
-            "minus 20 equals 0.5 times 10 equals 5 dioptres. So f equals 20",
-            "centimetres.",
+            "Step three: magnification. m equals minus s-i over s-o",
+            "equals minus 30 over 60 equals minus 0.5. Inverted (negative",
+            "sign) and half the size (absolute value one-half). This is",
+            "the geometry of a simple projector or camera.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -435,9 +472,11 @@ class ThinLensScene_p10(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Then: one over s_i equals one over 20 minus one over 60 equals",
-            "3 minus 1 over 60 equals 2 over 60. So s_i equals 30",
-            "centimetres. Real image.",
+            "Now vary the object distance. Put the object at s-o equals",
+            "30 centimetres, which equals 1.5 f: one over s-i equals one",
+            "over 20 minus one over 30 equals 3 over 60 minus 2 over 60",
+            "equals 1 over 60. s-i equals 60 centimetres. m equals minus",
+            "60 over 30 equals minus 2. Real, inverted, twice the size.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -451,8 +490,11 @@ class ThinLensScene_p11(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Magnification: minus 30 over 60 equals minus 0.5. Inverted,",
-            "half the size of the object.",
+            "Now put the object at s-o equals 10 centimetres, inside the",
+            "focal length: one over s-i equals one over 20 minus one over",
+            "10 equals 1 over 20 minus 2 over 20 equals minus 1 over 20.",
+            "s-i equals minus 20 centimetres. Virtual image on the same",
+            "side as the object. m equals minus minus 20 over 10 equals",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -465,18 +507,14 @@ class MirrorScene_p1(Scene):
         title = Text("Spherical Mirrors", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"\frac{1}{s_o}+\frac{1}{s_i}=\frac{2}{R}=\frac{1}{f_m}", "mirror equation (same form as thin lens!)", GOLD, 40, 24),
-            labeled_eq(r"f_m=R/2", "focal length = half the radius", WHITE, 40, 24),
-            labeled_eq(r"m=-s_i/s_o", "magnification", WHITE, 40, 24),
-        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=4.0)
-        eqs.next_to(title, DOWN, buff=0.45)
-        b = txt_block([            "Spherical mirrors obey the mirror equation: one over s_o plus",
-            "one over s_i equals two over R, which also equals one over the",
-            "focal length f_m.",])
-        b.next_to(eqs, DOWN, buff=0.3)
-        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        b = txt_block([
+            "Spherical mirrors obey the mirror equation: one over s-o",
+            "plus one over s-i equals two over R equals one over f-m,",
+            "where f-m equals R over two is the focal length of the",
+            "mirror.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class MirrorScene_p2(Scene):
@@ -487,10 +525,11 @@ class MirrorScene_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The focal length of a mirror is half the radius of curvature:",
-            "f_m equals R over 2. For a concave mirror with R positive, the",
-            "focal length is positive and parallel rays converge to a real",
-            "focus in front of the mirror.",
+            "This is identical in form to the thin lens equation. The",
+            "sign convention for mirrors: positive distances are on the",
+            "same side as the incoming light. A concave mirror curves",
+            "toward the light and has R positive, giving a positive focal",
+            "length — it is converging. A convex mirror curves away from",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -504,11 +543,29 @@ class MirrorScene_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The magnification is minus s_i over s_o — same formula as for",
-            "lenses. A concave mirror with an object beyond the focal point",
-            "gives an inverted, real image. An object inside the focal",
-            "point gives an upright, virtual, magnified image — exactly as",
-            "in a shaving mirror.",
+            "For a concave mirror with f-m equals 20 centimetres and",
+            "object at s-o equals 60 centimetres: one over s-i equals one",
+            "over 20 minus one over 60 equals 2 over 60, so s-i equals 30",
+            "centimetres. Real image in front of the mirror.",
+            "Magnification m equals minus 30 over 60 equals minus",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MirrorScene_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MirrorScene_p4.mp3", time_offset=0)
+        title = Text("Spherical Mirrors", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Concave mirrors are used in reflecting telescopes — the",
+            "primary mirror focuses starlight to form a real image. They",
+            "are also used in car headlights in reverse: a light source",
+            "at the focal point produces a parallel reflected beam.",
+            "Convex mirrors are used as rear-view mirrors and security",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -522,9 +579,9 @@ class LensCombinations_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "When two lenses are used in sequence, the image formed by the",
-            "first lens becomes the object for the second lens. Apply the",
-            "thin lens equation sequentially.",
+            "When two lenses are used in sequence, the image formed by",
+            "the first lens serves as the object for the second lens. You",
+            "apply the thin lens equation twice.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -537,17 +594,15 @@ class LensCombinations_p2(Scene):
         title = Text("Lens Combinations", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"\frac{1}{f_{\rm eff}}=\frac{1}{f_1}+\frac{1}{f_2}-\frac{d}{f_1 f_2}", "two lenses separated by d", GOLD, 40, 24),
-            labeled_eq(r"P_{\rm eff}=P_1+P_2", "contact lenses (d=0): powers add", WHITE, 40, 24),
-        ).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=3.5)
-        eqs.next_to(title, DOWN, buff=0.45)
-        b = txt_block([            "For two thin lenses separated by distance d, the effective",
-            "focal length satisfies: one over f_eff equals one over f_1",
-            "plus one over f_2 minus d over f_1 f_2.",])
-        b.next_to(eqs, DOWN, buff=0.35)
-        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        b = txt_block([
+            "For two thin lenses separated by distance d, the first image",
+            "is at distance s-i-one from the first lens. The second",
+            "object distance is s-o-two equals d minus s-i-one — the",
+            "separation minus the first image distance. If s-i-one is",
+            "greater than d, the first image falls beyond the second",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class LensCombinations_p3(Scene):
@@ -558,10 +613,29 @@ class LensCombinations_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "When the lenses are in contact — d approaches zero — this",
-            "simplifies to: the powers add. P_eff equals P_1 plus P_2. This",
-            "is why opticians measure lens power in dioptres and simply add",
-            "them.",
+            "The effective focal length of the two-lens system satisfies:",
+            "one over f-effective equals one over f-one plus one over",
+            "f-two minus d over f-one f-two. In the contact limit where d",
+            "goes to zero, this simplifies to one over f-effective equals",
+            "one over f-one plus one over f-two, or equivalently",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class LensCombinations_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/LensCombinations_p4.mp3", time_offset=0)
+        title = Text("Lens Combinations", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The total magnification of a two-lens system is the product",
+            "of the individual magnifications: m-total equals m-one times",
+            "m-two. This multiplicative property is what makes compound",
+            "microscopes so powerful — two lenses each providing large",
+            "magnification multiply their effects.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -575,8 +649,9 @@ class OpticalInstruments_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "All optical instruments are combinations of lenses and",
-            "mirrors.",
+            "All optical instruments reduce to combinations of lenses and",
+            "mirrors. Understanding the operating principle of each one",
+            "clarifies the optical design choices.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -589,19 +664,15 @@ class OpticalInstruments_p2(Scene):
         title = Text("Optical Instruments", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        insts = eq_table([
-            (r"M=25\,\text{cm}/f", "Magnifying glass (near point = 25 cm)", GOLD),
-            (r"M=(-L/f_{ob})(25/f_e)", "Compound microscope", WAVE_COLOR),
-            (r"M=-f_{ob}/f_e", "Astronomical telescope", E_COLOR),
-        ], eq_fs=32, lbl_fs=22, buff=0.3)
-        safe_scale(insts, max_width=13.0, max_height=4.0)
-        insts.next_to(title, DOWN, buff=0.45)
-        b = txt_block([            "A magnifying glass places an object just inside its focal",
-            "length, producing a virtual, upright, magnified image. The",
-            "angular magnification is 25 centimetres divided by f, where 25",
-            "cm is the standard near-point distance of the human eye.",])
-        b.next_to(insts, DOWN, buff=0.3)
-        self.play(FadeIn(VGroup(insts, b), run_time=0.1))
+        b = txt_block([
+            "A magnifying glass uses a single converging lens to create a",
+            "virtual, upright, magnified image of an object placed just",
+            "inside the focal length. The angular magnification is 25",
+            "centimetres divided by f, where 25 centimetres is the",
+            "conventional near-point distance. A 5-centimetre focal",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class OpticalInstruments_p3(Scene):
@@ -612,10 +683,11 @@ class OpticalInstruments_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A compound microscope uses an objective with very short focal",
-            "length to form a magnified real image, then an eyepiece to",
-            "magnify that image further. The total magnification is the",
-            "product of the two magnifications.",
+            "A compound microscope uses two lenses: a short-focal-length",
+            "objective and a longer-focal-length eyepiece. The objective",
+            "forms a real, inverted, highly magnified intermediate image.",
+            "The eyepiece then acts as a simple magnifier for that",
+            "intermediate image. The total angular magnification is M",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -629,11 +701,29 @@ class OpticalInstruments_p4(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A telescope works in reverse: the objective forms a real image",
-            "of a distant object at its focal plane, and the eyepiece",
-            "magnifies it. The angular magnification is minus f_objective",
-            "over f_eyepiece. The minus sign means the image is inverted —",
-            "hence telescopes for astronomy often don't bother with an",
+            "An astronomical refracting telescope has a long-focal-length",
+            "objective and a short-focal-length eyepiece, separated by",
+            "f-objective plus f-eyepiece. Parallel light from a distant",
+            "star enters and the objective forms a real image at its back",
+            "focal point. The eyepiece magnifies this image. The angular",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class OpticalInstruments_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/OpticalInstruments_p5.mp3", time_offset=0)
+        title = Text("Optical Instruments", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The human eye has a total focal length of about 22",
+            "millimetres in air and can focus objects from 25 centimetres",
+            "to infinity by changing the shape of its crystalline lens.",
+            "The retina is a curved photosensitive surface 22 millimetres",
+            "from the optical system. Nearsightedness (myopia) means the",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))

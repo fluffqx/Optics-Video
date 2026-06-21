@@ -1,9 +1,19 @@
-Thin film interference explains some of the most beautiful optical phenomena — the rainbow colours of soap bubbles, oil slicks on water, and the reflective coatings on camera lenses.
+Thin film interference produces some of the most beautiful optical phenomena — the iridescent colours of soap bubbles, oil slicks on wet pavement, the wings of some butterflies, and anti-reflection coatings on camera lenses.
 
-The key is that a thin transparent film reflects light at both its top and bottom surfaces. These two reflected beams travel different path lengths and may have different reflection phase shifts. Their interference determines whether the film looks bright or dark at each wavelength.
+The physics: a thin transparent film reflects light from both its top and bottom surfaces. These two reflected beams come from the same original beam, so they are coherent. They interfere, and whether the interference is constructive or destructive depends on the film thickness and the wavelength.
 
-The total phase difference has two contributions. First, the path difference from the extra round trip inside the film, which gives a phase of four pi n-film times thickness times cosine theta-t, all divided by the vacuum wavelength. Second, any reflection phase shifts — remember that each reflection where light goes from lower to higher refractive index picks up a pi phase shift.
+The optical path difference between the two reflected beams has two contributions. First, the geometric path difference: beam 2 travels through the film twice, a distance 2t, but in a medium with index n-f. The optical path difference is 2 n-f t cosine theta-t, where theta-t is the refraction angle inside the film.
 
-Counting the reflection phase shifts carefully is the most common source of errors. Work through each surface systematically: does n increase or decrease? If it increases, add pi. If it decreases, add nothing.
+Second, reflection phase shifts must be counted carefully. When a beam reflects at an interface where the refractive index increases — going from lower to higher n — the reflected beam acquires a phase shift of pi. This is equivalent to an extra optical path of lambda over 2. When reflecting where n decreases, no phase shift occurs.
 
-Anti-reflection coatings use this deliberately — a quarter-wavelength layer of the right index cancels the reflection completely at the design wavelength.
+Here is the systematic approach. List each reflection. For each one, ask: does n increase? If yes, add a pi phase shift to that beam. Compute the net phase difference between the two reflected beams: subtract the total phase shifts for beam 1 from those for beam 2. Add the geometric contribution 2 pi times 2 n-f t cosine theta-t over lambda-naught to get the total phase difference delta. Constructive reflection: delta equals 2m pi. Destructive reflection: delta equals 2m plus one times pi.
+
+Let's work through an anti-reflection coating. A glass substrate with n equals 1.52 is coated with magnesium fluoride MgF-two with n equals 1.38. Surrounding medium is air with n equals 1.00.
+
+Beam 1 reflects at the air-MgF-two interface. n increases from 1.00 to 1.38, so beam 1 acquires a pi phase shift.
+
+Beam 2 passes through MgF-two and reflects at the MgF-two-glass interface. n increases from 1.38 to 1.52, so beam 2 acquires a pi phase shift.
+
+Both beams have the same reflection phase shift, so the net phase shift from reflections is zero. The total phase difference is purely from the geometric path: delta equals 4 pi n-f t cosine theta-t over lambda-naught. For destructive interference of the reflected light — anti-reflection condition — we need delta equals pi, giving 2 n-f t equals lambda-naught over 2, or t equals lambda-naught over 4 n-f.
+
+For lambda-naught equals 550 nanometres, the design wavelength: t equals 550 divided by 4 times 1.38 equals 99.6 nanometres. Anti-reflection coatings are about 100 nanometres thick — one hundred billionths of a metre.

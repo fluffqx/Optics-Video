@@ -1,1 +1,1 @@
-Let's do a quick example. Given lambda equals 500 nanometres and v equals 3 times 10 to the 8 metres per second — visible green light — we can find all the other quantities.
+All these symbols are connected by a web of relations that you must be able to derive in your sleep. The most important ones: v equals f lambda, v equals omega over k, k equals 2 pi over lambda, omega equals 2 pi f, and T equals one over f.

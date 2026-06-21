@@ -1,1 +1,1 @@
-For p-polarisation: r_parallel equals n_t cosine theta_i minus n_i cosine theta_t, all divided by n_t cosine theta_i plus n_i cosine theta_t.
+Let's work through the full calculation for air to glass with n-i equals 1.0, n-t equals 1.5, at theta-i equals 40 degrees. Snell's law first: sine theta-t equals 1.0 over 1.5 times sine 40 equals 0.4285, so theta-t equals 25.37 degrees. Now the cosines: cosine 40 equals 0.766, cosine 25.37 equals 0.9036.

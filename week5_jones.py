@@ -1,4 +1,4 @@
-# week5_jones.py — Week 5 (paragraph-per-scene)
+# week5_jones.py — paragraph-per-scene
 from manim import *
 from utils import *
 
@@ -6,15 +6,16 @@ class Week5TitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week5TitleCard_p1.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
+        card = make_title_card("WEEK 5", "Polarisation, Birefringence and Jones Formalism", "Bennett Ch. 6")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Week 5 is all about polarisation — one of the most important",
-            "properties of light, and one that's easy to miss because our",
-            "eyes can't detect it directly.",
+            "Week 5 develops the Jones vector formalism — the systematic",
+            "mathematical framework for describing and manipulating",
+            "polarisation states.",
         ])
-        b.next_to(title, DOWN, buff=0.5)
+        b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -22,16 +23,18 @@ class Week5TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week5TitleCard_p2.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
+        card = make_title_card("WEEK 5", "Polarisation, Birefringence and Jones Formalism", "Bennett Ch. 6")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Polarisation describes the direction in which the electric",
-            "field oscillates as the wave propagates. For a plane wave",
-            "travelling in the z direction, the electric field can point",
-            "anywhere in the x-y plane.",
+            "The key insight is that any polarisation state of a plane",
+            "wave can be represented as a two-component complex column",
+            "vector — the Jones vector. Any optical element that",
+            "transforms the polarisation can be represented as a",
+            "two-by-two complex matrix — the Jones matrix. To trace",
         ])
-        b.next_to(title, DOWN, buff=0.5)
+        b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -39,118 +42,17 @@ class Week5TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week5TitleCard_p3.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
+        card = make_title_card("WEEK 5", "Polarisation, Birefringence and Jones Formalism", "Bennett Ch. 6")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "If the field always points in the same direction, we have",
-            "linear polarisation. If the tip of the electric field vector",
-            "traces a circle as time progresses, we have circular",
-            "polarisation. The general case is elliptical polarisation.",
+            "This formalism is exact within the paraxial approximation",
+            "for fully coherent light. It handles linear polarisers, wave",
+            "plates, rotators, beam splitters, and any combination of",
+            "these.",
         ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week5TitleCard_p4(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p4.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "Birefringent crystals have two different refractive indices",
-            "for two perpendicular polarisation directions — the ordinary",
-            "and extraordinary axes. Light polarised along the slow axis",
-            "travels more slowly than light along the fast axis. This",
-            "accumulates a phase difference between the two components.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week5TitleCard_p5(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p5.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "A wave plate exploits this: it introduces a controlled phase",
-            "difference delta phi equal to 2 pi over lambda naught times",
-            "n_e minus n_o times d, where d is the plate thickness.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week5TitleCard_p6(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p6.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "A quarter-wave plate introduces a phase difference of pi over",
-            "2 — a quarter of a full cycle. This converts linearly",
-            "polarised light at 45 degrees into circularly polarised light,",
-            "and vice versa.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week5TitleCard_p7(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p7.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "A half-wave plate introduces pi — half a cycle — and rotates",
-            "the plane of linear polarisation by twice the angle between",
-            "the input polarisation and the fast axis.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week5TitleCard_p8(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p8.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "The Jones formalism handles all of this mathematically. A",
-            "Jones vector is a two-component complex column vector giving",
-            "the x and y components of the electric field amplitude. A",
-            "Jones matrix is a two-by-two complex matrix representing an",
-            "optical element.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
-
-class Week5TitleCard_p9(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p9.mp3", time_offset=0)
-        title = Text("Polarisation, Birefringence and Jones Formalism", font_size=32, color=GOLD)
-        title.to_edge(UP, buff=0.4)
-        self.add(title)
-        b = txt_block([
-            "To trace polarisation through a sequence of elements, multiply",
-            "the Jones matrices from right to left, then apply the result",
-            "to the input Jones vector. The output intensity is the",
-            "magnitude squared of the output vector.",
-        ])
-        b.next_to(title, DOWN, buff=0.5)
+        b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -158,13 +60,14 @@ class PolarisationStatesScene_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PolarisationStatesScene_p1.mp3", time_offset=0)
-        title = Text("States of Polarisation  (Bennett Section 6.1)", font_size=36, color=GOLD)
+        title = Text("Polarisation States  (Bennett Section 6.1)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Polarisation describes the direction in which the electric",
-            "field oscillates as a wave propagates. For a wave travelling",
-            "in the z-direction, E can point anywhere in the x-y plane.",
+            "The Jones vector for a plane wave propagating in the",
+            "z-direction is a two-component vector containing the x and y",
+            "complex amplitudes of the electric field. The common factor",
+            "e to the i kz minus omega t is always implicit.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -174,15 +77,15 @@ class PolarisationStatesScene_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PolarisationStatesScene_p2.mp3", time_offset=0)
-        title = Text("States of Polarisation  (Bennett Section 6.1)", font_size=36, color=GOLD)
+        title = Text("Polarisation States  (Bennett Section 6.1)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Linear polarisation means E always oscillates along a fixed",
-            "direction. Circular polarisation means the tip of E traces a",
-            "circle — this requires equal amplitudes in x and y, with a",
-            "90-degree phase difference between them. The general case is",
-            "elliptical polarisation, where E traces an ellipse.",
+            "Horizontal linear polarisation has field only in the",
+            "x-direction: Jones vector one, zero. Vertical has zero, one.",
+            "Linear polarisation at angle alpha from horizontal has",
+            "components cosine alpha and sine alpha. The normalisation",
+            "convention sets the total intensity to one: the magnitude",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -192,14 +95,32 @@ class PolarisationStatesScene_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PolarisationStatesScene_p3.mp3", time_offset=0)
-        title = Text("States of Polarisation  (Bennett Section 6.1)", font_size=36, color=GOLD)
+        title = Text("Polarisation States  (Bennett Section 6.1)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Our eyes cannot detect polarisation directly. But polarising",
-            "filters, wave plates, and birefringent materials interact",
-            "strongly with it, making polarisation one of the most",
-            "practically exploited properties of light.",
+            "Circular polarisation requires equal amplitudes in x and y",
+            "with a phase difference of pi over two. Right circular",
+            "polarisation is one over root two times one, minus i — the y",
+            "component lags the x component by pi over two. Left circular",
+            "polarisation is one over root two times one, plus i.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PolarisationStatesScene_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PolarisationStatesScene_p4.mp3", time_offset=0)
+        title = Text("Polarisation States  (Bennett Section 6.1)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The intensity of a polarisation state is the dot product of",
+            "the Jones vector with its complex conjugate — the modulus",
+            "squared of each component, summed. This always gives a real,",
+            "non-negative result.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -214,8 +135,10 @@ class BirefringenceWavePlates_p1(Scene):
         self.add(title)
         b = txt_block([
             "Birefringent crystals have two different refractive indices",
-            "for two perpendicular polarisation directions — the slow axis",
-            "and the fast axis.",
+            "for two orthogonal linear polarisations — the ordinary index",
+            "n-o and the extraordinary index n-e. A wave with",
+            "polarisation along the fast axis travels faster than one",
+            "along the slow axis.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -229,10 +152,11 @@ class BirefringenceWavePlates_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A slab of birefringent material of thickness d introduces a",
-            "phase difference delta phi between the two polarisation",
-            "components, given by 2 pi over lambda naught times n_e minus",
-            "n_o times d.",
+            "A slab of birefringent material with thickness d introduces",
+            "a relative phase difference delta phi between the two",
+            "orthogonal components. Delta phi equals 2 pi over",
+            "lambda-naught times the quantity n-e minus n-o times d. This",
+            "phase difference determines the polarisation transformation",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -246,11 +170,11 @@ class BirefringenceWavePlates_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A quarter-wave plate introduces a phase difference of pi over",
-            "2. Linear polarisation at 45 degrees to the fast axis is",
-            "converted into circular polarisation. Going back through a",
-            "second quarter-wave plate converts it back. This is used in",
-            "optical isolators and CD players.",
+            "A quarter-wave plate has delta phi equals pi over two — a",
+            "quarter of a full cycle. The minimum thickness is",
+            "lambda-naught divided by four times the absolute value of",
+            "n-e minus n-o. A quarter-wave plate converts 45-degree",
+            "linear polarisation to circular, and circular to linear. It",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -264,10 +188,11 @@ class BirefringenceWavePlates_p4(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A half-wave plate introduces a phase difference of pi. It",
-            "rotates the plane of linear polarisation by twice the angle",
-            "between the input polarisation and the fast axis. Used in",
-            "continuously variable power control of laser beams.",
+            "A half-wave plate has delta phi equals pi. It rotates the",
+            "plane of linear polarisation by twice the angle between the",
+            "input polarisation and the fast axis. A half-wave plate with",
+            "fast axis at 22.5 degrees rotates any linear polarisation by",
+            "45 degrees. A half-wave plate at 45 degrees converts",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -281,10 +206,11 @@ class JonesFormalism_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The Jones vector is a 2-component complex column vector that",
-            "completely describes the polarisation state of a monochromatic",
-            "wave. The two components give the x and y electric field",
-            "amplitudes including their relative phase.",
+            "A Jones vector is a two-component complex column vector that",
+            "completely describes the polarisation state of a fully",
+            "coherent plane wave. The first component is the complex",
+            "amplitude of the x-component of the electric field, and the",
+            "second is the complex amplitude of the y-component. Both",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -298,10 +224,11 @@ class JonesFormalism_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Horizontal linear polarisation is represented by the vector 1,",
-            "0. Vertical is 0, 1. Plus 45 degrees is 1 over root 2 times 1,",
-            "1. Right circular polarisation is 1 over root 2 times 1, minus",
-            "i. Left circular is 1 over root 2 times 1, plus i.",
+            "Horizontal linear polarisation is represented by the Jones",
+            "vector 1, 0 — field entirely in x, zero in y. Vertical is 0,",
+            "1. Linear at plus 45 degrees is 1, 1 divided by root 2 —",
+            "equal components in phase. Linear at minus 45 degrees is 1,",
+            "minus 1 over root 2.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -315,8 +242,28 @@ class JonesFormalism_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The intensity is the magnitude squared of the Jones vector —",
-            "which is always real and positive.",
+            "Right circular polarisation is 1, minus i divided by root 2",
+            "— the y component lags x by 90 degrees. Left circular is 1,",
+            "plus i divided by root 2. The i factor encodes the",
+            "quarter-wavelength phase difference between components.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class JonesFormalism_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/JonesFormalism_p4.mp3", time_offset=0)
+        title = Text("Jones Vectors  (Bennett Section 6.5)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The intensity is the modulus squared of the Jones vector: I",
+            "equals the absolute value of E-x squared plus the absolute",
+            "value of E-y squared. For a normalised Jones vector, this",
+            "equals one, and the actual intensity is separately specified",
+            "by a prefactor.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -330,9 +277,11 @@ class JonesMatrices_p1(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Each optical element is represented by a 2 by 2 Jones matrix.",
-            "To find the output polarisation state, multiply the Jones",
-            "matrix by the input Jones vector.",
+            "Each optical element is represented by a two-by-two Jones",
+            "matrix J. The output polarisation state is J times the input",
+            "Jones vector. For a sequence of N elements, the output is",
+            "J-N times J N-minus-1 times dot dot dot times J-1 times the",
+            "input, with the first element encountered on the right.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -346,8 +295,9 @@ class JonesMatrices_p2(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A horizontal polariser passes only the x-component: it has 1",
-            "zero zero zero. A vertical polariser has zero zero zero one.",
+            "A horizontal linear polariser passes only the x-component:",
+            "its Jones matrix has 1, 0, 0, 0. A vertical polariser has 0,",
+            "0, 0, 1.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -361,9 +311,11 @@ class JonesMatrices_p3(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A quarter-wave plate with fast axis horizontal introduces a",
-            "minus i phase to the y-component: the matrix is 1 zero zero",
-            "minus i.",
+            "A quarter-wave plate with fast axis horizontal introduces",
+            "minus i to the y-component: its Jones matrix has 1, 0 in the",
+            "top row and 0, minus i in the bottom. The x-component",
+            "acquires no additional phase; the y-component acquires a",
+            "phase of minus pi over two.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -377,8 +329,10 @@ class JonesMatrices_p4(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A half-wave plate with fast axis horizontal flips the sign of",
-            "the y-component: 1 zero zero minus 1.",
+            "A half-wave plate with fast axis horizontal flips the sign",
+            "of the y-component: 1, 0 top row and 0, minus 1 bottom row.",
+            "This corresponds to a phase shift of minus pi on the",
+            "y-component.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -392,9 +346,47 @@ class JonesMatrices_p5(Scene):
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "For a sequence of elements, multiply the Jones matrices from",
-            "right to left — first element on the right — then apply the",
-            "result to the input vector.",
+            "To find the output for a specific input and sequence of",
+            "elements: write down the Jones matrices, multiply from right",
+            "to left (first element on right), then multiply by the input",
+            "Jones vector. The result is the output Jones vector, from",
+            "which you can read off the polarisation state and intensity.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class JonesMatrices_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/JonesMatrices_p6.mp3", time_offset=0)
+        title = Text("Jones Matrices  (Bennett Section 6.5.1)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Example: horizontal linear polariser, then quarter-wave",
+            "plate with fast axis at 45 degrees. Input: vertically",
+            "polarised light, Jones vector 0, 1. After horizontal",
+            "polariser: Jones vector 0, 0 — all blocked. No light reaches",
+            "the quarter-wave plate. This confirms that a polariser",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class JonesMatrices_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/JonesMatrices_p7.mp3", time_offset=0)
+        title = Text("Jones Matrices  (Bennett Section 6.5.1)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Different example: plus 45-degree linear input through a",
+            "quarter-wave plate with horizontal fast axis. Input: 1, 1",
+            "over root 2. QWP matrix times input: 1, 0, 0, minus i times",
+            "1, 1 over root 2 equals 1, minus i over root 2. This is",
+            "right circular polarisation. The quarter-wave plate has",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))

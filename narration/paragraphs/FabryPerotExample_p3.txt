@@ -1,1 +1,1 @@
-First, the coefficient of finesse: F equals 4 times 0.90 divided by 0.10 squared, giving 360. The finesse is pi times square root of 360 divided by 2, giving 29.8.
+Step one: coefficient of finesse. F equals 4 times 0.90 over 1 minus 0.90 squared equals 3.60 over 0.01 equals 360. Finesse: script-F equals pi root 360 over 2 equals pi times 18.97 over 2 equals 29.8.

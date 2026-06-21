@@ -1,0 +1,1 @@
+A free-running He-Ne laser has typical linewidth of a few megahertz, giving l-c approximately c over delta-nu equals 3 times 10 to the 8 over 10 to the 6 equals 300 metres. Ideal for laboratory interferometry.

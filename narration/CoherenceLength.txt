@@ -1,9 +1,13 @@
-The Fabry-Pérot interferometer only works if the light source has sufficient temporal coherence — the ability to interfere with a delayed copy of itself.
+A Fabry-Pérot interferometer only functions if the light source has sufficient temporal coherence. The cavity round-trip path length 2nd must be shorter than the coherence length of the light, otherwise the interfering beams are derived from different parts of the wave train and the fringes wash out.
 
-Coherence length is related to spectral purity. A perfectly monochromatic wave — which doesn't exist in reality — would have infinite coherence length. Real sources have a spread of frequencies delta-nu, and their coherence length is approximately c divided by delta-nu, or equivalently lambda squared divided by delta-lambda.
+The coherence length is related to the spectral purity of the source: l-c equals lambda squared over delta-lambda equals c over delta-nu, where delta-lambda is the linewidth and delta-nu is the frequency width of the source.
 
-For the Fabry-Pérot to show fringes, the cavity round trip must be shorter than the coherence length. Otherwise, the beams from different round trips are no longer coherent with each other, and the interference averages out.
+The coherence time is tau-c equals l-c over c equals one over delta-nu — the lifetime of the coherent wave train. Sources with narrow linewidth have long coherence time and long coherence length.
 
-The coherence length varies enormously between different light sources. White light from a thermal source has a coherence length of about 1 micrometre — too short for almost any interferometer. A sodium lamp filtered to one line has about half a millimetre. A stabilised helium-neon laser has hundreds of metres. Ultra-stable research lasers can have coherence lengths exceeding 300 kilometres.
+White light from an incandescent bulb has a broad spectrum spanning about 300 nanometres, giving l-c approximately 550 squared over 300 nanometres, approximately 1 micrometre. White light fringes are only visible for path differences of a few microns — impractical for most interferometry. But colourful — thin film interference with white light produces the spectrum of colours we see in soap bubbles and oil films.
 
-This is why gravitational wave detectors like LIGO use ultra-stable lasers — the 4-kilometre arms require the laser to be coherent over an 8-kilometre round trip.
+A filtered sodium lamp emitting the yellow D lines with linewidth of about 0.001 nanometres has l-c approximately 589 squared over 0.001 equals 0.35 metres. Fringes visible for path differences up to 35 centimetres.
+
+A free-running He-Ne laser has typical linewidth of a few megahertz, giving l-c approximately c over delta-nu equals 3 times 10 to the 8 over 10 to the 6 equals 300 metres. Ideal for laboratory interferometry.
+
+An ultra-stabilised laser for gravitational wave detection — like those used in LIGO — can have linewidths of millihertz, giving coherence lengths of hundreds of thousands of kilometres. This extraordinary coherence is what makes LIGO possible.

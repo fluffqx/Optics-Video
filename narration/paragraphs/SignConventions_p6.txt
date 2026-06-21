@@ -1,1 +1,1 @@
-The magnification m equals minus s_i over s_o. A negative magnification means the image is inverted. A magnitude greater than one means the image is larger than the object.
+For mirrors, the sign convention reverses: positive is now toward the incoming light, because after reflection light travels back the way it came. A concave mirror — which converges light — has a positive focal length. A convex mirror — which diverges light — has negative focal length.

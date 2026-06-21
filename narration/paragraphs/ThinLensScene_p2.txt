@@ -1,1 +1,1 @@
-s_o is the object distance, s_i is the image distance, and f is the focal length of the lens.
+The focal length f is determined by the lens geometry and material through the lensmaker's equation: one over f equals the quantity n-l minus n-m, times the quantity one over R-one minus one over R-two. Here n-l is the refractive index of the lens glass, n-m is the index of the surrounding medium, R-one is the radius of curvature of the first surface and R-two of the second.

@@ -1,7 +1,7 @@
-Birefringent crystals have two different refractive indices for two perpendicular polarisation directions — the slow axis and the fast axis.
+Birefringent crystals have two different refractive indices for two orthogonal linear polarisations — the ordinary index n-o and the extraordinary index n-e. A wave with polarisation along the fast axis travels faster than one along the slow axis.
 
-A slab of birefringent material of thickness d introduces a phase difference delta phi between the two polarisation components, given by 2 pi over lambda naught times n_e minus n_o times d.
+A slab of birefringent material with thickness d introduces a relative phase difference delta phi between the two orthogonal components. Delta phi equals 2 pi over lambda-naught times the quantity n-e minus n-o times d. This phase difference determines the polarisation transformation produced by the wave plate.
 
-A quarter-wave plate introduces a phase difference of pi over 2. Linear polarisation at 45 degrees to the fast axis is converted into circular polarisation. Going back through a second quarter-wave plate converts it back. This is used in optical isolators and CD players.
+A quarter-wave plate has delta phi equals pi over two — a quarter of a full cycle. The minimum thickness is lambda-naught divided by four times the absolute value of n-e minus n-o. A quarter-wave plate converts 45-degree linear polarisation to circular, and circular to linear. It is the fundamental building block of polarisation control.
 
-A half-wave plate introduces a phase difference of pi. It rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis. Used in continuously variable power control of laser beams.
+A half-wave plate has delta phi equals pi. It rotates the plane of linear polarisation by twice the angle between the input polarisation and the fast axis. A half-wave plate with fast axis at 22.5 degrees rotates any linear polarisation by 45 degrees. A half-wave plate at 45 degrees converts horizontal to vertical polarisation and vice versa.

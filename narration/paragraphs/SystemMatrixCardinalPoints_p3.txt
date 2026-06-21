@@ -1,1 +1,1 @@
-If C equals zero, the effective focal length is infinite — the system is afocal. Parallel rays enter and parallel rays leave, just magnified. This is a beam expander.
+The back focal distance — from the last physical element to the rear focal point — is given by D minus one, all over C. The front focal distance from the front focal point to the first element is minus A over C.

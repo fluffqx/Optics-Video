@@ -1,1 +1,1 @@
-The most important special case of a travelling wave is the harmonic wave — a pure sine or cosine oscillation.
+The most important special case of a travelling wave is the harmonic wave — a pure sinusoidal oscillation. This is the wave produced by a laser, by a single tuning fork, by any source that oscillates at a single well-defined frequency. It is the building block of all wave phenomena: by Fourier's theorem, any wave can be decomposed into a sum of harmonic waves.

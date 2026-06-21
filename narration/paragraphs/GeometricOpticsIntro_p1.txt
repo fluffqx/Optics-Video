@@ -1,1 +1,1 @@
-Geometric optics applies when the wavelength of light is much smaller than the optical elements it encounters. In this limit, we can ignore diffraction entirely and treat light as rays — straight lines that carry energy in a specific direction.
+Geometric optics applies when the wavelength of light is much smaller than all the apertures, lenses, and optical elements in the system. Under this condition, diffraction effects are negligible and we can treat light as travelling in straight lines called rays. The ray is perpendicular to the wavefront of the wave at every point.

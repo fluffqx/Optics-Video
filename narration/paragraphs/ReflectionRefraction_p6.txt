@@ -1,1 +1,1 @@
-Snell's law gives 1.5 times sine 30 equals 1.0 times sine theta_t.
+Now increase the incident angle to 40 degrees: 1.5 times sine 40 equals 1.5 times 0.6428 equals 0.9642. So sine theta-t equals 0.9642, and theta-t equals 74.6 degrees. The refracted beam is nearly grazing the surface.

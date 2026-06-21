@@ -1,0 +1,1 @@
+At exactly the critical angle, the refracted beam travels parallel to the interface. Beyond the critical angle, Snell's law gives a sine of theta-t greater than one, for which there is no real solution. The refracted beam does not exist — all the energy is reflected. The reflectivity jumps to exactly R equals one for both polarisations.

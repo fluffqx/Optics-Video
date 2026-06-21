@@ -1,1 +1,1 @@
-A is the amplitude — the maximum value of the wave. For an electric field, it's in volts per metre. For a pressure wave, it would be in Pascals.
+A is the amplitude — the maximum value of the wave function. For an electric field wave, it has units of volts per metre. For a pressure wave, it would be in pascals. The amplitude determines the intensity: irradiance is proportional to A squared, not A. This factor of two in the exponent is crucial and we will return to it many times.

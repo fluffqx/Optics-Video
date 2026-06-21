@@ -1,1 +1,1 @@
-The phase velocity is the speed at which the crests of the wave move. It's simply omega divided by k. This is the speed of a single frequency component.
+The phase velocity is the speed at which the crests of a single frequency component move through space. It is defined as omega divided by k. For a pure sinusoidal wave in a non-dispersive medium like vacuum, all frequencies have the same phase velocity, and a wave packet moves without changing shape.

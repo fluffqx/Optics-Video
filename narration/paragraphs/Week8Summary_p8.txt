@@ -1,1 +1,1 @@
-The free spectral range in wavelength equals lambda-naught squared over 2nd.
+Common mistakes: using F instead of script-F in the resolving power formula; forgetting the cosine theta factor for oblique incidence; confusing the order number N with the number of slits; and using lambda in air instead of lambda-naught in vacuum when computing the round-trip phase.

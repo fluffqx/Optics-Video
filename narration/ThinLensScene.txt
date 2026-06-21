@@ -1,21 +1,21 @@
-The thin lens equation is one of the most used equations in all of optics. One over s_o plus one over s_i equals one over f.
+The thin lens equation is the central formula of geometric optics: one over s-o plus one over s-i equals one over f. Here s-o is the object distance, s-i is the image distance, and f is the focal length of the lens.
 
-s_o is the object distance, s_i is the image distance, and f is the focal length of the lens.
+The focal length f is determined by the lens geometry and material through the lensmaker's equation: one over f equals the quantity n-l minus n-m, times the quantity one over R-one minus one over R-two. Here n-l is the refractive index of the lens glass, n-m is the index of the surrounding medium, R-one is the radius of curvature of the first surface and R-two of the second.
 
-The lensmaker's equation tells us how f depends on the lens geometry: one over f equals n_l minus n_m over n_m, times one over R_1 minus one over R_2.
+In air with n-m equals one, the lensmaker's equation simplifies to one over f equals n-l minus one, times one over R-one minus one over R-two. For a biconvex lens with R-one equals R equals positive R and R-two equals negative R: one over R-one minus one over R-two equals one over R plus one over R equals two over R. So f equals R divided by two times n-l minus one.
 
-Here n_l is the refractive index of the lens material, n_m is the index of the surrounding medium, and R_1 and R_2 are the radii of curvature of the two surfaces.
+The dioptric power P equals one over f in dioptres. Ophthalmologists prescribe glasses in dioptres. A person needing one over 0.5 equals plus 2 dioptres to read means they need a converging lens of focal length 50 centimetres. Distance glasses for myopia have negative power — diverging lenses.
 
-In air, this simplifies to one over f equals n_l minus one, times one over R_1 minus one over R_2.
+For lenses in contact, powers add: P-total equals P-one plus P-two. This is why you can combine eyeglass prescriptions additively.
 
-The magnification m equals minus s_i over s_o. A negative magnification means the image is inverted. A magnitude greater than one means the image is larger than the object.
+Now a complete worked example. Biconvex lens: R-one equals plus 20 centimetres, R-two equals minus 20 centimetres, n-l equals 1.50, in air. Object at s-o equals 60 centimetres. Find s-i and m.
 
-The dioptric power P equals one over f in units of dioptres — inverse metres. This is what your optician prescribes for glasses. Powers of lenses in contact simply add.
+Step one: lensmaker's equation. One over f equals 1.50 minus 1.00 times one over 0.20 minus one over minus 0.20, equals 0.50 times 5 plus 5 equals 0.50 times 10 equals 5. So f equals 0.20 metres equals 20 centimetres.
 
-Let's work through a complete example. A biconvex lens with R_1 equals positive 20 centimetres, R_2 equals negative 20 centimetres, and n_l equals 1.5. Object at s_o equals 60 centimetres.
+Step two: thin lens equation. One over s-i equals one over f minus one over s-o equals one over 20 minus one over 60 equals 3 over 60 minus 1 over 60 equals 2 over 60. So s-i equals 30 centimetres. Positive — real image on the far side of the lens.
 
-First: one over f equals 0.5 times 1 over 20 minus 1 over minus 20 equals 0.5 times 10 equals 5 dioptres. So f equals 20 centimetres.
+Step three: magnification. m equals minus s-i over s-o equals minus 30 over 60 equals minus 0.5. Inverted (negative sign) and half the size (absolute value one-half). This is the geometry of a simple projector or camera.
 
-Then: one over s_i equals one over 20 minus one over 60 equals 3 minus 1 over 60 equals 2 over 60. So s_i equals 30 centimetres. Real image.
+Now vary the object distance. Put the object at s-o equals 30 centimetres, which equals 1.5 f: one over s-i equals one over 20 minus one over 30 equals 3 over 60 minus 2 over 60 equals 1 over 60. s-i equals 60 centimetres. m equals minus 60 over 30 equals minus 2. Real, inverted, twice the size. This is how a slide projector works — object just beyond f gives a large, inverted, real image on a distant screen.
 
-Magnification: minus 30 over 60 equals minus 0.5. Inverted, half the size of the object.
+Now put the object at s-o equals 10 centimetres, inside the focal length: one over s-i equals one over 20 minus one over 10 equals 1 over 20 minus 2 over 20 equals minus 1 over 20. s-i equals minus 20 centimetres. Virtual image on the same side as the object. m equals minus minus 20 over 10 equals plus 2. Upright and magnified. This is the magnifying glass — hold it close to the object and the virtual image appears larger and closer than the object.

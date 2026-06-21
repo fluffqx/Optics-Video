@@ -1,7 +1,7 @@
-Welcome to the complete exam preparation series for 31OPT Optics at TU Eindhoven.
+Welcome to the 31OPT Optics exam preparation series for TU Eindhoven Applied Physics. This is a complete course covering all eight weeks, from the wave equation through to the Fabry-Pérot interferometer.
 
-Week 1 covers the foundation of everything in this course — waves, the wave equation, and how we represent waves mathematically using complex numbers.
+Week 1 lays the mathematical foundation that every other week builds on. We cover two main topics: the physics of waves in the first half, and Maxwell's equations and electromagnetic waves in the second half.
 
-By the end of this week, you will understand what a wave actually is, how to write and interpret the wave equation, and why physicists prefer complex exponentials over sines and cosines.
+By the end of Week 1, you will be able to write down the wave equation and explain what each term means physically. You will know the harmonic wave relations by heart. You will be comfortable with complex representation of waves. And you will understand where the speed of light comes from — not as a given constant, but as a derived consequence of Maxwell's equations.
 
-Let's begin.
+Let's begin with the most fundamental question: what exactly is a wave?

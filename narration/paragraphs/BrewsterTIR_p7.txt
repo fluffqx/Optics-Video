@@ -1,0 +1,1 @@
+For glass with n equals 1.5 to air: sine theta-c equals 1 over 1.5, so theta-c equals 41.81 degrees. For diamond with n equals 2.42: theta-c equals 24.41 degrees — even steeper, which is why diamond sparkles so brilliantly. Light entering the diamond undergoes total internal reflection many times before finally finding a face at which it can exit.

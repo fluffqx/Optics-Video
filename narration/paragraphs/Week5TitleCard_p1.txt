@@ -1,1 +1,1 @@
-Week 5 is all about polarisation — one of the most important properties of light, and one that's easy to miss because our eyes can't detect it directly.
+Week 5 develops the Jones vector formalism — the systematic mathematical framework for describing and manipulating polarisation states.

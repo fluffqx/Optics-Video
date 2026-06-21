@@ -1,1 +1,1 @@
-Then: one over s_i equals one over 20 minus one over 60 equals 3 minus 1 over 60 equals 2 over 60. So s_i equals 30 centimetres. Real image.
+Now vary the object distance. Put the object at s-o equals 30 centimetres, which equals 1.5 f: one over s-i equals one over 20 minus one over 30 equals 3 over 60 minus 2 over 60 equals 1 over 60. s-i equals 60 centimetres. m equals minus 60 over 30 equals minus 2. Real, inverted, twice the size. This is how a slide projector works — object just beyond f gives a large, inverted, real image on a distant screen.

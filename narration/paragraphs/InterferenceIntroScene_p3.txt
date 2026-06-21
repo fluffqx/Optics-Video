@@ -1,1 +1,1 @@
-The key requirement is coherence: the two waves must have a stable, well-defined phase relationship. A single laser split into two beams is coherent. Two separate lamps are not — their phases fluctuate randomly on timescales of nanoseconds, washing out any interference pattern.
+When two waves arrive with phases differing by pi — crest aligned with trough — they interfere destructively. The fields cancel and the intensity is zero. This zero-intensity condition is exact for equal-amplitude beams, not approximate.

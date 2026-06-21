@@ -1,1 +1,1 @@
-Let's prove that the function psi equals x minus vt, all squared, actually satisfies the wave equation. This is Bennett Example 1.1.
+Let's verify with a concrete example that f of x minus vt satisfies the wave equation. We choose the simplest non-trivial case: psi equals the quantity x minus vt, all squared.

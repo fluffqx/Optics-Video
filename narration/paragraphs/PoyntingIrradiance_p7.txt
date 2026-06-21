@@ -1,1 +1,1 @@
-For a perfectly reflecting surface — a mirror — the beam reverses direction, so the momentum change is doubled. The pressure is 2I over c.
+Light also carries momentum. The momentum density of an electromagnetic wave is S divided by c-squared. When light is absorbed by a surface, it transfers this momentum and exerts a force. The radiation pressure on a perfectly absorbing surface is I over c. For a perfectly reflecting mirror, the beam reverses direction, so the momentum change is twice as large, giving a pressure of 2I over c.

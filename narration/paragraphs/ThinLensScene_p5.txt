@@ -1,1 +1,1 @@
-In air, this simplifies to one over f equals n_l minus one, times one over R_1 minus one over R_2.
+For lenses in contact, powers add: P-total equals P-one plus P-two. This is why you can combine eyeglass prescriptions additively.

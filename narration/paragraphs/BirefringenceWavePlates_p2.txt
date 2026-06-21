@@ -1,1 +1,1 @@
-A slab of birefringent material of thickness d introduces a phase difference delta phi between the two polarisation components, given by 2 pi over lambda naught times n_e minus n_o times d.
+A slab of birefringent material with thickness d introduces a relative phase difference delta phi between the two orthogonal components. Delta phi equals 2 pi over lambda-naught times the quantity n-e minus n-o times d. This phase difference determines the polarisation transformation produced by the wave plate.

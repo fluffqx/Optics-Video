@@ -1,13 +1,11 @@
-Three quantities characterise the performance of a Fabry-Pérot interferometer: the finesse, the resolving power, and the free spectral range.
+Three key parameters describe the performance of a Fabry-Pérot interferometer: the finesse, the free spectral range, and the resolving power.
 
-The finesse — written as a script F — is the ratio of the free spectral range to the full width at half maximum of a transmission peak. It equals pi times square root of R, divided by one minus R. For R equals 99 percent, the finesse is about 312. This means the transmission peaks are 312 times narrower than the spacing between them.
+The finesse script-F equals pi root R over one minus R equals pi root F over 2, where F is the coefficient of finesse. It equals the ratio of the free spectral range to the FWHM of each transmission peak. Physically, it counts approximately how many times a photon bounces back and forth in the cavity before leaking out. Higher finesse means more bounces, sharper peaks, and better resolution.
 
-Physically, the finesse equals the average number of times a photon bounces back and forth before leaking out through a mirror. Higher reflectivity means more bounces, narrower peaks, higher finesse.
+The order number N equals 2nd cosine theta over lambda at normal incidence equals 2nd over lambda. It is the number of optical wavelengths in one round trip. Resonance occurs at wavelengths satisfying 2nd equals N lambda, where N is a large integer. Successive resonances correspond to N, N-one, N-two, and so on.
 
-The order number N equals 2nd divided by lambda — the number of half-wavelengths that fit in the cavity.
+The resolving power RP equals lambda over delta-lambda-min equals N times script-F. For a cavity with N equals 1000 and script-F equals 30: RP equals 30,000. For N equals 10,000 and script-F equals 100: RP equals 1,000,000. Fabry-Pérot interferometers can achieve resolving powers of tens of millions, far beyond any diffraction grating.
 
-The resolving power equals N times the finesse. This can be enormous — a cavity of 10 centimetres at 633 nanometres has N equal to about 316,000. Multiplied by a finesse of 312, the resolving power exceeds 98 million.
+The free spectral range in wavelength is delta-lambda-FSR equals lambda-naught squared over 2nd. It is the separation between adjacent transmission peaks. The free spectral range in frequency is delta-nu-FSR equals c over 2nd — this is the cavity mode spacing, fundamental to laser physics.
 
-The free spectral range in wavelength is lambda squared over 2nd. It tells you the range of wavelengths you can measure unambiguously — adjacent resonance orders must not overlap your spectrum.
-
-Note carefully: the coefficient of finesse F and the finesse script-F are different quantities. The coefficient is 4R over one minus R squared. The finesse is pi root R over one minus R. Don't confuse them — it's a standard notation trap.
+Do not confuse F with script-F. F equals 4R over one minus R squared appears in the Airy formula. Script-F equals pi root R over one minus R appears in resolving power. The ratio script-F equals pi root F over 2. For R equals 0.9: F equals 360, script-F equals pi times square root 360 over 2 equals 29.8. These are very different numbers and using the wrong one in an exam calculation will give a completely wrong answer.

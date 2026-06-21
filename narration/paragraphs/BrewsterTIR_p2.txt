@@ -1,1 +1,1 @@
-The formula is simple: tangent of theta_B equals n_t over n_i. For air to glass with n equals 1.5, theta_B is 56.3 degrees.
+The formula is simple: tangent theta-B equals n-t over n-i. For air to glass with n-t equals 1.5: theta-B equals arctan of 1.5, which gives 56.31 degrees.

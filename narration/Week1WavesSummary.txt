@@ -1,7 +1,11 @@
-Let's recap the three essential equations from Week 1.
+Let's collect the essential results from the first half of Week 1 before moving to Maxwell's equations.
 
-First: the wave equation itself — the second spatial derivative equals one over v squared times the second time derivative. This governs all classical wave phenomena.
+The wave equation, psi-xx equals one over v-squared times psi-tt, is the fundamental equation governing all wave phenomena. Its general solution is any function of x minus vt or x plus vt. The shape propagates without distortion at speed v in a non-dispersive medium.
 
-Second: the harmonic wave relations — v equals f lambda equals omega over k, with k equals 2 pi over lambda and omega equals 2 pi f. Know these relationships cold.
+The harmonic wave relations connect all the wave parameters. v equals f lambda equals omega over k. The wave number k is 2 pi over lambda. The angular frequency omega is 2 pi f. The period T is one over f. These five relations are not independent — any one follows from the others — but knowing all of them instantly is essential for exam calculations.
 
-Third: the complex representation — psi tilde equals A e to the i times kx minus omega t. The physical wave is the real part. The intensity is the magnitude squared, which equals A squared.
+The complex representation, psi-tilde equals A e to the i kx minus omega t, simplifies all wave calculations. The physical wave is the real part. The intensity is proportional to the modulus squared, which equals A squared. The convenience of complex notation becomes most apparent when adding multiple waves, as we will do extensively in the interference and diffraction weeks.
+
+The superposition principle states that linear combinations of solutions are solutions. This follows from the linearity of the wave equation and is the foundation of all interference phenomena. It holds for electromagnetic waves in linear media, which covers all of classical optics.
+
+Phase velocity v-p equals omega over k gives the speed of crests. Group velocity v-g equals d omega d k gives the speed of energy and information. In a non-dispersive medium they are equal. In a dispersive medium like glass they differ, giving rise to pulse spreading and the separation of colours in a prism.

@@ -1,1 +1,1 @@
-When light goes from a low-index medium to a high-index medium — like air into glass — it bends toward the normal. The angle gets smaller. When it goes from high to low index, it bends away from the normal.
+One important conceptual point: the frequency of light does not change when it crosses an interface. The wavelength changes — it equals lambda-vacuum divided by n in the medium — but the frequency is fixed by the source. This is required by the boundary conditions: the electromagnetic fields on both sides of the interface must oscillate at the same rate.

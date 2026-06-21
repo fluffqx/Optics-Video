@@ -1,1 +1,1 @@
-The spatial part, sine of kx, determines where the amplitude is large or small. The temporal part, cosine of omega t, makes the whole pattern oscillate in time.
+This means the wave pattern does not move. At a node — a position where sine kx equals zero — the amplitude is permanently zero, regardless of time. At an antinode — where sine kx equals plus or minus one — the amplitude oscillates between plus 2A and minus 2A.

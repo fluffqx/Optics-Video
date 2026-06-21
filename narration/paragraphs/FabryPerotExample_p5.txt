@@ -1,1 +1,1 @@
-The order number at this spacing is N equals 1313. The resolving power is N times finesse equals 1313 times 29.8, giving about 39,000.
+Step three: find the required mirror spacing. Delta-lambda-FSR equals lambda-naught squared over 2nd. For a cavity filled with air, n equals 1. Spacing d equals lambda-naught squared over 2 times delta-lambda-FSR equals 656.2 squared times ten to the minus 18 divided by 2 times 0.5 times ten to the minus 9 equals 0.431 millimetres.

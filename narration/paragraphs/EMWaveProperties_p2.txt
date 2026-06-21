@@ -1,1 +1,1 @@
-First, they are transverse: both E and B are perpendicular to the propagation direction k-vector. This follows from the zero-divergence conditions.
+First, electromagnetic waves are transverse. The electric and magnetic fields are both perpendicular to the direction of propagation. This is not an assumption — it follows from div E equals zero and div B equals zero applied to a plane wave. If E had a component along the propagation direction, the divergence would be nonzero, violating Gauss's law. So E must be purely transverse.

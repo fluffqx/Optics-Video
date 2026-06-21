@@ -1,1 +1,1 @@
-Three quantities characterise the performance of a Fabry-Pérot interferometer: the finesse, the resolving power, and the free spectral range.
+Three key parameters describe the performance of a Fabry-Pérot interferometer: the finesse, the free spectral range, and the resolving power.

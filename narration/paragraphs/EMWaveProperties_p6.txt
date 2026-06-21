@@ -1,1 +1,1 @@
-Fifth, in a material with refractive index n, the wave speed becomes c over n, and E equals v times B where v is the local wave speed.
+Fifth, in a material medium with refractive index n, the wave speed becomes c over n, and the wavelength in the medium is lambda over n. The frequency remains unchanged — only the wavelength and speed change when light enters a medium. This is because the boundary conditions require the frequency to be continuous across any interface.

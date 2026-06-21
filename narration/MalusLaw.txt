@@ -1,7 +1,11 @@
-Malus's law describes what happens when linearly polarised light passes through a polariser.
+Malus's law describes what happens to the intensity of linearly polarised light when it passes through a linear polariser. It is one of the most fundamental results involving polarised light and is widely used in optical instruments.
 
-The transmitted intensity is I naught times cosine squared theta, where theta is the angle between the incoming polarisation direction and the polariser's transmission axis.
+The setup: a beam of linearly polarised light with intensity I-naught and polarisation direction making angle theta with the transmission axis of the polariser. The transmitted intensity is I-naught times cosine squared theta. This is Malus's law.
 
-The physical reason: only the component of E along the transmission axis passes through. That component has amplitude E_0 cosine theta. Squaring to get intensity gives the cosine squared factor.
+The physical origin is simple. The polariser transmits only the component of the electric field along its transmission axis. If the field amplitude is E-naught and the angle between the field and the transmission axis is theta, then the transmitted field amplitude is E-naught cosine theta. The transmitted intensity is proportional to the square of the field, giving I-naught cosine squared theta.
 
-At theta equals zero, full transmission. At 45 degrees, half the intensity. At 90 degrees — crossed polarisers — zero transmission. This is why two crossed polarising filters block all light completely.
+At theta equals zero — polarisations aligned — cosine squared is one and full intensity is transmitted. At theta equals 90 degrees — polarisations crossed — cosine squared is zero and no light passes. At theta equals 45 degrees, cosine squared is one half and half the intensity is transmitted. These three special cases are worth memorising.
+
+An important exam question type: three polarisers in sequence. Unpolarised light with intensity I-naught enters a horizontal polariser, then a polariser at 45 degrees, then a vertical polariser. What intensity exits?
+
+After the first polariser: I-naught over 2 (unpolarised light through any polariser gives half the intensity). After the second polariser at 45 degrees to the first: I-naught over 2 times cosine squared 45 equals I-naught over 4. After the third polariser at 90 degrees to the second: I-naught over 4 times cosine squared 45 equals I-naught over 8. So the output is I-naught over 8 — even though the first and last polarisers are crossed, inserting a polariser at 45 degrees between them allows some light through. Without the middle polariser, zero light would exit.

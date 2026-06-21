@@ -1,0 +1,1 @@
+The intensity of a polarisation state is the dot product of the Jones vector with its complex conjugate — the modulus squared of each component, summed. This always gives a real, non-negative result.

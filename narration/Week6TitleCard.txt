@@ -1,15 +1,5 @@
-Interference is perhaps the most dramatic demonstration that light is a wave. When two coherent waves overlap, they don't just add their intensities — they can add constructively to give bright fringes, or cancel destructively to give darkness.
+Week 6 is interference — one of the most dramatic demonstrations that light is a wave. When two coherent beams overlap, the result is not simply their sum of intensities. The fields add, and where they add constructively the intensity can be four times that of a single beam. Where they add destructively, the intensity drops to zero.
 
-The key quantity is the phase difference delta between the two beams. If delta is a multiple of 2 pi, the waves are in phase and interfere constructively. If delta is an odd multiple of pi, they're out of phase and interfere destructively.
+The key topics are: two-beam interference and the general formula, Young's double-slit experiment and its quantitative analysis, thin film interference and the critical role of reflection phase shifts, fringe visibility and coherence, and the Michelson interferometer.
 
-The phase difference comes from two sources: the optical path difference — how much farther one beam has to travel — and any phase shifts that occur upon reflection.
-
-The optical path difference is n times the geometric path length. Converting to phase: delta equals 2 pi over lambda naught times the OPD.
-
-Crucially: whenever light reflects off a surface where it's going from a lower to a higher refractive index, it picks up a phase shift of pi. This is equivalent to adding half a wavelength to the path. If the other reflection doesn't have this shift, the two beams start with a pi phase difference just from the reflections alone.
-
-Young's double slit experiment proved the wave nature of light in 1801. Two slits separated by d produce an interference pattern on a screen at distance L. The fringe spacing is simply lambda times L over d. Bigger wavelength, bigger fringes. Closer slits, bigger fringes.
-
-Thin film interference explains the colours of soap bubbles and oil slicks. The film has two surfaces, and the two reflected beams interfere. The total phase difference depends on the film thickness, the refractive index, and whether reflection phase shifts are present.
-
-The Michelson interferometer splits a beam in two, sends each part down a separate arm, reflects them, and recombines them. Moving one mirror by half a wavelength shifts the OPD by one full wavelength, producing one complete fringe cycle. This instrument can measure distances to nanometre precision.
+Interference phenomena underlie a huge range of technology: anti-reflection coatings, laser resonators, optical coherence tomography in medicine, gravitational wave detection in LIGO, and wavelength measurement in spectroscopy.

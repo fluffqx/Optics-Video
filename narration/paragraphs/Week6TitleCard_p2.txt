@@ -1,1 +1,1 @@
-The key quantity is the phase difference delta between the two beams. If delta is a multiple of 2 pi, the waves are in phase and interfere constructively. If delta is an odd multiple of pi, they're out of phase and interfere destructively.
+The key topics are: two-beam interference and the general formula, Young's double-slit experiment and its quantitative analysis, thin film interference and the critical role of reflection phase shifts, fringe visibility and coherence, and the Michelson interferometer.

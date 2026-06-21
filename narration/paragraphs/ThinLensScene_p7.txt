@@ -1,1 +1,1 @@
-The dioptric power P equals one over f in units of dioptres — inverse metres. This is what your optician prescribes for glasses. Powers of lenses in contact simply add.
+Step one: lensmaker's equation. One over f equals 1.50 minus 1.00 times one over 0.20 minus one over minus 0.20, equals 0.50 times 5 plus 5 equals 0.50 times 10 equals 5. So f equals 0.20 metres equals 20 centimetres.

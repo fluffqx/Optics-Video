@@ -1,9 +1,11 @@
-So what exactly is a wave?
+So what exactly is a wave? This is not a trivial question. The answer shapes everything that follows in this course.
 
-A wave is a disturbance that transports energy from one place to another — without transporting matter along with it. Think of ripples on a pond. The water itself doesn't travel across the pond. The disturbance does.
+A wave is a disturbance that propagates through space and time, transporting energy and momentum from one location to another — without transporting matter itself. Think about a wave on the ocean. The water molecules move up and down, but they do not travel with the wave. The disturbance — the pattern of crests and troughs — moves across the surface, but the water stays roughly where it was.
 
-In optics, the disturbance is the electromagnetic field — the electric and magnetic fields oscillating together as they travel through space.
+The same principle applies to sound waves in air. The air molecules oscillate back and forth around their equilibrium positions. They do not travel from your mouth to someone else's ear. Instead, regions of compression and rarefaction propagate through the air, carrying the sound energy. The air molecules are just the medium — they are not transported.
 
-We start with the simplest possible case: a wave moving in just one spatial dimension. One direction. This is the foundation.
+Now, electromagnetic waves — light — are fundamentally different from mechanical waves in one crucial way. They do not require a medium at all. Light propagates through the vacuum of space. The oscillating quantities are not the positions of matter but the electric and magnetic fields themselves. This was Maxwell's great insight, and it is what we will derive from first principles in the second half of Week 1.
 
-The wave equation is the mathematical statement that tells us exactly how such a disturbance evolves in both space and time simultaneously. Master this equation, and you have the key to understanding everything else in this course — interference, diffraction, polarisation, all of it follows from here.
+For now, we need to build up the mathematical description of a wave. We start with the simplest possible case: a wave moving in one spatial dimension, along the x-axis. Everything we learn in one dimension extends naturally to three dimensions, and the essential physics is all already present in the 1D case.
+
+The fundamental object is the wave function psi of x and t. This is some physical quantity — displacement, pressure, electric field strength — that depends on both position and time. The wave equation is the differential equation that tells us exactly how psi can vary. It is the most important equation in this entire first week.

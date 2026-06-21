@@ -1,1 +1,1 @@
-Lambda is the wavelength — the distance between two consecutive crests.
+Lambda is the wavelength in metres — the spatial distance between two consecutive crests, or two consecutive troughs, or any two points that are one full cycle apart.

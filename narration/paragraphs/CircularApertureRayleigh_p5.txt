@@ -1,1 +1,1 @@
-This is a fundamental limit of wave optics — not an engineering limitation. To resolve finer details, you must either use a shorter wavelength or a larger aperture. There is no other way.
+Human eye: D approximately 3 millimetres at normal viewing, lambda approximately 550 nanometres. Theta-min equals 1.22 times 550 times ten to the minus 9 over 3 times ten to the minus 3 equals 2.24 times ten to the minus 4 radians equals about 46 arcseconds, approximately one arcminute. This matches the well-known "20/20 vision" standard.

@@ -1,1 +1,1 @@
-This is used in laser beam expanders, Galilean telescopes, and spatial light modulators where a collimated beam of a specific diameter is required.
+This is the operating principle of a telescope used in reverse, a Galilean beam expander, and a spatial light modulator relay system. The same matrix result applies to all of them.

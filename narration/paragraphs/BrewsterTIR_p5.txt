@@ -1,0 +1,1 @@
+Total internal reflection occurs when light tries to propagate from a denser medium into a rarer one, at an angle of incidence exceeding the critical angle theta-c. The critical angle is given by sine theta-c equals n-t over n-i, where n-i is greater than n-t.

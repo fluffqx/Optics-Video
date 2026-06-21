@@ -1,1 +1,1 @@
-The translation matrix for free propagation over distance d has ones on the diagonal and d in the upper right. The height increases by d times theta while the angle is unchanged.
+The thin lens matrix has a minus one over f in the lower left and ones elsewhere: the height is unchanged at a thin lens, but the angle is changed by minus y over f. This is the paraxial focusing condition.

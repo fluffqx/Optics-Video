@@ -1,1 +1,1 @@
-In vacuum, and in any non-dispersive medium, these two speeds are identical. Every frequency travels at the same speed, so the wave packet holds its shape.
+In vacuum, omega equals ck, so d omega d k equals c for all frequencies. Phase velocity and group velocity are both c. There is no dispersion — all frequencies travel at the same speed, and a pulse propagates without changing shape.

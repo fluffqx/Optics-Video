@@ -1,1 +1,1 @@
-We multiply three matrices: the second lens, the free-space propagation, and the first lens — in that order from left to right.
+Write the three matrices from right to left: thin lens f-one, free propagation f-one plus f-two, thin lens f-two. Multiply them out step by step.

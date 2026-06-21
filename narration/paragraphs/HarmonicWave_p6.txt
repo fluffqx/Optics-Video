@@ -1,1 +1,1 @@
-Omega is the angular frequency, equal to 2 pi times the frequency f. It tells you how many radians of oscillation happen per second.
+Omega is the angular frequency, in radians per second. It measures the temporal frequency — how many radians of phase the wave completes each second. The relationship to ordinary frequency f in hertz is omega equals 2 pi f. The relationship to period T is omega equals 2 pi divided by T.

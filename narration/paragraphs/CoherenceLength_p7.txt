@@ -1,0 +1,1 @@
+An ultra-stabilised laser for gravitational wave detection — like those used in LIGO — can have linewidths of millihertz, giving coherence lengths of hundreds of thousands of kilometres. This extraordinary coherence is what makes LIGO possible.

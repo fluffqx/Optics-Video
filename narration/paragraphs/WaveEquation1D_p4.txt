@@ -1,1 +1,1 @@
-The equation is saying: the spatial curvature equals the temporal acceleration, scaled by the wave speed v. Space and time are linked by a single number — the speed of the wave.
+The wave equation is saying: the spatial curvature at any point equals the temporal acceleration at that point, divided by v-squared. Intuitively, a region that is curved in space will also be accelerating in time — and the rate at which this happens determines how fast the disturbance propagates.

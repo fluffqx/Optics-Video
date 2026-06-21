@@ -1,1 +1,1 @@
-The Fresnel coefficients r and t give amplitude ratios. To find the fraction of energy, we need the reflectivity R and transmissivity T.
+The Fresnel amplitude coefficients r and t give the ratio of electric field amplitudes. To find the fraction of energy that is reflected and transmitted, we need the energy coefficients.

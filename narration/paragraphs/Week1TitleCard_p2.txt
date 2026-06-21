@@ -1,1 +1,1 @@
-Week 1 covers the foundation of everything in this course — waves, the wave equation, and how we represent waves mathematically using complex numbers.
+Week 1 lays the mathematical foundation that every other week builds on. We cover two main topics: the physics of waves in the first half, and Maxwell's equations and electromagnetic waves in the second half.

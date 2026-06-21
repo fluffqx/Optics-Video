@@ -1,1 +1,1 @@
-Snell's law governs refraction — the bending of light as it crosses the interface. n_i times sine of theta_i equals n_t times sine of theta_t.
+Snell's law governs refraction — the bending of a transmitted beam at an interface. If n-i is the refractive index of the incident medium and n-t is the index of the transmitted medium, with theta-i and theta-t the angles from the normal, then n-i times sine theta-i equals n-t times sine theta-t.

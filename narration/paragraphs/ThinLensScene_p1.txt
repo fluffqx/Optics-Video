@@ -1,1 +1,1 @@
-The thin lens equation is one of the most used equations in all of optics. One over s_o plus one over s_i equals one over f.
+The thin lens equation is the central formula of geometric optics: one over s-o plus one over s-i equals one over f. Here s-o is the object distance, s-i is the image distance, and f is the focal length of the lens.

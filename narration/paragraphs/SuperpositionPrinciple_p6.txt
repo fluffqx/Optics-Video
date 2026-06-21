@@ -1,0 +1,1 @@
+Superposition breaks down in nonlinear media — crystals used for frequency doubling in green laser pointers, for example, or the interior of a laser medium at high intensities. Nonlinear optics is a rich research field precisely because the physics is much richer when superposition fails. But for everything in this course, we are firmly in the linear regime.

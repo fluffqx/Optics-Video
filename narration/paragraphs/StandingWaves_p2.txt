@@ -1,1 +1,1 @@
-The mathematical derivation uses the sum-to-product trigonometric identity. Adding A sine of kx minus omega t, plus A sine of kx plus omega t, gives two A sine of kx times cosine of omega t.
+Using the trigonometric identity for the sum of cosines: A sine of kx minus omega t plus A sine of kx plus omega t equals 2A sine kx times cosine omega t. The spatial and temporal parts have separated completely. The amplitude 2A sine kx is purely spatial, and the cosine omega t factor is purely temporal.

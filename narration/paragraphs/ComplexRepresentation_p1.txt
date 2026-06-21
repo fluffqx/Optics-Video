@@ -1,1 +1,1 @@
-Working with sines and cosines directly becomes very cumbersome as soon as you try to add waves or compute intensities. There's a much better way — complex exponentials.
+Working directly with sines and cosines becomes extremely cumbersome as soon as you start adding multiple waves or computing intensities. The complex representation replaces these trigonometric functions with exponentials, making the algebra vastly simpler. This is not a mathematical trick — it is the standard language of wave optics.

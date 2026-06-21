@@ -1,0 +1,1 @@
+Different example: plus 45-degree linear input through a quarter-wave plate with horizontal fast axis. Input: 1, 1 over root 2. QWP matrix times input: 1, 0, 0, minus i times 1, 1 over root 2 equals 1, minus i over root 2. This is right circular polarisation. The quarter-wave plate has converted 45-degree linear to right circular, exactly as expected.

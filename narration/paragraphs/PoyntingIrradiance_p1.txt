@@ -1,1 +1,1 @@
-Light carries energy. How do we quantify the flow of that energy?
+Light carries energy. To quantify the flow of that energy through space, we use the Poynting vector, named after John Henry Poynting who introduced it in 1884.

@@ -1,1 +1,1 @@
-At normal incidence — when the light hits straight on — both polarisations give the same result: r equals n_i minus n_t over n_i plus n_t. This is a very useful formula to remember.
+S-polarisation: r-perp equals 0.766 minus 1.5 times 0.9036 over 0.766 plus 1.5 times 0.9036 equals 0.766 minus 1.355 over 0.766 plus 1.355 equals minus 0.589 over 2.121 equals minus 0.278. R-perp equals 0.277 squared equals 0.0771, about 7.7 percent reflected.

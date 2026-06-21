@@ -1,1 +1,1 @@
-Welcome to the complete exam preparation series for 31OPT Optics at TU Eindhoven.
+Welcome to the 31OPT Optics exam preparation series for TU Eindhoven Applied Physics. This is a complete course covering all eight weeks, from the wave equation through to the Fabry-Pérot interferometer.

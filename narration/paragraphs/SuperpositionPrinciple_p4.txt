@@ -1,0 +1,1 @@
+This means two laser beams can cross in space and pass through each other completely unaffected. At every point where they overlap, the total electric field is simply the vector sum of the two individual fields. Neither beam is absorbed, scattered, or modified by the other. They interact only through their fields — and the field interaction is simply addition.

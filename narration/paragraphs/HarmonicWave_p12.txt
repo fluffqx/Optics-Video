@@ -1,1 +1,1 @@
-k equals 2 pi divided by 500 times 10 to the minus 9, which gives us 1.257 times 10 to the 7 radians per metre.
+Let's do a complete worked example. A green laser pointer emits light at a wavelength of 532 nanometres in air. The speed of light in air is essentially c equals 2.998 times ten to the eighth metres per second. Find k, f, omega, and T.

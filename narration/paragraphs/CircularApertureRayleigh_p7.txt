@@ -1,0 +1,1 @@
+To improve resolution: either decrease lambda or increase D. X-ray telescopes like Chandra use shorter wavelengths. Radio telescopes compensate their longer wavelengths with huge dishes — the Very Large Array has baselines of 36 kilometres. VLBI — very long baseline interferometry — uses the entire diameter of Earth as an effective aperture, achieving microarcsecond resolution.

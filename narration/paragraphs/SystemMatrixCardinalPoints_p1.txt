@@ -1,1 +1,1 @@
-Multiply all element matrices from right to left to get the system matrix with elements A, B, C, D.
+Once we have the system matrix M with elements A, B, C, D, we can extract all the cardinal points of the optical system without knowing the internal structure.

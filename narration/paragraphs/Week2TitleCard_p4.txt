@@ -1,1 +1,1 @@
-These are not just theoretical tools — they're used every day to design camera lenses, optical fibres, laser cavities, and anti-reflection coatings.
+By the end of this week you will be able to compute reflectivity and transmissivity for any angle and polarisation, find Brewster's angle, determine the critical angle for total internal reflection, and apply Malus's law to polarised light through a polariser.

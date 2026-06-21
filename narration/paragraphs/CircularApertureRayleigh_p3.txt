@@ -1,1 +1,1 @@
-The factor 1.22 — compared to 1.00 for a slit — comes entirely from the circular geometry and the Bessel function mathematics.
+J-one is the first-order Bessel function of the first kind. Its first zero occurs at x equals 3.832, not at x equals pi as for the sinc function. This gives the radius of the first dark ring: sin theta-one equals 1.22 lambda over D. The factor 1.22 is not approximate — it comes from the exact first zero of J-one and must be memorised.

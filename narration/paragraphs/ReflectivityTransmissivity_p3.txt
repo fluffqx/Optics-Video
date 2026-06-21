@@ -1,1 +1,1 @@
-Transmissivity T is not simply t squared — we also need to account for the change in beam cross-section and refractive index: T equals n_t cos theta_t over n_i cos theta_i, times t squared.
+The transmissivity T is not simply t squared. When a beam refracts at an interface, its cross-section changes and the wave speed changes, and we must account for both. The correct expression is T equals n-t cosine theta-t over n-i cosine theta-i, times t squared. The factor n-t cosine theta-t over n-i cosine theta-i corrects for the change in beam cross-section and propagation speed.

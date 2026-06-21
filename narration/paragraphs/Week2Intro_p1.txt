@@ -1,1 +1,1 @@
-Week 2 focuses on what happens when light crosses a boundary between two different optical media.
+When a light wave reaches the boundary between two different media — glass and air, water and glass, any interface where the refractive index changes — some of the light is reflected and some is transmitted. This is true even for a boundary between two perfectly transparent materials. A glass window reflects about four percent of the light from each surface, even though glass is completely transparent.

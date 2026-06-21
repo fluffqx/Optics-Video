@@ -1,1 +1,1 @@
-The key mathematical tool is the paraxial approximation: for small angles, sine theta is approximately equal to tangent theta, which is approximately equal to theta in radians. This linearises all the equations and makes them analytically tractable.
+The most important lesson of this week is sign conventions. They seem tedious, but getting a sign wrong in a geometric optics problem means getting the completely wrong answer. We will establish them carefully and check them on every example.

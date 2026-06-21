@@ -1,1 +1,1 @@
-The resolving power equals N times m — the number of slits times the diffraction order. This is why large gratings used in high orders can resolve wavelengths differing by less than a hundredth of a nanometre.
+The sodium D lines are the classic test: lambda-one equals 589.0 nanometres and lambda-two equals 589.6 nanometres, separation 0.6 nanometres. Required resolving power equals 589 over 0.6 equals 982. Our 30,000-groove grating easily resolves them in first order.

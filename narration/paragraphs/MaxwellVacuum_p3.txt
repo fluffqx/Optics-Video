@@ -1,1 +1,1 @@
-These four equations couple E and B together through their time derivatives. A changing E creates a curling B, and a changing B creates a curling E. This mutual regeneration is precisely what allows electromagnetic waves to propagate through empty space indefinitely.
+The coupling between E and B in vacuum is symmetric and beautiful. If you know E everywhere at one moment, you can determine B at the next moment. And if you know B, you can determine the next E. The fields leapfrog each other forward in time, and in doing so, they propagate through space at the speed of light.

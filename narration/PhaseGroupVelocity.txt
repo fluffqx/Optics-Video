@@ -1,19 +1,15 @@
-There are actually two different speeds associated with a wave, and confusing them is a classic mistake.
+There are two different speeds associated with any wave, and confusing them is one of the most common conceptual errors in wave physics. Understanding the distinction is essential for optics and for exam questions on dispersion.
 
-The phase velocity is the speed at which the crests of the wave move. It's simply omega divided by k. This is the speed of a single frequency component.
+The phase velocity is the speed at which the crests of a single frequency component move through space. It is defined as omega divided by k. For a pure sinusoidal wave in a non-dispersive medium like vacuum, all frequencies have the same phase velocity, and a wave packet moves without changing shape.
 
-The group velocity is the speed at which the envelope of a wave packet moves — this is the speed at which energy and information actually travel. It's defined as d omega d k — the derivative of angular frequency with respect to wave number.
+The group velocity is fundamentally different. It is the speed at which the envelope of a wave packet moves — the speed of the overall amplitude modulation. It is defined as the derivative d omega d k, evaluated at the central frequency of the packet. The group velocity is also the velocity at which energy and information propagate. It is the physically measurable velocity — if you modulate a laser beam and watch the modulation travel, you are measuring the group velocity.
 
-In vacuum, and in any non-dispersive medium, these two speeds are identical. Every frequency travels at the same speed, so the wave packet holds its shape.
+In vacuum, omega equals ck, so d omega d k equals c for all frequencies. Phase velocity and group velocity are both c. There is no dispersion — all frequencies travel at the same speed, and a pulse propagates without changing shape.
 
-But in a dispersive medium like glass, different frequencies travel at different speeds — that's exactly what dispersion means. The phase velocity varies with frequency. And this causes the group velocity to differ from the phase velocity.
+In a dispersive medium like glass, omega is not a linear function of k. Different frequencies have different phase velocities, and the group velocity differs from the phase velocity. This is why a prism separates white light: red and violet have different phase velocities in glass, so they refract at different angles. The index of refraction n is defined as c over v-phase, and it depends on frequency.
 
-This is why a prism separates white light into a rainbow. Red light and violet light have different phase velocities in glass, so they refract at different angles.
+The group velocity in a dispersive medium is c divided by the quantity n plus omega times dn d omega. The term omega dn d omega is the correction for dispersion. When dn d omega is positive — meaning n increases with frequency, which is called normal dispersion — the group velocity is less than c over n. Energy travels slower than the crests.
 
-Let's look at a concrete example. Suppose the dispersion relation is omega equals a times k squared — a hypothetical case.
+Consider a concrete example: suppose the dispersion relation is omega equals a k squared, where a is a constant. The phase velocity is omega over k, which equals ak — it depends on k, so this is a dispersive medium. The group velocity is d omega d k, which equals 2ak — twice the phase velocity. The envelope of a wave packet travels twice as fast as the individual crests. You can actually observe this in water waves on a calm lake: ripples spread out and the crests move faster than the overall disturbance.
 
-The phase velocity is omega over k, which equals a k. It depends on k, so this medium is dispersive.
-
-The group velocity is d omega d k, which equals 2 a k. That's twice the phase velocity.
-
-So in this medium, the envelope of a wave packet travels twice as fast as the individual crests inside it. Fascinating behaviour, and directly measurable in real dispersive media.
+In anomalous dispersion, near an absorption resonance, dn d omega can be negative and the group velocity can apparently exceed c. This does not violate relativity because the group velocity is not the signal velocity in these regimes — the pulse shape distorts dramatically and information cannot actually travel faster than c.

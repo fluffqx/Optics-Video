@@ -1,0 +1,1 @@
+An important exam question type: three polarisers in sequence. Unpolarised light with intensity I-naught enters a horizontal polariser, then a polariser at 45 degrees, then a vertical polariser. What intensity exits?

@@ -1,1 +1,1 @@
-Fourth, E and B oscillate in phase — they reach their maxima and minima simultaneously.
+Fourth, E and B oscillate in phase — they reach their maxima and minima simultaneously. This is a consequence of the real relationship B equals k-hat cross E divided by c: the phase of B is the same as the phase of E.

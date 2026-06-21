@@ -1,1 +1,1 @@
-The result depends critically on the phase relationship between successive beams. If all beams are in phase — constructive interference — the transmitted field is enormously amplified. If they are out of phase, they cancel.
+The transmitted intensity is the modulus squared of T-tilde divided by the input intensity: I-t over I-naught equals t-squared squared over the modulus squared of one minus r-squared e to the i delta. Expanding the denominator and using energy conservation gives the Airy function.

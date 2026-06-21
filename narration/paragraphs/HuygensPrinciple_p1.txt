@@ -1,1 +1,1 @@
-Bennett opens Chapter 8 on diffraction with a profound statement: in a sense, diffraction is interference done correctly.
+Huygens proposed in 1678 that every point on a wavefront acts as the source of a secondary spherical wavelet. The new wavefront at a later time is the envelope of all these secondary wavelets. This principle correctly predicts reflection, refraction, and diffraction, though it was not properly derived from wave theory until Fresnel and Kirchhoff provided rigorous mathematical formulations in the 19th century.

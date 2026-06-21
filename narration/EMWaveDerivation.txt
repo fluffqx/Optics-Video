@@ -1,7 +1,9 @@
-Here is how Maxwell derived the wave equation for light — arguably the most important derivation in the history of physics.
+Here is Maxwell's derivation of the electromagnetic wave equation — arguably the most important calculation in the history of physics.
 
-Take the curl of Faraday's law. The left side becomes curl of curl of E, which by a vector identity equals the gradient of the divergence of E minus the Laplacian of E. Since the divergence of E is zero in vacuum, this simplifies to minus the Laplacian of E.
+Start with Faraday's law: curl of E equals minus dB dt. Take the curl of both sides: curl of curl of E equals minus d dt of curl of B. Now substitute the Ampère-Maxwell law for curl of B: curl of curl of E equals minus mu-naught epsilon-naught times the second time derivative of E.
 
-The right side becomes minus the time derivative of the curl of B, which by Ampere's law equals minus mu naught epsilon naught times the second time derivative of E.
+Apply the vector identity that curl of curl of F equals grad of div of F, minus del-squared of F. Since div of E equals zero in vacuum, the grad div term vanishes, leaving: minus del-squared E equals minus mu-naught epsilon-naught times the second time derivative of E.
 
-Setting these equal gives the wave equation for E, with wave speed c equals 1 over the square root of mu naught epsilon naught. Plugging in the measured values of these constants gives exactly 3 times 10 to the 8 metres per second — the speed of light. Maxwell had proved that light is an electromagnetic wave.
+Rearranging gives the electromagnetic wave equation: del-squared E equals mu-naught epsilon-naught times d-squared E d t-squared. This is exactly the 3D wave equation, with wave speed v equals one over the square root of mu-naught epsilon-naught.
+
+Substituting the values: mu-naught equals 4 pi times ten to the minus 7 henries per metre, and epsilon-naught equals 8.854 times ten to the minus 12 farads per metre. Their product is 1.113 times ten to the minus 17 seconds squared per metre squared. Taking the reciprocal and the square root gives v equals 2.998 times ten to the 8 metres per second — the speed of light. Maxwell derived this from purely electromagnetic measurements, without any assumption about light. The identification of light as an electromagnetic wave followed immediately.

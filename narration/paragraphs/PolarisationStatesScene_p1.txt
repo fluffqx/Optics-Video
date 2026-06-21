@@ -1,1 +1,1 @@
-Polarisation describes the direction in which the electric field oscillates as a wave propagates. For a wave travelling in the z-direction, E can point anywhere in the x-y plane.
+The Jones vector for a plane wave propagating in the z-direction is a two-component vector containing the x and y complex amplitudes of the electric field. The common factor e to the i kz minus omega t is always implicit.

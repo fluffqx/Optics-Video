@@ -1,1 +1,1 @@
-P-polarisation — sometimes called TM or transverse magnetic — has the electric field lying in the plane of incidence, parallel to the page.
+For p-polarisation, the reflection amplitude coefficient is r-parallel equals n-t cosine theta-i minus n-i cosine theta-t, divided by n-t cosine theta-i plus n-i cosine theta-t. The transmission amplitude coefficient is t-parallel equals 2 n-i cosine theta-i, divided by n-t cosine theta-i plus n-i cosine theta-t.

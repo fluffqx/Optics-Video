@@ -1,1 +1,1 @@
-Every time light passes through a lens, reflects off a mirror, or travels through a window, it's encountering an interface. The behaviour at that interface determines how optical instruments work.
+The key results of Week 2 are Snell's law and the Fresnel equations. Snell's law tells you the directions of the reflected and refracted beams. The Fresnel equations tell you the amplitudes — how much light is reflected and how much is transmitted, and how this depends on the angle and the polarisation.

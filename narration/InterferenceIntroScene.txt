@@ -1,5 +1,9 @@
-Interference is what happens when two or more coherent waves overlap. Their electric fields add by superposition, and the resulting intensity can be larger or smaller than the sum of the individual intensities.
+Interference is the result of the superposition principle applied to two or more coherent waves occupying the same region of space. The fields add pointwise, and the intensity — which goes as field squared — is therefore not simply the sum of the individual intensities.
 
-When two waves are in phase — their crests align — the amplitude doubles and the intensity quadruples. This is constructive interference. When they are exactly out of phase — crests align with troughs — they cancel completely. This is destructive interference.
+When two waves arrive at a point with the same phase — their crests and troughs aligned — they interfere constructively. The total field amplitude is the sum of the individual amplitudes. For two equal beams each with amplitude E-naught, the total amplitude is 2E-naught and the intensity is 4I-naught — four times the individual intensity. Energy is not created: the bright fringes take their extra energy from adjacent dark fringe locations.
 
-The key requirement is coherence: the two waves must have a stable, well-defined phase relationship. A single laser split into two beams is coherent. Two separate lamps are not — their phases fluctuate randomly on timescales of nanoseconds, washing out any interference pattern.
+When two waves arrive with phases differing by pi — crest aligned with trough — they interfere destructively. The fields cancel and the intensity is zero. This zero-intensity condition is exact for equal-amplitude beams, not approximate.
+
+The requirement for interference to be observable is coherence. The two beams must maintain a stable, well-defined phase relationship for a time long enough for the detector to average over. If the phase relationship fluctuates randomly on a timescale shorter than the measurement, the fringes wash out and only the incoherent sum of intensities is observed.
+
+Coherence comes in two forms. Temporal coherence requires the source to emit at a well-defined frequency — a narrow spectral linewidth. Spatial coherence requires the source to be small enough that the wavefront at the point of observation has a well-defined phase across the aperture. Laser light has both excellent temporal and spatial coherence, making it ideal for interferometry.

@@ -1,1 +1,1 @@
-We take the second partial derivative with respect to x, and get 2. Then we take the second partial derivative with respect to t, and get 2v squared. Dividing by v squared gives exactly 2 — matching the left side perfectly. The wave equation is satisfied.
+We compute the left side first. The first spatial derivative is 2 times open bracket x minus vt close bracket. Differentiating again with respect to x gives 2. So the left side of the wave equation is simply 2.

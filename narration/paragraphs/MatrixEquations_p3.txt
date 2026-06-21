@@ -1,1 +1,1 @@
-The thin lens matrix has minus one over f in the lower left. The lens changes the angle but not the height of a ray passing through it.
+The refraction matrix at a spherical surface with radius R separating media with indices n-one and n-two accounts for both the Snell's law angle change and the unchanged height.

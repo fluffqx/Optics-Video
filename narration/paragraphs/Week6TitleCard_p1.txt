@@ -1,1 +1,1 @@
-Interference is perhaps the most dramatic demonstration that light is a wave. When two coherent waves overlap, they don't just add their intensities — they can add constructively to give bright fringes, or cancel destructively to give darkness.
+Week 6 is interference — one of the most dramatic demonstrations that light is a wave. When two coherent beams overlap, the result is not simply their sum of intensities. The fields add, and where they add constructively the intensity can be four times that of a single beam. Where they add destructively, the intensity drops to zero.

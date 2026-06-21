@@ -1,11 +1,13 @@
-Here is the one-dimensional wave equation. Take a moment to look at its structure.
+Here is the one-dimensional wave equation. It relates the second derivative of psi with respect to position x, to the second derivative of psi with respect to time t.
 
-On the left side, we have the second derivative of psi with respect to position x. This is the curvature of the wave in space — how sharply the wave bends at each point.
+On the left side, we have the second partial derivative of psi with respect to x. This is the spatial curvature of the wave profile — how rapidly the shape bends in space. A large positive value means the profile is concave upward; a large negative value means it curves downward.
 
-On the right side, we have one over v squared, times the second derivative of psi with respect to time. This is the acceleration of the wave in time — how quickly the wave is changing at each moment.
+On the right side, we have one over v-squared, times the second partial derivative of psi with respect to t. This is the temporal acceleration of the field — how rapidly the value at a fixed point in space is changing in time. The factor one over v-squared scales this acceleration.
 
-The equation is saying: the spatial curvature equals the temporal acceleration, scaled by the wave speed v. Space and time are linked by a single number — the speed of the wave.
+The wave equation is saying: the spatial curvature at any point equals the temporal acceleration at that point, divided by v-squared. Intuitively, a region that is curved in space will also be accelerating in time — and the rate at which this happens determines how fast the disturbance propagates.
 
-Now, what are the solutions to this equation? Any function of the form f of x minus vt is a solution — this represents a wave travelling in the positive x direction at speed v. And any function of the form g of x plus vt travels in the negative x direction.
+The critical observation is that the wave equation is linear. Psi appears only to the first power, and there are no products of psi with its derivatives. This linearity is what makes the superposition principle possible — and superposition is the foundation of all interference and diffraction phenomena that dominate the rest of this course.
 
-Notice the key insight: the shape of the wave — whatever shape it has — travels without distortion. The wave just moves.
+The general solution to the wave equation is any function of the form f of x minus vt, or g of x plus vt. The first represents a profile moving in the positive x direction at speed v. The second moves in the negative x direction. Any combination of these is also a solution.
+
+The remarkable thing is that the shape of f or g can be completely arbitrary — a Gaussian pulse, a square wave, a single crest, anything at all. Whatever shape the wave has at time zero, it will retain exactly that shape as it propagates. This shape-preserving property follows directly from the structure of the wave equation, and it only holds when v is the same for all frequencies — which we call a non-dispersive medium.

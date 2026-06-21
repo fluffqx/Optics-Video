@@ -1,1 +1,1 @@
-Step 1: Snell's law gives sine theta_t equals 1.0 over 1.5 times sine 40 degrees equals 0.4285, so theta_t equals 25.37 degrees.
+The p-polarisation reflects significantly less than s-polarisation at this angle. This difference increases until Brewster's angle, where r-parallel equals zero exactly — we will derive this next.

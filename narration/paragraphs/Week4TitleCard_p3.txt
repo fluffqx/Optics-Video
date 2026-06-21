@@ -1,1 +1,1 @@
-This is why computers are so good at optical design. Matrix multiplication is fast and exact, and the same formalism works for any sequence of elements.
+Standing waves and beating are superposition phenomena that arise from adding waves in particular configurations. Standing waves arise from two counter-propagating waves and are fundamental to laser resonators. Beating arises from two waves of slightly different frequencies and is the basis of heterodyne detection.

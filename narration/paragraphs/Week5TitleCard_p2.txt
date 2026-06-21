@@ -1,1 +1,1 @@
-Polarisation describes the direction in which the electric field oscillates as the wave propagates. For a plane wave travelling in the z direction, the electric field can point anywhere in the x-y plane.
+The key insight is that any polarisation state of a plane wave can be represented as a two-component complex column vector — the Jones vector. Any optical element that transforms the polarisation can be represented as a two-by-two complex matrix — the Jones matrix. To trace polarisation through a sequence of elements, you simply multiply the matrices.

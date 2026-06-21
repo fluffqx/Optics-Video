@@ -1,1 +1,1 @@
-The visibility V is defined as I_max minus I_min, divided by I_max plus I_min. Perfect fringes give V equals 1. No fringes at all give V equals 0.
+Perfect visibility V equals one means I-min equals zero — the dark fringes are completely dark. This requires the two interfering beams to have equal intensities and to be perfectly coherent. V equals zero means no fringes — I-max equals I-min — the pattern is uniformly illuminated with no oscillation. This occurs for completely incoherent sources or orthogonally polarised beams.

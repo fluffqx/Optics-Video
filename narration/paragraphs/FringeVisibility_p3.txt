@@ -1,1 +1,1 @@
-For two beams of equal intensity from a perfectly coherent source, V equals 1. If the intensities are unequal, V is less than 1 even with perfect coherence — the dark fringes are not completely dark.
+For two beams with intensities I-one and I-two from a coherent source: V equals 2 root I-one I-two over I-one plus I-two. This is maximised when I-one equals I-two, giving V equals one. For unequal intensities, say I-one equals 9 I-two: V equals 2 times 3 I-two over 9 I-two plus I-two equals 6 over 10 equals 0.6.

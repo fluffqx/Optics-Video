@@ -1,1 +1,1 @@
-This method is exact within the paraxial approximation and trivially handles arbitrarily complex systems. Computer-aided optical design tools use this formalism to trace millions of rays simultaneously.
+The key constraint is that all matrices in this framework have a determinant of exactly one. This is a consequence of conservation of the optical path and is a useful check on matrix algebra.

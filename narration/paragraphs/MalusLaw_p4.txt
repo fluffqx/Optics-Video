@@ -1,1 +1,1 @@
-At theta equals zero, full transmission. At 45 degrees, half the intensity. At 90 degrees — crossed polarisers — zero transmission. This is why two crossed polarising filters block all light completely.
+At theta equals zero — polarisations aligned — cosine squared is one and full intensity is transmitted. At theta equals 90 degrees — polarisations crossed — cosine squared is zero and no light passes. At theta equals 45 degrees, cosine squared is one half and half the intensity is transmitted. These three special cases are worth memorising.

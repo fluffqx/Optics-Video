@@ -1,1 +1,1 @@
-For a sequence of elements, multiply the Jones matrices from right to left — first element on the right — then apply the result to the input vector.
+To find the output for a specific input and sequence of elements: write down the Jones matrices, multiply from right to left (first element on right), then multiply by the input Jones vector. The result is the output Jones vector, from which you can read off the polarisation state and intensity.

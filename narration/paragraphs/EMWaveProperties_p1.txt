@@ -1,1 +1,1 @@
-The plane wave solutions to Maxwell's equations have five remarkable properties, all provable directly from the equations.
+The plane wave solutions to Maxwell's equations in vacuum — fields of the form E equals E-naught times e to the i k-vector dot r minus omega t — have several remarkable and non-obvious properties that follow from the equations themselves.

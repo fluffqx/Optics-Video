@@ -1,1 +1,1 @@
-First: the wave equation itself — the second spatial derivative equals one over v squared times the second time derivative. This governs all classical wave phenomena.
+The wave equation, psi-xx equals one over v-squared times psi-tt, is the fundamental equation governing all wave phenomena. Its general solution is any function of x minus vt or x plus vt. The shape propagates without distortion at speed v in a non-dispersive medium.

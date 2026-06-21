@@ -1,1 +1,1 @@
-S-polarisation — sometimes called TE or transverse electric — has the electric field perpendicular to the plane of incidence. If you imagine the ray diagram drawn on paper, the s-polarised field points out of the paper toward you.
+For s-polarisation, the reflection amplitude coefficient is r-perp equals n-i cosine theta-i minus n-t cosine theta-t, all divided by n-i cosine theta-i plus n-t cosine theta-t. The transmission amplitude coefficient is t-perp equals 2 n-i cosine theta-i, divided by n-i cosine theta-i plus n-t cosine theta-t.

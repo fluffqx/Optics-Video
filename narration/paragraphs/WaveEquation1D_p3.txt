@@ -1,1 +1,1 @@
-On the right side, we have one over v squared, times the second derivative of psi with respect to time. This is the acceleration of the wave in time — how quickly the wave is changing at each moment.
+On the right side, we have one over v-squared, times the second partial derivative of psi with respect to t. This is the temporal acceleration of the field — how rapidly the value at a fixed point in space is changing in time. The factor one over v-squared scales this acceleration.

@@ -1,1 +1,1 @@
-For comparison, the best diffraction grating we looked at had a resolving power of 30,000. The Fabry-Pérot beats it in a much more compact device.
+Step five: verify resolution. Minimum resolvable wavelength difference equals lambda over RP equals 656.2 over 39,100 equals 0.0168 nanometres. This is much smaller than the 0.18 nanometre separation of the H-alpha lines, so yes, they are clearly resolved with this cavity.

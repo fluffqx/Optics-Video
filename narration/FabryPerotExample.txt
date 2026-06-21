@@ -1,13 +1,15 @@
-Let's work through Bennett's Example 7.11 — measuring the splitting between the hydrogen and deuterium H-alpha spectral lines using a Fabry-Pérot interferometer.
+Let's work through Bennett's Example 7.11 — resolving the hydrogen and deuterium H-alpha lines.
 
-Hydrogen H-alpha is at 656.28 nanometres. Deuterium H-alpha is at 656.10 nanometres. The splitting is 0.18 nanometres. We want to resolve this with mirrors of 90 percent reflectivity.
+The H-alpha line of hydrogen is at 656.28 nanometres. The H-alpha line of deuterium is at 656.10 nanometres. The wavelength difference is 0.18 nanometres. We want to design a Fabry-Pérot with mirror reflectivity R equals 0.90 that can resolve these two lines.
 
-First, the coefficient of finesse: F equals 4 times 0.90 divided by 0.10 squared, giving 360. The finesse is pi times square root of 360 divided by 2, giving 29.8.
+Step one: coefficient of finesse. F equals 4 times 0.90 over 1 minus 0.90 squared equals 3.60 over 0.01 equals 360. Finesse: script-F equals pi root 360 over 2 equals pi times 18.97 over 2 equals 29.8.
 
-We choose a free spectral range of 0.5 nanometres to comfortably bracket the 0.18 nanometre splitting. This requires a mirror spacing of d equals lambda squared over 2 times delta-lambda-FSR, which gives 0.431 millimetres. Tight!
+Step two: choose free spectral range. The FSR must comfortably exceed the line separation of 0.18 nanometres. Choose FSR equals 0.50 nanometres, which is nearly three times the separation.
 
-The order number at this spacing is N equals 1313. The resolving power is N times finesse equals 1313 times 29.8, giving about 39,000.
+Step three: find the required mirror spacing. Delta-lambda-FSR equals lambda-naught squared over 2nd. For a cavity filled with air, n equals 1. Spacing d equals lambda-naught squared over 2 times delta-lambda-FSR equals 656.2 squared times ten to the minus 18 divided by 2 times 0.5 times ten to the minus 9 equals 0.431 millimetres.
 
-The minimum resolvable wavelength difference is lambda over resolving power, which is 656.2 divided by 39,000, giving 0.017 nanometres. This is more than ten times smaller than the actual splitting of 0.18 nanometres — the lines are clearly resolved.
+Step four: compute order number and resolving power. N equals 2d over lambda-naught equals 2 times 0.431 times ten to the minus 3 over 656.2 times ten to the minus 9 equals 1313. Resolving power equals N times script-F equals 1313 times 29.8 equals 39,100.
 
-For comparison, the best diffraction grating we looked at had a resolving power of 30,000. The Fabry-Pérot beats it in a much more compact device.
+Step five: verify resolution. Minimum resolvable wavelength difference equals lambda over RP equals 656.2 over 39,100 equals 0.0168 nanometres. This is much smaller than the 0.18 nanometre separation of the H-alpha lines, so yes, they are clearly resolved with this cavity.
+
+For comparison: the best diffraction grating we discussed, with 30,000 slits in first order, has RP equals 30,000. Our compact 0.43-millimetre Fabry-Pérot with RP equals 39,100 outperforms it, and could do much better with higher-reflectivity mirrors.

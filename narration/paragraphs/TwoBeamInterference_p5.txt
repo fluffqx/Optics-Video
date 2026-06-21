@@ -1,0 +1,1 @@
+The fringe spacing — how quickly the pattern alternates between bright and dark — depends on the geometry of the setup and the wavelength. Shorter wavelength gives finer fringes for the same geometry. Larger angle between the beams gives finer fringes. This is the basis of interferometric measurement of wavelength.

@@ -1,1 +1,1 @@
-v is the phase speed — how fast the wave crests move. It equals omega divided by k, which also equals f times lambda.
+v is the phase velocity — the speed at which the wave crests move through space. It is given by omega divided by k, or equivalently by f times lambda. This is the key relation connecting spatial and temporal oscillation rates. For light in vacuum, v equals c, the speed of light.

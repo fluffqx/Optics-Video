@@ -1,1 +1,1 @@
-Standing waves are fundamental to understanding lasers, optical cavities, and musical instruments. In a laser cavity, only wavelengths that fit exactly into the cavity length can form standing waves — these are the laser modes.
+Standing waves also explain why we can hear notes from a guitar string. The string can only vibrate in modes where nodes exist at both fixed ends. The allowed wavelengths are 2L, L, 2L over 3, and so on — these give the fundamental frequency and its harmonics.

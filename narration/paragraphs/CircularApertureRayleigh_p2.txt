@@ -1,1 +1,1 @@
-The pattern is described by the first-order Bessel function J-one, and the first dark ring occurs where the argument equals 3.832. This gives sine theta-one equals 1.22 lambda over D, where D is the aperture diameter.
+The mathematics replaces the one-dimensional sinc function with a Bessel function. The radial intensity distribution is I equals I-naught times 2 J-one of x over x, squared, where x equals pi D r over lambda z, with r the distance from the axis on the screen and z the distance to the screen.

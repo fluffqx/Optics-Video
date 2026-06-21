@@ -1,1 +1,1 @@
-Mathematically, we add A cosine of omega-one times t plus A cosine of omega-two times t. Using the sum-to-product identity, this equals two A times cosine of the half-difference in frequencies times t, multiplied by cosine of the average frequency times t.
+Mathematically: A cosine omega-one t plus A cosine omega-two t equals 2A cosine of omega-one minus omega-two over 2 times t, times cosine of omega-one plus omega-two over 2 times t. The first factor is the slowly varying envelope and the second is the fast oscillation at the average frequency.

@@ -1,1 +1,1 @@
-The phase difference comes from two sources: the optical path difference — how much farther one beam has to travel — and any phase shifts that occur upon reflection.
+Interference phenomena underlie a huge range of technology: anti-reflection coatings, laser resonators, optical coherence tomography in medicine, gravitational wave detection in LIGO, and wavelength measurement in spectroscopy.

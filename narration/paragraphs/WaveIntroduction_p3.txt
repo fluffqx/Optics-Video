@@ -1,1 +1,1 @@
-In optics, the disturbance is the electromagnetic field — the electric and magnetic fields oscillating together as they travel through space.
+The same principle applies to sound waves in air. The air molecules oscillate back and forth around their equilibrium positions. They do not travel from your mouth to someone else's ear. Instead, regions of compression and rarefaction propagate through the air, carrying the sound energy. The air molecules are just the medium — they are not transported.

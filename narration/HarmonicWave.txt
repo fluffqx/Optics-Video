@@ -1,27 +1,27 @@
-The most important special case of a travelling wave is the harmonic wave — a pure sine or cosine oscillation.
+The most important special case of a travelling wave is the harmonic wave — a pure sinusoidal oscillation. This is the wave produced by a laser, by a single tuning fork, by any source that oscillates at a single well-defined frequency. It is the building block of all wave phenomena: by Fourier's theorem, any wave can be decomposed into a sum of harmonic waves.
 
-Psi of x and t equals A times sine of kx minus omega t plus phi.
+The harmonic wave is written: psi of x and t equals A times sine of the quantity kx minus omega t plus phi.
 
-Let's go through every symbol carefully, because these appear constantly throughout the course.
+Let's go through every symbol carefully, because these appear throughout this entire course and you need to know them instantly.
 
-A is the amplitude — the maximum value of the wave. For an electric field, it's in volts per metre. For a pressure wave, it would be in Pascals.
+A is the amplitude — the maximum value of the wave function. For an electric field wave, it has units of volts per metre. For a pressure wave, it would be in pascals. The amplitude determines the intensity: irradiance is proportional to A squared, not A. This factor of two in the exponent is crucial and we will return to it many times.
 
-k is the wave number, equal to 2 pi divided by the wavelength lambda. It tells you how many radians of oscillation fit into one metre of space. Its units are radians per metre.
+k is the wave number, in units of radians per metre. It measures the spatial frequency — how many complete oscillation cycles fit into one metre. The relationship between k and the wavelength lambda is k equals 2 pi divided by lambda. Large k means short wavelength, meaning the wave oscillates rapidly in space.
 
-Omega is the angular frequency, equal to 2 pi times the frequency f. It tells you how many radians of oscillation happen per second.
+Omega is the angular frequency, in radians per second. It measures the temporal frequency — how many radians of phase the wave completes each second. The relationship to ordinary frequency f in hertz is omega equals 2 pi f. The relationship to period T is omega equals 2 pi divided by T.
 
-Lambda is the wavelength — the distance between two consecutive crests.
+Lambda is the wavelength in metres — the spatial distance between two consecutive crests, or two consecutive troughs, or any two points that are one full cycle apart.
 
-f is the ordinary frequency in hertz — how many full cycles per second. Related to the period T by f equals one over T.
+f is the ordinary frequency in hertz — the number of complete cycles per second. It is the inverse of the period: f equals one over T.
 
-v is the phase speed — how fast the wave crests move. It equals omega divided by k, which also equals f times lambda.
+v is the phase velocity — the speed at which the wave crests move through space. It is given by omega divided by k, or equivalently by f times lambda. This is the key relation connecting spatial and temporal oscillation rates. For light in vacuum, v equals c, the speed of light.
 
-And phi is the initial phase offset — it shifts the wave left or right in time.
+phi is the initial phase — a constant in radians that shifts the wave pattern left or right in time. It is determined by initial conditions and tells you the phase of the wave at x equals zero and t equals zero.
 
-Let's do a quick example. Given lambda equals 500 nanometres and v equals 3 times 10 to the 8 metres per second — visible green light — we can find all the other quantities.
+All these symbols are connected by a web of relations that you must be able to derive in your sleep. The most important ones: v equals f lambda, v equals omega over k, k equals 2 pi over lambda, omega equals 2 pi f, and T equals one over f.
 
-k equals 2 pi divided by 500 times 10 to the minus 9, which gives us 1.257 times 10 to the 7 radians per metre.
+Let's do a complete worked example. A green laser pointer emits light at a wavelength of 532 nanometres in air. The speed of light in air is essentially c equals 2.998 times ten to the eighth metres per second. Find k, f, omega, and T.
 
-Multiplying by v gives omega equal to 3.77 times 10 to the 15 radians per second.
+k equals 2 pi divided by 532 times ten to the minus nine, giving 1.181 times ten to the seventh radians per metre. f equals c divided by lambda, which is 2.998 times ten to the eighth divided by 532 times ten to the minus nine, giving 5.64 times ten to the fourteenth hertz — that is 564 terahertz.
 
-And the period T equals 2 pi divided by omega, giving 1.67 times 10 to the minus 15 seconds — about 1.7 femtoseconds. Light oscillates extraordinarily fast.
+Omega equals 2 pi times f, giving 3.54 times ten to the fifteenth radians per second. The period T equals one divided by f, giving 1.77 times ten to the minus fifteen seconds — one point seven seven femtoseconds. To put this in perspective, this is shorter than the fastest electronic circuits by a factor of one million. Light oscillates at a frequency that no electronic device can track directly.

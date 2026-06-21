@@ -1,13 +1,15 @@
-Sign conventions are the most common source of errors in geometric optics problems. Getting a sign wrong means getting the wrong answer for the entire problem. Study these carefully.
+Sign conventions are the most important technical details in geometric optics. Getting a sign wrong gives a completely wrong answer — the magnitude might be right but the physical interpretation is opposite. These conventions are not arbitrary: they follow a consistent logic that makes the equations work out correctly for all configurations.
 
-All distances are measured from the optical element — the lens, mirror, or refracting surface. The object distance s_o is positive when the object is on the side where light is coming from. This is called a real object and is the normal case.
+All distances are measured from the optical element — the lens, mirror, or refracting surface. Positive distances are in the direction of light propagation; negative distances are against it.
 
-The image distance s_i is positive when the image forms on the far side of the lens — on the side where light is going to. This is a real image that can be projected onto a screen.
+The object distance s-o is positive for a real object, located on the incoming side of the element. It is negative for a virtual object, which occurs when a converging beam is intercepted before reaching its focus. Real objects always have positive s-o in the standard single-element geometry.
 
-The radius of curvature R is positive if the centre of curvature is to the right of the surface — which means a convex surface for light coming from the left. It is negative for a concave surface.
+The image distance s-i is positive for a real image, formed on the far side of the element where light actually converges. It is negative for a virtual image, formed on the same side as the incoming light. You cannot project a virtual image onto a screen — it exists only as diverging rays that appear to come from that location.
 
-For mirrors, the sign convention flips: a concave mirror has R positive, a convex mirror has R negative.
+The radius of curvature R is positive if the centre of curvature is to the right of the surface — in the direction of light propagation. A convex lens surface curving toward the light source has R positive on the first surface and R negative on the second surface. For a biconvex lens: R-one positive on the first surface, R-two negative on the second, and the lensmaker's equation gives a positive focal length, as it should for a converging lens.
 
-The magnification m equals minus s_i over s_o. A negative magnification means the image is inverted. A magnitude greater than one means the image is larger than the object.
+For mirrors, the sign convention reverses: positive is now toward the incoming light, because after reflection light travels back the way it came. A concave mirror — which converges light — has a positive focal length. A convex mirror — which diverges light — has negative focal length.
 
-Always draw a diagram first. Label the signs explicitly. Then substitute into the equation.
+The magnification m equals minus s-i over s-o. A negative magnification means the image is inverted relative to the object. A magnification with absolute value greater than one means the image is larger than the object. A real image always has negative magnification if the object is real — the image is inverted.
+
+Always draw a ray diagram first. Use three principal rays: one parallel to the axis (passes through far focal point after refraction), one through the near focal point (emerges parallel to axis after refraction), and one through the optical centre (passes straight through). Where these three rays converge is where the image forms. The diagram tells you immediately whether the image is real or virtual, upright or inverted, larger or smaller — and these serve as checks on your algebraic calculation.

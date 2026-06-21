@@ -1,1 +1,1 @@
-There are actually two different speeds associated with a wave, and confusing them is a classic mistake.
+There are two different speeds associated with any wave, and confusing them is one of the most common conceptual errors in wave physics. Understanding the distinction is essential for optics and for exam questions on dispersion.

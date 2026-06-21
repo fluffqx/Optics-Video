@@ -1,1 +1,1 @@
-Second: the harmonic wave relations — v equals f lambda equals omega over k, with k equals 2 pi over lambda and omega equals 2 pi f. Know these relationships cold.
+The harmonic wave relations connect all the wave parameters. v equals f lambda equals omega over k. The wave number k is 2 pi over lambda. The angular frequency omega is 2 pi f. The period T is one over f. These five relations are not independent — any one follows from the others — but knowing all of them instantly is essential for exam calculations.

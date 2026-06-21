@@ -1,1 +1,1 @@
-Before we write them down, let's fix the notation. The symbol nabla dot E means the divergence of E — it measures how much E spreads outward from a point. Nabla cross E is the curl of E — it measures how much E rotates around a point. And nabla squared E is the Laplacian — the spatial second derivative in all three directions at once.
+Before writing them down, we need to fix the vector calculus notation. Three differential operators appear repeatedly: the divergence, the curl, and the Laplacian. Let's understand each one physically before seeing the equations.

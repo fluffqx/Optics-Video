@@ -1,1 +1,1 @@
-Antinodes are positions of maximum oscillation — the waves always add constructively there. They sit exactly halfway between adjacent nodes.
+Standing waves are fundamental to lasers. The optical cavity formed by two mirrors supports standing waves only at frequencies where an integer number of half-wavelengths fit between the mirrors. This quantisation of allowed frequencies gives each laser its discrete set of longitudinal modes. If the mirrors are separated by length L, the allowed wavelengths are lambda-m equals 2L over m for integer m.

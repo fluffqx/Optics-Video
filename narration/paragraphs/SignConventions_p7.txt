@@ -1,1 +1,1 @@
-Always draw a diagram first. Label the signs explicitly. Then substitute into the equation.
+The magnification m equals minus s-i over s-o. A negative magnification means the image is inverted relative to the object. A magnification with absolute value greater than one means the image is larger than the object. A real image always has negative magnification if the object is real — the image is inverted.

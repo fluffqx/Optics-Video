@@ -1,1 +1,1 @@
-Matrix optics represents any optical system as a single 2 by 2 matrix. A ray is described by its height y above the optical axis and its angle theta with respect to the axis, written as a column vector.
+Matrix optics represents any paraxial optical system as a single two-by-two matrix. A ray is described by a two-component column vector containing its height y above the optical axis and its angle theta to the axis. Each optical element maps the input ray vector to the output ray vector via matrix multiplication.

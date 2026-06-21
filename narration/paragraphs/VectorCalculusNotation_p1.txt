@@ -1,1 +1,1 @@
-Before writing Maxwell's equations, we need three differential operators.
+The divergence of a vector field F, written as del dot F, measures how much the field spreads outward from a point. Imagine F as a fluid velocity field. A positive divergence at a point means fluid is being created there — it is a source. A negative divergence means fluid is being absorbed — a sink. Zero divergence means the field lines neither originate nor terminate at that point: whatever flows in also flows out.

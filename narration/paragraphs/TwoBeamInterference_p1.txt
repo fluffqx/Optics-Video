@@ -1,1 +1,1 @@
-Two-beam interference is the foundation of all interferometry. When two coherent beams overlap, the total intensity is not simply the sum of the individual intensities — there is an extra interference term.
+The general formula for two-beam interference starts from the superposition of the two complex fields. Let field one have amplitude E-one and phase phi-one, and field two have amplitude E-two and phase phi-two. The total field is E-one e to the i phi-one plus E-two e to the i phi-two.

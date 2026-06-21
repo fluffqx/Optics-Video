@@ -1,1 +1,1 @@
-For refraction, the same minimisation with two different wave speeds in the two media gives Snell's law — n_i sin theta_i equals n_t sin theta_t.
+For refraction, the same principle applies but now the light travels at different speeds in the two media. The optimal path — the one that minimises travel time — bends at the interface. The bending angle is determined by the ratio of the speeds in the two media, which equals the ratio of the refractive indices. Working through the calculus gives Snell's law: n-i times sine theta-i equals n-t times sine theta-t.

@@ -1,7 +1,9 @@
-Multiply all element matrices from right to left to get the system matrix with elements A, B, C, D.
+Once we have the system matrix M with elements A, B, C, D, we can extract all the cardinal points of the optical system without knowing the internal structure.
 
-The effective focal length is minus one over C. The front and back focal distances can be read off from A, C, and D. The determinant of the system matrix is always exactly 1 — this is a consequence of energy conservation.
+The effective focal length is minus one over C. If C equals zero, the system is afocal — parallel rays in give parallel rays out, which is the definition of a telescope or beam expander.
 
-If C equals zero, the effective focal length is infinite — the system is afocal. Parallel rays enter and parallel rays leave, just magnified. This is a beam expander.
+The back focal distance — from the last physical element to the rear focal point — is given by D minus one, all over C. The front focal distance from the front focal point to the first element is minus A over C.
 
-The principal planes can also be located from the matrix elements, giving a complete paraxial description of any optical system however complex.
+The principal planes can be located from these quantities. All the focusing properties of the system are captured by specifying the two principal planes and the effective focal length.
+
+The determinant of the system matrix must always equal one: AD minus BC equals one. This is a powerful check — if your computed matrix does not satisfy this, you have made an error.

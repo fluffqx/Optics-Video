@@ -1,1 +1,1 @@
-This is why a prism separates white light into a rainbow. Red light and violet light have different phase velocities in glass, so they refract at different angles.
+The group velocity in a dispersive medium is c divided by the quantity n plus omega times dn d omega. The term omega dn d omega is the correction for dispersion. When dn d omega is positive — meaning n increases with frequency, which is called normal dispersion — the group velocity is less than c over n. Energy travels slower than the crests.

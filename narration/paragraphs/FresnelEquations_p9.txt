@@ -1,1 +1,1 @@
-Let's work through a full example. Air to glass, n_i equals 1.0, n_t equals 1.5, theta_i equals 40 degrees.
+P-polarisation: r-parallel equals 1.5 times 0.766 minus 1.0 times 0.9036 over 1.5 times 0.766 plus 1.0 times 0.9036 equals 1.149 minus 0.904 over 1.149 plus 0.904 equals 0.245 over 2.053 equals plus 0.119. R-parallel equals 0.119 squared equals 0.0142, about 1.4 percent reflected.

@@ -1,1 +1,1 @@
-The magnification is minus s_i over s_o — same formula as for lenses. A concave mirror with an object beyond the focal point gives an inverted, real image. An object inside the focal point gives an upright, virtual, magnified image — exactly as in a shaving mirror.
+For a concave mirror with f-m equals 20 centimetres and object at s-o equals 60 centimetres: one over s-i equals one over 20 minus one over 60 equals 2 over 60, so s-i equals 30 centimetres. Real image in front of the mirror. Magnification m equals minus 30 over 60 equals minus one-half. Inverted, half-size.

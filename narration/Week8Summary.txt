@@ -1,21 +1,15 @@
-Let's collect all the Fabry-Pérot formulas in one place.
+Let's collect all the Fabry-Pérot formulas in one place for quick reference.
 
-The Airy function: I-t equals I-naught divided by one plus F sine squared of delta over 2. This is the transmitted intensity as a function of round-trip phase.
+The Airy function: I-t equals I-naught divided by one plus F sine squared delta over 2. This is the transmitted intensity as a function of round-trip phase. F is the coefficient of finesse, F equals 4R over one minus R squared. Delta is the round-trip phase, delta equals 4 pi n d cosine theta over lambda-naught.
 
-The coefficient of finesse F equals 4R over one minus R squared.
+The finesse script-F equals pi root R over one minus R. This equals the FSR divided by the FWHM of each transmission peak, and approximately equals the average number of round trips before leakage.
 
-The finesse script-F equals pi root R over one minus R.
+The order number N equals 2nd cosine theta over lambda-naught at normal incidence equals 2nd over lambda-naught.
 
-The round-trip phase delta equals 4 pi n d cosine theta over lambda-naught.
+The resolving power equals N times script-F. This is the ratio lambda over delta-lambda-min.
 
-The order number N equals 2nd over lambda-naught.
+The free spectral range in wavelength is delta-lambda-FSR equals lambda-naught over N equals lambda-naught squared over 2nd. The free spectral range in frequency is delta-nu-FSR equals c over 2nd — this is the cavity mode spacing and determines the longitudinal mode spectrum of a laser.
 
-The resolving power equals N times the finesse.
+The coherence length of the source must exceed 2nd for fringes to be visible.
 
-The free spectral range in wavelength equals lambda-naught squared over 2nd.
-
-The free spectral range in frequency equals c over 2nd — this is the cavity mode spacing.
-
-And the coherence length of the light source must exceed 2nd for fringes to be visible.
-
-These formulas describe the most powerful spectroscopic instrument based on interference. Study them carefully — the Fabry-Pérot almost always appears on the final exam.
+Common mistakes: using F instead of script-F in the resolving power formula; forgetting the cosine theta factor for oblique incidence; confusing the order number N with the number of slits; and using lambda in air instead of lambda-naught in vacuum when computing the round-trip phase.

@@ -1,1 +1,1 @@
-The three vectors — E in x, B in y, and k in z — form a right-handed coordinate system. This is a general property of plane electromagnetic waves.
+Verify all properties. E is in the x-direction, B is in the y-direction, and k is in the z-direction. These three are mutually perpendicular and form a right-handed system: x-hat cross y-hat equals z-hat. The magnitude ratio is E over B equals c, as required. And E and B have the same phase factor e to the i kz minus omega t, confirming they oscillate in phase.

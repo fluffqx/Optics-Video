@@ -1,1 +1,1 @@
-The principal planes can also be located from the matrix elements, giving a complete paraxial description of any optical system however complex.
+The principal planes can be located from these quantities. All the focusing properties of the system are captured by specifying the two principal planes and the effective focal length.

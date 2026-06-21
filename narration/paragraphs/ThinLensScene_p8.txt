@@ -1,1 +1,1 @@
-Let's work through a complete example. A biconvex lens with R_1 equals positive 20 centimetres, R_2 equals negative 20 centimetres, and n_l equals 1.5. Object at s_o equals 60 centimetres.
+Step two: thin lens equation. One over s-i equals one over f minus one over s-o equals one over 20 minus one over 60 equals 3 over 60 minus 1 over 60 equals 2 over 60. So s-i equals 30 centimetres. Positive — real image on the far side of the lens.

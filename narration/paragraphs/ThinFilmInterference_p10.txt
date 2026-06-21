@@ -1,0 +1,1 @@
+For lambda-naught equals 550 nanometres, the design wavelength: t equals 550 divided by 4 times 1.38 equals 99.6 nanometres. Anti-reflection coatings are about 100 nanometres thick — one hundred billionths of a metre.

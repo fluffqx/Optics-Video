@@ -1,0 +1,1 @@
+The requirement for interference to be observable is coherence. The two beams must maintain a stable, well-defined phase relationship for a time long enough for the detector to average over. If the phase relationship fluctuates randomly on a timescale shorter than the measurement, the fringes wash out and only the incoherent sum of intensities is observed.

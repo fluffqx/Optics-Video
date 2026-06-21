@@ -1,1 +1,1 @@
-In the far field — the Fraunhofer regime — the intensity pattern of a single slit of width b is the famous sinc-squared function: I equals I naught times sine beta over beta squared, where beta equals pi b sine theta over lambda.
+The key results of this week: the sinc-squared single-slit pattern and where its zeros occur, the Airy disk for a circular aperture and the Rayleigh resolution criterion, and the diffraction grating equation with its resolving power.

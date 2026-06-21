@@ -1,0 +1,1 @@
+The fundamental object is the wave function psi of x and t. This is some physical quantity — displacement, pressure, electric field strength — that depends on both position and time. The wave equation is the differential equation that tells us exactly how psi can vary. It is the most important equation in this entire first week.

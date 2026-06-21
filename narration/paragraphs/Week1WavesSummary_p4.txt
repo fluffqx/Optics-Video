@@ -1,1 +1,1 @@
-Third: the complex representation — psi tilde equals A e to the i times kx minus omega t. The physical wave is the real part. The intensity is the magnitude squared, which equals A squared.
+The complex representation, psi-tilde equals A e to the i kx minus omega t, simplifies all wave calculations. The physical wave is the real part. The intensity is proportional to the modulus squared, which equals A squared. The convenience of complex notation becomes most apparent when adding multiple waves, as we will do extensively in the interference and diffraction weeks.

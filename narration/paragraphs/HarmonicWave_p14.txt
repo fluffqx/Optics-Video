@@ -1,1 +1,1 @@
-And the period T equals 2 pi divided by omega, giving 1.67 times 10 to the minus 15 seconds — about 1.7 femtoseconds. Light oscillates extraordinarily fast.
+Omega equals 2 pi times f, giving 3.54 times ten to the fifteenth radians per second. The period T equals one divided by f, giving 1.77 times ten to the minus fifteen seconds — one point seven seven femtoseconds. To put this in perspective, this is shorter than the fastest electronic circuits by a factor of one million. Light oscillates at a frequency that no electronic device can track directly.

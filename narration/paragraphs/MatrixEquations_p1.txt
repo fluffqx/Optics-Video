@@ -1,1 +1,1 @@
-There are four elementary ray transfer matrices.
+The translation matrix for free propagation through distance d has ones on the diagonal and d in the upper right: the height changes by d times the angle, while the angle remains unchanged. This is just the geometry of a straight ray.

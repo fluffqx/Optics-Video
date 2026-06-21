@@ -1,1 +1,1 @@
-These numbers give you a feel for how incredibly fast optical oscillations are — nearly a quadrillion cycles per second.
+Wave number: k equals 2 pi divided by 632.8 times ten to the minus nine, giving 9.926 times ten to the sixth radians per metre.

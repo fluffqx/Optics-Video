@@ -1,1 +1,1 @@
-The Airy function is the central result of Fabry-Pérot theory. Bennett derives it in Section 7.10 by summing the infinite geometric series of multiply-reflected transmitted beams.
+The Airy function is the central result of Fabry-Pérot theory. Transmitted intensity equals I-naught divided by one plus F times sine-squared of delta over two, where F is the coefficient of finesse, F equals 4R over one minus R squared.

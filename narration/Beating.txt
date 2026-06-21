@@ -1,9 +1,9 @@
-Beating occurs when two waves of slightly different frequencies overlap. The result is a wave whose amplitude varies slowly in time — producing a periodic rise and fall in intensity.
+Beating occurs when two waves of slightly different frequencies are superimposed. The result is a wave that oscillates at the average of the two frequencies but whose amplitude varies slowly at the difference frequency.
 
-Mathematically, we add A cosine of omega-one times t plus A cosine of omega-two times t. Using the sum-to-product identity, this equals two A times cosine of the half-difference in frequencies times t, multiplied by cosine of the average frequency times t.
+Mathematically: A cosine omega-one t plus A cosine omega-two t equals 2A cosine of omega-one minus omega-two over 2 times t, times cosine of omega-one plus omega-two over 2 times t. The first factor is the slowly varying envelope and the second is the fast oscillation at the average frequency.
 
-The fast oscillation has the average frequency — this is what you actually see or hear. The slow modulation of the amplitude has the beat frequency, which equals the absolute difference between the two frequencies.
+The beat frequency is the absolute value of f-one minus f-two. The amplitude modulation oscillates at half this rate, but since intensity goes as amplitude squared, the perceived intensity fluctuation occurs at the full beat frequency.
 
-If f-one equals 440 hertz and f-two equals 443 hertz, the beat frequency is 3 hertz — you hear three amplitude pulses per second. Musicians use this to tune instruments — they adjust until the beats disappear, meaning the frequencies are equal.
+If f-one equals 440 hertz and f-two equals 443 hertz, the beat frequency is 3 hertz — you hear the volume pulsate three times per second. Musicians use this to tune instruments: adjust the pitch until the beats become slower and finally disappear, at which point the frequencies are equal.
 
-In optics, beating between two laser frequencies produces an interference signal at the difference frequency. This is the basis of heterodyne detection, used in interferometry and optical communications.
+In optical interferometry, beating between two laser frequencies is called optical heterodyne detection. A signal beam at frequency omega-s is mixed with a local oscillator at frequency omega-lo. The detector output contains a component at the beat frequency omega-s minus omega-lo, which is much lower than the optical frequency and can be processed electronically. This technique is used in coherent optical communications, LIDAR, and atomic spectroscopy.

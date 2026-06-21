@@ -1,1 +1,1 @@
-This is why gravitational wave detectors like LIGO use ultra-stable lasers — the 4-kilometre arms require the laser to be coherent over an 8-kilometre round trip.
+A filtered sodium lamp emitting the yellow D lines with linewidth of about 0.001 nanometres has l-c approximately 589 squared over 0.001 equals 0.35 metres. Fringes visible for path differences up to 35 centimetres.
