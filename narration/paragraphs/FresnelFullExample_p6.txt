@@ -1,0 +1,1 @@
+Step 5: check with R plus T equals 1. T-s equals 1 minus 0.0772 equals 0.9228. T-p equals 1 minus 0.0143 equals 0.9857. Both satisfy energy conservation. The p-polarisation reflects much less than s at this angle — it is approaching Brewster's angle.

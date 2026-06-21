@@ -1,0 +1,1 @@
+Bennett presents Maxwell's equations in both differential and integral forms in Section 2.2 and Appendix B. We use the differential form throughout this course, as it is most natural for wave problems.

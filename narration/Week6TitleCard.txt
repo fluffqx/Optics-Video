@@ -1,5 +1,7 @@
-Week 6 is interference — one of the most dramatic demonstrations that light is a wave. When two coherent beams overlap, the result is not simply their sum of intensities. The fields add, and where they add constructively the intensity can be four times that of a single beam. Where they add destructively, the intensity drops to zero.
+Week 6 is interference — the most visually striking consequence of the wave nature of light. This follows Bennett Chapter 7, Sections 7.3 through 7.8 and 7.12.
 
-The key topics are: two-beam interference and the general formula, Young's double-slit experiment and its quantitative analysis, thin film interference and the critical role of reflection phase shifts, fringe visibility and coherence, and the Michelson interferometer.
+Interference occurs because the superposition principle allows wave amplitudes to add, and intensity is proportional to amplitude squared. When two coherent beams overlap and add constructively, the intensity can be four times that of a single beam. When they add destructively, the intensity drops to exactly zero. Energy is not created or destroyed — it is redistributed in space.
 
-Interference phenomena underlie a huge range of technology: anti-reflection coatings, laser resonators, optical coherence tomography in medicine, gravitational wave detection in LIGO, and wavelength measurement in spectroscopy.
+The key topics are: the general two-beam interference formula with the interference term; Young's double-slit experiment and the fringe spacing formula delta-y equals lambda L over d; thin film interference with careful attention to reflection phase shifts; fringe visibility as a measure of coherence; and the Michelson interferometer with its resolving power.
+
+Modern applications of interference include: anti-reflection coatings on every camera lens; laser Fabry-Pérot cavities and their longitudinal modes; optical coherence tomography for medical imaging; gravitational wave detection in LIGO; and wavelength measurement in spectroscopy. Every one of these traces directly back to the two-beam interference formula derived this week.

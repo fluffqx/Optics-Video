@@ -1,1 +1,1 @@
-The back focal distance — from the last physical element to the rear focal point — is given by D minus one, all over C. The front focal distance from the front focal point to the first element is minus A over C.
+The back focal distance — from the last element to the rear focal point — is given by BFD equals D minus 1 over C. The front focal distance from the first element to the front focal point is FFD equals minus A over C. These distances are measured from the last and first physical elements respectively, not from the principal planes.

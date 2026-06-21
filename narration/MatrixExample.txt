@@ -1,7 +1,9 @@
-The beam expander is a classic and important example. Two lenses with focal lengths f-one and f-two are separated by d equals f-one plus f-two. We calculate the system matrix.
+Bennett works through the beam expander in Example 5.6. Two thin lenses with focal lengths f-one and f-two are separated by distance d equals f-one plus f-two. We compute M-system equals M-L2 times M-T times M-L1.
 
-Write the three matrices from right to left: thin lens f-one, free propagation f-one plus f-two, thin lens f-two. Multiply them out step by step.
+Write M-L1 for the first lens: top row 1, 0; bottom row minus 1 over f-one, 1. Write M-T for the free propagation of distance f-one plus f-two: top row 1, f-one plus f-two; bottom row 0, 1. Write M-L2 for the second lens: top row 1, 0; bottom row minus 1 over f-two, 1.
 
-The result has a C element equal to zero, confirming that the system is afocal. The A element equals minus f-two over f-one, which is the beam magnification. A beam entering with height y and zero angle exits with height minus f-two over f-one times y and zero angle — the beam has been expanded by a factor of f-two over f-one, and the sign reversal means the beam is flipped.
+Multiplying M-T times M-L1 first: top row 1 minus (f-one plus f-two) over f-one, f-one plus f-two; bottom row minus 1 over f-one, 1. The top left becomes minus f-two over f-one. Then multiplying M-L2 times this intermediate result, the C element becomes minus 1 over f-one minus 1 over f-two plus (f-one plus f-two) over f-one times f-two, which simplifies to zero.
 
-This is the operating principle of a telescope used in reverse, a Galilean beam expander, and a spatial light modulator relay system. The same matrix result applies to all of them.
+The system matrix for the beam expander has C equals zero, so the effective focal length is infinite — the system is afocal. The A element equals minus f-two over f-one. An input beam with height y and zero angle (parallel to the axis) exits with height minus f-two over f-one times y and zero angle. The beam has been expanded by the factor f-two over f-one, with a sign reversal indicating the beam is flipped.
+
+This result has important practical applications. A Galilean telescope uses a converging objective and a diverging eyepiece to produce an afocal beam expander with no image inversion. Laser beam expanders are used to reduce the divergence of laser beams for long-range propagation. Spatial light modulator relay systems use 4-f configurations — two lenses each of focal length f separated by 2f — for Fourier filtering and holographic beam control.

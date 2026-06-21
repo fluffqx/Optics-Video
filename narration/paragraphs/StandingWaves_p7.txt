@@ -1,0 +1,1 @@
+The frequency spacing between adjacent modes is delta-f equals c over 2L. For a laser cavity of length 30 centimetres: delta-f equals 3 times ten to the 8 divided by 0.6 equals 500 megahertz. The laser output is a frequency comb with modes spaced 500 megahertz apart.

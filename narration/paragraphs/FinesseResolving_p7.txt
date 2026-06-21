@@ -1,1 +1,0 @@
-Note carefully: the coefficient of finesse F and the finesse script-F are different quantities. The coefficient is 4R over one minus R squared. The finesse is pi root R over one minus R. Don't confuse them — it's a standard notation trap.

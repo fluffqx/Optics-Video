@@ -1,1 +1,1 @@
-Let's work through a second complete example with a He-Ne laser at 632.8 nanometres — the classic red laser used in optics labs worldwide.
+Let's work through the specific case of a He-Ne laser at 632.8 nanometres, one of the most common laser wavelengths used in optics laboratories worldwide.

@@ -1,1 +1,1 @@
-Week 4 combines three distinct topics: matrix optics for systematic ray tracing, superposition phenomena including standing waves and beating, and the basics of polarisation.
+Week 4 combines three topics that are grouped together in the TU/e course structure: matrix methods in geometric optics, superposition phenomena, and the introduction to polarisation.

@@ -1,1 +1,1 @@
-There are two different speeds associated with any wave, and confusing them is one of the most common conceptual errors in wave physics. Understanding the distinction is essential for optics and for exam questions on dispersion.
+Bennett Section 7.6 analyses wave packets and introduces group velocity. A wave packet is a localised disturbance formed by superimposing many harmonic waves with a range of frequencies centred around a central frequency omega-naught.

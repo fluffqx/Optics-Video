@@ -1,1 +1,1 @@
-Week 5 develops the Jones vector formalism — the systematic mathematical framework for describing and manipulating polarisation states.
+Week 5 develops the complete formalism for polarisation calculations: the Jones vector and Jones matrix calculus introduced by R. Clark Jones in 1941 and described in Bennett Chapter 6, Sections 6.5 and 6.5.1.

@@ -1,1 +1,1 @@
-phi is the initial phase — a constant in radians that shifts the wave pattern left or right in time. It is determined by initial conditions and tells you the phase of the wave at x equals zero and t equals zero.
+phi is the initial phase in radians. It shifts the wave pattern left or right in time and is determined by the initial conditions.

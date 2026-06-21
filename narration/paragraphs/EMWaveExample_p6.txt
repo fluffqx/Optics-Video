@@ -1,0 +1,1 @@
+Now compute the irradiance from Bennett Equation 2.33: I equals one half times epsilon-naught times c times E-naught squared. For E-naught equals 1000 volts per metre: I equals 0.5 times 8.854 times ten to the minus 12 times 3 times ten to the 8 times ten to the 6 equals 1327 watts per square metre.

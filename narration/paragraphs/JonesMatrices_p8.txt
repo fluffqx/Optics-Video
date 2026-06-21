@@ -1,0 +1,1 @@
+Now the same 45-degree incident beam through a quarter-wave plate with horizontal fast axis. The matrix 1, 0, 0, i times 1, 1 over root 2 equals 1, i over root 2. This is left circular polarisation. The quarter-wave plate converts 45-degree linear to left circular — none of the intensity is lost in a wave plate.

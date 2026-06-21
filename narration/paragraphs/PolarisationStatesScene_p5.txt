@@ -1,0 +1,1 @@
+For all other combinations of amplitude ratio and phase difference, the field traces an ellipse — this is elliptical polarisation. Bennett Figure 6.14 shows the full range of polarisation states as Delta-phi varies from minus pi to plus pi, for both equal and unequal amplitudes. Linear and circular are special limiting cases of elliptical.

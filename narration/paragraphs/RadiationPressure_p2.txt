@@ -1,1 +1,1 @@
-The momentum density of an electromagnetic wave is the Poynting vector divided by c-squared, or equivalently the irradiance divided by c-cubed. When this momentum is absorbed by a surface, Newton's second law gives a force, and force per unit area is pressure.
+The momentum density of an electromagnetic wave is the Poynting vector divided by c-squared, with units of kilogram per metre squared per second. For a plane wave, this equals I divided by c-cubed in the direction of propagation.

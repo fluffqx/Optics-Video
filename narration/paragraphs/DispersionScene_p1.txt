@@ -1,1 +1,1 @@
-Dispersion is the dependence of the refractive index on frequency. It is responsible for the rainbow spectrum from a glass prism, the colour fringing in cheap lenses, and the pulse broadening that limits data rates in optical fibres.
+Dispersion is the variation of the phase velocity — and therefore the refractive index — with frequency. Bennett covers dispersion in Section 3.9 using the Lorentz oscillator model.

@@ -1,1 +1,0 @@
-Young's double slit experiment proved the wave nature of light in 1801. Two slits separated by d produce an interference pattern on a screen at distance L. The fringe spacing is simply lambda times L over d. Bigger wavelength, bigger fringes. Closer slits, bigger fringes.

@@ -1,1 +1,1 @@
-A horizontal linear polariser passes only the x-component: its Jones matrix has 1, 0, 0, 0. A vertical polariser has 0, 0, 0, 1.
+Matrix multiplication is not commutative. For a sequence of N elements numbered 1 to N where element 1 is encountered first, the total Jones matrix is M-N times M-N-minus-one times ... times M-2 times M-1. The element encountered first goes on the right. This is Bennett Equation 6.23. If you reverse the order you get the wrong answer.

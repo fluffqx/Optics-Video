@@ -1,1 +1,1 @@
-On the left side, we have the second partial derivative of psi with respect to x. This is the spatial curvature of the wave profile — how rapidly the shape bends in space. A large positive value means the profile is concave upward; a large negative value means it curves downward.
+The left side, partial squared psi over partial x squared, is the spatial curvature of the wave — how quickly the wave shape bends in space. A large positive value means the profile is concave upward; negative means concave downward.

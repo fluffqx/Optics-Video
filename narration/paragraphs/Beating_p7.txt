@@ -1,0 +1,1 @@
+The coherence requirement: beating is only observable if the two wave trains overlap in time. The observation time must be shorter than the coherence time of each source. For two laser beams with linewidths of 1 megahertz, the coherence time is one microsecond, and beats can be observed for path length differences of up to 300 metres.

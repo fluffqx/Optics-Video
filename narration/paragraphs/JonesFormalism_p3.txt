@@ -1,1 +1,1 @@
-Right circular polarisation is 1, minus i divided by root 2 — the y component lags x by 90 degrees. Left circular is 1, plus i divided by root 2. The i factor encodes the quarter-wavelength phase difference between components.
+For linearly polarised light with E-naught-x and E-naught-y both real and in a fixed ratio, the Jones vector is E-naught times the column cosine theta, sine theta, where theta is the angle of the polarisation axis from horizontal. This follows directly from Bennett Equation 6.12.

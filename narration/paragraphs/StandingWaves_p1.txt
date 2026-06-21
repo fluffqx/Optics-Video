@@ -1,1 +1,1 @@
-When two identical waves travel in opposite directions through the same medium, they superpose to create a standing wave — a pattern that oscillates in place without propagating.
+A standing wave is the superposition of two identical harmonic waves travelling in opposite directions. Bennett Section 7.1 derives the result.

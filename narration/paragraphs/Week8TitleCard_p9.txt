@@ -1,1 +1,0 @@
-Coherence determines whether interference fringes are visible at all. The temporal coherence length equals lambda squared over delta lambda. A laser with a narrow linewidth has a long coherence length — metres or more. A thermal source has a coherence length of micrometres.

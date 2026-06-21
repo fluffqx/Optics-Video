@@ -1,1 +1,1 @@
-Week 2 brings us to one of the most practically important topics in optics: what happens when light hits a surface between two different media. Every optical instrument depends on this.
+Week 2 covers what happens when a light wave reaches an interface between two different optical media. This is Bennett Chapter 3, and it is one of the most practically important topics in all of optics. Every lens surface, every mirror coating, every optical fibre, and every anti-reflection coating is governed by the physics of this week.

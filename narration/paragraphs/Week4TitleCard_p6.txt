@@ -1,1 +1,0 @@
-The refraction matrix at a spherical surface accounts for both the change in angle due to the surface curvature and the ratio of refractive indices.

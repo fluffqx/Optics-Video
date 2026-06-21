@@ -1,1 +1,1 @@
-The intensity is the modulus squared of the Jones vector: I equals the absolute value of E-x squared plus the absolute value of E-y squared. For a normalised Jones vector, this equals one, and the actual intensity is separately specified by a prefactor.
+For elliptically polarised light as in Bennett Equation 6.13, the y-component acquires a relative phase shift Delta-phi. The Jones vector is E-naught-x, E-naught-y times e to the i Delta-phi. The magnitude of e to the i Delta-phi is always one, so the phase shift does not change the amplitude — only the polarisation state.

@@ -1,0 +1,1 @@
+The magnitude ratio E over B equals E-naught over E-naught over c equals c. This is Bennett's result from Section 2.3.1: E equals c B in vacuum. The electric and magnetic fields have the same spatial and temporal phase factors, confirming they oscillate in phase.

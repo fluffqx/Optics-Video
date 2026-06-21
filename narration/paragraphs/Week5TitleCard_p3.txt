@@ -1,1 +1,1 @@
-This formalism is exact within the paraxial approximation for fully coherent light. It handles linear polarisers, wave plates, rotators, beam splitters, and any combination of these.
+Bennett provides a complete table of Jones matrices in Table 6.1 and works through several detailed examples: Example 6.5 derives the rotation matrix from first principles, Example 6.6 demonstrates calculations for a polariser and a quarter-wave plate, and Example 6.7 works through a three-element system involving a half-wave plate, quarter-wave plate, and polariser.

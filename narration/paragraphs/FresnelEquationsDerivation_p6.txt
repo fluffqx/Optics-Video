@@ -1,0 +1,1 @@
+The derivation confirms a key physical point: the s and p components interact differently with the interface because their electric field orientations relative to the surface normal are different.

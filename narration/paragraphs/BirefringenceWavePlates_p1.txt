@@ -1,1 +1,1 @@
-Birefringent crystals have two different refractive indices for two orthogonal linear polarisations — the ordinary index n-o and the extraordinary index n-e. A wave with polarisation along the fast axis travels faster than one along the slow axis.
+Bennett Section 6.3 discusses birefringence — also known as double refraction — in crystalline materials. A birefringent crystal has an ordered atomic structure that makes the index of refraction anisotropic: it depends on both the propagation direction and the polarisation direction.

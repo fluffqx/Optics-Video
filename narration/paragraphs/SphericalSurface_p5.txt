@@ -1,0 +1,1 @@
+For a convex glass surface with R equals 10 centimetres, n-i equals 1.00 air, n-t equals 1.50 glass, and an object 30 centimetres in front: 1.00 over 30 plus 1.50 over s-i equals 0.50 over 10 equals 0.050. Solving: 1.50 over s-i equals 0.050 minus 0.0333 equals 0.0167. s-i equals 90 centimetres to the right. A real image forms 90 centimetres inside the glass from the surface.

@@ -1,0 +1,1 @@
+Bennett Example 6.4 shows what happens when left-circularly polarised light passes through a quarter-wave plate with horizontal fast axis. The incident beam has Jones vector 1, i. The QWP matrix adds an additional i to the y-component: the output is 1, i times i equals 1, minus 1. This is linear polarisation at minus 45 degrees. The QWP has converted circular back to linear.

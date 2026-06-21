@@ -1,5 +1,5 @@
-This section animates the complete official 31OPT formula sheet — every equation you are given in the exam, explained in context.
+This section provides a complete formula reference for 31OPT Optics at TU/e, covering all eight weeks of the course. Each formula is stated with its Bennett equation number and the conditions under which it applies.
 
-The formula sheet is provided during the exam, so the goal is not to memorise it blindly. The goal is to understand every symbol deeply enough that you can use any formula correctly under time pressure.
+The formulas are organised by week and topic. For each formula: know the symbol definitions, the units, and at least one worked numerical example. In the exam, you will have access to a formula sheet — but formula sheet access is only useful if you know when and how to apply each formula. The purpose of this review is to make sure you understand the physics behind each equation, not just its algebraic form.
 
-We'll go through the sheet section by section, the same way it appears in the exam.
+Approach the exam by reading the problem carefully, identifying which week's material it draws on, writing down the relevant formula with all symbols defined, substituting numerical values with units, and checking the answer for dimensional consistency and physical reasonableness. If an answer has the wrong sign, wrong units, or an implausibly large or small magnitude, go back and find the error before moving on.

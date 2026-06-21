@@ -1,1 +1,0 @@
-For a circular aperture of diameter D, the pattern is the Airy disk. The first dark ring occurs at sine theta equals 1.22 lambda over D. This sets the fundamental resolution limit of any optical instrument with a circular aperture.

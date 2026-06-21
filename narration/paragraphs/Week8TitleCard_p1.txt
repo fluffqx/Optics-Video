@@ -1,1 +1,1 @@
-Week 8 brings us to the Fabry-Pérot interferometer — the most powerful spectroscopic instrument based on classical interference, and the foundation of modern laser cavities.
+Week 8 covers the Fabry-Pérot interferometer — the most powerful classical spectroscopic instrument and the foundation of modern laser cavities. This follows Bennett Chapter 7, Sections 7.10 through 7.12.

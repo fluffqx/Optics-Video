@@ -1,0 +1,1 @@
+An identical equation holds for B: del-squared B equals mu-naught epsilon-naught times partial squared B over partial t squared. Both E and B satisfy the same wave equation and propagate at the same speed c. They are not independent — they are coupled by Maxwell's equations, and specifying E at all times completely determines B and vice versa.

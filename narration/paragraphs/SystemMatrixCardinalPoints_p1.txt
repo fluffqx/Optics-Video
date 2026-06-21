@@ -1,1 +1,1 @@
-Once we have the system matrix M with elements A, B, C, D, we can extract all the cardinal points of the optical system without knowing the internal structure.
+Once the individual element matrices are known, Bennett Section 5.5.5 shows how to extract the cardinal points of the complete system from the system matrix M with elements A, B, C, D satisfying AD minus BC equals one.

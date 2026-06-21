@@ -1,1 +1,1 @@
-Given: lambda equals 632.8 nanometres, propagating in air where v equals c equals 2.998 times ten to the eighth metres per second.
+Given: wavelength lambda equals 632.8 nanometres equals 632.8 times ten to the minus 9 metres, propagating in air where v approximately equals c equals 2.998 times ten to the 8 metres per second.

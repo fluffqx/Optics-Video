@@ -1,1 +1,1 @@
-The harmonic wave is written: psi of x and t equals A times sine of the quantity kx minus omega t plus phi.
+The harmonic wave is written psi of x and t equals A sine of kx minus omega t plus phi. Every symbol in this expression appears throughout the entire course and must be known immediately and precisely.

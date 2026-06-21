@@ -1,1 +1,1 @@
-The effective focal length is minus one over C. If C equals zero, the system is afocal — parallel rays in give parallel rays out, which is the definition of a telescope or beam expander.
+The effective focal length of the system is f-effective equals minus 1 over C, from the principal-plane analysis in Bennett Section 5.5.5. If C equals zero, the focal length is infinite — the system is afocal, meaning parallel rays in give parallel rays out. This is the definition of a telescope or beam expander in the afocal configuration.

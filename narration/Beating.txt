@@ -1,9 +1,13 @@
-Beating occurs when two waves of slightly different frequencies are superimposed. The result is a wave that oscillates at the average of the two frequencies but whose amplitude varies slowly at the difference frequency.
+Beating occurs when two harmonic waves of slightly different angular frequencies omega-one and omega-two are superimposed. Bennett Section 7.2 derives the result using the sum-to-product trigonometric identity.
 
-Mathematically: A cosine omega-one t plus A cosine omega-two t equals 2A cosine of omega-one minus omega-two over 2 times t, times cosine of omega-one plus omega-two over 2 times t. The first factor is the slowly varying envelope and the second is the fast oscillation at the average frequency.
+Consider two waves of equal amplitude A: psi equals A cosine omega-one t plus A cosine omega-two t. Using the identity cosine u plus cosine v equals 2 cosine of u plus v over 2 times cosine of u minus v over 2, the superposition becomes: 2A cosine of omega-one plus omega-two over 2 times t, times cosine of omega-one minus omega-two over 2 times t.
 
-The beat frequency is the absolute value of f-one minus f-two. The amplitude modulation oscillates at half this rate, but since intensity goes as amplitude squared, the perceived intensity fluctuation occurs at the full beat frequency.
+The first factor, cosine of the average frequency omega-bar equals omega-one plus omega-two over 2, is the fast carrier oscillation. The second factor, cosine of half the difference frequency, is the slow envelope modulation. The envelope amplitude oscillates between 2A and minus 2A at the beat angular frequency omega-beat equals omega-one minus omega-two divided by 2. Since the perceived intensity goes as amplitude squared, the intensity oscillates at the full beat frequency: f-beat equals the absolute value of f-one minus f-two.
 
-If f-one equals 440 hertz and f-two equals 443 hertz, the beat frequency is 3 hertz — you hear the volume pulsate three times per second. Musicians use this to tune instruments: adjust the pitch until the beats become slower and finally disappear, at which point the frequencies are equal.
+This is Bennett's result. The beat frequency equals the absolute difference of the two component frequencies.
 
-In optical interferometry, beating between two laser frequencies is called optical heterodyne detection. A signal beam at frequency omega-s is mixed with a local oscillator at frequency omega-lo. The detector output contains a component at the beat frequency omega-s minus omega-lo, which is much lower than the optical frequency and can be processed electronically. This technique is used in coherent optical communications, LIDAR, and atomic spectroscopy.
+In acoustics: two guitar strings at 440 and 443 hertz produce 3 beats per second. Musicians use beating to tune — they listen for the beats to slow down and disappear as the second string approaches the correct pitch.
+
+In optics: heterodyne detection uses beating between a signal beam at frequency omega-s and a strong local oscillator at frequency omega-lo. The detector produces an output at the beat frequency omega-s minus omega-lo, which can be in the radio frequency or microwave range and is easily processed electronically. Heterodyne detection is used in coherent optical communication systems, laser Doppler velocimetry, and precision spectroscopy.
+
+The coherence requirement: beating is only observable if the two wave trains overlap in time. The observation time must be shorter than the coherence time of each source. For two laser beams with linewidths of 1 megahertz, the coherence time is one microsecond, and beats can be observed for path length differences of up to 300 metres.

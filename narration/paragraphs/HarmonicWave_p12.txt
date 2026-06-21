@@ -1,1 +1,1 @@
-Let's do a complete worked example. A green laser pointer emits light at a wavelength of 532 nanometres in air. The speed of light in air is essentially c equals 2.998 times ten to the eighth metres per second. Find k, f, omega, and T.
+Now a complete example from Bennett. A visible light wave has wavelength lambda equals 500 nanometres and speed v equals c equals 2.998 times ten to the 8 metres per second. Find k, f, omega, and T.

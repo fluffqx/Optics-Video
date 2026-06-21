@@ -1,1 +1,1 @@
-Let's work through a complete example. Given an electric field E pointing in the x-direction with amplitude E-naught, propagating in the z-direction: E-vector equals E-naught times x-hat times e to the i times kz minus omega t.
+Let's work through Bennett's approach to finding the magnetic field associated with a given electric field, following Section 2.3.1.

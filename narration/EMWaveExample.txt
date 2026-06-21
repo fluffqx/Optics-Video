@@ -1,7 +1,11 @@
-Let's work through a complete example. Given an electric field E pointing in the x-direction with amplitude E-naught, propagating in the z-direction: E-vector equals E-naught times x-hat times e to the i times kz minus omega t.
+Let's work through Bennett's approach to finding the magnetic field associated with a given electric field, following Section 2.3.1.
 
-First, find the magnetic field. From Faraday's law for a plane wave, B-vector equals k-hat cross E-vector, divided by the phase velocity v. The propagation direction is z-hat. The cross product z-hat cross x-hat equals y-hat, using the right-hand rule. So B-vector equals E-naught over c, times y-hat, times e to the i times kz minus omega t.
+Given: a plane electromagnetic wave propagating in the positive z-direction with electric field E-vector equals E-naught times x-hat times e to the i times kz minus omega t. Find the magnetic field B.
 
-Verify all properties. E is in the x-direction, B is in the y-direction, and k is in the z-direction. These three are mutually perpendicular and form a right-handed system: x-hat cross y-hat equals z-hat. The magnitude ratio is E over B equals c, as required. And E and B have the same phase factor e to the i kz minus omega t, confirming they oscillate in phase.
+From Faraday's law for a plane wave: the relationship between E and B for a plane wave is B equals k-hat cross E divided by the phase velocity v. The propagation direction is k-hat equals z-hat. The cross product z-hat cross x-hat equals y-hat by the right-hand rule. So B-vector equals E-naught over c times y-hat times e to the i times kz minus omega t.
 
-Now compute the Poynting vector: S equals one over mu-naught times E cross B. The cross product x-hat cross y-hat equals z-hat, confirming that energy flows in the z-direction — the propagation direction. The magnitude of S is E-naught squared divided by mu-naught c, which equals epsilon-naught c E-naught squared. Time-averaging over one cycle replaces E-naught squared with one half E-naught squared, giving the irradiance I equals one half epsilon-naught c E-naught squared.
+Verify all four required properties of an electromagnetic wave from Bennett Section 2.3.1. First, E is transverse: E points in x-hat, which is perpendicular to the propagation direction z-hat. Second, B is transverse: B points in y-hat, also perpendicular to z-hat. Third, E is perpendicular to B: x-hat is perpendicular to y-hat. Fourth, E cross B points in the propagation direction: x-hat cross y-hat equals z-hat, which is the propagation direction z-hat. All four properties confirmed.
+
+The magnitude ratio E over B equals E-naught over E-naught over c equals c. This is Bennett's result from Section 2.3.1: E equals c B in vacuum. The electric and magnetic fields have the same spatial and temporal phase factors, confirming they oscillate in phase.
+
+Now compute the irradiance from Bennett Equation 2.33: I equals one half times epsilon-naught times c times E-naught squared. For E-naught equals 1000 volts per metre: I equals 0.5 times 8.854 times ten to the minus 12 times 3 times ten to the 8 times ten to the 6 equals 1327 watts per square metre.

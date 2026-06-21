@@ -1,0 +1,1 @@
+All matrices in this paraxial ray-optics framework have a determinant of exactly one: AD minus BC equals one. This constraint follows from conservation of the optical invariant and serves as a useful check on matrix calculations. If your computed matrix violates this, you have made an arithmetic error.

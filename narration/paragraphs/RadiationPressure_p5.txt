@@ -1,1 +1,1 @@
-On Earth, optical tweezers use focused laser beams to trap and manipulate microscopic particles — even living cells — using radiation pressure. The particle is pulled toward the focus by the intensity gradient. Nobel Prize 2018 was awarded partly for the development of optical tweezers by Arthur Ashkin.
+For a partially reflecting surface with reflectivity R: the absorbed fraction 1 minus R contributes I times 1 minus R over c, and the reflected fraction R contributes 2RI over c. The total pressure is I times 1 plus R over c.

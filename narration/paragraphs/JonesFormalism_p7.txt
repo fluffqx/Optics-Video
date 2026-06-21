@@ -1,0 +1,1 @@
+The factor i equals e to the i pi over 2 in the left circular vector encodes the 90-degree phase lead of the y-component over the x-component. When you take the real part of the full wave, the y-component leads x by a quarter wavelength, causing the electric field vector to rotate counterclockwise — left circular, by the physics convention used by Bennett.

@@ -1,1 +1,1 @@
-To find the output for a specific input and sequence of elements: write down the Jones matrices, multiply from right to left (first element on right), then multiply by the input Jones vector. The result is the output Jones vector, from which you can read off the polarisation state and intensity.
+The quarter-wave plate with fast axis vertical has matrix 1, 0, 0, minus i. The x-component is now on the slow axis and picks up the extra phase. The y-component is on the fast axis and acquires no additional phase relative to x.

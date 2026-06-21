@@ -1,1 +1,1 @@
-The key results of this week: the sinc-squared single-slit pattern and where its zeros occur, the Airy disk for a circular aperture and the Rayleigh resolution criterion, and the diffraction grating equation with its resolving power.
+The Fraunhofer approximation — valid when the screen is in the far field — reduces the diffraction integral to a Fourier transform. The single-slit pattern is the sinc-squared function. The circular aperture gives the Airy disk with its 1.22 lambda over D angular radius. The diffraction grating gives sharp peaks with resolving power N times m.

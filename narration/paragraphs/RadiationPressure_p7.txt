@@ -1,0 +1,1 @@
+The IKAROS spacecraft, launched by JAXA in 2010, used a 14 metre by 14 metre reflective sail to demonstrate solar sail propulsion. The radiation pressure provided a thrust of about 1.12 millinewtons. Over the interplanetary mission, this was sufficient to measurably alter the spacecraft's trajectory.

@@ -1,1 +1,1 @@
-f is the ordinary frequency in hertz — the number of complete cycles per second. It is the inverse of the period: f equals one over T.
+T is the period in seconds — the time for one complete cycle at a fixed point in space. T equals one over f equals 2 pi over omega.

@@ -1,5 +1,7 @@
-Week 8 brings us to the Fabry-Pérot interferometer — the most powerful spectroscopic instrument based on classical interference, and the foundation of modern laser cavities.
+Week 8 covers the Fabry-Pérot interferometer — the most powerful classical spectroscopic instrument and the foundation of modern laser cavities. This follows Bennett Chapter 7, Sections 7.10 through 7.12.
 
-Unlike the two-beam Michelson interferometer, the Fabry-Pérot uses multiple reflections between two parallel mirrors. A beam bounces back and forth many times, and all the multiply-reflected beams interfere simultaneously. The result is the Airy function — narrow transmission peaks separated by broad regions of very low transmission.
+Unlike the two-beam Michelson interferometer, the Fabry-Pérot uses multiple reflections between two parallel mirrors. The transmitted field is a geometric series that sums to give the Airy function. The result is a series of extremely sharp transmission peaks at resonance frequencies, with very high attenuation between the peaks.
 
-The key performance parameters are: the finesse, which determines the sharpness of the peaks; the free spectral range, which determines the unambiguous wavelength interval; and the resolving power, which determines the minimum wavelength difference that can be resolved. We will also cover coherence and the conditions required for the interferometer to function.
+The performance of a Fabry-Pérot is characterised by three parameters: the finesse, which is the ratio of the free spectral range to the peak width; the free spectral range, which is the frequency spacing between adjacent transmission peaks; and the resolving power, which equals the order number times the finesse.
+
+Fabry-Pérot interferometers routinely achieve resolving powers of millions, far exceeding diffraction gratings. They are used for high-resolution spectroscopy, as optical filters with very narrow passbands, as laser output couplers, and as the reference cavities in frequency-stabilised lasers. The LIGO gravitational wave detector uses Fabry-Pérot cavities to increase the effective path length from 4 kilometres to 1600 kilometres.

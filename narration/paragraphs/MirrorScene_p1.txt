@@ -1,1 +1,1 @@
-Spherical mirrors obey the mirror equation: one over s-o plus one over s-i equals two over R equals one over f-m, where f-m equals R over two is the focal length of the mirror.
+Spherical mirrors obey an equation that is structurally identical to the thin lens equation. Bennett derives the mirror equation in Section 4.3.2 starting from the geometry of reflection at a spherical surface.

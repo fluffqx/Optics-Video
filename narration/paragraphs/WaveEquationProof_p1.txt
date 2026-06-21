@@ -1,1 +1,1 @@
-Let's verify with a concrete example that f of x minus vt satisfies the wave equation. We choose the simplest non-trivial case: psi equals the quantity x minus vt, all squared.
+Let's verify concretely that a specific function of the form f of x minus vt satisfies the wave equation. We choose psi equals x minus vt, all squared, following Bennett's approach in Section 1.2.

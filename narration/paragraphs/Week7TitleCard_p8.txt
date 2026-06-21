@@ -1,1 +1,0 @@
-The resolving power of a grating is R equals N times m — the number of slits times the diffraction order. The free spectral range is lambda over m. Higher order, higher resolution, but smaller unambiguous wavelength range.

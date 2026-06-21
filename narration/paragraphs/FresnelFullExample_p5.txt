@@ -1,1 +1,1 @@
-The p-polarisation reflects significantly less than s at this angle — this difference grows with angle and reaches zero at Brewster's angle.
+Step 4: p-polarisation Fresnel coefficient. r-p equals n-t cosine theta-i minus n-i cosine theta-t, over n-t cosine theta-i plus n-i cosine theta-t, equals 1.5 times 0.7660 minus 1.0 times 0.9036, over 1.5 times 0.7660 plus 1.0 times 0.9036, equals 1.1490 minus 0.9036 over 1.1490 plus 0.9036, equals 0.2454 over 2.0526 equals 0.1196. Reflectivity R-p equals 0.0143.

@@ -1,0 +1,1 @@
+Dispersion-shifted fibres and dispersion-compensating fibres can greatly reduce this limitation by engineering the waveguide geometry to counteract the material dispersion.

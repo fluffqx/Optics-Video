@@ -1,1 +1,1 @@
-The beam expander is a classic and important example. Two lenses with focal lengths f-one and f-two are separated by d equals f-one plus f-two. We calculate the system matrix.
+Bennett works through the beam expander in Example 5.6. Two thin lenses with focal lengths f-one and f-two are separated by distance d equals f-one plus f-two. We compute M-system equals M-L2 times M-T times M-L1.

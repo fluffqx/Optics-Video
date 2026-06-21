@@ -1,1 +1,1 @@
-The key constraint is that all matrices in this framework have a determinant of exactly one. This is a consequence of conservation of the optical path and is a useful check on matrix algebra.
+Each optical element transforms the input ray vector to an output ray vector by matrix multiplication. For a system of N elements numbered 1 to N where element 1 is first encountered by the light, the total system matrix is M-N times ... times M-2 times M-1 — the first element goes on the right. This is exactly analogous to the Jones calculus for polarisation.

@@ -1,1 +1,1 @@
-The most important lesson of this week is sign conventions. They seem tedious, but getting a sign wrong in a geometric optics problem means getting the completely wrong answer. We will establish them carefully and check them on every example.
+The most critical skill in this week is sign conventions. Every student who makes a significant error in a geometric optics exam problem makes a sign error. We establish the conventions carefully and apply them consistently to every example.

@@ -1,5 +1,11 @@
-The Fresnel equations come from applying Maxwell's boundary conditions at the interface.
+Bennett derives the Fresnel equations in Section 3.3 by applying Maxwell's boundary conditions at a planar interface between two dielectric media with refractive indices n-i and n-t.
 
-The key conditions are: the tangential component of E must be continuous across the boundary, and the tangential component of B must also be continuous. These follow directly from Faraday's law and Ampere's law applied to a thin rectangle straddling the interface.
+The starting point is Maxwell's equations at an interface, derived in Section 3.3.1. The boundary conditions require that the tangential components of both E and H must be continuous across the interface. There are no free currents or surface charges at a dielectric interface, so these conditions take a simple form.
 
-We split the incident electric field into two independent polarisation components — s-polarisation with E perpendicular to the plane of incidence, and p-polarisation with E parallel to the plane of incidence. Applying the boundary conditions to each gives four Fresnel equations — two reflection coefficients and two transmission coefficients.
+We separate the analysis into two polarisation cases. The s-polarisation, also called TE, has the electric field perpendicular to the plane of incidence. The p-polarisation, also called TM, has the electric field parallel to the plane of incidence. Bennett works through s-polarisation in Section 3.4.1 and p-polarisation in Section 3.4.2.
+
+For s-polarisation: the tangential E is the full field (since E is already tangential). Continuity of tangential E gives E-i plus E-r equals E-t. Continuity of tangential H — using H equals n E over mu-naught c and the geometry — gives n-i times cosine theta-i times E-i minus E-r equals n-t times cosine theta-t times E-t. Solving these two equations gives the Fresnel coefficients r-s and t-s.
+
+For p-polarisation: only the component of E tangential to the surface is continuous. The geometry introduces extra cosine factors. Continuity of tangential E gives E-i minus E-r times cosine theta-i equals E-t times cosine theta-t. Continuity of tangential H gives n-i times E-i plus E-r equals n-t times E-t. Solving gives r-p and t-p.
+
+The derivation confirms a key physical point: the s and p components interact differently with the interface because their electric field orientations relative to the surface normal are different.

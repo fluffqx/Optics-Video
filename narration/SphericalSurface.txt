@@ -1,5 +1,9 @@
-A single curved interface between two media refracts light according to the spherical surface equation: n-i over s-o plus n-t over s-i equals n-t minus n-i, all divided by R. Here R is the radius of curvature of the surface, positive if the centre is on the transmitted side.
+A single curved interface between two transparent media is the fundamental building block of lens design. Bennett derives the spherical surface equation in Section 4.3.3.
 
-This equation is derived by applying Snell's law in the paraxial approximation to a ray hitting the surface at a small angle. The paraxial approximation replaces sine theta with theta and cosine theta with one, which linearises everything.
+Consider a spherical surface of radius R centred at point C, separating medium with index n-i on the left from medium with index n-t on the right. Positive R means the centre of curvature is to the right — on the transmitted side — which corresponds to a convex surface for a lens element.
 
-For a flat surface with R going to infinity, the equation reduces to n-i over s-o plus n-t over s-i equals zero, or s-i equals minus n-t over n-i times s-o. The image of an object in water viewed from air appears at a different depth from the actual object — this is why a pool appears shallower than it really is. If n-water equals 1.33 and the object is at depth one metre, the apparent depth is one divided by 1.33, approximately 0.75 metres.
+The refraction equation for a single spherical surface is: n-i over s-o plus n-t over s-i equals n-t minus n-i, all divided by R. Here s-o is the object distance and s-i is the image distance, both measured from the vertex of the surface.
+
+At normal incidence, a flat surface has R going to infinity and the equation becomes n-i over s-o plus n-t over s-i equals zero. This gives s-i equals minus n-t over n-i times s-o. For an object at depth s-o in water with n-i equals 1.33, viewed from air with n-t equals 1.00: s-i equals minus 1.00 over 1.33 times s-o equals minus 0.752 s-o. The pool appears 75.2 percent as deep as it actually is — hence the familiar illusion that swimming pools look shallower than they are.
+
+For a convex glass surface with R equals 10 centimetres, n-i equals 1.00 air, n-t equals 1.50 glass, and an object 30 centimetres in front: 1.00 over 30 plus 1.50 over s-i equals 0.50 over 10 equals 0.050. Solving: 1.50 over s-i equals 0.050 minus 0.0333 equals 0.0167. s-i equals 90 centimetres to the right. A real image forms 90 centimetres inside the glass from the surface.

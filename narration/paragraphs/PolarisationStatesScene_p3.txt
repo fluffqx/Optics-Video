@@ -1,1 +1,1 @@
-Circular polarisation requires equal amplitudes in x and y with a phase difference of pi over two. Right circular polarisation is one over root two times one, minus i — the y component lags the x component by pi over two. Left circular polarisation is one over root two times one, plus i.
+Bennett Equation 6.3 gives the general form for a wave where the y-component has a phase shift Delta-phi relative to the x-component. The polarisation state depends on both the ratio of amplitudes E-naught-x to E-naught-y and the value of Delta-phi.

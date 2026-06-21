@@ -1,0 +1,1 @@
+For p-polarisation: only the component of E tangential to the surface is continuous. The geometry introduces extra cosine factors. Continuity of tangential E gives E-i minus E-r times cosine theta-i equals E-t times cosine theta-t. Continuity of tangential H gives n-i times E-i plus E-r equals n-t times E-t. Solving gives r-p and t-p.

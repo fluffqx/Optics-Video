@@ -1,1 +1,1 @@
-So what exactly is a wave? This is not a trivial question. The answer shapes everything that follows in this course.
+Bennett opens Chapter 1 with the statement from Heisenberg: the mental pictures of particles and waves are both incomplete and have only the validity of analogies that are accurate only in limiting cases. This captures the central theme of optics: light has both wave properties and particle properties, and the wave description is what we develop in this chapter.

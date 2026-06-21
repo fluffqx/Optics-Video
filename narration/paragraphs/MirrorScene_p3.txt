@@ -1,1 +1,1 @@
-For a concave mirror with f-m equals 20 centimetres and object at s-o equals 60 centimetres: one over s-i equals one over 20 minus one over 60 equals 2 over 60, so s-i equals 30 centimetres. Real image in front of the mirror. Magnification m equals minus 30 over 60 equals minus one-half. Inverted, half-size.
+A concave mirror converges light and has a positive focal length. The centre of curvature is on the same side as the incoming light, giving positive R by the mirror convention. A convex mirror diverges light and has a negative focal length.

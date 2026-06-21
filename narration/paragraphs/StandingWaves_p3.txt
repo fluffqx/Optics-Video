@@ -1,1 +1,1 @@
-This means the wave pattern does not move. At a node — a position where sine kx equals zero — the amplitude is permanently zero, regardless of time. At an antinode — where sine kx equals plus or minus one — the amplitude oscillates between plus 2A and minus 2A.
+The spatial and temporal dependences have completely separated. The profile 2A sine kx is stationary — it does not move. The factor cosine omega t makes the entire profile oscillate in time between plus 2A sine kx and minus 2A sine kx.

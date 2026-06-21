@@ -1,1 +1,1 @@
-The Fresnel equations come from applying Maxwell's boundary conditions at the interface.
+Bennett derives the Fresnel equations in Section 3.3 by applying Maxwell's boundary conditions at a planar interface between two dielectric media with refractive indices n-i and n-t.

@@ -1,1 +1,0 @@
-A diffraction grating has N slits with spacing d. The N-slit interference pattern has extremely sharp principal maxima wherever d sine theta equals m lambda — the grating equation. At oblique incidence, this becomes d times sine theta_m minus sine theta_i equals m lambda.

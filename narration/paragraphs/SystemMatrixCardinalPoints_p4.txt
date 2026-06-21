@@ -1,1 +1,1 @@
-The principal planes can be located from these quantities. All the focusing properties of the system are captured by specifying the two principal planes and the effective focal length.
+The principal planes themselves can be located by computing their distances from the first and last elements using the matrix elements. The effective focal length measured from either principal plane is the same quantity f-effective.

@@ -1,1 +1,1 @@
-These equations govern the design of every lens, every mirror coating, every optical fibre, every anti-reflection coating on a camera lens. They are derived directly from Maxwell's boundary conditions and are exact within classical electromagnetism.
+We also cover Brewster's angle, where the p-polarised component is completely transmitted with zero reflection, and total internal reflection, where all the light is reflected when the angle exceeds the critical angle. These phenomena are exploited in polarising beam splitters, optical fibres, and prism-based polarisers.

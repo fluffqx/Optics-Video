@@ -1,1 +1,0 @@
-In anomalous dispersion, near an absorption resonance, dn d omega can be negative and the group velocity can apparently exceed c. This does not violate relativity because the group velocity is not the signal velocity in these regimes — the pulse shape distorts dramatically and information cannot actually travel faster than c.

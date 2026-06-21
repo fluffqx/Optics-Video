@@ -1,5 +1,7 @@
-Week 3 is geometric optics — the regime where the wavelength of light is so small compared to the optical elements that we can treat light as rays travelling in straight lines.
+Week 3 is geometric optics — the ray approximation to wave propagation that applies when all apertures are much larger than the wavelength. This follows Bennett Chapter 4 closely.
 
-This approximation is remarkably powerful. It describes lenses, mirrors, microscopes, telescopes, cameras, and the human eye with great accuracy. The thin lens equation and the mirror equation are the workhorses of optical engineering.
+Geometric optics is not an approximation to be embarrassed about. It correctly describes every camera lens, every telescope, every microscope objective, every pair of eyeglasses, and the optics of the human eye. The thin lens equation, the mirror equation, and the lensmaker's formula are exact within the paraxial approximation.
 
-The most important lesson of this week is sign conventions. They seem tedious, but getting a sign wrong in a geometric optics problem means getting the completely wrong answer. We will establish them carefully and check them on every example.
+The most critical skill in this week is sign conventions. Every student who makes a significant error in a geometric optics exam problem makes a sign error. We establish the conventions carefully and apply them consistently to every example.
+
+By the end of this week you must be able to: apply the thin lens equation to find image position and magnification; use the lensmaker's equation to relate focal length to lens geometry; draw ray diagrams with three principal rays; solve two-lens combination problems step by step; compute the magnification of a microscope and a telescope; and describe how the human eye forms images and how corrective lenses work.

@@ -1,5 +1,7 @@
-Week 7 is diffraction — the bending of light around obstacles and through apertures. When an aperture becomes comparable in size to the wavelength, geometric optics fails and we must use wave optics.
+Week 7 is diffraction — the bending and spreading of light as it passes through apertures or around obstacles. This follows Bennett Chapter 8, Sections 8.2 through 8.3.8.
 
-Bennett opens Chapter 8 with a profound statement: in a sense, diffraction is interference done correctly. In Young's experiment, we had two discrete point sources. In diffraction, we have a continuous aperture, and every point on the wavefront within it acts as a Huygens secondary source. The diffraction pattern is the result of all these secondary sources interfering with each other.
+Diffraction is what happens when the aperture size becomes comparable to the wavelength, so that geometric optics fails. Bennett opens Chapter 8 with a precise statement: in a sense, diffraction is interference done correctly. In Young's experiment we had two discrete point sources. In diffraction, every point of the wavefront within the aperture is a Huygens secondary source. The diffraction pattern is the result of all these infinitely many sources interfering simultaneously.
 
-The key results of this week: the sinc-squared single-slit pattern and where its zeros occur, the Airy disk for a circular aperture and the Rayleigh resolution criterion, and the diffraction grating equation with its resolving power.
+The Fraunhofer approximation — valid when the screen is in the far field — reduces the diffraction integral to a Fourier transform. The single-slit pattern is the sinc-squared function. The circular aperture gives the Airy disk with its 1.22 lambda over D angular radius. The diffraction grating gives sharp peaks with resolving power N times m.
+
+These results determine the resolution of every optical instrument — telescope, microscope, camera, spectrograph. Understanding why a larger aperture gives better resolution, and by exactly how much, is the central practical lesson of this week.

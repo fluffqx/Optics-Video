@@ -1,1 +1,0 @@
-The Jones formalism handles all of this mathematically. A Jones vector is a two-component complex column vector giving the x and y components of the electric field amplitude. A Jones matrix is a two-by-two complex matrix representing an optical element.

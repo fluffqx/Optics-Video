@@ -1,1 +1,1 @@
-Angular frequency: omega equals 2 pi times f equals 2.977 times ten to the fifteenth radians per second.
+Angular frequency: omega equals 2 pi f equals 2 pi times 4.738 times ten to the 14 equals 2.977 times ten to the 15 radians per second.

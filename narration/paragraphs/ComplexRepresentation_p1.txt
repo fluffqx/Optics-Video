@@ -1,1 +1,1 @@
-Working directly with sines and cosines becomes extremely cumbersome as soon as you start adding multiple waves or computing intensities. The complex representation replaces these trigonometric functions with exponentials, making the algebra vastly simpler. This is not a mathematical trick — it is the standard language of wave optics.
+Bennett introduces complex notation in Section 1.6 and explains exactly why it is so much more convenient than real notation for wave calculations.

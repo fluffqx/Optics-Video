@@ -1,1 +1,1 @@
-A half-wave plate with fast axis horizontal flips the sign of the y-component: 1, 0 top row and 0, minus 1 bottom row. This corresponds to a phase shift of minus pi on the y-component.
+The quarter-wave plate with fast axis horizontal has matrix 1, 0, 0, i. Why i? The fast axis is horizontal, so the x-component travels faster — it accumulates less phase delay through the plate. The y-component travels more slowly along the slow axis and picks up an additional phase of pi over 2, which appears as the factor i equals e to the i pi over 2 in the lower right element.

@@ -1,1 +1,1 @@
-For each of these, you should be able to: set up the problem from scratch, identify all the relevant variables, apply the correct formula with correct sign conventions, and compute a numerical answer.
+The most common mistakes: confusing F with script-F in the Fabry-Pérot; forgetting the cosine theta factor in thin-film interference for oblique incidence; using the wrong sign in Brewster vs critical angle formula; not using the correct factor for T (it is not simply t-squared). Review the worked examples in Bennett for each of these.

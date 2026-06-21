@@ -1,4 +1,4 @@
-# week3_geometric.py — paragraph-per-scene
+# week3_geometric.py
 from manim import *
 from utils import *
 
@@ -6,14 +6,14 @@ class Week3TitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p1.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics", "Bennett Ch. 4")
+        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
         self.play(FadeIn(card, run_time=0.5))
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Week 3 is geometric optics — the regime where the wavelength",
-            "of light is so small compared to the optical elements that",
-            "we can treat light as rays travelling in straight lines.",
+            "Week 3 is geometric optics — the ray approximation to wave",
+            "propagation that applies when all apertures are much larger",
+            "than the wavelength. This follows Bennett Chapter 4 closely.",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -23,16 +23,16 @@ class Week3TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p2.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics", "Bennett Ch. 4")
+        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
         self.play(FadeIn(card, run_time=0.5))
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "This approximation is remarkably powerful. It describes",
-            "lenses, mirrors, microscopes, telescopes, cameras, and the",
-            "human eye with great accuracy. The thin lens equation and",
-            "the mirror equation are the workhorses of optical",
-            "engineering.",
+            "Geometric optics is not an approximation to be embarrassed",
+            "about. It correctly describes every camera lens, every",
+            "telescope, every microscope objective, every pair of",
+            "eyeglasses, and the optics of the human eye. The thin lens",
+            "equation, the mirror equation, and the lensmaker's formula",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -42,16 +42,35 @@ class Week3TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p3.mp3", time_offset=0)
-        card = make_title_card("WEEK 3", "Geometric Optics", "Bennett Ch. 4")
+        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
         self.play(FadeIn(card, run_time=0.5))
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "The most important lesson of this week is sign conventions.",
-            "They seem tedious, but getting a sign wrong in a geometric",
-            "optics problem means getting the completely wrong answer. We",
-            "will establish them carefully and check them on every",
+            "The most critical skill in this week is sign conventions.",
+            "Every student who makes a significant error in a geometric",
+            "optics exam problem makes a sign error. We establish the",
+            "conventions carefully and apply them consistently to every",
             "example.",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week3TitleCard_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week3TitleCard_p4.mp3", time_offset=0)
+        card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "By the end of this week you must be able to: apply the thin",
+            "lens equation to find image position and magnification; use",
+            "the lensmaker's equation to relate focal length to lens",
+            "geometry; draw ray diagrams with three principal rays; solve",
+            "two-lens combination problems step by step; compute the",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -61,15 +80,15 @@ class GeometricOpticsIntro_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p1.mp3", time_offset=0)
-        title = Text("Geometric Optics and the Paraxial Approximation", font_size=34, color=GOLD)
+        title = Text("Geometric Optics  (Bennett Section 4.1-4.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Geometric optics applies when the wavelength of light is",
-            "much smaller than all the apertures, lenses, and optical",
-            "elements in the system. Under this condition, diffraction",
-            "effects are negligible and we can treat light as travelling",
-            "in straight lines called rays. The ray is perpendicular to",
+            "Geometric optics, also called ray optics, applies when the",
+            "wavelength of light is much smaller than all the apertures,",
+            "obstacles, and optical elements in the system. Under this",
+            "condition, we can treat light as travelling in straight",
+            "lines called rays. The ray is always perpendicular to the",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -79,15 +98,15 @@ class GeometricOpticsIntro_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p2.mp3", time_offset=0)
-        title = Text("Geometric Optics and the Paraxial Approximation", font_size=34, color=GOLD)
+        title = Text("Geometric Optics  (Bennett Section 4.1-4.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The paraxial approximation further simplifies the analysis.",
-            "We consider only rays that travel at small angles to the",
-            "optical axis — the main axis of the optical system. For",
-            "small angles theta in radians, sine theta approximately",
-            "equals theta and cosine theta approximately equals one. This",
+            "Bennett Section 4.1 notes that the paraxial approximation",
+            "further simplifies the analysis. We restrict attention to",
+            "rays that make small angles with the optical axis — the",
+            "central axis of the system. For small angles theta in",
+            "radians, we replace sin theta by theta and cos theta by one.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -97,15 +116,51 @@ class GeometricOpticsIntro_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p3.mp3", time_offset=0)
-        title = Text("Geometric Optics and the Paraxial Approximation", font_size=34, color=GOLD)
+        title = Text("Geometric Optics  (Bennett Section 4.1-4.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The domain of geometric optics covers most of everyday",
-            "optics: eyeglasses, camera lenses, binoculars, telescopes,",
-            "microscopes, projectors. It breaks down when apertures",
-            "become comparable to the wavelength — which brings us to",
-            "diffraction in Week 7 — and when coherence effects matter —",
+            "The paraxial approximation is not just a mathematical",
+            "convenience — it corresponds to the regime where real",
+            "optical instruments are designed to operate. Camera lenses,",
+            "microscope objectives, and telescope primaries are all",
+            "optimised for paraxial rays. The aberrations that degrade",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class GeometricOpticsIntro_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p4.mp3", time_offset=0)
+        title = Text("Geometric Optics  (Bennett Section 4.1-4.2)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Geometric optics fails when the aperture becomes comparable",
+            "to the wavelength — then diffraction effects become",
+            "important, and we need the full wave theory of Week 7. But",
+            "for apertures larger than a few wavelengths, geometric",
+            "optics is an excellent and exact approximation within its",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class GeometricOpticsIntro_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/GeometricOpticsIntro_p5.mp3", time_offset=0)
+        title = Text("Geometric Optics  (Bennett Section 4.1-4.2)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The key concept of the optical path length from Bennett",
+            "Section 4.2: the optical path length equals n times the",
+            "geometric distance travelled. This quantity determines phase",
+            "and is what enters Fermat's principle and the interference",
+            "and diffraction calculations of Weeks 6 and 7.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -115,7 +170,7 @@ class SignConventions_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p1.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -133,7 +188,7 @@ class SignConventions_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p2.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -150,7 +205,7 @@ class SignConventions_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p3.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -168,7 +223,7 @@ class SignConventions_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p4.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -186,7 +241,7 @@ class SignConventions_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p5.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -204,7 +259,7 @@ class SignConventions_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p6.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -222,7 +277,7 @@ class SignConventions_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p7.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -240,7 +295,7 @@ class SignConventions_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SignConventions_p8.mp3", time_offset=0)
-        title = Text("Sign Conventions — CRITICAL", font_size=36, color=GOLD)
+        title = Text("Sign Conventions  (Bennett Section 4.3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -258,15 +313,13 @@ class SphericalSurface_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SphericalSurface_p1.mp3", time_offset=0)
-        title = Text("Refraction at a Spherical Surface", font_size=34, color=GOLD)
+        title = Text("Refraction at a Spherical Surface  (Bennett 4.3.3)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "A single curved interface between two media refracts light",
-            "according to the spherical surface equation: n-i over s-o",
-            "plus n-t over s-i equals n-t minus n-i, all divided by R.",
-            "Here R is the radius of curvature of the surface, positive",
-            "if the centre is on the transmitted side.",
+            "A single curved interface between two transparent media is",
+            "the fundamental building block of lens design. Bennett",
+            "derives the spherical surface equation in Section 4.3.3.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -276,15 +329,15 @@ class SphericalSurface_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SphericalSurface_p2.mp3", time_offset=0)
-        title = Text("Refraction at a Spherical Surface", font_size=34, color=GOLD)
+        title = Text("Refraction at a Spherical Surface  (Bennett 4.3.3)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "This equation is derived by applying Snell's law in the",
-            "paraxial approximation to a ray hitting the surface at a",
-            "small angle. The paraxial approximation replaces sine theta",
-            "with theta and cosine theta with one, which linearises",
-            "everything.",
+            "Consider a spherical surface of radius R centred at point C,",
+            "separating medium with index n-i on the left from medium",
+            "with index n-t on the right. Positive R means the centre of",
+            "curvature is to the right — on the transmitted side — which",
+            "corresponds to a convex surface for a lens element.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -294,15 +347,51 @@ class SphericalSurface_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/SphericalSurface_p3.mp3", time_offset=0)
-        title = Text("Refraction at a Spherical Surface", font_size=34, color=GOLD)
+        title = Text("Refraction at a Spherical Surface  (Bennett 4.3.3)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "For a flat surface with R going to infinity, the equation",
-            "reduces to n-i over s-o plus n-t over s-i equals zero, or",
-            "s-i equals minus n-t over n-i times s-o. The image of an",
-            "object in water viewed from air appears at a different depth",
-            "from the actual object — this is why a pool appears",
+            "The refraction equation for a single spherical surface is:",
+            "n-i over s-o plus n-t over s-i equals n-t minus n-i, all",
+            "divided by R. Here s-o is the object distance and s-i is the",
+            "image distance, both measured from the vertex of the",
+            "surface.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class SphericalSurface_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SphericalSurface_p4.mp3", time_offset=0)
+        title = Text("Refraction at a Spherical Surface  (Bennett 4.3.3)", font_size=32, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "At normal incidence, a flat surface has R going to infinity",
+            "and the equation becomes n-i over s-o plus n-t over s-i",
+            "equals zero. This gives s-i equals minus n-t over n-i times",
+            "s-o. For an object at depth s-o in water with n-i equals",
+            "1.33, viewed from air with n-t equals 1.00: s-i equals minus",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class SphericalSurface_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SphericalSurface_p5.mp3", time_offset=0)
+        title = Text("Refraction at a Spherical Surface  (Bennett 4.3.3)", font_size=32, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For a convex glass surface with R equals 10 centimetres, n-i",
+            "equals 1.00 air, n-t equals 1.50 glass, and an object 30",
+            "centimetres in front: 1.00 over 30 plus 1.50 over s-i equals",
+            "0.50 over 10 equals 0.050. Solving: 1.50 over s-i equals",
+            "0.050 minus 0.0333 equals 0.0167. s-i equals 90 centimetres",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -312,7 +401,7 @@ class ThinLensScene_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p1.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -329,7 +418,7 @@ class ThinLensScene_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p2.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -347,7 +436,7 @@ class ThinLensScene_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p3.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -365,7 +454,7 @@ class ThinLensScene_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p4.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -383,7 +472,7 @@ class ThinLensScene_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p5.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -399,7 +488,7 @@ class ThinLensScene_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p6.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -416,7 +505,7 @@ class ThinLensScene_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p7.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -433,7 +522,7 @@ class ThinLensScene_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p8.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -451,7 +540,7 @@ class ThinLensScene_p9(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p9.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -468,7 +557,7 @@ class ThinLensScene_p10(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p10.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -486,7 +575,7 @@ class ThinLensScene_p11(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ThinLensScene_p11.mp3", time_offset=0)
-        title = Text("The Thin Lens Equation", font_size=38, color=GOLD)
+        title = Text("The Thin Lens Equation  (Bennett 4.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -504,14 +593,14 @@ class MirrorScene_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MirrorScene_p1.mp3", time_offset=0)
-        title = Text("Spherical Mirrors", font_size=40, color=GOLD)
+        title = Text("Spherical Mirrors  (Bennett 4.3.2)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Spherical mirrors obey the mirror equation: one over s-o",
-            "plus one over s-i equals two over R equals one over f-m,",
-            "where f-m equals R over two is the focal length of the",
-            "mirror.",
+            "Spherical mirrors obey an equation that is structurally",
+            "identical to the thin lens equation. Bennett derives the",
+            "mirror equation in Section 4.3.2 starting from the geometry",
+            "of reflection at a spherical surface.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -521,15 +610,15 @@ class MirrorScene_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MirrorScene_p2.mp3", time_offset=0)
-        title = Text("Spherical Mirrors", font_size=40, color=GOLD)
+        title = Text("Spherical Mirrors  (Bennett 4.3.2)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "This is identical in form to the thin lens equation. The",
-            "sign convention for mirrors: positive distances are on the",
-            "same side as the incoming light. A concave mirror curves",
-            "toward the light and has R positive, giving a positive focal",
-            "length — it is converging. A convex mirror curves away from",
+            "The mirror equation is one over s-o plus one over s-i equals",
+            "two over R equals one over f-m. Here f-m equals R over two",
+            "is the focal length of the mirror. The sign convention: for",
+            "mirrors, positive distances are measured toward the incoming",
+            "light, which reverses the usual convention used for lenses.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -539,15 +628,15 @@ class MirrorScene_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MirrorScene_p3.mp3", time_offset=0)
-        title = Text("Spherical Mirrors", font_size=40, color=GOLD)
+        title = Text("Spherical Mirrors  (Bennett 4.3.2)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "For a concave mirror with f-m equals 20 centimetres and",
-            "object at s-o equals 60 centimetres: one over s-i equals one",
-            "over 20 minus one over 60 equals 2 over 60, so s-i equals 30",
-            "centimetres. Real image in front of the mirror.",
-            "Magnification m equals minus 30 over 60 equals minus",
+            "A concave mirror converges light and has a positive focal",
+            "length. The centre of curvature is on the same side as the",
+            "incoming light, giving positive R by the mirror convention.",
+            "A convex mirror diverges light and has a negative focal",
+            "length.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -557,15 +646,51 @@ class MirrorScene_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MirrorScene_p4.mp3", time_offset=0)
-        title = Text("Spherical Mirrors", font_size=40, color=GOLD)
+        title = Text("Spherical Mirrors  (Bennett 4.3.2)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Concave mirrors are used in reflecting telescopes — the",
-            "primary mirror focuses starlight to form a real image. They",
-            "are also used in car headlights in reverse: a light source",
-            "at the focal point produces a parallel reflected beam.",
-            "Convex mirrors are used as rear-view mirrors and security",
+            "Worked example: concave mirror with R equals 40 centimetres,",
+            "so f-m equals 20 centimetres. Object at s-o equals 60",
+            "centimetres. One over s-i equals one over 20 minus one over",
+            "60 equals 3 over 60 minus 1 over 60 equals 2 over 60.",
+            "Therefore s-i equals 30 centimetres — real image in front of",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MirrorScene_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MirrorScene_p5.mp3", time_offset=0)
+        title = Text("Spherical Mirrors  (Bennett 4.3.2)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "If the object is at s-o equals 10 centimetres, inside the",
+            "focal length: one over s-i equals one over 20 minus one over",
+            "10 equals minus 1 over 20. s-i equals minus 20 centimetres —",
+            "behind the mirror. Virtual, upright, magnified by factor 2.",
+            "This is the operating principle of a shaving or makeup",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MirrorScene_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MirrorScene_p6.mp3", time_offset=0)
+        title = Text("Spherical Mirrors  (Bennett 4.3.2)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Concave mirrors are used as primary mirrors in reflecting",
+            "telescopes because they avoid chromatic aberration — mirrors",
+            "reflect all wavelengths identically, unlike lenses. Convex",
+            "mirrors are used as rear-view mirrors and security mirrors",
+            "for their wide field of view.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -575,13 +700,14 @@ class LensCombinations_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/LensCombinations_p1.mp3", time_offset=0)
-        title = Text("Lens Combinations", font_size=40, color=GOLD)
+        title = Text("Lens Combinations  (Bennett 4.4)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "When two lenses are used in sequence, the image formed by",
-            "the first lens serves as the object for the second lens. You",
-            "apply the thin lens equation twice.",
+            "For two thin lenses separated by distance d, Bennett Section",
+            "4.4 gives the procedure: apply the thin lens equation to the",
+            "first lens to find its image, then use that image as the",
+            "object for the second lens.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -591,15 +717,15 @@ class LensCombinations_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/LensCombinations_p2.mp3", time_offset=0)
-        title = Text("Lens Combinations", font_size=40, color=GOLD)
+        title = Text("Lens Combinations  (Bennett 4.4)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "For two thin lenses separated by distance d, the first image",
-            "is at distance s-i-one from the first lens. The second",
-            "object distance is s-o-two equals d minus s-i-one — the",
-            "separation minus the first image distance. If s-i-one is",
-            "greater than d, the first image falls beyond the second",
+            "If the first lens has focal length f-one and the object is",
+            "at distance s-o-one, then s-i-one satisfies one over s-o-one",
+            "plus one over s-i-one equals one over f-one. The object",
+            "distance for the second lens is s-o-two equals d minus",
+            "s-i-one. If s-i-one is greater than d — the first image",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -609,15 +735,15 @@ class LensCombinations_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/LensCombinations_p3.mp3", time_offset=0)
-        title = Text("Lens Combinations", font_size=40, color=GOLD)
+        title = Text("Lens Combinations  (Bennett 4.4)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The effective focal length of the two-lens system satisfies:",
-            "one over f-effective equals one over f-one plus one over",
-            "f-two minus d over f-one f-two. In the contact limit where d",
-            "goes to zero, this simplifies to one over f-effective equals",
-            "one over f-one plus one over f-two, or equivalently",
+            "Apply the thin lens equation to the second lens: one over",
+            "s-o-two plus one over s-i-two equals one over f-two. The",
+            "total magnification is m-total equals m-one times m-two",
+            "equals minus s-i-one over s-o-one times minus s-i-two over",
+            "s-o-two.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -627,15 +753,33 @@ class LensCombinations_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/LensCombinations_p4.mp3", time_offset=0)
-        title = Text("Lens Combinations", font_size=40, color=GOLD)
+        title = Text("Lens Combinations  (Bennett 4.4)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The total magnification of a two-lens system is the product",
-            "of the individual magnifications: m-total equals m-one times",
-            "m-two. This multiplicative property is what makes compound",
-            "microscopes so powerful — two lenses each providing large",
-            "magnification multiply their effects.",
+            "For lenses in contact with d equals zero, the effective",
+            "focal length satisfies one over f-eff equals one over f-one",
+            "plus one over f-two, which is equivalent to P-eff equals",
+            "P-one plus P-two. The powers add directly. This is why",
+            "optometrists write prescriptions in dioptres — combining",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class LensCombinations_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/LensCombinations_p5.mp3", time_offset=0)
+        title = Text("Lens Combinations  (Bennett 4.4)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For two lenses separated by distance d, Bennett gives the",
+            "general formula: one over f-eff equals one over f-one plus",
+            "one over f-two minus d over f-one f-two. The last term is",
+            "the correction for separation. For two identical converging",
+            "lenses each of focal length f separated by d equals f, we",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -645,7 +789,7 @@ class OpticalInstruments_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/OpticalInstruments_p1.mp3", time_offset=0)
-        title = Text("Optical Instruments", font_size=40, color=GOLD)
+        title = Text("Optical Instruments  (Bennett 4.5)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -661,7 +805,7 @@ class OpticalInstruments_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/OpticalInstruments_p2.mp3", time_offset=0)
-        title = Text("Optical Instruments", font_size=40, color=GOLD)
+        title = Text("Optical Instruments  (Bennett 4.5)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -679,7 +823,7 @@ class OpticalInstruments_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/OpticalInstruments_p3.mp3", time_offset=0)
-        title = Text("Optical Instruments", font_size=40, color=GOLD)
+        title = Text("Optical Instruments  (Bennett 4.5)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -697,7 +841,7 @@ class OpticalInstruments_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/OpticalInstruments_p4.mp3", time_offset=0)
-        title = Text("Optical Instruments", font_size=40, color=GOLD)
+        title = Text("Optical Instruments  (Bennett 4.5)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -715,7 +859,7 @@ class OpticalInstruments_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/OpticalInstruments_p5.mp3", time_offset=0)
-        title = Text("Optical Instruments", font_size=40, color=GOLD)
+        title = Text("Optical Instruments  (Bennett 4.5)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([

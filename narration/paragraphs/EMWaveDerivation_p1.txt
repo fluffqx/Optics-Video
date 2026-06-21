@@ -1,1 +1,1 @@
-Here is Maxwell's derivation of the electromagnetic wave equation — arguably the most important calculation in the history of physics.
+Bennett derives the electromagnetic wave equation in Appendix B and summarises the result in Section 2.3. The derivation uses two of Maxwell's four equations: Faraday's law and the Ampère-Maxwell law.

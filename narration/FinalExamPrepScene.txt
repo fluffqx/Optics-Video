@@ -1,13 +1,9 @@
-The final exam covers all eight weeks. It's three hours, and it counts for 85 percent of your grade.
+The final examination covers all eight weeks. The most important thing to bring is fluency with formulas — you should not need to derive them under time pressure. Here is a rapid review of the key formulas by week.
 
-The grading formula is: FINAL equals 0.85 times your exam score, plus 0.15 times your midterm score, plus your SLT bonus. To pass, you need a FINAL of at least 6 AND an exam score of at least 5. Both conditions must be met.
+Week 1: wave equation, harmonic wave relations v equals f lambda, complex representation, superposition principle. Week 2: Snell's law, Fresnel equations for r-s and r-p, R equals r-squared, R plus T equals 1, Brewster's angle tangent theta-B equals n-t over n-i, critical angle sine theta-c equals n-t over n-i, Malus's law I equals I-naught cosine squared theta. Week 3: thin lens equation one over s-o plus one over s-i equals one over f, magnification m equals minus s-i over s-o, lensmaker's equation.
 
-The SLT bonus can add up to a full point to your grade if you earned at least 100 SLT points across the semester.
+Week 4: translation matrix, thin lens matrix, system matrix and how to extract cardinal points. Week 5: Jones vectors for six standard states, Jones matrices from Bennett Table 6.1, multiplication order M-N times ... times M-1, intensity from modulus-squared. Week 6: interference formula I equals I-one plus I-two plus 2 root I-one I-two cosine delta, Young's fringe spacing delta-y equals lambda L over d, thin film interference conditions, fringe visibility V equals I-max minus I-min over I-max plus I-min.
 
-The topics that appear most often in exam questions are: Fresnel calculations, thin film interference, Young's double slit, single slit diffraction, grating equation with resolving power, Fabry-Pérot with finesse and free spectral range, Jones matrices for polarisation, and the Rayleigh criterion for resolution.
+Week 7: single-slit zeros at b sine theta equals m lambda, Airy disk radius sine theta-one equals 1.22 lambda over D, Rayleigh criterion, grating equation d sine theta-m equals m lambda, resolving power R equals N m. Week 8: Airy function I-t equals I-naught over 1 plus F sine squared delta over 2, coefficient of finesse F equals 4R over 1 minus R squared, finesse script-F equals pi root R over 1 minus R, resolving power equals N times script-F, FSR equals lambda squared over 2nd.
 
-For each of these, you should be able to: set up the problem from scratch, identify all the relevant variables, apply the correct formula with correct sign conventions, and compute a numerical answer.
-
-The best preparation is still the SLT problem sets. They are designed to be at exam level, and many are directly taken from past exams. If you can solve all nine SLT sets independently, you are fully prepared.
-
-You can do this. Good luck.
+The most common mistakes: confusing F with script-F in the Fabry-Pérot; forgetting the cosine theta factor in thin-film interference for oblique incidence; using the wrong sign in Brewster vs critical angle formula; not using the correct factor for T (it is not simply t-squared). Review the worked examples in Bennett for each of these.

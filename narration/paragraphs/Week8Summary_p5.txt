@@ -1,1 +1,1 @@
-The resolving power equals N times script-F. This is the ratio lambda over delta-lambda-min.
+The order number at resonance: N equals 2nd cosine theta over lambda-naught. For normal incidence: N equals 2nd over lambda-naught.

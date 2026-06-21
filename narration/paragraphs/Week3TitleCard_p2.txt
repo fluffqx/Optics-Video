@@ -1,1 +1,1 @@
-This approximation is remarkably powerful. It describes lenses, mirrors, microscopes, telescopes, cameras, and the human eye with great accuracy. The thin lens equation and the mirror equation are the workhorses of optical engineering.
+Geometric optics is not an approximation to be embarrassed about. It correctly describes every camera lens, every telescope, every microscope objective, every pair of eyeglasses, and the optics of the human eye. The thin lens equation, the mirror equation, and the lensmaker's formula are exact within the paraxial approximation.

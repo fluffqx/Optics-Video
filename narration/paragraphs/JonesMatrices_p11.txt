@@ -1,0 +1,1 @@
+The rotation of a Jones matrix is given by M-prime equals R of alpha times M times R of minus alpha. This is Bennett Equation 6.24. Using this, you can derive the Jones matrix for a linear polariser at any angle from the horizontal or vertical matrix in the table, without memorising additional matrices.

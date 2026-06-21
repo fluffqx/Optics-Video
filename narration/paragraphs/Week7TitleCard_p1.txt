@@ -1,1 +1,1 @@
-Week 7 is diffraction — the bending of light around obstacles and through apertures. When an aperture becomes comparable in size to the wavelength, geometric optics fails and we must use wave optics.
+Week 7 is diffraction — the bending and spreading of light as it passes through apertures or around obstacles. This follows Bennett Chapter 8, Sections 8.2 through 8.3.8.

@@ -1,1 +1,1 @@
-This confirms that any function of the form f of x minus vt is a valid travelling wave solution. The specific example we chose, x minus vt squared, is a parabolic profile that moves rigidly to the right at speed v without changing shape. The same argument works for any twice-differentiable function of x minus vt — Gaussian pulses, cosines, exponentials, all of them.
+Step three: substitute into the wave equation. The left side is 2. The right side is one over v-squared times 2v-squared equals 2. Both sides equal 2 for all x and t, so the wave equation is satisfied.

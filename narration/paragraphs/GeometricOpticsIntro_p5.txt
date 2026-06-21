@@ -1,0 +1,1 @@
+The key concept of the optical path length from Bennett Section 4.2: the optical path length equals n times the geometric distance travelled. This quantity determines phase and is what enters Fermat's principle and the interference and diffraction calculations of Weeks 6 and 7.

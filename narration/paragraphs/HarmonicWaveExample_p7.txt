@@ -1,1 +1,1 @@
-Write the full wave function for an electric field pointing in the x-direction with amplitude E naught equals 1000 volts per metre, propagating in the z-direction: E equals 1000 times sine of the quantity 9.926 times ten to the sixth times z, minus 2.977 times ten to the fifteenth times t, in units of volts per metre.
+Write the complete wave function for an electric field in the x-direction propagating in z, with amplitude E-naught: E-x equals E-naught sine of 9.926 times ten to the 6 times z minus 2.977 times ten to the 15 times t.

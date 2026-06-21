@@ -1,1 +1,1 @@
-The Jones vector for a plane wave propagating in the z-direction is a two-component vector containing the x and y complex amplitudes of the electric field. The common factor e to the i kz minus omega t is always implicit.
+Polarisation is one of the most important properties of light, and one that our eyes cannot detect directly. Bennett opens Chapter 6 by continuing the discussion from Chapter 2, where it was shown that linearly polarised transverse electromagnetic waves are solutions to Maxwell's equations.

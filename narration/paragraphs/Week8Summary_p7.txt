@@ -1,1 +1,1 @@
-The coherence length of the source must exceed 2nd for fringes to be visible.
+The free spectral range in wavelength: delta-lambda-FSR equals lambda-naught squared over 2nd equals lambda-naught over N. In frequency: delta-nu-FSR equals c over 2nd. This is the cavity mode spacing and determines the allowed longitudinal modes of a laser.

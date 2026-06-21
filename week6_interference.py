@@ -1,4 +1,4 @@
-# week6_interference.py — paragraph-per-scene
+# week6_interference.py
 from manim import *
 from utils import *
 
@@ -11,11 +11,9 @@ class Week6TitleCard_p1(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Week 6 is interference — one of the most dramatic",
-            "demonstrations that light is a wave. When two coherent beams",
-            "overlap, the result is not simply their sum of intensities.",
-            "The fields add, and where they add constructively the",
-            "intensity can be four times that of a single beam. Where",
+            "Week 6 is interference — the most visually striking",
+            "consequence of the wave nature of light. This follows",
+            "Bennett Chapter 7, Sections 7.3 through 7.8 and 7.12.",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -30,11 +28,11 @@ class Week6TitleCard_p2(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "The key topics are: two-beam interference and the general",
-            "formula, Young's double-slit experiment and its quantitative",
-            "analysis, thin film interference and the critical role of",
-            "reflection phase shifts, fringe visibility and coherence,",
-            "and the Michelson interferometer.",
+            "Interference occurs because the superposition principle",
+            "allows wave amplitudes to add, and intensity is proportional",
+            "to amplitude squared. When two coherent beams overlap and",
+            "add constructively, the intensity can be four times that of",
+            "a single beam. When they add destructively, the intensity",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -49,11 +47,30 @@ class Week6TitleCard_p3(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Interference phenomena underlie a huge range of technology:",
-            "anti-reflection coatings, laser resonators, optical",
-            "coherence tomography in medicine, gravitational wave",
-            "detection in LIGO, and wavelength measurement in",
-            "spectroscopy.",
+            "The key topics are: the general two-beam interference",
+            "formula with the interference term; Young's double-slit",
+            "experiment and the fringe spacing formula delta-y equals",
+            "lambda L over d; thin film interference with careful",
+            "attention to reflection phase shifts; fringe visibility as a",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week6TitleCard_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week6TitleCard_p4.mp3", time_offset=0)
+        card = make_title_card("WEEK 6", "Interference and Coherence", "Bennett Ch. 7")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "Modern applications of interference include: anti-reflection",
+            "coatings on every camera lens; laser Fabry-Pérot cavities",
+            "and their longitudinal modes; optical coherence tomography",
+            "for medical imaging; gravitational wave detection in LIGO;",
+            "and wavelength measurement in spectroscopy. Every one of",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -63,7 +80,7 @@ class InterferenceIntroScene_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/InterferenceIntroScene_p1.mp3", time_offset=0)
-        title = Text("Introduction to Interference  (Bennett Ch. 7)", font_size=34, color=GOLD)
+        title = Text("Introduction to Interference  (Bennett 7.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -81,7 +98,7 @@ class InterferenceIntroScene_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/InterferenceIntroScene_p2.mp3", time_offset=0)
-        title = Text("Introduction to Interference  (Bennett Ch. 7)", font_size=34, color=GOLD)
+        title = Text("Introduction to Interference  (Bennett 7.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -99,7 +116,7 @@ class InterferenceIntroScene_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/InterferenceIntroScene_p3.mp3", time_offset=0)
-        title = Text("Introduction to Interference  (Bennett Ch. 7)", font_size=34, color=GOLD)
+        title = Text("Introduction to Interference  (Bennett 7.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -117,7 +134,7 @@ class InterferenceIntroScene_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/InterferenceIntroScene_p4.mp3", time_offset=0)
-        title = Text("Introduction to Interference  (Bennett Ch. 7)", font_size=34, color=GOLD)
+        title = Text("Introduction to Interference  (Bennett 7.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -135,7 +152,7 @@ class InterferenceIntroScene_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/InterferenceIntroScene_p5.mp3", time_offset=0)
-        title = Text("Introduction to Interference  (Bennett Ch. 7)", font_size=34, color=GOLD)
+        title = Text("Introduction to Interference  (Bennett 7.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -153,7 +170,7 @@ class TwoBeamInterference_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/TwoBeamInterference_p1.mp3", time_offset=0)
-        title = Text("Two-Beam Interference Formula", font_size=36, color=GOLD)
+        title = Text("Two-Beam Interference  (Bennett 7.3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -171,7 +188,7 @@ class TwoBeamInterference_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/TwoBeamInterference_p2.mp3", time_offset=0)
-        title = Text("Two-Beam Interference Formula", font_size=36, color=GOLD)
+        title = Text("Two-Beam Interference  (Bennett 7.3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -189,7 +206,7 @@ class TwoBeamInterference_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/TwoBeamInterference_p3.mp3", time_offset=0)
-        title = Text("Two-Beam Interference Formula", font_size=36, color=GOLD)
+        title = Text("Two-Beam Interference  (Bennett 7.3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -207,7 +224,7 @@ class TwoBeamInterference_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/TwoBeamInterference_p4.mp3", time_offset=0)
-        title = Text("Two-Beam Interference Formula", font_size=36, color=GOLD)
+        title = Text("Two-Beam Interference  (Bennett 7.3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -225,7 +242,7 @@ class TwoBeamInterference_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/TwoBeamInterference_p5.mp3", time_offset=0)
-        title = Text("Two-Beam Interference Formula", font_size=36, color=GOLD)
+        title = Text("Two-Beam Interference  (Bennett 7.3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -243,7 +260,7 @@ class YoungDoubleSlit_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p1.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -261,7 +278,7 @@ class YoungDoubleSlit_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p2.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -279,7 +296,7 @@ class YoungDoubleSlit_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p3.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -297,7 +314,7 @@ class YoungDoubleSlit_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p4.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -313,7 +330,7 @@ class YoungDoubleSlit_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p5.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -331,7 +348,7 @@ class YoungDoubleSlit_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p6.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -349,7 +366,7 @@ class YoungDoubleSlit_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/YoungDoubleSlit_p7.mp3", time_offset=0)
-        title = Text("Young's Double-Slit Experiment", font_size=34, color=GOLD)
+        title = Text("Young Double-Slit  (Bennett 7.3.2.1)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -539,7 +556,7 @@ class FringeVisibility_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FringeVisibility_p1.mp3", time_offset=0)
-        title = Text("Fringe Visibility and Coherence", font_size=38, color=GOLD)
+        title = Text("Fringe Visibility and Coherence  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -556,7 +573,7 @@ class FringeVisibility_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FringeVisibility_p2.mp3", time_offset=0)
-        title = Text("Fringe Visibility and Coherence", font_size=38, color=GOLD)
+        title = Text("Fringe Visibility and Coherence  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -574,7 +591,7 @@ class FringeVisibility_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FringeVisibility_p3.mp3", time_offset=0)
-        title = Text("Fringe Visibility and Coherence", font_size=38, color=GOLD)
+        title = Text("Fringe Visibility and Coherence  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -592,7 +609,7 @@ class FringeVisibility_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FringeVisibility_p4.mp3", time_offset=0)
-        title = Text("Fringe Visibility and Coherence", font_size=38, color=GOLD)
+        title = Text("Fringe Visibility and Coherence  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -610,7 +627,7 @@ class FringeVisibility_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FringeVisibility_p5.mp3", time_offset=0)
-        title = Text("Fringe Visibility and Coherence", font_size=38, color=GOLD)
+        title = Text("Fringe Visibility and Coherence  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([

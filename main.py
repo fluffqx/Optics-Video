@@ -13,7 +13,7 @@ from pathlib import Path
 # Format: (python_file, SceneClass)
 RENDER_ORDER = [
 
-    # ── week1_waves.py
+    # week1_waves.py
     ("week1_waves.py", "Week1TitleCard_p1"),
     ("week1_waves.py", "Week1TitleCard_p2"),
     ("week1_waves.py", "Week1TitleCard_p3"),
@@ -31,10 +31,12 @@ RENDER_ORDER = [
     ("week1_waves.py", "WaveEquation1D_p5"),
     ("week1_waves.py", "WaveEquation1D_p6"),
     ("week1_waves.py", "WaveEquation1D_p7"),
+    ("week1_waves.py", "WaveEquation1D_p8"),
     ("week1_waves.py", "WaveEquationProof_p1"),
     ("week1_waves.py", "WaveEquationProof_p2"),
     ("week1_waves.py", "WaveEquationProof_p3"),
     ("week1_waves.py", "WaveEquationProof_p4"),
+    ("week1_waves.py", "WaveEquationProof_p5"),
     ("week1_waves.py", "HarmonicWave_p1"),
     ("week1_waves.py", "HarmonicWave_p2"),
     ("week1_waves.py", "HarmonicWave_p3"),
@@ -49,6 +51,9 @@ RENDER_ORDER = [
     ("week1_waves.py", "HarmonicWave_p12"),
     ("week1_waves.py", "HarmonicWave_p13"),
     ("week1_waves.py", "HarmonicWave_p14"),
+    ("week1_waves.py", "HarmonicWave_p15"),
+    ("week1_waves.py", "HarmonicWave_p16"),
+    ("week1_waves.py", "HarmonicWave_p17"),
     ("week1_waves.py", "HarmonicWaveExample_p1"),
     ("week1_waves.py", "HarmonicWaveExample_p2"),
     ("week1_waves.py", "HarmonicWaveExample_p3"),
@@ -57,6 +62,8 @@ RENDER_ORDER = [
     ("week1_waves.py", "HarmonicWaveExample_p6"),
     ("week1_waves.py", "HarmonicWaveExample_p7"),
     ("week1_waves.py", "HarmonicWaveExample_p8"),
+    ("week1_waves.py", "HarmonicWaveExample_p9"),
+    ("week1_waves.py", "HarmonicWaveExample_p10"),
     ("week1_waves.py", "SuperpositionPrinciple_p1"),
     ("week1_waves.py", "SuperpositionPrinciple_p2"),
     ("week1_waves.py", "SuperpositionPrinciple_p3"),
@@ -70,7 +77,6 @@ RENDER_ORDER = [
     ("week1_waves.py", "PhaseGroupVelocity_p5"),
     ("week1_waves.py", "PhaseGroupVelocity_p6"),
     ("week1_waves.py", "PhaseGroupVelocity_p7"),
-    ("week1_waves.py", "PhaseGroupVelocity_p8"),
     ("week1_waves.py", "ComplexRepresentation_p1"),
     ("week1_waves.py", "ComplexRepresentation_p2"),
     ("week1_waves.py", "ComplexRepresentation_p3"),
@@ -79,23 +85,29 @@ RENDER_ORDER = [
     ("week1_waves.py", "ComplexRepresentation_p6"),
     ("week1_waves.py", "ComplexRepresentation_p7"),
     ("week1_waves.py", "ComplexRepresentation_p8"),
+    ("week1_waves.py", "ComplexRepresentation_p9"),
     ("week1_waves.py", "ThreeDWaves_p1"),
     ("week1_waves.py", "ThreeDWaves_p2"),
     ("week1_waves.py", "ThreeDWaves_p3"),
+    ("week1_waves.py", "ThreeDWaves_p4"),
     ("week1_waves.py", "Week1WavesSummary_p1"),
     ("week1_waves.py", "Week1WavesSummary_p2"),
     ("week1_waves.py", "Week1WavesSummary_p3"),
     ("week1_waves.py", "Week1WavesSummary_p4"),
     ("week1_waves.py", "Week1WavesSummary_p5"),
     ("week1_waves.py", "Week1WavesSummary_p6"),
+    ("week1_waves.py", "Week1WavesSummary_p7"),
 
-    # ── week1_maxwell.py
+    # week1_maxwell.py
     ("week1_maxwell.py", "MaxwellIntro_p1"),
     ("week1_maxwell.py", "MaxwellIntro_p2"),
     ("week1_maxwell.py", "MaxwellIntro_p3"),
+    ("week1_maxwell.py", "MaxwellIntro_p4"),
     ("week1_maxwell.py", "VectorCalculusNotation_p1"),
     ("week1_maxwell.py", "VectorCalculusNotation_p2"),
     ("week1_maxwell.py", "VectorCalculusNotation_p3"),
+    ("week1_maxwell.py", "VectorCalculusNotation_p4"),
+    ("week1_maxwell.py", "VectorCalculusNotation_p5"),
     ("week1_maxwell.py", "MaxwellEquations_p1"),
     ("week1_maxwell.py", "MaxwellEquations_p2"),
     ("week1_maxwell.py", "MaxwellEquations_p3"),
@@ -106,6 +118,7 @@ RENDER_ORDER = [
     ("week1_maxwell.py", "MaxwellVacuum_p1"),
     ("week1_maxwell.py", "MaxwellVacuum_p2"),
     ("week1_maxwell.py", "MaxwellVacuum_p3"),
+    ("week1_maxwell.py", "MaxwellVacuum_p4"),
     ("week1_maxwell.py", "EMWaveDerivation_p1"),
     ("week1_maxwell.py", "EMWaveDerivation_p2"),
     ("week1_maxwell.py", "EMWaveDerivation_p3"),
@@ -121,6 +134,8 @@ RENDER_ORDER = [
     ("week1_maxwell.py", "EMWaveExample_p2"),
     ("week1_maxwell.py", "EMWaveExample_p3"),
     ("week1_maxwell.py", "EMWaveExample_p4"),
+    ("week1_maxwell.py", "EMWaveExample_p5"),
+    ("week1_maxwell.py", "EMWaveExample_p6"),
     ("week1_maxwell.py", "PoyntingIrradiance_p1"),
     ("week1_maxwell.py", "PoyntingIrradiance_p2"),
     ("week1_maxwell.py", "PoyntingIrradiance_p3"),
@@ -136,6 +151,9 @@ RENDER_ORDER = [
     ("week1_maxwell.py", "RadiationPressure_p3"),
     ("week1_maxwell.py", "RadiationPressure_p4"),
     ("week1_maxwell.py", "RadiationPressure_p5"),
+    ("week1_maxwell.py", "RadiationPressure_p6"),
+    ("week1_maxwell.py", "RadiationPressure_p7"),
+    ("week1_maxwell.py", "RadiationPressure_p8"),
     ("week1_maxwell.py", "DispersionScene_p1"),
     ("week1_maxwell.py", "DispersionScene_p2"),
     ("week1_maxwell.py", "DispersionScene_p3"),
@@ -143,8 +161,9 @@ RENDER_ORDER = [
     ("week1_maxwell.py", "DispersionScene_p5"),
     ("week1_maxwell.py", "DispersionScene_p6"),
     ("week1_maxwell.py", "DispersionScene_p7"),
+    ("week1_maxwell.py", "DispersionScene_p8"),
 
-    # ── week2_fresnel.py
+    # week2_fresnel.py
     ("week2_fresnel.py", "Week2TitleCard_p1"),
     ("week2_fresnel.py", "Week2TitleCard_p2"),
     ("week2_fresnel.py", "Week2TitleCard_p3"),
@@ -166,6 +185,9 @@ RENDER_ORDER = [
     ("week2_fresnel.py", "FresnelEquationsDerivation_p1"),
     ("week2_fresnel.py", "FresnelEquationsDerivation_p2"),
     ("week2_fresnel.py", "FresnelEquationsDerivation_p3"),
+    ("week2_fresnel.py", "FresnelEquationsDerivation_p4"),
+    ("week2_fresnel.py", "FresnelEquationsDerivation_p5"),
+    ("week2_fresnel.py", "FresnelEquationsDerivation_p6"),
     ("week2_fresnel.py", "FresnelEquations_p1"),
     ("week2_fresnel.py", "FresnelEquations_p2"),
     ("week2_fresnel.py", "FresnelEquations_p3"),
@@ -181,6 +203,7 @@ RENDER_ORDER = [
     ("week2_fresnel.py", "FresnelFullExample_p3"),
     ("week2_fresnel.py", "FresnelFullExample_p4"),
     ("week2_fresnel.py", "FresnelFullExample_p5"),
+    ("week2_fresnel.py", "FresnelFullExample_p6"),
     ("week2_fresnel.py", "ReflectivityTransmissivity_p1"),
     ("week2_fresnel.py", "ReflectivityTransmissivity_p2"),
     ("week2_fresnel.py", "ReflectivityTransmissivity_p3"),
@@ -201,13 +224,16 @@ RENDER_ORDER = [
     ("week2_fresnel.py", "MalusLaw_p5"),
     ("week2_fresnel.py", "MalusLaw_p6"),
 
-    # ── week3_geometric.py
+    # week3_geometric.py
     ("week3_geometric.py", "Week3TitleCard_p1"),
     ("week3_geometric.py", "Week3TitleCard_p2"),
     ("week3_geometric.py", "Week3TitleCard_p3"),
+    ("week3_geometric.py", "Week3TitleCard_p4"),
     ("week3_geometric.py", "GeometricOpticsIntro_p1"),
     ("week3_geometric.py", "GeometricOpticsIntro_p2"),
     ("week3_geometric.py", "GeometricOpticsIntro_p3"),
+    ("week3_geometric.py", "GeometricOpticsIntro_p4"),
+    ("week3_geometric.py", "GeometricOpticsIntro_p5"),
     ("week3_geometric.py", "SignConventions_p1"),
     ("week3_geometric.py", "SignConventions_p2"),
     ("week3_geometric.py", "SignConventions_p3"),
@@ -219,6 +245,8 @@ RENDER_ORDER = [
     ("week3_geometric.py", "SphericalSurface_p1"),
     ("week3_geometric.py", "SphericalSurface_p2"),
     ("week3_geometric.py", "SphericalSurface_p3"),
+    ("week3_geometric.py", "SphericalSurface_p4"),
+    ("week3_geometric.py", "SphericalSurface_p5"),
     ("week3_geometric.py", "ThinLensScene_p1"),
     ("week3_geometric.py", "ThinLensScene_p2"),
     ("week3_geometric.py", "ThinLensScene_p3"),
@@ -234,24 +262,29 @@ RENDER_ORDER = [
     ("week3_geometric.py", "MirrorScene_p2"),
     ("week3_geometric.py", "MirrorScene_p3"),
     ("week3_geometric.py", "MirrorScene_p4"),
+    ("week3_geometric.py", "MirrorScene_p5"),
+    ("week3_geometric.py", "MirrorScene_p6"),
     ("week3_geometric.py", "LensCombinations_p1"),
     ("week3_geometric.py", "LensCombinations_p2"),
     ("week3_geometric.py", "LensCombinations_p3"),
     ("week3_geometric.py", "LensCombinations_p4"),
+    ("week3_geometric.py", "LensCombinations_p5"),
     ("week3_geometric.py", "OpticalInstruments_p1"),
     ("week3_geometric.py", "OpticalInstruments_p2"),
     ("week3_geometric.py", "OpticalInstruments_p3"),
     ("week3_geometric.py", "OpticalInstruments_p4"),
     ("week3_geometric.py", "OpticalInstruments_p5"),
 
-    # ── week4_matrix_polarisation.py
+    # week4_matrix_polarisation.py
     ("week4_matrix_polarisation.py", "Week4TitleCard_p1"),
     ("week4_matrix_polarisation.py", "Week4TitleCard_p2"),
     ("week4_matrix_polarisation.py", "Week4TitleCard_p3"),
     ("week4_matrix_polarisation.py", "Week4TitleCard_p4"),
+    ("week4_matrix_polarisation.py", "Week4TitleCard_p5"),
     ("week4_matrix_polarisation.py", "MatrixOpticsIntro_p1"),
     ("week4_matrix_polarisation.py", "MatrixOpticsIntro_p2"),
     ("week4_matrix_polarisation.py", "MatrixOpticsIntro_p3"),
+    ("week4_matrix_polarisation.py", "MatrixOpticsIntro_p4"),
     ("week4_matrix_polarisation.py", "MatrixEquations_p1"),
     ("week4_matrix_polarisation.py", "MatrixEquations_p2"),
     ("week4_matrix_polarisation.py", "MatrixEquations_p3"),
@@ -266,39 +299,53 @@ RENDER_ORDER = [
     ("week4_matrix_polarisation.py", "MatrixExample_p2"),
     ("week4_matrix_polarisation.py", "MatrixExample_p3"),
     ("week4_matrix_polarisation.py", "MatrixExample_p4"),
+    ("week4_matrix_polarisation.py", "MatrixExample_p5"),
     ("week4_matrix_polarisation.py", "StandingWaves_p1"),
     ("week4_matrix_polarisation.py", "StandingWaves_p2"),
     ("week4_matrix_polarisation.py", "StandingWaves_p3"),
     ("week4_matrix_polarisation.py", "StandingWaves_p4"),
     ("week4_matrix_polarisation.py", "StandingWaves_p5"),
     ("week4_matrix_polarisation.py", "StandingWaves_p6"),
+    ("week4_matrix_polarisation.py", "StandingWaves_p7"),
     ("week4_matrix_polarisation.py", "Beating_p1"),
     ("week4_matrix_polarisation.py", "Beating_p2"),
     ("week4_matrix_polarisation.py", "Beating_p3"),
     ("week4_matrix_polarisation.py", "Beating_p4"),
     ("week4_matrix_polarisation.py", "Beating_p5"),
+    ("week4_matrix_polarisation.py", "Beating_p6"),
+    ("week4_matrix_polarisation.py", "Beating_p7"),
     ("week4_matrix_polarisation.py", "PolarizationBasics_p1"),
     ("week4_matrix_polarisation.py", "PolarizationBasics_p2"),
     ("week4_matrix_polarisation.py", "PolarizationBasics_p3"),
     ("week4_matrix_polarisation.py", "PolarizationBasics_p4"),
     ("week4_matrix_polarisation.py", "PolarizationBasics_p5"),
 
-    # ── week5_jones.py
+    # week5_jones.py
     ("week5_jones.py", "Week5TitleCard_p1"),
     ("week5_jones.py", "Week5TitleCard_p2"),
     ("week5_jones.py", "Week5TitleCard_p3"),
+    ("week5_jones.py", "Week5TitleCard_p4"),
     ("week5_jones.py", "PolarisationStatesScene_p1"),
     ("week5_jones.py", "PolarisationStatesScene_p2"),
     ("week5_jones.py", "PolarisationStatesScene_p3"),
     ("week5_jones.py", "PolarisationStatesScene_p4"),
+    ("week5_jones.py", "PolarisationStatesScene_p5"),
+    ("week5_jones.py", "PolarisationStatesScene_p6"),
     ("week5_jones.py", "BirefringenceWavePlates_p1"),
     ("week5_jones.py", "BirefringenceWavePlates_p2"),
     ("week5_jones.py", "BirefringenceWavePlates_p3"),
     ("week5_jones.py", "BirefringenceWavePlates_p4"),
+    ("week5_jones.py", "BirefringenceWavePlates_p5"),
+    ("week5_jones.py", "BirefringenceWavePlates_p6"),
+    ("week5_jones.py", "BirefringenceWavePlates_p7"),
     ("week5_jones.py", "JonesFormalism_p1"),
     ("week5_jones.py", "JonesFormalism_p2"),
     ("week5_jones.py", "JonesFormalism_p3"),
     ("week5_jones.py", "JonesFormalism_p4"),
+    ("week5_jones.py", "JonesFormalism_p5"),
+    ("week5_jones.py", "JonesFormalism_p6"),
+    ("week5_jones.py", "JonesFormalism_p7"),
+    ("week5_jones.py", "JonesFormalism_p8"),
     ("week5_jones.py", "JonesMatrices_p1"),
     ("week5_jones.py", "JonesMatrices_p2"),
     ("week5_jones.py", "JonesMatrices_p3"),
@@ -306,11 +353,16 @@ RENDER_ORDER = [
     ("week5_jones.py", "JonesMatrices_p5"),
     ("week5_jones.py", "JonesMatrices_p6"),
     ("week5_jones.py", "JonesMatrices_p7"),
+    ("week5_jones.py", "JonesMatrices_p8"),
+    ("week5_jones.py", "JonesMatrices_p9"),
+    ("week5_jones.py", "JonesMatrices_p10"),
+    ("week5_jones.py", "JonesMatrices_p11"),
 
-    # ── week6_interference.py
+    # week6_interference.py
     ("week6_interference.py", "Week6TitleCard_p1"),
     ("week6_interference.py", "Week6TitleCard_p2"),
     ("week6_interference.py", "Week6TitleCard_p3"),
+    ("week6_interference.py", "Week6TitleCard_p4"),
     ("week6_interference.py", "InterferenceIntroScene_p1"),
     ("week6_interference.py", "InterferenceIntroScene_p2"),
     ("week6_interference.py", "InterferenceIntroScene_p3"),
@@ -349,10 +401,11 @@ RENDER_ORDER = [
     ("week6_interference.py", "MichelsonScene_p4"),
     ("week6_interference.py", "MichelsonScene_p5"),
 
-    # ── week7_diffraction.py
+    # week7_diffraction.py
     ("week7_diffraction.py", "Week7TitleCard_p1"),
     ("week7_diffraction.py", "Week7TitleCard_p2"),
     ("week7_diffraction.py", "Week7TitleCard_p3"),
+    ("week7_diffraction.py", "Week7TitleCard_p4"),
     ("week7_diffraction.py", "HuygensPrinciple_p1"),
     ("week7_diffraction.py", "HuygensPrinciple_p2"),
     ("week7_diffraction.py", "HuygensPrinciple_p3"),
@@ -379,10 +432,11 @@ RENDER_ORDER = [
     ("week7_diffraction.py", "DiffractionGrating_p6"),
     ("week7_diffraction.py", "DiffractionGrating_p7"),
 
-    # ── week8_fabry_perot.py
+    # week8_fabry_perot.py
     ("week8_fabry_perot.py", "Week8TitleCard_p1"),
     ("week8_fabry_perot.py", "Week8TitleCard_p2"),
     ("week8_fabry_perot.py", "Week8TitleCard_p3"),
+    ("week8_fabry_perot.py", "Week8TitleCard_p4"),
     ("week8_fabry_perot.py", "MultiBeamIntro_p1"),
     ("week8_fabry_perot.py", "MultiBeamIntro_p2"),
     ("week8_fabry_perot.py", "MultiBeamIntro_p3"),
@@ -422,7 +476,7 @@ RENDER_ORDER = [
     ("week8_fabry_perot.py", "Week8Summary_p7"),
     ("week8_fabry_perot.py", "Week8Summary_p8"),
 
-    # ── formula_sheet_recap.py
+    # formula_sheet_recap.py
     ("formula_sheet_recap.py", "FormulaSheetTitleCard_p1"),
     ("formula_sheet_recap.py", "FormulaSheetTitleCard_p2"),
     ("formula_sheet_recap.py", "FormulaSheetTitleCard_p3"),
@@ -431,84 +485,81 @@ RENDER_ORDER = [
     ("formula_sheet_recap.py", "MidtermPrepScene_p3"),
     ("formula_sheet_recap.py", "MidtermPrepScene_p4"),
     ("formula_sheet_recap.py", "MidtermPrepScene_p5"),
-    ("formula_sheet_recap.py", "MidtermPrepScene_p6"),
     ("formula_sheet_recap.py", "FinalExamPrepScene_p1"),
     ("formula_sheet_recap.py", "FinalExamPrepScene_p2"),
     ("formula_sheet_recap.py", "FinalExamPrepScene_p3"),
     ("formula_sheet_recap.py", "FinalExamPrepScene_p4"),
     ("formula_sheet_recap.py", "FinalExamPrepScene_p5"),
-    ("formula_sheet_recap.py", "FinalExamPrepScene_p6"),
-    ("formula_sheet_recap.py", "FinalExamPrepScene_p7"),
 
-    # ── exercises_week1.py
+    # exercises_week1.py
     ("exercises_week1.py", "SC_Week1_Problem1"),
     ("exercises_week1.py", "SC_Week1_Problem2"),
     ("exercises_week1.py", "SC_Week1_Problem3"),
     ("exercises_week1.py", "SC_Week1_Problem4"),
     ("exercises_week1.py", "SC_Week1_Problem5"),
 
-    # ── exercises_week2.py
+    # exercises_week2.py
     ("exercises_week2.py", "SC_Week2_Problem1"),
     ("exercises_week2.py", "SC_Week2_Problem2"),
     ("exercises_week2.py", "SC_Week2_Problem6"),
     ("exercises_week2.py", "SC_Week2_Problem7"),
 
-    # ── exercises_week3.py
+    # exercises_week3.py
     ("exercises_week3.py", "SC_Week3_Problem1"),
     ("exercises_week3.py", "SC_Week3_Problem3"),
 
-    # ── exercises_week4.py
+    # exercises_week4.py
     ("exercises_week4.py", "SC_Week4_Problem1"),
     ("exercises_week4.py", "SC_Week4_Problem3"),
 
-    # ── exercises_week5.py
+    # exercises_week5.py
     ("exercises_week5.py", "SC_Week5_Problem3"),
     ("exercises_week5.py", "SC_Week5_Problem4"),
     ("exercises_week5.py", "SC_Week5_Problem7"),
 
-    # ── exercises_week6.py
+    # exercises_week6.py
     ("exercises_week6.py", "SC_Week6_Problem1"),
     ("exercises_week6.py", "SC_Week6_Problem3"),
     ("exercises_week6.py", "SC_Week6_Problem4"),
 
-    # ── exercises_week7.py
+    # exercises_week7.py
     ("exercises_week7.py", "SC_Week7_Problem1"),
     ("exercises_week7.py", "SC_Week7_Problem5"),
     ("exercises_week7.py", "SC_Week7_Problem10"),
 
-    # ── exercises_week8.py
+    # exercises_week8.py
     ("exercises_week8.py", "SC_Week8_Problem3"),
     ("exercises_week8.py", "SC_Week8_Problem9"),
     ("exercises_week8.py", "SC_Week8_Problem10"),
 
-    # ── slt_week1.py
+    # slt_week1.py
     ("slt_week1.py", "SLT_Week1_Problem1"),
     ("slt_week1.py", "SLT_Week1_Problem2"),
 
-    # ── slt_week2.py
+    # slt_week2.py
     ("slt_week2.py", "SLT_Week2_Problem1"),
     ("slt_week2.py", "SLT_Week2_Problem2"),
 
-    # ── slt_week3.py
+    # slt_week3.py
     ("slt_week3.py", "SLT_Week3_Problem1"),
 
-    # ── slt_week5.py
+    # slt_week5.py
     ("slt_week5.py", "SLT_Week5_Problem1"),
 
-    # ── slt_week6.py
+    # slt_week6.py
     ("slt_week6.py", "SLT_Week6_Problem1"),
     ("slt_week6.py", "SLT_Week6_Problem2"),
     ("slt_week6.py", "SLT_Week6_Problem3"),
 
-    # ── slt_week7.py
+    # slt_week7.py
     ("slt_week7.py", "SLT_Week7_Problem1"),
     ("slt_week7.py", "SLT_Week7_Problem2"),
 
-    # ── slt_week8.py
+    # slt_week8.py
     ("slt_week8.py", "SLT_Week8_Problem1"),
     ("slt_week8.py", "SLT_Week8_Problem2"),
 
-    # ── slt_week9.py
+    # slt_week9.py
     ("slt_week9.py", "SLT_Week9_Problem1"),
     ("slt_week9.py", "SLT_Week9_Problem2"),
     ("slt_week9.py", "SLT_Week9_Problem4"),

@@ -1,1 +1,0 @@
-For a slit of width 0.1 millimetres illuminated at 500 nanometres and observed at 1 metre, the minimum Fraunhofer distance is only 1 centimetre — so 1 metre is well into the Fraunhofer regime.

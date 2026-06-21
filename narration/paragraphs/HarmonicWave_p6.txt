@@ -1,1 +1,1 @@
-Omega is the angular frequency, in radians per second. It measures the temporal frequency — how many radians of phase the wave completes each second. The relationship to ordinary frequency f in hertz is omega equals 2 pi f. The relationship to period T is omega equals 2 pi divided by T.
+lambda is the wavelength in metres — the spatial distance between adjacent crests or between any two points that are one full cycle apart. It is related to wave number by lambda equals 2 pi over k.

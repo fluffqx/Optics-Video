@@ -1,1 +1,1 @@
-When two lenses are used in sequence, the image formed by the first lens serves as the object for the second lens. You apply the thin lens equation twice.
+For two thin lenses separated by distance d, Bennett Section 4.4 gives the procedure: apply the thin lens equation to the first lens to find its image, then use that image as the object for the second lens.

@@ -1,1 +1,1 @@
-This section animates the complete official 31OPT formula sheet — every equation you are given in the exam, explained in context.
+This section provides a complete formula reference for 31OPT Optics at TU/e, covering all eight weeks of the course. Each formula is stated with its Bennett equation number and the conditions under which it applies.

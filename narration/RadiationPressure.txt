@@ -1,9 +1,15 @@
-Radiation pressure is a direct consequence of the fact that light carries momentum. This was predicted by Maxwell in 1865 and first measured experimentally by Lebedev in 1900. It is a subtle but real effect.
+Bennett Section 2.3.2 discusses the momentum of electromagnetic radiation. Light carries momentum in addition to energy. When a wave is absorbed by a surface, it transfers momentum and exerts a force — radiation pressure.
 
-The momentum density of an electromagnetic wave is the Poynting vector divided by c-squared, or equivalently the irradiance divided by c-cubed. When this momentum is absorbed by a surface, Newton's second law gives a force, and force per unit area is pressure.
+The momentum density of an electromagnetic wave is the Poynting vector divided by c-squared, with units of kilogram per metre squared per second. For a plane wave, this equals I divided by c-cubed in the direction of propagation.
 
-For a perfectly absorbing black surface, the radiation pressure is I over c. For a perfectly reflecting mirror, the photon's momentum reverses completely, so the pressure is twice as large: 2I over c. A partial reflector with reflectivity R has a radiation pressure between these limits: the reflected fraction contributes 2RI over c and the absorbed fraction contributes the remaining contribution.
+When a wave of irradiance I is absorbed by a surface, the momentum delivered per unit area per unit time equals the momentum density times c, giving radiation pressure P-rad equals I over c.
 
-Solar radiation pressure provides about 9 micropascals at Earth's orbit. While tiny, it is enough to alter satellite orbits over time — this effect must be included in precise orbital calculations. The IKAROS spacecraft launched by JAXA in 2010 was the first to use solar sail propulsion for interplanetary travel, demonstrating that radiation pressure can actually propel spacecraft.
+For a perfectly reflecting mirror, the momentum is reversed on reflection. The change in momentum per photon is twice the incident momentum. The radiation pressure on a mirror is therefore 2I over c.
 
-On Earth, optical tweezers use focused laser beams to trap and manipulate microscopic particles — even living cells — using radiation pressure. The particle is pulled toward the focus by the intensity gradient. Nobel Prize 2018 was awarded partly for the development of optical tweezers by Arthur Ashkin.
+For a partially reflecting surface with reflectivity R: the absorbed fraction 1 minus R contributes I times 1 minus R over c, and the reflected fraction R contributes 2RI over c. The total pressure is I times 1 plus R over c.
+
+At Earth's orbital distance, the solar irradiance is approximately 1361 watts per square metre. The radiation pressure on a perfect absorber is 1361 over 3 times ten to the 8 equals 4.5 times ten to the minus 6 newtons per square metre, or 4.5 micropascals. On a perfect reflector this doubles to 9 micropascals. These are tiny forces, but they act continuously and can substantially alter satellite orbits over years.
+
+The IKAROS spacecraft, launched by JAXA in 2010, used a 14 metre by 14 metre reflective sail to demonstrate solar sail propulsion. The radiation pressure provided a thrust of about 1.12 millinewtons. Over the interplanetary mission, this was sufficient to measurably alter the spacecraft's trajectory.
+
+Optical tweezers exploit radiation pressure to trap and manipulate microscopic particles. Arthur Ashkin developed this technique and received the Nobel Prize in Physics in 2018. A focused laser beam creates an intensity gradient that pulls dielectric particles toward the focal region — the trapping force is proportional to the gradient of the irradiance.

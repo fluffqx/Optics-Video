@@ -1,1 +1,1 @@
-Lambda is the wavelength in metres — the spatial distance between two consecutive crests, or two consecutive troughs, or any two points that are one full cycle apart.
+f is the ordinary frequency in hertz — the number of complete oscillation cycles per second. f equals one over T equals omega over 2 pi.

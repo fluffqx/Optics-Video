@@ -1,9 +1,9 @@
-Once we have the system matrix M with elements A, B, C, D, we can extract all the cardinal points of the optical system without knowing the internal structure.
+Once the individual element matrices are known, Bennett Section 5.5.5 shows how to extract the cardinal points of the complete system from the system matrix M with elements A, B, C, D satisfying AD minus BC equals one.
 
-The effective focal length is minus one over C. If C equals zero, the system is afocal — parallel rays in give parallel rays out, which is the definition of a telescope or beam expander.
+The effective focal length of the system is f-effective equals minus 1 over C, from the principal-plane analysis in Bennett Section 5.5.5. If C equals zero, the focal length is infinite — the system is afocal, meaning parallel rays in give parallel rays out. This is the definition of a telescope or beam expander in the afocal configuration.
 
-The back focal distance — from the last physical element to the rear focal point — is given by D minus one, all over C. The front focal distance from the front focal point to the first element is minus A over C.
+The back focal distance — from the last element to the rear focal point — is given by BFD equals D minus 1 over C. The front focal distance from the first element to the front focal point is FFD equals minus A over C. These distances are measured from the last and first physical elements respectively, not from the principal planes.
 
-The principal planes can be located from these quantities. All the focusing properties of the system are captured by specifying the two principal planes and the effective focal length.
+The principal planes themselves can be located by computing their distances from the first and last elements using the matrix elements. The effective focal length measured from either principal plane is the same quantity f-effective.
 
-The determinant of the system matrix must always equal one: AD minus BC equals one. This is a powerful check — if your computed matrix does not satisfy this, you have made an error.
+Bennett emphasises in Section 5.5.5 that for any paraxial optical system, no matter how complex, all imaging properties are summarised by just three quantities: the two principal plane locations and the effective focal length. This is a powerful result — you do not need to know the internal structure of a complex lens system to predict its imaging behaviour, only its system matrix.

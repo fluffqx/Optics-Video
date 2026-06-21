@@ -1,1 +1,1 @@
-We'll go through the sheet section by section, the same way it appears in the exam.
+Approach the exam by reading the problem carefully, identifying which week's material it draws on, writing down the relevant formula with all symbols defined, substituting numerical values with units, and checking the answer for dimensional consistency and physical reasonableness. If an answer has the wrong sign, wrong units, or an implausibly large or small magnitude, go back and find the error before moving on.

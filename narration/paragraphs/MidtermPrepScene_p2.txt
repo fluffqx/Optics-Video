@@ -1,1 +1,1 @@
-It's a one-hour written exam. No AI tools, no phones — just pen, paper, ruler, calculator, and the formula sheet.
+Wave equation problems: you may be asked to verify that a given function satisfies the wave equation, identify the wave speed from the equation, or write down a wave function given wavelength and frequency. Practice differentiating expressions like A e to the i kx minus omega t twice with respect to x and twice with respect to t, and verify that the ratio of results gives v-squared.

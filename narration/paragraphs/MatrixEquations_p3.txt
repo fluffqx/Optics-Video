@@ -1,1 +1,1 @@
-The refraction matrix at a spherical surface with radius R separating media with indices n-one and n-two accounts for both the Snell's law angle change and the unchanged height.
+The thin lens matrix follows by combining two refractions and letting the thickness go to zero. The result has 1 and 0 on the diagonal, minus 1 over f in the lower left, and 1 in the lower right, where f is the focal length given by the lensmaker's equation.

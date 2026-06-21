@@ -1,1 +1,0 @@
-Step 3: plug into the Fresnel equations. r_perp comes out to minus 0.278. The negative sign means a phase flip on reflection. r_parallel comes out to plus 0.119 — a smaller reflection with no phase flip.

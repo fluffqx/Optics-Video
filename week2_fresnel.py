@@ -1,4 +1,4 @@
-# week2_fresnel.py — Week 2 Fresnel (paragraph-per-scene)
+# week2_fresnel.py
 from manim import *
 from utils import *
 
@@ -11,10 +11,11 @@ class Week2TitleCard_p1(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Week 2 brings us to one of the most practically important",
-            "topics in optics: what happens when light hits a surface",
-            "between two different media. Every optical instrument",
-            "depends on this.",
+            "Week 2 covers what happens when a light wave reaches an",
+            "interface between two different optical media. This is",
+            "Bennett Chapter 3, and it is one of the most practically",
+            "important topics in all of optics. Every lens surface, every",
+            "mirror coating, every optical fibre, and every",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -29,11 +30,11 @@ class Week2TitleCard_p2(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "The key results of Week 2 are Snell's law and the Fresnel",
-            "equations. Snell's law tells you the directions of the",
-            "reflected and refracted beams. The Fresnel equations tell",
-            "you the amplitudes — how much light is reflected and how",
-            "much is transmitted, and how this depends on the angle and",
+            "The central results are Snell's law and the Fresnel",
+            "equations. Snell's law tells you the direction of the",
+            "reflected and transmitted beams. The Fresnel equations tell",
+            "you the amplitudes — how much electric field is reflected",
+            "and how much is transmitted — and these depend on the angle",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -48,11 +49,11 @@ class Week2TitleCard_p3(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "These equations govern the design of every lens, every",
-            "mirror coating, every optical fibre, every anti-reflection",
-            "coating on a camera lens. They are derived directly from",
-            "Maxwell's boundary conditions and are exact within classical",
-            "electromagnetism.",
+            "We also cover Brewster's angle, where the p-polarised",
+            "component is completely transmitted with zero reflection,",
+            "and total internal reflection, where all the light is",
+            "reflected when the angle exceeds the critical angle. These",
+            "phenomena are exploited in polarising beam splitters,",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -67,11 +68,11 @@ class Week2TitleCard_p4(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "By the end of this week you will be able to compute",
-            "reflectivity and transmissivity for any angle and",
-            "polarisation, find Brewster's angle, determine the critical",
-            "angle for total internal reflection, and apply Malus's law",
-            "to polarised light through a polariser.",
+            "By the end of this week you must be able to: apply Snell's",
+            "law to find refraction angles; compute Fresnel coefficients",
+            "r-s, r-p, t-s, t-p for given angles and indices; compute",
+            "reflectivity R and transmissivity T and verify R plus T",
+            "equals 1; find Brewster's angle and the critical angle; and",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -81,7 +82,7 @@ class Week2Intro_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2Intro_p1.mp3", time_offset=0)
-        title = Text("What Happens at an Interface?", font_size=36, color=GOLD)
+        title = Text("What Happens at an Interface?  (Bennett 3.2)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -99,7 +100,7 @@ class Week2Intro_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2Intro_p2.mp3", time_offset=0)
-        title = Text("What Happens at an Interface?", font_size=36, color=GOLD)
+        title = Text("What Happens at an Interface?  (Bennett 3.2)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -117,7 +118,7 @@ class Week2Intro_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2Intro_p3.mp3", time_offset=0)
-        title = Text("What Happens at an Interface?", font_size=36, color=GOLD)
+        title = Text("What Happens at an Interface?  (Bennett 3.2)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -135,7 +136,7 @@ class FermatPrinciple_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p1.mp3", time_offset=0)
-        title = Text("Fermat's Principle", font_size=40, color=GOLD)
+        title = Text("Fermat Principle  (Bennett Section 3.2.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -153,7 +154,7 @@ class FermatPrinciple_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p2.mp3", time_offset=0)
-        title = Text("Fermat's Principle", font_size=40, color=GOLD)
+        title = Text("Fermat Principle  (Bennett Section 3.2.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -171,7 +172,7 @@ class FermatPrinciple_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p3.mp3", time_offset=0)
-        title = Text("Fermat's Principle", font_size=40, color=GOLD)
+        title = Text("Fermat Principle  (Bennett Section 3.2.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -189,7 +190,7 @@ class FermatPrinciple_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p4.mp3", time_offset=0)
-        title = Text("Fermat's Principle", font_size=40, color=GOLD)
+        title = Text("Fermat Principle  (Bennett Section 3.2.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -207,13 +208,9 @@ class ReflectionRefraction_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p1.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eq = MathTex(r"n_i\sin\theta_i = n_t\sin\theta_t", font_size=44, color=E_COLOR)
-        safe_scale(eq, max_width=13.0)
-        eq.next_to(title, DOWN, buff=0.45)
-        self.play(FadeIn(eq, run_time=0.1))
         b = txt_block([
             "The law of reflection is simple: the angle of incidence",
             "equals the angle of reflection. Both angles are measured",
@@ -221,7 +218,7 @@ class ReflectionRefraction_p1(Scene):
             "surface at the point of contact. The incident ray, the",
             "reflected ray, and the surface normal all lie in the same",
         ])
-        b.next_to(eq, DOWN, buff=0.35)
+        b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -229,7 +226,7 @@ class ReflectionRefraction_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p2.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -247,7 +244,7 @@ class ReflectionRefraction_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p3.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -265,7 +262,7 @@ class ReflectionRefraction_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p4.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -283,7 +280,7 @@ class ReflectionRefraction_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p5.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -301,7 +298,7 @@ class ReflectionRefraction_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p6.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -318,7 +315,7 @@ class ReflectionRefraction_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p7.mp3", time_offset=0)
-        title = Text("Reflection and Snell's Law", font_size=36, color=GOLD)
+        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -336,12 +333,14 @@ class FresnelEquationsDerivation_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p1.mp3", time_offset=0)
-        title = Text("Fresnel Equation Derivation", font_size=34, color=GOLD)
+        title = Text("Fresnel Derivation  (Bennett Section 3.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The Fresnel equations come from applying Maxwell's boundary",
-            "conditions at the interface.",
+            "Bennett derives the Fresnel equations in Section 3.3 by",
+            "applying Maxwell's boundary conditions at a planar interface",
+            "between two dielectric media with refractive indices n-i and",
+            "n-t.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -351,15 +350,15 @@ class FresnelEquationsDerivation_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p2.mp3", time_offset=0)
-        title = Text("Fresnel Equation Derivation", font_size=34, color=GOLD)
+        title = Text("Fresnel Derivation  (Bennett Section 3.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The key conditions are: the tangential component of E must",
-            "be continuous across the boundary, and the tangential",
-            "component of B must also be continuous. These follow",
-            "directly from Faraday's law and Ampere's law applied to a",
-            "thin rectangle straddling the interface.",
+            "The starting point is Maxwell's equations at an interface,",
+            "derived in Section 3.3.1. The boundary conditions require",
+            "that the tangential components of both E and H must be",
+            "continuous across the interface. There are no free currents",
+            "or surface charges at a dielectric interface, so these",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -369,15 +368,68 @@ class FresnelEquationsDerivation_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p3.mp3", time_offset=0)
-        title = Text("Fresnel Equation Derivation", font_size=34, color=GOLD)
+        title = Text("Fresnel Derivation  (Bennett Section 3.3)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "We split the incident electric field into two independent",
-            "polarisation components — s-polarisation with E",
-            "perpendicular to the plane of incidence, and p-polarisation",
-            "with E parallel to the plane of incidence. Applying the",
-            "boundary conditions to each gives four Fresnel equations —",
+            "We separate the analysis into two polarisation cases. The",
+            "s-polarisation, also called TE, has the electric field",
+            "perpendicular to the plane of incidence. The p-polarisation,",
+            "also called TM, has the electric field parallel to the plane",
+            "of incidence. Bennett works through s-polarisation in",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FresnelEquationsDerivation_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p4.mp3", time_offset=0)
+        title = Text("Fresnel Derivation  (Bennett Section 3.3)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For s-polarisation: the tangential E is the full field",
+            "(since E is already tangential). Continuity of tangential E",
+            "gives E-i plus E-r equals E-t. Continuity of tangential H —",
+            "using H equals n E over mu-naught c and the geometry — gives",
+            "n-i times cosine theta-i times E-i minus E-r equals n-t",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FresnelEquationsDerivation_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p5.mp3", time_offset=0)
+        title = Text("Fresnel Derivation  (Bennett Section 3.3)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For p-polarisation: only the component of E tangential to",
+            "the surface is continuous. The geometry introduces extra",
+            "cosine factors. Continuity of tangential E gives E-i minus",
+            "E-r times cosine theta-i equals E-t times cosine theta-t.",
+            "Continuity of tangential H gives n-i times E-i plus E-r",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FresnelEquationsDerivation_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p6.mp3", time_offset=0)
+        title = Text("Fresnel Derivation  (Bennett Section 3.3)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The derivation confirms a key physical point: the s and p",
+            "components interact differently with the interface because",
+            "their electric field orientations relative to the surface",
+            "normal are different.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -387,7 +439,7 @@ class FresnelEquations_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p1.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -403,7 +455,7 @@ class FresnelEquations_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p2.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -421,7 +473,7 @@ class FresnelEquations_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p3.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -439,7 +491,7 @@ class FresnelEquations_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p4.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -457,7 +509,7 @@ class FresnelEquations_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p5.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -475,15 +527,9 @@ class FresnelEquations_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p6.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"r_\perp=\frac{n_i\cos\theta_i-n_t\cos\theta_t}{n_i\cos\theta_i+n_t\cos\theta_t}", "s-polarisation reflection", E_COLOR, 32, 20),
-            labeled_eq(r"t_\perp=\frac{2n_i\cos\theta_i}{n_i\cos\theta_i+n_t\cos\theta_t}", "s-polarisation transmission", E_COLOR, 32, 20),
-        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=4.0)
-        eqs.next_to(title, DOWN, buff=0.4)
         b = txt_block([
             "The energy reflectivity R is the square of the amplitude",
             "coefficient: R equals r squared. For our air-to-glass",
@@ -491,23 +537,17 @@ class FresnelEquations_p6(Scene):
             "percent of the incident energy is reflected. The energy",
             "transmissivity T satisfies R plus T equals one, so T equals",
         ])
-        b.next_to(eqs, DOWN, buff=0.3)
-        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class FresnelEquations_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p7.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"r_\parallel=\frac{n_t\cos\theta_i-n_i\cos\theta_t}{n_t\cos\theta_i+n_i\cos\theta_t}", "p-polarisation reflection", B_COLOR, 32, 20),
-            labeled_eq(r"t_\parallel=\frac{2n_i\cos\theta_i}{n_t\cos\theta_i+n_i\cos\theta_t}", "p-polarisation transmission", B_COLOR, 32, 20),
-        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=4.0)
-        eqs.next_to(title, DOWN, buff=0.4)
         b = txt_block([
             "Let's work through the full calculation for air to glass",
             "with n-i equals 1.0, n-t equals 1.5, at theta-i equals 40",
@@ -515,22 +555,17 @@ class FresnelEquations_p7(Scene):
             "times sine 40 equals 0.4285, so theta-t equals 25.37",
             "degrees. Now the cosines: cosine 40 equals 0.766, cosine",
         ])
-        b.next_to(eqs, DOWN, buff=0.3)
-        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class FresnelEquations_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p8.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eq = MathTex(r"r=\frac{n_i-n_t}{n_i+n_t}\qquad t=\frac{2n_i}{n_i+n_t}", font_size=40, color=GOLD)
-        safe_scale(eq, max_width=13.0)
-        eq.next_to(title, DOWN, buff=0.45)
-        self.play(FadeIn(eq, run_time=0.1))
-        self.play(Create(SurroundingRectangle(eq, color=GOLD, buff=0.15, stroke_width=2)))
         b = txt_block([
             "S-polarisation: r-perp equals 0.766 minus 1.5 times 0.9036",
             "over 0.766 plus 1.5 times 0.9036 equals 0.766 minus 1.355",
@@ -538,7 +573,7 @@ class FresnelEquations_p8(Scene):
             "minus 0.278. R-perp equals 0.277 squared equals 0.0771,",
             "about 7.7 percent reflected.",
         ])
-        b.next_to(eq, DOWN, buff=0.35)
+        b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -546,7 +581,7 @@ class FresnelEquations_p9(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p9.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -564,7 +599,7 @@ class FresnelEquations_p10(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p10.mp3", time_offset=0)
-        title = Text("The Fresnel Equations", font_size=38, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett Section 3.4)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -581,12 +616,14 @@ class FresnelFullExample_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelFullExample_p1.mp3", time_offset=0)
-        title = Text("Full Fresnel Example: Air to Glass at 40 degrees", font_size=32, color=GOLD)
+        title = Text("Full Fresnel Example: Air to Glass 40 degrees", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Let's go through a complete Fresnel calculation for air to",
-            "glass at 40 degrees.",
+            "Let's work through a complete Fresnel calculation following",
+            "Bennett Section 3.5.4. Incident medium: air, n-i equals",
+            "1.000. Transmitted medium: glass, n-t equals 1.500. Angle of",
+            "incidence: theta-i equals 40 degrees.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -596,12 +633,13 @@ class FresnelFullExample_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelFullExample_p2.mp3", time_offset=0)
-        title = Text("Full Fresnel Example: Air to Glass at 40 degrees", font_size=32, color=GOLD)
+        title = Text("Full Fresnel Example: Air to Glass 40 degrees", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Step 1: use Snell's law to find the refraction angle. Sin of",
-            "theta_t equals 1.0 over 1.5 times sin 40, giving theta_t",
+            "Step 1: Snell's law for the refracted angle. Sine theta-t",
+            "equals n-i over n-t times sine theta-i equals 1.000 over",
+            "1.500 times sine 40 degrees equals 0.4285. Therefore theta-t",
             "equals 25.37 degrees.",
         ])
         b.next_to(title, DOWN, buff=0.5)
@@ -612,12 +650,13 @@ class FresnelFullExample_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelFullExample_p3.mp3", time_offset=0)
-        title = Text("Full Fresnel Example: Air to Glass at 40 degrees", font_size=32, color=GOLD)
+        title = Text("Full Fresnel Example: Air to Glass 40 degrees", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Step 2: compute the cosines. Cosine 40 is 0.766, cosine",
-            "25.37 is 0.9036.",
+            "Step 2: Compute cosines. Cosine theta-i equals cosine 40",
+            "degrees equals 0.7660. Cosine theta-t equals cosine 25.37",
+            "degrees equals 0.9036.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -627,14 +666,15 @@ class FresnelFullExample_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelFullExample_p4.mp3", time_offset=0)
-        title = Text("Full Fresnel Example: Air to Glass at 40 degrees", font_size=32, color=GOLD)
+        title = Text("Full Fresnel Example: Air to Glass 40 degrees", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "Step 3: plug into the Fresnel equations for r_perp and",
-            "r_parallel. We get minus 0.278 for s-polarisation and plus",
-            "0.119 for p-polarisation. The negative sign on r_perp means",
-            "a phase flip upon reflection.",
+            "Step 3: s-polarisation Fresnel coefficient. r-s equals n-i",
+            "cosine theta-i minus n-t cosine theta-t, over n-i cosine",
+            "theta-i plus n-t cosine theta-t, equals 0.7660 minus 1.5",
+            "times 0.9036, over 0.7660 plus 1.5 times 0.9036, equals",
+            "0.7660 minus 1.3554 over 0.7660 plus 1.3554, equals minus",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -644,13 +684,33 @@ class FresnelFullExample_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelFullExample_p5.mp3", time_offset=0)
-        title = Text("Full Fresnel Example: Air to Glass at 40 degrees", font_size=32, color=GOLD)
+        title = Text("Full Fresnel Example: Air to Glass 40 degrees", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
-            "The p-polarisation reflects significantly less than s at",
-            "this angle — this difference grows with angle and reaches",
-            "zero at Brewster's angle.",
+            "Step 4: p-polarisation Fresnel coefficient. r-p equals n-t",
+            "cosine theta-i minus n-i cosine theta-t, over n-t cosine",
+            "theta-i plus n-i cosine theta-t, equals 1.5 times 0.7660",
+            "minus 1.0 times 0.9036, over 1.5 times 0.7660 plus 1.0 times",
+            "0.9036, equals 1.1490 minus 0.9036 over 1.1490 plus 0.9036,",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FresnelFullExample_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FresnelFullExample_p6.mp3", time_offset=0)
+        title = Text("Full Fresnel Example: Air to Glass 40 degrees", font_size=32, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Step 5: check with R plus T equals 1. T-s equals 1 minus",
+            "0.0772 equals 0.9228. T-p equals 1 minus 0.0143 equals",
+            "0.9857. Both satisfy energy conservation. The p-polarisation",
+            "reflects much less than s at this angle — it is approaching",
+            "Brewster's angle.",
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
@@ -660,25 +720,24 @@ class ReflectivityTransmissivity_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectivityTransmissivity_p1.mp3", time_offset=0)
-        title = Text("Reflectivity, Transmissivity and Energy Conservation", font_size=32, color=GOLD)
+        title = Text("Reflectivity and Transmissivity  (Bennett 3.6)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"R=|r|^2", "reflectivity (energy)", INTENSITY_COLOR, 44, 26),
-            labeled_eq(r"T=\frac{n_t\cos\theta_t}{n_i\cos\theta_i}|t|^2", "transmissivity (NOT just |t|^2!)", INTENSITY_COLOR, 44, 26),
-            labeled_eq(r"R+T=1", "energy conservation — ALWAYS check this!", GOLD, 44, 26),
-        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=4.5)
-        eqs.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(eqs, run_time=0.1))
-        self.play(Create(SurroundingRectangle(eqs[2], color=GOLD, buff=0.12, stroke_width=2)))
+        b = txt_block([
+            "The Fresnel amplitude coefficients r and t give the ratio of",
+            "electric field amplitudes. To find the fraction of energy",
+            "that is reflected and transmitted, we need the energy",
+            "coefficients.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class ReflectivityTransmissivity_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectivityTransmissivity_p2.mp3", time_offset=0)
-        title = Text("Reflectivity, Transmissivity and Energy Conservation", font_size=32, color=GOLD)
+        title = Text("Reflectivity and Transmissivity  (Bennett 3.6)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -696,7 +755,7 @@ class ReflectivityTransmissivity_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectivityTransmissivity_p3.mp3", time_offset=0)
-        title = Text("Reflectivity, Transmissivity and Energy Conservation", font_size=32, color=GOLD)
+        title = Text("Reflectivity and Transmissivity  (Bennett 3.6)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -714,7 +773,7 @@ class ReflectivityTransmissivity_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectivityTransmissivity_p4.mp3", time_offset=0)
-        title = Text("Reflectivity, Transmissivity and Energy Conservation", font_size=32, color=GOLD)
+        title = Text("Reflectivity and Transmissivity  (Bennett 3.6)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -732,7 +791,7 @@ class ReflectivityTransmissivity_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectivityTransmissivity_p5.mp3", time_offset=0)
-        title = Text("Reflectivity, Transmissivity and Energy Conservation", font_size=32, color=GOLD)
+        title = Text("Reflectivity and Transmissivity  (Bennett 3.6)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -750,30 +809,24 @@ class BrewsterTIR_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p1.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"\tan\theta_B = n_t/n_i", "Brewster angle: r_p = 0", E_COLOR, 48, 26),
-            labeled_eq(r"\sin\theta_c = n_t/n_i\;(n_i>n_t)", "Critical angle for TIR", B_COLOR, 48, 26),
-        ).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0)
-        eqs.next_to(title, DOWN, buff=0.4)
         b = txt_block([
             "Brewster's angle is the angle of incidence at which the",
             "p-polarised component has zero reflectivity — it is",
             "completely transmitted. At this special angle, the reflected",
             "beam consists entirely of s-polarised light.",
         ])
-        b.next_to(eqs, DOWN, buff=0.35)
-        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
 class BrewsterTIR_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p2.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -789,7 +842,7 @@ class BrewsterTIR_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p3.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -807,7 +860,7 @@ class BrewsterTIR_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p4.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -825,7 +878,7 @@ class BrewsterTIR_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p5.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -843,7 +896,7 @@ class BrewsterTIR_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p6.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -861,7 +914,7 @@ class BrewsterTIR_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p7.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -879,7 +932,7 @@ class BrewsterTIR_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p8.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection", font_size=32, color=GOLD)
+        title = Text("Brewster Angle and TIR  (Bennett 3.5.2-3.5.3)", font_size=30, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -897,14 +950,9 @@ class MalusLaw_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p1.mp3", time_offset=0)
-        title = Text("Malus's Law", font_size=42, color=GOLD)
+        title = Text("Malus Law  (Bennett Section 6.2.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eq = MathTex(r"I = I_0 \cos^2\theta", font_size=60, color=INTENSITY_COLOR)
-        safe_scale(eq, max_width=13.0)
-        eq.next_to(title, DOWN, buff=0.45)
-        self.play(FadeIn(eq, run_time=0.1))
-        self.play(Create(SurroundingRectangle(eq, color=GOLD, buff=0.15, stroke_width=2)))
         b = txt_block([
             "Malus's law describes what happens to the intensity of",
             "linearly polarised light when it passes through a linear",
@@ -912,7 +960,7 @@ class MalusLaw_p1(Scene):
             "involving polarised light and is widely used in optical",
             "instruments.",
         ])
-        b.next_to(eq, DOWN, buff=0.35)
+        b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
 
@@ -920,7 +968,7 @@ class MalusLaw_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p2.mp3", time_offset=0)
-        title = Text("Malus's Law", font_size=42, color=GOLD)
+        title = Text("Malus Law  (Bennett Section 6.2.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -938,7 +986,7 @@ class MalusLaw_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p3.mp3", time_offset=0)
-        title = Text("Malus's Law", font_size=42, color=GOLD)
+        title = Text("Malus Law  (Bennett Section 6.2.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -956,7 +1004,7 @@ class MalusLaw_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p4.mp3", time_offset=0)
-        title = Text("Malus's Law", font_size=42, color=GOLD)
+        title = Text("Malus Law  (Bennett Section 6.2.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -974,7 +1022,7 @@ class MalusLaw_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p5.mp3", time_offset=0)
-        title = Text("Malus's Law", font_size=42, color=GOLD)
+        title = Text("Malus Law  (Bennett Section 6.2.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -991,7 +1039,7 @@ class MalusLaw_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p6.mp3", time_offset=0)
-        title = Text("Malus's Law", font_size=42, color=GOLD)
+        title = Text("Malus Law  (Bennett Section 6.2.1)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([

@@ -1,1 +1,0 @@
-The Rayleigh criterion states that two point sources are just resolved when the central maximum of one falls on the first dark ring of the other. The minimum resolvable angle is 1.22 lambda over D.

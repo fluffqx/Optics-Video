@@ -1,1 +1,1 @@
-Beating occurs when two waves of slightly different frequencies are superimposed. The result is a wave that oscillates at the average of the two frequencies but whose amplitude varies slowly at the difference frequency.
+Beating occurs when two harmonic waves of slightly different angular frequencies omega-one and omega-two are superimposed. Bennett Section 7.2 derives the result using the sum-to-product trigonometric identity.

@@ -1,1 +1,1 @@
-First, find the magnetic field. From Faraday's law for a plane wave, B-vector equals k-hat cross E-vector, divided by the phase velocity v. The propagation direction is z-hat. The cross product z-hat cross x-hat equals y-hat, using the right-hand rule. So B-vector equals E-naught over c, times y-hat, times e to the i times kz minus omega t.
+Given: a plane electromagnetic wave propagating in the positive z-direction with electric field E-vector equals E-naught times x-hat times e to the i times kz minus omega t. Find the magnetic field B.

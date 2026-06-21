@@ -1,1 +1,1 @@
-This equation is derived by applying Snell's law in the paraxial approximation to a ray hitting the surface at a small angle. The paraxial approximation replaces sine theta with theta and cosine theta with one, which linearises everything.
+Consider a spherical surface of radius R centred at point C, separating medium with index n-i on the left from medium with index n-t on the right. Positive R means the centre of curvature is to the right — on the transmitted side — which corresponds to a convex surface for a lens element.

@@ -1,7 +1,7 @@
-Welcome to the 31OPT Optics exam preparation series for TU Eindhoven Applied Physics. This is a complete course covering all eight weeks, from the wave equation through to the Fabry-Pérot interferometer.
+Welcome to the 31OPT Optics exam preparation series. This video covers all eight weeks of the course in full detail, working directly from Bennett's Principles of Physical Optics, Second Edition, and the TU/e lecture material. Every derivation, every worked example, and every exam technique comes from those sources — no external material.
 
-Week 1 lays the mathematical foundation that every other week builds on. We cover two main topics: the physics of waves in the first half, and Maxwell's equations and electromagnetic waves in the second half.
+Week 1 covers the mathematical foundations that all subsequent weeks build upon. The first half follows Bennett Chapter 1: the one-dimensional wave equation, its general solutions, harmonic traveling waves and all their parameters, the superposition principle, and the complex representation of waves. The second half follows Bennett Chapter 2: Maxwell's equations, the derivation of the electromagnetic wave equation, the Poynting vector and irradiance, radiation pressure, and dispersion.
 
-By the end of Week 1, you will be able to write down the wave equation and explain what each term means physically. You will know the harmonic wave relations by heart. You will be comfortable with complex representation of waves. And you will understand where the speed of light comes from — not as a given constant, but as a derived consequence of Maxwell's equations.
+If you can work through the problems at the end of Bennett Chapters 1 and 2 with confidence, you are well prepared for the Week 1 material in the exam. The most important skill to develop this week is facility with the harmonic wave relations: v equals f lambda, v equals omega over k, k equals 2 pi over lambda, omega equals 2 pi f, T equals 1 over f. These five relations connect every wave parameter and appear in every week of the course.
 
-Let's begin with the most fundamental question: what exactly is a wave?
+Let's begin.

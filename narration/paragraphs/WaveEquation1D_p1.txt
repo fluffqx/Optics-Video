@@ -1,1 +1,1 @@
-Here is the one-dimensional wave equation. It relates the second derivative of psi with respect to position x, to the second derivative of psi with respect to time t.
+Bennett Section 1.2 derives and analyses the one-dimensional wave equation. The equation is: partial squared psi over partial x squared equals one over v-squared times partial squared psi over partial t squared, given as Bennett Equation 1.1.

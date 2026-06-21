@@ -1,1 +1,1 @@
-Week 3 is geometric optics — the regime where the wavelength of light is so small compared to the optical elements that we can treat light as rays travelling in straight lines.
+Week 3 is geometric optics — the ray approximation to wave propagation that applies when all apertures are much larger than the wavelength. This follows Bennett Chapter 4 closely.

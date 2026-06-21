@@ -1,1 +1,1 @@
-The effective focal length of the two-lens system satisfies: one over f-effective equals one over f-one plus one over f-two minus d over f-one f-two. In the contact limit where d goes to zero, this simplifies to one over f-effective equals one over f-one plus one over f-two, or equivalently P-effective equals P-one plus P-two.
+Apply the thin lens equation to the second lens: one over s-o-two plus one over s-i-two equals one over f-two. The total magnification is m-total equals m-one times m-two equals minus s-i-one over s-o-one times minus s-i-two over s-o-two.

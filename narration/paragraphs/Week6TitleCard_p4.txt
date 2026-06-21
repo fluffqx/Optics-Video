@@ -1,1 +1,1 @@
-The optical path difference is n times the geometric path length. Converting to phase: delta equals 2 pi over lambda naught times the OPD.
+Modern applications of interference include: anti-reflection coatings on every camera lens; laser Fabry-Pérot cavities and their longitudinal modes; optical coherence tomography for medical imaging; gravitational wave detection in LIGO; and wavelength measurement in spectroscopy. Every one of these traces directly back to the two-beam interference formula derived this week.

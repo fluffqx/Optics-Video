@@ -1,1 +1,0 @@
-The mirror matrix looks like the lens matrix with minus two over R in the lower left.

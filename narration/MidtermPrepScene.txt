@@ -1,11 +1,9 @@
-The midterm covers everything from weeks 1 through 3 — electromagnetic waves, Fresnel equations, and geometric optics.
+The midterm examination at TU/e covers Weeks 1 through 3: waves, Maxwell's equations, Fresnel equations, and geometric optics. Here is a systematic preparation guide based on the types of problems that appear.
 
-It's a one-hour written exam. No AI tools, no phones — just pen, paper, ruler, calculator, and the formula sheet.
+Wave equation problems: you may be asked to verify that a given function satisfies the wave equation, identify the wave speed from the equation, or write down a wave function given wavelength and frequency. Practice differentiating expressions like A e to the i kx minus omega t twice with respect to x and twice with respect to t, and verify that the ratio of results gives v-squared.
 
-The most important advice: the formula sheet gives you the equations, but it does not tell you when to use which one, or how to handle sign conventions. That's what you need to practise.
+Fresnel equation problems: given n-i, n-t, and theta-i, you must find theta-t from Snell's law, then compute r-s, r-p, R-s, R-p, T-s, T-p, and verify R plus T equals 1. The calculation for r-p is the one students most often get wrong — double-check the sign convention. Brewster's angle and critical angle calculations are straightforward once you know the formulas.
 
-Go through the SLT problems from weeks 1 to 3. They are at exactly the right level of difficulty. If you can solve those independently, you are ready for the midterm.
+Geometric optics problems: thin lens equation problems almost always involve finding the image location and magnification for an object at a given distance. Remember the sign convention: real images have positive s-i, virtual images have negative s-i, real objects have positive s-o. Two-lens problems require applying the thin lens equation twice. Draw the ray diagram first — it tells you immediately whether to expect a real or virtual, inverted or upright image.
 
-A few specific things to watch for. First: Fresnel equations — always identify which polarisation you're dealing with before you start. Second: thin lenses and mirrors — draw the ray diagram first, always. It prevents sign errors. Third: radiation pressure — remember the factor of 2 for a reflective surface, and remember that I is in watts per square metre.
-
-Good luck.
+Exam technique: always write down the formula, substitute values with units, and state the answer with units and a physical interpretation. If R plus T does not sum to one, you have made an error — go back and find it before moving on.

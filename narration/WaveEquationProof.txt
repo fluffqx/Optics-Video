@@ -1,7 +1,9 @@
-Let's verify with a concrete example that f of x minus vt satisfies the wave equation. We choose the simplest non-trivial case: psi equals the quantity x minus vt, all squared.
+Let's verify concretely that a specific function of the form f of x minus vt satisfies the wave equation. We choose psi equals x minus vt, all squared, following Bennett's approach in Section 1.2.
 
-We compute the left side first. The first spatial derivative is 2 times open bracket x minus vt close bracket. Differentiating again with respect to x gives 2. So the left side of the wave equation is simply 2.
+Step one: the spatial derivative. We compute partial psi over partial x equals 2 times x minus vt. Differentiating again: partial squared psi over partial x squared equals 2. This is constant — the spatial curvature is 2 everywhere.
 
-Now the right side. The first time derivative of psi is minus 2v times open bracket x minus vt close bracket, because the chain rule brings down a factor of minus v. Differentiating again with respect to t gives 2v-squared. Multiplying by one over v-squared gives 2. Both sides equal 2, so the wave equation is satisfied.
+Step two: the temporal derivative. We compute partial psi over partial t. Using the chain rule: partial of the quantity x minus vt squared over partial t equals 2 times x minus vt times minus v equals minus 2v times x minus vt. Differentiating again: partial squared psi over partial t squared equals 2v-squared.
 
-This confirms that any function of the form f of x minus vt is a valid travelling wave solution. The specific example we chose, x minus vt squared, is a parabolic profile that moves rigidly to the right at speed v without changing shape. The same argument works for any twice-differentiable function of x minus vt — Gaussian pulses, cosines, exponentials, all of them.
+Step three: substitute into the wave equation. The left side is 2. The right side is one over v-squared times 2v-squared equals 2. Both sides equal 2 for all x and t, so the wave equation is satisfied.
+
+This works for any function of x minus vt, not just the quadratic. The chain rule always brings down the same factors regardless of the functional form. For f of x minus vt: partial f over partial x equals f-prime times 1, and partial f over partial t equals f-prime times minus v, where f-prime is the derivative of f with respect to its argument. Taking second derivatives: partial squared f over partial x squared equals f-double-prime, and partial squared f over partial t squared equals v-squared times f-double-prime. So partial squared f over partial x squared divided by partial squared f over partial t squared equals one over v-squared, confirming the wave equation.

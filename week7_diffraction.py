@@ -1,4 +1,4 @@
-# week7_diffraction.py — paragraph-per-scene
+# week7_diffraction.py
 from manim import *
 from utils import *
 
@@ -11,10 +11,9 @@ class Week7TitleCard_p1(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Week 7 is diffraction — the bending of light around",
-            "obstacles and through apertures. When an aperture becomes",
-            "comparable in size to the wavelength, geometric optics fails",
-            "and we must use wave optics.",
+            "Week 7 is diffraction — the bending and spreading of light",
+            "as it passes through apertures or around obstacles. This",
+            "follows Bennett Chapter 8, Sections 8.2 through 8.3.8.",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -29,11 +28,11 @@ class Week7TitleCard_p2(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "Bennett opens Chapter 8 with a profound statement: in a",
-            "sense, diffraction is interference done correctly. In",
-            "Young's experiment, we had two discrete point sources. In",
-            "diffraction, we have a continuous aperture, and every point",
-            "on the wavefront within it acts as a Huygens secondary",
+            "Diffraction is what happens when the aperture size becomes",
+            "comparable to the wavelength, so that geometric optics",
+            "fails. Bennett opens Chapter 8 with a precise statement: in",
+            "a sense, diffraction is interference done correctly. In",
+            "Young's experiment we had two discrete point sources. In",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -48,10 +47,30 @@ class Week7TitleCard_p3(Scene):
         self.wait(0.5)
         self.play(FadeOut(card, run_time=0.3))
         b = txt_block([
-            "The key results of this week: the sinc-squared single-slit",
-            "pattern and where its zeros occur, the Airy disk for a",
-            "circular aperture and the Rayleigh resolution criterion, and",
-            "the diffraction grating equation with its resolving power.",
+            "The Fraunhofer approximation — valid when the screen is in",
+            "the far field — reduces the diffraction integral to a",
+            "Fourier transform. The single-slit pattern is the",
+            "sinc-squared function. The circular aperture gives the Airy",
+            "disk with its 1.22 lambda over D angular radius. The",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week7TitleCard_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week7TitleCard_p4.mp3", time_offset=0)
+        card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "These results determine the resolution of every optical",
+            "instrument — telescope, microscope, camera, spectrograph.",
+            "Understanding why a larger aperture gives better resolution,",
+            "and by exactly how much, is the central practical lesson of",
+            "this week.",
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
@@ -61,7 +80,7 @@ class HuygensPrinciple_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p1.mp3", time_offset=0)
-        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -79,7 +98,7 @@ class HuygensPrinciple_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p2.mp3", time_offset=0)
-        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -97,7 +116,7 @@ class HuygensPrinciple_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p3.mp3", time_offset=0)
-        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -115,7 +134,7 @@ class HuygensPrinciple_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p4.mp3", time_offset=0)
-        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=32, color=GOLD)
+        title = Text("Huygens Principle  (Bennett 8.2)", font_size=32, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -257,7 +276,7 @@ class CircularApertureRayleigh_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p1.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -275,7 +294,7 @@ class CircularApertureRayleigh_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p2.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -293,7 +312,7 @@ class CircularApertureRayleigh_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p3.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -311,7 +330,7 @@ class CircularApertureRayleigh_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p4.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -329,7 +348,7 @@ class CircularApertureRayleigh_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p5.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -347,7 +366,7 @@ class CircularApertureRayleigh_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p6.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([
@@ -365,7 +384,7 @@ class CircularApertureRayleigh_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p7.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion", font_size=34, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3-8.3.4)", font_size=28, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
         b = txt_block([

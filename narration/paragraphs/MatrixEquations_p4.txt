@@ -1,1 +1,1 @@
-The mirror matrix looks identical to the thin lens matrix with minus two over R in the lower left. This makes sense: a concave mirror with radius R has a focal length of R over two.
+The mirror matrix is derived in Bennett Section 5.5.3. For a spherical mirror with radius R, the ray is reflected and continues propagating. The matrix has 1 and 0 in the top row and minus 2 over R in the lower left and 1 in the lower right — formally identical to the thin lens matrix with f equals R over 2.

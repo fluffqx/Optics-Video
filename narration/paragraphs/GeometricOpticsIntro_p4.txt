@@ -1,0 +1,1 @@
+Geometric optics fails when the aperture becomes comparable to the wavelength — then diffraction effects become important, and we need the full wave theory of Week 7. But for apertures larger than a few wavelengths, geometric optics is an excellent and exact approximation within its domain of validity.

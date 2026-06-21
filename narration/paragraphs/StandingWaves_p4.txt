@@ -1,1 +1,1 @@
-Nodes occur at kx equals m pi, meaning x equals m lambda over two. The spacing between adjacent nodes is lambda over two. Antinodes occur halfway between nodes.
+Nodes are positions where sine kx equals zero, meaning kx equals m pi for integer m, giving x equals m lambda over 2. At nodes, the wave function is zero at all times — the medium never moves at these points. The spacing between adjacent nodes is lambda over 2.

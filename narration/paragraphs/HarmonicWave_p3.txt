@@ -1,1 +1,1 @@
-Let's go through every symbol carefully, because these appear throughout this entire course and you need to know them instantly.
+A is the amplitude — the maximum value of the wave function. For an electric field wave, it has units of volts per metre. The irradiance of the wave is proportional to A squared, not A: doubling the amplitude quadruples the intensity. This factor of two in the exponent is fundamental and we will use it constantly in the interference and diffraction weeks.

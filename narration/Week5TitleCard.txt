@@ -1,5 +1,7 @@
-Week 5 develops the Jones vector formalism — the systematic mathematical framework for describing and manipulating polarisation states.
+Week 5 develops the complete formalism for polarisation calculations: the Jones vector and Jones matrix calculus introduced by R. Clark Jones in 1941 and described in Bennett Chapter 6, Sections 6.5 and 6.5.1.
 
-The key insight is that any polarisation state of a plane wave can be represented as a two-component complex column vector — the Jones vector. Any optical element that transforms the polarisation can be represented as a two-by-two complex matrix — the Jones matrix. To trace polarisation through a sequence of elements, you simply multiply the matrices.
+A Jones vector is a two-component complex column vector that completely specifies the polarisation state of a fully coherent plane wave. A Jones matrix is a two-by-two complex matrix that represents any polarisation-transforming optical element: a linear polariser, a wave plate, or a rotator. Computing the effect of a sequence of optical elements on a polarised beam reduces to a sequence of matrix multiplications.
 
-This formalism is exact within the paraxial approximation for fully coherent light. It handles linear polarisers, wave plates, rotators, beam splitters, and any combination of these.
+Bennett provides a complete table of Jones matrices in Table 6.1 and works through several detailed examples: Example 6.5 derives the rotation matrix from first principles, Example 6.6 demonstrates calculations for a polariser and a quarter-wave plate, and Example 6.7 works through a three-element system involving a half-wave plate, quarter-wave plate, and polariser.
+
+You must be able to write down the Jones vector for any standard polarisation state from memory, multiply Jones matrices in the correct order, compute the output polarisation state and intensity from a given input and sequence of elements, and verify your results by checking that the output modulus squared gives the correct transmitted fraction.

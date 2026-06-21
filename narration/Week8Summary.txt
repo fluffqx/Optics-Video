@@ -1,15 +1,15 @@
-Let's collect all the Fabry-Pérot formulas in one place for quick reference.
+Here are all the Fabry-Pérot formulas collected in one place, with Bennett equation numbers.
 
-The Airy function: I-t equals I-naught divided by one plus F sine squared delta over 2. This is the transmitted intensity as a function of round-trip phase. F is the coefficient of finesse, F equals 4R over one minus R squared. Delta is the round-trip phase, delta equals 4 pi n d cosine theta over lambda-naught.
+The Airy function for transmitted intensity from Bennett Equation 7.89: I-t equals I-naught divided by 1 plus F sine squared delta over 2. The coefficient of finesse is F equals 4R over 1 minus R squared. The round-trip phase is delta equals 4 pi n d cosine theta over lambda-naught for a cavity of length d filled with medium n at incidence angle theta.
 
-The finesse script-F equals pi root R over one minus R. This equals the FSR divided by the FWHM of each transmission peak, and approximately equals the average number of round trips before leakage.
+At resonance, delta equals 2 pi N for integer N: I-t equals I-naught. Complete transmission regardless of R. Between resonances: I-t approaches I-naught over 1 plus F, which is approximately I-naught over F for large F.
 
-The order number N equals 2nd cosine theta over lambda-naught at normal incidence equals 2nd over lambda-naught.
+The finesse from Bennett Section 7.10: script-F equals pi root R over 1 minus R. This equals the free spectral range divided by the FWHM of each transmission peak. Also: script-F equals pi root F over 2. For R equals 0.9: F equals 360, script-F equals 29.8. For R equals 0.99: F equals 39600, script-F equals 312.
 
-The resolving power equals N times script-F. This is the ratio lambda over delta-lambda-min.
+The order number at resonance: N equals 2nd cosine theta over lambda-naught. For normal incidence: N equals 2nd over lambda-naught.
 
-The free spectral range in wavelength is delta-lambda-FSR equals lambda-naught over N equals lambda-naught squared over 2nd. The free spectral range in frequency is delta-nu-FSR equals c over 2nd — this is the cavity mode spacing and determines the longitudinal mode spectrum of a laser.
+The resolving power from Bennett Section 7.10: RP equals lambda over delta-lambda-min equals N times script-F. For the example of Bennett's Example 7.11 with N equals 1313 and script-F equals 29.8: RP equals 39100.
 
-The coherence length of the source must exceed 2nd for fringes to be visible.
+The free spectral range in wavelength: delta-lambda-FSR equals lambda-naught squared over 2nd equals lambda-naught over N. In frequency: delta-nu-FSR equals c over 2nd. This is the cavity mode spacing and determines the allowed longitudinal modes of a laser.
 
-Common mistakes: using F instead of script-F in the resolving power formula; forgetting the cosine theta factor for oblique incidence; confusing the order number N with the number of slits; and using lambda in air instead of lambda-naught in vacuum when computing the round-trip phase.
+The coherence length of the source must exceed 2nd for fringes to be observable. Critical warning: never substitute F in place of script-F in the resolving power formula — they differ by a factor of pi over 2 times root F, which for R equals 0.9 is about 15. This is the most common Fabry-Pérot exam error.

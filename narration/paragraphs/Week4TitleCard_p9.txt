@@ -1,1 +1,0 @@
-From the system matrix elements A, B, C, D, you can extract all cardinal points of the system: the effective focal length is minus one over C, and the principal planes can be located from A and D.

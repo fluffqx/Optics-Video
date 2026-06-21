@@ -1,0 +1,1 @@
+The three-dimensional plane wave from Bennett Section 1.7: psi-tilde equals A e to the i k-vector dot r-vector minus omega t. Spherical wave: amplitude proportional to one over r, giving inverse-square law for intensity.

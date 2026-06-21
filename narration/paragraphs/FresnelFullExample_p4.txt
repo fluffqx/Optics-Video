@@ -1,1 +1,1 @@
-Step 3: plug into the Fresnel equations for r_perp and r_parallel. We get minus 0.278 for s-polarisation and plus 0.119 for p-polarisation. The negative sign on r_perp means a phase flip upon reflection.
+Step 3: s-polarisation Fresnel coefficient. r-s equals n-i cosine theta-i minus n-t cosine theta-t, over n-i cosine theta-i plus n-t cosine theta-t, equals 0.7660 minus 1.5 times 0.9036, over 0.7660 plus 1.5 times 0.9036, equals 0.7660 minus 1.3554 over 0.7660 plus 1.3554, equals minus 0.5894 over 2.1214 equals minus 0.2779. Reflectivity R-s equals r-s squared equals 0.0772.

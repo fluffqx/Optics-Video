@@ -1,1 +1,0 @@
-Crucially: whenever light reflects off a surface where it's going from a lower to a higher refractive index, it picks up a phase shift of pi. This is equivalent to adding half a wavelength to the path. If the other reflection doesn't have this shift, the two beams start with a pi phase difference just from the reflections alone.

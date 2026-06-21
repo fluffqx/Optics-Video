@@ -1,1 +1,1 @@
-We compute the left side first. The first spatial derivative is 2 times open bracket x minus vt close bracket. Differentiating again with respect to x gives 2. So the left side of the wave equation is simply 2.
+Step one: the spatial derivative. We compute partial psi over partial x equals 2 times x minus vt. Differentiating again: partial squared psi over partial x squared equals 2. This is constant — the spatial curvature is 2 everywhere.

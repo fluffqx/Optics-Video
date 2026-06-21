@@ -1,0 +1,1 @@
+Optical tweezers exploit radiation pressure to trap and manipulate microscopic particles. Arthur Ashkin developed this technique and received the Nobel Prize in Physics in 2018. A focused laser beam creates an intensity gradient that pulls dielectric particles toward the focal region — the trapping force is proportional to the gradient of the irradiance.

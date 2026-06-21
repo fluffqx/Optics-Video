@@ -1,0 +1,1 @@
+Write the complete wave function with amplitude A equals E-naught: psi equals E-naught sine of 1.257 times ten to the 7 times x minus 3.768 times ten to the 15 times t plus phi.

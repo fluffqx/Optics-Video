@@ -1,1 +1,1 @@
-The superposition principle states that linear combinations of solutions are solutions. This follows from the linearity of the wave equation and is the foundation of all interference phenomena. It holds for electromagnetic waves in linear media, which covers all of classical optics.
+The complex representation from Bennett Section 1.6: the complex wave psi-tilde equals A e to the i kx minus omega t. Physical wave equals the real part. Intensity proportional to the modulus squared equals A squared. The cross term in modulus squared of a sum gives the interference term.

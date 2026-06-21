@@ -1,1 +1,1 @@
-Write the three matrices from right to left: thin lens f-one, free propagation f-one plus f-two, thin lens f-two. Multiply them out step by step.
+Write M-L1 for the first lens: top row 1, 0; bottom row minus 1 over f-one, 1. Write M-T for the free propagation of distance f-one plus f-two: top row 1, f-one plus f-two; bottom row 0, 1. Write M-L2 for the second lens: top row 1, 0; bottom row minus 1 over f-two, 1.

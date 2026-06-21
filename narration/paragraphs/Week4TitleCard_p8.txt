@@ -1,1 +1,0 @@
-To find the system matrix for a complete optical system, multiply the individual matrices from right to left — the first element the ray encounters goes on the rightmost position.

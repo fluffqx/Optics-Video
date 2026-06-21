@@ -1,1 +1,1 @@
-The superposition principle is the mathematical foundation of all interference and diffraction phenomena. It follows directly from the linearity of the wave equation.
+The superposition principle is stated in Bennett Section 1.5: if psi-one and psi-two are both solutions of the wave equation, then the sum psi-one plus psi-two is also a solution.
