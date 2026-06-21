@@ -20,55 +20,30 @@ class HuygensPrinciple(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/HuygensPrinciple.mp3", time_offset=0)
-        title = Text("Huygens' Principle & Diffraction  (Bennett Section 8.2)", font_size=34, color=GOLD)
+        title = Text("Huygens Principle and Diffraction  (Bennett 8.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "Bennett opens Chapter 8 with a beautiful insight:",
-            "In a sense, diffraction is interference done correctly.",
-            "",
-            "In Youngs experiment, TWO discrete slits interfered.",
-            "Diffraction generalises this: an ENTIRE APERTURE acts as infinitely many",
-            "point sources, each emitting secondary wavelets.",
-            "",
-            "Each point on a wavefront acts as a source of secondary spherical wavelets.",
-            "The new wavefront is the envelope of all these secondary wavelets.",
-            "",
-            "For an obstructed wavefront (aperture or slit), only the wavelets from",
-            "the open area contribute — their interference produces the diffraction pattern.",
-        ], font_size=28, wait=8.2, lines_per_page=4)
-        # (make_pages handles FadeIn/FadeOut internally)
-        if False:  # placeholder so subsequent code still works
-            intro = None
-        self.wait(20.7)
-        self.wait(14.0); self.play(FadeOut(intro))
-
-        # Fraunhofer condition
-        fc_title = Text("Fraunhofer (Far-Field) Condition  (Bennett Eq. 8.8):", font_size=28, color=GOLD)
-        fc_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(fc_title))
-
-        fc_eq = MathTex(
-            r"\lambda \gg \frac{h^2}{2}\!\left(\frac{1}{r'}+\frac{1}{r}\right) \quad\Leftrightarrow\quad r \gg \frac{h^2}{2\lambda}",
-            font_size=38, color=WAVE_COLOR)
-        fc_eq.next_to(fc_title, DOWN, buff=0.3)
-        safe_scale(fc_eq, max_width=13.0)
-        self.play(Write(fc_eq)); self.wait(27.4)
-
-        fc_desc = section_intro([
-            "h = aperture size,  r = distance to screen,  r' = distance from source to aperture",
-            "When this condition holds: wavefronts are plane waves → Fraunhofer (far-field) diffraction.",
-            "When it fails: wavefronts are curved → Fresnel (near-field) diffraction (not in 31OPT).",
-            "",
-            "Example check: slit b=0.1mm, λ=500nm, at r=1m:",
-            "h²/2λ = (10⁻⁴)²/(2×5×10⁻⁷) = 10⁻⁸/10⁻⁶ = 0.01m = 1cm  <<  r=1m  ✓  Fraunhofer!",
-        ], font_size=25)
-        fc_desc.next_to(fc_eq, DOWN, buff=0.35)
-        self.play(FadeIn(fc_desc))
-        self.wait(16.1)
-        self.wait(88.3); self.play(FadeOut(VGroup(title, fc_title, fc_eq, fc_desc)))
-
+        self.add(title)
+        b1 = txt_block([
+            "Bennett Ch. 8: In a sense, diffraction is interference done correctly.",
+            "In Young's experiment: TWO discrete point sources interfered.",
+            "Diffraction: EVERY point on the wavefront at the aperture is a source.",
+            "The diffraction pattern = coherent sum of all Huygens wavelets.",
+        ])
+        safe_scale(b1, max_width=13.0, max_height=3.5)
+        b1.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b1, run_time=0.1))
+        self.wait(30)
+        self.play(FadeOut(b1))
+        b2 = txt_block([
+            "Fraunhofer (far-field) condition: screen distance r >> a^2 / (2*lambda).",
+            "For a 1mm slit and 500nm light: r >> 1mm^2/(1um) = 1 metre.",
+            "In the far field, all rays from the aperture are effectively parallel.",
+            "This simplifies the path difference calculation enormously.",
+        ])
+        safe_scale(b2, max_width=13.0, max_height=3.5)
+        b2.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b2, run_time=0.1))
+        self.wait(88.3)
 
 class SingleSlitDiffraction(Scene):
     def construct(self):

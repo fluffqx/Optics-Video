@@ -142,77 +142,30 @@ class FormulasInterferenceDiffraction(Scene):
 class MidtermPrepScene(Scene):
     """Dedicated midterm preparation — Weeks 1-3 only."""
     def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        card = make_title_card(
-            "MIDTERM PREPARATION",
-            "Weeks 1–3: EM Waves, Fresnel & Geometric Optics",
-            "Wednesday Week 4, 15:45–16:45h"
-        )
-        self.play(FadeIn(card, shift=UP)); self.wait(7.8); self.play(FadeOut(card))
-
-        title = Text("What the Midterm Covers", font_size=36, color=GOLD)
-        title.to_edge(UP)
-        self.play(Write(title))
-
-        topics = [
-            ("Week 1", "Wave equation, harmonic wave, k/ω/λ/v relationships",         E_COLOR),
-            ("Week 1", "Complex representation, plane waves, spherical waves",         E_COLOR),
-            ("Week 1", "Maxwell equations, EM wave derivation, c = 1/√(ε₀μ₀)",       E_COLOR),
-            ("Week 1", "Poynting vector, irradiance I = nε₀c/2 · E₀², radiation pressure", E_COLOR),
-            ("Week 1", "Dispersion, group vs phase velocity",                          E_COLOR),
-            ("Week 2", "Law of reflection, Snell's law",                               B_COLOR),
-            ("Week 2", "Fresnel equations (r⊥, r∥, t⊥, t∥) — know all four",         B_COLOR),
-            ("Week 2", "Reflectivity R=|r|², Transmissivity T, R+T=1",                B_COLOR),
-            ("Week 2", "Brewster's angle: tan(θ_B) = n_t/n_i",                        B_COLOR),
-            ("Week 2", "Total internal reflection: sin(θ_c) = n_t/n_i",               B_COLOR),
-            ("Week 2", "Malus's law: I = I₀cos²θ",                                    B_COLOR),
-            ("Week 3", "Refraction at spherical surface: n_m/s_o + n_i/s_i = (n_i-n_m)/R", N_COLOR),
-            ("Week 3", "Thin lens: 1/s_o + 1/s_i = 1/f, magnification m = -s_i/s_o", N_COLOR),
-            ("Week 3", "Lensmaker's equation, sign conventions",                       N_COLOR),
-            ("Week 3", "Mirror equation: 1/s_o + 1/s_i = 2/R",                        N_COLOR),
-            ("Week 3", "Ray transfer matrices (translation, lens, mirror)",             N_COLOR),
-        ]
-
-        rows = VGroup()
-        for week, desc, color in topics:
-            week_lbl = Text(week, font_size=20, color=color, weight=BOLD)
-            week_lbl.set_width(1.0)
-            desc_txt  = Text(desc, font_size=20, color=WHITE)
-            row = VGroup(week_lbl, desc_txt).arrange(RIGHT, buff=0.3, aligned_edge=LEFT)
-            rows.add(row)
-        rows.arrange(DOWN, aligned_edge=LEFT, buff=0.18)
-        rows.next_to(title, DOWN, buff=0.35)
-        rows.scale(0.9)
-
-        for row in rows:
-            self.play(FadeIn(row), run_time=0.3)
-        self.wait(9.2)
-        self.play(FadeOut(VGroup(title, rows)))
-
-        # Key tips
-        tips_title = Text("Midterm Exam Tips", font_size=36, color=GOLD)
-        tips_title.to_edge(UP)
-        self.play(Write(tips_title))
-
-        make_pages(self, title, [
-            "1.  Formula sheet is provided — focus on KNOWING HOW TO USE it, not memorisation.",
-            "2.  Always draw a ray diagram first for geometric optics problems.",
-            "3.  Sign conventions: get them wrong once, lose the whole question.",
-            "4.  Fresnel: check which polarisation (s or p) before plugging in.",
-            "5.  At normal incidence, r = (n_i - n_t)/(n_i + n_t) — memorise this one.",
-            "6.  TIR only possible when going from HIGH n to LOW n.",
-            "7.  Brewster's angle: only r_parallel = 0, not r_perp.",
-            "8.  For thin film: count reflection phase shifts at EACH surface separately.",
-            "9.  Matrix optics: multiply RIGHT-TO-LEFT (first element on the right).",
-            "10. Check: R + T = 1 as a sanity check on Fresnel results.",
-        ], font_size=28, wait=15.9, lines_per_page=4)
-        tips.next_to(tips_title, DOWN, buff=0.35)
-
-        for tip in tips:
-            self.play(FadeIn(tip), run_time=0.4); self.wait(14.5)
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/MidtermPrepScene.mp3", time_offset=0)
+        title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        topics = VGroup(
+            txt_block(["Week 1: Wave equation, harmonic waves, complex representation,",
+                       "phase vs group velocity, superposition principle."], 25),
+            txt_block(["Week 1b: Maxwell's equations, EM wave derivation, irradiance,",
+                       "Poynting vector, radiation pressure, dispersion."], 25),
+            txt_block(["Week 2: Snell's law, Fresnel equations (r_s, r_p, t_s, t_p),",
+                       "reflectivity R+T=1, Brewster's angle, TIR, Malus's law."], 25),
+            txt_block(["Week 3: Thin lens equation, lensmaker's eq, sign conventions,",
+                       "mirror equation, magnification, optical instruments."], 25),
+        ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
+        safe_scale(topics, max_width=13.0, max_height=5.0)
+        topics.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(topics, run_time=0.1))
+        b = txt_block(["KEY EXAM HABIT: draw a diagram FIRST for every geometric optics problem.",
+                       "KEY EXAM HABIT: R + T = 1 always — check this after every Fresnel calculation."], 26)
+        safe_scale(b, max_width=13.0)
+        b.next_to(topics, DOWN, buff=0.3)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(78.7)
-        self.play(FadeOut(*self.mobjects), run_time=0.5)
-
 
 class FinalExamPrepScene(Scene):
     """Final exam overview — all 8 weeks."""

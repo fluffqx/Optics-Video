@@ -187,125 +187,72 @@ class StandingWaves(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/StandingWaves.mp3", time_offset=0)
-        title = Text("Standing Waves (Bennett Section 7.1)", font_size=38, color=GOLD)
+        title = Text("Standing Waves  (Bennett Section 7.1)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        pg(self, title, [
-            "When two identical waves travel in OPPOSITE directions and overlap,",
-            "they form a STANDING WAVE — a pattern that oscillates in place.",
-            "The wave does not travel — it stands still.",
-        ], wait=15)
-
-        pg(self, title, [
-            "Add Psi_1 = A sin(kx - omega t) and Psi_2 = A sin(kx + omega t):",
-        ], wait=6)
-
-        solver = StepSolver(self, title, start_buff=0.55)
-        solver.add_step(1,
-            r"\Psi_1 + \Psi_2 = A\sin(kx-\omega t) + A\sin(kx+\omega t)",
-            "sum of two counter-propagating waves")
-        solver.add_step(2,
-            r"= 2A\sin(kx)\cos(\omega t)",
-            "using sum-to-product: sin(a-b)+sin(a+b) = 2sin(a)cos(b)", GOLD)
-        solver.add_step(3,
-            r"\text{NODES (zero amplitude): } kx = m\pi \;\Rightarrow\; x = \frac{m\lambda}{2}",
-            "positions where amplitude is always zero — fixed in space", B_COLOR)
-        solver.add_step(4,
-            r"\text{ANTINODES (max amplitude): } kx = (m+\tfrac{1}{2})\pi",
-            "positions where amplitude oscillates with maximum magnitude", E_COLOR)
-        solver.finalize()
+        self.add(title)
+        eq = MathTex(r"A\sin(kx-\omega t)+A\sin(kx+\omega t)=2A\underbrace{\sin(kx)}_{\text{space}}\underbrace{\cos(\omega t)}_{\text{time}}", font_size=36)
+        safe_scale(eq, max_width=13.0)
+        eq.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(eq, run_time=0.1))
+        b = txt_block([
+            "Nodes (zero amplitude always): x = m * lambda/2.  Spacing = lambda/2.",
+            "Antinodes (maximum amplitude): x = (m + 1/2) * lambda/2.",
+            "The pattern oscillates in place — no net energy transport.",
+            "Laser cavities only support wavelengths where L = m*lambda/2.",
+        ])
+        safe_scale(b, max_width=13.0, max_height=3.0)
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(80.0)
-        self.play(FadeOut(VGroup(title, *solver.steps)))
-
 
 class Beating(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/Beating.mp3", time_offset=0)
-        title = Text("Beating (Bennett Section 7.2)", font_size=40, color=GOLD)
+        title = Text("Beating  (Bennett Section 7.2)", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        pg(self, title, [
-            "When two waves of SLIGHTLY DIFFERENT frequencies overlap,",
-            "their interference produces a slow oscillation in amplitude — BEATS.",
-            "You hear this as a 'wah-wah' sound when two guitar strings are slightly out of tune.",
-        ], wait=18)
-
-        pg(self, title, [
-            "Add Psi_1 = A cos(omega_1 t) and Psi_2 = A cos(omega_2 t):",
-        ], wait=6)
-
-        solver = StepSolver(self, title, start_buff=0.55)
-        solver.add_step(1,
-            r"\Psi_1+\Psi_2 = A\cos(\omega_1 t)+A\cos(\omega_2 t)",
-            "sum of two waves with slightly different frequencies")
-        solver.add_step(2,
-            r"= 2A\cos\!\left(\frac{\omega_1-\omega_2}{2}t\right)\cos\!\left(\frac{\omega_1+\omega_2}{2}t\right)",
-            "sum-to-product identity", GOLD)
-        solver.add_step(3,
-            r"\omega_{\text{beat}} = |\omega_1-\omega_2| \;\Rightarrow\; f_{\text{beat}} = |f_1-f_2|",
-            "beat frequency = difference of the two frequencies", GOLD)
-        solver.add_step(4,
-            r"\text{Example: } f_1=440\text{ Hz},\; f_2=443\text{ Hz} \;\Rightarrow\; f_{\text{beat}}=3\text{ Hz}",
-            "3 beats per second — easily heard by ear")
-        solver.finalize()
+        self.add(title)
+        eq = MathTex(r"A\cos(\omega_1 t)+A\cos(\omega_2 t)="
+                     r"2A\cos\!\left(\frac{\omega_1-\omega_2}{2}t\right)"
+                     r"\cos\!\left(\frac{\omega_1+\omega_2}{2}t\right)",
+                     font_size=34)
+        safe_scale(eq, max_width=13.0)
+        eq.next_to(title, DOWN, buff=0.4)
+        f_beat = MathTex(r"f_{\text{beat}} = |f_1 - f_2|", font_size=44, color=GOLD)
+        f_beat.next_to(eq, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(eq, f_beat), run_time=0.1))
+        b = txt_block([
+            "Fast oscillation at average frequency, amplitude-modulated by slow envelope.",
+            "Two guitar strings at 440 Hz and 443 Hz: 3 beats per second — audible wah-wah.",
+            "Tuning: adjust until beats disappear (f1 = f2).",
+            "In optics: beating between laser modes used in heterodyne detection.",
+        ])
+        safe_scale(b, max_width=13.0, max_height=2.8)
+        b.next_to(f_beat, DOWN, buff=0.3)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(70.0)
-        self.play(FadeOut(VGroup(title, *solver.steps)))
-
-
-# ─── LECTURE 4.1: POLARIZATION BASICS ───────────────────────────────────────
 
 class PolarizationBasics(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/PolarizationBasics.mp3", time_offset=0)
-        title = Text("Polarization of Light (Bennett Section 6.1-6.2)", font_size=34, color=GOLD)
+        title = Text("Polarization of Light  (Bennett Section 6.1-6.2)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        pg(self, title, [
-            "For a plane wave travelling in the z-direction,",
-            "the electric field E lies in the x-y plane (transverse wave).",
-            "The DIRECTION in which E oscillates defines the polarization state.",
-            "Our eyes cannot detect polarization — we need special filters or detectors.",
-        ], wait=20)
-
-        states = [
-            ("Linear Polarization",
-             r"E_x = E_0\cos(kz-\omega t),\quad E_y = 0",
-             ["E oscillates along a FIXED direction in the x-y plane.",
-              "Special cases: horizontal (along x), vertical (along y), diagonal.",
-              "Natural light = superposition of all polarization directions (unpolarized)."],
-             E_COLOR, 18),
-            ("Circular Polarization",
-             r"|E_{0x}|=|E_{0y}|=E_0,\quad \Delta\phi = \pm\frac{\pi}{2}",
-             ["Equal amplitudes in x and y, with 90 degree phase difference.",
-              "E-vector tip traces a CIRCLE as the wave passes a point.",
-              "Right circular (RCP): delta phi = -pi/2.  Left circular (LCP): +pi/2."],
-             B_COLOR, 18),
-            ("Elliptical Polarization",
-             r"|E_{0x}|\neq|E_{0y}| \text{ or } \Delta\phi\neq 0,\pm\tfrac{\pi}{2},\pi",
-             ["The general case — E-vector tip traces an ELLIPSE.",
-              "Linear and circular are special cases of elliptical polarization.",
-              "Fully characterized by two amplitudes and one phase difference."],
-             N_COLOR, 15),
-        ]
-
-        for state_name, latex, desc_lines, color, wait in states:
-            s_title = Text(state_name + ":", font_size=28, color=GOLD)
-            s_title.next_to(title, DOWN, buff=0.45)
-            eq = MathTex(latex, font_size=36, color=color)
-            eq.next_to(s_title, DOWN, buff=0.25)
-            safe_scale(eq, max_width=13.0)
-            desc = VGroup(*[Text(l, font_size=25, color=WHITE) for l in desc_lines])
-            desc.arrange(DOWN, aligned_edge=LEFT, buff=0.2)
-            desc.next_to(eq, DOWN, buff=0.3)
-            safe_scale(desc, max_width=13.0, max_height=2.5)
-            block = VGroup(s_title, eq, desc)
-            self.play(FadeIn(block, run_time=0.4))
-            self.wait(wait)
-            self.play(FadeOut(block, run_time=0.4))
-
-        self.play(FadeOut(title))
+        self.add(title)
+        states = VGroup(
+            labeled_eq(r"\Delta\phi=0\text{ or }\pi", "LINEAR: E oscillates along fixed line", WHITE, 36, 24),
+            labeled_eq(r"|E_x|=|E_y|,\;\Delta\phi=\pm\pi/2", "CIRCULAR: E-tip traces a circle", WAVE_COLOR, 36, 24),
+            labeled_eq(r"\text{general }\Delta\phi,\text{ any amplitudes}", "ELLIPTICAL: E-tip traces ellipse", B_COLOR, 36, 24),
+        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
+        safe_scale(states, max_width=13.0, max_height=4.5)
+        states.next_to(title, DOWN, buff=0.45)
+        self.play(FadeIn(states, run_time=0.1))
+        b = txt_block([
+            "RCP: Delta_phi = -pi/2  (E rotates counterclockwise viewed from receiver).",
+            "LCP: Delta_phi = +pi/2.",
+            "Natural light = random mixture of all polarisation states (unpolarised).",
+        ], 25)
+        safe_scale(b, max_width=13.0)
+        b.next_to(states, DOWN, buff=0.3)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(90.0)

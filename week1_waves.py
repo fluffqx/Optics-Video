@@ -72,7 +72,6 @@ class WaveEquation1D(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/WaveEquation1D.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/WaveEquation1D.mp3", time_offset=0)
         title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)

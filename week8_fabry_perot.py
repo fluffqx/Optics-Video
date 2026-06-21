@@ -20,27 +20,30 @@ class MultiBeamIntro(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/MultiBeamIntro.mp3", time_offset=0)
-        title = Text("From Two Beams to Multiple Beams  (Bennett Section 7.10)", font_size=34, color=GOLD)
+        title = Text("From Two Beams to Multiple Beams  (Bennett 7.10)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "In Young's experiment and the Michelson interferometer, exactly TWO beams",
-            "interfere. The Fabry-Pérot uses an INFINITE SERIES of beams.",
-            "",
-            "Setup: two parallel, flat, partially-reflecting mirrors with reflectance R.",
-            "A beam enters and bounces back and forth between the two mirrors.",
-            "At each bounce, a fraction T is transmitted out.",
-            "The series of transmitted beams are: Et₁, Et₂=r²Et₁·e^{iδ}, Et₃=r⁴Et₁·e^{i2δ}, ...",
-            "",
-            "Bennett Section 7.10 sums this infinite geometric series (Eq. 7.85).",
-            "The result is the AIRY FUNCTION — one of the most important results in optics.",
-        ], font_size=28, wait=15.9, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(27.4)
-        self.wait(97.4); self.play(FadeOut(VGroup(title, intro)))
-
+        self.add(title)
+        b1 = txt_block([
+            "Young's and Michelson use exactly TWO beams — limited resolving power.",
+            "Fabry-Perot: light bounces back and forth between two parallel mirrors.",
+            "Each bounce produces another transmitted/reflected beam — INFINITE series.",
+            "All these beams interfere, giving a much sharper transmission peak.",
+        ])
+        safe_scale(b1, max_width=13.0, max_height=3.5)
+        b1.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b1, run_time=0.1))
+        self.wait(35)
+        self.play(FadeOut(b1))
+        b2 = txt_block([
+            "Setup: two flat mirrors of reflectivity R, separated by gap d, medium n.",
+            "Beam enters, bounces N times. Each round trip adds phase delta = 4*pi*n*d/lambda.",
+            "Transmitted amplitudes form a geometric series — can be summed analytically.",
+            "Result: the Airy function  I_t = I_0 / [1 + F sin^2(delta/2)].",
+        ])
+        safe_scale(b2, max_width=13.0, max_height=3.5)
+        b2.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b2, run_time=0.1))
+        self.wait(97.4)
 
 class AiryFunction(Scene):
     def construct(self):
@@ -48,102 +51,43 @@ class AiryFunction(Scene):
         self.add_sound("narration/audio/AiryFunction.mp3", time_offset=0)
         title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        intro = section_intro([
-            "Summing the infinite series of transmitted beams gives the Airy function:",
+        self.add(title)
+        airy = MathTex(r"I_t = \frac{I_0}{1 + F\sin^2(\delta/2)}\qquad"
+                       r"F = \frac{4R}{(1-R)^2}",
+                       font_size=46, color=INTENSITY_COLOR)
+        safe_scale(airy)
+        airy.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(airy, run_time=0.1))
+        self.play(Create(gold_box(airy)))
+        b = txt_block([
+            "At resonance: delta = 2*N*pi -> sin^2(delta/2) = 0 -> I_t = I_0.  100% transmission!",
+            "Off resonance: I_t << I_0 for large F (high R mirrors).",
+            "F = 4R/(1-R)^2 is the COEFFICIENT OF FINESSE (NOT the finesse script-F).",
+            "High R (e.g. R=0.99): F = 39600 — extremely sharp peaks.",
         ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro[0])); self.wait(12.1); self.play(FadeOut(intro))
-
-        airy = MathTex(
-            r"I_t = \frac{I_0}{1 + F\sin^2\!\left(\frac{\delta}{2}\right)}",
-            font_size=64, color=INTENSITY_COLOR)
-        airy.next_to(title, DOWN, buff=0.5)
-        self.play(Write(airy)); self.wait(15.0)
-        self.play(Create(gold_box(airy))); self.wait(24.6)
-
-        sym = eq_table([
-            (r"I_0", "incident irradiance  [W/m²]", INTENSITY_COLOR),
-            (r"F = \frac{4R}{(1-R)^2}", "coefficient of finesse — depends only on mirror reflectivity R", GOLD),
-            (r"\delta = \frac{4\pi nd\cos\theta}{\lambda_0} + \delta_{\text{refl}}",
-             "round-trip phase: 2× the path inside cavity + reflection phase shifts", WAVE_COLOR),
-            (r"R", "mirror reflectivity (same for both mirrors)", N_COLOR),
-        ], eq_fs=30, lbl_fs=23, buff=0.25)
-        sym.next_to(airy, DOWN, buff=0.4)
-        for row in sym: self.play(FadeIn(row)); self.wait(19.8)
-        self.wait(15.4); self.play(FadeOut(sym))
-
-        # Resonance condition
-        res_title = Text("Resonance Condition — Peak Transmission:", font_size=28, color=GOLD)
-        res_title.next_to(airy, DOWN, buff=0.4)
-        self.play(Write(res_title))
-
-        make_pages(self, title, [
-            "When δ/2 = Nπ (i.e. δ = 2Nπ): sin²(δ/2) = 0  →  I_t = I₀",
-            "100% transmission even with highly reflective mirrors!",
-            "This happens when the round-trip phase is a multiple of 2π.",
-            "Physical picture: all the multiply-reflected beams add up constructively.",
-            "The field builds up inside the cavity to a very large amplitude.",
-        ], font_size=28, wait=12.8, lines_per_page=4)
-        res.next_to(res_title, DOWN, buff=0.3)
-        self.play(FadeIn(res))
-        self.wait(1.0)
-        self.wait(101.8); self.play(FadeOut(VGroup(title, airy, res_title, res)))
-
+        safe_scale(b, max_width=13.0, max_height=3.0)
+        b.next_to(airy, DOWN, buff=0.35)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(101.8)
 
 class FinesseResolving(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/FinesseResolving.mp3", time_offset=0)
-        title = Text("Finesse, Resolving Power & Free Spectral Range", font_size=34, color=GOLD)
+        title = Text("Finesse, Resolving Power and FSR", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        intro = section_intro([
-            "The finesse (script F) characterises the sharpness of the transmission peaks.",
-            "It is defined as the ratio of the free spectral range to the peak FWHM.",
-        ])
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(8.7)
-        self.wait(30.8); self.play(FadeOut(intro))
-
-        eqs = eq_table([
-            (r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R} = \frac{\pi\sqrt{F}}{2}",
-             "FINESSE: ratio of FSR to FWHM of transmission peak  (Bennett Eq. 7.91)", GOLD),
-            (r"F = \frac{4R}{(1-R)^2} = \frac{4\mathcal{F}^2}{\pi^2}",
-             "coefficient of finesse F vs. finesse script-F (different quantities!)", N_COLOR),
-            (r"N = \frac{2nd\cos\theta}{\lambda/2} = \frac{2nd}{\lambda_0}\cos\theta",
-             "order number N = number of half-wavelengths in the cavity", WHITE),
-            (r"\text{RP} = \frac{\lambda}{\Delta\lambda} = N\mathcal{F}",
-             "RESOLVING POWER: product of order number and finesse  (Bennett Eq. 7.93)", GOLD),
-            (r"\Delta\lambda_{\text{FSR}} = \frac{\lambda^2}{2nd} = \frac{\lambda_0}{N}",
-             "FREE SPECTRAL RANGE in wavelength  (Bennett Eq. 7.94)", INTENSITY_COLOR),
-            (r"\Delta\nu_{\text{FSR}} = \frac{c}{2nd}",
-             "FREE SPECTRAL RANGE in frequency — cavity mode spacing", INTENSITY_COLOR),
-        ], eq_fs=30, lbl_fs=22, buff=0.28)
-        eqs.next_to(title, DOWN, buff=0.5)
-        for row in eqs: self.play(FadeIn(row)); self.wait(14.0)
-        self.wait(8.7); self.play(FadeOut(eqs))
-
-        # Physical interpretations
-        phys_title = Text("Physical Interpretation of Finesse:", font_size=30, color=GOLD)
-        phys_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(phys_title))
-
-        make_pages(self, title, [
-            "Script-F is the number of times a photon bounces back and forth before leaking out.",
-            "High finesse → very sharp transmission peaks → high spectral resolution.",
-            "High finesse also means: large field buildup inside the cavity — important for lasers.",
-            "For R=99%: F = 4×0.99/(0.01)² = 39600, finesse = π√39600/2 ≈ 312.",
-            "The peaks are 312× narrower than the spacing between them!",
-        ], font_size=28, wait=18.3, lines_per_page=4)
-        phys.next_to(phys_title, DOWN, buff=0.35)
-        self.play(FadeIn(phys))
-        self.wait(14.5)
-        self.wait(117.6); self.play(FadeOut(VGroup(title, phys_title, phys)))
-
+        self.add(title)
+        eqs = VGroup(
+            labeled_eq(r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R}", "FINESSE (script F) = FSR / FWHM", GOLD, 42, 24),
+            labeled_eq(r"N = 2nd/\lambda_0", "ORDER NUMBER at resonance", WHITE, 42, 24),
+            labeled_eq(r"\text{RP} = N\mathcal{F}", "RESOLVING POWER", INTENSITY_COLOR, 42, 24),
+            labeled_eq(r"\Delta\lambda_{\rm FSR} = \lambda_0^2/(2nd)", "FREE SPECTRAL RANGE", WAVE_COLOR, 42, 24),
+            labeled_eq(r"\Delta\nu_{\rm FSR} = c/(2nd)", "FSR in frequency", WAVE_COLOR, 42, 24),
+        ).arrange(DOWN, buff=0.28, aligned_edge=LEFT)
+        safe_scale(eqs, max_width=13.0, max_height=4.8)
+        eqs.next_to(title, DOWN, buff=0.35)
+        self.play(FadeIn(eqs, run_time=0.1))
+        self.wait(117.6)
 
 class FabryPerotExample(Scene):
     """Full Fabry-Perot example — Bennett Example 7.11"""
@@ -194,60 +138,26 @@ class CoherenceLength(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/CoherenceLength.mp3", time_offset=0)
-        title = Text("Coherence & the Fabry-Pérot  (Bennett Section 7.3.4)", font_size=34, color=GOLD)
+        title = Text("Coherence and the Fabry-Perot  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "A Fabry-Pérot interferometer only works if the light source has sufficient",
-            "TEMPORAL COHERENCE — the coherence length must exceed the cavity round trip.",
-            "",
-            "Temporal coherence is related to the spectral purity of the source.",
-            "A narrow spectral linewidth Δν corresponds to a long coherence length l_c.",
-            "Intuitively: a perfectly monochromatic wave (Δν=0) has infinite coherence length",
-            "— it is coherent with a copy of itself no matter how much you delay it.",
-        ], font_size=28, wait=11.1, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(22.6)
-        self.wait(16.9); self.play(FadeOut(intro))
-
-        coh_eqs = eq_table([
-            (r"l_c = \frac{c}{\Delta\nu} = \frac{\lambda^2}{\Delta\lambda}",
-             "coherence length [m]: related to spectral linewidth", WAVE_COLOR),
-            (r"\tau_c = \frac{l_c}{c} = \frac{1}{\Delta\nu}",
-             "coherence TIME [s]: how long the wave stays predictable", WAVE_COLOR),
-            (r"\text{Fabry-Pérot requires: } 2nd < l_c",
-             "cavity round trip must be less than coherence length for fringes to appear", GOLD),
-        ], eq_fs=34, lbl_fs=24, buff=0.3)
-        coh_eqs.next_to(title, DOWN, buff=0.5)
-        for row in coh_eqs: self.play(FadeIn(row)); self.wait(28.4)
-        self.wait(12.3); self.play(FadeOut(coh_eqs))
-
-        # Source comparison
-        sources_title = Text("Coherence Length of Different Sources:", font_size=28, color=GOLD)
-        sources_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(sources_title))
-
-        sources = [
-            ("Thermal light (white light)", "Δλ≈300nm", r"l_c \approx \frac{(550)^2}{300}\approx 1.0\;\mu\text{m}", "too short for most interferometers"),
-            ("Sodium lamp (D lines)", "Δλ≈0.6nm", r"l_c \approx \frac{(589)^2}{0.6}\approx 0.58\;\text{mm}", "a few mm of mirror spacing"),
-            ("Filtered spectral lamp", "Δλ≈0.01nm", r"l_c \approx 3.5\;\text{cm}", "useful for compact FP"),
-            ("Stabilised He-Ne laser", "Δν≈1MHz", r"l_c = c/\Delta\nu \approx 300\;\text{m}", "long coherence: ideal for FP"),
-            ("Ultra-stable ECDL laser", "Δν≈1kHz", r"l_c \approx 3\times10^5\;\text{m} = 300\;\text{km}", "extraordinary — used in gravitational wave detectors"),
-        ]
-
-        for src_name, linewidth, lc_calc, note in sources:
-            row_mob = VGroup(
-                Text(src_name+":", font_size=23, color=GOLD),
-                Text(linewidth, font_size=23, color=WHITE),
-                MathTex(lc_calc, font_size=26, color=WAVE_COLOR),
-                Text("→ "+note, font_size=22, color=COMMENT_COLOR),
-            ).arrange(RIGHT, buff=0.3)
-            safe_scale(row_mob, max_width=13.5)
-            row_mob.next_to(sources_title, DOWN, buff=0.35)
-            self.play(FadeIn(row_mob)); self.wait(93.1); self.play(FadeOut(row_mob))
-
+        self.add(title)
+        eqs = VGroup(
+            labeled_eq(r"l_c = \lambda^2/\Delta\lambda = c/\Delta\nu", "COHERENCE LENGTH", GOLD, 44, 24),
+            labeled_eq(r"\tau_c = l_c/c = 1/\Delta\nu", "COHERENCE TIME", WHITE, 44, 24),
+        ).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
+        safe_scale(eqs, max_width=13.0)
+        eqs.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(eqs, run_time=0.1))
+        table = eq_table([
+            (r"\text{White light}", "Delta_lambda~300nm -> l_c~1 micron", WHITE),
+            (r"\text{Sodium lamp}", "Delta_lambda~0.001nm -> l_c~0.6mm", WAVE_COLOR),
+            (r"\text{He-Ne laser}", "Delta_nu~1MHz -> l_c~300m", E_COLOR),
+            (r"\text{LIGO laser}", "Delta_nu~1Hz -> l_c~300 000 km", GOLD),
+        ], eq_fs=24, lbl_fs=20, buff=0.18)
+        safe_scale(table, max_width=13.0, max_height=3.0)
+        table.next_to(eqs, DOWN, buff=0.35)
+        self.play(FadeIn(table, run_time=0.1))
+        self.wait(93.1)
 
 class Week8Summary(Scene):
     def construct(self):

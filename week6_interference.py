@@ -20,31 +20,24 @@ class InterferenceIntroScene(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/InterferenceIntroScene.mp3", time_offset=0)
-        title = Text("Introduction to Interference  (Bennett Section 7.1)", font_size=36, color=GOLD)
+        title = Text("Introduction to Interference  (Bennett Ch. 7)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "Interference is the key phenomenon that proves light is a WAVE.",
-            "It occurs when two or more coherent waves overlap in the same region of space.",
-            "",
-            "The principle of superposition gives us the total field: Ψ_total = Ψ₁ + Ψ₂",
-            "The INTENSITY is what we measure: I ∝ |Ψ_total|²",
-            "",
-            "Bennett (Section 7.1) illustrates this with Figure 7.1 — two harmonic waves:",
-            "When in phase (Δφ=0): amplitudes ADD → constructive interference → bright fringe",
-            "When out of phase (Δφ=π): amplitudes CANCEL → destructive interference → dark fringe",
-            "",
-            "Key requirement: the two waves must be COHERENT —",
-            "they must have a stable, well-defined phase relationship.",
-            "Two separate light bulbs are incoherent (random phase fluctuations every ~10⁻⁸ s).",
-            "Two slits illuminated by the same source are coherent (same source).",
-        ], font_size=28, wait=15.4, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(19.7)
-        self.wait(56.6); self.play(FadeOut(VGroup(title, intro)))
-
+        self.add(title)
+        eq = MathTex(r"I = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\delta",
+                     font_size=50, color=INTENSITY_COLOR)
+        safe_scale(eq)
+        eq.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(eq, run_time=0.1))
+        b = txt_block([
+            "Interference occurs when two coherent waves overlap in the same region.",
+            "The third term 2*sqrt(I1*I2)*cos(delta) is the INTERFERENCE TERM.",
+            "It can add (constructive) or subtract (destructive) — energy is redistributed.",
+            "Energy is CONSERVED: averaged over space the total equals I1 + I2.",
+        ])
+        safe_scale(b, max_width=13.0, max_height=3.0)
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(56.6)
 
 class TwoBeamInterference(Scene):
     def construct(self):
@@ -227,115 +220,32 @@ class ThinFilmInterference(Scene):
         self.add_sound("narration/audio/ThinFilmInterference.mp3", time_offset=0)
         title = Text("Thin Film Interference  (Bennett Section 7.3.3)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "A thin transparent film (soap bubble, oil on water, AR coating)",
-            "reflects light at BOTH surfaces. The two reflected beams interfere.",
-            "",
-            "The total phase difference has TWO contributions:",
-            "1. PATH DIFFERENCE from the extra distance traveled inside the film.",
-            "2. REFLECTION PHASE SHIFTS — π shift at each interface where n increases.",
-            "",
-            "CRITICAL RULE: +π phase shift (equivalent to +λ/2 extra path) occurs",
-            "WHENEVER light reflects off a surface where n_reflected > n_incident.",
-        ], font_size=28, wait=13.5, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(21.2)
-        self.wait(29.8); self.play(FadeOut(intro))
-
-        # Main formula
-        phi_title = Text("Total Phase Difference  (Bennett Eq. 7.26):", font_size=28, color=GOLD)
-        phi_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(phi_title))
-
-        phi_eq = MathTex(
-            r"\Delta\varphi_{\text{total}} = \underbrace{\frac{4\pi n_f t\cos\theta_t}{\lambda_0}}_{\text{path difference}} + \underbrace{\Delta\varphi_{\text{refl}}}_{\text{reflection shifts}}",
-            font_size=36, color=WAVE_COLOR)
-        phi_eq.next_to(phi_title, DOWN, buff=0.3)
-        safe_scale(phi_eq, max_width=13.0)
-        self.play(Write(phi_eq)); self.wait(15.4)
-        self.play(FadeOut(VGroup(phi_title, phi_eq)))
-
-        # Case analysis
-        cases = [
-            ("Case 1: Film in Air  (n_air < n_film, same on both sides):",
-             [("Top surface (air→film):", "+π shift  (n increases)", B_COLOR),
-              ("Bottom surface (film→air):", "0 shift  (n decreases)", N_COLOR),
-              ("Net Δφ_refl:", "π  →  net path shift of λ₀/2", WHITE)],
-             [r"\text{Constructive (bright):} \quad 2n_f t\cos\theta_t = \left(m+\tfrac{1}{2}\right)\lambda_0",
-              r"\text{Destructive (dark/AR):} \quad 2n_f t\cos\theta_t = m\lambda_0"],
-             "Soap bubbles: bright rainbow colours come from thin film interference!"),
-            ("Case 2: Air Gap Between Glass  (n_glass > n_air):",
-             [("Top surface (glass→air):", "0 shift  (n decreases)", N_COLOR),
-              ("Bottom surface (air→glass):", "+π shift  (n increases)", B_COLOR),
-              ("Net Δφ_refl:", "π  →  same as Case 1", WHITE)],
-             [r"\text{Constructive:} \quad 2n_{\text{air}}t\cos\theta_t = \left(m+\tfrac{1}{2}\right)\lambda_0",
-              r"\text{Dark at t=0 } \Rightarrow \text{ dark spot at centre (Newton's rings!)}"],
-             "Newton's rings: dark centre because both reflections give a π shift."),
-        ]
-
-        for case_name, reflect_rows, formula_strs, note_str in cases:
-            c_title = Text(case_name, font_size=26, color=GOLD)
-            c_title.next_to(title, DOWN, buff=0.5)
-            safe_scale(c_title, max_width=13.5)
-            self.play(Write(c_title))
-
-            r_group = VGroup()
-            for label, val, color in reflect_rows:
-                l = Text(label, font_size=24, color=COMMENT_COLOR)
-                v = Text(val, font_size=24, color=color)
-                r_group.add(VGroup(l, v).arrange(RIGHT, buff=0.3))
-            r_group.arrange(DOWN, aligned_edge=LEFT, buff=0.18)
-            r_group.next_to(c_title, DOWN, buff=0.3)
-            for row in r_group: self.play(FadeIn(row)); self.wait(9.9)
-            self.wait(1.0)
-
-            f_group = VGroup()
-            for fs in formula_strs:
-                f_group.add(MathTex(fs, font_size=28, color=E_COLOR if "Constr" in fs else B_COLOR))
-            f_group.arrange(DOWN, buff=0.25, aligned_edge=LEFT)
-            f_group.next_to(r_group, DOWN, buff=0.3)
-            safe_scale(f_group, max_width=13.0)
-            self.play(Write(f_group)); self.wait(1.0)
-
-            note = Text(note_str, font_size=24, color=GOLD)
-            note.next_to(f_group, DOWN, buff=0.25)
-            safe_scale(note, max_width=13.5)
-            self.play(FadeIn(note)); self.wait(1.0)
-            self.play(FadeOut(VGroup(c_title, r_group, f_group, note)))
-
-        # AR coating example
-        ar_title = Text("Example: Anti-Reflection Coating  (Bennett Ex. 7.3):", font_size=28, color=GOLD)
-        ar_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(ar_title))
-
-        ar_desc = section_intro([
-            "MgF₂ (n_coat=1.38) on glass (n_glass=1.52), λ₀=550 nm.",
-            "Camera lenses use AR coatings to reduce reflection losses from ~4% to ~0.1%.",
-        ], font_size=26)
-        ar_desc.next_to(ar_title, DOWN, buff=0.3)
-        self.play(FadeIn(ar_desc))
+        self.add(title)
+        eq = MathTex(r"\delta = \frac{4\pi n_f t \cos\theta_t}{\lambda_0} + \Delta\phi_{\rm refl}",
+                     font_size=44, color=WAVE_COLOR)
+        safe_scale(eq)
+        eq.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(eq, run_time=0.1))
+        b1 = txt_block([
+            "Step 1: For each reflection, check if n increases (+pi shift) or decreases (0 shift).",
+            "Step 2: Net Delta_phi_refl = (beam2 shift) - (beam1 shift).",
+            "Step 3: Constructive: delta = 2m*pi.  Destructive: delta = (2m+1)*pi.",
+        ])
+        safe_scale(b1, max_width=13.0, max_height=2.5)
+        b1.next_to(eq, DOWN, buff=0.3)
+        self.play(FadeIn(b1, run_time=0.1))
+        self.wait(30)
+        self.play(FadeOut(b1))
+        b2 = txt_block([
+            "AR coating example: MgF2 (n=1.38) on glass (n=1.52).",
+            "Both reflections: n increases each time -> both beams get +pi shift.",
+            "Net Delta_phi_refl = 0.  Destructive condition: 2*n_f*t = lambda/2.",
+            "Minimum thickness: t = lambda / (4 * n_f) = 550/(4*1.38) = 100 nm.",
+        ])
+        safe_scale(b2, max_width=13.0, max_height=2.8)
+        b2.next_to(eq, DOWN, buff=0.3)
+        self.play(FadeIn(b2, run_time=0.1))
         self.wait(91.7)
-        self.play(FadeOut(*self.mobjects), run_time=0.5)
-
-        solver = StepSolver(self, ar_desc, start_buff=0.35)
-        solver.add_step(1,
-            r"\text{Surface 1 (air\to MgF}_2\text{): }+\pi\text{ shift (n increases)}",
-            "n_air=1.00 < n_MgF₂=1.38  →  π shift")
-        solver.add_step(2,
-            r"\text{Surface 2 (MgF}_2\to\text{glass}: }+\pi\text{ shift (n increases)}",
-            "n_MgF₂=1.38 < n_glass=1.52  →  π shift")
-        solver.add_step(3,
-            r"\Delta\varphi_{\text{refl}} = \pi+\pi = 2\pi \equiv 0 \quad\text{(net: no relative shift)}",
-            "both reflections shift by π → they CANCEL each other out")
-        solver.add_step(4,
-            r"\text{For destructive reflection: } 2n_{\text{coat}}t = \frac{\lambda_0}{2}"
-            r"\;\Rightarrow\; t = \frac{\lambda_0}{4n_{\text{coat}}} = \frac{550}{4\times1.38} = 99.6\text{ nm}",
-            "minimum thickness for AR at λ=550nm: about 100 nm — thinner than a virus!", GOLD)
-        solver.finalize()
-
 
 class FringeVisibility(Scene):
     def construct(self):
@@ -379,52 +289,21 @@ class MichelsonScene(Scene):
         self.add_sound("narration/audio/MichelsonScene.mp3", time_offset=0)
         title = Text("Michelson Interferometer  (Bennett Section 7.8)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "The Michelson interferometer (1881) is one of the most important",
-            "instruments in the history of physics — it famously FAILED to detect",
-            "the luminiferous aether, directly leading to special relativity.",
-            "",
-            "Setup: a beamsplitter splits the input beam into two arms.",
-            "Each arm reflects off a mirror and returns to the beamsplitter.",
-            "The two beams recombine and interfere on a screen or detector.",
-            "Moving mirror M₂ by ΔL changes the OPD by 2ΔL (beam travels arm twice).",
-        ], font_size=28, wait=18.8, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(8.2)
-        self.wait(25.5); self.play(FadeOut(intro))
-
-        eqs = eq_table([
-            (r"\text{OPD} = 2\Delta L", "factor of 2: beam travels mirror arm twice (out and back)", WAVE_COLOR),
-            (r"\delta = \frac{4\pi\Delta L}{\lambda}", "phase difference from mirror displacement ΔL", WAVE_COLOR),
-            (r"\text{Bright central fringe: } \Delta L = \frac{m\lambda}{2}",
-             "one fringe cycle per λ/2 of mirror travel", E_COLOR),
-            (r"\text{Fringe count: } N = \frac{2\Delta L}{\lambda}",
-             "count fringes to measure mirror displacement — used in precision metrology", GOLD),
-            (r"\mathcal{R} = \frac{\lambda}{\Delta\lambda} = \frac{2L}{\lambda}",
-             "resolving power: L = total mirror path length — can measure tiny λ differences", INTENSITY_COLOR),
-        ], eq_fs=30, lbl_fs=22, buff=0.28)
-        eqs.next_to(title, DOWN, buff=0.5)
-        for row in eqs: self.play(FadeIn(row)); self.wait(12.6)
+        self.add(title)
+        eqs = VGroup(
+            labeled_eq(r"\text{OPD} = 2\Delta L", "optical path difference (factor 2: beam travels twice)", WAVE_COLOR, 42, 24),
+            labeled_eq(r"N = 2\Delta L/\lambda", "number of fringes counted as mirror moves by Delta L", GOLD, 42, 24),
+            labeled_eq(r"\lambda = 2\Delta L / N", "measure wavelength by counting fringes", INTENSITY_COLOR, 42, 24),
+        ).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
+        safe_scale(eqs, max_width=13.0, max_height=4.0)
+        eqs.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(eqs, run_time=0.1))
+        b = txt_block([
+            "Michelson (1881): failed to detect the aether, led to special relativity.",
+            "Modern use: LIGO uses 4 km arms to detect gravitational waves at 10^-21 m.",
+            "Each half-wavelength of mirror travel = one complete fringe cycle.",
+        ], 25)
+        safe_scale(b, max_width=13.0)
+        b.next_to(eqs, DOWN, buff=0.3)
+        self.play(FadeIn(b, run_time=0.1))
         self.wait(94.6)
-        self.play(FadeOut(*self.mobjects), run_time=0.5); self.play(FadeOut(eqs))
-
-        # Worked example
-        ex_title = Text("Example: λ=589nm, mirror moves ΔL=0.500mm. How many fringes?", font_size=26, color=GOLD)
-        ex_title.next_to(title, DOWN, buff=0.5)
-        safe_scale(ex_title, max_width=13.5)
-        self.play(Write(ex_title))
-
-        solver = StepSolver(self, ex_title, start_buff=0.4)
-        solver.add_step(1,
-            r"N = \frac{2\Delta L}{\lambda} = \frac{2\times0.500\times10^{-3}}{589\times10^{-9}}",
-            "fringe count formula")
-        solver.add_step(2,
-            r"= \frac{1.000\times10^{-3}}{589\times10^{-9}} = 1698 \text{ fringes}",
-            "1698 fringes in 0.5 mm of mirror travel — very sensitive!", GOLD)
-        solver.add_step(3,
-            r"\text{If we count to 1 fringe: }\Delta L = \frac{\lambda}{2} = 294.5\text{ nm}",
-            "resolution of ~295 nm per fringe — nanometre-scale position measurement!")
-        solver.finalize()

@@ -22,27 +22,25 @@ class Week2Intro(Scene):
         self.add_sound("narration/audio/Week2Intro.mp3", time_offset=0)
         title = Text("What Happens When Light Hits an Interface?", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
+        self.add(title)
+        b1 = txt_block([
             "Reflection and refraction occur whenever light enters a new medium",
-            "where the refractive index n changes value  (Bennett Section 3.2).",
-            "",
-            "There are two fundamental questions we must answer:",
-            "1. IN WHICH DIRECTION does the reflected/transmitted light travel?",
-            "   → Answered by the Law of Reflection and Snell's Law.",
-            "2. HOW MUCH light is reflected and how much transmitted?",
-            "   → Answered by the Fresnel Equations.",
-            "",
-            "Snell's law was discovered experimentally in the 1600s.",
-            "The Fresnel equations were derived from Maxwell in the 1800s.",
-            "Together they completely describe electromagnetic wave behaviour at interfaces.",
-        ], font_size=28, wait=7.3, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(19.3)
-        self.wait(48.0); self.play(FadeOut(VGroup(title, intro)))
-
+            "where the refractive index n changes  (Bennett Section 3.2).",
+            "There are two fundamental questions: how much light is reflected?",
+            "And at what angle does the transmitted beam travel?",
+        ])
+        b1.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b1, run_time=0.1))
+        self.wait(16)
+        self.play(FadeOut(b1))
+        b2 = txt_block([
+            "Snell's Law gives the direction of the refracted beam.",
+            "The Fresnel equations give the amplitude of reflected and transmitted light.",
+            "Both follow directly from Maxwell's equations and boundary conditions.",
+        ])
+        b2.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b2, run_time=0.1))
+        self.wait(48.0)
 
 class FermatPrinciple(Scene):
     def construct(self):
@@ -174,28 +172,24 @@ class FresnelEquationsDerivation(Scene):
         self.add_sound("narration/audio/FresnelEquationsDerivation.mp3", time_offset=0)
         title = Text("Where the Fresnel Equations Come From", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        make_pages(self, title, [
-            "Bennett Section 3.3 derives the Fresnel equations from Maxwell's equations",
-            "using boundary conditions at the interface.",
-            "",
-            "The boundary conditions are:",
-            "→ Tangential component of E must be CONTINUOUS across the interface",
-            "→ Tangential component of B must be CONTINUOUS across the interface",
-            "",
-            "We split the incident electric field into two independent polarisation components:",
-            "s-polarisation (⊥, TE): E-field PERPENDICULAR to the plane of incidence",
-            "p-polarisation (∥, TM): E-field PARALLEL to the plane of incidence",
-            "",
-            "These two components experience DIFFERENT boundary conditions,",
-            "so they reflect and transmit with different amplitude ratios.",
-        ], font_size=28, wait=5.4, lines_per_page=4)
-        intro.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(intro))
-        self.wait(19.7)
-        self.wait(49.4); self.play(FadeOut(VGroup(title, intro)))
-
+        self.add(title)
+        b1 = txt_block([
+            "Bennett Section 3.3 derives the Fresnel equations from Maxwell's equations.",
+            "The key: boundary conditions at the interface must be satisfied.",
+            "Tangential E and tangential H must be continuous across the boundary.",
+        ])
+        b1.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b1, run_time=0.1))
+        self.wait(20)
+        self.play(FadeOut(b1))
+        b2 = txt_block([
+            "s-polarisation (TE): E field perpendicular to the plane of incidence.",
+            "p-polarisation (TM): E field parallel to the plane of incidence.",
+            "These two cases give DIFFERENT Fresnel coefficients — the physics differs.",
+        ])
+        b2.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b2, run_time=0.1))
+        self.wait(49.4)
 
 class FresnelEquations(Scene):
     def construct(self):
@@ -378,93 +372,32 @@ class BrewsterTIR(Scene):
         self.add_sound("narration/audio/BrewsterTIR.mp3", time_offset=0)
         title = Text("Brewster's Angle & Total Internal Reflection", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
-
-        # Brewster's angle
-        brew_title = Text("Brewster's Angle  (Bennett Section 3.5.2):", font_size=30, color=GOLD)
-        brew_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(brew_title))
-
-        make_pages(self, title, [
-            "At one specific angle of incidence — Brewster's angle θ_B — the p-polarisation",
-            "has ZERO reflectivity: R_∥ = 0.  The reflected beam is then purely s-polarised.",
-            "",
-            "Physical reason: at Brewster's angle, the reflected ray and refracted ray are",
-            "exactly PERPENDICULAR to each other: θ_i + θ_t = 90^{\circ}.",
-            "The oscillating dipoles in the material cannot radiate in their oscillation",
-            "direction — so p-polarisation (which oscillates along the reflected ray direction)",
-            "produces zero reflection.",
-        ], font_size=28, wait=9.7, lines_per_page=4)
-        brew_intro.next_to(brew_title, DOWN, buff=0.3)
-        self.play(FadeIn(brew_intro))
-        self.wait(10.6)
-        self.wait(17.4); self.play(FadeOut(VGroup(brew_title, brew_intro)))
-
-        brew_eq_title = Text("Brewster's Angle Formula  (Bennett Eq. 3.31):", font_size=30, color=GOLD)
-        brew_eq_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(brew_eq_title))
-
-        brew = MathTex(r"\tan\theta_B = \frac{n_t}{n_i}", font_size=60, color=ANGLE_COLOR)
-        brew.next_to(brew_eq_title, DOWN, buff=0.3)
-        self.play(Write(brew)); self.wait(29.1)
-
-        make_pages(self, title, [
-            "Example: air (n=1.0) → glass (n=1.5):",
-            "θ_B = arctan(1.5/1.0) = arctan(1.5) = 56.3°",
-            "",
-            "Applications: polarising beamsplitters, laser Brewster windows,",
-            "anti-glare sunglasses (polarised lenses block the s-polarised glare",
-            "from horizontal surfaces which reflects near Brewster's angle).",
-        ], font_size=28, wait=1.0, lines_per_page=4)
-        brew_ex.next_to(brew, DOWN, buff=0.35)
-        self.play(FadeIn(brew_ex))
-        self.wait(1.0)
-        self.play(Create(gold_box(brew)))
-        self.wait(1.0); self.play(FadeOut(VGroup(brew_eq_title, brew, brew_ex)))
-
-        # TIR
-        tir_title = Text("Total Internal Reflection (TIR)  (Bennett Section 3.5.3):", font_size=28, color=GOLD)
-        tir_title.next_to(title, DOWN, buff=0.5)
-        self.play(Write(tir_title))
-
-        tir_intro = section_intro([
-            "TIR occurs when light tries to go from a DENSER to a LESS DENSE medium (n_i > n_t),",
-            "AND the angle of incidence exceeds the critical angle θ_c.",
-            "Above θ_c: R = 1.000 exactly — ALL light is reflected, ZERO is transmitted.",
-            "This is not an approximation — it follows exactly from Maxwell's equations.",
-        ], font_size=26)
-        tir_intro.next_to(tir_title, DOWN, buff=0.3)
-        self.play(FadeIn(tir_intro))
-        self.wait(1.0)
-        self.wait(1.0); self.play(FadeOut(tir_intro))
-
-        tir_eq_title = Text("Critical Angle Formula  (Bennett Eq. 3.35):", font_size=28, color=GOLD)
-        tir_eq_title.next_to(tir_title, DOWN, buff=0.4)
-        self.play(Write(tir_eq_title))
-
-        tir_eq = MathTex(
-            r"\sin\theta_c = \frac{n_t}{n_i} \quad (n_i > n_t \text{ required})",
-            font_size=50, color=ANGLE_COLOR)
-        tir_cond = MathTex(
-            r"\theta_i \geq \theta_c \;\Rightarrow\; R = 1,\; T = 0",
-            font_size=44, color=GOLD)
-        tir_eqs = VGroup(tir_eq, tir_cond).arrange(DOWN, buff=0.4)
-        tir_eqs.next_to(tir_eq_title, DOWN, buff=0.3)
-        safe_scale(tir_eqs, max_height=2.5)
-        self.play(Write(tir_eqs)); self.wait(1.0)
-
-        tir_examples = section_intro([
-            "glass (n=1.5) → air (n=1.0):  sin(θ_c) = 1.0/1.5 = 0.667  →  θ_c = 41.8°",
-            "water (n=1.33) → air:  sin(θ_c) = 1/1.33 = 0.752  →  θ_c = 48.8°",
-            "",
-            "Applications of TIR: optical fibres, periscope prisms, diamond brilliance",
-            "(diamond has n=2.42, θ_c=24.4° — almost everything gets TIR'd back out).",
-        ], font_size=25)
-        tir_examples.next_to(tir_eqs, DOWN, buff=0.35)
-        self.play(FadeIn(tir_examples))
-        self.wait(1.0)
-        self.wait(68.2); self.play(FadeOut(VGroup(title, tir_title, tir_eq_title, tir_eqs, tir_examples)))
-
+        self.add(title)
+        brew = VGroup(
+            Text("Brewster's Angle  (Bennett Section 3.5.2):", font_size=28, color=GOLD),
+            MathTex(r"\tan\theta_B = n_t/n_i \quad\Rightarrow\quad \theta_B + \theta_t = 90°",
+                    font_size=40, color=E_COLOR),
+            txt_block(["At Brewster's angle r_p = 0: p-polarised light has zero reflectivity.",
+                       "Reflected beam is 100% s-polarised. Used in laser windows.",
+                       "Example: air to glass (n=1.5): theta_B = arctan(1.5) = 56.3 degrees."], 25),
+        ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
+        safe_scale(brew, max_width=13.0, max_height=3.5)
+        brew.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(brew, run_time=0.1))
+        self.wait(28)
+        self.play(FadeOut(brew))
+        tir = VGroup(
+            Text("Total Internal Reflection  (Bennett Section 3.5.3):", font_size=28, color=GOLD),
+            MathTex(r"\sin\theta_c = n_t/n_i \quad (\text{requires } n_i > n_t)",
+                    font_size=40, color=B_COLOR),
+            txt_block(["When theta_i >= theta_c, R = 1.000 exactly — ALL light is reflected.",
+                       "Glass (n=1.5) to air: theta_c = arcsin(1/1.5) = 41.8 degrees.",
+                       "Application: optical fibres, periscope prisms, diamond brilliance."], 25),
+        ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
+        safe_scale(tir, max_width=13.0, max_height=3.5)
+        tir.next_to(title, DOWN, buff=0.4)
+        self.play(FadeIn(tir, run_time=0.1))
+        self.wait(68.2)
 
 class MalusLaw(Scene):
     def construct(self):
