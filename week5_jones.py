@@ -676,3 +676,24 @@ class JonesMatrices_p11(Scene):
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
+
+class Week5TitleCard_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week5TitleCard_p4.mp3", time_offset=0)
+        card = make_title_card("WEEK 5",
+            "Polarisation, Birefringence and Jones Formalism",
+            "Bennett Ch. 6")
+        self.play(FadeIn(card, run_time=0.5))
+        self.wait(0.5)
+        self.play(FadeOut(card, run_time=0.3))
+        b = txt_block([
+            "You must be able to write down the Jones vector for any",
+            "standard polarisation state from memory, multiply Jones",
+            "matrices in the correct order, compute the output",
+            "polarisation state and intensity from a given input and",
+            "sequence of elements, and verify your results by checking",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)

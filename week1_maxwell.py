@@ -1062,3 +1062,162 @@ class DispersionScene_p7(Scene):
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
         self.wait(1)
+
+class MaxwellIntro_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MaxwellIntro_p4.mp3", time_offset=0)
+        title = Text("Maxwell's Equations — Introduction", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Bennett presents Maxwell's equations in both differential",
+            "and integral forms in Section 2.2 and Appendix B. We use the",
+            "differential form throughout this course, as it is most",
+            "natural for wave problems.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class VectorCalculusNotation_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/VectorCalculusNotation_p5.mp3", time_offset=0)
+        title = Text("Vector Calculus Notation  (Bennett 2.2)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The Laplacian, written as del squared or nabla squared, is",
+            "the divergence of the gradient: del squared phi equals del",
+            "dot del phi. For a scalar field, del squared phi equals the",
+            "sum of the three second partial derivatives with respect to",
+            "x, y, and z. It measures how the value of phi at a point",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MaxwellVacuum_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p4.mp3", time_offset=0)
+        title = Text("Maxwell in Vacuum  (Bennett Section 2.2)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "An identical equation holds for B: del-squared B equals",
+            "mu-naught epsilon-naught times partial squared B over",
+            "partial t squared. Both E and B satisfy the same wave",
+            "equation and propagate at the same speed c. They are not",
+            "independent — they are coupled by Maxwell's equations, and",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveExample_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveExample_p5.mp3", time_offset=0)
+        title = Text("Example: Finding B from E  (Bennett 2.3.1)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The magnitude ratio E over B equals E-naught over E-naught",
+            "over c equals c. This is Bennett's result from Section",
+            "2.3.1: E equals c B in vacuum. The electric and magnetic",
+            "fields have the same spatial and temporal phase factors,",
+            "confirming they oscillate in phase.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveExample_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveExample_p6.mp3", time_offset=0)
+        title = Text("Example: Finding B from E  (Bennett 2.3.1)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Now compute the irradiance from Bennett Equation 2.33: I",
+            "equals one half times epsilon-naught times c times E-naught",
+            "squared. For E-naught equals 1000 volts per metre: I equals",
+            "0.5 times 8.854 times ten to the minus 12 times 3 times ten",
+            "to the 8 times ten to the 6 equals 1327 watts per square",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p6.mp3", time_offset=0)
+        title = Text("Radiation Pressure  (Bennett Section 2.3.2)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "At Earth's orbital distance, the solar irradiance is",
+            "approximately 1361 watts per square metre. The radiation",
+            "pressure on a perfect absorber is 1361 over 3 times ten to",
+            "the 8 equals 4.5 times ten to the minus 6 newtons per square",
+            "metre, or 4.5 micropascals. On a perfect reflector this",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p7.mp3", time_offset=0)
+        title = Text("Radiation Pressure  (Bennett Section 2.3.2)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The IKAROS spacecraft, launched by JAXA in 2010, used a 14",
+            "metre by 14 metre reflective sail to demonstrate solar sail",
+            "propulsion. The radiation pressure provided a thrust of",
+            "about 1.12 millinewtons. Over the interplanetary mission,",
+            "this was sufficient to measurably alter the spacecraft's",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p8.mp3", time_offset=0)
+        title = Text("Radiation Pressure  (Bennett Section 2.3.2)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Optical tweezers exploit radiation pressure to trap and",
+            "manipulate microscopic particles. Arthur Ashkin developed",
+            "this technique and received the Nobel Prize in Physics in",
+            "2018. A focused laser beam creates an intensity gradient",
+            "that pulls dielectric particles toward the focal region —",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p8.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Dispersion-shifted fibres and dispersion-compensating fibres",
+            "can greatly reduce this limitation by engineering the",
+            "waveguide geometry to counteract the material dispersion.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
