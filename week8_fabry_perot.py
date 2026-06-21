@@ -1,182 +1,823 @@
-# week8_fabry_perot.py  —  Week 8: Fabry-Pérot Interferometer  (v2)
-# Source: Bennett Ch. 7.10, 7.11
+# week8_fabry_perot.py — Week 8 (paragraph-per-scene)
 from manim import *
 from utils import *
 
-
-class Week8TitleCard(Scene):
+class Week8TitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/Week8TitleCard.mp3", time_offset=0)
-        card = make_title_card(
-            "WEEK 8",
-            "Multiple-Beam Interference & Fabry-Pérot",
-            "Bennett Ch. 7.10, 7.11"
-        )
-        self.play(FadeIn(card)); self.wait(155.5); self.play(FadeOut(card))
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p1.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Week 8 brings us to the Fabry-Pérot interferometer — the most",
+            "powerful spectroscopic instrument based on interference.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-
-class MultiBeamIntro(Scene):
+class Week8TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/MultiBeamIntro.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p2.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Unlike the two-beam Michelson, the Fabry-Pérot uses multiple",
+            "reflections between two highly reflective parallel mirrors.",
+            "Light bounces back and forth many times, and all the",
+            "transmitted beams interfere together. This is multi-beam",
+            "interference.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p3.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The result is the Airy function: transmitted intensity equals",
+            "I naught divided by one plus F times sine squared of delta",
+            "over 2, where F is the coefficient of finesse equal to 4R over",
+            "one minus R squared, and delta is the round-trip phase.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p4.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "When delta is a multiple of 2 pi, the sine term is zero and",
+            "the transmission is maximum — equal to I naught. This is",
+            "resonance. All the multiply-reflected beams are in phase and",
+            "add up constructively.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p5.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "When delta is an odd multiple of pi, the transmission drops to",
+            "its minimum. For high reflectivity, this minimum is extremely",
+            "close to zero. The contrast between maximum and minimum is",
+            "enormous.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p6.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The sharpness of the transmission peaks is characterised by",
+            "the finesse, script F, equal to pi times square root of R over",
+            "one minus R. For mirror reflectivity R equals 0.99, the",
+            "finesse is about 310. The peaks are 310 times narrower than",
+            "the spacing between them.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p7.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The free spectral range is the spacing between successive",
+            "resonances: delta lambda equals lambda squared over 2nd in",
+            "wavelength, or delta nu equals c over 2nd in frequency.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p8.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The resolving power R equals m times finesse — where m is the",
+            "resonance order. For a 10 centimetre cavity and 633 nanometre",
+            "light, m is about 300,000, giving a resolving power of nearly",
+            "20 million. This is extraordinary compared to a grating.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8TitleCard_p9(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8TitleCard_p9.mp3", time_offset=0)
+        title = Text("Fabry-Perot Interferometer", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Coherence determines whether interference fringes are visible",
+            "at all. The temporal coherence length equals lambda squared",
+            "over delta lambda. A laser with a narrow linewidth has a long",
+            "coherence length — metres or more. A thermal source has a",
+            "coherence length of micrometres.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MultiBeamIntro_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MultiBeamIntro_p1.mp3", time_offset=0)
         title = Text("From Two Beams to Multiple Beams  (Bennett 7.10)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        b1 = txt_block([
-            "Young's and Michelson use exactly TWO beams — limited resolving power.",
-            "Fabry-Perot: light bounces back and forth between two parallel mirrors.",
-            "Each bounce produces another transmitted/reflected beam — INFINITE series.",
-            "All these beams interfere, giving a much sharper transmission peak.",
+        b = txt_block([
+            "In the Michelson interferometer and Young's double slit,",
+            "exactly two beams interfere. The Fabry-Pérot takes this much",
+            "further by using an infinite series of beams — all the",
+            "multiply-reflected beams between two parallel mirrors.",
         ])
-        safe_scale(b1, max_width=13.0, max_height=3.5)
-        b1.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b1, run_time=0.1))
-        self.wait(35)
-        self.play(FadeOut(b1))
-        b2 = txt_block([
-            "Setup: two flat mirrors of reflectivity R, separated by gap d, medium n.",
-            "Beam enters, bounces N times. Each round trip adds phase delta = 4*pi*n*d/lambda.",
-            "Transmitted amplitudes form a geometric series — can be summed analytically.",
-            "Result: the Airy function  I_t = I_0 / [1 + F sin^2(delta/2)].",
-        ])
-        safe_scale(b2, max_width=13.0, max_height=3.5)
-        b2.next_to(title, DOWN, buff=0.5)
-        self.play(FadeIn(b2, run_time=0.1))
-        self.wait(97.4)
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-class AiryFunction(Scene):
+class MultiBeamIntro_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/AiryFunction.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/MultiBeamIntro_p2.mp3", time_offset=0)
+        title = Text("From Two Beams to Multiple Beams  (Bennett 7.10)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The setup is two flat, partially-reflecting parallel mirrors",
+            "separated by distance d. Light enters through the first mirror",
+            "and bounces back and forth. At each bounce, a fraction T of",
+            "the power transmits out. So there's a first transmitted beam,",
+            "then a second weaker one after two reflections, then a third",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MultiBeamIntro_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MultiBeamIntro_p3.mp3", time_offset=0)
+        title = Text("From Two Beams to Multiple Beams  (Bennett 7.10)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Bennett sums this infinite geometric series in Section 7.10.",
+            "The key mathematical identity is that the sum of x to the n",
+            "equals 1 over 1 minus x, for x less than 1.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MultiBeamIntro_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MultiBeamIntro_p4.mp3", time_offset=0)
+        title = Text("From Two Beams to Multiple Beams  (Bennett 7.10)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The result depends critically on the phase relationship",
+            "between successive beams. If all beams are in phase —",
+            "constructive interference — the transmitted field is",
+            "enormously amplified. If they are out of phase, they cancel.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MultiBeamIntro_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MultiBeamIntro_p5.mp3", time_offset=0)
+        title = Text("From Two Beams to Multiple Beams  (Bennett 7.10)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "This is fundamentally different from two-beam interference.",
+            "With two beams, you get a smooth cosine pattern. With",
+            "infinitely many beams, you get very sharp transmission spikes",
+            "at resonance and nearly zero transmission everywhere else. The",
+            "more reflective the mirrors, the sharper the spikes.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class AiryFunction_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/AiryFunction_p1.mp3", time_offset=0)
         title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        airy = MathTex(r"I_t = \frac{I_0}{1 + F\sin^2(\delta/2)}\qquad F = \frac{4R}{(1-R)^2}",
-                       font_size=46, color=INTENSITY_COLOR)
-        safe_scale(airy)
-        airy.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(airy, run_time=0.1))
-        self.play(Create(gold_box(airy)))
         b = txt_block([
-            "At resonance: delta = 2*N*pi -> sin^2(delta/2) = 0 -> I_t = I_0.  100% transmission!",
-            "Off resonance: I_t << I_0 for large F (high R mirrors).",
-            "F = 4R/(1-R)^2 is the COEFFICIENT OF FINESSE (NOT the finesse script-F).",
-            "High R (e.g. R=0.99): F = 39600 — extremely sharp peaks.",
+            "The Airy function is the central result of Fabry-Pérot theory.",
+            "Bennett derives it in Section 7.10 by summing the infinite",
+            "geometric series of multiply-reflected transmitted beams.",
         ])
-        safe_scale(b, max_width=13.0, max_height=3.0)
-        b.next_to(airy, DOWN, buff=0.35)
+        b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(101.8)
+        self.wait(1)
 
-class FinesseResolving(Scene):
+class AiryFunction_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/FinesseResolving.mp3", time_offset=0)
-        title = Text("Finesse, Resolving Power and FSR", font_size=34, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/AiryFunction_p2.mp3", time_offset=0)
+        title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R}", "FINESSE (script F) = FSR / FWHM", GOLD, 42, 24),
-            labeled_eq(r"N = 2nd/\lambda_0", "ORDER NUMBER at resonance", WHITE, 42, 24),
-            labeled_eq(r"\text{RP} = N\mathcal{F}", "RESOLVING POWER", INTENSITY_COLOR, 42, 24),
-            labeled_eq(r"\Delta\lambda_{\rm FSR} = \lambda_0^2/(2nd)", "FREE SPECTRAL RANGE", WAVE_COLOR, 42, 24),
-            labeled_eq(r"\Delta\nu_{\rm FSR} = c/(2nd)", "FSR in frequency", WAVE_COLOR, 42, 24),
-        ).arrange(DOWN, buff=0.28, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0, max_height=4.8)
-        eqs.next_to(title, DOWN, buff=0.35)
-        self.play(FadeIn(eqs, run_time=0.1))
-        self.wait(117.6)
+        b = txt_block([
+            "The result is: transmitted intensity equals I-naught divided",
+            "by one plus F times sine squared of delta over two, where F is",
+            "the coefficient of finesse and delta is the round-trip phase.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-class FabryPerotExample(Scene):
-    """Full Fabry-Perot example — Bennett Example 7.11"""
+class AiryFunction_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/FabryPerotExample.mp3", time_offset=0)
-        title = Text("Example: Resolving H and D Hα Lines  (Bennett Ex. 7.11)", font_size=30, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/AiryFunction_p3.mp3", time_offset=0)
+        title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.add(title)
+        b = txt_block([
+            "When delta is a multiple of 2 pi — the resonance condition —",
+            "the sine term is zero and the transmission is I-naught,",
+            "meaning 100 percent. This is the remarkable property of the",
+            "Fabry-Pérot: even with highly reflective mirrors that",
+            "individually transmit only a few percent, the transmission at",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        prob = section_intro([
-            "Hydrogen Hα: λ₁ = 656.28 nm.  Deuterium Hα: λ₂ = 656.10 nm.",
-            "Splitting: Δλ = 0.18 nm.  Fabry-Pérot mirrors: R = 90%.",
-            "Find: required mirror spacing, finesse, resolving power, and verify resolution.",
-        ], font_size=27)
-        prob.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(prob))
-        self.wait(10.2)
-        self.wait(97.4)
-        self.play(FadeOut(*self.mobjects), run_time=0.5)
-
-        solver = StepSolver(self, prob, start_buff=0.4)
-        solver.add_step(1,
-            r"F = \frac{4R}{(1-R)^2} = \frac{4\times0.90}{(0.10)^2} = \frac{3.6}{0.01} = 360",
-            "coefficient of finesse for R=90%")
-        solver.add_step(2,
-            r"\mathcal{F} = \frac{\pi\sqrt{F}}{2} = \frac{\pi\sqrt{360}}{2} = \frac{\pi\times18.97}{2} = 29.8",
-            "finesse: transmission peaks are 29.8× narrower than the FSR", GOLD)
-        solver.add_step(3,
-            r"\Delta\lambda_{\text{FSR}} = 0.5\text{ nm} \quad\Rightarrow\quad d = \frac{\lambda^2}{2\Delta\lambda_{\text{FSR}}} = \frac{(656.2)^2}{2\times0.5\times10^6}\text{ nm} = 0.431\text{ mm}",
-            "choose FSR=0.5nm to bracket the splitting; find required mirror spacing")
-        solver.add_step(4,
-            r"N = \frac{2nd}{\lambda} = \frac{2\times1\times0.431\times10^6}{656.2} = 1313",
-            "order number (n=1 for air, d=0.431mm)")
-        solver.add_step(5,
-            r"\text{RP} = N\mathcal{F} = 1313\times29.8 = 39100",
-            "resolving power of this configuration", GOLD)
-        solver.add_step(6,
-            r"\Delta\lambda_{\min} = \frac{\lambda}{\text{RP}} = \frac{656.2}{39100} = 0.0168\text{ nm}",
-            "minimum resolvable Δλ = 0.017nm  <<  actual splitting 0.18nm  ✓", GOLD)
-        solver.add_step(7,
-            r"\text{Compare to grating: RP}=Nm=30000\times1=30000 \quad (\text{same grating as before})",
-            "Fabry-Pérot gives higher RP than the 5cm grating — in a much more compact package!")
-        solver.finalize()
-
-
-class CoherenceLength(Scene):
+class AiryFunction_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/CoherenceLength.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/AiryFunction_p4.mp3", time_offset=0)
+        title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The physical explanation is that at resonance, all the",
+            "multiply-reflected beams are in phase and add constructively.",
+            "The field builds up inside the cavity to a very large",
+            "amplitude, and the increased build-up exactly compensates for",
+            "the low transmission of each mirror.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class AiryFunction_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/AiryFunction_p5.mp3", time_offset=0)
+        title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Between resonances, the sine term is large, and the",
+            "transmission drops to nearly zero for high-finesse cavities.",
+            "The pattern looks like a series of very sharp transmission",
+            "spikes separated by broad dark regions.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class AiryFunction_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/AiryFunction_p6.mp3", time_offset=0)
+        title = Text("The Airy Function  (Bennett Eq. 7.89)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The coefficient of finesse F equals 4R over one minus R",
+            "squared. For a mirror reflectivity of 99 percent, F equals",
+            "39,600 — giving extremely sharp peaks.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p1.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Three quantities characterise the performance of a Fabry-Pérot",
+            "interferometer: the finesse, the resolving power, and the free",
+            "spectral range.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p2.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The finesse — written as a script F — is the ratio of the free",
+            "spectral range to the full width at half maximum of a",
+            "transmission peak. It equals pi times square root of R,",
+            "divided by one minus R. For R equals 99 percent, the finesse",
+            "is about 312. This means the transmission peaks are 312 times",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p3.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Physically, the finesse equals the average number of times a",
+            "photon bounces back and forth before leaking out through a",
+            "mirror. Higher reflectivity means more bounces, narrower",
+            "peaks, higher finesse.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p4.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The order number N equals 2nd divided by lambda — the number",
+            "of half-wavelengths that fit in the cavity.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p5.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The resolving power equals N times the finesse. This can be",
+            "enormous — a cavity of 10 centimetres at 633 nanometres has N",
+            "equal to about 316,000. Multiplied by a finesse of 312, the",
+            "resolving power exceeds 98 million.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p6.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The free spectral range in wavelength is lambda squared over",
+            "2nd. It tells you the range of wavelengths you can measure",
+            "unambiguously — adjacent resonance orders must not overlap",
+            "your spectrum.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinesseResolving_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinesseResolving_p7.mp3", time_offset=0)
+        title = Text("Finesse, Resolving Power and FSR", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Note carefully: the coefficient of finesse F and the finesse",
+            "script-F are different quantities. The coefficient is 4R over",
+            "one minus R squared. The finesse is pi root R over one minus",
+            "R. Don't confuse them — it's a standard notation trap.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p1.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Let's work through Bennett's Example 7.11 — measuring the",
+            "splitting between the hydrogen and deuterium H-alpha spectral",
+            "lines using a Fabry-Pérot interferometer.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p2.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Hydrogen H-alpha is at 656.28 nanometres. Deuterium H-alpha is",
+            "at 656.10 nanometres. The splitting is 0.18 nanometres. We",
+            "want to resolve this with mirrors of 90 percent reflectivity.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p3.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "First, the coefficient of finesse: F equals 4 times 0.90",
+            "divided by 0.10 squared, giving 360. The finesse is pi times",
+            "square root of 360 divided by 2, giving 29.8.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p4.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "We choose a free spectral range of 0.5 nanometres to",
+            "comfortably bracket the 0.18 nanometre splitting. This",
+            "requires a mirror spacing of d equals lambda squared over 2",
+            "times delta-lambda-FSR, which gives 0.431 millimetres. Tight!",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p5.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The order number at this spacing is N equals 1313. The",
+            "resolving power is N times finesse equals 1313 times 29.8,",
+            "giving about 39,000.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p6.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The minimum resolvable wavelength difference is lambda over",
+            "resolving power, which is 656.2 divided by 39,000, giving",
+            "0.017 nanometres. This is more than ten times smaller than the",
+            "actual splitting of 0.18 nanometres — the lines are clearly",
+            "resolved.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FabryPerotExample_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FabryPerotExample_p7.mp3", time_offset=0)
+        title = Text("Fabry-Perot Example: H and D alpha Lines", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For comparison, the best diffraction grating we looked at had",
+            "a resolving power of 30,000. The Fabry-Pérot beats it in a",
+            "much more compact device.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class CoherenceLength_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/CoherenceLength_p1.mp3", time_offset=0)
         title = Text("Coherence and the Fabry-Perot  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        eqs = VGroup(
-            labeled_eq(r"l_c = \lambda^2/\Delta\lambda = c/\Delta\nu", "COHERENCE LENGTH", GOLD, 44, 24),
-            labeled_eq(r"\tau_c = l_c/c = 1/\Delta\nu", "COHERENCE TIME", WHITE, 44, 24),
-        ).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-        safe_scale(eqs, max_width=13.0)
-        eqs.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(eqs, run_time=0.1))
-        table = eq_table([
-            (r"\text{White light}", "Delta_lambda~300nm -> l_c~1 micron", WHITE),
-            (r"\text{Sodium lamp}", "Delta_lambda~0.001nm -> l_c~0.6mm", WAVE_COLOR),
-            (r"\text{He-Ne laser}", "Delta_nu~1MHz -> l_c~300m", E_COLOR),
-            (r"\text{LIGO laser}", "Delta_nu~1Hz -> l_c~300 000 km", GOLD),
-        ], eq_fs=24, lbl_fs=20, buff=0.18)
-        safe_scale(table, max_width=13.0, max_height=3.0)
-        table.next_to(eqs, DOWN, buff=0.35)
-        self.play(FadeIn(table, run_time=0.1))
-        self.wait(93.1)
+        b = txt_block([
+            "The Fabry-Pérot interferometer only works if the light source",
+            "has sufficient temporal coherence — the ability to interfere",
+            "with a delayed copy of itself.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-class Week8Summary(Scene):
+class CoherenceLength_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/Week8Summary.mp3", time_offset=0)
-        title = Text("Week 8 — Complete Formula Summary", font_size=38, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/CoherenceLength_p2.mp3", time_offset=0)
+        title = Text("Coherence and the Fabry-Perot  (Bennett 7.3.4)", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.add(title)
+        b = txt_block([
+            "Coherence length is related to spectral purity. A perfectly",
+            "monochromatic wave — which doesn't exist in reality — would",
+            "have infinite coherence length. Real sources have a spread of",
+            "frequencies delta-nu, and their coherence length is",
+            "approximately c divided by delta-nu, or equivalently lambda",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        rows = eq_table([
-            (r"I_t = \frac{I_0}{1+F\sin^2(\delta/2)}", "Airy function (Fabry-Pérot transmission)", INTENSITY_COLOR),
-            (r"F = \frac{4R}{(1-R)^2}", "coefficient of finesse", N_COLOR),
-            (r"\mathcal{F} = \frac{\pi\sqrt{R}}{1-R}", "finesse", GOLD),
-            (r"\delta = \frac{4\pi nd}{\lambda_0}\cos\theta", "round-trip phase (at oblique angle θ)", WAVE_COLOR),
-            (r"N = \frac{2nd}{\lambda_0}", "order number (at normal incidence)", WHITE),
-            (r"\text{RP} = N\mathcal{F}", "resolving power", GOLD),
-            (r"\Delta\lambda_{\text{FSR}} = \lambda_0/N", "free spectral range (wavelength)", INTENSITY_COLOR),
-            (r"\Delta\nu_{\text{FSR}} = c/(2nd)", "free spectral range (frequency)", INTENSITY_COLOR),
-            (r"l_c = \lambda^2/\Delta\lambda = c/\Delta\nu", "coherence length of light source", WAVE_COLOR),
-        ], eq_fs=30, lbl_fs=22, buff=0.22)
-        rows.next_to(title, DOWN, buff=0.4)
-        for row in rows: self.play(FadeIn(row)); self.wait(3.9)
-        self.wait(75.4); self.play(FadeOut(VGroup(title, rows)))
+class CoherenceLength_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/CoherenceLength_p3.mp3", time_offset=0)
+        title = Text("Coherence and the Fabry-Perot  (Bennett 7.3.4)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For the Fabry-Pérot to show fringes, the cavity round trip",
+            "must be shorter than the coherence length. Otherwise, the",
+            "beams from different round trips are no longer coherent with",
+            "each other, and the interference averages out.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class CoherenceLength_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/CoherenceLength_p4.mp3", time_offset=0)
+        title = Text("Coherence and the Fabry-Perot  (Bennett 7.3.4)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The coherence length varies enormously between different light",
+            "sources. White light from a thermal source has a coherence",
+            "length of about 1 micrometre — too short for almost any",
+            "interferometer. A sodium lamp filtered to one line has about",
+            "half a millimetre. A stabilised helium-neon laser has hundreds",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class CoherenceLength_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/CoherenceLength_p5.mp3", time_offset=0)
+        title = Text("Coherence and the Fabry-Perot  (Bennett 7.3.4)", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "This is why gravitational wave detectors like LIGO use",
+            "ultra-stable lasers — the 4-kilometre arms require the laser",
+            "to be coherent over an 8-kilometre round trip.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p1.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Let's collect all the Fabry-Pérot formulas in one place.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p2.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The Airy function: I-t equals I-naught divided by one plus F",
+            "sine squared of delta over 2. This is the transmitted",
+            "intensity as a function of round-trip phase.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p3.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The coefficient of finesse F equals 4R over one minus R",
+            "squared.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p4.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The finesse script-F equals pi root R over one minus R.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p5.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The round-trip phase delta equals 4 pi n d cosine theta over",
+            "lambda-naught.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p6.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The order number N equals 2nd over lambda-naught.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p7.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The resolving power equals N times the finesse.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p8.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The free spectral range in wavelength equals lambda-naught",
+            "squared over 2nd.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p9(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p9.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The free spectral range in frequency equals c over 2nd — this",
+            "is the cavity mode spacing.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p10(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p10.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "And the coherence length of the light source must exceed 2nd",
+            "for fringes to be visible.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week8Summary_p11(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week8Summary_p11.mp3", time_offset=0)
+        title = Text("Week 8 Summary — All Fabry-Perot Formulas", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "These formulas describe the most powerful spectroscopic",
+            "instrument based on interference. Study them carefully — the",
+            "Fabry-Pérot almost always appears on the final exam.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)

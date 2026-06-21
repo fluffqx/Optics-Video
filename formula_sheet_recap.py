@@ -1,233 +1,260 @@
-# formula_sheet_recap.py
-# 31OPT Optics — Animated Formula Sheet & Midterm Preparation
-# Based on the official 31OPT equation chart
+# formula_sheet_recap.py — Formula Sheet and Exam Prep (paragraph-per-scene)
 from manim import *
 from utils import *
 
-
-class FormulaSheetTitleCard(Scene):
-    def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        card = make_title_card(
-            "EXAM PREPARATION",
-            "Complete 31OPT Formula Sheet — Animated",
-            "Official equation chart, all 8 weeks"
-        )
-        self.play(FadeIn(card, shift=UP)); self.wait(35.0); self.play(FadeOut(card))
-
-
-class FormulasWavesMaxwell(Scene):
-    """All wave + Maxwell equations from the official formula sheet."""
-    def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        title = Text("Waves & Maxwell — Formula Sheet", font_size=36, color=GOLD)
-        title.to_edge(UP)
-        self.play(Write(title))
-
-        eqs = [
-            (r"\frac{\partial^2\Psi}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2\Psi}{\partial t^2}",
-             "Wave equation", WAVE_COLOR),
-            (r"v_p = \frac{\omega}{k}, \quad v_g = \frac{d\omega}{dk} = \left(\frac{dk}{d\omega}\right)^{-1}",
-             "Phase & group velocity", WAVE_COLOR),
-            (r"\nabla^2\vec{E} = \varepsilon_0\mu_0\frac{\partial^2\vec{E}}{\partial t^2}, \quad c = \frac{1}{\sqrt{\varepsilon_0\mu_0}}",
-             "EM wave equation in vacuum", E_COLOR),
-            (r"I \equiv \langle S\rangle_T = \frac{n\varepsilon_0 c}{2}E_0^2",
-             "Irradiance [W/m²]", INTENSITY_COLOR),
-            (r"P_{\text{abs}} = \frac{I}{c}, \quad P_{\text{refl}} = \frac{2I}{c}",
-             "Radiation pressure", INTENSITY_COLOR),
-        ]
-
-        group = VGroup()
-        for latex, label, color in eqs:
-            eq  = MathTex(latex, font_size=32, color=color)
-            lbl = Text(label, font_size=22, color=GRAY)
-            row = VGroup(eq, lbl).arrange(DOWN, buff=0.08, aligned_edge=LEFT)
-            group.add(row)
-        group.arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        group.next_to(title, DOWN, buff=0.4)
-
-        for row in group:
-            self.play(FadeIn(row), run_time=0.7); self.wait(0.5)
-        self.wait(2); self.play(FadeOut(VGroup(title, group)))
-
-
-class FormulasOptics(Scene):
-    """All geometric optics formulas from the official formula sheet."""
-    def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        title = Text("Geometric Optics — Formula Sheet", font_size=36, color=GOLD)
-        title.to_edge(UP)
-        self.play(Write(title))
-
-        eqs = [
-            (r"\theta_i = \theta_r",
-             "Law of reflection", ANGLE_COLOR),
-            (r"n_i\sin\theta_i = n_t\sin\theta_t",
-             "Snell's law", N_COLOR),
-            (r"r_\perp = \frac{n_i\cos\theta_i - n_t\cos\theta_t}{n_i\cos\theta_i + n_t\cos\theta_t}",
-             "Fresnel r_perp (s-pol)", E_COLOR),
-            (r"r_\parallel = \frac{n_t\cos\theta_i - n_i\cos\theta_t}{n_t\cos\theta_i + n_i\cos\theta_t}",
-             "Fresnel r_parallel (p-pol)", B_COLOR),
-            (r"R = |r|^2, \quad T = \frac{n_t\cos\theta_t}{n_i\cos\theta_i}|t|^2, \quad R+T=1",
-             "Reflectivity & Transmissivity", INTENSITY_COLOR),
-            (r"\tan\theta_B = \frac{n_t}{n_i}, \quad \sin\theta_c = \frac{n_t}{n_i}",
-             "Brewster's angle & Critical angle (TIR)", ANGLE_COLOR),
-            (r"\frac{n_m}{s_o} + \frac{n_i}{s_i} = \frac{n_i - n_m}{R}",
-             "Refraction at spherical surface", N_COLOR),
-            (r"\frac{1}{s_o} + \frac{1}{s_i} = \frac{1}{f}, \quad m = -\frac{s_i}{s_o}",
-             "Thin lens equation & magnification", GOLD),
-            (r"\frac{1}{s_o} + \frac{1}{s_i} = \frac{2}{R} = \frac{1}{f_m}",
-             "Mirror equation", GOLD),
-            (r"I = I_0\cos^2\theta",
-             "Malus's law", INTENSITY_COLOR),
-        ]
-
-        group = VGroup()
-        for latex, label, color in eqs:
-            eq  = MathTex(latex, font_size=28, color=color)
-            lbl = Text(label, font_size=20, color=GRAY)
-            row = VGroup(eq, lbl).arrange(DOWN, buff=0.06, aligned_edge=LEFT)
-            group.add(row)
-        group.arrange(DOWN, buff=0.22, aligned_edge=LEFT)
-        group.next_to(title, DOWN, buff=0.35)
-
-        for row in group:
-            self.play(FadeIn(row), run_time=0.5); self.wait(0.3)
-        self.wait(2); self.play(FadeOut(VGroup(title, group)))
-
-
-class FormulasInterferenceDiffraction(Scene):
-    """Interference + diffraction formulas from the official formula sheet."""
-    def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        title = Text("Interference & Diffraction — Formula Sheet", font_size=34, color=GOLD)
-        title.to_edge(UP)
-        self.play(Write(title))
-
-        eqs = [
-            (r"I = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\delta, \quad \delta = \frac{2\pi}{\lambda_0}\cdot\text{OPD}",
-             "Two-beam interference", INTENSITY_COLOR),
-            (r"\Delta y = \frac{\lambda L}{d} \quad \text{(Young's fringe spacing)}",
-             "Young's double slit", WAVE_COLOR),
-            (r"\Delta\varphi = \frac{4\pi n_l}{\lambda_0}l\cos\theta_t + \Delta\varphi_{\text{refl}}",
-             "Thin film interference total phase", WAVE_COLOR),
-            (r"I(\theta) = I_0\left(\frac{\sin\beta}{\beta}\right)^2, \quad \beta = \frac{1}{2}kb\sin\theta",
-             "Single slit diffraction (sinc²)", INTENSITY_COLOR),
-            (r"I(\theta) = I_0\left(\frac{\sin\beta}{\beta}\right)^2\left(\frac{\sin N\gamma}{N\sin\gamma}\right)^2, \quad \gamma = \frac{1}{2}kd\sin\theta",
-             "N-slit diffraction", INTENSITY_COLOR),
-            (r"\Delta\theta = 2.44\frac{\lambda}{D} \quad \text{(Airy disk)}, \quad \Delta\theta_{\min} = 1.22\frac{\lambda}{D} \quad \text{(Rayleigh)}",
-             "Circular aperture & resolution", GOLD),
-            (r"d(\sin\theta_m - \sin\theta_i) = m\lambda, \quad \mathcal{R} = Nm, \quad \Delta\lambda_{\text{FSR}} = \frac{\lambda_{\min}}{m}",
-             "Grating equation, resolving power, FSR", GOLD),
-            (r"I_t = \frac{I_0}{1+F\sin^2(\delta/2)}, \quad F = \frac{4R}{(1-R)^2}, \quad \mathcal{F} = \frac{\pi\sqrt{R}}{1-R}",
-             "Fabry-Pérot: Airy function, finesse coefficient, finesse", N_COLOR),
-            (r"\mathcal{R}_{\text{FP}} = m\mathcal{F}, \quad \Delta\lambda_{\text{FSR}} = \frac{\lambda_0^2}{2nd}, \quad \Delta\nu_{\text{FSR}} = \frac{c}{2nd}",
-             "Fabry-Pérot resolving power & FSR", N_COLOR),
-        ]
-
-        group = VGroup()
-        for latex, label, color in eqs:
-            eq  = MathTex(latex, font_size=26, color=color)
-            lbl = Text(label, font_size=19, color=GRAY)
-            row = VGroup(eq, lbl).arrange(DOWN, buff=0.05, aligned_edge=LEFT)
-            group.add(row)
-        group.arrange(DOWN, buff=0.2, aligned_edge=LEFT)
-        group.next_to(title, DOWN, buff=0.3)
-
-        for row in group:
-            self.play(FadeIn(row), run_time=0.5); self.wait(0.3)
-        self.wait(2); self.play(FadeOut(VGroup(title, group)))
-
-
-class MidtermPrepScene(Scene):
-    """Dedicated midterm preparation — Weeks 1-3 only."""
+class FormulaSheetTitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/MidtermPrepScene.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/FormulaSheetTitleCard_p1.mp3", time_offset=0)
+        title = Text("Complete Formula Sheet  (31OPT)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "This section animates the complete official 31OPT formula",
+            "sheet — every equation you are given in the exam, explained in",
+            "context.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FormulaSheetTitleCard_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FormulaSheetTitleCard_p2.mp3", time_offset=0)
+        title = Text("Complete Formula Sheet  (31OPT)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The formula sheet is provided during the exam, so the goal is",
+            "not to memorise it blindly. The goal is to understand every",
+            "symbol deeply enough that you can use any formula correctly",
+            "under time pressure.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FormulaSheetTitleCard_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FormulaSheetTitleCard_p3.mp3", time_offset=0)
+        title = Text("Complete Formula Sheet  (31OPT)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "We'll go through the sheet section by section, the same way it",
+            "appears in the exam.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MidtermPrepScene_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MidtermPrepScene_p1.mp3", time_offset=0)
         title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-        topics = VGroup(
-            txt_block(["Week 1: Wave equation, harmonic waves, complex representation,",
-                       "phase vs group velocity, superposition principle."], 25),
-            txt_block(["Week 1b: Maxwell's equations, EM wave derivation, irradiance,",
-                       "Poynting vector, radiation pressure, dispersion."], 25),
-            txt_block(["Week 2: Snell's law, Fresnel equations (r_s, r_p, t_s, t_p),",
-                       "reflectivity R+T=1, Brewster's angle, TIR, Malus's law."], 25),
-            txt_block(["Week 3: Thin lens equation, lensmaker's eq, sign conventions,",
-                       "mirror equation, magnification, optical instruments."], 25),
-        ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        safe_scale(topics, max_width=13.0, max_height=5.0)
-        topics.next_to(title, DOWN, buff=0.4)
-        self.play(FadeIn(topics, run_time=0.1))
-        b = txt_block(["KEY EXAM HABIT: draw a diagram FIRST for every geometric optics problem.",
-                       "KEY EXAM HABIT: R + T = 1 always — check this after every Fresnel calculation."], 26)
-        safe_scale(b, max_width=13.0)
-        b.next_to(topics, DOWN, buff=0.3)
+        b = txt_block([
+            "The midterm covers everything from weeks 1 through 3 —",
+            "electromagnetic waves, Fresnel equations, and geometric",
+            "optics.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(78.7)
+        self.wait(1)
 
-class FinalExamPrepScene(Scene):
-    """Final exam overview — all 8 weeks."""
+class MidtermPrepScene_p2(Scene):
     def construct(self):
-        self.camera.background_color = "#0f0f0f"
-        card = make_title_card(
-            "FINAL EXAM PREPARATION",
-            "All 8 Weeks — Key Formulas & Strategies",
-            "Thursday 25 June 2026, 09:00–12:00"
-        )
-        self.play(FadeIn(card, shift=UP)); self.wait(8.7); self.play(FadeOut(card))
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MidtermPrepScene_p2.mp3", time_offset=0)
+        title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "It's a one-hour written exam. No AI tools, no phones — just",
+            "pen, paper, ruler, calculator, and the formula sheet.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        title = Text("Most Commonly Examined Topics", font_size=34, color=GOLD)
-        title.to_edge(UP)
-        self.play(Write(title))
+class MidtermPrepScene_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MidtermPrepScene_p3.mp3", time_offset=0)
+        title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The most important advice: the formula sheet gives you the",
+            "equations, but it does not tell you when to use which one, or",
+            "how to handle sign conventions. That's what you need to",
+            "practise.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        common = [
-            "Fresnel equations: full calculation of r, t, R, T at a given angle",
-            "Thin film interference: count phase shifts, find minimum thickness",
-            "Young's double slit: fringe spacing, position of mth fringe",
-            "Single slit: first minimum angle, central maximum width",
-            "Diffraction grating: grating equation, resolving power, missing orders",
-            "Fabry-Pérot: finesse, FSR, resolving power — all three in one problem",
-            "Jones matrices: trace polarisation through a sequence of elements",
-            "Ray transfer matrices: find effective focal length from system matrix",
-            "Rayleigh criterion: minimum resolvable angle for circular aperture",
-            "Thin lens + mirror combinations: sequential image formation",
-        ]
-        common_group = VGroup(*[
-            VGroup(
-                Text("•", font_size=26, color=GOLD),
-                Text(t, font_size=24, color=WHITE)
-            ).arrange(RIGHT, buff=0.2)
-            for t in common
-        ]).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
-        common_group.next_to(title, DOWN, buff=0.4)
+class MidtermPrepScene_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MidtermPrepScene_p4.mp3", time_offset=0)
+        title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Go through the SLT problems from weeks 1 to 3. They are at",
+            "exactly the right level of difficulty. If you can solve those",
+            "independently, you are ready for the midterm.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        for item in common_group:
-            self.play(FadeIn(item), run_time=0.4)
-        self.wait(20.7)
-        self.play(FadeOut(VGroup(title, common_group)))
+class MidtermPrepScene_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MidtermPrepScene_p5.mp3", time_offset=0)
+        title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "A few specific things to watch for. First: Fresnel equations —",
+            "always identify which polarisation you're dealing with before",
+            "you start. Second: thin lenses and mirrors — draw the ray",
+            "diagram first, always. It prevents sign errors. Third:",
+            "radiation pressure — remember the factor of 2 for a reflective",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        # Grading reminder
-        grade_title = Text("Grading Formula", font_size=36, color=GOLD)
-        grade_title.to_edge(UP)
-        self.play(Write(grade_title))
+class MidtermPrepScene_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MidtermPrepScene_p6.mp3", time_offset=0)
+        title = Text("Midterm Preparation  (Weeks 1-3)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Good luck.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        grade_eq = MathTex(
-            r"\text{FINAL} = 0.85 \times \text{EXAM} + 0.15 \times \text{MID} + \text{BONUS}",
-            font_size=38, color=WHITE)
-        pass_cond = MathTex(
-            r"\text{Pass: FINAL} \geq 6 \quad \text{AND} \quad \text{EXAM} \geq 5.0",
-            font_size=36, color=GOLD)
-        bonus_note = MathTex(
-            r"\text{SLT Bonus: up to } +1.0 \text{ (need} \geq 100 \text{ SLT points)}",
-            font_size=30, color=N_COLOR)
+class FinalExamPrepScene_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p1.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The final exam covers all eight weeks. It's three hours, and",
+            "it counts for 85 percent of your grade.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        grade_group = VGroup(grade_eq, pass_cond, bonus_note).arrange(DOWN, buff=0.5)
-        grade_group.next_to(grade_title, DOWN, buff=0.5)
+class FinalExamPrepScene_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p2.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The grading formula is: FINAL equals 0.85 times your exam",
+            "score, plus 0.15 times your midterm score, plus your SLT",
+            "bonus. To pass, you need a FINAL of at least 6 AND an exam",
+            "score of at least 5. Both conditions must be met.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        for item in grade_group:
-            self.play(Write(item)); self.wait(11.1)
-        self.play(Create(gold_box(pass_cond)))
-        self.wait(99.4)
-        self.play(FadeOut(*self.mobjects), run_time=0.5)
+class FinalExamPrepScene_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p3.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The SLT bonus can add up to a full point to your grade if you",
+            "earned at least 100 SLT points across the semester.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinalExamPrepScene_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p4.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The topics that appear most often in exam questions are:",
+            "Fresnel calculations, thin film interference, Young's double",
+            "slit, single slit diffraction, grating equation with resolving",
+            "power, Fabry-Pérot with finesse and free spectral range, Jones",
+            "matrices for polarisation, and the Rayleigh criterion for",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinalExamPrepScene_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p5.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For each of these, you should be able to: set up the problem",
+            "from scratch, identify all the relevant variables, apply the",
+            "correct formula with correct sign conventions, and compute a",
+            "numerical answer.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinalExamPrepScene_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p6.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The best preparation is still the SLT problem sets. They are",
+            "designed to be at exam level, and many are directly taken from",
+            "past exams. If you can solve all nine SLT sets independently,",
+            "you are fully prepared.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class FinalExamPrepScene_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/FinalExamPrepScene_p7.mp3", time_offset=0)
+        title = Text("Final Exam Preparation  (All 8 Weeks)", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "You can do this. Good luck.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)

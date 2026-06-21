@@ -398,3 +398,577 @@ class DispersionScene(Scene):
         safe_scale(block, max_width=13.0, max_height=4.5)
         block.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(block, run_time=0.1)); self.wait(110.4)
+
+class MaxwellVacuum_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p1.mp3", time_offset=0)
+        title = Text("Maxwell's Equations in Vacuum", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "In vacuum with no charges and no currents, Maxwell's equations",
+            "simplify to their most elegant form.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MaxwellVacuum_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p2.mp3", time_offset=0)
+        title = Text("Maxwell's Equations in Vacuum", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The divergence of E equals zero — no sources. The divergence of",
+            "B equals zero — no magnetic monopoles. The curl of E equals",
+            "minus the time derivative of B — Faraday's law. And the curl of",
+            "B equals epsilon naught mu naught times the time derivative of E",
+            "— the Ampere-Maxwell law.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class MaxwellVacuum_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p3.mp3", time_offset=0)
+        title = Text("Maxwell's Equations in Vacuum", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "These four equations couple E and B together through their time",
+            "derivatives. A changing E creates a curling B, and a changing B",
+            "creates a curling E. This mutual regeneration is precisely what",
+            "allows electromagnetic waves to propagate through empty space",
+            "indefinitely.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveDerivation_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveDerivation_p1.mp3", time_offset=0)
+        title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Here is how Maxwell derived the wave equation for light —",
+            "arguably the most important derivation in the history of",
+            "physics.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveDerivation_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveDerivation_p2.mp3", time_offset=0)
+        title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Take the curl of Faraday's law. The left side becomes curl of",
+            "curl of E, which by a vector identity equals the gradient of the",
+            "divergence of E minus the Laplacian of E. Since the divergence",
+            "of E is zero in vacuum, this simplifies to minus the Laplacian",
+            "of E.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveDerivation_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveDerivation_p3.mp3", time_offset=0)
+        title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The right side becomes minus the time derivative of the curl of",
+            "B, which by Ampere's law equals minus mu naught epsilon naught",
+            "times the second time derivative of E.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveDerivation_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveDerivation_p4.mp3", time_offset=0)
+        title = Text("Deriving the EM Wave Equation", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Setting these equal gives the wave equation for E, with wave",
+            "speed c equals 1 over the square root of mu naught epsilon",
+            "naught. Plugging in the measured values of these constants gives",
+            "exactly 3 times 10 to the 8 metres per second — the speed of",
+            "light. Maxwell had proved that light is an electromagnetic wave.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveProperties_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveProperties_p1.mp3", time_offset=0)
+        title = Text("Properties of EM Waves", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The plane wave solutions to Maxwell's equations have five",
+            "remarkable properties, all provable directly from the equations.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveProperties_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveProperties_p2.mp3", time_offset=0)
+        title = Text("Properties of EM Waves", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "First, they are transverse: both E and B are perpendicular to",
+            "the propagation direction k-vector. This follows from the",
+            "zero-divergence conditions.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveProperties_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveProperties_p3.mp3", time_offset=0)
+        title = Text("Properties of EM Waves", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Second, E and B are perpendicular to each other. The cross",
+            "product E cross B points in the direction of k.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveProperties_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveProperties_p4.mp3", time_offset=0)
+        title = Text("Properties of EM Waves", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Third, their magnitudes are related by E equals c times B in",
+            "vacuum.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveProperties_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveProperties_p5.mp3", time_offset=0)
+        title = Text("Properties of EM Waves", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Fourth, E and B oscillate in phase — they reach their maxima and",
+            "minima simultaneously.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveProperties_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveProperties_p6.mp3", time_offset=0)
+        title = Text("Properties of EM Waves", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Fifth, in a material with refractive index n, the wave speed",
+            "becomes c over n, and E equals v times B where v is the local",
+            "wave speed.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveExample_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveExample_p1.mp3", time_offset=0)
+        title = Text("Example: Finding B from E", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Given an electric field E pointing in the x-direction and",
+            "propagating in the z-direction, we need to find the magnetic",
+            "field B.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveExample_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveExample_p2.mp3", time_offset=0)
+        title = Text("Example: Finding B from E", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The propagation direction is z-hat. Using the relation k-vector",
+            "cross E equals omega times B, we take k in the z-direction cross",
+            "E in the x-direction. Z-hat cross x-hat equals y-hat by the",
+            "right-hand rule. So B points in the y-direction with magnitude E",
+            "naught over c.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class EMWaveExample_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/EMWaveExample_p3.mp3", time_offset=0)
+        title = Text("Example: Finding B from E", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The three vectors — E in x, B in y, and k in z — form a",
+            "right-handed coordinate system. This is a general property of",
+            "plane electromagnetic waves.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p1.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Light carries energy. How do we quantify the flow of that",
+            "energy?",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p2.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The Poynting vector S equals E cross B divided by mu naught. It",
+            "points in the direction of energy flow, and its magnitude gives",
+            "the power per unit area — in watts per square metre.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p3.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The irradiance I — what we actually measure with a detector — is",
+            "the time-averaged magnitude of the Poynting vector. For a plane",
+            "wave, this works out to n epsilon naught c over 2, times E",
+            "naught squared.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p4.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "That factor of one half comes from time-averaging: the time",
+            "average of cosine squared of omega t is one half. This is a very",
+            "commonly needed result — remember it.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p5.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Light also carries momentum. This means it exerts a radiation",
+            "pressure on any surface it strikes.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p6.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For a perfectly absorbing surface — a black body — the radiation",
+            "pressure equals I over c.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p7.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For a perfectly reflecting surface — a mirror — the beam",
+            "reverses direction, so the momentum change is doubled. The",
+            "pressure is 2I over c.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p8.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Let's calculate. A laser with irradiance 10 to the 6 watts per",
+            "square metre hits a perfect mirror. The radiation pressure is 2",
+            "times 10 to the 6 divided by 3 times 10 to the 8, giving about",
+            "6.67 millipascals. Tiny — but real, and measurable. Solar sails",
+            "use exactly this effect.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PoyntingIrradiance_p9(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p9.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For our second example: E naught equals 1000 volts per metre in",
+            "air. The irradiance is n epsilon naught c over 2 times E naught",
+            "squared. Plugging in the numbers gives 132.8 watts per square",
+            "metre. A household light bulb radiates about this much — so the",
+            "electric field of visible light is actually quite large, yet",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p1.mp3", time_offset=0)
+        title = Text("Radiation Pressure", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Light carries momentum, and when it hits a surface, it transfers",
+            "that momentum as a force — radiation pressure.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p2.mp3", time_offset=0)
+        title = Text("Radiation Pressure", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For a perfectly absorbing surface, the pressure equals I over c,",
+            "where I is the irradiance. For a perfectly reflecting mirror,",
+            "the momentum reverses direction, so the pressure doubles to 2I",
+            "over c.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p3.mp3", time_offset=0)
+        title = Text("Radiation Pressure", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Solar radiation pressure is tiny — about 9 micropascals at",
+            "Earth's orbit — but in space with no friction, even tiny forces",
+            "accumulate. Solar sails exploit this effect for propulsion. The",
+            "Japanese IKAROS spacecraft was the first to demonstrate",
+            "interplanetary travel by solar sail in 2010.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class RadiationPressure_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/RadiationPressure_p4.mp3", time_offset=0)
+        title = Text("Radiation Pressure", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "A laser pointer exerts only nanonewtons of force — real but far",
+            "too small to feel.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p1.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Dispersion is the phenomenon where the refractive index of a",
+            "material depends on the frequency of light. Different colours",
+            "travel at different speeds.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p2.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The refractive index n equals c over v — the ratio of the speed",
+            "of light in vacuum to the speed in the medium. For a",
+            "non-magnetic material, n equals the square root of the relative",
+            "permittivity K_E.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p3.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The Lorentz oscillator model gives us a microscopic",
+            "understanding of dispersion. The electrons in a material behave",
+            "like oscillators with resonant frequencies omega_j. Light at",
+            "frequencies close to a resonance is strongly affected — the",
+            "material absorbs and re-emits the light with a phase shift that",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p4.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The resulting dispersion relation shows n squared as a sum over",
+            "all resonances, each contributing a term weighted by its",
+            "oscillator strength f_j.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p5.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "For frequencies well below all resonances — which is the case",
+            "for most optical glasses in the visible range — n increases with",
+            "frequency. This is called normal dispersion. Violet light bends",
+            "more than red light in a prism.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class DispersionScene_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/DispersionScene_p6.mp3", time_offset=0)
+        title = Text("Dispersion and Refractive Index", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The group velocity in a dispersive medium is c divided by n plus",
+            "omega times dn d-omega. When dn d-omega is positive, the group",
+            "velocity is less than the phase velocity. When negative —",
+            "anomalous dispersion near an absorption resonance — interesting",
+            "things happen, including group velocities that can exceed c,",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)

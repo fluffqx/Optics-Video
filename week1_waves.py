@@ -1,508 +1,1126 @@
-# week1_waves.py — Week 1: Waves (v4 — add_sound + zero overlap)
+# week1_waves.py — Week 1: Waves (paragraph-per-scene, zero overlap)
 from manim import *
 from utils import *
 
-AUDIO = "narration/audio"
-
-
-def show(scene, mob, wait, ft=0.1):
-    scene.play(FadeIn(mob, run_time=0.1))
-    scene.wait(wait)
-    scene.play(FadeOut(mob, run_time=0.2))
-
-
-def tb(lines, fs=27):
-    texts = [Text(l, font_size=fs, color=WHITE) for l in lines if l.strip()]
-    b = VGroup(*texts).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
-    safe_scale(b, max_width=13.0, max_height=4.0)
-    return b
-
-
-class Week1TitleCard(Scene):
-    # p1=5.8s p2=11.1s p3=15.0s p4=0.6s
+class Week1TitleCard_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/Week1TitleCard.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/Week1TitleCard.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Week1TitleCard_p1.mp3", time_offset=0)
         card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation",
                                "Bennett Ch. 1 & 2.1-2.3")
-        self.play(FadeIn(card))
-        self.wait(34.1)
-        self.play(FadeOut(card))
+        self.play(FadeIn(card, run_time=0.3))
+        b = txt_block([
+            "Welcome to the complete exam preparation series for 31OPT Optics",
+            "at TU Eindhoven.",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-
-class WaveIntroduction(Scene):
-    # p1=2.5s p2=17.4s p3=9.7s p4=9.7s p5=22.2s  total=63.4s
+class Week1TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/WaveIntroduction.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/WaveIntroduction.mp3", time_offset=0)
-        title = Text("What Is a Wave?", font_size=44, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/Week1TitleCard_p2.mp3", time_offset=0)
+        card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation",
+                               "Bennett Ch. 1 & 2.1-2.3")
+        self.play(FadeIn(card, run_time=0.3))
+        b = txt_block([
+            "Week 1 covers the foundation of everything in this course —",
+            "waves, the wave equation, and how we represent waves",
+            "mathematically using complex numbers.",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week1TitleCard_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week1TitleCard_p3.mp3", time_offset=0)
+        card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation",
+                               "Bennett Ch. 1 & 2.1-2.3")
+        self.play(FadeIn(card, run_time=0.3))
+        b = txt_block([
+            "By the end of this week, you will understand what a wave",
+            "actually is, how to write and interpret the wave equation, and",
+            "why physicists prefer complex exponentials over sines and",
+            "cosines.",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class Week1TitleCard_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week1TitleCard_p4.mp3", time_offset=0)
+        card = make_title_card("WEEK 1", "Waves, Wave Equation & Complex Representation",
+                               "Bennett Ch. 1 & 2.1-2.3")
+        self.play(FadeIn(card, run_time=0.3))
+        b = txt_block([
+            "Let's begin.",
+        ])
+        b.move_to(ORIGIN)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveIntroduction_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveIntroduction_p1.mp3", time_offset=0)
+        title = Text("What Is a Wave?", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        b = txt_block([
+            "So what exactly is a wave?",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        waits = [2.5, 17.4, 9.7, 9.7, 22.2]
-
-        blocks = [
-            ["So what exactly is a wave?"],
-            ["A wave is a disturbance that transports ENERGY from one place to another",
-             "without transporting MATTER.",
-             "Think of ripples on a pond: the water stays, but the disturbance travels."],
-            ["In optics, the disturbance is the electromagnetic field.",
-             "The electric and magnetic fields oscillate as they travel.",
-             "Light does not need a medium — it travels through vacuum."],
-            ["We start with the simplest case: a wave in ONE spatial dimension.",
-             "This is the foundation of everything in optics."],
-            ["The wave equation is the mathematical statement that governs",
-             "how a disturbance evolves in both space and time.",
-             "Master this equation, and you have the key to everything:",
-             "interference, diffraction, polarisation — all follow from here."],
-        ]
-
-        for i, lines in enumerate(blocks):
-            b = tb(lines)
-            b.next_to(title, DOWN, buff=0.5)
-            show(self, b, waits[i])
-
-        self.play(FadeOut(title))
-
-
-class WaveEquation1D(Scene):
-    # p1=6.3s p2=15.9s p3=18.3s p4=15.0s p5=24.5s p6=10.2s  total=92.6s
+class WaveIntroduction_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/WaveEquation1D.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/WaveIntroduction_p2.mp3", time_offset=0)
+        title = Text("What Is a Wave?", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "A wave is a disturbance that transports energy from one place to",
+            "another — without transporting matter along with it. Think of",
+            "ripples on a pond. The water itself doesn't travel across the",
+            "pond. The disturbance does.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveIntroduction_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveIntroduction_p3.mp3", time_offset=0)
+        title = Text("What Is a Wave?", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "In optics, the disturbance is the electromagnetic field — the",
+            "electric and magnetic fields oscillating together as they travel",
+            "through space.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveIntroduction_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveIntroduction_p4.mp3", time_offset=0)
+        title = Text("What Is a Wave?", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "We start with the simplest possible case: a wave moving in just",
+            "one spatial dimension. One direction. This is the foundation.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveIntroduction_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveIntroduction_p5.mp3", time_offset=0)
+        title = Text("What Is a Wave?", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The wave equation is the mathematical statement that tells us",
+            "exactly how such a disturbance evolves in both space and time",
+            "simultaneously. Master this equation, and you have the key to",
+            "understanding everything else in this course — interference,",
+            "diffraction, polarisation, all of it follows from here.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveEquation1D_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveEquation1D_p1.mp3", time_offset=0)
         title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-
-        # p1 6.3s — show equation
-        eq = MathTex(r"\frac{\partial^2\Psi}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2\Psi}{\partial t^2}",
-                     font_size=56)
+        eq = MathTex(r"\frac{\partial^2\Psi}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2\Psi}{\partial t^2}", font_size=52)
+        safe_scale(eq, max_width=13.0)
         eq.next_to(title, DOWN, buff=0.5)
-        self.play(Write(eq, run_time=1.0))
-        self.wait(6.3)
+        self.play(FadeIn(eq, run_time=0.1))
+        self.play(Create(gold_box(eq)))
+        b = txt_block([
+            "Here is the one-dimensional wave equation. Take a moment to look",
+            "at its structure.",
+        ])
+        b.next_to(eq, DOWN, buff=0.4)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        # p2 15.9s — left side
-        lb = Brace(eq[0:2], DOWN, color=E_COLOR)
-        lt = lb.get_tex(r"\text{Curvature in space}")
-        lt.set_color(E_COLOR)
-        self.play(GrowFromCenter(lb), FadeIn(lt))
-        self.wait(15.9)
-
-        # p3 18.3s — right side
-        rb = Brace(eq[2:], DOWN, color=B_COLOR)
-        rt = rb.get_tex(r"\text{Acceleration in time}")
-        rt.set_color(B_COLOR)
-        self.play(GrowFromCenter(rb), FadeIn(rt))
-        self.wait(18.3)
-
-        # p4 15.0s — interpretation
-        interp = Text("Spatial curvature = Temporal acceleration / v squared", font_size=28, color=GOLD)
-        safe_scale(interp, max_width=13.0)
-        interp.next_to(rb, DOWN, buff=0.5)
-        self.play(FadeIn(interp))
-        self.wait(15.0)
-        self.play(FadeOut(VGroup(lb, lt, rb, rt, interp)))
-
-        # p5 24.5s — solutions
-        sol_title = Text("General Solutions:", font_size=30, color=GOLD)
-        sol1 = labeled_eq(r"\Psi(x,t)=f(x-vt)", "travels in +x at speed v", E_COLOR, 44, 26)
-        sol2 = labeled_eq(r"\Psi(x,t)=g(x+vt)", "travels in -x at speed v", B_COLOR, 44, 26)
-        sols = VGroup(sol_title, sol1, sol2).arrange(DOWN, buff=0.38)
-        sols.next_to(eq, DOWN, buff=0.5)
-        safe_scale(sols, max_height=3.5)
-        self.play(FadeIn(sol_title), Write(sol1))
-        self.wait(24.5)
-        self.play(Write(sol2))
-        self.wait(10.4)
-
-        # p6 10.2s — key insight
-        key = Text("Any shape travels without distortion at speed v.", font_size=30, color=GOLD)
-        safe_scale(key, max_width=13.0)
-        key.next_to(sols, DOWN, buff=0.3)
-        self.play(FadeIn(key))
-        self.wait(92.6)
-        self.play(FadeOut(VGroup(title, eq, sols, key)))
-
-
-class WaveEquationProof(Scene):
-    # p1=10.2s p2=21.7s p3=7.3s  total=40.3s
+class WaveEquation1D_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/WaveEquationProof.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/WaveEquationProof.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/WaveEquation1D_p2.mp3", time_offset=0)
+        title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        lhs = MathTex(r"rac{\partial^2\Psi}{\partial x^2}", font_size=56, color=E_COLOR)
+        lhs.next_to(title, DOWN, buff=0.45)
+        lbl = Text("LEFT SIDE: spatial curvature of the wave", font_size=28, color=E_COLOR, weight=BOLD)
+        safe_scale(lbl, max_width=13.0)
+        lbl.next_to(lhs, DOWN, buff=0.3)
+        b = txt_block([
+            "On the left side, we have the second derivative of psi with",
+            "respect to position x. This is the curvature of the wave in",
+            "space — how sharply the wave bends at each point.",
+        ])
+        b.next_to(lbl, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(lhs, lbl, b), run_time=0.1))
+        self.wait(1)
+
+class WaveEquation1D_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveEquation1D_p3.mp3", time_offset=0)
+        title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        rhs = MathTex(r"rac{1}{v^2}rac{\partial^2\Psi}{\partial t^2}", font_size=56, color=B_COLOR)
+        rhs.next_to(title, DOWN, buff=0.45)
+        lbl = Text("RIGHT SIDE: temporal acceleration / v squared", font_size=28, color=B_COLOR, weight=BOLD)
+        safe_scale(lbl, max_width=13.0)
+        lbl.next_to(rhs, DOWN, buff=0.3)
+        b = txt_block([
+            "On the right side, we have one over v squared, times the second",
+            "derivative of psi with respect to time. This is the acceleration",
+            "of the wave in time — how quickly the wave is changing at each",
+            "moment.",
+        ])
+        b.next_to(lbl, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(rhs, lbl, b), run_time=0.1))
+        self.wait(1)
+
+class WaveEquation1D_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveEquation1D_p4.mp3", time_offset=0)
+        title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The equation is saying: the spatial curvature equals the",
+            "temporal acceleration, scaled by the wave speed v. Space and",
+            "time are linked by a single number — the speed of the wave.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveEquation1D_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveEquation1D_p5.mp3", time_offset=0)
+        title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Now, what are the solutions to this equation? Any function of",
+            "the form f of x minus vt is a solution — this represents a wave",
+            "travelling in the positive x direction at speed v. And any",
+            "function of the form g of x plus vt travels in the negative x",
+            "direction.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveEquation1D_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveEquation1D_p6.mp3", time_offset=0)
+        title = Text("The 1D Wave Equation", font_size=42, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Notice the key insight: the shape of the wave — whatever shape",
+            "it has — travels without distortion. The wave just moves.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class WaveEquationProof_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/WaveEquationProof_p1.mp3", time_offset=0)
         title = Text("Proof: f(x-vt) Satisfies the Wave Equation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
-
-        # p1 10.2s
-        b = tb(["Let Psi(x,t) = (x minus vt) squared and verify it solves the wave equation."])
+        b = txt_block([
+            "Let's prove that the function psi equals x minus vt, all",
+            "squared, actually satisfies the wave equation. This is Bennett",
+            "Example 1.1.",
+        ])
         b.next_to(title, DOWN, buff=0.5)
-        show(self, b, 10.2)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        # p2 21.7s — proof steps
-        solver = StepSolver(self, title, start_buff=0.55)
-        solver.add_step(1, r"\partial^2\Psi/\partial x^2=2", "second x-derivative = 2", E_COLOR)
-        solver.add_step(2, r"\partial^2\Psi/\partial t^2=2v^2", "second t-derivative = 2v squared", B_COLOR)
-        solver.add_step(3, r"\frac{1}{v^2}\cdot2v^2=2=\partial^2\Psi/\partial x^2\;\checkmark",
-                       "both sides equal 2 — wave equation satisfied!", GOLD)
-        solver.finalize()
-        self.wait(40.3)
-
-        # p3 7.3s
-        b3 = tb(["Any function of the form f(x-vt) satisfies the wave equation.",
-                 "This includes sine waves, Gaussians, square pulses — any shape."])
-        b3.next_to(title, DOWN, buff=0.5)
-        self.play(FadeOut(VGroup(*solver.steps)))
-        show(self, b3, 7.3)
-        self.play(FadeOut(title))
-
-
-class HarmonicWave(Scene):
-    # 14 paragraphs, 151.2s total
-    # waits: [9.2, 7.3, 5.8, 13.5, 15.9, 11.1, 4.9, 11.6, 11.1, 7.8, 15.9, 11.6, 7.3, 12.6]
+class WaveEquationProof_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/HarmonicWave.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/HarmonicWave.mp3", time_offset=0)
-        title = Text("Harmonic Traveling Waves", font_size=42, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/WaveEquationProof_p2.mp3", time_offset=0)
+        title = Text("Proof: f(x-vt) Satisfies the Wave Equation", font_size=34, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        s1 = labeled_eq(r"\partial^2\Psi/\partial x^2 = 2", "second x-derivative = 2", E_COLOR, 40, 24)
+        s2 = labeled_eq(r"\partial^2\Psi/\partial t^2 = 2v^2", "second t-derivative = 2v squared", B_COLOR, 40, 24)
+        s3 = labeled_eq(r"\frac{1}{v^2}\cdot 2v^2 = 2 = \partial^2\Psi/\partial x^2\;\checkmark",
+                        "LHS = RHS — wave equation satisfied!", GOLD, 36, 24)
+        steps = VGroup(s1, s2, s3).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
+        safe_scale(steps, max_width=13.0, max_height=4.5)
+        steps.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(steps, run_time=0.1))
+        self.wait(1)
 
-        waits = [9.2, 7.3, 5.8, 13.5, 15.9, 11.1, 4.9, 11.6, 11.1, 7.8, 15.9, 11.6, 7.3, 12.6]
-
-        # p1 9.2s
-        show(self, tb(["The most important special case of a traveling wave is the harmonic wave",
-                       "— a pure sinusoidal oscillation. This is what lasers, LEDs, and all",
-                       "coherent light sources produce."]), waits[0])
-
-        # p2 7.3s — main equation
-        psi = MathTex(r"\Psi(x,t)=A\sin(kx-\omega t+\phi)", font_size=52, color=E_COLOR)
-        psi.next_to(title, DOWN, buff=0.5)
-        self.play(Write(psi, run_time=0.8))
-        self.play(Create(gold_box(psi)))
-        self.wait(waits[1])
-
-        # p3-p10: one symbol per paragraph
-        symbols = [
-            (r"A", "AMPLITUDE — maximum displacement [V/m for E-field]", INTENSITY_COLOR, waits[2]),
-            (r"k=\frac{2\pi}{\lambda}", "WAVE NUMBER — spatial frequency [rad/m]", WAVE_COLOR, waits[3]),
-            (r"\omega=2\pi f=\frac{2\pi}{T}", "ANGULAR FREQUENCY [rad/s]", WAVE_COLOR, waits[4]),
-            (r"\lambda", "WAVELENGTH — distance between crests [m]", WAVE_COLOR, waits[5]),
-            (r"f=1/T", "FREQUENCY — cycles per second [Hz]", WAVE_COLOR, waits[6]),
-            (r"T", "PERIOD — time for one full cycle [s]", WAVE_COLOR, waits[7]),
-            (r"v=\omega/k=f\lambda", "PHASE SPEED — how fast crests move [m/s]", WAVE_COLOR, waits[8]),
-            (r"\phi", "INITIAL PHASE — shifts wave in time [rad]", WHITE, waits[9]),
-        ]
-
-        for latex, label, color, wait in symbols:
-            eq = labeled_eq(latex, label, color, 50, 26)
-            eq.next_to(psi, DOWN, buff=0.4)
-            show(self, eq, wait)
-
-        # p11 15.9s — key relations
-        rels = eq_table([
-            (r"v=f\lambda=\omega/k", "wave speed = frequency x wavelength", GOLD),
-            (r"k=2\pi/\lambda", "wave number from wavelength", WAVE_COLOR),
-            (r"T=1/f=2\pi/\omega", "period from frequency", WAVE_COLOR),
-        ], eq_fs=34, lbl_fs=24, buff=0.28)
-        rels.next_to(psi, DOWN, buff=0.4)
-        show(self, rels, waits[10])
-
-        # p12 11.6s — example setup
-        show(self, tb(["Example: green laser, lambda = 500 nm, v = c = 3x10^8 m/s."]), waits[11])
-
-        # p13 7.3s — k and f
-        steps1 = VGroup(
-            MathTex(r"k=2\pi/500\times10^{-9}=1.257\times10^7\text{ rad/m}", font_size=30, color=WAVE_COLOR),
-            MathTex(r"f=c/\lambda=3\times10^8/500\times10^{-9}=6\times10^{14}\text{ Hz}", font_size=30, color=WAVE_COLOR),
-        ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        for s in steps1: safe_scale(s, max_width=13.0)
-        steps1.next_to(psi, DOWN, buff=0.4)
-        show(self, steps1, waits[12])
-
-        # p14 12.6s — omega and T
-        steps2 = VGroup(
-            MathTex(r"\omega=2\pi f=3.77\times10^{15}\text{ rad/s}", font_size=32, color=WAVE_COLOR),
-            MathTex(r"T=1/f=1.67\times10^{-15}\text{ s}=1.67\text{ fs}", font_size=32, color=GOLD),
-        ).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
-        for s in steps2: safe_scale(s, max_width=13.0)
-        steps2.next_to(psi, DOWN, buff=0.4)
-        show(self, steps2, waits[13])
-
-        self.play(FadeOut(VGroup(title, psi)))
-
-
-class HarmonicWaveExample(Scene):
-    # p1=6.8s p2=33.7s p3=9.2s  total=50.9s
+class WaveEquationProof_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/HarmonicWaveExample.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/HarmonicWaveExample.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/WaveEquationProof_p3.mp3", time_offset=0)
+        title = Text("Proof: f(x-vt) Satisfies the Wave Equation", font_size=34, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "This confirms that any function of the form x minus vt is a",
+            "valid travelling wave.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p1.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The most important special case of a travelling wave is the",
+            "harmonic wave — a pure sine or cosine oscillation.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p2.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = MathTex(r"\Psi(x,t) = A\sin(kx - \omega t + \phi)", font_size=52, color=E_COLOR)
+        safe_scale(eq, max_width=13.0)
+        eq.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(eq, run_time=0.1))
+        self.play(Create(gold_box(eq)))
+        self.wait(1)
+
+class HarmonicWave_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p3.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"A", font_size=56, color=INTENSITY_COLOR)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("AMPLITUDE", font_size=30, color=INTENSITY_COLOR, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("max displacement  [V/m for E-field]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "Let's go through every symbol carefully, because these appear",
+            "constantly throughout the course.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p4.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"k = 2\pi/\lambda", font_size=56, color=WAVE_COLOR)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("WAVE NUMBER", font_size=30, color=WAVE_COLOR, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("spatial frequency  [rad/m]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "A is the amplitude — the maximum value of the wave. For an",
+            "electric field, it's in volts per metre. For a pressure wave, it",
+            "would be in Pascals.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p5.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"\omega = 2\pi f = 2\pi/T", font_size=56, color=WAVE_COLOR)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("ANGULAR FREQUENCY", font_size=30, color=WAVE_COLOR, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("[rad/s]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "k is the wave number, equal to 2 pi divided by the wavelength",
+            "lambda. It tells you how many radians of oscillation fit into",
+            "one metre of space. Its units are radians per metre.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p6.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"\lambda", font_size=56, color=WAVE_COLOR)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("WAVELENGTH", font_size=30, color=WAVE_COLOR, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("distance between crests  [m]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "Omega is the angular frequency, equal to 2 pi times the",
+            "frequency f. It tells you how many radians of oscillation happen",
+            "per second.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p7.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"f = 1/T", font_size=56, color=WAVE_COLOR)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("FREQUENCY", font_size=30, color=WAVE_COLOR, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("cycles per second  [Hz]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "Lambda is the wavelength — the distance between two consecutive",
+            "crests.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p8.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"v = \omega/k = f\lambda", font_size=56, color=WAVE_COLOR)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("PHASE SPEED", font_size=30, color=WAVE_COLOR, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("speed of crests  [m/s]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "f is the ordinary frequency in hertz — how many full cycles per",
+            "second. Related to the period T by f equals one over T.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p9(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p9.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sym = MathTex(r"\phi", font_size=56, color=WHITE)
+        safe_scale(sym, max_width=13.0)
+        sym.next_to(title, DOWN, buff=0.45)
+        nm = Text("INITIAL PHASE", font_size=30, color=WHITE, weight=BOLD)
+        nm.next_to(sym, DOWN, buff=0.2)
+        dd = Text("shifts wave in time  [rad]", font_size=26, color=WHITE)
+        safe_scale(dd, max_width=13.0)
+        dd.next_to(nm, DOWN, buff=0.2)
+        b = txt_block([
+            "v is the phase speed — how fast the wave crests move. It equals",
+            "omega divided by k, which also equals f times lambda.",
+        ])
+        b.next_to(dd, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p10(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p10.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        hdr = Text("Key Relations — MEMORISE", font_size=28, color=GOLD)
+        hdr.next_to(title, DOWN, buff=0.4)
+        rels = MathTex(r"v = f\lambda = rac{\omega}{k}\qquad k=rac{2\pi}{\lambda}\qquad \omega=2\pi f\qquad T=rac{1}{f}", font_size=38)
+        safe_scale(rels, max_width=13.0)
+        rels.next_to(hdr, DOWN, buff=0.3)
+        b = txt_block([
+            "And phi is the initial phase offset — it shifts the wave left or",
+            "right in time.",
+        ])
+        b.next_to(rels, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(hdr, rels, b), run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p11(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p11.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Let's do a quick example. Given lambda equals 500 nanometres and",
+            "v equals 3 times 10 to the 8 metres per second — visible green",
+            "light — we can find all the other quantities.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p12(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p12.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "k equals 2 pi divided by 500 times 10 to the minus 9, which",
+            "gives us 1.257 times 10 to the 7 radians per metre.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p13(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p13.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Multiplying by v gives omega equal to 3.77 times 10 to the 15",
+            "radians per second.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWave_p14(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWave_p14.mp3", time_offset=0)
+        title = Text("Harmonic Traveling Waves", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "And the period T equals 2 pi divided by omega, giving 1.67 times",
+            "10 to the minus 15 seconds — about 1.7 femtoseconds. Light",
+            "oscillates extraordinarily fast.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWaveExample_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWaveExample_p1.mp3", time_offset=0)
         title = Text("Example: Green Laser (lambda = 532 nm)", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        b = txt_block([
+            "Let's work through a complete numerical example using a green",
+            "laser pointer at 532 nanometres.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        # p1 6.8s
-        show(self, tb(["Given: lambda = 532 nm,  v = c = 3.00 x 10^8 m/s",
-                       "Find: k, f, omega, T"]), 6.8)
-
-        # p2 33.7s
-        solver = StepSolver(self, title, start_buff=0.55)
-        solver.add_step(1, r"k=2\pi/532\times10^{-9}=1.181\times10^7\text{ rad/m}", "wave number", WAVE_COLOR)
-        solver.add_step(2, r"f=c/\lambda=5.64\times10^{14}\text{ Hz}", "frequency: 564 THz", WAVE_COLOR)
-        solver.add_step(3, r"\omega=2\pi f=3.54\times10^{15}\text{ rad/s}", "angular frequency", WAVE_COLOR)
-        solver.add_step(4, r"T=1/f=1.77\text{ fs}", "period: 1.77 femtoseconds", GOLD)
-        solver.finalize()
-        self.wait(50.9)
-
-        # p3 9.2s
-        self.play(FadeOut(VGroup(*solver.steps)))
-        show(self, tb(["These numbers give a feel for how incredibly fast optical oscillations are.",
-                       "The period of 1.77 femtoseconds is 1.77 millionths of a nanosecond."]), 9.2)
-        self.play(FadeOut(title))
-
-
-class SuperpositionPrinciple(Scene):
-    # p1=5.8s p2=21.7s p3=15.5s  total=44.2s
+class HarmonicWaveExample_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/SuperpositionPrinciple.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/SuperpositionPrinciple.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/HarmonicWaveExample_p2.mp3", time_offset=0)
+        title = Text("Example: Green Laser (lambda = 532 nm)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        steps = VGroup(
+            labeled_eq(r"k=2\pi/(532	imes10^{-9})=1.18	imes10^7\,\text{rad/m}", "wave number", WAVE_COLOR, 34, 22),
+            labeled_eq(r"f=c/\lambda=5.64	imes10^{14}\,\text{Hz}", "frequency (564 THz)", WAVE_COLOR, 34, 22),
+            labeled_eq(r"\omega=2\pi f=3.54	imes10^{15}\,\text{rad/s}", "angular frequency", WAVE_COLOR, 34, 22),
+            labeled_eq(r"T=1/f=1.77\times10^{-15}\,\text{s}=1.77\,\text{fs}", "period (femtoseconds!)", GOLD, 34, 22),
+        ).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
+        safe_scale(steps, max_width=13.0, max_height=4.8)
+        steps.next_to(title, DOWN, buff=0.45)
+        self.play(FadeIn(steps, run_time=0.1))
+        self.wait(1)
+
+class HarmonicWaveExample_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/HarmonicWaveExample_p3.mp3", time_offset=0)
+        title = Text("Example: Green Laser (lambda = 532 nm)", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "These numbers give you a feel for how incredibly fast optical",
+            "oscillations are — nearly a quadrillion cycles per second.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class SuperpositionPrinciple_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SuperpositionPrinciple_p1.mp3", time_offset=0)
         title = Text("The Principle of Superposition", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        b = txt_block([
+            "The superposition principle is the mathematical foundation of",
+            "all interference and diffraction phenomena.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        # p1 5.8s
-        show(self, tb(["The wave equation is LINEAR.",
-                       "Psi appears only to the first power — no Psi squared, no products."]), 5.8)
-
-        # p2 21.7s — statement + proof
-        stmt = tb(["If Psi_1 and Psi_2 each satisfy the wave equation,",
-                   "then Psi_1 + Psi_2 is ALSO a valid solution."])
+class SuperpositionPrinciple_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/SuperpositionPrinciple_p2.mp3", time_offset=0)
+        title = Text("The Principle of Superposition", font_size=38, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
         proof = MathTex(
-            r"\partial^2(\Psi_1+\Psi_2)/\partial x^2=\partial^2\Psi_1/\partial x^2+\partial^2\Psi_2/\partial x^2=\frac{1}{v^2}\partial^2(\Psi_1+\Psi_2)/\partial t^2\;\checkmark",
-            font_size=27)
+            r"\frac{\partial^2(\Psi_1+\Psi_2)}{\partial x^2}"
+            r"=\frac{\partial^2\Psi_1}{\partial x^2}+\frac{\partial^2\Psi_2}{\partial x^2}"
+            r"=\frac{1}{v^2}\frac{\partial^2(\Psi_1+\Psi_2)}{\partial t^2}\;\checkmark",
+            font_size=32)
         safe_scale(proof, max_width=13.0)
-        block = VGroup(stmt, proof).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-        block.next_to(title, DOWN, buff=0.5)
-        show(self, block, 21.7)
+        proof.next_to(title, DOWN, buff=0.45)
+        b = txt_block([
+            "Because the wave equation is linear, any sum of solutions is",
+            "also a solution. If wave 1 and wave 2 each satisfy the wave",
+            "equation independently, then wave 1 plus wave 2 is automatically",
+            "also a valid wave. The proof simply adds the two equations",
+            "together.",
+        ])
+        b.next_to(proof, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(proof, b), run_time=0.1))
+        self.wait(1)
 
-        # p3 15.5s
-        show(self, tb(["Why this matters enormously:",
-                       "It is the mathematical basis for ALL interference and diffraction.",
-                       "Two laser beams can cross — their fields simply ADD with no interaction.",
-                       "White light = sum of many harmonic waves at different frequencies."]), 15.5)
-
-        self.play(FadeOut(title))
-
-
-class PhaseGroupVelocity(Scene):
-    # 10 paras: [7.8,13.5,21.2,12.1,17.4,13.0,9.7,9.2,8.2,13.5]  total=129.6s
+class SuperpositionPrinciple_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/PhaseGroupVelocity.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/PhaseGroupVelocity.mp3", time_offset=0)
-        title = Text("Phase Velocity & Group Velocity", font_size=38, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/SuperpositionPrinciple_p3.mp3", time_offset=0)
+        title = Text("The Principle of Superposition", font_size=38, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        b = txt_block([
+            "This means two laser beams can cross in space and their electric",
+            "fields simply add — they don't interact, scatter, or change each",
+            "other. This is what makes optical computing and holography",
+            "possible.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        waits = [7.8, 13.5, 21.2, 12.1, 17.4, 13.0, 9.7, 9.2, 8.2, 13.5]
-
-        # p1 7.8s
-        show(self, tb(["There are TWO fundamentally different speeds associated with any wave.",
-                       "Confusing them is a classic exam mistake — understand the difference."]), waits[0])
-
-        # p2 13.5s — phase velocity
-        vp = labeled_eq(r"v_p=\omega/k", "PHASE VELOCITY — speed of wave crests  [m/s]", WAVE_COLOR, 56, 28)
-        vp.next_to(title, DOWN, buff=0.5)
-        show(self, vp, waits[1])
-
-        # p3 21.2s — group velocity
-        vg = labeled_eq(r"v_g=d\omega/dk", "GROUP VELOCITY — speed of energy/information  [m/s]", WAVE_COLOR, 56, 28)
-        vg.next_to(title, DOWN, buff=0.5)
-        show(self, vg, waits[2])
-
-        # p4 12.1s
-        show(self, tb(["In vacuum and non-dispersive media: v_g = v_p.",
-                       "All frequencies travel at the same speed.",
-                       "The wave packet holds its shape perfectly."]), waits[3])
-
-        # p5 17.4s
-        show(self, tb(["In a dispersive medium (glass, water): v_g differs from v_p.",
-                       "Different frequencies travel at different speeds.",
-                       "The wave packet spreads out — pulse broadening.",
-                       "This causes chromatic dispersion in optical fibres."]), waits[4])
-
-        # p6 13.0s
-        show(self, tb(["A prism separates white light because different frequencies",
-                       "have different phase velocities in glass.",
-                       "They refract at different angles — dispersion!"]), waits[5])
-
-        # p7 9.7s — relation to dispersion relation
-        show(self, tb(["The dispersion relation omega(k) determines both speeds.",
-                       "For light in vacuum: omega = ck, so v_p = v_g = c."]), waits[6])
-
-        # p8 9.2s — example intro
-        show(self, tb(["Example: dispersion relation omega = a k squared."]), waits[7])
-
-        # p9 8.2s — example calculation
-        solver = StepSolver(self, title, start_buff=0.55)
-        solver.add_step(1, r"v_p=\omega/k=ak", "phase velocity depends on k — dispersive", WAVE_COLOR)
-        solver.add_step(2, r"v_g=d\omega/dk=2ak", "group velocity", WAVE_COLOR)
-        solver.add_step(3, r"v_g=2v_p", "envelope travels TWICE as fast as the crests!", GOLD)
-        solver.finalize()
-        self.wait(waits[8])
-
-        # p10 13.5s
-        self.play(FadeOut(VGroup(*solver.steps)))
-        show(self, tb(["Physical meaning: the energy-carrying envelope moves at 2ak,",
-                       "while individual wave crests move at ak.",
-                       "This is directly observable in water waves."]), waits[9])
-
-        self.play(FadeOut(title))
-
-
-class ComplexRepresentation(Scene):
-    # 8 paras: [13.0,15.9,9.7,21.2,17.8,13.0,23.6,15.9]  total=133.4s
+class PhaseGroupVelocity_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/ComplexRepresentation.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/ComplexRepresentation.mp3", time_offset=0)
-        title = Text("Complex Representation of Waves", font_size=38, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p1.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        b = txt_block([
+            "There are actually two different speeds associated with a wave,",
+            "and confusing them is a classic mistake.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        waits = [13.0, 15.9, 9.7, 21.2, 17.8, 13.0, 23.6, 15.9]
+class PhaseGroupVelocity_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p2.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = labeled_eq(r"v_p = \omega/k", "PHASE VELOCITY — speed of wave crests  [m/s]", WAVE_COLOR, 52, 28)
+        eq.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "The phase velocity is the speed at which the crests of the wave",
+            "move. It's simply omega divided by k. This is the speed of a",
+            "single frequency component.",
+        ])
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(eq, b), run_time=0.1))
+        self.wait(1)
 
-        # p1 13.0s
-        show(self, tb(["Working with sines and cosines becomes cumbersome when adding",
-                       "multiple waves or computing intensities.",
-                       "Complex exponentials make everything MUCH easier."]), waits[0])
+class PhaseGroupVelocity_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p3.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = labeled_eq(r"v_g = d\omega/dk", "GROUP VELOCITY — speed of energy and information  [m/s]", WAVE_COLOR, 52, 28)
+        eq.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "The group velocity is the speed at which the envelope of a wave",
+            "packet moves — this is the speed at which energy and information",
+            "actually travel. It's defined as d omega d k — the derivative of",
+            "angular frequency with respect to wave number.",
+        ])
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(eq, b), run_time=0.1))
+        self.wait(1)
 
-        # p2 15.9s — Euler's formula
-        euler = MathTex(r"e^{i\theta}=\cos\theta+i\sin\theta", font_size=60, color=GOLD)
-        euler.next_to(title, DOWN, buff=0.5)
-        self.play(Write(euler, run_time=0.8))
-        self.play(Create(gold_box(euler)))
-        self.wait(waits[1])
-        self.play(FadeOut(euler))
+class PhaseGroupVelocity_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p4.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "In vacuum, and in any non-dispersive medium, these two speeds",
+            "are identical. Every frequency travels at the same speed, so the",
+            "wave packet holds its shape.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        # p3 9.7s
-        cons = VGroup(
-            labeled_eq(r"\cos\theta=\mathrm{Re}[e^{i\theta}]", "cosine = real part", WHITE, 40, 24),
-            labeled_eq(r"\sin\theta=\mathrm{Im}[e^{i\theta}]", "sine = imaginary part", WHITE, 40, 24),
+class PhaseGroupVelocity_p5(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p5.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "But in a dispersive medium like glass, different frequencies",
+            "travel at different speeds — that's exactly what dispersion",
+            "means. The phase velocity varies with frequency. And this causes",
+            "the group velocity to differ from the phase velocity.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PhaseGroupVelocity_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p6.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "This is why a prism separates white light into a rainbow. Red",
+            "light and violet light have different phase velocities in glass,",
+            "so they refract at different angles.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PhaseGroupVelocity_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p7.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Let's look at a concrete example. Suppose the dispersion",
+            "relation is omega equals a times k squared — a hypothetical",
+            "case.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PhaseGroupVelocity_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p8.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The phase velocity is omega over k, which equals a k. It depends",
+            "on k, so this medium is dispersive.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PhaseGroupVelocity_p9(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p9.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The group velocity is d omega d k, which equals 2 a k. That's",
+            "twice the phase velocity.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class PhaseGroupVelocity_p10(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PhaseGroupVelocity_p10.mp3", time_offset=0)
+        title = Text("Phase Velocity and Group Velocity", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "So in this medium, the envelope of a wave packet travels twice",
+            "as fast as the individual crests inside it. Fascinating",
+            "behaviour, and directly measurable in real dispersive media.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ComplexRepresentation_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p1.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Working with sines and cosines directly becomes very cumbersome",
+            "as soon as you try to add waves or compute intensities. There's",
+            "a much better way — complex exponentials.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ComplexRepresentation_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p2.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = MathTex(r"e^{i\theta} = \cos\theta + i\sin\theta", font_size=60, color=GOLD)
+        safe_scale(eq)
+        eq.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(eq, run_time=0.1))
+        self.play(Create(gold_box(eq)))
+        b = txt_block([
+            "The key is Euler's formula: e to the power of i theta equals",
+            "cosine theta plus i times sine theta. This connects the",
+            "exponential function to trigonometry in a beautiful and",
+            "extremely useful way.",
+        ])
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ComplexRepresentation_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p3.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eqs = VGroup(
+            labeled_eq(r"\cos\theta = \mathrm{Re}[e^{i\theta}]", "cosine = real part", WHITE, 40, 24),
+            labeled_eq(r"\sin\theta = \mathrm{Im}[e^{i\theta}]", "sine = imaginary part", WHITE, 40, 24),
         ).arrange(DOWN, buff=0.4)
-        cons.next_to(title, DOWN, buff=0.5)
-        show(self, cons, waits[2])
+        eqs.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "From this, cosine theta equals the real part of e to the i",
+            "theta, and sine theta is the imaginary part.",
+        ])
+        b.next_to(eqs, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
+        self.wait(1)
 
-        # p4 21.2s — complex wave
-        cwave = MathTex(r"\tilde{\Psi}(x,t)=Ae^{i(kx-\omega t+\phi)}", font_size=50, color=E_COLOR)
-        rule = MathTex(r"\text{Physical wave}=\mathrm{Re}[\tilde{\Psi}]=A\cos(kx-\omega t+\phi)",
-                       font_size=34, color=WHITE)
-        safe_scale(rule, max_width=13.0)
-        cblock = VGroup(cwave, rule).arrange(DOWN, buff=0.4)
-        cblock.next_to(title, DOWN, buff=0.5)
-        show(self, cblock, waits[3])
-
-        # p5 17.8s — why better
-        show(self, tb(["Why is this better?",
-                       "Multiplying: e^(ia) x e^(ib) = e^(i(a+b)) — trivial!",
-                       "Adding waves: just add complex numbers directly.",
-                       "No more cos squared integrals — vastly simpler algebra."]), waits[4])
-
-        # p6 13.0s — intensity
-        I_eq = labeled_eq(r"I\propto|\tilde{\Psi}|^2=\tilde{\Psi}\cdot\tilde{\Psi}^*=A^2",
-                          "always real and positive — no oscillating terms", INTENSITY_COLOR, 40, 26)
-        I_eq.next_to(title, DOWN, buff=0.5)
-        show(self, I_eq, waits[5])
-
-        # p7 23.6s — 3D plane wave
-        pw = MathTex(r"\tilde{\Psi}(\vec{r},t)=Ae^{i(\vec{k}\cdot\vec{r}-\omega t)}", font_size=48, color=E_COLOR)
-        pw_sym = eq_table([
-            (r"\vec{k}", "wave vector — points in direction of propagation", WAVE_COLOR),
-            (r"\vec{k}\cdot\vec{r}=k_xx+k_yy+k_zz", "phase along propagation direction", WHITE),
-        ], eq_fs=28, lbl_fs=22, buff=0.22)
-        pw_block = VGroup(pw, pw_sym).arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        safe_scale(pw_block, max_width=13.0, max_height=4.2)
-        pw_block.next_to(title, DOWN, buff=0.5)
-        show(self, pw_block, waits[6])
-
-        # p8 15.9s — spherical wave
-        sw = labeled_eq(r"\tilde{\Psi}(r,t)=\frac{A}{r}e^{i(kr-\omega t)}",
-                        "amplitude = A/r (1/r falloff ensures inverse-square law)", B_COLOR, 46, 25)
-        sw.next_to(title, DOWN, buff=0.5)
-        show(self, sw, waits[7])
-        self.play(FadeOut(title))
-
-
-class ThreeDWaves(Scene):
-    # p1=21.7s p2=8.7s p3=25.0s  total=56.6s
+class ComplexRepresentation_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/ThreeDWaves.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/ThreeDWaves.mp3", time_offset=0)
-        title = Text("3D Plane Waves & Spherical Waves", font_size=36, color=GOLD)
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p4.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        cw = MathTex(r"\tilde{\Psi} = A\,e^{i(kx-\omega t+\phi)}", font_size=50, color=E_COLOR)
+        safe_scale(cw)
+        cw.next_to(title, DOWN, buff=0.45)
+        rule = MathTex(r"\Psi_{\rm phys} = \mathrm{Re}[\tilde{\Psi}] = A\cos(kx-\omega t+\phi)", font_size=34)
+        safe_scale(rule, max_width=13.0)
+        rule.next_to(cw, DOWN, buff=0.25)
+        b = txt_block([
+            "So instead of writing A cosine of kx minus omega t plus phi, we",
+            "write A times e to the power of i times kx minus omega t plus",
+            "phi. The physical wave is always understood to be the real part",
+            "of this complex expression.",
+        ])
+        b.next_to(rule, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(cw, rule, b), run_time=0.1))
+        self.wait(1)
 
-        # p1 21.7s — plane wave
-        plane = MathTex(r"\tilde{\Psi}(\vec{r},t)=Ae^{i(\vec{k}\cdot\vec{r}-\omega t)}", font_size=50, color=E_COLOR)
-        plane.next_to(title, DOWN, buff=0.45)
-        self.play(Write(plane, run_time=0.8))
-        sym = eq_table([
-            (r"\vec{k}", "wave vector — points in propagation direction", WAVE_COLOR),
-            (r"|\vec{k}|=k=2\pi/\lambda", "magnitude = wave number", WAVE_COLOR),
-        ], eq_fs=30, lbl_fs=22, buff=0.25)
-        sym.next_to(plane, DOWN, buff=0.35)
-        self.play(FadeIn(sym))
-        self.wait(waits[0] if False else 21.7)
-        self.play(FadeOut(sym))
-
-        # p2 8.7s
-        wf = tb(["Wavefronts — surfaces of constant phase — are flat planes",
-                 "perpendicular to k. Hence the name: PLANE wave."])
-        wf.next_to(plane, DOWN, buff=0.35)
-        show(self, wf, 8.7)
-        self.play(FadeOut(plane))
-
-        # p3 25.0s — spherical wave
-        sphere = labeled_eq(r"\tilde{\Psi}(r,t)=\frac{A}{r}e^{i(kr-\omega t)}",
-                            "amplitude falls as 1/r — energy conservation over sphere 4 pi r squared",
-                            B_COLOR, 46, 25)
-        note = tb(["The 1/r amplitude ensures intensity falls as 1/r squared.",
-                   "Far from a point source, the wavefront looks locally flat.",
-                   "This is why we use plane waves for lasers and starlight."])
-        sblock = VGroup(sphere, note).arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-        safe_scale(sblock, max_width=13.0, max_height=4.2)
-        sblock.next_to(title, DOWN, buff=0.5)
-        show(self, sblock, 25.0)
-        self.play(FadeOut(title))
-
-
-class Week1WavesSummary(Scene):
-    # p1=3.9s p2=12.1s p3=14.5s p4=16.4s  total=48.5s
+class ComplexRepresentation_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/Week1WavesSummary.mp3", time_offset=0)
-        self.add_sound(f"{AUDIO}/Week1WavesSummary.mp3", time_offset=0)
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p5.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Why is this better? Because multiplying complex exponentials is",
+            "trivial — you just add the exponents. Adding waves becomes just",
+            "adding complex numbers. And computing intensities becomes taking",
+            "the magnitude squared, which is always real and always positive.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ComplexRepresentation_p6(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p6.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The intensity is proportional to the magnitude squared of psi —",
+            "psi times its complex conjugate — which simply gives A squared.",
+            "No oscillating terms to average over.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ComplexRepresentation_p7(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p7.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "Now we can extend this to three dimensions. A plane wave in 3D",
+            "is written as A times e to the i times k-vector dot r-vector",
+            "minus omega t. The k-vector points in the direction of",
+            "propagation, and k-vector dot r-vector is the projection of the",
+            "position onto that direction.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ComplexRepresentation_p8(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ComplexRepresentation_p8.mp3", time_offset=0)
+        title = Text("Complex Representation of Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "A spherical wave spreading out from a point source has amplitude",
+            "that falls off as one over r — this ensures energy is conserved",
+            "as the wavefront expands over a larger and larger sphere.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ThreeDWaves_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ThreeDWaves_p1.mp3", time_offset=0)
+        title = Text("3D Plane Waves and Spherical Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        pw = MathTex(r"\tilde{\Psi}(\mathbf{r},t)=A\,e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}", font_size=50, color=E_COLOR)
+        safe_scale(pw)
+        pw.next_to(title, DOWN, buff=0.45)
+        sym = eq_table([
+            (r"\mathbf{k}", "wave vector — points in propagation direction", WAVE_COLOR),
+            (r"|\mathbf{k}|=k=2\pi/\lambda", "magnitude = wave number", WAVE_COLOR),
+        ], eq_fs=30, lbl_fs=22, buff=0.22)
+        sym.next_to(pw, DOWN, buff=0.35)
+        b = txt_block([
+            "Extending from one dimension to three dimensions, a plane wave",
+            "is written as A times e to the power of i times k-vector dot",
+            "r-vector minus omega t. The wave vector k-vector points in the",
+            "direction of propagation, and its magnitude is the wave number",
+            "k.",
+        ])
+        b.next_to(sym, DOWN, buff=0.3)
+        self.play(FadeIn(VGroup(pw, sym, b), run_time=0.1))
+        self.wait(1)
+
+class ThreeDWaves_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ThreeDWaves_p2.mp3", time_offset=0)
+        title = Text("3D Plane Waves and Spherical Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        b = txt_block([
+            "The wavefronts — surfaces of constant phase — are flat planes",
+            "perpendicular to k-vector. Hence the name plane wave.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
+
+class ThreeDWaves_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/ThreeDWaves_p3.mp3", time_offset=0)
+        title = Text("3D Plane Waves and Spherical Waves", font_size=36, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        sw = labeled_eq(r"\tilde{\Psi}(r,t)=\frac{A}{r}e^{i(kr-\omega t)}",
+                        "amplitude = A/r  →  intensity falls as 1/r squared", B_COLOR, 46, 25)
+        sw.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "A spherical wave from a point source has the form A over r times",
+            "e to the i kr minus omega t. The amplitude falls off as 1 over",
+            "r, which is required by energy conservation: as the wavefront",
+            "expands over a larger sphere, the intensity must decrease as 1",
+            "over r squared.",
+        ])
+        b.next_to(sw, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(sw, b), run_time=0.1))
+        self.wait(1)
+
+class Week1WavesSummary_p1(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week1WavesSummary_p1.mp3", time_offset=0)
         title = Text("Week 1 Summary — Key Equations", font_size=40, color=GOLD)
         title.to_edge(UP, buff=0.4)
         self.add(title)
+        b = txt_block([
+            "Let's recap the three essential equations from Week 1.",
+        ])
+        b.next_to(title, DOWN, buff=0.5)
+        self.play(FadeIn(b, run_time=0.1))
+        self.wait(1)
 
-        waits = [3.9, 12.1, 14.5, 16.4]
+class Week1WavesSummary_p2(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week1WavesSummary_p2.mp3", time_offset=0)
+        title = Text("Week 1 Summary — Key Equations", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = labeled_eq(r"\partial^2\Psi/\partial x^2=(1/v^2)\partial^2\Psi/\partial t^2", "wave equation", GOLD, 34, 24)
+        eq.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "First: the wave equation itself — the second spatial derivative",
+            "equals one over v squared times the second time derivative. This",
+            "governs all classical wave phenomena.",
+        ])
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(eq, b), run_time=0.1))
+        self.wait(1)
 
-        show(self, tb(["Here are the essential formulas from Week 1."]), waits[0])
+class Week1WavesSummary_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week1WavesSummary_p3.mp3", time_offset=0)
+        title = Text("Week 1 Summary — Key Equations", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = labeled_eq(r"v=f\lambda=\omega/k,\;k=2\pi/\lambda,\;\omega=2\pi f", "harmonic wave relations", WAVE_COLOR, 34, 24)
+        eq.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "Second: the harmonic wave relations — v equals f lambda equals",
+            "omega over k, with k equals 2 pi over lambda and omega equals 2",
+            "pi f. Know these relationships cold.",
+        ])
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(eq, b), run_time=0.1))
+        self.wait(1)
 
-        rows = [
-            (r"\partial^2\Psi/\partial x^2=(1/v^2)\partial^2\Psi/\partial t^2", "wave equation", GOLD),
-            (r"v=f\lambda=\omega/k,\; k=2\pi/\lambda,\; \omega=2\pi f", "harmonic wave relations", WAVE_COLOR),
-            (r"\tilde{\Psi}=Ae^{i(kx-\omega t)},\; |\tilde{\Psi}|^2=A^2", "complex representation", E_COLOR),
-        ]
-        for i, (latex, lbl, color) in enumerate(rows):
-            eq = labeled_eq(latex, lbl, color, 32, 24)
-            eq.next_to(title, DOWN, buff=0.5)
-            show(self, eq, waits[i+1])
-
-        self.play(FadeOut(title))
+class Week1WavesSummary_p4(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/Week1WavesSummary_p4.mp3", time_offset=0)
+        title = Text("Week 1 Summary — Key Equations", font_size=40, color=GOLD)
+        title.to_edge(UP, buff=0.4)
+        self.add(title)
+        eq = labeled_eq(r"\tilde\Psi=Ae^{i(kx-\omega t)},\;|\tilde\Psi|^2=A^2", "complex representation", E_COLOR, 34, 24)
+        eq.next_to(title, DOWN, buff=0.5)
+        b = txt_block([
+            "Third: the complex representation — psi tilde equals A e to the",
+            "i times kx minus omega t. The physical wave is the real part.",
+            "The intensity is the magnitude squared, which equals A squared.",
+        ])
+        b.next_to(eq, DOWN, buff=0.35)
+        self.play(FadeIn(VGroup(eq, b), run_time=0.1))
+        self.wait(1)
