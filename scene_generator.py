@@ -52,7 +52,7 @@ class {cn}(Scene):
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
 def make_eq_scene(scene, pidx, para, title, title_fs, latex, eq_color='WHITE', extra_after=''):
@@ -75,7 +75,7 @@ class {cn}(Scene):
         ])
         b.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
 # ── WEEK 1 WAVES ─────────────────────────────────────────────────────────────
@@ -103,7 +103,7 @@ class {cn}(Scene):
         ])
         b.move_to(ORIGIN)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # ── WaveIntroduction ──────────────────────────────────────────────────────
@@ -137,7 +137,7 @@ class {cn}(Scene):
         ])
         b.next_to(eq, DOWN, buff=0.4)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # p2: left side
@@ -160,7 +160,7 @@ class {cn}(Scene):
         ])
         b.next_to(lbl, DOWN, buff=0.3)
         self.play(FadeIn(VGroup(lhs, lbl, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # p3: right side
@@ -183,7 +183,7 @@ class {cn}(Scene):
         ])
         b.next_to(lbl, DOWN, buff=0.3)
         self.play(FadeIn(VGroup(rhs, lbl, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # p4-p6: text scenes
@@ -208,7 +208,7 @@ class {cn}(Scene):
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     cn = 'WaveEquationProof_p2'
@@ -228,7 +228,7 @@ class {cn}(Scene):
         safe_scale(steps, max_width=13.0, max_height=4.5)
         steps.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(steps, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     cn = 'WaveEquationProof_p3'
@@ -245,7 +245,7 @@ class {cn}(Scene):
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # ── HarmonicWave (14 paras) ───────────────────────────────────────────────
@@ -271,7 +271,7 @@ class {cn}(Scene):
         eq.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(eq, run_time=0.1))
         self.play(Create(gold_box(eq)))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # p3-p10: one symbol per paragraph
@@ -307,7 +307,7 @@ class {cn}(Scene):
         ])
         b.next_to(dd, DOWN, buff=0.3)
         self.play(FadeIn(VGroup(sym, nm, dd, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # p10: key relations
@@ -330,7 +330,7 @@ class {cn}(Scene):
         ])
         b.next_to(rels, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(hdr, rels, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # p11-p14: example calculation
@@ -355,7 +355,7 @@ class {cn}(Scene):
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     cn = 'HarmonicWaveExample_p2'
@@ -376,7 +376,7 @@ class {cn}(Scene):
         safe_scale(steps, max_width=13.0, max_height=4.8)
         steps.next_to(title, DOWN, buff=0.45)
         self.play(FadeIn(steps, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     out += make_text_scene('HarmonicWaveExample', 2, paras[2], T, 36)
@@ -408,7 +408,7 @@ class {cn}(Scene):
         ])
         b.next_to(proof, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(proof, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     out += make_text_scene('SuperpositionPrinciple', 2, paras[2], T, 38)
@@ -435,7 +435,7 @@ class {cn}(Scene):
         ])
         b.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(eq, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     cn = 'PhaseGroupVelocity_p3'
@@ -454,7 +454,7 @@ class {cn}(Scene):
         ])
         b.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(eq, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     for i in range(3, 10):
@@ -485,7 +485,7 @@ class {cn}(Scene):
         ])
         b.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     cn = 'ComplexRepresentation_p3'
@@ -507,7 +507,7 @@ class {cn}(Scene):
         ])
         b.next_to(eqs, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(eqs, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     cn = 'ComplexRepresentation_p4'
@@ -530,7 +530,7 @@ class {cn}(Scene):
         ])
         b.next_to(rule, DOWN, buff=0.3)
         self.play(FadeIn(VGroup(cw, rule, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     for i in range(4, 8):
@@ -562,7 +562,7 @@ class {cn}(Scene):
         ])
         b.next_to(sym, DOWN, buff=0.3)
         self.play(FadeIn(VGroup(pw, sym, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     out += make_text_scene('ThreeDWaves', 1, paras[1], T, 36)
@@ -584,7 +584,7 @@ class {cn}(Scene):
         ])
         b.next_to(sw, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(sw, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     # ── Week1WavesSummary ─────────────────────────────────────────────────────
@@ -613,7 +613,7 @@ class {cn}(Scene):
         ])
         b.next_to(eq, DOWN, buff=0.35)
         self.play(FadeIn(VGroup(eq, b), run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     return out
@@ -668,7 +668,7 @@ class {cn}(Scene):
         ])
         b.next_to(title, DOWN, buff=0.5)
         self.play(FadeIn(b, run_time=0.1))
-        self.wait(1)
+        self.wait(120)
 '''
 
     add_para_scenes('MaxwellVacuum', "Maxwell's Equations in Vacuum", 36)

@@ -21,11 +21,11 @@ class SLT_Week2_Problem1(Scene):
             Text("(d) Discuss which angle is greater when n1<n2, n2<n1, and n1=n2.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))
 
 
@@ -46,9 +46,9 @@ class SLT_Week2_Problem2(Scene):
             Text("    like continuous electrocution? (Hint: think about potentials.)", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))

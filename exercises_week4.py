@@ -21,7 +21,7 @@ class SC_Week4_Problem1(Scene):
             r"M_S^{\text{bexb}} = \begin{pmatrix} -f_2/f_1 & f_1+f_2 \\ 0 & -f_1/f_2 \end{pmatrix}",
             font_size=36, color=N_COLOR)
         prob_eq.next_to(prob, DOWN, buff=0.3)
-        self.play(FadeIn(prob), FadeIn(prob_eq)); self.wait(2)
+        self.play(FadeIn(prob), FadeIn(prob_eq)); self.wait(120)
         self.play(FadeOut(VGroup(prob, prob_eq)))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
@@ -36,7 +36,7 @@ class SC_Week4_Problem1(Scene):
         safe_scale(s1, max_width=12.5)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(
@@ -56,7 +56,7 @@ class SC_Week4_Problem1(Scene):
             font_size=24)
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
-        self.play(Write(s3_grp)); self.wait(1)
+        self.play(Write(s3_grp)); self.wait(120)
 
         s4_lbl = step_label(4)
         s4 = MathTex(
@@ -75,7 +75,7 @@ class SC_Week4_Problem1(Scene):
         s5_grp = VGroup(s5_lbl, s5).arrange(RIGHT, buff=0.3)
         s5_grp.next_to(s4_grp, DOWN, buff=0.3)
         self.play(Write(s5_grp))
-        self.play(Create(gold_box(s5))); self.wait(2)
+        self.play(Create(gold_box(s5))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -93,7 +93,7 @@ class SC_Week4_Problem3(Scene):
             Text("(b) What magnification do we expect?", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -106,7 +106,7 @@ class SC_Week4_Problem3(Scene):
             font_size=30)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(r"s_{i1} = 337.5 \text{ mm}", font_size=34, color=N_COLOR)
@@ -145,5 +145,5 @@ class SC_Week4_Problem3(Scene):
             font_size=30, color=GOLD)
         note.next_to(s5_grp, DOWN, buff=0.3)
         self.play(Write(note))
-        self.play(Create(gold_box(VGroup(s4, note)))); self.wait(2)
+        self.play(Create(gold_box(VGroup(s4, note)))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

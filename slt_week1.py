@@ -22,11 +22,11 @@ class SLT_Week1_Problem1(Scene):
             Text("(d) Discuss why this matrix method is used in simulations.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))
 
 
@@ -52,9 +52,9 @@ class SLT_Week1_Problem2(Scene):
 
         prob = VGroup(prob_a, prob_eq, prob_a2, prob_b).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))

@@ -23,7 +23,7 @@ class SC_Week1_Problem1(Scene):
         prob_block = VGroup(problem_text, problem_eq, problem_end).arrange(DOWN, buff=0.2)
         prob_block.next_to(prob_title, DOWN, buff=0.4)
         self.play(FadeIn(prob_block))
-        self.wait(2)
+        self.wait(120)
 
         # ── Solution ──────────────────────────────────────────────────
         sol_title = Text("Solution:", font_size=30, color=GOLD)
@@ -68,7 +68,7 @@ class SC_Week1_Problem1(Scene):
         final.next_to(s5_grp, DOWN, buff=0.4)
         self.play(Write(final))
         self.play(Create(gold_box(final)))
-        self.wait(2)
+        self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -96,7 +96,7 @@ class SC_Week1_Problem2(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
         eqs.next_to(intro_text, DOWN, buff=0.3)
         self.play(FadeIn(eqs))
-        self.wait(2)
+        self.wait(120)
 
         # Fadeout and show solutions
         self.play(FadeOut(eqs), FadeOut(intro_text))
@@ -141,7 +141,7 @@ class SC_Week1_Problem2(Scene):
         self.play(FadeIn(c_block)); self.wait(1.5)
 
         self.play(Create(gold_box(VGroup(a2, b2, c2))))
-        self.wait(2)
+        self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -161,7 +161,7 @@ class SC_Week1_Problem3(Scene):
             Text("The magnitude of k is given by k.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
         prob_text.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob_text)); self.wait(2)
+        self.play(FadeIn(prob_text)); self.wait(120)
         self.play(FadeOut(prob_text))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
@@ -175,7 +175,7 @@ class SC_Week1_Problem3(Scene):
             font_size=34, color=WAVE_COLOR)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.2)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2     = MathTex(
@@ -184,7 +184,7 @@ class SC_Week1_Problem3(Scene):
             font_size=34, color=WAVE_COLOR)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.2)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3     = MathTex(
@@ -192,10 +192,10 @@ class SC_Week1_Problem3(Scene):
             font_size=38, color=E_COLOR)
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.2)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
-        self.play(Write(s3_grp)); self.wait(1)
+        self.play(Write(s3_grp)); self.wait(120)
 
         self.play(Create(gold_box(s3)))
-        self.wait(2)
+        self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -217,7 +217,7 @@ class SC_Week1_Problem4(Scene):
         prob_q    = Text("Find the magnetic field B(x,y,z,t).", font_size=26, color=WHITE)
         prob_block = VGroup(prob_text, prob_eq, prob_q).arrange(DOWN, buff=0.25)
         prob_block.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob_block)); self.wait(2)
+        self.play(FadeIn(prob_block)); self.wait(120)
         self.play(FadeOut(prob_block))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
@@ -259,7 +259,7 @@ class SC_Week1_Problem4(Scene):
         self.play(Write(s4_grp)); self.wait(0.8)
 
         self.play(Create(gold_box(s4)))
-        self.wait(2)
+        self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -283,7 +283,7 @@ class SC_Week1_Problem5(Scene):
             font_size=26, color=WHITE)
         prob_block = VGroup(prob_text, prob_eq1, prob_text2).arrange(DOWN, buff=0.2)
         prob_block.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob_block)); self.wait(2)
+        self.play(FadeIn(prob_block)); self.wait(120)
         self.play(FadeOut(prob_block))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
@@ -327,5 +327,5 @@ class SC_Week1_Problem5(Scene):
         self.play(Write(s4_grp)); self.wait(0.8)
 
         self.play(Create(gold_box(s4)))
-        self.wait(2)
+        self.wait(120)
         self.play(FadeOut(*self.mobjects))

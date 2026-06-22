@@ -18,7 +18,7 @@ class SC_Week7_Problem1(Scene):
             Text("(b) Find the width of the central maximum on the screen.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -57,7 +57,7 @@ class SC_Week7_Problem1(Scene):
         s4_grp = VGroup(s4_lbl, s4).arrange(RIGHT, buff=0.3)
         s4_grp.next_to(s3_grp, DOWN, buff=0.3)
         self.play(Write(s4_grp))
-        self.play(Create(gold_box(VGroup(s2, s4)))); self.wait(2)
+        self.play(Create(gold_box(VGroup(s2, s4)))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -75,7 +75,7 @@ class SC_Week7_Problem5(Scene):
             Text("FP: d=1 mm gap, finesse F=25. Compare R and FSR.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution — Grating:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -104,7 +104,7 @@ class SC_Week7_Problem5(Scene):
             font_size=32, color=WAVE_COLOR)
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
-        self.play(Write(s3_grp)); self.wait(1)
+        self.play(Write(s3_grp)); self.wait(120)
 
         self.play(FadeOut(VGroup(sol_title, s1_grp, s2_grp, s3_grp)))
         fp_title = Text("Fabry-Perot Comparison:", font_size=30, color=GOLD)
@@ -142,7 +142,7 @@ class SC_Week7_Problem5(Scene):
                        font_size=26, color=GOLD)
         compare.next_to(f3_grp, DOWN, buff=0.3)
         self.play(FadeIn(compare))
-        self.play(Create(gold_box(compare))); self.wait(2)
+        self.play(Create(gold_box(compare))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -160,7 +160,7 @@ class SC_Week7_Problem10(Scene):
             Text("Find the light spot diameter on the Moon's surface.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -192,5 +192,5 @@ class SC_Week7_Problem10(Scene):
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
         self.play(Write(s3_grp))
-        self.play(Create(gold_box(s3))); self.wait(2)
+        self.play(Create(gold_box(s3))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

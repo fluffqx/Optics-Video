@@ -17,7 +17,7 @@ class SC_Week8_Problem9(Scene):
             Text("Find the free spectral range, finesse, and spectral width.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -30,7 +30,7 @@ class SC_Week8_Problem9(Scene):
             font_size=30, color=WAVE_COLOR)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(
@@ -39,7 +39,7 @@ class SC_Week8_Problem9(Scene):
             font_size=30, color=N_COLOR)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3 = MathTex(
@@ -48,7 +48,7 @@ class SC_Week8_Problem9(Scene):
             font_size=30, color=INTENSITY_COLOR)
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
-        self.play(Write(s3_grp)); self.wait(1)
+        self.play(Write(s3_grp)); self.wait(120)
 
         s4_lbl = step_label(4)
         s4 = MathTex(
@@ -59,7 +59,7 @@ class SC_Week8_Problem9(Scene):
         s4_grp = VGroup(s4_lbl, s4).arrange(RIGHT, buff=0.3)
         s4_grp.next_to(s3_grp, DOWN, buff=0.3)
         self.play(Write(s4_grp))
-        self.play(Create(gold_box(VGroup(s2, s3)))); self.wait(2)
+        self.play(Create(gold_box(VGroup(s2, s3)))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -76,7 +76,7 @@ class SC_Week8_Problem10(Scene):
             Text("FP: R=0.95, FSR = 0.5 nm. Check if we can resolve the two lines.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -130,7 +130,7 @@ class SC_Week8_Problem10(Scene):
         conclusion = Text("YES — the FP can easily resolve the H and D lines!", font_size=28, color=GOLD)
         conclusion.next_to(s5_grp, DOWN, buff=0.3)
         self.play(FadeIn(conclusion))
-        self.play(Create(gold_box(conclusion))); self.wait(2)
+        self.play(Create(gold_box(conclusion))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -148,7 +148,7 @@ class SC_Week8_Problem3(Scene):
             Text("then find min resolvable wavelength difference Delta_lambda.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -197,5 +197,5 @@ class SC_Week8_Problem3(Scene):
         s5_grp = VGroup(s5_lbl, s5).arrange(RIGHT, buff=0.3)
         s5_grp.next_to(s4_grp, DOWN, buff=0.3)
         self.play(Write(s5_grp))
-        self.play(Create(gold_box(s5))); self.wait(2)
+        self.play(Create(gold_box(s5))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

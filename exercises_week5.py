@@ -18,7 +18,7 @@ class SC_Week5_Problem3(Scene):
             Text("to the polarisation direction. Find the transmitted irradiance.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -38,7 +38,7 @@ class SC_Week5_Problem3(Scene):
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
         self.play(Write(s2_grp))
-        self.play(Create(gold_box(s2))); self.wait(2)
+        self.play(Create(gold_box(s2))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -56,7 +56,7 @@ class SC_Week5_Problem7(Scene):
             Text("Which other QWP thicknesses also work?", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -78,7 +78,7 @@ class SC_Week5_Problem7(Scene):
             font_size=32, color=N_COLOR)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3 = MathTex(
@@ -88,7 +88,7 @@ class SC_Week5_Problem7(Scene):
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
         self.play(Write(s3_grp))
-        self.play(Create(gold_box(s2))); self.wait(2)
+        self.play(Create(gold_box(s2))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -106,7 +106,7 @@ class SC_Week5_Problem4(Scene):
             Text("Find the fraction of I_0 transmitted.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -136,5 +136,5 @@ class SC_Week5_Problem4(Scene):
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
         self.play(Write(s3_grp))
-        self.play(Create(gold_box(s3))); self.wait(2)
+        self.play(Create(gold_box(s3))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

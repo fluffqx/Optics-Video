@@ -18,7 +18,7 @@ class SC_Week6_Problem1(Scene):
             Text("Find the fringe spacing on the screen.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -44,7 +44,7 @@ class SC_Week6_Problem1(Scene):
                     font_size=26, color=WHITE)
         note.next_to(s2_grp, DOWN, buff=0.3)
         self.play(FadeIn(note))
-        self.play(Create(gold_box(s2))); self.wait(2)
+        self.play(Create(gold_box(s2))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -62,7 +62,7 @@ class SC_Week6_Problem3(Scene):
             Text("(b) Find minimum thickness for destructive interference.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -115,7 +115,7 @@ class SC_Week6_Problem3(Scene):
         s5_grp = VGroup(s5_lbl, s5).arrange(RIGHT, buff=0.3)
         s5_grp.next_to(s2_grp, DOWN, buff=0.4)
         self.play(Write(s5_grp))
-        self.play(Create(gold_box(s5))); self.wait(2)
+        self.play(Create(gold_box(s5))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -133,7 +133,7 @@ class SC_Week6_Problem4(Scene):
             Text("(b) Find min thickness for incidence angle theta_i=45 deg.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -177,5 +177,5 @@ class SC_Week6_Problem4(Scene):
         s4_grp = VGroup(s4_lbl, s4).arrange(RIGHT, buff=0.3)
         s4_grp.next_to(s3_grp, DOWN, buff=0.3)
         self.play(Write(s4_grp))
-        self.play(Create(gold_box(s4))); self.wait(2)
+        self.play(Create(gold_box(s4))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

@@ -19,7 +19,7 @@ class SC_Week2_Problem1(Scene):
             Text("Assume uniform irradiance across the beam cross-section.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -33,7 +33,7 @@ class SC_Week2_Problem1(Scene):
             font_size=32, color=INTENSITY_COLOR)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(
@@ -43,7 +43,7 @@ class SC_Week2_Problem1(Scene):
             font_size=30, color=E_COLOR)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3 = MathTex(
@@ -51,7 +51,7 @@ class SC_Week2_Problem1(Scene):
             font_size=32, color=B_COLOR)
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
-        self.play(Write(s3_grp)); self.wait(1)
+        self.play(Write(s3_grp)); self.wait(120)
 
         final = VGroup(
             MathTex(r"I = 12.7 \text{ kW/m}^2,\quad E_0 = 3.09 \text{ kV/m},\quad B_0 = 10.3\;\mu\text{T}",
@@ -59,7 +59,7 @@ class SC_Week2_Problem1(Scene):
         )
         final.next_to(s3_grp, DOWN, buff=0.4)
         self.play(Write(final)); self.play(Create(gold_box(final)))
-        self.wait(2); self.play(FadeOut(*self.mobjects))
+        self.wait(120); self.play(FadeOut(*self.mobjects))
 
 
 class SC_Week2_Problem2(Scene):
@@ -76,7 +76,7 @@ class SC_Week2_Problem2(Scene):
             Text("How long to reach v = 10 m/s? Total mass m = 100 kg.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -88,7 +88,7 @@ class SC_Week2_Problem2(Scene):
             font_size=34, color=INTENSITY_COLOR)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(
@@ -96,7 +96,7 @@ class SC_Week2_Problem2(Scene):
             font_size=34)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3 = MathTex(
@@ -106,7 +106,7 @@ class SC_Week2_Problem2(Scene):
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
         self.play(Write(s3_grp))
-        self.play(Create(gold_box(s3))); self.wait(2)
+        self.play(Create(gold_box(s3))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -126,7 +126,7 @@ class SC_Week2_Problem6(Scene):
             Text("(c) Find reflectivity R=r^2 at normal incidence, both directions.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -143,7 +143,7 @@ class SC_Week2_Problem6(Scene):
         a2 = MathTex(r"\theta_c = \arcsin(0.887) = 62.5^{\circ}", font_size=34, color=ANGLE_COLOR)
         a_grp = VGroup(a1, a2).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         a_grp.next_to(a_lbl, DOWN, buff=0.2)
-        self.play(Write(a_grp)); self.wait(1)
+        self.play(Write(a_grp)); self.wait(120)
 
         # Part b
         self.play(FadeOut(VGroup(a_lbl, a_grp)))
@@ -161,7 +161,7 @@ class SC_Week2_Problem6(Scene):
             font_size=30, color=ANGLE_COLOR)
         b_grp = VGroup(b1, b2).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         b_grp.next_to(b_lbl, DOWN, buff=0.2)
-        self.play(Write(b_grp)); self.wait(1)
+        self.play(Write(b_grp)); self.wait(120)
 
         # Part c
         self.play(FadeOut(VGroup(b_lbl, b_grp)))
@@ -182,7 +182,7 @@ class SC_Week2_Problem6(Scene):
         c_grp = VGroup(c1, c2, c3).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         c_grp.next_to(c_lbl, DOWN, buff=0.2)
         self.play(Write(c_grp))
-        self.play(Create(gold_box(c2))); self.wait(2)
+        self.play(Create(gold_box(c2))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -201,7 +201,7 @@ class SC_Week2_Problem7(Scene):
             Text("Ignore interference and absorption.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -215,7 +215,7 @@ class SC_Week2_Problem7(Scene):
             font_size=30, color=INTENSITY_COLOR)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(
@@ -223,7 +223,7 @@ class SC_Week2_Problem7(Scene):
             font_size=34)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3 = MathTex(
@@ -232,5 +232,5 @@ class SC_Week2_Problem7(Scene):
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
         self.play(Write(s3_grp))
-        self.play(Create(gold_box(s3))); self.wait(2)
+        self.play(Create(gold_box(s3))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

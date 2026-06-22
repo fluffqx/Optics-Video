@@ -24,7 +24,7 @@ class SC_Week3_Problem1(Scene):
         prob2 = Text("(b) What is the apparent depth looking straight down (alpha_a = 0)?",
                      font_size=26, color=WHITE)
         prob2.next_to(prob_eq, DOWN, buff=0.3)
-        self.play(FadeIn(prob), FadeIn(prob_eq), FadeIn(prob2)); self.wait(2)
+        self.play(FadeIn(prob), FadeIn(prob_eq), FadeIn(prob2)); self.wait(120)
         self.play(FadeOut(VGroup(prob, prob_eq, prob2)))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
@@ -52,7 +52,7 @@ class SC_Week3_Problem1(Scene):
             font_size=30, color=N_COLOR)
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
-        self.play(Write(s3_grp)); self.wait(1)
+        self.play(Write(s3_grp)); self.wait(120)
 
         s4_lbl = step_label(4)
         s4 = MathTex(
@@ -62,7 +62,7 @@ class SC_Week3_Problem1(Scene):
         s4_grp = VGroup(s4_lbl, s4).arrange(RIGHT, buff=0.3)
         s4_grp.next_to(s3_grp, DOWN, buff=0.3)
         self.play(Write(s4_grp))
-        self.play(Create(gold_box(s4))); self.wait(2)
+        self.play(Create(gold_box(s4))); self.wait(120)
         self.play(FadeOut(*self.mobjects))
 
 
@@ -79,7 +79,7 @@ class SC_Week3_Problem3(Scene):
             Text("Find image distance s_i and magnification m.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         prob.next_to(prob_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(2); self.play(FadeOut(prob))
+        self.play(FadeIn(prob)); self.wait(120); self.play(FadeOut(prob))
 
         sol_title = Text("Solution:", font_size=30, color=GOLD)
         sol_title.next_to(prob_title, DOWN, buff=0.4)
@@ -91,14 +91,14 @@ class SC_Week3_Problem3(Scene):
                      font_size=34)
         s1_grp = VGroup(s1_lbl, s1).arrange(RIGHT, buff=0.3)
         s1_grp.next_to(sol_title, DOWN, buff=0.3)
-        self.play(Write(s1_grp)); self.wait(1)
+        self.play(Write(s1_grp)); self.wait(120)
 
         s2_lbl = step_label(2)
         s2 = MathTex(r"s_i = 150 \text{ mm (real image, on far side)}",
                      font_size=36, color=GOLD)
         s2_grp = VGroup(s2_lbl, s2).arrange(RIGHT, buff=0.3)
         s2_grp.next_to(s1_grp, DOWN, buff=0.3)
-        self.play(Write(s2_grp)); self.wait(1)
+        self.play(Write(s2_grp)); self.wait(120)
 
         s3_lbl = step_label(3)
         s3 = MathTex(r"m = -\frac{s_i}{s_o} = -\frac{150}{30} = -5"
@@ -107,5 +107,5 @@ class SC_Week3_Problem3(Scene):
         s3_grp = VGroup(s3_lbl, s3).arrange(RIGHT, buff=0.3)
         s3_grp.next_to(s2_grp, DOWN, buff=0.3)
         self.play(Write(s3_grp))
-        self.play(Create(gold_box(VGroup(s2, s3)))); self.wait(2)
+        self.play(Create(gold_box(VGroup(s2, s3)))); self.wait(120)
         self.play(FadeOut(*self.mobjects))

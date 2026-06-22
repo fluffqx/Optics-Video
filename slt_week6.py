@@ -20,11 +20,11 @@ class SLT_Week6_Problem1(Scene):
             Text("Calculate OPD = OPL(B) - OPL(A) and determine if the beams are in phase.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))
 
 
@@ -49,11 +49,11 @@ class SLT_Week6_Problem2(Scene):
 
         full_prob = VGroup(prob, prob_eq, prob2).arrange(DOWN, aligned_edge=LEFT, buff=0.3)
         full_prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(full_prob)); self.wait(3)
+        self.play(FadeIn(full_prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, full_prob, prompt)))
 
 
@@ -72,9 +72,9 @@ class SLT_Week6_Problem3(Scene):
             Text("Hint: natural light through first polariser transmits I_0/2.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))

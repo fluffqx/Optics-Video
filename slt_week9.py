@@ -19,11 +19,11 @@ class SLT_Week9_Problem1(Scene):
             Text("and that this integer equals the order of the first missing maximum.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.22)
         prob.next_to(slt_title, DOWN, buff=0.4)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))
 
 
@@ -45,11 +45,11 @@ class SLT_Week9_Problem2(Scene):
             Text("(e) Draw the diffraction spectrum quantitatively (I vs position on screen).", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.20)
         prob.next_to(slt_title, DOWN, buff=0.3)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))
 
 
@@ -74,9 +74,9 @@ class SLT_Week9_Problem4(Scene):
             Text("    Show first bright ring is at r_1 = f*sqrt(lambda_0/d) on CCD.", font_size=26, color=WHITE),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.16)
         prob.next_to(slt_title, DOWN, buff=0.3)
-        self.play(FadeIn(prob)); self.wait(3)
+        self.play(FadeIn(prob)); self.wait(120)
 
         prompt = Text("Pause and solve this yourself before continuing!", font_size=30, color=GOLD)
         prompt.to_edge(DOWN)
-        self.play(FadeIn(prompt)); self.wait(4)
+        self.play(FadeIn(prompt)); self.wait(120)
         self.play(FadeOut(VGroup(slt_title, prob, prompt)))
