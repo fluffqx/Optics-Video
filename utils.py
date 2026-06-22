@@ -60,3 +60,20 @@ def week_badge(n, color=GOLD):
     circle = Circle(radius=0.45, color=color, fill_opacity=0).set_stroke(color, width=2)
     label = Text(str(n), font_size=28, color=color, weight=BOLD)
     return VGroup(circle, label)
+
+# ── Exercise color palette ─────────────────────────────────────────────────
+E_COLOR         = "#89CFF0"   # light blue  — E field / electric
+B_COLOR         = "#FFB347"   # orange      — B field / magnetic
+N_COLOR         = "#98FB98"   # pale green  — refractive index / normal
+ANGLE_COLOR     = "#DDA0DD"   # plum        — angles
+INTENSITY_COLOR = "#FFD700"   # gold-yellow — intensity / irradiance
+
+# ── Exercise helper functions ──────────────────────────────────────────────
+def step_label(n, color=GOLD):
+    return Text(f"Step {n}:", font_size=26, color=color, weight=BOLD)
+
+def gold_box(mob, buff=0.12):
+    return SurroundingRectangle(mob, color=GOLD, buff=buff, stroke_width=1.5)
+
+def checkmark(font_size=36):
+    return MathTex(r'\checkmark', font_size=font_size, color=GREEN)
