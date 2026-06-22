@@ -68,7 +68,7 @@ def build_scene(scene: str, pidx: int, latex_or_none, caption: str,
             f'        safe_scale(b, max_width=12.0)',
             f'        b.move_to(ORIGIN)',
             f'        self.play(FadeIn(b, run_time=0.15))',
-            f'        self.wait(1)',
+            f'        self.wait(120)',
         ]
         return '\n'.join(lines) + '\n'
 
@@ -116,5 +116,5 @@ def build_scene(scene: str, pidx: int, latex_or_none, caption: str,
             f'        self.play(FadeIn(cap_t, run_time=0.15))',
         ]
 
-    lines.append('        self.wait(1)')
+    lines.append('        self.wait(120)')
     return '\n'.join(lines) + '\n'
