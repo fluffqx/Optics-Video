@@ -7,56 +7,48 @@ class Week2TitleCard_p1(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2TitleCard_p1.mp3", time_offset=0)
         card = make_title_card("WEEK 2", "Fresnel Equations, Reflection and Refraction", "Bennett Ch. 3")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Week 2: what happens when light hits an interface", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Week 2: what happens when light hits an interface", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week2TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 2", "Fresnel Equations, Reflection and Refraction", "Bennett Ch. 3")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Snell's law for direction — Fresnel equations for amplitude", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Snell's law for direction — Fresnel equations for amplitude", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week2TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2TitleCard_p3.mp3", time_offset=0)
         card = make_title_card("WEEK 2", "Fresnel Equations, Reflection and Refraction", "Bennett Ch. 3")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Every lens, mirror coating and optical fibre depends on this", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Every lens, mirror coating and optical fibre depends on this", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week2TitleCard_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2TitleCard_p4.mp3", time_offset=0)
         card = make_title_card("WEEK 2", "Fresnel Equations, Reflection and Refraction", "Bennett Ch. 3")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Bennett Chapter 3 — Reflection and Refraction", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Bennett Chapter 3 — Reflection and Refraction", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week2Intro_p1(Scene):
     def construct(self):
@@ -68,10 +60,9 @@ class Week2Intro_p1(Scene):
         cap_t = Text("Even transparent glass reflects ~4% from each surface", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Week2Intro_p2(Scene):
     def construct(self):
@@ -83,10 +74,9 @@ class Week2Intro_p2(Scene):
         cap_t = Text("Derived from Maxwell's boundary conditions at the interface", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Week2Intro_p3(Scene):
     def construct(self):
@@ -101,11 +91,10 @@ class Week2Intro_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FermatPrinciple_p1(Scene):
     def construct(self):
@@ -117,10 +106,9 @@ class FermatPrinciple_p1(Scene):
         cap_t = Text("Fermat's principle: light takes the path of stationary travel time", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FermatPrinciple_p2(Scene):
     def construct(self):
@@ -132,10 +120,9 @@ class FermatPrinciple_p2(Scene):
         cap_t = Text("Reflection: minimise total path length — gives angle in = angle out", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FermatPrinciple_p3(Scene):
     def construct(self):
@@ -150,11 +137,10 @@ class FermatPrinciple_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FermatPrinciple_p4(Scene):
     def construct(self):
@@ -166,10 +152,9 @@ class FermatPrinciple_p4(Scene):
         cap_t = Text("Fermat connects optics to variational mechanics (Hamilton, Feynman)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p1(Scene):
     def construct(self):
@@ -184,11 +169,10 @@ class ReflectionRefraction_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p2(Scene):
     def construct(self):
@@ -203,11 +187,10 @@ class ReflectionRefraction_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p3(Scene):
     def construct(self):
@@ -219,10 +202,9 @@ class ReflectionRefraction_p3(Scene):
         cap_t = Text("n increases: refracted beam bends toward normal", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p4(Scene):
     def construct(self):
@@ -234,10 +216,9 @@ class ReflectionRefraction_p4(Scene):
         cap_t = Text("n decreases: refracted beam bends away from normal", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p5(Scene):
     def construct(self):
@@ -249,10 +230,9 @@ class ReflectionRefraction_p5(Scene):
         cap_t = Text("Frequency fixed — wavelength = lambda0/n in medium", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p6(Scene):
     def construct(self):
@@ -267,11 +247,10 @@ class ReflectionRefraction_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ReflectionRefraction_p7(Scene):
     def construct(self):
@@ -286,11 +265,10 @@ class ReflectionRefraction_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquationsDerivation_p1(Scene):
     def construct(self):
@@ -302,10 +280,9 @@ class FresnelEquationsDerivation_p1(Scene):
         cap_t = Text("Fresnel equations from Maxwell boundary conditions  (Bennett 3.3)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquationsDerivation_p2(Scene):
     def construct(self):
@@ -317,10 +294,9 @@ class FresnelEquationsDerivation_p2(Scene):
         cap_t = Text("Tangential E and tangential H continuous across interface", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquationsDerivation_p3(Scene):
     def construct(self):
@@ -332,10 +308,9 @@ class FresnelEquationsDerivation_p3(Scene):
         cap_t = Text("S-polarisation: E already tangential, simple boundary condition", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquationsDerivation_p4(Scene):
     def construct(self):
@@ -350,11 +325,10 @@ class FresnelEquationsDerivation_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquationsDerivation_p5(Scene):
     def construct(self):
@@ -366,10 +340,9 @@ class FresnelEquationsDerivation_p5(Scene):
         cap_t = Text("P-polarisation: extra cosine factors from geometry", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquationsDerivation_p6(Scene):
     def construct(self):
@@ -381,10 +354,9 @@ class FresnelEquationsDerivation_p6(Scene):
         cap_t = Text("S and P components reflect independently with different coefficients", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p1(Scene):
     def construct(self):
@@ -396,10 +368,9 @@ class FresnelEquations_p1(Scene):
         cap_t = Text("Fresnel equations: amplitude reflection and transmission coefficients", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p2(Scene):
     def construct(self):
@@ -414,11 +385,10 @@ class FresnelEquations_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p3(Scene):
     def construct(self):
@@ -433,11 +403,10 @@ class FresnelEquations_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p4(Scene):
     def construct(self):
@@ -452,11 +421,10 @@ class FresnelEquations_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p5(Scene):
     def construct(self):
@@ -471,11 +439,10 @@ class FresnelEquations_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p6(Scene):
     def construct(self):
@@ -490,11 +457,10 @@ class FresnelEquations_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p7(Scene):
     def construct(self):
@@ -509,11 +475,10 @@ class FresnelEquations_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p8(Scene):
     def construct(self):
@@ -525,10 +490,9 @@ class FresnelEquations_p8(Scene):
         cap_t = Text("Negative r means pi phase shift on reflection (n increases)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p9(Scene):
     def construct(self):
@@ -540,10 +504,9 @@ class FresnelEquations_p9(Scene):
         cap_t = Text("No phase shift when going from denser to rarer medium", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelEquations_p10(Scene):
     def construct(self):
@@ -555,10 +518,9 @@ class FresnelEquations_p10(Scene):
         cap_t = Text("Phase shifts critical for thin film interference — Week 6", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FresnelFullExample_p1(Scene):
     def construct(self):
@@ -573,11 +535,10 @@ class FresnelFullExample_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelFullExample_p2(Scene):
     def construct(self):
@@ -592,11 +553,10 @@ class FresnelFullExample_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelFullExample_p3(Scene):
     def construct(self):
@@ -611,11 +571,10 @@ class FresnelFullExample_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelFullExample_p4(Scene):
     def construct(self):
@@ -630,11 +589,10 @@ class FresnelFullExample_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelFullExample_p5(Scene):
     def construct(self):
@@ -649,11 +607,10 @@ class FresnelFullExample_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FresnelFullExample_p6(Scene):
     def construct(self):
@@ -665,10 +622,9 @@ class FresnelFullExample_p6(Scene):
         cap_t = Text("p-pol near Brewster's angle: much less reflection than s-pol", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ReflectivityTransmissivity_p1(Scene):
     def construct(self):
@@ -683,11 +639,10 @@ class ReflectivityTransmissivity_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ReflectivityTransmissivity_p2(Scene):
     def construct(self):
@@ -702,11 +657,10 @@ class ReflectivityTransmissivity_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ReflectivityTransmissivity_p3(Scene):
     def construct(self):
@@ -721,11 +675,10 @@ class ReflectivityTransmissivity_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ReflectivityTransmissivity_p4(Scene):
     def construct(self):
@@ -737,10 +690,9 @@ class ReflectivityTransmissivity_p4(Scene):
         cap_t = Text("T = |t|² is a common and fatal exam error — include the ratio", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ReflectivityTransmissivity_p5(Scene):
     def construct(self):
@@ -752,10 +704,9 @@ class ReflectivityTransmissivity_p5(Scene):
         cap_t = Text("Normal incidence air/glass: R=0.04, T=0.96, sum=1.00 — check", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p1(Scene):
     def construct(self):
@@ -770,11 +721,10 @@ class BrewsterTIR_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p2(Scene):
     def construct(self):
@@ -789,11 +739,10 @@ class BrewsterTIR_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p3(Scene):
     def construct(self):
@@ -808,11 +757,10 @@ class BrewsterTIR_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p4(Scene):
     def construct(self):
@@ -827,11 +775,10 @@ class BrewsterTIR_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p5(Scene):
     def construct(self):
@@ -843,10 +790,9 @@ class BrewsterTIR_p5(Scene):
         cap_t = Text("At Brewster: reflected + refracted beams perpendicular", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p6(Scene):
     def construct(self):
@@ -858,10 +804,9 @@ class BrewsterTIR_p6(Scene):
         cap_t = Text("Laser Brewster windows: p-pol passes with zero reflection loss", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p7(Scene):
     def construct(self):
@@ -873,10 +818,9 @@ class BrewsterTIR_p7(Scene):
         cap_t = Text("TIR: R = 1.000 exactly — used in optical fibres and prisms", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class BrewsterTIR_p8(Scene):
     def construct(self):
@@ -888,10 +832,9 @@ class BrewsterTIR_p8(Scene):
         cap_t = Text("Diamond: theta-c = 24.4 degrees — total reflection makes it sparkle", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MalusLaw_p1(Scene):
     def construct(self):
@@ -906,11 +849,10 @@ class MalusLaw_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MalusLaw_p2(Scene):
     def construct(self):
@@ -922,10 +864,9 @@ class MalusLaw_p2(Scene):
         cap_t = Text("theta = 0: full transmission | theta = 90: complete extinction", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MalusLaw_p3(Scene):
     def construct(self):
@@ -937,10 +878,9 @@ class MalusLaw_p3(Scene):
         cap_t = Text("theta = 45: exactly half the intensity transmitted", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MalusLaw_p4(Scene):
     def construct(self):
@@ -952,10 +892,9 @@ class MalusLaw_p4(Scene):
         cap_t = Text("Three crossed polarisers: 0, 45, 90 degrees", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MalusLaw_p5(Scene):
     def construct(self):
@@ -970,11 +909,10 @@ class MalusLaw_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MalusLaw_p6(Scene):
     def construct(self):
@@ -986,8 +924,7 @@ class MalusLaw_p6(Scene):
         cap_t = Text("Without middle polariser: zero output (0 and 90 are crossed)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 

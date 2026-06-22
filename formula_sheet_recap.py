@@ -12,10 +12,9 @@ class FormulaSheetTitleCard_p1(Scene):
         cap_t = Text("Complete formula reference for 31OPT Optics", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FormulaSheetTitleCard_p2(Scene):
     def construct(self):
@@ -27,10 +26,9 @@ class FormulaSheetTitleCard_p2(Scene):
         cap_t = Text("Know when to use each formula — not just the algebra", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FormulaSheetTitleCard_p3(Scene):
     def construct(self):
@@ -42,10 +40,9 @@ class FormulaSheetTitleCard_p3(Scene):
         cap_t = Text("Approach: formula -> substitute with units -> check reasonableness", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MidtermPrepScene_p1(Scene):
     def construct(self):
@@ -57,10 +54,9 @@ class MidtermPrepScene_p1(Scene):
         cap_t = Text("Midterm covers Weeks 1-3: waves, Maxwell, Fresnel, geometric optics", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MidtermPrepScene_p2(Scene):
     def construct(self):
@@ -75,11 +71,10 @@ class MidtermPrepScene_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MidtermPrepScene_p3(Scene):
     def construct(self):
@@ -94,11 +89,10 @@ class MidtermPrepScene_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MidtermPrepScene_p4(Scene):
     def construct(self):
@@ -113,11 +107,10 @@ class MidtermPrepScene_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MidtermPrepScene_p5(Scene):
     def construct(self):
@@ -129,10 +122,9 @@ class MidtermPrepScene_p5(Scene):
         cap_t = Text("Most common errors: sign conventions, T not simply |t|^2, R+T check", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FinalExamPrepScene_p1(Scene):
     def construct(self):
@@ -144,10 +136,9 @@ class FinalExamPrepScene_p1(Scene):
         cap_t = Text("Final exam: all 8 weeks — systematic formula review", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class FinalExamPrepScene_p2(Scene):
     def construct(self):
@@ -162,11 +153,10 @@ class FinalExamPrepScene_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FinalExamPrepScene_p3(Scene):
     def construct(self):
@@ -181,11 +171,10 @@ class FinalExamPrepScene_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FinalExamPrepScene_p4(Scene):
     def construct(self):
@@ -200,11 +189,10 @@ class FinalExamPrepScene_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class FinalExamPrepScene_p5(Scene):
     def construct(self):
@@ -216,8 +204,7 @@ class FinalExamPrepScene_p5(Scene):
         cap_t = Text("Week 5: Jones matrices — multiply RIGHT to LEFT in order of encounter", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 

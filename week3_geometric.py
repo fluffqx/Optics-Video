@@ -7,56 +7,48 @@ class Week3TitleCard_p1(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p1.mp3", time_offset=0)
         card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Week 3: geometric optics — ray approximation to wave optics", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Week 3: geometric optics — ray approximation to wave optics", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week3TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Covers every lens, mirror, microscope, telescope and camera", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Covers every lens, mirror, microscope, telescope and camera", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week3TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p3.mp3", time_offset=0)
         card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Bennett Chapter 4 — Geometric Optics", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Bennett Chapter 4 — Geometric Optics", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week3TitleCard_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week3TitleCard_p4.mp3", time_offset=0)
         card = make_title_card("WEEK 3", "Geometric Optics: Lenses, Mirrors and Instruments", "Bennett Ch. 4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Most critical skill: sign conventions — one sign error = wrong answer", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Most critical skill: sign conventions — one sign error = wrong answer", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class GeometricOpticsIntro_p1(Scene):
     def construct(self):
@@ -68,10 +60,9 @@ class GeometricOpticsIntro_p1(Scene):
         cap_t = Text("Geometric optics: wavelength << aperture size — rays in straight lines", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class GeometricOpticsIntro_p2(Scene):
     def construct(self):
@@ -83,10 +74,9 @@ class GeometricOpticsIntro_p2(Scene):
         cap_t = Text("Paraxial approximation: sin theta = theta, cos theta = 1", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class GeometricOpticsIntro_p3(Scene):
     def construct(self):
@@ -98,10 +88,9 @@ class GeometricOpticsIntro_p3(Scene):
         cap_t = Text("Paraxial regime: how real optical instruments are designed", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class GeometricOpticsIntro_p4(Scene):
     def construct(self):
@@ -116,11 +105,10 @@ class GeometricOpticsIntro_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class GeometricOpticsIntro_p5(Scene):
     def construct(self):
@@ -132,10 +120,9 @@ class GeometricOpticsIntro_p5(Scene):
         cap_t = Text("OPL determines phase — connects to interference (Week 6)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p1(Scene):
     def construct(self):
@@ -147,10 +134,9 @@ class SignConventions_p1(Scene):
         cap_t = Text("Sign conventions  (Bennett Section 4.3.4) — follow rigorously", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p2(Scene):
     def construct(self):
@@ -165,11 +151,10 @@ class SignConventions_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p3(Scene):
     def construct(self):
@@ -184,11 +169,10 @@ class SignConventions_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p4(Scene):
     def construct(self):
@@ -203,11 +187,10 @@ class SignConventions_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p5(Scene):
     def construct(self):
@@ -222,11 +205,10 @@ class SignConventions_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p6(Scene):
     def construct(self):
@@ -238,10 +220,9 @@ class SignConventions_p6(Scene):
         cap_t = Text("m < 0: inverted | m > 0: upright | |m| > 1: enlarged", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p7(Scene):
     def construct(self):
@@ -253,10 +234,9 @@ class SignConventions_p7(Scene):
         cap_t = Text("Mirror convention: positive toward incoming light (reversed)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SignConventions_p8(Scene):
     def construct(self):
@@ -268,10 +248,9 @@ class SignConventions_p8(Scene):
         cap_t = Text("ALWAYS draw a ray diagram first — it predicts sign of answer", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SphericalSurface_p1(Scene):
     def construct(self):
@@ -286,11 +265,10 @@ class SphericalSurface_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SphericalSurface_p2(Scene):
     def construct(self):
@@ -305,11 +283,10 @@ class SphericalSurface_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SphericalSurface_p3(Scene):
     def construct(self):
@@ -321,10 +298,9 @@ class SphericalSurface_p3(Scene):
         cap_t = Text("Pool appears 75% as deep as it really is when viewed from air", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SphericalSurface_p4(Scene):
     def construct(self):
@@ -339,11 +315,10 @@ class SphericalSurface_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SphericalSurface_p5(Scene):
     def construct(self):
@@ -358,11 +333,10 @@ class SphericalSurface_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p1(Scene):
     def construct(self):
@@ -377,11 +351,10 @@ class ThinLensScene_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p2(Scene):
     def construct(self):
@@ -396,11 +369,10 @@ class ThinLensScene_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p3(Scene):
     def construct(self):
@@ -415,11 +387,10 @@ class ThinLensScene_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p4(Scene):
     def construct(self):
@@ -434,11 +405,10 @@ class ThinLensScene_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p5(Scene):
     def construct(self):
@@ -450,10 +420,9 @@ class ThinLensScene_p5(Scene):
         cap_t = Text("Contact lenses: P_eff = P1 + P2 when d = 0", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p6(Scene):
     def construct(self):
@@ -468,11 +437,10 @@ class ThinLensScene_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p7(Scene):
     def construct(self):
@@ -487,11 +455,10 @@ class ThinLensScene_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p8(Scene):
     def construct(self):
@@ -506,11 +473,10 @@ class ThinLensScene_p8(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p9(Scene):
     def construct(self):
@@ -522,10 +488,9 @@ class ThinLensScene_p9(Scene):
         cap_t = Text("Virtual image: cannot be projected on screen, only seen through lens", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p10(Scene):
     def construct(self):
@@ -540,11 +505,10 @@ class ThinLensScene_p10(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThinLensScene_p11(Scene):
     def construct(self):
@@ -556,10 +520,9 @@ class ThinLensScene_p11(Scene):
         cap_t = Text("Principal ray 1: parallel to axis, bends through far focal point", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MirrorScene_p1(Scene):
     def construct(self):
@@ -574,11 +537,10 @@ class MirrorScene_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MirrorScene_p2(Scene):
     def construct(self):
@@ -593,11 +555,10 @@ class MirrorScene_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MirrorScene_p3(Scene):
     def construct(self):
@@ -612,11 +573,10 @@ class MirrorScene_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MirrorScene_p4(Scene):
     def construct(self):
@@ -628,10 +588,9 @@ class MirrorScene_p4(Scene):
         cap_t = Text("Concave: converging, used in telescopes — no chromatic aberration", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MirrorScene_p5(Scene):
     def construct(self):
@@ -643,10 +602,9 @@ class MirrorScene_p5(Scene):
         cap_t = Text("Convex: diverging, negative f, wide field — rear-view mirrors", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MirrorScene_p6(Scene):
     def construct(self):
@@ -658,10 +616,9 @@ class MirrorScene_p6(Scene):
         cap_t = Text("Convex: diverging, negative f, wide field — rear-view mirrors", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class LensCombinations_p1(Scene):
     def construct(self):
@@ -673,10 +630,9 @@ class LensCombinations_p1(Scene):
         cap_t = Text("Two lenses: image of first = object of second  (Bennett 4.4)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class LensCombinations_p2(Scene):
     def construct(self):
@@ -691,11 +647,10 @@ class LensCombinations_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class LensCombinations_p3(Scene):
     def construct(self):
@@ -710,11 +665,10 @@ class LensCombinations_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class LensCombinations_p4(Scene):
     def construct(self):
@@ -729,11 +683,10 @@ class LensCombinations_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class LensCombinations_p5(Scene):
     def construct(self):
@@ -745,10 +698,9 @@ class LensCombinations_p5(Scene):
         cap_t = Text("Total magnification = m1 times m2 — magnifications multiply", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class OpticalInstruments_p1(Scene):
     def construct(self):
@@ -763,11 +715,10 @@ class OpticalInstruments_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class OpticalInstruments_p2(Scene):
     def construct(self):
@@ -782,11 +733,10 @@ class OpticalInstruments_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class OpticalInstruments_p3(Scene):
     def construct(self):
@@ -801,11 +751,10 @@ class OpticalInstruments_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class OpticalInstruments_p4(Scene):
     def construct(self):
@@ -817,10 +766,9 @@ class OpticalInstruments_p4(Scene):
         cap_t = Text("Microscope: f_ob=4mm, f_e=25mm, L=160mm -> M = -40", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class OpticalInstruments_p5(Scene):
     def construct(self):
@@ -832,8 +780,7 @@ class OpticalInstruments_p5(Scene):
         cap_t = Text("Telescope: f_ob=100cm, f_e=2cm -> M = -50", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 

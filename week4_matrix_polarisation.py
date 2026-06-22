@@ -7,70 +7,60 @@ class Week4TitleCard_p1(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week4TitleCard_p1.mp3", time_offset=0)
         card = make_title_card("WEEK 4", "Matrix Optics, Superposition and Polarisation", "Bennett Ch. 5, 7.1-7.2, 6.1-6.4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Week 4: three topics — matrix optics, superposition, polarisation", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Week 4: three topics — matrix optics, superposition, polarisation", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week4TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week4TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 4", "Matrix Optics, Superposition and Polarisation", "Bennett Ch. 5, 7.1-7.2, 6.1-6.4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Matrix optics: any optical system as a 2x2 matrix  (Bennett 5.5)", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Matrix optics: any optical system as a 2x2 matrix  (Bennett 5.5)", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week4TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week4TitleCard_p3.mp3", time_offset=0)
         card = make_title_card("WEEK 4", "Matrix Optics, Superposition and Polarisation", "Bennett Ch. 5, 7.1-7.2, 6.1-6.4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Superposition: standing waves and beating  (Bennett 7.1-7.2)", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Superposition: standing waves and beating  (Bennett 7.1-7.2)", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week4TitleCard_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week4TitleCard_p4.mp3", time_offset=0)
         card = make_title_card("WEEK 4", "Matrix Optics, Superposition and Polarisation", "Bennett Ch. 5, 7.1-7.2, 6.1-6.4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Polarisation introduction  (Bennett 6.1-6.4)", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Polarisation introduction  (Bennett 6.1-6.4)", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week4TitleCard_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week4TitleCard_p5.mp3", time_offset=0)
         card = make_title_card("WEEK 4", "Matrix Optics, Superposition and Polarisation", "Bennett Ch. 5, 7.1-7.2, 6.1-6.4")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Matrix methods used in Jones calculus — Week 5", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Matrix methods used in Jones calculus — Week 5", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class MatrixOpticsIntro_p1(Scene):
     def construct(self):
@@ -82,10 +72,9 @@ class MatrixOpticsIntro_p1(Scene):
         cap_t = Text("Matrix methods in paraxial optics  (Bennett Section 5.5)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MatrixOpticsIntro_p2(Scene):
     def construct(self):
@@ -100,11 +89,10 @@ class MatrixOpticsIntro_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixOpticsIntro_p3(Scene):
     def construct(self):
@@ -116,10 +104,9 @@ class MatrixOpticsIntro_p3(Scene):
         cap_t = Text("Each element is a 2x2 matrix — multiply to cascade elements", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MatrixOpticsIntro_p4(Scene):
     def construct(self):
@@ -134,11 +121,10 @@ class MatrixOpticsIntro_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixEquations_p1(Scene):
     def construct(self):
@@ -153,11 +139,10 @@ class MatrixEquations_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixEquations_p2(Scene):
     def construct(self):
@@ -172,11 +157,10 @@ class MatrixEquations_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixEquations_p3(Scene):
     def construct(self):
@@ -191,11 +175,10 @@ class MatrixEquations_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixEquations_p4(Scene):
     def construct(self):
@@ -210,11 +193,10 @@ class MatrixEquations_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixEquations_p5(Scene):
     def construct(self):
@@ -226,10 +208,9 @@ class MatrixEquations_p5(Scene):
         cap_t = Text("Order matters — matrix multiplication is not commutative", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SystemMatrixCardinalPoints_p1(Scene):
     def construct(self):
@@ -244,11 +225,10 @@ class SystemMatrixCardinalPoints_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SystemMatrixCardinalPoints_p2(Scene):
     def construct(self):
@@ -263,11 +243,10 @@ class SystemMatrixCardinalPoints_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SystemMatrixCardinalPoints_p3(Scene):
     def construct(self):
@@ -279,10 +258,9 @@ class SystemMatrixCardinalPoints_p3(Scene):
         cap_t = Text("C = 0: afocal system (telescope/beam expander) — parallel in, parallel out", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SystemMatrixCardinalPoints_p4(Scene):
     def construct(self):
@@ -297,11 +275,10 @@ class SystemMatrixCardinalPoints_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SystemMatrixCardinalPoints_p5(Scene):
     def construct(self):
@@ -313,10 +290,9 @@ class SystemMatrixCardinalPoints_p5(Scene):
         cap_t = Text("All imaging properties encoded in just 3 quantities: 2 principal planes + f", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MatrixExample_p1(Scene):
     def construct(self):
@@ -331,11 +307,10 @@ class MatrixExample_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixExample_p2(Scene):
     def construct(self):
@@ -350,11 +325,10 @@ class MatrixExample_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class MatrixExample_p3(Scene):
     def construct(self):
@@ -366,10 +340,9 @@ class MatrixExample_p3(Scene):
         cap_t = Text("Input: height y, zero angle — output: -f2/f1 * y, zero angle", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MatrixExample_p4(Scene):
     def construct(self):
@@ -381,10 +354,9 @@ class MatrixExample_p4(Scene):
         cap_t = Text("Beam expanded by f2/f1, sign flip = beam is inverted", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class MatrixExample_p5(Scene):
     def construct(self):
@@ -396,10 +368,9 @@ class MatrixExample_p5(Scene):
         cap_t = Text("Galilean: diverging f1, converging f2 — no intermediate focus", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p1(Scene):
     def construct(self):
@@ -414,11 +385,10 @@ class StandingWaves_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p2(Scene):
     def construct(self):
@@ -433,11 +403,10 @@ class StandingWaves_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p3(Scene):
     def construct(self):
@@ -452,11 +421,10 @@ class StandingWaves_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p4(Scene):
     def construct(self):
@@ -471,11 +439,10 @@ class StandingWaves_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p5(Scene):
     def construct(self):
@@ -490,11 +457,10 @@ class StandingWaves_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p6(Scene):
     def construct(self):
@@ -506,10 +472,9 @@ class StandingWaves_p6(Scene):
         cap_t = Text("Guitar string: nodes at both fixed ends — same condition", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class StandingWaves_p7(Scene):
     def construct(self):
@@ -521,10 +486,9 @@ class StandingWaves_p7(Scene):
         cap_t = Text("Guitar string: nodes at both fixed ends — same condition", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Beating_p1(Scene):
     def construct(self):
@@ -539,11 +503,10 @@ class Beating_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Beating_p2(Scene):
     def construct(self):
@@ -558,11 +521,10 @@ class Beating_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Beating_p3(Scene):
     def construct(self):
@@ -574,10 +536,9 @@ class Beating_p3(Scene):
         cap_t = Text("Fast carrier at average frequency, slow envelope at beat frequency", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Beating_p4(Scene):
     def construct(self):
@@ -589,10 +550,9 @@ class Beating_p4(Scene):
         cap_t = Text("Tuning: adjust until beats disappear — frequencies now equal", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Beating_p5(Scene):
     def construct(self):
@@ -604,10 +564,9 @@ class Beating_p5(Scene):
         cap_t = Text("Optical heterodyne: beat signal at radio frequency — easily processed", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Beating_p6(Scene):
     def construct(self):
@@ -619,10 +578,9 @@ class Beating_p6(Scene):
         cap_t = Text("LIDAR, coherent comms and spectroscopy all use optical beating", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Beating_p7(Scene):
     def construct(self):
@@ -634,10 +592,9 @@ class Beating_p7(Scene):
         cap_t = Text("LIDAR, coherent comms and spectroscopy all use optical beating", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class PolarizationBasics_p1(Scene):
     def construct(self):
@@ -652,11 +609,10 @@ class PolarizationBasics_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class PolarizationBasics_p2(Scene):
     def construct(self):
@@ -671,11 +627,10 @@ class PolarizationBasics_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class PolarizationBasics_p3(Scene):
     def construct(self):
@@ -690,11 +645,10 @@ class PolarizationBasics_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class PolarizationBasics_p4(Scene):
     def construct(self):
@@ -706,10 +660,9 @@ class PolarizationBasics_p4(Scene):
         cap_t = Text("ELLIPTICAL: general case — any amplitudes and any phase difference", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class PolarizationBasics_p5(Scene):
     def construct(self):
@@ -721,8 +674,7 @@ class PolarizationBasics_p5(Scene):
         cap_t = Text("Natural light: polarisation randomises every ~10 ns — unpolarised", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 

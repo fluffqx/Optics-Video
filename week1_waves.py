@@ -7,56 +7,48 @@ class Week1TitleCard_p1(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week1TitleCard_p1.mp3", time_offset=0)
         card = make_title_card("WEEK 1", "Waves, Wave Equation and Complex Representation", "Bennett Ch. 1")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("31OPT Optics — complete exam preparation series", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("31OPT Optics — complete exam preparation series", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week1TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week1TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 1", "Waves, Wave Equation and Complex Representation", "Bennett Ch. 1")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Weeks 1-8 covered in full from Bennett 2nd edition", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Weeks 1-8 covered in full from Bennett 2nd edition", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week1TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week1TitleCard_p3.mp3", time_offset=0)
         card = make_title_card("WEEK 1", "Waves, Wave Equation and Complex Representation", "Bennett Ch. 1")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Theory: derivations, examples and physical intuition", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Theory: derivations, examples and physical intuition", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week1TitleCard_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week1TitleCard_p4.mp3", time_offset=0)
         card = make_title_card("WEEK 1", "Waves, Wave Equation and Complex Representation", "Bennett Ch. 1")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Start with the most fundamental question: what is a wave?", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Start with the most fundamental question: what is a wave?", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class WaveIntroduction_p1(Scene):
     def construct(self):
@@ -68,10 +60,9 @@ class WaveIntroduction_p1(Scene):
         cap_t = Text("A wave propagates energy without transporting matter", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveIntroduction_p2(Scene):
     def construct(self):
@@ -83,10 +74,9 @@ class WaveIntroduction_p2(Scene):
         cap_t = Text("Ocean: water stays put, disturbance moves — same principle", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveIntroduction_p3(Scene):
     def construct(self):
@@ -98,10 +88,9 @@ class WaveIntroduction_p3(Scene):
         cap_t = Text("Sound: air molecules oscillate, compression wave propagates", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveIntroduction_p4(Scene):
     def construct(self):
@@ -113,10 +102,9 @@ class WaveIntroduction_p4(Scene):
         cap_t = Text("EM waves: E and B fields oscillate — no medium needed", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveIntroduction_p5(Scene):
     def construct(self):
@@ -128,10 +116,9 @@ class WaveIntroduction_p5(Scene):
         cap_t = Text("1D wave equation captures all essential wave physics", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveIntroduction_p6(Scene):
     def construct(self):
@@ -143,10 +130,9 @@ class WaveIntroduction_p6(Scene):
         cap_t = Text("Wave function psi(x,t): physical quantity at position x, time t", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p1(Scene):
     def construct(self):
@@ -161,11 +147,10 @@ class WaveEquation1D_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p2(Scene):
     def construct(self):
@@ -180,11 +165,10 @@ class WaveEquation1D_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p3(Scene):
     def construct(self):
@@ -199,11 +183,10 @@ class WaveEquation1D_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p4(Scene):
     def construct(self):
@@ -215,10 +198,9 @@ class WaveEquation1D_p4(Scene):
         cap_t = Text("Curvature in space proportional to acceleration in time", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p5(Scene):
     def construct(self):
@@ -230,10 +212,9 @@ class WaveEquation1D_p5(Scene):
         cap_t = Text("Linear equation — superposition principle holds exactly", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p6(Scene):
     def construct(self):
@@ -248,11 +229,10 @@ class WaveEquation1D_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p7(Scene):
     def construct(self):
@@ -264,10 +244,9 @@ class WaveEquation1D_p7(Scene):
         cap_t = Text("f(x-vt) moves right rigidly at speed v", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveEquation1D_p8(Scene):
     def construct(self):
@@ -279,10 +258,9 @@ class WaveEquation1D_p8(Scene):
         cap_t = Text("Shape preservation holds only in non-dispersive media", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class WaveEquationProof_p1(Scene):
     def construct(self):
@@ -297,11 +275,10 @@ class WaveEquationProof_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquationProof_p2(Scene):
     def construct(self):
@@ -316,11 +293,10 @@ class WaveEquationProof_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquationProof_p3(Scene):
     def construct(self):
@@ -335,11 +311,10 @@ class WaveEquationProof_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquationProof_p4(Scene):
     def construct(self):
@@ -354,11 +329,10 @@ class WaveEquationProof_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class WaveEquationProof_p5(Scene):
     def construct(self):
@@ -370,10 +344,9 @@ class WaveEquationProof_p5(Scene):
         cap_t = Text("Any twice-differentiable function is a valid wave solution", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p1(Scene):
     def construct(self):
@@ -385,10 +358,9 @@ class HarmonicWave_p1(Scene):
         cap_t = Text("Harmonic wave: single-frequency sinusoidal oscillation", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p2(Scene):
     def construct(self):
@@ -403,11 +375,10 @@ class HarmonicWave_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p3(Scene):
     def construct(self):
@@ -419,10 +390,9 @@ class HarmonicWave_p3(Scene):
         cap_t = Text("Every symbol in this equation recurs throughout the course", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p4(Scene):
     def construct(self):
@@ -437,11 +407,10 @@ class HarmonicWave_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p5(Scene):
     def construct(self):
@@ -456,11 +425,10 @@ class HarmonicWave_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p6(Scene):
     def construct(self):
@@ -475,11 +443,10 @@ class HarmonicWave_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p7(Scene):
     def construct(self):
@@ -494,11 +461,10 @@ class HarmonicWave_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p8(Scene):
     def construct(self):
@@ -513,11 +479,10 @@ class HarmonicWave_p8(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p9(Scene):
     def construct(self):
@@ -532,11 +497,10 @@ class HarmonicWave_p9(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p10(Scene):
     def construct(self):
@@ -551,11 +515,10 @@ class HarmonicWave_p10(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p11(Scene):
     def construct(self):
@@ -570,11 +533,10 @@ class HarmonicWave_p11(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p12(Scene):
     def construct(self):
@@ -586,10 +548,9 @@ class HarmonicWave_p12(Scene):
         cap_t = Text("Worked example: lambda = 500 nm visible light in vacuum", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p13(Scene):
     def construct(self):
@@ -604,11 +565,10 @@ class HarmonicWave_p13(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p14(Scene):
     def construct(self):
@@ -623,11 +583,10 @@ class HarmonicWave_p14(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p15(Scene):
     def construct(self):
@@ -639,10 +598,9 @@ class HarmonicWave_p15(Scene):
         cap_t = Text("T = 1.668 fs: a million times shorter than a nanosecond", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p16(Scene):
     def construct(self):
@@ -657,11 +615,10 @@ class HarmonicWave_p16(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWave_p17(Scene):
     def construct(self):
@@ -673,10 +630,9 @@ class HarmonicWave_p17(Scene):
         cap_t = Text("Any wave decomposes into harmonic components — Fourier", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p1(Scene):
     def construct(self):
@@ -691,11 +647,10 @@ class HarmonicWaveExample_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p2(Scene):
     def construct(self):
@@ -710,11 +665,10 @@ class HarmonicWaveExample_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p3(Scene):
     def construct(self):
@@ -729,11 +683,10 @@ class HarmonicWaveExample_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p4(Scene):
     def construct(self):
@@ -748,11 +701,10 @@ class HarmonicWaveExample_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p5(Scene):
     def construct(self):
@@ -764,10 +716,9 @@ class HarmonicWaveExample_p5(Scene):
         cap_t = Text("2.11 fs period: one million times shorter than a nanosecond", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p6(Scene):
     def construct(self):
@@ -779,10 +730,9 @@ class HarmonicWaveExample_p6(Scene):
         cap_t = Text("632.8 nm is about 1/100 the diameter of a human hair", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p7(Scene):
     def construct(self):
@@ -797,11 +747,10 @@ class HarmonicWaveExample_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p8(Scene):
     def construct(self):
@@ -813,10 +762,9 @@ class HarmonicWaveExample_p8(Scene):
         cap_t = Text("I proportional to A squared — doubling field quadruples intensity", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p9(Scene):
     def construct(self):
@@ -828,10 +776,9 @@ class HarmonicWaveExample_p9(Scene):
         cap_t = Text("Optical period too short for any electronic detection", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HarmonicWaveExample_p10(Scene):
     def construct(self):
@@ -843,10 +790,9 @@ class HarmonicWaveExample_p10(Scene):
         cap_t = Text("All optical detectors measure intensity, not field phase", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SuperpositionPrinciple_p1(Scene):
     def construct(self):
@@ -858,10 +804,9 @@ class SuperpositionPrinciple_p1(Scene):
         cap_t = Text("Superposition principle  (Bennett Section 1.5)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SuperpositionPrinciple_p2(Scene):
     def construct(self):
@@ -876,11 +821,10 @@ class SuperpositionPrinciple_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SuperpositionPrinciple_p3(Scene):
     def construct(self):
@@ -892,10 +836,9 @@ class SuperpositionPrinciple_p3(Scene):
         cap_t = Text("Any linear combination a psi-1 + b psi-2 is also a solution", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SuperpositionPrinciple_p4(Scene):
     def construct(self):
@@ -907,10 +850,9 @@ class SuperpositionPrinciple_p4(Scene):
         cap_t = Text("Two laser beams cross in space without affecting each other", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SuperpositionPrinciple_p5(Scene):
     def construct(self):
@@ -922,10 +864,9 @@ class SuperpositionPrinciple_p5(Scene):
         cap_t = Text("Foundation of ALL interference and diffraction  (Weeks 6-7)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SuperpositionPrinciple_p6(Scene):
     def construct(self):
@@ -937,10 +878,9 @@ class SuperpositionPrinciple_p6(Scene):
         cap_t = Text("Fails at high intensity in nonlinear media — frequency doubling", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p1(Scene):
     def construct(self):
@@ -952,10 +892,9 @@ class PhaseGroupVelocity_p1(Scene):
         cap_t = Text("Two distinct velocities associated with any dispersive wave", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p2(Scene):
     def construct(self):
@@ -970,11 +909,10 @@ class PhaseGroupVelocity_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p3(Scene):
     def construct(self):
@@ -989,11 +927,10 @@ class PhaseGroupVelocity_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p4(Scene):
     def construct(self):
@@ -1005,10 +942,9 @@ class PhaseGroupVelocity_p4(Scene):
         cap_t = Text("Vacuum: omega = ck, so vp = vg = c — no dispersion", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p5(Scene):
     def construct(self):
@@ -1023,11 +959,10 @@ class PhaseGroupVelocity_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p6(Scene):
     def construct(self):
@@ -1039,10 +974,9 @@ class PhaseGroupVelocity_p6(Scene):
         cap_t = Text("Normal dispersion: dn/d-omega > 0 so vg < c/n — energy slower than crests", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class PhaseGroupVelocity_p7(Scene):
     def construct(self):
@@ -1057,11 +991,10 @@ class PhaseGroupVelocity_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p1(Scene):
     def construct(self):
@@ -1073,10 +1006,9 @@ class ComplexRepresentation_p1(Scene):
         cap_t = Text("Complex notation replaces trig with exponentials  (Bennett 1.6)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p2(Scene):
     def construct(self):
@@ -1091,11 +1023,10 @@ class ComplexRepresentation_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p3(Scene):
     def construct(self):
@@ -1110,11 +1041,10 @@ class ComplexRepresentation_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p4(Scene):
     def construct(self):
@@ -1129,11 +1059,10 @@ class ComplexRepresentation_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p5(Scene):
     def construct(self):
@@ -1148,11 +1077,10 @@ class ComplexRepresentation_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p6(Scene):
     def construct(self):
@@ -1167,11 +1095,10 @@ class ComplexRepresentation_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p7(Scene):
     def construct(self):
@@ -1186,11 +1113,10 @@ class ComplexRepresentation_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p8(Scene):
     def construct(self):
@@ -1205,11 +1131,10 @@ class ComplexRepresentation_p8(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ComplexRepresentation_p9(Scene):
     def construct(self):
@@ -1221,10 +1146,9 @@ class ComplexRepresentation_p9(Scene):
         cap_t = Text("Inverse square law follows from energy conservation", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class ThreeDWaves_p1(Scene):
     def construct(self):
@@ -1239,11 +1163,10 @@ class ThreeDWaves_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThreeDWaves_p2(Scene):
     def construct(self):
@@ -1258,11 +1181,10 @@ class ThreeDWaves_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThreeDWaves_p3(Scene):
     def construct(self):
@@ -1277,11 +1199,10 @@ class ThreeDWaves_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class ThreeDWaves_p4(Scene):
     def construct(self):
@@ -1296,11 +1217,10 @@ class ThreeDWaves_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p1(Scene):
     def construct(self):
@@ -1312,10 +1232,9 @@ class Week1WavesSummary_p1(Scene):
         cap_t = Text("Week 1a complete — collect key results", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p2(Scene):
     def construct(self):
@@ -1330,11 +1249,10 @@ class Week1WavesSummary_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p3(Scene):
     def construct(self):
@@ -1349,11 +1267,10 @@ class Week1WavesSummary_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p4(Scene):
     def construct(self):
@@ -1368,11 +1285,10 @@ class Week1WavesSummary_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p5(Scene):
     def construct(self):
@@ -1387,11 +1303,10 @@ class Week1WavesSummary_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p6(Scene):
     def construct(self):
@@ -1406,11 +1321,10 @@ class Week1WavesSummary_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class Week1WavesSummary_p7(Scene):
     def construct(self):
@@ -1425,9 +1339,8 @@ class Week1WavesSummary_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 

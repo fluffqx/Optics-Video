@@ -7,56 +7,48 @@ class Week7TitleCard_p1(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p1.mp3", time_offset=0)
         card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Week 7: diffraction — wave optics when aperture ~ wavelength", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Week 7: diffraction — wave optics when aperture ~ wavelength", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week7TitleCard_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Huygens: every point on wavefront = secondary spherical source", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Huygens: every point on wavefront = secondary spherical source", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week7TitleCard_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p3.mp3", time_offset=0)
         card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Fraunhofer pattern = Fourier transform of aperture  (Bennett Ch. 8)", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Fraunhofer pattern = Fourier transform of aperture  (Bennett Ch. 8)", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class Week7TitleCard_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p4.mp3", time_offset=0)
         card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
-        self.play(FadeIn(card, run_time=0.5))
-        self.wait(0.5)
-        self.play(FadeOut(card, run_time=0.3))
-        b = Text("Larger aperture -> narrower pattern — optical uncertainty principle", font_size=28, color=WHITE)
-        safe_scale(b, max_width=12.0)
-        b.move_to(ORIGIN)
-        self.play(FadeIn(b, run_time=0.15))
-        self.wait(1)
+        self.add(card)
+        sub_text = Text("Larger aperture -> narrower pattern — optical uncertainty principle", font_size=26, color=WHITE)
+        safe_scale(sub_text, max_width=12.0)
+        sub_text.to_edge(DOWN, buff=0.8)
+        self.play(FadeIn(sub_text, run_time=0.3))
+        self.wait(120)
 
 class HuygensPrinciple_p1(Scene):
     def construct(self):
@@ -68,10 +60,9 @@ class HuygensPrinciple_p1(Scene):
         cap_t = Text("Huygens 1678: each wavefront point emits a secondary wavelet", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HuygensPrinciple_p2(Scene):
     def construct(self):
@@ -83,10 +74,9 @@ class HuygensPrinciple_p2(Scene):
         cap_t = Text("Bennett Ch. 8: diffraction is interference done correctly", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HuygensPrinciple_p3(Scene):
     def construct(self):
@@ -98,10 +88,9 @@ class HuygensPrinciple_p3(Scene):
         cap_t = Text("Young: 2 discrete sources — Diffraction: continuous aperture", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class HuygensPrinciple_p4(Scene):
     def construct(self):
@@ -116,11 +105,10 @@ class HuygensPrinciple_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p1(Scene):
     def construct(self):
@@ -135,11 +123,10 @@ class SingleSlitDiffraction_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p2(Scene):
     def construct(self):
@@ -154,11 +141,10 @@ class SingleSlitDiffraction_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p3(Scene):
     def construct(self):
@@ -173,11 +159,10 @@ class SingleSlitDiffraction_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p4(Scene):
     def construct(self):
@@ -189,10 +174,9 @@ class SingleSlitDiffraction_p4(Scene):
         cap_t = Text("Narrower slit -> wider diffraction pattern — inverse relationship", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p5(Scene):
     def construct(self):
@@ -204,10 +188,9 @@ class SingleSlitDiffraction_p5(Scene):
         cap_t = Text("Secondary maxima at ~4.7% and ~1.7% of central maximum", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p6(Scene):
     def construct(self):
@@ -222,11 +205,10 @@ class SingleSlitDiffraction_p6(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class SingleSlitDiffraction_p7(Scene):
     def construct(self):
@@ -241,11 +223,10 @@ class SingleSlitDiffraction_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p1(Scene):
     def construct(self):
@@ -260,11 +241,10 @@ class CircularApertureRayleigh_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p2(Scene):
     def construct(self):
@@ -279,11 +259,10 @@ class CircularApertureRayleigh_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p3(Scene):
     def construct(self):
@@ -298,11 +277,10 @@ class CircularApertureRayleigh_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p4(Scene):
     def construct(self):
@@ -317,11 +295,10 @@ class CircularApertureRayleigh_p4(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p5(Scene):
     def construct(self):
@@ -336,11 +313,10 @@ class CircularApertureRayleigh_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p6(Scene):
     def construct(self):
@@ -352,10 +328,9 @@ class CircularApertureRayleigh_p6(Scene):
         cap_t = Text("Better resolution: increase D or decrease lambda", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class CircularApertureRayleigh_p7(Scene):
     def construct(self):
@@ -367,10 +342,9 @@ class CircularApertureRayleigh_p7(Scene):
         cap_t = Text("VLBI: Earth diameter baseline — microarcsecond resolution", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p1(Scene):
     def construct(self):
@@ -385,11 +359,10 @@ class DiffractionGrating_p1(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p2(Scene):
     def construct(self):
@@ -404,11 +377,10 @@ class DiffractionGrating_p2(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p3(Scene):
     def construct(self):
@@ -423,11 +395,10 @@ class DiffractionGrating_p3(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p4(Scene):
     def construct(self):
@@ -439,10 +410,9 @@ class DiffractionGrating_p4(Scene):
         cap_t = Text("600 gr/mm grating, 5 cm: N=30000, RP=30000 in first order", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p5(Scene):
     def construct(self):
@@ -457,11 +427,10 @@ class DiffractionGrating_p5(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p6(Scene):
     def construct(self):
@@ -473,10 +442,9 @@ class DiffractionGrating_p6(Scene):
         cap_t = Text("Sodium D lines: 0.6 nm separation — easily resolved", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.0)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        cap_t.move_to([0, title_bottom - available/2, 0])
-        self.play(FadeIn(cap_t, run_time=0.15))
-        self.wait(1)
+        cap_t.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        self.play(FadeIn(cap_t, run_time=0.2))
+        self.wait(120)
 
 class DiffractionGrating_p7(Scene):
     def construct(self):
@@ -491,9 +459,8 @@ class DiffractionGrating_p7(Scene):
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         title_bottom = title.get_bottom()[1]
-        available = title_bottom - (-3.8)
-        content.move_to([0, title_bottom - available/2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(available)-0.2)
-        self.play(FadeIn(content, run_time=0.15))
-        self.wait(1)
+        content.move_to([0, (title_bottom + (-3.8)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(title_bottom + 3.8) - 0.3)
+        self.play(FadeIn(content, run_time=0.2))
+        self.wait(120)
 
