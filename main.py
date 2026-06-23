@@ -563,6 +563,20 @@ RENDER_ORDER = [
     ("slt_week9.py", "SLT_Week9_Problem1"),
     ("slt_week9.py", "SLT_Week9_Problem2"),
     ("slt_week9.py", "SLT_Week9_Problem4"),
+
+    # Past exam exercises — Jones & Polarisation
+    ("exam_jones.py", "JonesTheory_PolarisationStates"),
+    ("exam_jones.py", "JonesTheory_WavePlates"),
+    ("exam_jones.py", "JonesTheory_FindingMatrix"),
+    ("exam_jones.py", "Exam3BOX0_2023_Ex4a"),
+    ("exam_jones.py", "Exam3BOX0_2023_Ex4b"),
+    ("exam_jones.py", "Exam3BOX0_2023_Ex4c"),
+    ("exam_jones.py", "Exam3BOX0_2024_Ex4a"),
+    ("exam_jones.py", "Exam3BOX0_2024_Ex4b"),
+    ("exam_jones.py", "ExamResit3BOX0_2023_Ex4a"),
+    ("exam_jones.py", "Exam31OPT_2024_Ex3a"),
+    ("exam_jones.py", "Exam31OPT_2024_Ex3bc"),
+    ("exam_jones.py", "ExamResit31OPT_2025_Ex3a"),
 ]
 
 

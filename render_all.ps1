@@ -997,3 +997,27 @@ $mp4="media\videos\slt_week9\1080p60\SLT_Week9_Problem2.mp4"; $cache="media\vide
 if(Test-Path $mp4){Write-Host "SKIP SLT_Week9_Problem2"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER SLT_Week9_Problem2";python -m manim -qh slt_week9.py SLT_Week9_Problem2}
 $mp4="media\videos\slt_week9\1080p60\SLT_Week9_Problem4.mp4"; $cache="media\videos\slt_week9\1080p60\partial_movie_files\SLT_Week9_Problem4"
 if(Test-Path $mp4){Write-Host "SKIP SLT_Week9_Problem4"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER SLT_Week9_Problem4";python -m manim -qh slt_week9.py SLT_Week9_Problem4}
+$mp4="media\videos\exam_jones\1080p60\JonesTheory_PolarisationStates.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\JonesTheory_PolarisationStates"
+if(Test-Path $mp4){Write-Host "SKIP JonesTheory_PolarisationStates"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER JonesTheory_PolarisationStates";python -m manim -qh exam_jones.py JonesTheory_PolarisationStates}
+$mp4="media\videos\exam_jones\1080p60\JonesTheory_WavePlates.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\JonesTheory_WavePlates"
+if(Test-Path $mp4){Write-Host "SKIP JonesTheory_WavePlates"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER JonesTheory_WavePlates";python -m manim -qh exam_jones.py JonesTheory_WavePlates}
+$mp4="media\videos\exam_jones\1080p60\JonesTheory_FindingMatrix.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\JonesTheory_FindingMatrix"
+if(Test-Path $mp4){Write-Host "SKIP JonesTheory_FindingMatrix"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER JonesTheory_FindingMatrix";python -m manim -qh exam_jones.py JonesTheory_FindingMatrix}
+$mp4="media\videos\exam_jones\1080p60\Exam3BOX0_2023_Ex4a.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam3BOX0_2023_Ex4a"
+if(Test-Path $mp4){Write-Host "SKIP Exam3BOX0_2023_Ex4a"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam3BOX0_2023_Ex4a";python -m manim -qh exam_jones.py Exam3BOX0_2023_Ex4a}
+$mp4="media\videos\exam_jones\1080p60\Exam3BOX0_2023_Ex4b.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam3BOX0_2023_Ex4b"
+if(Test-Path $mp4){Write-Host "SKIP Exam3BOX0_2023_Ex4b"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam3BOX0_2023_Ex4b";python -m manim -qh exam_jones.py Exam3BOX0_2023_Ex4b}
+$mp4="media\videos\exam_jones\1080p60\Exam3BOX0_2023_Ex4c.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam3BOX0_2023_Ex4c"
+if(Test-Path $mp4){Write-Host "SKIP Exam3BOX0_2023_Ex4c"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam3BOX0_2023_Ex4c";python -m manim -qh exam_jones.py Exam3BOX0_2023_Ex4c}
+$mp4="media\videos\exam_jones\1080p60\Exam3BOX0_2024_Ex4a.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam3BOX0_2024_Ex4a"
+if(Test-Path $mp4){Write-Host "SKIP Exam3BOX0_2024_Ex4a"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam3BOX0_2024_Ex4a";python -m manim -qh exam_jones.py Exam3BOX0_2024_Ex4a}
+$mp4="media\videos\exam_jones\1080p60\Exam3BOX0_2024_Ex4b.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam3BOX0_2024_Ex4b"
+if(Test-Path $mp4){Write-Host "SKIP Exam3BOX0_2024_Ex4b"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam3BOX0_2024_Ex4b";python -m manim -qh exam_jones.py Exam3BOX0_2024_Ex4b}
+$mp4="media\videos\exam_jones\1080p60\ExamResit3BOX0_2023_Ex4a.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\ExamResit3BOX0_2023_Ex4a"
+if(Test-Path $mp4){Write-Host "SKIP ExamResit3BOX0_2023_Ex4a"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER ExamResit3BOX0_2023_Ex4a";python -m manim -qh exam_jones.py ExamResit3BOX0_2023_Ex4a}
+$mp4="media\videos\exam_jones\1080p60\Exam31OPT_2024_Ex3a.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam31OPT_2024_Ex3a"
+if(Test-Path $mp4){Write-Host "SKIP Exam31OPT_2024_Ex3a"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam31OPT_2024_Ex3a";python -m manim -qh exam_jones.py Exam31OPT_2024_Ex3a}
+$mp4="media\videos\exam_jones\1080p60\Exam31OPT_2024_Ex3bc.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\Exam31OPT_2024_Ex3bc"
+if(Test-Path $mp4){Write-Host "SKIP Exam31OPT_2024_Ex3bc"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER Exam31OPT_2024_Ex3bc";python -m manim -qh exam_jones.py Exam31OPT_2024_Ex3bc}
+$mp4="media\videos\exam_jones\1080p60\ExamResit31OPT_2025_Ex3a.mp4"; $cache="media\videos\exam_jones\1080p60\partial_movie_files\ExamResit31OPT_2025_Ex3a"
+if(Test-Path $mp4){Write-Host "SKIP ExamResit31OPT_2025_Ex3a"}else{if(Test-Path $cache){Remove-Item -Recurse -Force $cache};Write-Host "RENDER ExamResit31OPT_2025_Ex3a";python -m manim -qh exam_jones.py ExamResit31OPT_2025_Ex3a}
