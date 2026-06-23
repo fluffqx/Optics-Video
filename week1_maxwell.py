@@ -6,18 +6,24 @@ class MaxwellIntro_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellIntro_p1.mp3", time_offset=0)
-        title = Text("Maxwell Equations Introduction  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell Equations — Introduction", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Four equations that unify electricity, magnetism and optics  (Bennett 2.2)", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla\cdot\mathbf{E}=\rho/\varepsilon\quad\nabla\cdot\mathbf{B}=0\quad\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t\quad\nabla\times\mathbf{B}=\mu\mathbf{J}+\mu\varepsilon\partial\mathbf{E}/\partial t', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Maxwell's four equations — the complete set", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -25,18 +31,24 @@ class MaxwellIntro_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellIntro_p2.mp3", time_offset=0)
-        title = Text("Maxwell Equations Introduction  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell Equations — Introduction", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Maxwell 1865: predicted EM waves at speed of light purely from EM data", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla\cdot\mathbf{E}=\rho/\varepsilon\quad\nabla\cdot\mathbf{B}=0\quad\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t\quad\nabla\times\mathbf{B}=\mu\mathbf{J}+\mu\varepsilon\partial\mathbf{E}/\partial t', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Charges create E, no monopoles, Faraday, Ampere-Maxwell", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -44,18 +56,24 @@ class MaxwellIntro_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellIntro_p3.mp3", time_offset=0)
-        title = Text("Maxwell Equations Introduction  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell Equations — Introduction", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("All optics in this course derives from these four equations", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla^2\mathbf{E}=\mu_0\varepsilon_0\,\partial^2\mathbf{E}/\partial t^2,\quad c=1/\sqrt{\mu_0\varepsilon_0}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Wave equation for light follows directly", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -63,14 +81,14 @@ class MaxwellIntro_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellIntro_p4.mp3", time_offset=0)
-        title = Text("Maxwell Equations Introduction  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell Equations — Introduction", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Before Maxwell: electricity, magnetism and optics seemed completely unrelated", font_size=30, color=WHITE)
+        cap_t = Text("Bennett presents these in differential and integral form  (Ch. 2.2)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -89,18 +107,11 @@ class VectorCalculusNotation_p1(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\phi', font_size=52)
-        safe_scale(eq, max_width=12.5)
-        cap_t = Text("GRADIENT — direction and magnitude of steepest increase", font_size=26, color=TEAL)
+        cap_t = Text("Three differential operators appear in every Maxwell equation", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
-        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
-        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
-        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
+        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -115,16 +126,15 @@ class VectorCalculusNotation_p2(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\cdot\mathbf{F}', font_size=52)
+        eq = MathTex(r'\nabla\phi=\left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right)', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("DIVERGENCE — measures sources and sinks of a field", font_size=26, color=TEAL)
+        cap_t = Text("GRADIENT: direction and rate of steepest increase", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -141,16 +151,15 @@ class VectorCalculusNotation_p3(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\times\mathbf{F}', font_size=52)
+        eq = MathTex(r'\nabla\cdot\mathbf{F}=\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("CURL — measures rotation of a field around a point", font_size=26, color=TEAL)
+        cap_t = Text("DIVERGENCE: sources (+) and sinks (-) of a field", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -167,16 +176,15 @@ class VectorCalculusNotation_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla^2\phi', font_size=52)
+        eq = MathTex(r'\nabla\times\mathbf{F}=\left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z},\;\ldots\right)', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("LAPLACIAN — curvature relative to neighbourhood average", font_size=26, color=TEAL)
+        cap_t = Text("CURL: rotation of a field around a point", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -193,11 +201,17 @@ class VectorCalculusNotation_p5(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("These four operators appear in every single Maxwell equation", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla^2\phi=\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial y^2}+\frac{\partial^2\phi}{\partial z^2}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("LAPLACIAN: curvature relative to neighbourhood", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -205,23 +219,22 @@ class MaxwellEquations_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p1.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\cdot\mathbf{E}=\rho/\varepsilon', font_size=52)
+        eq = MathTex(r'\nabla\cdot\mathbf{E}=\rho/\varepsilon\quad\nabla\cdot\mathbf{B}=0\quad\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t\quad\nabla\times\mathbf{B}=\mu(\mathbf{J}+\varepsilon\partial\mathbf{E}/\partial t)', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Gauss Law — electric charges are sources of the E field", font_size=26, color=TEAL)
+        cap_t = Text("Maxwell's four equations in matter", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -231,23 +244,22 @@ class MaxwellEquations_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p2.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\cdot\mathbf{B}=0', font_size=52)
+        eq = MathTex(r'\nabla\cdot\mathbf{E}=\rho_\text{free}/\varepsilon', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("No magnetic monopoles — B field lines are always closed loops", font_size=26, color=TEAL)
+        cap_t = Text("Gauss Law: charges are sources of E field", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -257,23 +269,22 @@ class MaxwellEquations_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p3.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t', font_size=52)
+        eq = MathTex(r'\nabla\cdot\mathbf{B}=0', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Faraday Law — changing B creates a curling E field", font_size=26, color=TEAL)
+        cap_t = Text("No monopoles: B field lines always form closed loops", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -283,23 +294,22 @@ class MaxwellEquations_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p4.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\times\mathbf{B}=\mu(\mathbf{J}+\varepsilon\,\partial\mathbf{E}/\partial t)', font_size=52)
+        eq = MathTex(r'\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Ampere-Maxwell — currents AND changing E both create B", font_size=26, color=TEAL)
+        cap_t = Text("Faraday Law: changing B creates curling E", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -309,18 +319,24 @@ class MaxwellEquations_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p5.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("The displacement current epsilon*dE/dt was Maxwell's key new contribution", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla\times\mathbf{B}=\mu\mathbf{J}+\mu\varepsilon\frac{\partial\mathbf{E}}{\partial t}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Ampere-Maxwell: currents AND changing E create B", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -328,23 +344,22 @@ class MaxwellEquations_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p6.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla^2\mathbf{E}=\mu_0\varepsilon_0\,\partial^2\mathbf{E}/\partial t^2\quad c=1/\sqrt{\mu_0\varepsilon_0}', font_size=52)
+        eq = MathTex(r'\nabla\cdot\mathbf{E}=0,\;\nabla\cdot\mathbf{B}=0,\;\nabla\times\mathbf{E}=-\partial_t\mathbf{B},\;\nabla\times\mathbf{B}=\mu_0\varepsilon_0\partial_t\mathbf{E}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("EM wave equation — speed equals c", font_size=26, color=TEAL)
+        cap_t = Text("In vacuum: simplified form — mutual sustaining oscillations", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -354,18 +369,24 @@ class MaxwellEquations_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellEquations_p7.mp3", time_offset=0)
-        title = Text("Maxwell Equations  (Bennett 2.2)", font_size=32, color=GOLD)
+        title = Text("Maxwell's Equations  (Bennett 2.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Maxwell substituted EM constants and computed c: that is the speed of light", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla^2\mathbf{E}=\mu_0\varepsilon_0\,\frac{\partial^2\mathbf{E}}{\partial t^2},\quad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("EM wave equation — light travels at speed c", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -373,23 +394,22 @@ class MaxwellVacuum_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p1.mp3", time_offset=0)
-        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=34, color=GOLD)
+        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\cdot\mathbf{E}=0\qquad\nabla\cdot\mathbf{B}=0', font_size=52)
+        eq = MathTex(r'\nabla\cdot\mathbf{E}=0,\quad\nabla\cdot\mathbf{B}=0', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("No sources in vacuum — both divergences vanish", font_size=26, color=TEAL)
+        cap_t = Text("Vacuum: no free charges, no free currents", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -399,14 +419,14 @@ class MaxwellVacuum_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p2.mp3", time_offset=0)
-        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=34, color=GOLD)
+        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t\qquad\nabla\times\mathbf{B}=\mu_0\varepsilon_0\,\partial\mathbf{E}/\partial t', font_size=52)
+        eq = MathTex(r'\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t},\quad\nabla\times\mathbf{B}=\mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}', font_size=52)
         safe_scale(eq, max_width=12.5)
         cap_t = Text("Coupled curl equations — E and B sustain each other", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
@@ -414,8 +434,7 @@ class MaxwellVacuum_p2(Scene):
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -425,23 +444,22 @@ class MaxwellVacuum_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p3.mp3", time_offset=0)
-        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=34, color=GOLD)
+        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla^2\mathbf{E}=\mu_0\varepsilon_0\,\partial^2\mathbf{E}/\partial t^2', font_size=52)
+        eq = MathTex(r'\nabla^2\mathbf{E}=\mu_0\varepsilon_0\frac{\partial^2\mathbf{E}}{\partial t^2}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("EM wave equation — fields propagate at speed c", font_size=26, color=TEAL)
+        cap_t = Text("EM wave equation derived by taking curl of Faraday", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -451,18 +469,24 @@ class MaxwellVacuum_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MaxwellVacuum_p4.mp3", time_offset=0)
-        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=34, color=GOLD)
+        title = Text("Maxwell in Vacuum  (Bennett 2.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("No medium required — E and B fields sustain each other indefinitely", font_size=30, color=WHITE)
+        eq = MathTex(r'\nabla^2\mathbf{B}=\mu_0\varepsilon_0\frac{\partial^2\mathbf{B}}{\partial t^2}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Identical equation holds for B", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -477,7 +501,7 @@ class EMWaveDerivation_p1(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Take curl of Faraday's law, substitute Ampere-Maxwell — wave equation drops out", font_size=30, color=WHITE)
+        cap_t = Text("Bennett derives the EM wave equation in Appendix 2A", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -496,16 +520,15 @@ class EMWaveDerivation_p2(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla\times(\nabla\times\mathbf{E})=-\mu_0\varepsilon_0\,\partial^2\mathbf{E}/\partial t^2', font_size=52)
+        eq = MathTex(r'\nabla\times(\nabla\times\mathbf{E})=-\frac{\partial}{\partial t}(\nabla\times\mathbf{B})', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("After substitution and vector identity curl-curl = grad-div minus nabla-squared", font_size=26, color=TEAL)
+        cap_t = Text("Take curl of Faraday, get curl-curl-E", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -522,16 +545,15 @@ class EMWaveDerivation_p3(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\nabla^2\mathbf{E}=\mu_0\varepsilon_0\,\partial^2\mathbf{E}/\partial t^2\quad c=1/\sqrt{\mu_0\varepsilon_0}', font_size=52)
+        eq = MathTex(r'\nabla^2\mathbf{E}-\nabla(\nabla\cdot\mathbf{E})=-\mu_0\varepsilon_0\frac{\partial^2\mathbf{E}}{\partial t^2}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("EM wave equation — propagation speed equals c", font_size=26, color=TEAL)
+        cap_t = Text("Vector identity: curl-curl = grad-div minus Laplacian", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -548,16 +570,15 @@ class EMWaveDerivation_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'c=1/\sqrt{4\pi\times10^{-7}\times8.854\times10^{-12}}=2.998\times10^8\,\text{m/s}', font_size=52)
+        eq = MathTex(r'c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=\frac{1}{\sqrt{4\pi\times10^{-7}\times8.854\times10^{-12}}}=2.998\times10^8\,\text{m/s}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Computed from laboratory EM measurements alone", font_size=26, color=TEAL)
+        cap_t = Text("Maxwell computed c from EM constants alone", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -574,7 +595,7 @@ class EMWaveDerivation_p5(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("The greatest theoretical prediction of the 19th century — light is an EM wave", font_size=30, color=WHITE)
+        cap_t = Text("Computed c matched known speed of light — light is an EM wave", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -586,23 +607,22 @@ class EMWaveProperties_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/EMWaveProperties_p1.mp3", time_offset=0)
-        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=32, color=GOLD)
+        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\mathbf{k}\perp\mathbf{E}\quad\mathbf{k}\perp\mathbf{B}\quad\mathbf{E}\perp\mathbf{B}', font_size=52)
+        eq = MathTex(r'\tilde{\mathbf{E}}=\mathbf{E}_0 e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)},\quad\tilde{\mathbf{B}}=\mathbf{B}_0 e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Transverse: E, B and k are all mutually perpendicular", font_size=26, color=TEAL)
+        cap_t = Text("Plane wave solutions to Maxwell's equations", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -612,23 +632,22 @@ class EMWaveProperties_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/EMWaveProperties_p2.mp3", time_offset=0)
-        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=32, color=GOLD)
+        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\mathbf{B}=\hat{k}\times\mathbf{E}/v', font_size=52)
+        eq = MathTex(r'\mathbf{k}\perp\mathbf{E},\quad\mathbf{k}\perp\mathbf{B}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("B field is determined entirely by E and propagation direction", font_size=26, color=TEAL)
+        cap_t = Text("Transverse: E and B both perpendicular to propagation direction k", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -638,23 +657,22 @@ class EMWaveProperties_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/EMWaveProperties_p3.mp3", time_offset=0)
-        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=32, color=GOLD)
+        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'E=cB\quad\text{in vacuum}', font_size=52)
+        eq = MathTex(r'\mathbf{B}=\frac{\hat{k}\times\mathbf{E}}{v}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Magnitudes: E equals c times B", font_size=26, color=TEAL)
+        cap_t = Text("E and B perpendicular to each other; B from cross product", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -664,18 +682,24 @@ class EMWaveProperties_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/EMWaveProperties_p4.mp3", time_offset=0)
-        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=32, color=GOLD)
+        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("E and B oscillate in phase — same phase factor in both", font_size=30, color=WHITE)
+        eq = MathTex(r'E=cB\quad\text{(vacuum)}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Magnitudes: E equals c times B", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -683,25 +707,18 @@ class EMWaveProperties_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/EMWaveProperties_p5.mp3", time_offset=0)
-        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=32, color=GOLD)
+        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'v=c/n\qquad\lambda_\text{med}=\lambda_0/n', font_size=52)
-        safe_scale(eq, max_width=12.5)
-        cap_t = Text("In medium: speed c/n, wavelength shrinks, frequency unchanged", font_size=26, color=TEAL)
+        cap_t = Text("E and B oscillate in phase — same phase factor", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
-        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
-        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
-        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
+        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -709,18 +726,24 @@ class EMWaveProperties_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/EMWaveProperties_p6.mp3", time_offset=0)
-        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=32, color=GOLD)
+        title = Text("Properties of EM Waves  (Bennett 2.3)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Frequency is unchanged at any interface — boundary conditions require it", font_size=30, color=WHITE)
+        eq = MathTex(r'v=\frac{c}{n},\quad\lambda_\text{med}=\frac{\lambda_0}{n}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("In medium n: speed c/n, wavelength shrinks, frequency unchanged", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -735,16 +758,15 @@ class EMWaveExample_p1(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\mathbf{E}=E_0\hat{x}\,e^{i(kz-\omega t)}\quad\text{find}\;\mathbf{B}', font_size=52)
+        eq = MathTex(r'\mathbf{E}=E_0\hat{x}\,e^{i(kz-\omega t)}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Given: E polarised in x, propagating in z — find B", font_size=26, color=TEAL)
+        cap_t = Text("Given: E polarised in x-direction, propagating in z", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -761,16 +783,15 @@ class EMWaveExample_p2(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\hat{z}\times\hat{x}=\hat{y}\;\Rightarrow\;\mathbf{B}=E_0 c^{-1}\hat{y}\,e^{i(kz-\omega t)}', font_size=52)
+        eq = MathTex(r'\mathbf{E}=E_0\hat{x}\,e^{i(kz-\omega t)},\quad\text{find }\mathbf{B}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Cross product gives direction of B", font_size=26, color=TEAL)
+        cap_t = Text("Find the B field from Maxwell's equations", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -787,16 +808,15 @@ class EMWaveExample_p3(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'\mathbf{E}\perp\mathbf{B}\perp\hat{k}\;\checkmark\quad E=cB\;\checkmark', font_size=52)
+        eq = MathTex(r'\mathbf{B}=\frac{E_0}{c}\hat{y}\,e^{i(kz-\omega t)}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("All transversality conditions verified", font_size=26, color=TEAL)
+        cap_t = Text("B field: from cross product hat-z times hat-x = hat-y", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -813,16 +833,15 @@ class EMWaveExample_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'I=\tfrac{1}{2}\varepsilon_0 c E_0^2=1327\,\text{W/m}^2', font_size=52)
+        eq = MathTex(r'\hat{k}\perp\mathbf{E}\perp\mathbf{B},\quad E=cB\;\checkmark', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Irradiance for E0=1000 V/m  (Bennett Eq. 2.33)", font_size=26, color=TEAL)
+        cap_t = Text("All four properties of EM wave verified", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -839,11 +858,17 @@ class EMWaveExample_p5(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Practise until this complete derivation takes under two minutes", font_size=30, color=WHITE)
+        eq = MathTex(r'E/B=E_0/(E_0/c)=c\;\checkmark', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Magnitude ratio E/B = c confirmed", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -858,11 +883,17 @@ class EMWaveExample_p6(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("This exact calculation appears regularly on exams", font_size=30, color=WHITE)
+        eq = MathTex(r'I=\frac{1}{2}\varepsilon_0 c E_0^2=1327\,\text{W/m}^2\;\text{for }E_0=1000\,\text{V/m}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Irradiance  (Bennett Eq. 2.33) — numerical result", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -870,7 +901,7 @@ class PoyntingIrradiance_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p1.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
@@ -885,8 +916,7 @@ class PoyntingIrradiance_p1(Scene):
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -896,7 +926,32 @@ class PoyntingIrradiance_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p2.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
+        safe_scale(title, max_width=13.5)
+        title.to_edge(UP, buff=0.28)
+        rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
+                        color=GOLD, stroke_width=1.0).set_opacity(0.4)
+        rule_top.next_to(title, DOWN, buff=0.08)
+        self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
+        eq = MathTex(r'\mathbf{S}=\frac{1}{\mu_0}\mathbf{E}\times\mathbf{B}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Poynting vector definition  (Bennett 2.3.1)", font_size=26, color=TEAL)
+        safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
+        t_bot = rule_top.get_bottom()[1]
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
+        self.add(bottom_rule())
+        self.wait(120)
+
+class PoyntingIrradiance_p3(Scene):
+    def construct(self):
+        self.camera.background_color = BG_COLOR
+        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p3.mp3", time_offset=0)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
@@ -911,29 +966,9 @@ class PoyntingIrradiance_p2(Scene):
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
-        self.add(bottom_rule())
-        self.wait(120)
-
-class PoyntingIrradiance_p3(Scene):
-    def construct(self):
-        self.camera.background_color = BG_COLOR
-        self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p3.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
-        safe_scale(title, max_width=13.5)
-        title.to_edge(UP, buff=0.28)
-        rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
-                        color=GOLD, stroke_width=1.0).set_opacity(0.4)
-        rule_top.next_to(title, DOWN, buff=0.08)
-        self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Factor one-half comes from time-averaging cos-squared over one full period", font_size=30, color=WHITE)
-        safe_scale(cap_t, max_width=12.5)
-        t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -941,14 +976,14 @@ class PoyntingIrradiance_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p4.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Intensity is proportional to E0 squared — doubling field quadruples intensity", font_size=30, color=WHITE)
+        cap_t = Text("Factor 1/2: time-averaging cos-squared over one period", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -960,23 +995,22 @@ class PoyntingIrradiance_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p5.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'I=5\,\text{mW}/(\pi\times1\,\text{mm}^2)=1592\,\text{W/m}^2', font_size=52)
+        eq = MathTex(r'I=\frac{5\times10^{-3}}{\pi\times(10^{-3})^2}=1592\,\text{W/m}^2', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Example: 5 mW laser focused to 1 mm radius", font_size=26, color=TEAL)
+        cap_t = Text("Example: 5 mW laser, 1 mm radius", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -986,23 +1020,22 @@ class PoyntingIrradiance_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p6.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'E_0=\sqrt{2I/(\varepsilon_0 c)}=1095\,\text{V/m}', font_size=52)
+        eq = MathTex(r'E_0=\sqrt{\frac{2I}{\varepsilon_0 c}}=1095\,\text{V/m}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Peak E-field computed from irradiance", font_size=26, color=TEAL)
+        cap_t = Text("Peak E-field from irradiance", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -1012,25 +1045,18 @@ class PoyntingIrradiance_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p7.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'B_0=E_0/c=3.65\,\mu\text{T}', font_size=52)
-        safe_scale(eq, max_width=12.5)
-        cap_t = Text("Peak B-field — 14 times weaker than Earth magnetic field", font_size=26, color=TEAL)
+        cap_t = Text("I proportional to E0 squared — doubling field quadruples intensity", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
-        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
-        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
-        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
+        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1038,23 +1064,22 @@ class PoyntingIrradiance_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p8.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'P_\text{rad}=I/c\;(\text{absorber})\quad 2I/c\;(\text{mirror})', font_size=52)
+        eq = MathTex(r'B_0=\frac{E_0}{c}=3.65\,\mu\text{T}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Radiation pressure formulas", font_size=26, color=TEAL)
+        cap_t = Text("Peak B-field — 14 times weaker than Earth's magnetic field", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -1064,18 +1089,24 @@ class PoyntingIrradiance_p9(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p9.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Solar irradiance 1361 W/m squared gives about 9 micropascals on a perfect mirror", font_size=30, color=WHITE)
+        eq = MathTex(r'P_\text{rad}=\frac{I}{c}\;(\text{absorber}),\quad\frac{2I}{c}\;(\text{reflector})', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Radiation pressure formulas", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1083,18 +1114,24 @@ class PoyntingIrradiance_p10(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/PoyntingIrradiance_p10.mp3", time_offset=0)
-        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=30, color=GOLD)
+        title = Text("Poynting Vector and Irradiance  (Bennett 2.3.1)", font_size=28, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("LIGO: 100 kW intracavity power — radiation pressure effects must be managed", font_size=30, color=WHITE)
+        eq = MathTex(r'E_0=\sqrt{\frac{2I}{\varepsilon_0 c}}=868\,\text{V/m}\;\text{for }I=1000\,\text{W/m}^2', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Second example: find E0 from given irradiance", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1102,7 +1139,7 @@ class RadiationPressure_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p1.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
@@ -1121,23 +1158,22 @@ class RadiationPressure_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p2.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'P_\text{rad}=I/c\;(\text{absorbing})\quad 2I/c\;(\text{reflecting})', font_size=52)
+        eq = MathTex(r'P_\text{rad}=\frac{I}{c}\;(\text{absorbing}),\quad\frac{2I}{c}\;(\text{reflecting})', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Radiation pressure — absorber versus perfect reflector", font_size=26, color=TEAL)
+        cap_t = Text("Radiation pressure formulas", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -1147,23 +1183,22 @@ class RadiationPressure_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p3.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'P_\text{rad}=I(1+R)/c', font_size=52)
+        eq = MathTex(r'P_\text{rad}=\frac{I}{c}\;(\text{absorbing}),\quad\frac{2I}{c}\;(\text{reflecting})', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("General formula including reflectivity R", font_size=26, color=TEAL)
+        cap_t = Text("Absorber vs perfect reflector — factor of 2 difference", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -1173,18 +1208,24 @@ class RadiationPressure_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p4.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("IKAROS solar sail 2010: one millinewton from a 14 by 14 metre aluminised sail", font_size=30, color=WHITE)
+        eq = MathTex(r'P_\text{rad}=\frac{I(1+R)}{c}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("General formula including reflectivity R", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1192,14 +1233,14 @@ class RadiationPressure_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p5.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Optical tweezers: Nobel Prize 2018 Arthur Ashkin — trapping cells with focused laser", font_size=30, color=WHITE)
+        cap_t = Text("IKAROS solar sail 2010: 1 mN from 14 by 14 metre aluminised sail", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1211,18 +1252,24 @@ class RadiationPressure_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p6.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("LIGO: 100 kW beams, radiation pressure noise is a fundamental detection limit", font_size=30, color=WHITE)
+        eq = MathTex(r'I_\odot=1361\,\text{W/m}^2\;\Rightarrow\;P=\frac{1361}{3\times10^8}=4.5\,\mu\text{Pa}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Solar radiation pressure at Earth orbit", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1230,14 +1277,14 @@ class RadiationPressure_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p7.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Tiny force but continuous — measurable and significant over days in space", font_size=30, color=WHITE)
+        cap_t = Text("Optical tweezers: Nobel Prize 2018 Arthur Ashkin — trapping cells", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1249,14 +1296,14 @@ class RadiationPressure_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/RadiationPressure_p8.mp3", time_offset=0)
-        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=34, color=GOLD)
+        title = Text("Radiation Pressure  (Bennett 2.3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Solar radiation pressure measurably perturbs satellite orbits over years", font_size=30, color=WHITE)
+        cap_t = Text("LIGO: 100 kW intracavity power — radiation pressure is a noise source", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1268,14 +1315,14 @@ class DispersionScene_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p1.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Dispersion: refractive index n depends on frequency — different colours travel differently", font_size=30, color=WHITE)
+        cap_t = Text("Dispersion: refractive index n depends on frequency", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1287,23 +1334,22 @@ class DispersionScene_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p2.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'n(\omega)=c/v_p(\omega)', font_size=52)
+        eq = MathTex(r'n(\omega)=\frac{c}{v_p(\omega)}', font_size=52)
         safe_scale(eq, max_width=12.5)
-        cap_t = Text("Refractive index varies with omega", font_size=26, color=TEAL)
+        cap_t = Text("Refractive index varies with omega — different colours travel differently", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
         content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -1313,7 +1359,7 @@ class DispersionScene_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p3.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
@@ -1332,14 +1378,14 @@ class DispersionScene_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p4.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Lorentz oscillator model: electrons as driven harmonic oscillators near resonance", font_size=30, color=WHITE)
+        cap_t = Text("Lorentz oscillator model: electrons as driven harmonic oscillators", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1351,14 +1397,14 @@ class DispersionScene_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p5.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        eq = MathTex(r'v_g=c/(n+\omega\,dn/d\omega)', font_size=52)
+        eq = MathTex(r'v_g=\frac{c}{n+\omega\,dn/d\omega}', font_size=52)
         safe_scale(eq, max_width=12.5)
         cap_t = Text("Group velocity in a dispersive medium", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
@@ -1366,8 +1412,7 @@ class DispersionScene_p5(Scene):
         t_bot = rule_top.get_bottom()[1]
         content.move_to([0, (t_bot + (-3.7)) / 2, 0])
         safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
-        box = SurroundingRectangle(eq, color=TEAL, buff=0.18,
-                                   stroke_width=1.2).set_opacity(0.35)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
         self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
         self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
@@ -1377,14 +1422,14 @@ class DispersionScene_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p6.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Anomalous dispersion occurs near resonance — vg can exceed c briefly", font_size=30, color=WHITE)
+        cap_t = Text("Anomalous dispersion near resonance: vg can briefly exceed c", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1396,14 +1441,14 @@ class DispersionScene_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p7.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Optical fibre: 17 ps per nanometre per kilometre at 1550 nm limits data rates", font_size=30, color=WHITE)
+        cap_t = Text("Optical fibre: 17 ps/nm/km at 1550 nm — limits data transmission rates", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1415,14 +1460,14 @@ class DispersionScene_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/DispersionScene_p8.mp3", time_offset=0)
-        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=32, color=GOLD)
+        title = Text("Dispersion and Refractive Index  (Bennett 3.9)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Dispersion-compensating fibres counteract pulse broadening in long-haul links", font_size=30, color=WHITE)
+        cap_t = Text("Dispersion-compensating fibres counteract pulse broadening", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
