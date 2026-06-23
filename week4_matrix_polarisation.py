@@ -35,13 +35,12 @@ class Week4TitleCard_p3(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week4TitleCard_p3.mp3", time_offset=0)
         card = make_title_card("WEEK 4", "Matrix Optics, Superposition and Polarisation", "Bennett Ch. 5, 7.1-7.2, 6.1-6.4")
-        rule = bottom_rule()
         self.play(FadeIn(card, run_time=0.5))
-        sub_t = Text("Superposition: standing waves and beating  (Bennett 7.1 and 7.2)", font_size=24, color=BLUE_LIGHT)
+        sub_t = Text("Superposition: standing waves and beating", font_size=24, color=BLUE_LIGHT)
         safe_scale(sub_t, max_width=12.0)
         sub_t.to_edge(DOWN, buff=0.35)
         self.play(FadeIn(sub_t, shift=UP*0.15, run_time=0.4))
-        self.add(rule)
+        self.add(bottom_rule())
         self.wait(120)
 
 class Week4TitleCard_p4(Scene):
@@ -154,11 +153,17 @@ class MatrixOpticsIntro_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Reversing element order gives a completely different system — not commutative", font_size=30, color=WHITE)
+        eq = MathTex(r'\det(\mathbf{M})=AD-BC=1\;\checkmark', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Determinant always equals 1 — use as verification", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -490,11 +495,17 @@ class MatrixExample_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Galilean beam expander reduces laser beam divergence", font_size=30, color=WHITE)
+        eq = MathTex(r'C=0\;\Rightarrow\;f_\text{eff}=\infty\;\text{(afocal)},\quad A=-f_2/f_1', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Beam expander: afocal, magnification = -f2/f1", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -509,7 +520,7 @@ class MatrixExample_p5(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Used in laser systems to match beam diameter to aperture of next element", font_size=30, color=WHITE)
+        cap_t = Text("Galilean beam expander: reduces laser divergence, used in laser systems", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -650,7 +661,7 @@ class StandingWaves_p5(Scene):
 class StandingWaves_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/StandingWaves_p6.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/StandingWaves_p6.mp3", time_offset=0)
         title = Text("Standing Waves  (Bennett 7.1)", font_size=34, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -658,18 +669,24 @@ class StandingWaves_p6(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Guitar string: nodes fixed at both ends — only allowed wavelengths resonate", font_size=30, color=WHITE)
+        eq = MathTex(r'2L=N\lambda_N,\quad\lambda_N=\frac{2L}{N},\quad f_N=\frac{Nc}{2L}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Laser cavity resonance: only discrete modes allowed", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
 class StandingWaves_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/StandingWaves_p7.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/StandingWaves_p7.mp3", time_offset=0)
         title = Text("Standing Waves  (Bennett 7.1)", font_size=34, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -677,11 +694,17 @@ class StandingWaves_p7(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Laser cavity: same boundary condition at both mirrors gives mode spectrum", font_size=30, color=WHITE)
+        eq = MathTex(r'\Delta f=\frac{c}{2L}=\frac{3\times10^8}{2\times0.3}=500\,\text{MHz}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Mode spacing: 500 MHz for 30 cm cavity", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -740,7 +763,7 @@ class Beating_p2(Scene):
 class Beating_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/Beating_p3.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Beating_p3.mp3", time_offset=0)
         title = Text("Beating  (Bennett 7.2)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -748,18 +771,24 @@ class Beating_p3(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Slow amplitude envelope at beat frequency, fast carrier at average frequency", font_size=30, color=WHITE)
+        eq = MathTex(r'2A\cos\!\left(\frac{\omega_1-\omega_2}{2}t\right)\cos\!\left(\frac{\omega_1+\omega_2}{2}t\right)', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Slow envelope at beat frequency, fast carrier at average", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
 class Beating_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/Beating_p4.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Beating_p4.mp3", time_offset=0)
         title = Text("Beating  (Bennett 7.2)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -767,18 +796,24 @@ class Beating_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Tuning a musical instrument: adjust until beats disappear", font_size=30, color=WHITE)
+        eq = MathTex(r'f_\text{beat}=|f_1-f_2|', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Beat frequency = absolute difference of frequencies", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
 class Beating_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/Beating_p5.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Beating_p5.mp3", time_offset=0)
         title = Text("Beating  (Bennett 7.2)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -786,7 +821,7 @@ class Beating_p5(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Optical heterodyne detection: beat appears at radio frequency, electronically processable", font_size=30, color=WHITE)
+        cap_t = Text("Acoustics: 440 Hz and 443 Hz give 3 beats per second — tuning method", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -797,7 +832,7 @@ class Beating_p5(Scene):
 class Beating_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/Beating_p6.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Beating_p6.mp3", time_offset=0)
         title = Text("Beating  (Bennett 7.2)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -805,7 +840,7 @@ class Beating_p6(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Used in coherent LIDAR and optical frequency measurement", font_size=30, color=WHITE)
+        cap_t = Text("Optical heterodyne: signal + local oscillator beat at radio frequency", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -816,7 +851,7 @@ class Beating_p6(Scene):
 class Beating_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/Beating_p7.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/Beating_p7.mp3", time_offset=0)
         title = Text("Beating  (Bennett 7.2)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -824,11 +859,17 @@ class Beating_p7(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Coherence required: both wave trains must overlap in time and space", font_size=30, color=WHITE)
+        eq = MathTex(r'l_c>c\tau_\text{beat}\;\Rightarrow\;\Delta\nu<\frac{1}{\tau_\text{beat}}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Coherence required: wave trains must overlap temporally", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -913,7 +954,7 @@ class PolarizationBasics_p3(Scene):
 class PolarizationBasics_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
-        # self.add_sound("narration/audio/paragraphs/PolarizationBasics_p4.mp3"  # uncomment after generate_audio --all, time_offset=0)
+        self.add_sound("narration/audio/paragraphs/PolarizationBasics_p4.mp3", time_offset=0)
         title = Text("Polarization States  (Bennett 6.1-6.4)", font_size=34, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
@@ -921,11 +962,17 @@ class PolarizationBasics_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Elliptical polarisation is the general case: any amplitudes, any phase", font_size=30, color=WHITE)
+        eq = MathTex(r'|E_x|\neq|E_y|\;\text{or}\;\Delta\phi\neq\pm\pi/2\;\Rightarrow\;\text{ELLIPTICAL}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Elliptical: general case — any amplitudes, any phase difference", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 

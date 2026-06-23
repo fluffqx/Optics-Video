@@ -32,11 +32,17 @@ class Week2Intro_p2(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("The central tool: boundary conditions at every interface", font_size=30, color=WHITE)
+        eq = MathTex(r'E_{\parallel,1}=E_{\parallel,2},\quad H_{\parallel,1}=H_{\parallel,2}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Maxwell boundary conditions at an interface", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -51,11 +57,17 @@ class Week2Intro_p3(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Agenda: Snell law, Fresnel equations, Brewster angle, TIR", font_size=30, color=WHITE)
+        eq = MathTex(r'\mathbf{E}=E_s\hat{s}+E_p\hat{p}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Decompose into s (TE) and p (TM) polarisations", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -78,13 +90,12 @@ class Week2TitleCard_p2(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 2", "Fresnel Equations, Reflection and Refraction", "Bennett Ch. 3")
-        rule = bottom_rule()
         self.play(FadeIn(card, run_time=0.5))
-        sub_t = Text("Snell law determines direction — Fresnel equations determine amplitude", font_size=24, color=BLUE_LIGHT)
+        sub_t = Text("Snell law for direction, Fresnel for amplitude", font_size=24, color=BLUE_LIGHT)
         safe_scale(sub_t, max_width=12.0)
         sub_t.to_edge(DOWN, buff=0.35)
         self.play(FadeIn(sub_t, shift=UP*0.15, run_time=0.4))
-        self.add(rule)
+        self.add(bottom_rule())
         self.wait(120)
 
 class Week2TitleCard_p3(Scene):
@@ -106,31 +117,36 @@ class Week2TitleCard_p4(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week2TitleCard_p4.mp3", time_offset=0)
         card = make_title_card("WEEK 2", "Fresnel Equations, Reflection and Refraction", "Bennett Ch. 3")
-        rule = bottom_rule()
         self.play(FadeIn(card, run_time=0.5))
-        sub_t = Text("Bennett Chapter 3 — master the Fresnel calculation procedure completely", font_size=24, color=BLUE_LIGHT)
+        sub_t = Text("Apply Snell, compute Fresnel, verify R+T=1 on every problem", font_size=24, color=BLUE_LIGHT)
         safe_scale(sub_t, max_width=12.0)
         sub_t.to_edge(DOWN, buff=0.35)
         self.play(FadeIn(sub_t, shift=UP*0.15, run_time=0.4))
-        self.add(rule)
+        self.add(bottom_rule())
         self.wait(120)
 
 class FermatPrinciple_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p1.mp3", time_offset=0)
-        title = Text("Fermat Principle  (Bennett 3.2.1)", font_size=34, color=GOLD)
+        title = Text("Fermat's Principle  (Bennett 3.2.1)", font_size=34, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Light takes the path of stationary optical path length  (Fermat 1662)", font_size=30, color=WHITE)
+        eq = MathTex(r'\delta\!\int n\,ds=0', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Fermat's principle: path of stationary optical path length", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -138,18 +154,24 @@ class FermatPrinciple_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p2.mp3", time_offset=0)
-        title = Text("Fermat Principle  (Bennett 3.2.1)", font_size=34, color=GOLD)
+        title = Text("Fermat's Principle  (Bennett 3.2.1)", font_size=34, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Reflection: stationary path gives angle-of-incidence equals angle-of-reflection", font_size=30, color=WHITE)
+        eq = MathTex(r'\theta_i=\theta_r', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Reflection: Fermat gives angle-in = angle-out", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -183,14 +205,14 @@ class FermatPrinciple_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FermatPrinciple_p4.mp3", time_offset=0)
-        title = Text("Fermat Principle  (Bennett 3.2.1)", font_size=34, color=GOLD)
+        title = Text("Fermat's Principle  (Bennett 3.2.1)", font_size=34, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Connects to Hamilton principle in mechanics and Feynman path integral in QED", font_size=30, color=WHITE)
+        cap_t = Text("Connects to Hamilton's principle in mechanics and Feynman path integral in QED", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -273,18 +295,24 @@ class ReflectionRefraction_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p4.mp3", time_offset=0)
-        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=32, color=GOLD)
+        title = Text("Reflection and Snell's Law  (Bennett 3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Frequency is conserved at any interface — only wavelength changes", font_size=30, color=WHITE)
+        eq = MathTex(r'n_i\sin\theta_i=n_t\sin\theta_t,\quad\lambda_t=\frac{n_i}{n_t}\lambda_i,\quad f\;\text{unchanged}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Frequency conserved, wavelength changes, direction changes", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -344,18 +372,24 @@ class ReflectionRefraction_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/ReflectionRefraction_p7.mp3", time_offset=0)
-        title = Text("Reflection and Snell Law  (Bennett 3.2)", font_size=32, color=GOLD)
+        title = Text("Reflection and Snell's Law  (Bennett 3.2)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Above critical angle: no transmitted beam whatsoever, R equals 1 exactly", font_size=30, color=WHITE)
+        eq = MathTex(r'1.5\sin41.8°=1.5\times0.6667=1.000\;\Rightarrow\;\theta_c=41.8°', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Critical angle for n=1.5 glass to air", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -363,18 +397,24 @@ class FresnelEquationsDerivation_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p1.mp3", time_offset=0)
-        title = Text("Fresnel Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
+        title = Text("Fresnel Equations Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("From Maxwell boundary conditions: tangential E and H must be continuous", font_size=30, color=WHITE)
+        eq = MathTex(r'E_{\parallel,1}=E_{\parallel,2},\quad H_{\parallel,1}=H_{\parallel,2}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Maxwell boundary conditions — tangential components continuous", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -382,18 +422,24 @@ class FresnelEquationsDerivation_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p2.mp3", time_offset=0)
-        title = Text("Fresnel Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
+        title = Text("Fresnel Equations Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("S-polarisation: E field is perpendicular to the plane of incidence  (also called TE)", font_size=30, color=WHITE)
+        eq = MathTex(r'E_{\parallel,1}=E_{\parallel,2},\quad n_1 H_{\parallel,1}=n_2 H_{\parallel,2}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Two equations from boundary conditions at each interface", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -427,18 +473,24 @@ class FresnelEquationsDerivation_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p4.mp3", time_offset=0)
-        title = Text("Fresnel Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
+        title = Text("Fresnel Equations Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("P-polarisation has extra cosine projection factors — gives different coefficients", font_size=30, color=WHITE)
+        eq = MathTex(r'E_i+E_r=E_t,\quad n_i\cos\theta_i(E_i-E_r)=n_t\cos\theta_t E_t', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("S-polarisation boundary equations — solve for r_s, t_s", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -446,18 +498,24 @@ class FresnelEquationsDerivation_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p5.mp3", time_offset=0)
-        title = Text("Fresnel Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
+        title = Text("Fresnel Equations Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("S and P components reflect independently — reflected beam becomes partially polarised", font_size=30, color=WHITE)
+        eq = MathTex(r'E_i\cos\theta_i-E_r\cos\theta_i=E_t\cos\theta_t\;\text{(p-pol)}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("P-polarisation needs cosine projection — gives r_p, t_p", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -465,18 +523,24 @@ class FresnelEquationsDerivation_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquationsDerivation_p6.mp3", time_offset=0)
-        title = Text("Fresnel Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
+        title = Text("Fresnel Equations Derivation  (Bennett 3.3)", font_size=32, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Both sets of coefficients come directly from these boundary condition equations", font_size=30, color=WHITE)
+        eq = MathTex(r'r_s=\frac{n_i\cos\theta_i-n_t\cos\theta_t}{n_i\cos\theta_i+n_t\cos\theta_t},\quad r_p=\frac{n_t\cos\theta_i-n_i\cos\theta_t}{n_t\cos\theta_i+n_i\cos\theta_t}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Result: Fresnel amplitude reflection coefficients", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -484,18 +548,24 @@ class FresnelEquations_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p1.mp3", time_offset=0)
-        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=34, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Fresnel amplitude reflection and transmission coefficients", font_size=30, color=WHITE)
+        eq = MathTex(r'n_i\sin\theta_i=n_t\sin\theta_t\;\Rightarrow\;r_s,r_p,t_s,t_p', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Step 1: Snell law first, then Fresnel coefficients", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -659,18 +729,24 @@ class FresnelEquations_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p8.mp3", time_offset=0)
-        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=34, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Negative r means n increases at interface — causes phase shift of pi", font_size=30, color=WHITE)
+        eq = MathTex(r'r_s=-0.278,\;R_s=0.077\quad\text{(40 deg, air-glass)}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("S-polarisation numerical result at 40 degrees", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -678,18 +754,24 @@ class FresnelEquations_p9(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p9.mp3", time_offset=0)
-        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=34, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Positive r means n decreases at interface — no phase shift", font_size=30, color=WHITE)
+        eq = MathTex(r'r_p=+0.119,\;R_p=0.014\quad\text{(near Brewster angle)}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("P-polarisation: much lower reflection near Brewster", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -697,18 +779,24 @@ class FresnelEquations_p10(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/FresnelEquations_p10.mp3", time_offset=0)
-        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=34, color=GOLD)
+        title = Text("The Fresnel Equations  (Bennett 3.4)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("These phase signs are critical for thin-film interference calculations in Week 6", font_size=30, color=WHITE)
+        eq = MathTex(r'R_p\ll R_s\;\text{near Brewster angle}\;\Rightarrow\;r_p=0\;\text{at }\theta_B', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("P-polarisation reflects much less — Brewster effect", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -775,11 +863,17 @@ class FresnelFullExample_p3(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Compute all needed cosines: cos(40)=0.766, cos(25.4)=0.904", font_size=30, color=WHITE)
+        eq = MathTex(r'\cos\theta_i=\cos40°=0.766,\quad\cos\theta_t=\cos25.4°=0.904', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Step 2: compute all needed cosines", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -950,11 +1044,17 @@ class ReflectivityTransmissivity_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Writing T equals t-squared is the single most common fatal error here", font_size=30, color=WHITE)
+        eq = MathTex(r'R+T=1\;\checkmark\quad\text{(always verify)}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Energy conservation — if R+T does not equal 1, recheck", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -969,11 +1069,17 @@ class ReflectivityTransmissivity_p5(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("10-surface camera lens with no AR coating: only 67 percent transmitted", font_size=30, color=WHITE)
+        eq = MathTex(r'T_\text{total}=(1-R)^{10}\approx0.67\;\text{for 10 surfaces, }R=0.04', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("10-surface lens with no AR coating: only 67% transmitted", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1085,18 +1191,24 @@ class BrewsterTIR_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p5.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection  (Bennett 3.5)", font_size=26, color=GOLD)
+        title = Text("Brewster Angle and Total Internal Reflection", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("At Brewster angle: reflected and refracted beams are exactly perpendicular", font_size=30, color=WHITE)
+        eq = MathTex(r'\sin\theta_c=\frac{n_t}{n_i},\quad n_i>n_t', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Critical angle condition for total internal reflection", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1104,18 +1216,24 @@ class BrewsterTIR_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p6.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection  (Bennett 3.5)", font_size=26, color=GOLD)
+        title = Text("Brewster Angle and Total Internal Reflection", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Laser Brewster windows: p-polarisation passes with absolutely zero reflection loss", font_size=30, color=WHITE)
+        eq = MathTex(r'\theta_t=90°,\quad\text{refracted beam along surface}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("At exactly critical angle: refracted beam along interface", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1123,18 +1241,24 @@ class BrewsterTIR_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p7.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection  (Bennett 3.5)", font_size=26, color=GOLD)
+        title = Text("Brewster Angle and Total Internal Reflection", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("TIR gives R equals 1.000 exactly — used in optical fibres and dove prisms", font_size=30, color=WHITE)
+        eq = MathTex(r'\theta_c=\arcsin\!\left(\frac{1}{1.5}\right)=41.8°', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Critical angle for n=1.5 glass to air", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1142,14 +1266,14 @@ class BrewsterTIR_p8(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/BrewsterTIR_p8.mp3", time_offset=0)
-        title = Text("Brewster Angle and Total Internal Reflection  (Bennett 3.5)", font_size=26, color=GOLD)
+        title = Text("Brewster Angle and Total Internal Reflection", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Diamond: critical angle only 24.4 degrees — total reflection makes it sparkle", font_size=30, color=WHITE)
+        cap_t = Text("Optical fibres use TIR: core n slightly higher than cladding n", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -1187,18 +1311,24 @@ class MalusLaw_p2(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p2.mp3", time_offset=0)
-        title = Text("Malus Law  (Bennett 6.2.1)", font_size=38, color=GOLD)
+        title = Text("Malus's Law  (Bennett 6.2.1)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("theta=0: full transmission | theta=90 degrees: complete extinction", font_size=30, color=WHITE)
+        eq = MathTex(r'I=I_0\cos^2\theta', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Malus's Law: transmitted intensity  (Bennett Eq. 6.6)", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1206,18 +1336,24 @@ class MalusLaw_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p3.mp3", time_offset=0)
-        title = Text("Malus Law  (Bennett 6.2.1)", font_size=38, color=GOLD)
+        title = Text("Malus's Law  (Bennett 6.2.1)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Three polarisers: horizontal at 0, at 45 degrees, vertical at 90", font_size=30, color=WHITE)
+        eq = MathTex(r'I=I_0\cos^2\theta,\quad\theta=0\to I_0,\;\theta=90°\to 0', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Physical origin: polariser transmits only E cosine component", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -1270,17 +1406,23 @@ class MalusLaw_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/MalusLaw_p6.mp3", time_offset=0)
-        title = Text("Malus Law  (Bennett 6.2.1)", font_size=38, color=GOLD)
+        title = Text("Malus's Law  (Bennett 6.2.1)", font_size=38, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Unpolarised light through one polariser: I0 divided by 2, average of cos-squared", font_size=30, color=WHITE)
+        eq = MathTex(r'I_0\xrightarrow{\text{pol}}I_0/2\xrightarrow{45°}I_0/4\xrightarrow{\text{cross}}I_0/8', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Three polarisers: unpolarised -> I0/2 -> I0/4 -> I0/8", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)

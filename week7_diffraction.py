@@ -21,13 +21,12 @@ class Week7TitleCard_p2(Scene):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/Week7TitleCard_p2.mp3", time_offset=0)
         card = make_title_card("WEEK 7", "Fraunhofer Diffraction", "Bennett Ch. 8")
-        rule = bottom_rule()
         self.play(FadeIn(card, run_time=0.5))
-        sub_t = Text("Fraunhofer diffraction pattern is the Fourier transform of the aperture", font_size=24, color=BLUE_LIGHT)
+        sub_t = Text("Fraunhofer pattern = Fourier transform of aperture", font_size=24, color=BLUE_LIGHT)
         safe_scale(sub_t, max_width=12.0)
         sub_t.to_edge(DOWN, buff=0.35)
         self.play(FadeIn(sub_t, shift=UP*0.15, run_time=0.4))
-        self.add(rule)
+        self.add(bottom_rule())
         self.wait(120)
 
 class Week7TitleCard_p3(Scene):
@@ -62,14 +61,14 @@ class HuygensPrinciple_p1(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p1.mp3", time_offset=0)
-        title = Text("Huygens Principle  (Bennett 8.2)", font_size=30, color=GOLD)
+        title = Text("Huygens' Principle  (Bennett 8.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Every point on a wavefront acts as a secondary spherical wave source  (Huygens 1678)", font_size=30, color=WHITE)
+        cap_t = Text("Huygens 1678: every wavefront point is a secondary spherical source  (Bennett 8.2)", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -107,18 +106,24 @@ class HuygensPrinciple_p3(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p3.mp3", time_offset=0)
-        title = Text("Huygens Principle  (Bennett 8.2)", font_size=30, color=GOLD)
+        title = Text("Huygens' Principle  (Bennett 8.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Far field: the diffraction integral becomes the Fourier transform of the aperture function", font_size=30, color=WHITE)
+        eq = MathTex(r'L\gg\frac{a^2}{2\lambda}\;\Rightarrow\;\text{Fraunhofer regime}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Fraunhofer condition: far-field or equivalently a lens in aperture", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -126,18 +131,24 @@ class HuygensPrinciple_p4(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/HuygensPrinciple_p4.mp3", time_offset=0)
-        title = Text("Huygens Principle  (Bennett 8.2)", font_size=30, color=GOLD)
+        title = Text("Huygens' Principle  (Bennett 8.2)", font_size=30, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Wider aperture: narrower diffraction pattern — inverse relationship, like uncertainty principle", font_size=30, color=WHITE)
+        eq = MathTex(r'U(\theta)\propto\int_\text{aperture}e^{ikx\sin\theta}\,dx=\mathcal{F}\{A(x)\}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Far field = Fourier transform of aperture function", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -294,11 +305,17 @@ class SingleSlitDiffraction_p7(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Central lobe full width 12.7 mm — easily visible to the naked eye", font_size=30, color=WHITE)
+        eq = MathTex(r'b=0.200\,\text{mm},\;\lambda=633\,\text{nm},\;L=2\,\text{m}\;\Rightarrow\;y_1=\frac{\lambda L}{b}=6.33\,\text{mm}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Complete numerical example: first minimum at 6.33 mm", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -410,18 +427,24 @@ class CircularApertureRayleigh_p5(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p5.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3)", font_size=26, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("To improve resolution: increase aperture D or decrease wavelength lambda", font_size=30, color=WHITE)
+        eq = MathTex(r'D_\text{eye}\approx3\,\text{mm}\;\Rightarrow\;\theta_\text{min}=\frac{1.22\times550\,\text{nm}}{3\,\text{mm}}=2.2\times10^{-4}\,\text{rad}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Human eye resolution limit", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -429,18 +452,24 @@ class CircularApertureRayleigh_p6(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p6.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3)", font_size=26, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Very-long-baseline interferometry uses Earth-diameter baselines: microarcsecond resolution", font_size=30, color=WHITE)
+        eq = MathTex(r'D_\text{HST}=2.4\,\text{m}\;\Rightarrow\;\theta_\text{min}=2.8\times10^{-7}\,\text{rad}=0.058\,\text{arcsec}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Hubble: 800 times sharper than naked eye", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -448,14 +477,14 @@ class CircularApertureRayleigh_p7(Scene):
     def construct(self):
         self.camera.background_color = BG_COLOR
         self.add_sound("narration/audio/paragraphs/CircularApertureRayleigh_p7.mp3", time_offset=0)
-        title = Text("Circular Aperture and Rayleigh Criterion  (Bennett 8.3.3)", font_size=26, color=GOLD)
+        title = Text("Circular Aperture and Rayleigh Criterion", font_size=26, color=GOLD)
         safe_scale(title, max_width=13.5)
         title.to_edge(UP, buff=0.28)
         rule_top = Line(title.get_left()+LEFT*0.1, title.get_right()+RIGHT*0.1,
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Factor 1.22 comes from the first zero of the Bessel function J1(x) at x=3.83", font_size=30, color=WHITE)
+        cap_t = Text("Improve resolution: increase D or decrease lambda — X-ray telescopes, VLBI radio", font_size=30, color=WHITE)
         safe_scale(cap_t, max_width=12.5)
         t_bot = rule_top.get_bottom()[1]
         cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
@@ -552,11 +581,17 @@ class DiffractionGrating_p4(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Example: 600 grooves per mm, 5 cm wide gives N=30000, RP=30000 in first order", font_size=30, color=WHITE)
+        eq = MathTex(r'\text{RP}=Nm=30000\times1=30000\;\text{for }N=30000,\;m=1', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Example: 600 gr/mm, 5 cm grating, first order", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
@@ -597,11 +632,17 @@ class DiffractionGrating_p6(Scene):
                         color=GOLD, stroke_width=1.0).set_opacity(0.4)
         rule_top.next_to(title, DOWN, buff=0.08)
         self.play(Write(title, run_time=0.5), FadeIn(rule_top, run_time=0.5))
-        cap_t = Text("Sodium D lines are separated by 0.6 nm — easily resolved in first order", font_size=30, color=WHITE)
+        eq = MathTex(r'\Delta\lambda_\text{FSR}=\frac{\lambda}{m}', font_size=52)
+        safe_scale(eq, max_width=12.5)
+        cap_t = Text("Free spectral range: unambiguous wavelength range", font_size=26, color=TEAL)
         safe_scale(cap_t, max_width=12.5)
+        content = VGroup(eq, cap_t).arrange(DOWN, buff=0.35)
         t_bot = rule_top.get_bottom()[1]
-        cap_t.move_to([0, (t_bot + (-3.7)) / 2, 0])
-        self.play(FadeIn(cap_t, shift=UP*0.15, run_time=0.4))
+        content.move_to([0, (t_bot + (-3.7)) / 2, 0])
+        safe_scale(content, max_width=13.0, max_height=abs(t_bot + 3.7) - 0.3)
+        box = SurroundingRectangle(eq, color=TEAL, buff=0.18, stroke_width=1.2).set_opacity(0.35)
+        self.play(FadeIn(eq, shift=UP*0.2, run_time=0.45))
+        self.play(FadeIn(box, run_time=0.3), FadeIn(cap_t, run_time=0.3))
         self.add(bottom_rule())
         self.wait(120)
 
