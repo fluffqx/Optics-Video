@@ -27,6 +27,47 @@ Use sync_timing.py to apply these timings to self.wait() calls in scene files.
 import asyncio, os, sys, argparse, subprocess, json
 from pathlib import Path
 
+# ── ffmpeg auto-setup ──────────────────────────────────────────────────────
+import shutil, urllib.request, zipfile, tempfile
+
+def get_ffmpeg():
+    """Return path to ffmpeg, downloading it if not found."""
+    # Check PATH first
+    ff = shutil.which("ffmpeg")
+    if ff:
+        return ff
+    # Check local ffmpeg folder
+    local = Path(__file__).parent / "ffmpeg" / "ffmpeg.exe"
+    if local.exists():
+        return str(local)
+    # Download from github releases
+    print("ffmpeg not found — downloading ffmpeg (one-time, ~70MB)...")
+    url = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip"
+    dest = Path(__file__).parent / "ffmpeg"
+    dest.mkdir(exist_ok=True)
+    tmp = Path(tempfile.mktemp(suffix=".zip"))
+    try:
+        urllib.request.urlretrieve(url, tmp)
+        with zipfile.ZipFile(tmp) as z:
+            for member in z.namelist():
+                if member.endswith("ffmpeg.exe") and "bin" in member:
+                    with z.open(member) as src, open(dest / "ffmpeg.exe", "wb") as dst:
+                        dst.write(src.read())
+                    break
+        print(f"ffmpeg downloaded to {dest / 'ffmpeg.exe'}")
+        return str(dest / "ffmpeg.exe")
+    except Exception as e:
+        print(f"Download failed: {e}")
+        print("Please download ffmpeg manually from https://ffmpeg.org/download.html")
+        print("and place ffmpeg.exe in the ffmpeg\\ folder next to generate_audio.py")
+        raise SystemExit(1)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+FFMPEG = get_ffmpeg()
+# ──────────────────────────────────────────────────────────────────────────
+
+
 VOICE       = "en-GB-RyanNeural"
 RATE        = "+0%"
 PITCH       = "+0Hz"
@@ -287,7 +328,7 @@ def merge_all():
         if not aud.exists():
             aud = AUDIO_DIR / "paragraphs" / f"{scene}.mp3"
         if not aud.exists():
-            subprocess.run(["ffmpeg", "-y", "-i", str(vid), "-c", "copy", str(out)],
+            subprocess.run([FFMPEG, "-y", "-i", str(vid), "-c", "copy", str(out)],
                            capture_output=True)
             print(f"  COPY  {scene:<40} — no audio")
             skipped += 1
@@ -295,7 +336,7 @@ def merge_all():
 
         print(f"  MERGE {scene:<40} ...", end="", flush=True)
         result = subprocess.run([
-            "ffmpeg", "-y",
+            FFMPEG, "-y",
             "-i",  str(vid),
             "-i",  str(aud),
             "-filter_complex", "[0:v]tpad=stop_mode=clone:stop_duration=120[v]",
@@ -333,7 +374,7 @@ def concat_final():
     out = Path("optics_full_video_narrated.mp4")
     print(f"\nConcatenating into {out} ...")
     result = subprocess.run([
-        "ffmpeg", "-y", "-f", "concat", "-safe", "0",
+        FFMPEG, "-y", "-f", "concat", "-safe", "0",
         "-i", str(filelist), "-c", "copy", str(out)
     ], capture_output=True, text=True)
 
